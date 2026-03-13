@@ -1,6 +1,11 @@
 """
-Crawler for arXiv (q-bio.NC - Neurons and Cognition)
+Crawler for arXiv Neuroscience-related Categories
 API Docs: http://export.arxiv.org/api/query
+
+Key categories:
+- q-bio.NC: Neurons and Cognition
+- q-bio.TO: Tissues and Organs
+- q-bio.MN: Molecular Networks
 """
 import requests
 import datetime
@@ -12,15 +17,26 @@ import jsonlines
 # arXiv API base URL
 ARXIV_API_URL = "http://export.arxiv.org/api/query"
 
-# arXiv category for Neuroscience
-NEUROSCIENCE_CATEGORY = "q-bio.NC"  # Neurons and Cognition
+# Core neuroscience categories
+NEUROSCIENCE_CATEGORIES = [
+    "q-bio.NC",  # Neurons and Cognition - Primary category for neuroscience
+    "q-bio.TO",  # Tissues and Organs - Includes neural tissues
+    "q-bio.MN",  # Molecular Networks - Molecular neuroscience
+]
 
-# Other relevant categories that might contain neuroscience papers
-RELEVANT_CATEGORIES = [
+# Keep for backward compatibility
+NEUROSCIENCE_CATEGORY = "q-bio.NC"
+
+# Extended categories for broader search (optional)
+EXTENDED_CATEGORIES = [
     "q-bio.NC",  # Neurons and Cognition
-    "q-bio.BM",  # Biomolecules (sometimes relevant)
+    "q-bio.TO",  # Tissues and Organs
+    "q-bio.MN",  # Molecular Networks
+    "q-bio.BM",  # Biomolecules
     "cs.AI",     # Artificial Intelligence (neuroscience-related ML)
     "cs.CV",     # Computer Vision (brain imaging)
+    "cs.LG",     # Machine Learning (computational neuroscience)
+    "q-bio.QM",  # Quantitative Methods (neuroimaging analysis)
 ]
 
 
@@ -210,53 +226,68 @@ def fetch_recent_arxiv_papers(
     days: int = 7,
     categories: Optional[List[str]] = None,
     max_results_per_category: int = 50,
-    fallback_if_empty: bool = True
+    fallback_if_empty: bool = True,
+    use_extended: bool = False
 ) -> List[Dict]:
     """
     Fetch recent papers from arXiv within the specified number of days.
     
+    Note: Uses local date filtering because arXiv API's date filter is unreliable.
+    
     Args:
         days: Number of days to look back
-        categories: List of arXiv categories to search (default: NEUROSCIENCE_CATEGORY)
+        categories: List of arXiv categories to search (default: NEUROSCIENCE_CATEGORIES)
         max_results_per_category: Maximum results per category
         fallback_if_empty: If True and no papers found with date filter, 
                           fetch recent papers without date filter
+        use_extended: If True, use EXTENDED_CATEGORIES instead of NEUROSCIENCE_CATEGORIES
     
     Returns:
         List of paper dictionaries
     """
     if categories is None:
-        categories = [NEUROSCIENCE_CATEGORY]
+        categories = EXTENDED_CATEGORIES if use_extended else NEUROSCIENCE_CATEGORIES
     
-    # Calculate date range
-    date_to = datetime.datetime.now().strftime("%Y-%m-%d")
-    date_from = (datetime.datetime.now() - datetime.timedelta(days=days)).strftime("%Y-%m-%d")
+    # Calculate cutoff date for local filtering
+    cutoff_date = datetime.datetime.now() - datetime.timedelta(days=days)
     
     all_papers = []
     
     for category in categories:
         print(f"Fetching arXiv papers for category: {category}")
+        
+        # Fetch recent papers without API date filter (it's unreliable)
+        # Fetch more than needed to ensure we get enough after filtering
+        fetch_count = max(max_results_per_category * 2, 100)
         papers = fetch_arxiv_papers(
             category=category,
-            max_results=max_results_per_category,
-            date_from=date_from,
-            date_to=date_to,
+            max_results=fetch_count,
             sort_by="submittedDate",
             sort_order="descending"
         )
         
-        # Fallback: if no papers found with date filter, try without filter
-        if not papers and fallback_if_empty:
-            print(f"  No papers in date range, fetching latest {max_results_per_category} papers without date filter...")
-            papers = fetch_arxiv_papers(
-                category=category,
-                max_results=max_results_per_category,
-                sort_by="submittedDate",
-                sort_order="descending"
-            )
+        # Filter locally by date
+        filtered_papers = []
+        for paper in papers:
+            try:
+                # Parse paper date (format: "12 Mar 2026")
+                paper_date = datetime.datetime.strptime(paper['date'], "%d %b %Y")
+                if paper_date >= cutoff_date:
+                    filtered_papers.append(paper)
+            except (ValueError, KeyError):
+                # If date parsing fails, include the paper to be safe
+                filtered_papers.append(paper)
         
-        all_papers.extend(papers)
-        print(f"  Found {len(papers)} papers")
+        # Apply limit after filtering
+        filtered_papers = filtered_papers[:max_results_per_category]
+        
+        # Fallback: if no papers found and fallback enabled, use unfiltered results
+        if not filtered_papers and fallback_if_empty and papers:
+            print(f"  No papers in date range, using {len(papers[:max_results_per_category])} most recent papers")
+            filtered_papers = papers[:max_results_per_category]
+        
+        all_papers.extend(filtered_papers)
+        print(f"  Found {len(filtered_papers)} papers in last {days} days")
         
         # Be nice to the API
         time.sleep(1)

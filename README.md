@@ -28,7 +28,7 @@ python src/main.py --arxiv-only --biorxiv-only
 # Fetch Science articles (with Europe PMC enrichment)
 python src/main.py --science-only
 
-# Fetch from last 14 days instead of 7
+# Fetch from last 14 days instead of 7 (applies to all sources)
 python src/main.py --days 14
 
 # Save separate files per source (no merging)
@@ -75,8 +75,13 @@ See `python src/main.py --help` for all options.
 
 | Source | Status | Description |
 |--------|--------|-------------|
-| **arXiv** | ✅ Supported | q-bio.NC (Neurons and Cognition) category |
+| **arXiv** | ✅ Supported | q-bio.NC, q-bio.TO, q-bio.MN categories |
 | **bioRxiv** | ✅ Supported | All neuroscience-related preprints |
+
+**Note on arXiv:** Fetches from three core neuroscience categories:
+- **q-bio.NC** - Neurons and Cognition (primary neuroscience)
+- **q-bio.TO** - Tissues and Organs (neural tissues, brain organoids)
+- **q-bio.MN** - Molecular Networks (molecular neuroscience)
 
 ### Springer Nature Journals ✅
 
@@ -94,12 +99,22 @@ See `python src/main.py --help` for all options.
 | Journal | Status | Method |
 |---------|--------|--------|
 | **Science** | ✅ Supported | List pages + Europe PMC enrichment |
+| **Cell Press** | ✅ Supported | Selenium + Europe PMC enrichment |
 
 **Note on Science:** Uses a smart enrichment strategy:
 1. Fetch basic info from Science list pages (no captcha)
 2. Enrich with Europe PMC via DOI (abstract, PMID, etc.)
 3. Fallback to preprint servers (bioRxiv/arXiv) if not in Europe PMC
 4. Keep original data if nothing is found
+
+**Note on Cell Press:** Supports multiple neuroscience-relevant journals:
+- **Neuron** - Neuroscience research
+- **Current Biology** - General biology
+- **Trends in Neurosciences** - Review articles
+- **Cell Reports** - Open access research
+- **iScience** - Interdisciplinary research
+- **Cell Systems** - Systems biology
+- **Cell** (via issue page)
 
 ### Metadata Enrichment
 
@@ -113,7 +128,7 @@ See `python src/main.py --help` for all options.
 We are working to support more journals in the following categories:
 
 **Multidisciplinary Journals:**
-- Science (⚠️ Requires captcha handling)
+- Science (Some of the latest articles are not supported)
 - Cell (⚠️ Strong anti-bot protection)
 - Current Biology
 - Nature Communications
@@ -122,7 +137,7 @@ We are working to support more journals in the following categories:
 - Science Advances
 
 **Neuroscience Journals:**
-- Neuron (⚠️ Elsevier protection)
+- Neuron
 - Journal of Neuroscience
 - Journal of Neurophysiology
 - PLoS One

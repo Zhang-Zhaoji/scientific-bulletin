@@ -60,13 +60,21 @@ def fetch_biorxiv_papers_by_date_range(
     date_from: str,
     date_to: str,
     cursor: Optional[str] = None,
-    limit: int = 100
+    limit: int = 100,
+    category: Optional[str] = None
 ) -> Dict:
     """
     Fetch papers from bioRxiv by date range (server-side date).
     Format: YYYY-MM-DD
     
-    Note: This fetches ALL bioRxiv papers in date range, not filtered by collection.
+    Args:
+        date_from: Start date (YYYY-MM-DD)
+        date_to: End date (YYYY-MM-DD)
+        cursor: Pagination cursor
+        limit: Number of results per page (max 100)
+        category: Category to filter by (e.g., 'neuroscience')
+    
+    Note: Category filtering is done via query parameter ?category=xxx
     """
     url = f"{BIORXIV_API_URL}/details/biorxiv/{date_from}/{date_to}"
     
@@ -77,6 +85,9 @@ def fetch_biorxiv_papers_by_date_range(
     
     if cursor:
         params["cursor"] = cursor
+    
+    if category:
+        params["category"] = category
     
     try:
         response = requests.get(url, params=params, timeout=30)
@@ -154,7 +165,7 @@ def parse_biorxiv_paper(item: Dict) -> Optional[Dict]:
 
 def fetch_recent_biorxiv_papers(
     days: int = 7,
-    categories: Optional[List[str]] = None,
+    category: Optional[str] = 'neuroscience',
     max_results: int = 200
 ) -> List[Dict]:
     """
@@ -162,7 +173,8 @@ def fetch_recent_biorxiv_papers(
     
     Args:
         days: Number of days to look back
-        categories: List of categories to filter by (default: None - all papers)
+        category: Category to filter by (default: 'neuroscience'). 
+                  Set to None to fetch all categories.
         max_results: Maximum total results to fetch
     
     Returns:
@@ -175,7 +187,10 @@ def fetch_recent_biorxiv_papers(
     date_from_str = date_from.strftime("%Y-%m-%d")
     date_to_str = date_to.strftime("%Y-%m-%d")
     
-    print(f"Fetching bioRxiv papers from {date_from_str} to {date_to_str}")
+    if category:
+        print(f"Fetching bioRxiv '{category}' papers from {date_from_str} to {date_to_str}")
+    else:
+        print(f"Fetching bioRxiv papers from {date_from_str} to {date_to_str}")
     
     cursor = None
     fetched_count = 0
@@ -186,7 +201,8 @@ def fetch_recent_biorxiv_papers(
             date_from=date_from_str,
             date_to=date_to_str,
             cursor=cursor,
-            limit=100
+            limit=100,
+            category=category  # Server-side category filtering
         )
         
         papers_data = response.get('collection', [])
@@ -208,19 +224,14 @@ def fetch_recent_biorxiv_papers(
         if status != 'ok' or count == 0:
             break
         
-        # Parse papers and filter by category if specified
+        # Parse papers (no need to filter by category - already done server-side)
         for item in papers_data:
             paper = parse_biorxiv_paper(item)
             if paper:
-                # Filter by category if specified
-                if categories:
-                    paper_category = paper.get('biorxiv_category', '').lower()
-                    if not any(cat.lower() in paper_category for cat in categories):
-                        continue
                 all_papers.append(paper)
         
         fetched_count += count
-        print(f"  Fetched {fetched_count}/{total} papers (kept {len(all_papers)} after filtering)")
+        print(f"  Fetched {fetched_count}/{total} papers")
         
         # Check if there are more pages
         if not next_cursor or next_cursor == cursor:
@@ -256,7 +267,8 @@ def fetch_recent_biorxiv_papers(
 def fetch_biorxiv_papers_by_date(
     date_from: str,
     date_to: str,
-    max_results: int = 500
+    max_results: int = 500,
+    category: Optional[str] = None
 ) -> List[Dict]:
     """
     Fetch papers from bioRxiv by specific date range.
@@ -265,11 +277,15 @@ def fetch_biorxiv_papers_by_date(
         date_from: Start date (YYYY-MM-DD)
         date_to: End date (YYYY-MM-DD)
         max_results: Maximum total results
+        category: Category to filter by (e.g., 'neuroscience')
     
     Returns:
         List of paper dictionaries
     """
-    print(f"Fetching bioRxiv papers from {date_from} to {date_to}")
+    if category:
+        print(f"Fetching bioRxiv '{category}' papers from {date_from} to {date_to}")
+    else:
+        print(f"Fetching bioRxiv papers from {date_from} to {date_to}")
     
     cursor = None
     fetched_count = 0
@@ -280,7 +296,8 @@ def fetch_biorxiv_papers_by_date(
             date_from=date_from,
             date_to=date_to,
             cursor=cursor,
-            limit=100
+            limit=100,
+            category=category
         )
         
         papers_data = response.get('collection', [])
@@ -340,7 +357,7 @@ if __name__ == '__main__':
     print("Fetching recent bioRxiv papers...")
     papers = fetch_recent_biorxiv_papers(
         days=7,
-        categories=None,  # Set to ['neuroscience'] to filter by category
+        category='neuroscience',  # Use server-side filtering
         max_results=50
     )
     print(f"\nTotal papers fetched: {len(papers)}")

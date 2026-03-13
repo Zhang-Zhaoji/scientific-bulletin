@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from crawler_arxiv import (
     fetch_recent_arxiv_papers,
     save_arxiv_papers,
-    NEUROSCIENCE_CATEGORY
+    NEUROSCIENCE_CATEGORIES
 )
 from crawler_biorxiv import (
     fetch_recent_biorxiv_papers,
@@ -30,6 +30,7 @@ from crawler_nature import (
     process_nature_article_infos
 )
 from crawler_science import fetch_science_papers
+from crawler_cell import fetch_cell_papers, CELL_JOURNALS
 
 # Default configuration
 DEFAULT_DAYS = 7
@@ -50,16 +51,24 @@ NATURE_JOURNALS = [
 ]
 
 
-def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 50) -> List[Dict]:
+def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 50, use_extended: bool = False) -> List[Dict]:
     """Fetch papers from arXiv."""
+    from crawler_arxiv import NEUROSCIENCE_CATEGORIES, EXTENDED_CATEGORIES
+    
+    categories = EXTENDED_CATEGORIES if use_extended else NEUROSCIENCE_CATEGORIES
+    
     print("\n" + "=" * 80)
-    print("Fetching from arXiv (q-bio.NC - Neurons and Cognition)...")
+    print("Fetching from arXiv...")
+    print(f"Categories: {', '.join(categories)}")
+    print(f"Date range: last {days} days only (strict)")
     print("=" * 80)
     
     papers = fetch_recent_arxiv_papers(
         days=days,
-        categories=[NEUROSCIENCE_CATEGORY],
-        max_results_per_category=max_results
+        categories=categories,
+        max_results_per_category=max_results,
+        use_extended=use_extended,
+        fallback_if_empty=False  # Strict date filtering - don't fetch outside date range
     )
     
     print(f"Total arXiv papers: {len(papers)}")
@@ -67,14 +76,18 @@ def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 50) -> L
 
 
 def fetch_all_biorxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 200) -> List[Dict]:
-    """Fetch papers from bioRxiv."""
+    """
+    Fetch papers from bioRxiv.
+    
+    By default, only fetches from neuroscience category using server-side filtering.
+    """
     print("\n" + "=" * 80)
-    print("Fetching from bioRxiv...")
+    print("Fetching from bioRxiv (neuroscience category)...")
     print("=" * 80)
     
     papers = fetch_recent_biorxiv_papers(
         days=days,
-        categories=None,  # Fetch all categories, filter by date
+        category='neuroscience',  # Server-side category filtering
         max_results=max_results
     )
     
@@ -82,17 +95,22 @@ def fetch_all_biorxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 200) -
     return papers
 
 
-def fetch_all_nature_papers() -> List[Dict]:
-    """Fetch papers from Nature journals."""
+def fetch_all_nature_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
+    """
+    Fetch papers from Nature journals.
+    
+    Args:
+        days: Only fetch articles from last N days
+    """
     print("\n" + "=" * 80)
-    print("Fetching from Nature journals...")
+    print(f"Fetching from Nature journals (last {days} days)...")
     print("=" * 80)
     
     all_papers = []
     for idx, base_url in enumerate(NATURE_JOURNALS):
         print(f"\n[{idx + 1}/{len(NATURE_JOURNALS)}] Processing: {base_url}")
         try:
-            papers = process_nature_article_infos(base_url)
+            papers = process_nature_article_infos(base_url, days_back=days, fetch_abstracts=True)
             all_papers.extend(papers)
             print(f"  -> Found {len(papers)} papers")
         except Exception as e:
@@ -135,7 +153,52 @@ def fetch_all_science_papers() -> List[Dict]:
         return []
 
 
-def merge_papers(*paper_lists: List[List[Dict]]) -> List[Dict]:
+def fetch_all_cell_papers() -> List[Dict]:
+    """
+    Fetch papers from Cell Press journals.
+    
+    Fetches from Neuron, Current Biology, and Trends in Neurosciences.
+    Uses list pages + Europe PMC enrichment.
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from Cell Press journals...")
+    print("=" * 80)
+    
+    # Focus on neuroscience-relevant journals
+    journals = ['neuron', 'current-biology', 'trends-neurosciences']
+    
+    try:
+        papers = fetch_cell_papers(
+            journals=journals,
+            days=None,  # Don't filter by date, get all recent articles
+            enrich=True,
+            delay=0.5,
+            headless=True
+        )
+        print(f"\nTotal Cell Press papers: {len(papers)}")
+        
+        # Show enrichment breakdown
+        status_counts = {}
+        for p in papers:
+            status = p.get('enrichment_status', 'unknown')
+            status_counts[status] = status_counts.get(status, 0) + 1
+        
+        if status_counts:
+            print("\nEnrichment breakdown:")
+            for status, count in sorted(status_counts.items()):
+                print(f"  {status}: {count}")
+        
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch Cell Press papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+def merge_papers(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
+                 nature_papers: List[Dict], science_papers: List[Dict],
+                 cell_papers: List[Dict]) -> List[Dict]:
     """Merge papers from multiple sources, removing duplicates."""
     print("\n" + "=" * 80)
     print("Merging and deduplicating papers...")
@@ -143,8 +206,11 @@ def merge_papers(*paper_lists: List[List[Dict]]) -> List[Dict]:
     
     # Combine all papers
     all_papers = []
-    for papers in paper_lists:
-        all_papers.extend(papers)
+    all_papers.extend(arxiv_papers)
+    all_papers.extend(biorxiv_papers)
+    all_papers.extend(nature_papers)
+    all_papers.extend(science_papers)
+    all_papers.extend(cell_papers)
     
     print(f"Total papers before deduplication: {len(all_papers)}")
     
@@ -208,6 +274,7 @@ def save_merged_papers(papers: List[Dict], output_dir: str = DEFAULT_OUTPUT_DIR)
 
 def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
                         nature_papers: List[Dict], science_papers: List[Dict],
+                        cell_papers: List[Dict],
                         output_dir: str = DEFAULT_OUTPUT_DIR):
     """Save a summary of papers by source."""
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
@@ -241,6 +308,13 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                     'min': min((p['date'] for p in science_papers), default='N/A'),
                     'max': max((p['date'] for p in science_papers), default='N/A')
                 } if science_papers else None
+            },
+            'cell': {
+                'count': len(cell_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in cell_papers), default='N/A'),
+                    'max': max((p['date'] for p in cell_papers), default='N/A')
+                } if cell_papers else None
             }
         }
     }
@@ -255,6 +329,7 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
 
 def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
                   nature_papers: List[Dict], science_papers: List[Dict],
+                  cell_papers: List[Dict],
                   merged_papers: List[Dict]):
     """Print a formatted summary of the crawl results."""
     print("\n" + "=" * 80)
@@ -267,8 +342,9 @@ def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
     print(f"{'bioRxiv':<20} {len(biorxiv_papers):>10}")
     print(f"{'Nature Journals':<20} {len(nature_papers):>10}")
     print(f"{'Science':<20} {len(science_papers):>10}")
+    print(f"{'Cell Press':<20} {len(cell_papers):>10}")
     print("-" * 32)
-    total_before = len(arxiv_papers) + len(biorxiv_papers) + len(nature_papers) + len(science_papers)
+    total_before = len(arxiv_papers) + len(biorxiv_papers) + len(nature_papers) + len(science_papers) + len(cell_papers)
     print(f"{'Total (before dedup)':<20} {total_before:>10}")
     print(f"{'Unique papers':<20} {len(merged_papers):>10}")
     
@@ -293,10 +369,13 @@ def main():
         epilog="""
 Examples:
   python src/main.py                          # Fetch from all sources
-  python src/main.py --arxiv-only             # Fetch only from arXiv
+  python src/main.py --arxiv-only             # Fetch from core arXiv categories (NC, TO, MN)
+  python src/main.py --arxiv-only --extended  # Fetch from extended arXiv categories (+AI/CV/ML)
   python src/main.py --biorxiv-only           # Fetch only from bioRxiv  
   python src/main.py --nature-only            # Fetch only from Nature journals
-  python src/main.py --days 14                # Look back 14 days for preprints
+  python src/main.py --science-only           # Fetch only from Science journal
+  python src/main.py --cell-only              # Fetch only from Cell Press journals
+  python src/main.py --days 14                # Look back 14 days for all sources
   python src/main.py --no-merge               # Save separate files per source
         """
     )
@@ -310,14 +389,18 @@ Examples:
                         help='Fetch only from Nature journals')
     parser.add_argument('--science-only', action='store_true',
                         help='Fetch only from Science journal (with Europe PMC enrichment)')
+    parser.add_argument('--cell-only', action='store_true',
+                        help='Fetch only from Cell Press journals (Neuron, Current Biology, etc.)')
     
     # Configuration
     parser.add_argument('--days', type=int, default=DEFAULT_DAYS,
-                        help=f'Number of days to look back for preprints (default: {DEFAULT_DAYS})')
+                        help=f'Number of days to look back for all sources (default: {DEFAULT_DAYS})')
     parser.add_argument('--arxiv-limit', type=int, default=50,
-                        help='Maximum arXiv papers to fetch (default: 50)')
+                        help='Maximum arXiv papers to fetch per category (default: 50)')
     parser.add_argument('--biorxiv-limit', type=int, default=200,
                         help='Maximum bioRxiv papers to fetch (default: 200)')
+    parser.add_argument('--extended', action='store_true',
+                        help='Use extended arXiv categories (includes cs.AI, cs.CV, cs.LG, etc.)')
     parser.add_argument('--output-dir', type=str, default=DEFAULT_OUTPUT_DIR,
                         help=f'Output directory (default: {DEFAULT_OUTPUT_DIR})')
     
@@ -332,23 +415,26 @@ Examples:
     args = parser.parse_args()
     
     # Determine which sources to fetch
-    any_specific = args.arxiv_only or args.biorxiv_only or args.nature_only or args.science_only
+    any_specific = args.arxiv_only or args.biorxiv_only or args.nature_only or args.science_only or args.cell_only
     fetch_arxiv = args.arxiv_only or not any_specific
     fetch_biorxiv = args.biorxiv_only or not any_specific
     fetch_nature = args.nature_only or not any_specific
     fetch_science = args.science_only or not any_specific
+    fetch_cell = args.cell_only or not any_specific
     
     arxiv_papers = []
     biorxiv_papers = []
     nature_papers = []
     science_papers = []
+    cell_papers = []
     
     try:
         # Fetch from selected sources
         if fetch_arxiv:
             arxiv_papers = fetch_all_arxiv_papers(
                 days=args.days,
-                max_results=args.arxiv_limit
+                max_results=args.arxiv_limit,
+                use_extended=args.extended
             )
             if args.no_merge:
                 arxiv_filename = f"arxiv_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
@@ -366,7 +452,7 @@ Examples:
                     os.path.join(args.output_dir, biorxiv_filename))
         
         if fetch_nature:
-            nature_papers = fetch_all_nature_papers()
+            nature_papers = fetch_all_nature_papers(days=args.days)
         
         if fetch_science:
             science_papers = fetch_all_science_papers()
@@ -379,6 +465,17 @@ Examples:
                         f.write(paper)
                 print(f"\nSaved Science papers to: {filepath}")
         
+        if fetch_cell:
+            cell_papers = fetch_all_cell_papers()
+            if args.no_merge:
+                import jsonlines
+                cell_filename = f"cell_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, cell_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in cell_papers:
+                        f.write(paper)
+                print(f"\nSaved Cell Press papers to: {filepath}")
+        
         # Merge papers (unless --no-merge is specified)
         if not args.no_merge:
             if args.skip_dedup:
@@ -388,6 +485,7 @@ Examples:
                 merged_papers.extend(biorxiv_papers)
                 merged_papers.extend(nature_papers)
                 merged_papers.extend(science_papers)
+                merged_papers.extend(cell_papers)
                 # Sort by date
                 def parse_date(paper: Dict) -> datetime.datetime:
                     date_str = paper.get('date', '')
@@ -402,11 +500,11 @@ Examples:
                         return datetime.datetime.min
                 merged_papers.sort(key=parse_date, reverse=True)
             else:
-                merged_papers = merge_papers(arxiv_papers, biorxiv_papers, nature_papers, science_papers)
+                merged_papers = merge_papers(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers)
             
             save_merged_papers(merged_papers, args.output_dir)
-            save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, args.output_dir)
-            print_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, merged_papers)
+            save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, args.output_dir)
+            print_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, merged_papers)
         else:
             # Print summary without merge
             print("\n" + "=" * 80)
@@ -416,6 +514,7 @@ Examples:
             print(f"bioRxiv: {len(biorxiv_papers)} papers")
             print(f"Nature: {len(nature_papers)} papers")
             print(f"Science: {len(science_papers)} papers")
+            print(f"Cell Press: {len(cell_papers)} papers")
         
         print("\n[OK] Done!")
         

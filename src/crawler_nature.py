@@ -4,10 +4,17 @@ import datetime
 import tqdm
 from bs4 import BeautifulSoup
 import jsonlines
-from utils import normalize_url, select_articles
+from utils import normalize_url, select_articles, ymd, days
 import time
+from dateutil import parser as date_parser
 
-start_day = '10/12/2025'
+# Default: look back 7 days
+DEFAULT_DAYS_BACK = 7
+
+def get_start_date(days_back: int = DEFAULT_DAYS_BACK) -> str:
+    """Get start date string for filtering articles."""
+    start = datetime.datetime.now() - datetime.timedelta(days=days_back)
+    return start.strftime('%d/%m/%Y')
 
 # if we want to extract texts from multiple pages, we need to add the page number to the url
 # ?searchType=journalSearch&sort=PubDate&page=2
@@ -31,14 +38,26 @@ start_day = '10/12/2025'
 # </article>
 # '''
 
-def extract_text(base_url:str):
+def extract_text(base_url: str, days_back: int = DEFAULT_DAYS_BACK, max_pages: int = 5):
+    """
+    Extract article list from Nature journal.
+    
+    Args:
+        base_url: Journal URL
+        days_back: Only fetch articles from last N days
+        max_pages: Maximum pages to fetch per journal
+    """
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
-    next_page = True
-    page = 1
+    
+    start_day = get_start_date(days_back)
+    print(f"Fetching articles from last {days_back} days (since {start_day})")
+    
     article_infos = []
-    while next_page:
+    page = 1
+    
+    while page <= max_pages:
         response = requests.get(base_url + f'?searchType=journalSearch&sort=PubDate&page={page}', headers=headers)
         print(f'page {page}')
         page += 1
@@ -46,6 +65,7 @@ def extract_text(base_url:str):
         soup = BeautifulSoup(response.text, 'html.parser')
         all_artice_elements = soup.find_all('article')
         
+        page_articles = []
         for article in all_artice_elements:
             title_element = article.find('h3', class_='c-card__title')
             title = title_element.text.strip() if title_element else 'No title'
@@ -66,10 +86,36 @@ def extract_text(base_url:str):
                 'date': date,
                 'url': url,
             }
-            article_infos.append(article_info)
-        print(len(article_infos))
-        next_page, article_infos = select_articles(article_infos, start_day)
-        print(len(article_infos))
+            page_articles.append(article_info)
+        
+        print(f'  Found {len(page_articles)} articles on this page')
+        
+        # Check if any articles on this page are within date range
+        valid_articles = []
+        for article in page_articles:
+            try:
+                article_date = ymd(article['date'])
+                # Check if article is within the date range
+                if days(start_day, article_date) >= 0:
+                    valid_articles.append(article)
+                    print(f"    [+] {article_date} - {article['title'][:50]}...")
+                else:
+                    print(f"    [-] {article_date} - Too old, stopping")
+                    # Found an article older than start_day, stop fetching more pages
+                    article_infos.extend(valid_articles)
+                    return article_infos
+            except Exception as e:
+                print(f"    [?] Date parse error: {article['date']}, including anyway")
+                valid_articles.append(article)
+        
+        article_infos.extend(valid_articles)
+        
+        # If we got fewer articles than expected, might be at the end
+        if len(page_articles) < 5:
+            print(f'  Less than 5 articles on page, stopping')
+            break
+    
+    print(f'Total articles collected: {len(article_infos)}')
     return article_infos
 
 
@@ -109,14 +155,25 @@ def get_abstracts(url: str, href: str) -> str:
     abstract = ' '.join(cleaned_texts)
     return abstract
 
-def process_nature_article_infos(root_nature_url:str):
-    print('get texts')
-    article_infos = extract_text(root_nature_url)
-    print('texts extracted \n get abstracts:\n')
-    for idx, article_info in enumerate(tqdm.tqdm(article_infos,total=len(article_infos))):
-        article_url = article_info['url']
-        abstract = get_abstracts(root_nature_url, article_url)
-        article_infos[idx]['abstract'] = abstract
+def process_nature_article_infos(root_nature_url: str, days_back: int = DEFAULT_DAYS_BACK, fetch_abstracts: bool = True):
+    """
+    Process Nature journal articles.
+    
+    Args:
+        root_nature_url: Journal URL
+        days_back: Only fetch articles from last N days
+        fetch_abstracts: Whether to fetch full abstracts (slow)
+    """
+    print(f'Fetching articles from {root_nature_url}')
+    article_infos = extract_text(root_nature_url, days_back=days_back)
+    
+    if fetch_abstracts and article_infos:
+        print(f'Fetching abstracts for {len(article_infos)} articles...')
+        for idx, article_info in enumerate(tqdm.tqdm(article_infos, total=len(article_infos))):
+            article_url = article_info['url']
+            abstract = get_abstracts(root_nature_url, article_url)
+            article_infos[idx]['abstract'] = abstract
+    
     return article_infos  
 
 if __name__ == '__main__':

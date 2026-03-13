@@ -1,130 +1,454 @@
-# extract texts from Springer Nature Journals
-import requests
+"""
+Cell Press Journal Crawler
+
+Supports multiple Cell Press journals:
+- Cell
+- Neuron
+- Current Biology
+- Trends in Neurosciences
+- Cell Reports
+- iScience
+- Cell Systems
+- and more...
+
+Strategy:
+1. Fetch list pages using Selenium (bypass Cloudflare)
+2. Extract basic info: title, authors, date, DOI, URL
+3. Enrich with Europe PMC for abstracts
+4. Fallback to preprint servers
+"""
+import time
 import datetime
-import tqdm
+from typing import List, Dict, Optional, Tuple
 from bs4 import BeautifulSoup
 import jsonlines
-from utils import normalize_url, select_articles
-import time
+from dateutil import parser
 
-start_day = '10/12/2025'
+# Import enrichment module
+try:
+    from enrich_papers import enrich_papers
+except ImportError:
+    from src.enrich_papers import enrich_papers
 
-# if we want to extract texts from multiple pages, we need to add the page number to the url
-# ?searchType=journalSearch&sort=PubDate&page=2
 
-# for each article on the original page, the example information is that:
-'''
-'''
+# Cell Press journal configurations
+CELL_JOURNALS = {
+    'cell': {
+        'name': 'Cell',
+        'url': 'https://www.cell.com/cell/issue',
+        'selector': 'h2.article-title',
+    },
+    'neuron': {
+        'name': 'Neuron',
+        'url': 'https://www.cell.com/neuron/current',
+        'selector': '.toc__item h3',
+    },
+    'current-biology': {
+        'name': 'Current Biology',
+        'url': 'https://www.cell.com/current-biology/current',
+        'selector': '.toc__item h3',
+        'note': 'May be blocked by Cloudflare - will skip if unavailable'
+    },
+    'trends-neurosciences': {
+        'name': 'Trends in Neurosciences',
+        'url': 'https://www.cell.com/trends/neurosciences/current',
+        'selector': '.toc__item h3',
+    },
+    'cell-reports': {
+        'name': 'Cell Reports',
+        'url': 'https://www.cell.com/cell-reports/current',
+        'selector': '.toc__item h3',
+    },
+    'iscience': {
+        'name': 'iScience',
+        'url': 'https://www.cell.com/iscience/current',
+        'selector': '.toc__item h3',
+    },
+    'cell-systems': {
+        'name': 'Cell Systems',
+        'url': 'https://www.cell.com/cell-systems/current',
+        'selector': '.toc__item h3',
+    },
+}
 
-def extract_text(base_url:str):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-    }
-    next_page = True
-    page = 1
-    article_infos = []
-    while next_page:
-        response = requests.get(base_url + f'?searchType=journalSearch&sort=PubDate&page={page}', headers=headers)
-        print(f'page {page}')
-        page += 1
-        time.sleep(1)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        all_artice_elements = soup.find_all('article')
+
+def extract_doi_from_cell_url(url: str) -> Optional[str]:
+    """Extract DOI from Cell Press URL using PII."""
+    if not url:
+        return None
+    
+    import re
+    
+    # Cell Press URLs contain PII like: S0896-6273(26)00091-7
+    # We can convert PII to DOI format
+    pii_match = re.search(r'[AS](\d{4})-(\d{4})\((\d{2})\)([\w\d.-]+)', url)
+    if pii_match:
+        # PII format: S0896-6273(26)00091-7
+        # DOI format: 10.1016/j.neuron.2026.00091 (approximate)
+        # This is a simplification - actual DOI may vary by journal
+        prefix = pii_match.group(1) + pii_match.group(2)
+        year = pii_match.group(3)
+        suffix = pii_match.group(4).replace('-', '')
         
-        for article in all_artice_elements:
-            title_element = article.find('h3', class_='c-card__title')
-            title = title_element.text.strip() if title_element else 'No title'
-            author_elements = article.find_all('li', itemprop='creator')
-            authors = [author.text.strip() for author in author_elements] if author_elements else ['No author']
-            date_element = article.find('time', itemprop='datePublished')
-            date = date_element.text.strip() if date_element else 'No date'
-            url_element = article.find('a', class_='c-card__link u-link-inherit')
-            url = url_element['href'] if url_element else 'No url'
-            article_type_element = article.find('span', class_='c-meta__type')
-            article_type = article_type_element.text.strip() if article_type_element else 'No type'
-            if article_type not in ['Article', 'Review Article']:
-                continue 
-            article_info = {
-                'type': article_type,
-                'title': title,
-                'authors': authors,
-                'date': date,
-                'url': url,
-            }
-            article_infos.append(article_info)
-        print(len(article_infos))
-        next_page, article_infos = select_articles(article_infos, start_day)
-        print(len(article_infos))
-    return article_infos
+        # Map journal prefixes
+        journal_map = {
+            '08966273': 'neuron',
+            '00928674': 'cell',
+            '09609822': 'cub',
+            '01662236': 'tins',
+            '22111247': 'celrep',
+            '25890042': 'isci',
+            '24054712': 'cels',
+        }
+        
+        journal_code = journal_map.get(prefix, 'cell')
+        return f"10.1016/j.{journal_code}.20{year}.{suffix[:5]}"
+    
+    return None
 
 
-
-def get_abstracts(url: str, href: str) -> str:
-    target_url = normalize_url(url.strip(), href.strip())
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
-    }
+def parse_cell_date(date_str: str) -> str:
+    """Parse various Cell Press date formats."""
     try:
-        response = requests.get(target_url, headers=headers, timeout=15)
-        response.raise_for_status()
-    except requests.RequestException as e:
-        print(f"[ERROR] Failed to fetch {target_url}: {e}")
-        return ""
-    soup = BeautifulSoup(response.text, 'html.parser')
-    abstract_section = soup.find('section', {'data-title': 'Abstract'})
-    if abstract_section is None:
-        print("[WARN] Abstract section not found.")
-        return ""
+        # Try common formats
+        # "20 Mar 2026" or "March 20, 2026" or "2026-03-20"
+        dt = parser.parse(date_str)
+        return dt.strftime('%d %b %Y')
+    except:
+        return date_str
 
-    content_div = abstract_section.find('div', class_='c-article-section__content')
-    paragraphs = content_div.find_all('p', recursive=True)
-    if not paragraphs:
-        print("[WARN] No <p> tags found in abstract section.")
-        return ""
 
-    cleaned_texts = []
-    for p in paragraphs:
-        for sup in p.find_all('sup'):
-            citation_link = sup.find('a', {'data-test': 'citation-ref'})
-            if citation_link:
-                sup.decompose() 
-        text = p.get_text(separator=' ', strip=True)
-        if text:
-            cleaned_texts.append(text)
-    abstract = ' '.join(cleaned_texts)
-    return abstract
+def fetch_journal_list(journal_key: str, headless: bool = True, timeout: int = 30) -> Tuple[List[Dict], str]:
+    """
+    Fetch article list from a Cell Press journal.
+    
+    Args:
+        journal_key: Key from CELL_JOURNALS
+        headless: Use headless browser
+        timeout: Page load timeout
+        
+    Returns:
+        Tuple of (articles list, journal name)
+    """
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    
+    if journal_key not in CELL_JOURNALS:
+        raise ValueError(f"Unknown journal: {journal_key}. Available: {list(CELL_JOURNALS.keys())}")
+    
+    config = CELL_JOURNALS[journal_key]
+    url = config['url']
+    selector = config['selector']
+    journal_name = config['name']
+    
+    print(f"=" * 80)
+    print(f"Cell Press Crawler - {journal_name}")
+    print(f"=" * 80)
+    print(f"Fetching: {url}")
+    
+    # Setup Chrome options
+    chrome_options = Options()
+    if headless:
+        chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--window-size=1920,1080')
+    chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+    
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.set_page_load_timeout(timeout)
+    
+    articles = []
+    
+    try:
+        # Load page
+        driver.get(url)
+        
+        # Wait for content to load
+        time.sleep(5)
+        
+        html = driver.page_source
+        print(f"Fetched {len(html)} chars via Selenium")
+        
+        # Check for blocking
+        if 'challenge-error-text' in html or 'cf-chl' in html:
+            print("[ERROR] Cloudflare challenge detected!")
+            return [], journal_name
+        
+        if 'captcha' in html.lower():
+            print("[ERROR] CAPTCHA detected!")
+            return [], journal_name
+        
+        # Parse HTML
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # Find article elements - use .toc__item which contains each article
+        article_elements = soup.select('.toc__item')
+        
+        if not article_elements:
+            print("[WARNING] No article elements found with .toc__item")
+            # Fallback to other selectors
+            selectors_to_try = ['article', '.article-in-issue', '[class*="article"]']
+            for sel in selectors_to_try:
+                article_elements = soup.select(sel)
+                if article_elements:
+                    print(f"Found {len(article_elements)} elements with selector: {sel}")
+                    break
+        else:
+            print(f"Found {len(article_elements)} article elements with .toc__item")
+        
+        if not article_elements:
+            print("[WARNING] No article elements found")
+            return [], journal_name
+        
+        # Extract article info
+        for elem in article_elements:
+            try:
+                # Skip if no data-pii (not a real article)
+                if not elem.get('data-pii'):
+                    continue
+                
+                # Title - look for .toc__item__title or h3
+                title_elem = elem.select_one('.toc__item__title')
+                if not title_elem:
+                    title_elem = elem.find('h3')
+                
+                if not title_elem:
+                    continue
+                
+                # Get title text from the link or the element itself
+                title_link = title_elem.find('a')
+                if title_link:
+                    title = title_link.get_text(strip=True)
+                    href = title_link.get('href', '')
+                else:
+                    title = title_elem.get_text(strip=True)
+                    # Try to find any link in the element
+                    any_link = elem.find('a', href=True)
+                    href = any_link.get('href', '') if any_link else ''
+                
+                if not title or len(title) < 10:
+                    continue
+                
+                # Skip non-article items
+                skip_keywords = ['advisory board', 'contents', 'editorial board', 'masthead', 
+                               'corrigendum', 'retraction', 'in this issue', 'preview']
+                if any(keyword in title.lower() for keyword in skip_keywords):
+                    continue
+                
+                # Build full URL
+                if href.startswith('/'):
+                    article_url = f"https://www.cell.com{href}"
+                elif href.startswith('http'):
+                    article_url = href
+                else:
+                    article_url = f"https://www.cell.com/{href}"
+                
+                # Authors - look for .toc__item__authors .loa__item
+                author_elems = elem.select('.toc__item__authors .loa__item')
+                if author_elems:
+                    authors = [a.get_text(strip=True).rstrip(',') for a in author_elems]
+                else:
+                    authors = []
+                
+                # Brief/Abstract - look for .toc__item__brief
+                brief_elem = elem.select_one('.toc__item__brief')
+                brief = brief_elem.get_text(strip=True) if brief_elem else ''
+                
+                # Date - Cell Press list pages often don't show dates
+                # We'll use current date as fallback, or try to extract from page
+                date_elem = elem.find('time')
+                if date_elem:
+                    date_str = date_elem.get_text(strip=True)
+                    date = parse_cell_date(date_str)
+                else:
+                    # Use current date as fallback
+                    date = datetime.datetime.now().strftime('%d %b %Y')
+                
+                # Article type - try to determine from context
+                # Check if it looks like a research article
+                article_type = 'Article'
+                
+                # Extract DOI from URL
+                doi = extract_doi_from_cell_url(article_url)
+                
+                articles.append({
+                    'type': article_type,
+                    'title': title,
+                    'authors': authors,
+                    'date': date,
+                    'url': article_url,
+                    'doi': doi or '',
+                    'abstract': brief,  # Use brief as initial abstract
+                    'source': journal_name,
+                })
+                
+            except Exception as e:
+                print(f"Parse error: {e}")
+                continue
+        
+        print(f"Extracted {len(articles)} research articles")
+        
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch: {e}")
+    finally:
+        driver.quit()
+    
+    return articles, journal_name
 
-def process_nature_article_infos(root_nature_url:str):
-    print('get texts')
-    article_infos = extract_text(root_nature_url)
-    print('texts extracted \n get abstracts:\n')
-    for idx, article_info in enumerate(tqdm.tqdm(article_infos,total=len(article_infos))):
-        article_url = article_info['url']
-        abstract = get_abstracts(root_nature_url, article_url)
-        article_infos[idx]['abstract'] = abstract
-    return article_infos  
+
+def filter_by_date(articles: List[Dict], days: int = 7) -> List[Dict]:
+    """
+    Filter articles by publication date.
+    
+    Args:
+        articles: List of article dicts
+        days: Number of days to look back
+        
+    Returns:
+        Filtered list of articles
+    """
+    from datetime import datetime, timedelta
+    
+    cutoff_date = datetime.now() - timedelta(days=days)
+    filtered = []
+    
+    for article in articles:
+        try:
+            article_date = parser.parse(article['date'])
+            if article_date >= cutoff_date:
+                filtered.append(article)
+        except:
+            # If date parsing fails, include the article
+            filtered.append(article)
+    
+    return filtered
+
+
+def fetch_cell_papers(
+    journals: Optional[List[str]] = None,
+    days: Optional[int] = None,
+    enrich: bool = True,
+    delay: float = 0.5,
+    headless: bool = True
+) -> List[Dict]:
+    """
+    Fetch papers from Cell Press journals.
+    
+    Args:
+        journals: List of journal keys to fetch (None = all)
+        days: Filter by last N days (None = no filter)
+        enrich: Whether to enrich with Europe PMC
+        delay: Delay between enrichment requests
+        headless: Use headless browser
+        
+    Returns:
+        List of paper dicts
+    """
+    if journals is None:
+        journals = ['neuron', 'current-biology', 'trends-neurosciences']
+    
+    all_articles = []
+    
+    for journal_key in journals:
+        try:
+            articles, journal_name = fetch_journal_list(journal_key, headless=headless)
+            all_articles.extend(articles)
+            
+            # Small delay between journals
+            if len(journals) > 1:
+                time.sleep(2)
+                
+        except Exception as e:
+            print(f"[ERROR] Failed to fetch {journal_key}: {e}")
+            continue
+    
+    # Filter by date if specified
+    if days:
+        all_articles = filter_by_date(all_articles, days)
+        print(f"\nFiltered to {len(all_articles)} articles from last {days} days")
+    
+    # Enrich with Europe PMC
+    if enrich and all_articles:
+        print("\n" + "=" * 80)
+        print("Enriching with Europe PMC...")
+        print("=" * 80)
+        enriched, stats = enrich_papers(all_articles, delay=delay)
+        return enriched
+    
+    return all_articles
+
+
+def save_cell_papers(papers: List[Dict], filepath: Optional[str] = None) -> str:
+    """Save papers to JSONL file."""
+    if filepath is None:
+        filepath = f"getfiles/cell-press-{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+    
+    with jsonlines.open(filepath, 'w') as f:
+        for paper in papers:
+            f.write(paper)
+    
+    return filepath
+
 
 if __name__ == '__main__':
-    base_urls = ['https://www.nature.com/nature/research-articles',
-            'https://www.nature.com/nature/reviews-and-analysis',
-            'https://www.nature.com/natbiomedeng/research-articles',
-            'https://www.nature.com/natbiomedeng/reviews-and-analysis',
-            'https://www.nature.com/nmeth/research-articles',
-            'https://www.nature.com/nmeth/reviews-and-analysis',
-            'https://www.nature.com/neuro/research-articles',
-            'https://www.nature.com/neuro/reviews-and-analysis',
-            'https://www.nature.com/nathumbehav/research-articles',
-            'https://www.nature.com/nathumbehav/reviews-and-analysis',
-                # 'https://www.nature.com/subjects/biological-sciences/ncomms',
-                # 'https://www.nature.com/subjects/health-sciences/ncomms'
-                ]
-    article_infos = []
-    for idx, base_url in enumerate(base_urls):
-        print(f'[{idx}/{len(base_urls)}], url = {base_url}')
-        article_infos.extend(process_nature_article_infos(base_url))    
+    import argparse
     
-    with jsonlines.open(f'getfiles/{datetime.datetime.now().strftime("%Y-%m-%d")}.jsonl', 'w') as f:
-        print('writing...')
-        for article_info in article_infos:
-            f.write(article_info)
-        print('finished')
+    parser = argparse.ArgumentParser(description='Cell Press journal crawler')
+    parser.add_argument('--journals', nargs='+', default=['neuron', 'current-biology'],
+                        help='Journals to fetch (default: neuron current-biology)')
+    parser.add_argument('--days', type=int, default=None,
+                        help='Filter by last N days')
+    parser.add_argument('--no-enrich', action='store_true',
+                        help='Skip Europe PMC enrichment')
+    parser.add_argument('--delay', type=float, default=0.5,
+                        help='Delay between enrichment requests (default: 0.5s)')
+    parser.add_argument('--list-journals', action='store_true',
+                        help='List available journals')
+    
+    args = parser.parse_args()
+    
+    if args.list_journals:
+        print("Available Cell Press journals:")
+        for key, config in CELL_JOURNALS.items():
+            print(f"  {key}: {config['name']} ({config['url']})")
+        exit(0)
+    
+    # Fetch papers
+    papers = fetch_cell_papers(
+        journals=args.journals,
+        days=args.days,
+        enrich=not args.no_enrich,
+        delay=args.delay
+    )
+    
+    if papers:
+        # Save
+        filepath = save_cell_papers(papers)
+        print(f"\nSaved {len(papers)} papers to: {filepath}")
+        
+        # Summary
+        if not args.no_enrich:
+            status_counts = {}
+            for p in papers:
+                status = p.get('enrichment_status', 'unknown')
+                status_counts[status] = status_counts.get(status, 0) + 1
+            
+            print("\nEnrichment summary:")
+            for status, count in sorted(status_counts.items()):
+                print(f"  {status}: {count}")
+        
+        # Show samples
+        print("\nSample papers:")
+        for p in papers[:3]:
+            print(f"\n- {p['title'][:70]}...")
+            print(f"  Date: {p['date']}, Source: {p.get('source', 'N/A')}")
+            if p.get('abstract'):
+                print(f"  Abstract: {p['abstract'][:100]}...")
+    else:
+        print("No papers found")
