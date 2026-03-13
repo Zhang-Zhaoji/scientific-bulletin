@@ -1,0 +1,6 @@
+.vscode/
+src\__pycache__
+testSample.txt
+*.jsonl
+*.html
+*.json
