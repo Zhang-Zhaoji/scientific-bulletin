@@ -27,13 +27,14 @@ def extract_doi_from_url(url: str) -> Optional[str]:
     return None
 
 
-def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List[Dict]:
+def fetch_science_list(use_requests: bool = False, headless: bool = True, days: Optional[int] = None) -> List[Dict]:
     """
     Fetch Science articles from list pages.
     
     Args:
         use_requests: Use requests instead of Selenium (faster, but may miss JS content)
         headless: Use headless browser if Selenium is used
+        days: Only return articles from last N days (None = no filter)
     
     Returns:
         List of article dicts with basic info
@@ -45,37 +46,36 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
     url = 'https://www.science.org/journal/science/research?startPage=0&pageSize=100'
     print(f"Fetching: {url}")
     
-    if True:
+    if use_requests:
+        # Fast method using requests
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+            response = requests.get(url, headers=headers, timeout=30)
+            response.raise_for_status()
+            html = response.text
+            print(f"Fetched {len(html)} chars via requests")
+        except Exception as e:
+            print(f"Requests failed: {e}, falling back to Selenium...")
+            use_requests = False
+    
+    if not use_requests:
         # Fallback to Selenium
         from selenium import webdriver
         from selenium.webdriver.chrome.options import Options
-        from selenium.webdriver.chrome.service import Service
         from selenium.webdriver.common.by import By
         from selenium.webdriver.support.ui import WebDriverWait
         from selenium.webdriver.support import expected_conditions as EC
         
-        # Setup Chrome options
         chrome_options = Options()
-        chrome_options.add_argument('--headless')
-        # chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--window-size=1920,1080')
+        if headless:
+            chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-        # chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-        from selenium.webdriver.chrome.service import Service
-        # 使用 Service 对象（新版 Selenium 推荐）
-        # service = Service()
-        # 替换原来的 driver = webdriver.Chrome(...)
-        from webdriver_manager.chrome import ChromeDriverManager
-        service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=chrome_options)
-        driver.set_page_load_timeout(30)
-
-        service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=chrome_options)
+        
+        driver = webdriver.Chrome(options=chrome_options)
+        driver.set_window_size(1920, 1080)
         
         try:
             driver.get(url)
@@ -85,7 +85,6 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
             time.sleep(3)
             html = driver.page_source
             print(f"Fetched {len(html)} chars via Selenium")
-            # print(html)
         finally:
             driver.quit()
     
@@ -95,6 +94,10 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
     print(f"Found {len(cards)} article cards")
     
     articles = []
+    cutoff_date = None
+    if days:
+        cutoff_date = datetime.datetime.now() - datetime.timedelta(days=days)
+        print(f"Filtering: only articles from last {days} days (after {cutoff_date.date()})")
     for card in cards:
         try:
             # Title & URL
@@ -118,6 +121,24 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
             # Date
             date_elem = card.find('time')
             date = date_elem.text.strip() if date_elem else 'No date'
+            date_str = date_elem.text.strip() if date_elem else 'No date'
+            
+            if days and cutoff_date:
+                try:
+                    # Science 日期格式通常是 "13 Mar 2026" 或 "Mar 13 2026"
+                    article_date = None
+                    for fmt in ['%d %b %Y', '%b %d %Y', '%Y-%m-%d']:
+                        try:
+                            article_date = datetime.datetime.strptime(date_str, fmt)
+                            break
+                        except ValueError:
+                            continue
+                    
+                    if article_date and article_date < cutoff_date:
+                        continue  # 跳过过期文章
+                        
+                except Exception as e:
+                    print(f"Date parse warning: {date_str} - {e}")
             
             # Type
             type_elem = card.find('span', class_='overline')
@@ -146,19 +167,20 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
     return articles
 
 
-def fetch_science_papers(enrich: bool = True, delay: float = 0.5) -> List[Dict]:
+def fetch_science_papers(enrich: bool = True, delay: float = 0.5, days: Optional[int] = None) -> List[Dict]:
     """
     Fetch Science papers with optional Europe PMC enrichment.
     
     Args:
         enrich: Whether to enrich with Europe PMC
         delay: Delay between enrichment requests
+        days: Only return articles from last N days
     
     Returns:
         List of paper dicts
     """
-    # Step 1: Get basic info
-    articles = fetch_science_list()
+    # Step 1: Get basic info (带日期筛选)
+    articles = fetch_science_list(days=days)
     
     if not articles or not enrich:
         return articles

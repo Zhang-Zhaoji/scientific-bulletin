@@ -1,3 +1,4 @@
+# depricated
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-4B-Instruct-2507-FP8"

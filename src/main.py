@@ -120,7 +120,7 @@ def fetch_all_nature_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     return all_papers
 
 
-def fetch_all_science_papers() -> List[Dict]:
+def fetch_all_science_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     """
     Fetch papers from Science journal.
     
@@ -131,7 +131,7 @@ def fetch_all_science_papers() -> List[Dict]:
     print("=" * 80)
     
     try:
-        papers = fetch_science_papers(enrich=True, delay=0.5)
+        papers = fetch_science_papers(enrich=True, delay=0.5, days=days)
         print(f"\nTotal Science papers: {len(papers)}")
         
         # Show enrichment breakdown
@@ -418,7 +418,7 @@ Examples:
     # Determine which sources to fetch
     any_specific = args.arxiv_only or args.biorxiv_only or args.nature_only or args.science_only or args.cell_only
     fetch_arxiv = args.arxiv_only or not any_specific
-    fetch_biorxiv = args.biorxiv_only or not any_specific
+    fetch_biorxiv = False #args.biorxiv_only or not any_specific
     fetch_nature = args.nature_only or not any_specific
     fetch_science = args.science_only or not any_specific
     fetch_cell = args.cell_only or not any_specific

@@ -47,6 +47,19 @@ def extract_text(base_url: str, days_back: int = DEFAULT_DAYS_BACK, max_pages: i
         days_back: Only fetch articles from last N days
         max_pages: Maximum pages to fetch per journal
     """
+    Journal_Name_dict = {
+            'https://www.nature.com/nature/research-articles':"Nature",
+            'https://www.nature.com/nature/reviews-and-analysis':"Nature",
+            'https://www.nature.com/natbiomedeng/research-articles':"Nature BME",
+            'https://www.nature.com/natbiomedeng/reviews-and-analysis':"Nature BME",
+            'https://www.nature.com/nmeth/research-articles':"Nature Method",
+            'https://www.nature.com/nmeth/reviews-and-analysis':"Nature Method",
+            'https://www.nature.com/neuro/research-articles':"Nature Neuroscience",
+            'https://www.nature.com/neuro/reviews-and-analysis':"Nature Neuroscience",
+            'https://www.nature.com/nathumbehav/research-articles':"Nature Human Behavior",
+            'https://www.nature.com/nathumbehav/reviews-and-analysis':"Nature Human Behavior",
+            }
+    Journal_Name = Journal_Name_dict[base_url]
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
@@ -85,6 +98,7 @@ def extract_text(base_url: str, days_back: int = DEFAULT_DAYS_BACK, max_pages: i
                 'authors': authors,
                 'date': date,
                 'url': url,
+                'source': Journal_Name
             }
             page_articles.append(article_info)
         
