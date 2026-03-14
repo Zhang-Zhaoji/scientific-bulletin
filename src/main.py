@@ -383,7 +383,8 @@ Examples:
     # Source selection
     parser.add_argument('--arxiv-only', action='store_true',
                         help='Fetch only from arXiv')
-    parser.add_argument('--biorxiv-only', action='store_true',
+    parser.add_argument('--biorxiv-only', # action='store_true',
+                        default=False,
                         help='Fetch only from bioRxiv')
     parser.add_argument('--nature-only', action='store_true',
                         help='Fetch only from Nature journals')

@@ -45,36 +45,37 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
     url = 'https://www.science.org/journal/science/research?startPage=0&pageSize=100'
     print(f"Fetching: {url}")
     
-    if use_requests:
-        # Fast method using requests
-        try:
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-            }
-            response = requests.get(url, headers=headers, timeout=30)
-            response.raise_for_status()
-            html = response.text
-            print(f"Fetched {len(html)} chars via requests")
-        except Exception as e:
-            print(f"Requests failed: {e}, falling back to Selenium...")
-            use_requests = False
-    
-    if not use_requests:
+    if True:
         # Fallback to Selenium
         from selenium import webdriver
         from selenium.webdriver.chrome.options import Options
+        from selenium.webdriver.chrome.service import Service
         from selenium.webdriver.common.by import By
         from selenium.webdriver.support.ui import WebDriverWait
         from selenium.webdriver.support import expected_conditions as EC
         
+        # Setup Chrome options
         chrome_options = Options()
-        if headless:
-            chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--window-size=1920,1080')
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
-        
-        driver = webdriver.Chrome(options=chrome_options)
-        driver.set_window_size(1920, 1080)
+        # chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        from selenium.webdriver.chrome.service import Service
+        # 使用 Service 对象（新版 Selenium 推荐）
+        # service = Service()
+        # 替换原来的 driver = webdriver.Chrome(...)
+        from webdriver_manager.chrome import ChromeDriverManager
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+        driver.set_page_load_timeout(30)
+
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
         
         try:
             driver.get(url)
@@ -84,6 +85,7 @@ def fetch_science_list(use_requests: bool = True, headless: bool = True) -> List
             time.sleep(3)
             html = driver.page_source
             print(f"Fetched {len(html)} chars via Selenium")
+            # print(html)
         finally:
             driver.quit()
     

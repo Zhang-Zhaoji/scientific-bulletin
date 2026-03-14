@@ -95,77 +95,102 @@ def extract_doi_from_title(title: str) -> Optional[str]:
     return None
 
 
-def search_preprint_servers(title: str, authors: List[str], days: int = 30) -> Optional[Dict]:
-    """
-    Search for preprint versions on bioRxiv and arXiv.
+import requests
+import re
+from datetime import datetime, timedelta
+from typing import List, Optional, Dict
+from difflib import SequenceMatcher
+
+def is_similar_title(title1: str, title2: str, threshold: float = 0.85) -> bool:
+    """计算标题相似度，容忍标点符号的细微差异"""
+    if not title1 or not title2:
+        return False
+    return SequenceMatcher(None, title1.lower(), title2.lower()).ratio() >= threshold
+
+def extract_last_names(authors: List[str]) -> set:
+    """提取作者姓氏用于交叉验证"""
+    last_names = set()
+    for author in authors:
+        parts = author.split()
+        if parts:
+            last_names.add(parts[-1].lower().strip(','))
+    return last_names
+
+def clean_abstract(raw_abstract: str) -> str:
+    """清除摘要中的 XML/HTML 标签 (例如 <jats:p>)"""
+    if not raw_abstract:
+        return ""
+    # 用正则表达式移除所有 <...> 标签
+    clean_text = re.sub(r'<[^>]+>', '', raw_abstract)
+    # 移除可能残留的 "Abstract" 标题字样并去除首尾空格
+    if clean_text.lower().startswith("abstract"):
+        clean_text = clean_text[8:].strip()
+    return clean_text
+
+def search_preprint_servers(title: str, authors: List[str], days: int = 730) -> Optional[Dict]:
+    cutoff_date = datetime.now() - timedelta(days=days)
+    target_last_names = extract_last_names(authors)
     
-    Args:
-        title: Paper title
-        authors: List of author names
-        days: How many days back to search
+    crossref_url = "https://api.crossref.org/works"
     
-    Returns:
-        Preprint paper dict or None
-    """
-    # Search bioRxiv by title (simplified approach)
-    # Note: This is not very efficient for many papers
-    # A better approach would be to use bioRxiv's API with the title as query
+    params = {
+        "query.title": title,
+        "filter": "type:posted-content", # 限制搜索范围为预印本
+        "rows": 5
+    }
+    
+    headers = {"User-Agent": "PreprintTracker/1.0 (mailto:zhang-zj@stu.pku.edu.cn)"}
     
     try:
-        # Try exact title match on bioRxiv recent papers
-        from crawler_biorxiv import fetch_recent_biorxiv_papers
+        response = requests.get(crossref_url, params=params, headers=headers, timeout=10)
         
-        # Fetch recent papers and look for match
-        recent_papers = fetch_recent_biorxiv_papers(days=days, max_results=200)
-        
-        title_lower = title.lower().strip()
-        # Remove common punctuation for comparison
-        for char in '.,;:?!"\'()-[]{}':
-            title_lower = title_lower.replace(char, ' ')
-        title_words = set(title_lower.split())
-        
-        best_match = None
-        best_score = 0
-        
-        for paper in recent_papers:
-            paper_title = paper.get('title', '').lower().strip()
-            for char in '.,;:?!"\'()-[]{}':
-                paper_title = paper_title.replace(char, ' ')
-            paper_words = set(paper_title.split())
+        if response.status_code == 200:
+            items = response.json().get("message", {}).get("items", [])
+            for item in items:
+                publisher = item.get("publisher", "").lower()
+                
+                # 兼容不同结构的机构名
+                institutions = item.get("institution", [])
+                institution_name = institutions[0].get("name", "").lower() if institutions else ""
+                
+                # 确认是 bioRxiv 或 medRxiv
+                if "biorxiv" in publisher or "biorxiv" in institution_name or "medrxiv" in institution_name:
+                    found_title = item.get("title", [""])[0]
+                    
+                    if is_similar_title(title, found_title):
+                        date_info = item.get("posted", item.get("accepted", item.get("issued", {})))
+                        date_parts = date_info.get("date-parts", [[1970, 1, 1]])[0]
+                        
+                        if len(date_parts) == 3:
+                            post_date = datetime(date_parts[0], date_parts[1], date_parts[2])
+                            
+                            # 验证时间窗口
+                            if post_date >= cutoff_date:
+                                found_authors = [a.get("family", "") for a in item.get("author", [])]
+                                found_last_names = set(a.lower() for a in found_authors)
+                                
+                                # 验证作者姓氏是否有交集
+                                if target_last_names & found_last_names or not authors:
+                                    server_name = "bioRxiv" if "biorxiv" in institution_name or "biorxiv" in publisher else "medRxiv"
+                                    
+                                    # 【新增提取与清洗摘要的代码】
+                                    raw_abstract = item.get("abstract", "")
+                                    abstract_text = clean_abstract(raw_abstract)
+                                    
+                                    return {
+                                        "server": server_name,
+                                        "title": found_title,
+                                        "doi": item.get("DOI"),
+                                        "url": item.get("URL", [None])[0] if isinstance(item.get("URL"), list) else item.get("URL"),
+                                        "date": post_date.strftime("%Y-%m-%d"),
+                                        "abstract": abstract_text # <--- 这里返回摘要
+                                    }
+        else:
+            print(f"API Error {response.status_code}: {response.text}")
             
-            # Calculate Jaccard similarity
-            if title_words and paper_words:
-                intersection = title_words & paper_words
-                union = title_words | paper_words
-                score = len(intersection) / len(union)
-                
-                # Also check author overlap
-                author_overlap = 0
-                paper_authors = [a.lower().strip() for a in paper.get('authors', [])]
-                for author in authors:
-                    author_lower = author.lower().strip()
-                    # Check last name match
-                    last_name = author_lower.split()[-1] if author_lower else ''
-                    for pa in paper_authors:
-                        if last_name in pa or pa in author_lower:
-                            author_overlap += 1
-                            break
-                
-                # Boost score based on author overlap
-                if author_overlap > 0:
-                    score += 0.1 * author_overlap
-                
-                if score > best_score and score > 0.6:  # Threshold
-                    best_score = score
-                    best_match = paper
-        
-        if best_match:
-            print(f"      Found preprint match (score: {best_score:.2f}): {best_match['title'][:60]}...")
-            return best_match
-        
     except Exception as e:
-        print(f"      Error searching preprints: {e}")
-    
+        print(f"Error searching bioRxiv via Crossref: {e}")
+
     return None
 
 
@@ -212,7 +237,7 @@ def enrich_single_paper(paper: Dict, delay: float = 0.5) -> Dict:
                     'journal': result.get('journal', paper.get('journal', '')),
                     'is_open_access': result.get('is_open_access', False),
                     'enrichment_status': 'europepmc_doi',
-                    'source': 'Science + Europe PMC'
+                    'source': f'{enriched["source"]} + Europe PMC'
                 })
                 print(f"    [OK] Found in Europe PMC (PMID: {result.get('pmid', 'N/A')})")
                 time.sleep(delay)
@@ -236,7 +261,7 @@ def enrich_single_paper(paper: Dict, delay: float = 0.5) -> Dict:
                     'journal': result.get('journal', paper.get('journal', '')),
                     'is_open_access': result.get('is_open_access', False),
                     'enrichment_status': 'europepmc_title',
-                    'source': 'Science + Europe PMC'
+                    'source': f'{enriched["source"]} + Europe PMC'
                 })
                 print(f"    [OK] Found in Europe PMC by title (similarity: {similarity:.2f})")
                 time.sleep(delay)
@@ -256,7 +281,7 @@ def enrich_single_paper(paper: Dict, delay: float = 0.5) -> Dict:
                 'doi': preprint.get('doi', doi or ''),
                 'pdf_url': preprint.get('pdf_url', ''),
                 'enrichment_status': 'preprint',
-                'source': f"Science + {preprint.get('source', 'Preprint')}"
+                'source': f"{enriched['source']} + {preprint.get('source', 'Preprint')}"
             })
             print(f"    [OK] Found preprint version")
             time.sleep(delay)
