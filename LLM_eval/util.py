@@ -57,12 +57,14 @@ class Paper:
             authors=data.get("authors", []),
             date=data.get("date", ""),
             abstract=data.get("abstract", ""),
-            journal=data.get("journal", data.get("source", ""))
+            journal=data.get("source", data.get("original_source", data.get("journal", "NA")))
         )
 
 @dataclass
 class PaperResult:
     """分析结果结构"""
+    paper: Paper
+    title_zh: str
     paper_id: str
     domain: str
     primary_category: str
@@ -71,7 +73,13 @@ class PaperResult:
     scores: Dict[str, float]
     total_score: float
     recommendation_tier: str
+    recommendation_text: str
     confidence: float
     reasoning: str
     feature_angle: str
     model_used: str
+    key_strength: str
+    key_limitation: str
+    target_audience: str
+    crossover_value: str
+    editor_note: str

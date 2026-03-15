@@ -10,11 +10,21 @@ import json
 
 
 class Response1(BaseModel):
-    model_config = ConfigDict( extra="forbid", str_strip_whitespace=True, use_enum_values=True )
-    domain: DomainType = Field( description="顶层域判断：核心域 / 域外高影响 / 域外局限" )
-    confidence: int = Field( ge=1, le=10, description="对分类结果的置信度，1-10分" )
+    model_config = ConfigDict(extra="allow", str_strip_whitespace=True, use_enum_values=True )
+    title_zh: str = Field(description="标题的中文翻译")
+    domain: DomainType = Field(description="顶层域判断：核心域 / 域外高影响 / 域外局限" )
+    confidence: float = Field(ge=0, le=10, description="对分类结果的置信度，0-10分" )
     # 核心域时必填，域外时为null
-    primary_category: Optional[DomainCategory] = Field( default=None, description="核心域必填：具体的神经科学子领域" )
+    primary_category: Optional[DomainCategory] = Field( default=None, description='''核心域必填：具体的神经科学子领域，可选基础类别：
+- 认知神经科学
+- 系统与环路神经科学  
+- 分子与细胞神经科学
+- 发育神经科学
+- 感觉与运动神经科学
+- 计算与理论神经科学
+- 临床与转化神经科学
+- 社会与情感神经科学
+- 方法学''')
     reasoning: str = Field( min_length=5, max_length=200, description="一句话理由，解释分类依据" )
 
     @model_validator(mode='after')
@@ -23,11 +33,11 @@ class Response1(BaseModel):
             if self.primary_category is None:
                 raise ValueError("核心域必须提供 primary_category")
         elif self.domain == DomainType.CROSS_HIGH_IMPACT:
-            if self.primary_category is not None:
-                raise ValueError("域外高影响不应填写 primary_category")                
+            # 域外高影响时，忽略 primary_category 字段
+            self.primary_category = None
         else:  # LOW_RELEVANCE_EXTERNAL
-            if self.primary_category is not None:
-                raise ValueError("域外局限不应填写 primary_category")   
+            # 域外局限时，忽略 primary_category 字段
+            self.primary_category = None
         return self
 
 class NeuroScores(BaseModel):
@@ -91,8 +101,7 @@ class Response3(BaseModel):
     cross_tags: List[str] = Field(
         min_length=1, max_length=6,
         description="""交叉标签：从以下维度自由提取关键标签，每个标签2-6字为宜。
-
-建议维度（示例）：
+示例维度：
 - 方法学：fMRI、单细胞测序、光遗传学、计算建模、机器学习、行为学
 - 物种：人类、小鼠、非人灵长类、果蝇、类脑器官
 - 脑区：前额叶、海马、视觉皮层、全脑、边缘系统
@@ -104,7 +113,7 @@ class Response3(BaseModel):
     )
     
     recommendation_text: str = Field(
-        min_length=10, max_length=100,
+        min_length=10, max_length=500,
         description="推荐语：50字以内，面向神经科学读者，突出核心创新价值与意义"
     )
     
@@ -128,7 +137,8 @@ class Response3(BaseModel):
             raise ValueError("包含'域外'类别的论文必须提供 crossover_value")
         
         if not has_external and self.crossover_value:
-            raise ValueError("非域外论文不应提供 crossover_value")
+            # 非域外论文时，忽略 crossover_value 字段
+            self.crossover_value = None
         
         return self
 
@@ -153,18 +163,28 @@ class PromptGenerator:
 
     def _recommendation_level(self, scores:Dict, domain:str)->tuple[float, str]:
         if domain == "核心域":
-            average_score = 0.3 * scores["breakthrough"] + 0.2 * scores["methodology":] + 0.2 * scores["evidence"] + 0.2 * scores["Contribution"] + 0.1 * scores["accessibility"]
+            # 核心域使用 neuroscience 评分标准
+            if "breakthrough" in scores:
+                average_score = 0.3 * scores["breakthrough"] + 0.2 * scores.get("methodology", 0) + 0.2 * scores.get("evidence", 0) + 0.2 * scores.get("Contribution", 0) + 0.1 * scores.get("accessibility", 0)
+            else:
+                # 如果没有 neuroscience 评分字段，使用默认值
+                average_score = 0
             if average_score > 9:
                 return average_score, self.recommendation_tier[0]
-            elif average_score > 8:
+            elif average_score > 7:
                 return average_score, self.recommendation_tier[1]
             else:
                 return average_score, self.recommendation_tier[2]
         else:
-            average_score = 0.3 * scores["breakthrough"] + 0.2 * scores["methodology":] + 0.2 * scores["evidence"] + 0.2 * scores["Contribution"] + 0.1 * scores["accessibility"]
+            # 域外使用 general 评分标准
+            if "Importance" in scores:
+                average_score = 0.3 * scores["Importance"] + 0.3 * scores.get("Transferability", 0) + 0.2 * scores.get("Inspiration", 0) + 0.1 * scores.get("Timeliness", 0) + 0.1 * scores.get("Accessibility", 0)
+            else:
+                # 如果没有 general 评分字段，使用默认值
+                average_score = 0
             if average_score > 9:
                 return average_score, self.recommendation_tier[0]
-            elif average_score > 8:
+            elif average_score > 7:
                 return average_score, self.recommendation_tier[2]
             else:
                 return average_score, self.recommendation_tier[3]
@@ -181,15 +201,28 @@ class PromptGenerator:
 期刊：{paper.journal}
 摘要：{paper.abstract[:800]}...
 
-请判断：
-1. 是否和脑科学、神经科学、认知科学非常相关？如果是，文章属于"核心域"，跳过第二条，否则判断第二条。
+请执行以下操作：
+1. 是否和脑科学、神经科学、认知科学非常相关？如果是，文章属于"核心域"，跳过第2条，否则判断第2条。
 2. 如果不是神经科学直接相关，但文章意义重大，可以影响人类社会或未来可能对神经科学有推动作用，文章属于"域外高影响"，如果文章只在领域内重要，属于"域外局限"。请做出判断并在下方用json格式输出。
+3. 无论1，2的判断结果，将标题翻译为中文。
+
+重要提示：primary_category 字段只能从以下预定义的神经科学子领域中选择：
+- 认知神经科学
+- 系统与环路神经科学
+- 分子与细胞神经科学
+- 发育神经科学
+- 感觉与运动神经科学
+- 计算与理论神经科学
+- 临床与转化神经科学
+- 社会与情感神经科学
+- 方法学
 
 输出JSON格式：
 {{
+    "title_zh": "标题的中文翻译",
     "domain": "核心域" | "域外高影响" | "域外局限",
-    "confidence": 0.0-1.0,
-    "primary_category": "如果核心域，给出最可能的一级类别",
+    "confidence": 0.0-10.0,
+    "primary_category": "如果核心域，必须从上述预定义的神经科学子领域中选择一个",
     "reasoning": "一句话理由",
     "cross_domain_potential": "如果是域外，说明其价值（0-10分）"
 }}"""
@@ -233,7 +266,7 @@ class PromptGenerator:
 }}"""
         else:
             scoring_criteria = """
-            评分标准（核心域，Nature/Science/Cell严苛标准）：
+            评分标准（神经科学核心领域，Nature/Science/Cell和大子刊的严苛标准）：
             1. 突破性(Breakthrough): 是否颠覆范式或开辟新领域（9-10分=里程碑，如首次发现；7-8分=重要进展）
             2. 方法学创新(Methodology): 技术原创性和严谨性（全新技术9-10分，改进应用7-8分）
             3. 证据强度(Evidence): 实验设计的严谨性和结论的可靠性（多模态验证加分）
@@ -247,7 +280,7 @@ class PromptGenerator:
         "breakthrough": 0.0-10.0,
         "methodology": 0.0-10.0,
         "evidence": 0.0-10.0,
-        "Contribution": 0.0-10.0,
+        "contribution": 0.0-10.0,
         "accessibility": 0.0-10.0
     }},
     "confidence": 0-10,
@@ -272,14 +305,15 @@ class PromptGenerator:
         
         return prompt
     
-    def _stage3_detailed_analysis(self, paper: Paper, scores:Dict, domain:str, primary_category:str) -> str:
+    def _stage3_detailed_analysis(self, paper: Paper, scores:float, domain:str, primary_category:str) -> str:
         """
         第三关：详细分析（仅对≥7.0分的文章）
         生成推荐语、标签等
         """
         
-        total_score, recommendation = self._recommendation_level(scores=scores,domain=domain)
-        if total_score < 8.0:
+        # scores 已经是计算好的总分，直接使用
+        total_score = scores
+        if total_score < 7.0:
             return '' # if _stage3_prompt
         
         prompt = f"""为以下论文生成详细的分析内容：
@@ -293,7 +327,7 @@ class PromptGenerator:
 任务：
 1. 确定最终分类（从8个核心类别或域外高影响中选择最匹配的1-2个）
 2. 生成交叉标签（方法学、物种、脑区、技术）
-3. 撰写推荐语（50字以内，面向神经科学领域读者，突出价值）
+3. 撰写推荐语（大约100-300字，面向神经科学领域读者，突出价值）
 4. 如果是域外高影响，撰写"跨界价值说明"（为何领域外读者应该关注）
 
 输出JSON：
