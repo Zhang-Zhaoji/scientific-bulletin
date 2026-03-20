@@ -358,7 +358,7 @@ if __name__ == '__main__':
     papers = fetch_recent_biorxiv_papers(
         days=7,
         category='neuroscience',  # Use server-side filtering
-        max_results=50
+        max_results=999
     )
     print(f"\nTotal papers fetched: {len(papers)}")
     

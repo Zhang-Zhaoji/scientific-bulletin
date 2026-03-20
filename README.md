@@ -30,6 +30,24 @@ python src/main.py --arxiv-only --biorxiv-only
 # Fetch Science articles (with Europe PMC enrichment)
 python src/main.py --science-only
 
+# Fetch Journal of Neuroscience (filters Journal Club articles by default)
+python src/main.py --jneurosci-only
+
+# Fetch Journal of Neuroscience including Journal Club articles
+python src/main.py --jneurosci-only --include-journal-club
+
+# Fetch Journal of Neurophysiology (uses PubMed + Europe PMC with auto-deduplication)
+python src/main.py --jneurophys-only
+
+# Fetch Journal of Neurophysiology (PubMed only, faster)
+python src/main.py --jneurophys-only --jneurophys-pubmed-only
+
+# Fetch Journal of Cognitive Neuroscience
+python src/main.py --jcogn-only --days 30
+
+# Fetch Journal of Vision
+python src/main.py --jvis-only --days 30
+
 # Fetch from last 14 days instead of 7 (applies to all sources)
 python src/main.py --days 14
 
@@ -102,6 +120,8 @@ See `python src/main.py --help` for all options.
 |---------|--------|--------|
 | **Science** | ✅ Supported | List pages + Europe PMC enrichment |
 | **Cell Press** | ✅ Supported | Selenium + Europe PMC enrichment |
+| **Journal of Neurophysiology** | ✅ Supported | PubMed (primary) + Europe PMC (supplementary) |
+| **Journal of Neuroscience** | ✅ Supported | PubMed API (filters Journal Club articles by default) |
 
 **Note on Science:** Uses a smart enrichment strategy:
 1. Fetch basic info from Science list pages (no captcha)
@@ -137,10 +157,10 @@ We are working to support more journals in the following categories:
 - Science Advances
 
 **Neuroscience Journals:**
-- Journal of Neuroscience
-- Journal of Neurophysiology
-- Journal of Cognitive Neuroscience
-- Journal of Vision
+- ~~Journal of Neurophysiology~~ ✅ **Supported!** (via PubMed + Europe PMC with deduplication)
+- ~~Journal of Neuroscience~~ ✅ **Supported!** (via PubMed - faster updates than Europe PMC)
+- ~~Journal of Cognitive Neuroscience~~ ✅ **Supported!** (via PubMed)
+- ~~Journal of Vision~~ ✅ **Supported!** (via PubMed)
 - PLoS One
 - Frontiers in Neuroscience
 - Progress in Neurobiology
@@ -161,10 +181,15 @@ We are working to support more journals in the following categories:
 .
 ├── src/
 │   ├── main.py                  # Main entry point
+│   ├── crawler_pubmed.py        # Generic PubMed API crawler
 │   ├── crawler_arxiv.py         # arXiv crawler
 │   ├── crawler_biorxiv.py       # bioRxiv crawler
 │   ├── crawler_nature.py        # Springer Nature journals crawler
 │   ├── crawler_science.py       # Science journal crawler
+│   ├── crawler_jneurosci.py     # Journal of Neuroscience crawler (via PubMed)
+│   ├── crawler_jneurophys.py    # Journal of Neurophysiology crawler (PubMed + Europe PMC)
+│   ├── crawler_jcogn.py         # Journal of Cognitive Neuroscience crawler (via PubMed)
+│   ├── crawler_jvis.py          # Journal of Vision crawler (via PubMed)
 │   ├── crawler_europepmc.py     # Europe PMC API client
 │   ├── enrich_papers.py         # Metadata enrichment module
 │   ├── utils.py                 # Utility functions

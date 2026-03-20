@@ -31,6 +31,10 @@ from crawler_nature import (
 )
 from crawler_science import fetch_science_papers
 from crawler_cell import fetch_cell_papers, CELL_JOURNALS
+from crawler_jneurophys import fetch_jneurophys_papers
+from crawler_jneurosci import fetch_jneurosci_papers
+from crawler_jcogn import fetch_jcogn_papers
+from crawler_jvis import fetch_jvis_papers
 
 # Default configuration
 DEFAULT_DAYS = 7
@@ -153,6 +157,106 @@ def fetch_all_science_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
         return []
 
 
+def fetch_all_jneurosci_papers(days: int = DEFAULT_DAYS, include_journal_club: bool = False) -> List[Dict]:
+    """
+    Fetch papers from Journal of Neuroscience.
+    
+    Uses PubMed API to search for recent articles.
+    By default, filters out Journal Club articles (Vol 46, Issue 11, no abstract).
+    
+    Args:
+        days: Number of days to look back
+        include_journal_club: Whether to include Journal Club articles
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from Journal of Neuroscience...")
+    if not include_journal_club:
+        print("(Journal Club articles will be filtered)")
+    print("=" * 80)
+    
+    try:
+        papers = fetch_jneurosci_papers(days=days, max_results=999, include_journal_club=include_journal_club)
+        print(f"\nTotal Journal of Neuroscience papers: {len(papers)}")
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch Journal of Neuroscience papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+def fetch_all_jneurophys_papers(days: int = DEFAULT_DAYS, use_both_sources: bool = True) -> List[Dict]:
+    """
+    Fetch papers from Journal of Neurophysiology.
+    
+    Uses PubMed API (primary) and Europe PMC (supplementary) for faster updates.
+    Automatically deduplicates based on PMID.
+    
+    Args:
+        days: Number of days to look back
+        use_both_sources: Whether to also query Europe PMC for missing articles
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from Journal of Neurophysiology...")
+    if use_both_sources:
+        print("Using PubMed (primary) + Europe PMC (supplementary)")
+    else:
+        print("Using PubMed only")
+    print("=" * 80)
+    
+    try:
+        papers = fetch_jneurophys_papers(days=days, max_results=999, use_both_sources=use_both_sources)
+        print(f"\nTotal Journal of Neurophysiology papers: {len(papers)}")
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch Journal of Neurophysiology papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+def fetch_all_jcogn_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
+    """
+    Fetch papers from Journal of Cognitive Neuroscience.
+    
+    Uses PubMed API to search for recent articles.
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from Journal of Cognitive Neuroscience...")
+    print("=" * 80)
+    
+    try:
+        papers = fetch_jcogn_papers(days=days, max_results=999)
+        print(f"\nTotal Journal of Cognitive Neuroscience papers: {len(papers)}")
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch Journal of Cognitive Neuroscience papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
+def fetch_all_jvis_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
+    """
+    Fetch papers from Journal of Vision.
+    
+    Uses PubMed API to search for recent articles.
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from Journal of Vision...")
+    print("=" * 80)
+    
+    try:
+        papers = fetch_jvis_papers(days=days, max_results=999)
+        print(f"\nTotal Journal of Vision papers: {len(papers)}")
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch Journal of Vision papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
 def fetch_all_cell_papers() -> List[Dict]:
     """
     Fetch papers from Cell Press journals.
@@ -198,7 +302,9 @@ def fetch_all_cell_papers() -> List[Dict]:
 
 def merge_papers(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
                  nature_papers: List[Dict], science_papers: List[Dict],
-                 cell_papers: List[Dict]) -> List[Dict]:
+                 cell_papers: List[Dict], jneurophys_papers: List[Dict],
+                 jneurosci_papers: List[Dict], jcogn_papers: List[Dict],
+                 jvis_papers: List[Dict]) -> List[Dict]:
     """Merge papers from multiple sources, removing duplicates."""
     print("\n" + "=" * 80)
     print("Merging and deduplicating papers...")
@@ -211,6 +317,10 @@ def merge_papers(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
     all_papers.extend(nature_papers)
     all_papers.extend(science_papers)
     all_papers.extend(cell_papers)
+    all_papers.extend(jneurophys_papers)
+    all_papers.extend(jneurosci_papers)
+    all_papers.extend(jcogn_papers)
+    all_papers.extend(jvis_papers)
     
     print(f"Total papers before deduplication: {len(all_papers)}")
     
@@ -274,7 +384,9 @@ def save_merged_papers(papers: List[Dict], output_dir: str = DEFAULT_OUTPUT_DIR)
 
 def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
                         nature_papers: List[Dict], science_papers: List[Dict],
-                        cell_papers: List[Dict],
+                        cell_papers: List[Dict], jneurophys_papers: List[Dict],
+                        jneurosci_papers: List[Dict], jcogn_papers: List[Dict],
+                        jvis_papers: List[Dict],
                         output_dir: str = DEFAULT_OUTPUT_DIR):
     """Save a summary of papers by source."""
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
@@ -315,6 +427,34 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                     'min': min((p['date'] for p in cell_papers), default='N/A'),
                     'max': max((p['date'] for p in cell_papers), default='N/A')
                 } if cell_papers else None
+            },
+            'jneurophys': {
+                'count': len(jneurophys_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in jneurophys_papers), default='N/A'),
+                    'max': max((p['date'] for p in jneurophys_papers), default='N/A')
+                } if jneurophys_papers else None
+            },
+            'jneurosci': {
+                'count': len(jneurosci_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in jneurosci_papers), default='N/A'),
+                    'max': max((p['date'] for p in jneurosci_papers), default='N/A')
+                } if jneurosci_papers else None
+            },
+            'jcogn': {
+                'count': len(jcogn_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in jcogn_papers), default='N/A'),
+                    'max': max((p['date'] for p in jcogn_papers), default='N/A')
+                } if jcogn_papers else None
+            },
+            'jvis': {
+                'count': len(jvis_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in jvis_papers), default='N/A'),
+                    'max': max((p['date'] for p in jvis_papers), default='N/A')
+                } if jvis_papers else None
             }
         }
     }
@@ -329,7 +469,9 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
 
 def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict], 
                   nature_papers: List[Dict], science_papers: List[Dict],
-                  cell_papers: List[Dict],
+                  cell_papers: List[Dict], jneurophys_papers: List[Dict],
+                  jneurosci_papers: List[Dict], jcogn_papers: List[Dict],
+                  jvis_papers: List[Dict],
                   merged_papers: List[Dict]):
     """Print a formatted summary of the crawl results."""
     print("\n" + "=" * 80)
@@ -343,8 +485,12 @@ def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
     print(f"{'Nature Journals':<20} {len(nature_papers):>10}")
     print(f"{'Science':<20} {len(science_papers):>10}")
     print(f"{'Cell Press':<20} {len(cell_papers):>10}")
+    print(f"{'Journal of Neurophys':<20} {len(jneurophys_papers):>10}")
+    print(f"{'Journal of Neurosci':<20} {len(jneurosci_papers):>10}")
+    print(f"{'J. Cognitive Neurosci':<20} {len(jcogn_papers):>10}")
+    print(f"{'Journal of Vision':<20} {len(jvis_papers):>10}")
     print("-" * 32)
-    total_before = len(arxiv_papers) + len(biorxiv_papers) + len(nature_papers) + len(science_papers) + len(cell_papers)
+    total_before = len(arxiv_papers) + len(biorxiv_papers) + len(nature_papers) + len(science_papers) + len(cell_papers) + len(jneurophys_papers) + len(jneurosci_papers) + len(jcogn_papers) + len(jvis_papers)
     print(f"{'Total (before dedup)':<20} {total_before:>10}")
     print(f"{'Unique papers':<20} {len(merged_papers):>10}")
     
@@ -375,6 +521,9 @@ Examples:
   python src/main.py --nature-only            # Fetch only from Nature journals
   python src/main.py --science-only           # Fetch only from Science journal
   python src/main.py --cell-only              # Fetch only from Cell Press journals
+  python src/main.py --jneurosci-only         # Fetch only from Journal of Neuroscience
+  python src/main.py --jcogn-only             # Fetch only from Journal of Cognitive Neuroscience
+  python src/main.py --jvis-only              # Fetch only from Journal of Vision
   python src/main.py --days 14                # Look back 14 days for all sources
   python src/main.py --no-merge               # Save separate files per source
         """
@@ -392,6 +541,18 @@ Examples:
                         help='Fetch only from Science journal (with Europe PMC enrichment)')
     parser.add_argument('--cell-only', action='store_true',
                         help='Fetch only from Cell Press journals (Neuron, Current Biology, etc.)')
+    parser.add_argument('--jneurophys-only', action='store_true',
+                        help='Fetch only from Journal of Neurophysiology')
+    parser.add_argument('--jneurophys-pubmed-only', action='store_true',
+                        help='Use only PubMed for Journal of Neurophysiology (skip Europe PMC)')
+    parser.add_argument('--jneurosci-only', action='store_true',
+                        help='Fetch only from Journal of Neuroscience')
+    parser.add_argument('--include-journal-club', action='store_true',
+                        help='Include Journal Club articles (default: filtered out)')
+    parser.add_argument('--jcogn-only', action='store_true',
+                        help='Fetch only from Journal of Cognitive Neuroscience')
+    parser.add_argument('--jvis-only', action='store_true',
+                        help='Fetch only from Journal of Vision')
     
     # Configuration
     parser.add_argument('--days', type=int, default=DEFAULT_DAYS,
@@ -416,18 +577,26 @@ Examples:
     args = parser.parse_args()
     
     # Determine which sources to fetch
-    any_specific = args.arxiv_only or args.biorxiv_only or args.nature_only or args.science_only or args.cell_only
+    any_specific = args.arxiv_only or args.biorxiv_only or args.nature_only or args.science_only or args.cell_only or args.jneurophys_only or args.jneurosci_only or args.jcogn_only or args.jvis_only
     fetch_arxiv = args.arxiv_only or not any_specific
     fetch_biorxiv = False #args.biorxiv_only or not any_specific
     fetch_nature = args.nature_only or not any_specific
     fetch_science = args.science_only or not any_specific
     fetch_cell = args.cell_only or not any_specific
+    fetch_jneurophys = args.jneurophys_only or not any_specific
+    fetch_jneurosci = args.jneurosci_only or not any_specific
+    fetch_jcogn = args.jcogn_only or not any_specific
+    fetch_jvis = args.jvis_only or not any_specific
     
     arxiv_papers = []
     biorxiv_papers = []
+    jcogn_papers = []
+    jvis_papers = []
     nature_papers = []
     science_papers = []
     cell_papers = []
+    jneurophys_papers = []
+    jneurosci_papers = []
     
     try:
         # Fetch from selected sources
@@ -477,6 +646,50 @@ Examples:
                         f.write(paper)
                 print(f"\nSaved Cell Press papers to: {filepath}")
         
+        if fetch_jneurophys:
+            jneurophys_papers = fetch_all_jneurophys_papers(days=args.days, use_both_sources=not args.jneurophys_pubmed_only)
+            if args.no_merge:
+                import jsonlines
+                jneurophys_filename = f"jneurophys_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, jneurophys_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in jneurophys_papers:
+                        f.write(paper)
+                print(f"\nSaved Journal of Neurophysiology papers to: {filepath}")
+        
+        if fetch_jneurosci:
+            jneurosci_papers = fetch_all_jneurosci_papers(days=args.days, include_journal_club=args.include_journal_club)
+            if args.no_merge:
+                import jsonlines
+                jneurosci_filename = f"jneurosci_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, jneurosci_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in jneurosci_papers:
+                        f.write(paper)
+                print(f"\nSaved Journal of Neuroscience papers to: {filepath}")
+        
+        if fetch_jcogn:
+            jcogn_papers = fetch_all_jcogn_papers(days=args.days)
+            if args.no_merge:
+                import jsonlines
+                jcogn_filename = f"jcogn_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, jcogn_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in jcogn_papers:
+                        f.write(paper)
+                print(f"\nSaved Journal of Cognitive Neuroscience papers to: {filepath}")
+        
+        if fetch_jvis:
+            jvis_papers = fetch_all_jvis_papers(days=args.days)
+            if args.no_merge:
+                import jsonlines
+                jvis_filename = f"jvis_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, jvis_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in jvis_papers:
+                        f.write(paper)
+                print(f"\nSaved Journal of Vision papers to: {filepath}")
+        
         # Merge papers (unless --no-merge is specified)
         if not args.no_merge:
             if args.skip_dedup:
@@ -487,6 +700,8 @@ Examples:
                 merged_papers.extend(nature_papers)
                 merged_papers.extend(science_papers)
                 merged_papers.extend(cell_papers)
+                merged_papers.extend(jneurophys_papers)
+                merged_papers.extend(jneurosci_papers)
                 # Sort by date
                 def parse_date(paper: Dict) -> datetime.datetime:
                     date_str = paper.get('date', '')
@@ -501,11 +716,11 @@ Examples:
                         return datetime.datetime.min
                 merged_papers.sort(key=parse_date, reverse=True)
             else:
-                merged_papers = merge_papers(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers)
+                merged_papers = merge_papers(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers)
             
             save_merged_papers(merged_papers, args.output_dir)
-            save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, args.output_dir)
-            print_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, merged_papers)
+            save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers, args.output_dir)
+            print_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers, merged_papers)
         else:
             # Print summary without merge
             print("\n" + "=" * 80)
@@ -516,6 +731,10 @@ Examples:
             print(f"Nature: {len(nature_papers)} papers")
             print(f"Science: {len(science_papers)} papers")
             print(f"Cell Press: {len(cell_papers)} papers")
+            print(f"Journal of Neurophysiology: {len(jneurophys_papers)} papers")
+            print(f"Journal of Neuroscience: {len(jneurosci_papers)} papers")
+            print(f"Journal of Cognitive Neuroscience: {len(jcogn_papers)} papers")
+            print(f"Journal of Vision: {len(jvis_papers)} papers")
         
         print("\n[OK] Done!")
         
