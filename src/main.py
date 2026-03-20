@@ -55,7 +55,7 @@ NATURE_JOURNALS = [
 ]
 
 
-def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 50, use_extended: bool = False) -> List[Dict]:
+def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 999, use_extended: bool = False) -> List[Dict]:
     """Fetch papers from arXiv."""
     from crawler_arxiv import NEUROSCIENCE_CATEGORIES, EXTENDED_CATEGORIES
     
@@ -269,7 +269,7 @@ def fetch_all_cell_papers() -> List[Dict]:
     print("=" * 80)
     
     # Focus on neuroscience-relevant journals
-    journals = ['neuron', 'current-biology', 'trends-neurosciences']
+    journals = ['cell', 'neuron', 'current-biology', 'trends-neurosciences','cell-reports','iscience','cell-systems']
     
     try:
         papers = fetch_cell_papers(
@@ -557,8 +557,8 @@ Examples:
     # Configuration
     parser.add_argument('--days', type=int, default=DEFAULT_DAYS,
                         help=f'Number of days to look back for all sources (default: {DEFAULT_DAYS})')
-    parser.add_argument('--arxiv-limit', type=int, default=50,
-                        help='Maximum arXiv papers to fetch per category (default: 50)')
+    parser.add_argument('--arxiv-limit', type=int, default=999,
+                        help='Maximum arXiv papers to fetch per category (default: 999)')
     parser.add_argument('--biorxiv-limit', type=int, default=200,
                         help='Maximum bioRxiv papers to fetch (default: 200)')
     parser.add_argument('--extended', action='store_true',

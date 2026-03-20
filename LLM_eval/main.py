@@ -22,21 +22,12 @@ results_dir = Path(r"D:\工作\scientific bulletin\LLM_Results")
 results_dir.mkdir(exist_ok=True)
 
 # 测试文件路径
-test_file = Path(r"D:\工作\scientific bulletin\getfiles\all_papers_2026-03-14.jsonl")
+test_file = Path(r"getfiles\all_papers_2026-03-21.jsonl")
 
 
-def process_article(article_info):
+def process_article(llm_api,prompt_generator,article_info):
     """处理单篇文章"""
-    # 初始化 LLM 处理器
-    llm_api = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus")
-    
-    # 初始化提示词生成器
-    prompt_generator = PromptGenerator()
-    
-    # 初始化文章处理器
     article_processor = ArticleProcess(article_info)
-    
-    # 处理文章
     result = article_processor.process(prompt_generator, llm_api)
     
     return result
@@ -56,12 +47,23 @@ def main():
             article['title'] = article['title'].replace('  ', ' ') # 替换多个空格为一个空格
     
     print(f"共读取到 {len(articles)} 篇文章")
+    llm_api = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus")
+    
+    # 初始化提示词生成器
+    prompt_generator = PromptGenerator()
     
     # 处理每篇文章
     results = []
     for i, article in enumerate(tqdm.tqdm(articles, desc="处理文章", total=len(articles))):
         print(f"处理第 {i+1} 篇文章: {article.get('title', '未知标题')}")
-        result = process_article(article)
+        success = False
+        while not success:
+            try:
+                result = process_article(llm_api, prompt_generator,article)
+                success = True
+            except Exception as e:
+                print(f"处理第 {i+1} 篇文章时出错: {e}")
+                continue
         results.append(result)
         print(f"处理完成，推荐等级: {result.recommendation_tier}")
     

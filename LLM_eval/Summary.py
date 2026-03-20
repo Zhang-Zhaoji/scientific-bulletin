@@ -251,13 +251,13 @@ class ReportGenerator:
 def main():
     """主函数"""
     # 读取结果文件
-    result_file = Path("D:\工作\scientific bulletin\LLM_Results\LLM_results_20260315_010034.json")
+    result_file = Path(r"LLM_Results\LLM_results_20260321_015612.json")
     if not result_file.exists():
         print(f"结果文件不存在: {result_file}")
         return
     
     # 创建报告生成器
-    generator = ReportGenerator(output_dir="D:\工作\scientific bulletin\LLM_Results")
+    generator = ReportGenerator(output_dir=r".\LLM_Results")
     
     # 生成报告
     report = generator.generate_from_json(str(result_file))
@@ -273,6 +273,33 @@ def main():
     print(f"- 跨界启发: {report['statistics']['crossover']}")
     print(f"- 已过滤: {report['statistics']['rejected']}")
     print(f"- 平均评分: {report['statistics']['avg_score']:.2f}")
+    from call_API import LLM_process
+    from dotenv import load_dotenv
+    import os
+    load_dotenv()
+    api_key = os.getenv("DASHSCOPE_API_KEY")
+    if not api_key:
+        raise ValueError("DASHSCOPE_API_KEY not set")
+    base_url = os.getenv("API_BASE_URL")
+    if not base_url:
+        raise ValueError("API_BASE_URL not set")
+
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus")
+    System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
+    main_text_md = report['markdown_path']
+    with open(main_text_md, "r", encoding="utf-8") as f:
+        main_text_md = f.read()
+    User_prompt = f"下面是神经科学简报内容：{main_text_md} 请根据以上内容，生成标题。"
+    response = LLM_engine.client.chat.completions.parse(
+            model = LLM_engine.model,
+            messages=[
+                    {"role": "system", "content": System_prompt},
+                    {"role": "user", "content": User_prompt},
+                ],
+            extra_body={"enable_thinking":True}
+            )
+    result = response.choices[0].message.content
+    print(result)
 
 
 if __name__ == "__main__":

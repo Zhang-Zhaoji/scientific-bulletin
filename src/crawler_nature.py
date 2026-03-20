@@ -14,7 +14,7 @@ DEFAULT_DAYS_BACK = 7
 def get_start_date(days_back: int = DEFAULT_DAYS_BACK) -> str:
     """Get start date string for filtering articles."""
     start = datetime.datetime.now() - datetime.timedelta(days=days_back)
-    return start.strftime('%d/%m/%Y')
+    return start.strftime('%Y-%m-%d')
 
 # if we want to extract texts from multiple pages, we need to add the page number to the url
 # ?searchType=journalSearch&sort=PubDate&page=2

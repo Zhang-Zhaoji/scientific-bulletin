@@ -34,8 +34,8 @@ def ymd(d: str) -> str:
     return parser.parse(d, dayfirst=True).strftime('%Y-%m-%d')
 
 def days(d1: str, d2: str) -> int:
-    ''' d2 is later than d1'''
-    return (parser.parse(d2, dayfirst=True) - parser.parse(d1, dayfirst=True)).days
+    ''' d2 is later than d1. Both d1 and d2 should be in YYYY-MM-DD format.'''
+    return (datetime.fromisoformat(d2) - datetime.fromisoformat(d1)).days
 
 
 def select_articles(articles: list[dict], start_date: str=datetime.now().strftime('%Y-%m-%d'), end_date: str = '3000-01-01') -> tuple[bool, list[dict]]:

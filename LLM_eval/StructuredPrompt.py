@@ -57,7 +57,7 @@ class GeneralScores(BaseModel):
     Accessibility: float = Field(ge=0.0, le=10.0,description="领域外读者能否理解其重要性")
 
 class Response2Neuro(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
     scores: NeuroScores  = Field(description="各维度评分（0.0-10.0）")
     confidence: int      = Field(ge=0, le=10,description="评估置信度（0-10整数）")
     feature_angle: str   = Field(min_length=1,description="面向读者的核心卖点（一句话）")
@@ -66,7 +66,7 @@ class Response2Neuro(BaseModel):
     target_audience: str = Field(min_length=1,description="最适合的读者群体")
 
 class Response2General(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
     scores: GeneralScores       = Field(description="各维度评分（0.0-10.0）")
     confidence: int      = Field(ge=0, le=10,description="评估置信度（0-10整数）")
     feature_angle: str   = Field(min_length=1,description="面向读者的核心卖点（一句话）")
@@ -76,12 +76,12 @@ class Response2General(BaseModel):
 
 class Response3(BaseModel):
     model_config = ConfigDict(
-        extra="forbid",
+        extra="allow",
         str_strip_whitespace=True
     )
     
     final_categories: List[str] = Field(
-        min_length=1, max_length=2,
+        min_length=1, max_length=3,
         description="""最终分类：1-2个最匹配的类别，主要类别在前。
 可选基础类别：
 - 认知神经科学
@@ -99,8 +99,8 @@ class Response3(BaseModel):
     )
     
     cross_tags: List[str] = Field(
-        min_length=1, max_length=6,
-        description="""交叉标签：从以下维度自由提取关键标签，每个标签2-6字为宜。
+        min_length=1, max_length=10,
+        description="""交叉标签：从以下维度自由提取关键标签，每个标签2-6字为宜，最多6个标签。
 示例维度：
 - 方法学：fMRI、单细胞测序、光遗传学、计算建模、机器学习、行为学
 - 物种：人类、小鼠、非人灵长类、果蝇、类脑器官
@@ -114,7 +114,7 @@ class Response3(BaseModel):
     
     recommendation_text: str = Field(
         min_length=10, max_length=500,
-        description="推荐语：50字以内，面向神经科学读者，突出核心创新价值与意义"
+        description="推荐语：200字以内，面向神经科学读者，突出核心创新价值与意义"
     )
     
     crossover_value: Optional[str] = Field(
@@ -151,7 +151,7 @@ class PromptGenerator:
     
     def __init__(self):
         self.SYSTEM_PROMPT = """你是神经科学文献专家，熟悉Nature/Science/Cell等顶刊标准。
-你的任务是严格筛选和评分论文，确保只有高质量、高相关性的研究被推荐给专业的神经科学读者。
+你的任务是严格筛选和评分论文，确保只有高质量、高相关性的研究被推荐给专业的神经科学读者和计算、系统生物学家。
 输出必须是合法的JSON格式，不要有任何额外解释。
 """
         self.recommendation_tier = ["头条推荐", "深度解读", "简要提及", "不推送"]
@@ -202,8 +202,8 @@ class PromptGenerator:
 摘要：{paper.abstract[:800]}...
 
 请执行以下操作：
-1. 是否和脑科学、神经科学、认知科学非常相关？如果是，文章属于"核心域"，跳过第2条，否则判断第2条。
-2. 如果不是神经科学直接相关，但文章意义重大，可以影响人类社会或未来可能对神经科学有推动作用，文章属于"域外高影响"，如果文章只在领域内重要，属于"域外局限"。请做出判断并在下方用json格式输出。
+1. 是否和脑科学、神经科学、认知科学、计算神经科学、系统生物学非常相关？如果是，文章属于"核心域"，跳过第2条，否则判断第2条。
+2. 如果不是上述内容直接相关，但文章意义重大，未来可以影响人类社会或未来可能对神经科学有推动作用，文章属于"域外高影响"，如果文章只在领域内重要，属于"域外局限"。请做出判断并在下方用json格式输出。
 3. 无论1，2的判断结果，将标题翻译为中文。
 
 重要提示：primary_category 字段只能从以下预定义的神经科学子领域中选择：

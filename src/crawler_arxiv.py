@@ -22,6 +22,8 @@ NEUROSCIENCE_CATEGORIES = [
     "q-bio.NC",  # Neurons and Cognition - Primary category for neuroscience
     "q-bio.TO",  # Tissues and Organs - Includes neural tissues
     "q-bio.MN",  # Molecular Networks - Molecular neuroscience
+    "q-bio.BM",  # Biomolecules
+    "q-bio.QM",  # Quantitative Methods (neuroimaging analysis)
 ]
 
 # Keep for backward compatibility

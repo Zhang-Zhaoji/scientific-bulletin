@@ -35,7 +35,7 @@ except ImportError:
 CELL_JOURNALS = {
     'cell': {
         'name': 'Cell',
-        'url': 'https://www.cell.com/cell/issue',
+        'url': 'https://www.cell.com/cell/current',
         'selector': 'h2.article-title',
     },
     'neuron': {
