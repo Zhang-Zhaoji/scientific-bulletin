@@ -22,7 +22,7 @@ results_dir = Path(r"D:\工作\scientific bulletin\LLM_Results")
 results_dir.mkdir(exist_ok=True)
 
 # 测试文件路径
-test_file = Path(r"getfiles\all_papers_2026-03-21.jsonl")
+test_file = Path(r"getfiles\all_papers_2026-03-28.jsonl")
 
 
 def process_article(llm_api,prompt_generator,article_info):
@@ -47,7 +47,7 @@ def main():
             article['title'] = article['title'].replace('  ', ' ') # 替换多个空格为一个空格
     
     print(f"共读取到 {len(articles)} 篇文章")
-    llm_api = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus")
+    llm_api = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus-2026-02-15")
     
     # 初始化提示词生成器
     prompt_generator = PromptGenerator()

@@ -251,7 +251,7 @@ class ReportGenerator:
 def main():
     """主函数"""
     # 读取结果文件
-    result_file = Path(r"LLM_Results\LLM_results_20260321_015612.json")
+    result_file = Path(r"LLM_Results\LLM_results_20260328_004204.json")
     if not result_file.exists():
         print(f"结果文件不存在: {result_file}")
         return
@@ -284,7 +284,7 @@ def main():
     if not base_url:
         raise ValueError("API_BASE_URL not set")
 
-    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus")
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus-2026-02-15")
     System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
     main_text_md = report['markdown_path']
     with open(main_text_md, "r", encoding="utf-8") as f:
