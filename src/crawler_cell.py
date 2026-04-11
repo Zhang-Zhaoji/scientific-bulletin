@@ -54,21 +54,21 @@ CELL_JOURNALS = {
         'url': 'https://www.cell.com/trends/neurosciences/current',
         'selector': '.toc__item h3',
     },
-    'cell-reports': {
-        'name': 'Cell Reports',
-        'url': 'https://www.cell.com/cell-reports/current',
-        'selector': '.toc__item h3',
-    },
-    'iscience': {
-        'name': 'iScience',
-        'url': 'https://www.cell.com/iscience/current',
-        'selector': '.toc__item h3',
-    },
-    'cell-systems': {
-        'name': 'Cell Systems',
-        'url': 'https://www.cell.com/cell-systems/current',
-        'selector': '.toc__item h3',
-    },
+    # 'cell-reports': {
+    #     'name': 'Cell Reports',
+    #     'url': 'https://www.cell.com/cell-reports/current',
+    #     'selector': '.toc__item h3',
+    # },
+    # 'iscience': {
+    #     'name': 'iScience',
+    #     'url': 'https://www.cell.com/iscience/current',
+    #     'selector': '.toc__item h3',
+    # },
+    # 'cell-systems': {
+    #     'name': 'Cell Systems',
+    #     'url': 'https://www.cell.com/cell-systems/current',
+    #     'selector': '.toc__item h3',
+    # },
 }
 
 

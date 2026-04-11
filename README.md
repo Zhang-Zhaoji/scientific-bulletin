@@ -48,6 +48,21 @@ python src/main.py --jcogn-only --days 30
 # Fetch Journal of Vision
 python src/main.py --jvis-only --days 30
 
+# Fetch PNAS articles
+python src/main.py --pnas-only
+
+# Fetch Nature Communications articles
+python src/main.py --natcomm-only
+
+# Fetch Brain articles (clinical neuroscience)
+python src/main.py --brain-only
+
+# Fetch Science Advances articles
+python src/main.py --sciadv-only
+
+# Fetch eLife articles (open access)
+python src/main.py --elife-only
+
 # Fetch from last 14 days instead of 7 (applies to all sources)
 python src/main.py --days 14
 
@@ -119,7 +134,12 @@ See `python src/main.py --help` for all options.
 | Journal | Status | Method |
 |---------|--------|--------|
 | **Science** | ✅ Supported | List pages + Europe PMC enrichment |
+| **Science Advances** | ✅ Supported | TOC page + Selenium (date filtered) |
+| **PNAS** | ✅ Supported | PubMed API |
 | **Cell Press** | ✅ Supported | Selenium + Europe PMC enrichment |
+| **Nature Communications** | ✅ Supported | Subject pages (Biological/Health Sciences) |
+| **Brain** | ✅ Supported | PubMed API |
+| **eLife** | ✅ Supported | PubMed API |
 | **Journal of Neurophysiology** | ✅ Supported | PubMed (primary) + Europe PMC (supplementary) |
 | **Journal of Neuroscience** | ✅ Supported | PubMed API (filters Journal Club articles by default) |
 
@@ -128,6 +148,16 @@ See `python src/main.py --help` for all options.
 2. Enrich with Europe PMC via DOI (abstract, PMID, etc.)
 3. Fallback to preprint servers (bioRxiv/arXiv) if not in Europe PMC
 4. Keep original data if nothing is found
+
+**Note on Nature Communications:** Uses subject-based filtering:
+- Only fetches from **Biological Sciences** and **Health Sciences** subject pages
+- Avoids non-biology articles (physics, chemistry, materials science, etc.)
+- See: https://www.nature.com/subjects/biological-sciences/ncomms
+
+**Note on Science Advances:** Uses TOC-based crawling:
+- Fetches from current issue TOC page (section filtering not available on website)
+- Filters articles by publication date
+- Uses Selenium to bypass anti-bot protection
 
 **Note on Cell Press:** Supports multiple neuroscience-relevant journals:
 - **Neuron** - Neuroscience research
@@ -150,17 +180,17 @@ See `python src/main.py --help` for all options.
 We are working to support more journals in the following categories:
 
 **Multidisciplinary Journals:**
-- Science (Some of the latest articles are not supported)
-- Nature Communications
 - Scientific Reports
 - PLoS Biology
-- Science Advances
+- Nature Communications (Subjects: Neuroscience)
 
 **Neuroscience Journals:**
 - ~~Journal of Neurophysiology~~ ✅ **Supported!** (via PubMed + Europe PMC with deduplication)
 - ~~Journal of Neuroscience~~ ✅ **Supported!** (via PubMed - faster updates than Europe PMC)
 - ~~Journal of Cognitive Neuroscience~~ ✅ **Supported!** (via PubMed)
 - ~~Journal of Vision~~ ✅ **Supported!** (via PubMed)
+- ~~Brain~~ ✅ **Supported!** (via PubMed - clinical neuroscience)
+- ~~eLife~~ ✅ **Supported!** (via PubMed - open access)
 - PLoS One
 - Frontiers in Neuroscience
 - Progress in Neurobiology
@@ -190,6 +220,11 @@ We are working to support more journals in the following categories:
 │   ├── crawler_jneurophys.py    # Journal of Neurophysiology crawler (PubMed + Europe PMC)
 │   ├── crawler_jcogn.py         # Journal of Cognitive Neuroscience crawler (via PubMed)
 │   ├── crawler_jvis.py          # Journal of Vision crawler (via PubMed)
+│   ├── crawler_pnas.py          # PNAS crawler (via PubMed)
+│   ├── crawler_natcomm.py       # Nature Communications crawler (via PubMed)
+│   ├── crawler_brain.py         # Brain crawler (via PubMed)
+│   ├── crawler_sciadv.py        # Science Advances crawler (via PubMed)
+│   ├── crawler_elife.py         # eLife crawler (via PubMed)
 │   ├── crawler_europepmc.py     # Europe PMC API client
 │   ├── enrich_papers.py         # Metadata enrichment module
 │   ├── utils.py                 # Utility functions

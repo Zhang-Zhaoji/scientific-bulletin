@@ -1,0 +1,65 @@
+{
+  "date": "2026-04-04",
+  "sources": {
+    "arxiv": {
+      "count": 47,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "31 Mar 2026"
+      }
+    },
+    "biorxiv": {
+      "count": 0,
+      "date_range": null
+    },
+    "nature": {
+      "count": 46,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "31 Mar 2026"
+      }
+    },
+    "science": {
+      "count": 17,
+      "date_range": {
+        "min": "02 Apr 2026",
+        "max": "02 Apr 2026"
+      }
+    },
+    "cell": {
+      "count": 17,
+      "date_range": {
+        "min": "04 Apr 2026",
+        "max": "04 Apr 2026"
+      }
+    },
+    "jneurophys": {
+      "count": 19,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "31 Mar 2026"
+      }
+    },
+    "jneurosci": {
+      "count": 29,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "31 Mar 2026"
+      }
+    },
+    "jcogn": {
+      "count": 13,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "01 Apr 2026"
+      }
+    },
+    "jvis": {
+      "count": 3,
+      "date_range": {
+        "min": "01 Apr 2026",
+        "max": "01 Apr 2026"
+      }
+    }
+  }
+}

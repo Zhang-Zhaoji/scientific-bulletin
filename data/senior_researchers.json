@@ -1,0 +1,6392 @@
+{
+  "Christoph Scheiermann": {
+    "name": "Christoph Scheiermann",
+    "h_index": 41,
+    "citations": 11137,
+    "works_count": 112,
+    "affiliation": null,
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "David V. Hansen": {
+    "name": "David V. Hansen",
+    "h_index": 31,
+    "citations": 10101,
+    "works_count": 50,
+    "affiliation": null,
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Celeste M. Karch": {
+    "name": "Celeste M. Karch",
+    "h_index": 68,
+    "citations": 16574,
+    "works_count": 349,
+    "affiliation": null,
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Laura Piccio": {
+    "name": "Laura Piccio",
+    "h_index": 52,
+    "citations": 16060,
+    "works_count": 165,
+    "affiliation": null,
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Dong Dong": {
+    "name": "Dong Dong",
+    "h_index": 73,
+    "citations": 31844,
+    "works_count": 431,
+    "affiliation": "Department Of Neuroscience, School Of Life Sciences, Southern University Of Science And Technology, Shenzhen 518055, China.",
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Irene Lenzi": {
+    "name": "Irene Lenzi",
+    "h_index": 157,
+    "citations": 122006,
+    "works_count": 1803,
+    "affiliation": "Institute Of Biological Information Processing (Ibi-3), Forschungszentrum Jülich, Jülich, Germany; Department Of Systems Neurophysiology, Institute For Biology Ii, Rwth Aachen University, Aachen, Germany; German Center For Neurodegenerative Diseases (Dzne), Bonn, Germany.",
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Simon Musall": {
+    "name": "Simon Musall",
+    "h_index": 19,
+    "citations": 2472,
+    "works_count": 74,
+    "affiliation": "Institute Of Biological Information Processing (Ibi-3), Forschungszentrum Jülich, Jülich, Germany; Department Of Systems Neurophysiology, Institute For Biology Ii, Rwth Aachen University, Aachen, Germany; Institute Of Experimental Epileptology And Cognition Research (Ieecr), Faculty Of Medicine, University Of Bonn, Bonn, Germany. Electronic Address: S.Musall@Fz-Juelich.De.",
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Giuseppina Porciello": {
+    "name": "Giuseppina Porciello",
+    "h_index": 20,
+    "citations": 1486,
+    "works_count": 64,
+    "affiliation": "Department Of Psychology, Sapienza University Of Rome, Rome, Italy; Irccs Fondazione Santa Lucia, Rome, Italy.",
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Salvatore Maria Aglioti": {
+    "name": "Salvatore Maria Aglioti",
+    "h_index": 86,
+    "citations": 23825,
+    "works_count": 494,
+    "affiliation": "Department Of Psychology, Sapienza University Of Rome, Rome, Italy; Irccs Fondazione Santa Lucia, Rome, Italy; Center For Life Nano- & Neuro-Science, Italian Institute Of Technology (Iit), Rome, Italy.",
+    "first_seen": "2026-03-14",
+    "paper_count": 1,
+    "last_seen": "2026-03-14"
+  },
+  "Wenqiang Liu": {
+    "name": "Wenqiang Liu",
+    "h_index": 117,
+    "citations": 69388,
+    "works_count": 728,
+    "affiliation": "Stanford Cardiovascular Institute, Stanford University School Of Medicine, Stanford, Ca 94305, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Paul D. Pang": {
+    "name": "Paul D. Pang",
+    "h_index": 48,
+    "citations": 11171,
+    "works_count": 482,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Danilo Tagle": {
+    "name": "Danilo Tagle",
+    "h_index": 56,
+    "citations": 19719,
+    "works_count": 143,
+    "affiliation": "National Center For Advancing Translational Sciences, National Institutes Of Health, Rockville, Md 20892, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Joseph C. Wu": {
+    "name": "Joseph C. Wu",
+    "h_index": 139,
+    "citations": 68831,
+    "works_count": 1213,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Xingang Peng": {
+    "name": "Xingang Peng",
+    "h_index": 84,
+    "citations": 41195,
+    "works_count": 1517,
+    "affiliation": "Institute For Artificial Intelligence, Peking University, Beijing 100871, China; School Of Intelligence Science And Technology, Peking University, Beijing 100871, China; Earendil Labs, County Of New Castle, Wilmington, De 19801, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Ruihan Guo": {
+    "name": "Ruihan Guo",
+    "h_index": 103,
+    "citations": 53211,
+    "works_count": 1440,
+    "affiliation": "Earendil Labs, County Of New Castle, Wilmington, De 19801, Usa; Siebel School Of Computing And Data Science, University Of Illinois Urbana-Champaign, Champaign, Il 61820, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Fenglin Guo": {
+    "name": "Fenglin Guo",
+    "h_index": 20,
+    "citations": 1440,
+    "works_count": 72,
+    "affiliation": "The Ministry Of Education Key Laboratory Of Protein Science, Beijing Frontier Research Center For Biological Structure, School Of Life Sciences, Tsinghua University, Beijing 100084, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Chuanhui Han": {
+    "name": "Chuanhui Han",
+    "h_index": 17,
+    "citations": 1946,
+    "works_count": 46,
+    "affiliation": "State Key Laboratory Of Molecular Oncology, Frontiers Science Center For Cancer Integrative Omics, Beijing Key Laboratory Of Carcinogenesis And Translational Research, Department Of Lymphoma, Peking University Cancer Hospital And Institute, Peking University International Cancer Institute, Peking University Health Science Center, Beijing 100191, China. Electronic Address: Chuanhui.Han@Bjmu.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Zihua Wang": {
+    "name": "Zihua Wang",
+    "h_index": 45,
+    "citations": 12082,
+    "works_count": 235,
+    "affiliation": "Department Of Radiology And Nuclear Medicine, Xuanwu Hospital, Capital Medical University, Beijing 100053, China; Fujian Provincial Key Laboratory Of Brain Aging And Neurodegenerative Diseases, School Of Basic Medical Sciences, Fujian Medical University, Fuzhou, Fujian 350122, China. Electronic Address: Wangzh@Iccas.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jianzhu Ma": {
+    "name": "Jianzhu Ma",
+    "h_index": 34,
+    "citations": 6553,
+    "works_count": 202,
+    "affiliation": "Department Of Electronic Engineering, Tsinghua University, Beijing 100084, China; Institute For Ai Industry Research, Tsinghua University, Beijing 100084, China. Electronic Address: Majianzhu@Tsinghua.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Fei Teng": {
+    "name": "Fei Teng",
+    "h_index": 80,
+    "citations": 32573,
+    "works_count": 821,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jing Liu": {
+    "name": "Jing Liu",
+    "h_index": 131,
+    "citations": 107314,
+    "works_count": 2536,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Tongtong Cui": {
+    "name": "Tongtong Cui",
+    "h_index": 21,
+    "citations": 2588,
+    "works_count": 58,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Qi Zhou": {
+    "name": "Qi Zhou",
+    "h_index": 81,
+    "citations": 29196,
+    "works_count": 719,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Baoyang Hu": {
+    "name": "Baoyang Hu",
+    "h_index": 35,
+    "citations": 5972,
+    "works_count": 111,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Wei Li": {
+    "name": "Wei Li",
+    "h_index": 115,
+    "citations": 98463,
+    "works_count": 949,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Feng Li": {
+    "name": "Feng Li",
+    "h_index": 119,
+    "citations": 69534,
+    "works_count": 670,
+    "affiliation": "State Key Laboratory Of Biopharmaceutical Preparation And Delivery, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; State Key Laboratory Of Biochemical Engineering, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yuxing Hu": {
+    "name": "Yuxing Hu",
+    "h_index": 39,
+    "citations": 4398,
+    "works_count": 121,
+    "affiliation": "Department Of Hematology, Zhujiang Hospital, Southern Medical University, Guangzhou, P.R. China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yan Wang": {
+    "name": "Yan Wang",
+    "h_index": 170,
+    "citations": 212622,
+    "works_count": 7321,
+    "affiliation": "State Key Laboratory Of Biopharmaceutical Preparation And Delivery, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; State Key Laboratory Of Biochemical Engineering, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yuhua Li": {
+    "name": "Yuhua Li",
+    "h_index": 31,
+    "citations": 5470,
+    "works_count": 240,
+    "affiliation": "Department Of Hematology, Zhujiang Hospital, Southern Medical University, Guangzhou, P.R. China. Electronic Address: Liyuhua1974@Outlook.Com.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Guanghui Ma": {
+    "name": "Guanghui Ma",
+    "h_index": 87,
+    "citations": 27465,
+    "works_count": 632,
+    "affiliation": "State Key Laboratory Of Biopharmaceutical Preparation And Delivery, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; State Key Laboratory Of Biochemical Engineering, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; School Of Chemical Engineering, University Of Chinese Academy Of Sciences, Beijing, P.R. China. Electronic Address: Ghma@Ipe.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Wei Wei": {
+    "name": "Wei Wei",
+    "h_index": 217,
+    "citations": 254493,
+    "works_count": 5918,
+    "affiliation": "State Key Laboratory Of Biopharmaceutical Preparation And Delivery, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; State Key Laboratory Of Biochemical Engineering, Institute Of Process Engineering, Chinese Academy Of Sciences, Beijing, P.R. China; School Of Chemical Engineering, University Of Chinese Academy Of Sciences, Beijing, P.R. China. Electronic Address: Weiwei@Ipe.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Xin Yang": {
+    "name": "Xin Yang",
+    "h_index": 73,
+    "citations": 24588,
+    "works_count": 1252,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Sviatlana N. Samovich": {
+    "name": "Sviatlana N. Samovich",
+    "h_index": 15,
+    "citations": 847,
+    "works_count": 41,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Hülya Bayir": {
+    "name": "Hülya Bayir",
+    "h_index": 70,
+    "citations": 33354,
+    "works_count": 315,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Valerian E. Kagan": {
+    "name": "Valerian E. Kagan",
+    "h_index": 118,
+    "citations": 70893,
+    "works_count": 829,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Wei Gu": {
+    "name": "Wei Gu",
+    "h_index": 91,
+    "citations": 49153,
+    "works_count": 245,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yibo Zuo": {
+    "name": "Yibo Zuo",
+    "h_index": 16,
+    "citations": 1045,
+    "works_count": 53,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Qin Wang": {
+    "name": "Qin Wang",
+    "h_index": 110,
+    "citations": 63131,
+    "works_count": 515,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Wanying Tian": {
+    "name": "Wanying Tian",
+    "h_index": 60,
+    "citations": 15535,
+    "works_count": 739,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Chunyan Liu": {
+    "name": "Chunyan Liu",
+    "h_index": 55,
+    "citations": 11735,
+    "works_count": 409,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Haiyan Zhou": {
+    "name": "Haiyan Zhou",
+    "h_index": 66,
+    "citations": 20203,
+    "works_count": 313,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Hui Zheng": {
+    "name": "Hui Zheng",
+    "h_index": 76,
+    "citations": 22454,
+    "works_count": 215,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Wenqin Xiao": {
+    "name": "Wenqin Xiao",
+    "h_index": 22,
+    "citations": 1744,
+    "works_count": 67,
+    "affiliation": "Department Of Dermatology, Xiangya Hospital, Central South University, Changsha, Hunan, China; Hunan Key Laboratory Of Aging Biology, Xiangya Hospital, Central South University, Changsha, Hunan, China; National Clinical Research Center For Geriatric Diseases (Xiangya Hospital), Central South University, Changsha, Hunan, China; Furong Laboratory, Changsha, Hunan, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Yan Zhu": {
+    "name": "Yan Zhu",
+    "h_index": 53,
+    "citations": 46297,
+    "works_count": 186,
+    "affiliation": "Department Of Dermatology, Xiangya Hospital, Central South University, Changsha, Hunan, China; Hunan Key Laboratory Of Aging Biology, Xiangya Hospital, Central South University, Changsha, Hunan, China; National Clinical Research Center For Geriatric Diseases (Xiangya Hospital), Central South University, Changsha, Hunan, China; Furong Laboratory, Changsha, Hunan, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Xinjie Tang": {
+    "name": "Xinjie Tang",
+    "h_index": 57,
+    "citations": 16074,
+    "works_count": 220,
+    "affiliation": "Department Of Dermatology, Xiangya Hospital, Central South University, Changsha, Hunan, China; Hunan Key Laboratory Of Aging Biology, Xiangya Hospital, Central South University, Changsha, Hunan, China; National Clinical Research Center For Geriatric Diseases (Xiangya Hospital), Central South University, Changsha, Hunan, China; Furong Laboratory, Changsha, Hunan, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Zhili Deng": {
+    "name": "Zhili Deng",
+    "h_index": 28,
+    "citations": 2150,
+    "works_count": 95,
+    "affiliation": "Department Of Dermatology, Xiangya Hospital, Central South University, Changsha, Hunan, China; Hunan Key Laboratory Of Aging Biology, Xiangya Hospital, Central South University, Changsha, Hunan, China; National Clinical Research Center For Geriatric Diseases (Xiangya Hospital), Central South University, Changsha, Hunan, China; Furong Laboratory, Changsha, Hunan, China. Electronic Address: Dengzhili@Csu.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jinpeng Sun": {
+    "name": "Jinpeng Sun",
+    "h_index": 52,
+    "citations": 8720,
+    "works_count": 251,
+    "affiliation": "Advanced Medical Research Institute, Cheeloo College Of Medicine, The Second Qilu Hospital, Shandong University, Jinan, Shandong, China; Nhc Key Laboratory Of Otorhinolaryngology, Qilu Hospital Of Shandong University, Jinan, Shandong, China; Department Of Physiology And Pathophysiology, School Of Basic Medical Sciences, State Key Laboratory Of Vascular Homeostasis And Remodeling, Peking University, Beijing, China. Electronic Address: Sunjinpeng@Bjmu.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Ji Li": {
+    "name": "Ji Li",
+    "h_index": 54,
+    "citations": 9605,
+    "works_count": 381,
+    "affiliation": "Department Of Dermatology, Xiangya Hospital, Central South University, Changsha, Hunan, China; Hunan Key Laboratory Of Aging Biology, Xiangya Hospital, Central South University, Changsha, Hunan, China; National Clinical Research Center For Geriatric Diseases (Xiangya Hospital), Central South University, Changsha, Hunan, China; Furong Laboratory, Changsha, Hunan, China. Electronic Address: Liji_Xy@Csu.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Ran Huo": {
+    "name": "Ran Huo",
+    "h_index": 38,
+    "citations": 4114,
+    "works_count": 172,
+    "affiliation": "National Institute Of Biological Sciences, Beijing, China; Tsinghua Institute Of Multidisciplinary Biomedical Research, Tsinghua University, Beijing, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Fengchao Wang": {
+    "name": "Fengchao Wang",
+    "h_index": 103,
+    "citations": 55293,
+    "works_count": 1801,
+    "affiliation": "National Institute Of Biological Sciences, Beijing, China; Tsinghua Institute Of Multidisciplinary Biomedical Research, Tsinghua University, Beijing, China. Electronic Address: Wangfengchao@Nibs.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Eric Erquan Zhang": {
+    "name": "Eric Erquan Zhang",
+    "h_index": 33,
+    "citations": 6583,
+    "works_count": 101,
+    "affiliation": "College Of Life Sciences, Beijing Normal University, Beijing, China; National Institute Of Biological Sciences, Beijing, China; Tsinghua Institute Of Multidisciplinary Biomedical Research, Tsinghua University, Beijing, China. Electronic Address: Zhangerquan@Nibs.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Michael V. Westbury": {
+    "name": "Michael V. Westbury",
+    "h_index": 20,
+    "citations": 1703,
+    "works_count": 117,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Stuart C. Brown": {
+    "name": "Stuart C. Brown",
+    "h_index": 30,
+    "citations": 3960,
+    "works_count": 224,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Andrea A. Cabrera": {
+    "name": "Andrea A. Cabrera",
+    "h_index": 28,
+    "citations": 1958,
+    "works_count": 78,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Paul Szpak": {
+    "name": "Paul Szpak",
+    "h_index": 36,
+    "citations": 4230,
+    "works_count": 136,
+    "affiliation": "Department Of Anthropology, Trent University, Peterborough, On, Canada.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Damien A. Fordham": {
+    "name": "Damien A. Fordham",
+    "h_index": 47,
+    "citations": 6788,
+    "works_count": 201,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Eline D. Lorenzen": {
+    "name": "Eline D. Lorenzen",
+    "h_index": 31,
+    "citations": 5419,
+    "works_count": 145,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Ming Wu": {
+    "name": "Ming Wu",
+    "h_index": 83,
+    "citations": 28140,
+    "works_count": 940,
+    "affiliation": "State Key Laboratory Of Agriculture And Forestry Biosecurity, Center For Genetic Improvement, College Of Plant Protection, Fujian Agriculture And Forestry University, Fuzhou 350002, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Shuai Zhang": {
+    "name": "Shuai Zhang",
+    "h_index": 50,
+    "citations": 9588,
+    "works_count": 737,
+    "affiliation": "State Key Laboratory Of Agriculture And Forestry Biosecurity, Center For Genetic Improvement, College Of Plant Protection, Fujian Agriculture And Forestry University, Fuzhou 350002, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Shou-wei Ding": {
+    "name": "Shou-wei Ding",
+    "h_index": 56,
+    "citations": 19479,
+    "works_count": 125,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Shanshan Zhao": {
+    "name": "Shanshan Zhao",
+    "h_index": 33,
+    "citations": 5352,
+    "works_count": 156,
+    "affiliation": "State Key Laboratory Of Agriculture And Forestry Biosecurity, Center For Genetic Improvement, College Of Plant Protection, Fujian Agriculture And Forestry University, Fuzhou 350002, China. Electronic Address: Sszhao88@163.Com.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jianguo Wu": {
+    "name": "Jianguo Wu",
+    "h_index": 175,
+    "citations": 222842,
+    "works_count": 11062,
+    "affiliation": "State Key Laboratory Of Agriculture And Forestry Biosecurity, Center For Genetic Improvement, College Of Plant Protection, Fujian Agriculture And Forestry University, Fuzhou 350002, China. Electronic Address: Wujianguo81@126.Com.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Chan Yeong Kim": {
+    "name": "Chan Yeong Kim",
+    "h_index": 15,
+    "citations": 3566,
+    "works_count": 39,
+    "affiliation": "European Molecular Biology Laboratory, Molecular Systems Biology Unit, 69117 Heidelberg, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jonas Schiller": {
+    "name": "Jonas Schiller",
+    "h_index": 5,
+    "citations": 128,
+    "works_count": 41,
+    "affiliation": "European Molecular Biology Laboratory, Molecular Systems Biology Unit, 69117 Heidelberg, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Michael Kuhn": {
+    "name": "Michael Kuhn",
+    "h_index": 64,
+    "citations": 56375,
+    "works_count": 232,
+    "affiliation": "European Molecular Biology Laboratory, Molecular Systems Biology Unit, 69117 Heidelberg, Germany. Electronic Address: Mkuhn@Embl.De.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Peer Bork": {
+    "name": "Peer Bork",
+    "h_index": 233,
+    "citations": 379172,
+    "works_count": 946,
+    "affiliation": "European Molecular Biology Laboratory, Molecular Systems Biology Unit, 69117 Heidelberg, Germany; Department Of Bioinformatics, Biocenter, University Of Würzburg, 97074 Würzburg, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Li Zhang": {
+    "name": "Li Zhang",
+    "h_index": 47,
+    "citations": 88519,
+    "works_count": 183,
+    "affiliation": "National Institute Of Biological Sciences, Beijing, China; Jiangsu Key Laboratory Of Tissue Engineering And Neuroregeneration, Co-Innovation Center Of Neuroregeneration, Nantong University, Nantong, Jiangsu, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Minhui Yu": {
+    "name": "Minhui Yu",
+    "h_index": 17,
+    "citations": 931,
+    "works_count": 65,
+    "affiliation": "National Institute Of Biological Sciences, Beijing, China; Chinese Academy Of Medical Sciences And Peking Union Medical College, Beijing, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Guoqing Chen": {
+    "name": "Guoqing Chen",
+    "h_index": 76,
+    "citations": 26095,
+    "works_count": 868,
+    "affiliation": "State Key Laboratory Of Membrane Biology, National Biomedical Imaging Center, Institute Of Molecular Medicine, College Of Future Technology, Peking-Tsinghua Center For Life Sciences, Idg/Mcgovern Institute For Brain Research, Peking University, Beijing, China.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Wei Xiong": {
+    "name": "Wei Xiong",
+    "h_index": 80,
+    "citations": 25554,
+    "works_count": 672,
+    "affiliation": "Hefei National Research Center For Physical Sciences At The Microscale, Anhui Province Key Laboratory Of Biomedical Imaging And Intelligent Processing, State Key Laboratory Of Eye Health, Division Of Life Sciences And Medicine, University Of Science And Technology Of China, Hefei, China. Electronic Address: Wxiong@Ustc.Edu.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Xiaoqun Wang": {
+    "name": "Xiaoqun Wang",
+    "h_index": 51,
+    "citations": 11593,
+    "works_count": 211,
+    "affiliation": "State Key Laboratory Of Cognitive Science And Mental Health, Institute Of Biophysics, Chinese Academy Of Sciences, Beijing, China; Changping Laboratory, Beijing, China; Idg/Mcgovern Institute For Brain Research, New Cornerstone Science Laboratory, Beijing Normal University, Beijing, China. Electronic Address: Xiaoqunwang@Ibp.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Peng Cao": {
+    "name": "Peng Cao",
+    "h_index": 92,
+    "citations": 32761,
+    "works_count": 469,
+    "affiliation": "National Institute Of Biological Sciences, Beijing, China; Tsinghua Institute Of Multidisciplinary Biomedical Research, Tsinghua University, Beijing, China. Electronic Address: Caopeng@Nibs.Ac.Cn.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Jakob Maximilian Bader": {
+    "name": "Jakob Maximilian Bader",
+    "h_index": 16,
+    "citations": 1884,
+    "works_count": 41,
+    "affiliation": "Proteomics And Signal Transduction, Max Planck Institute Of Biochemistry, Martinsried, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Sabrina Richter": {
+    "name": "Sabrina Richter",
+    "h_index": 146,
+    "citations": 107685,
+    "works_count": 1686,
+    "affiliation": "Institute Of Computational Biology, Helmholtz Center Munich, Munich, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Christiane Gasperi": {
+    "name": "Christiane Gasperi",
+    "h_index": 23,
+    "citations": 3738,
+    "works_count": 71,
+    "affiliation": "Department Of Neurology, School Of Medicine And Health, Klinikum Rechts Der Isar University Hospital, Technical University Of Munich, Munich, Germany. Electronic Address: C.Gasperi@Tum.De.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Bernhard Hemmer": {
+    "name": "Bernhard Hemmer",
+    "h_index": 103,
+    "citations": 45685,
+    "works_count": 623,
+    "affiliation": "Department Of Neurology, School Of Medicine And Health, Klinikum Rechts Der Isar University Hospital, Technical University Of Munich, Munich, Germany; Munich Cluster For Systems Neurology (Synergy), Munich, Germany. Electronic Address: Hemmer@Tum.De.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Matthias Mann": {
+    "name": "Matthias Mann",
+    "h_index": 250,
+    "citations": 299613,
+    "works_count": 1424,
+    "affiliation": "Proteomics And Signal Transduction, Max Planck Institute Of Biochemistry, Martinsried, Germany; Nnf Center For Protein Research, Faculty Of Health Sciences, University Of Copenhagen, Copenhagen, Denmark. Electronic Address: Mmann@Biochem.Mpg.De.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Wenliang Wang": {
+    "name": "Wenliang Wang",
+    "h_index": 34,
+    "citations": 7616,
+    "works_count": 147,
+    "affiliation": "Genomic Analysis Laboratory, The Salk Institute For Biological Studies, La Jolla, Ca 92037, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Wei Tian": {
+    "name": "Wei Tian",
+    "h_index": 36,
+    "citations": 23687,
+    "works_count": 105,
+    "affiliation": "Genomic Analysis Laboratory, The Salk Institute For Biological Studies, La Jolla, Ca 92037, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Bing Ren": {
+    "name": "Bing Ren",
+    "h_index": 131,
+    "citations": 116176,
+    "works_count": 538,
+    "affiliation": "Department Of Cellular And Molecular Medicine, University Of California, San Diego School Of Medicine, La Jolla, Ca 92093, Usa; New York Genome Center, 101 Avenue Of The Americas, New York, Ny 10013, Usa; Vagelos College Of Physicians And Surgeons, Columbia University Irving Medical Center, 701 W 168Th Street, New York, Ny 10032, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "M. Margarita Behrens": {
+    "name": "M. Margarita Behrens",
+    "h_index": 48,
+    "citations": 13479,
+    "works_count": 105,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Joseph R. Ecker": {
+    "name": "Joseph R. Ecker",
+    "h_index": 168,
+    "citations": 130814,
+    "works_count": 532,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Ngee Kiat Chua": {
+    "name": "Ngee Kiat Chua",
+    "h_index": 13,
+    "citations": 892,
+    "works_count": 53,
+    "affiliation": "Walter And Eliza Hall Institute Of Medical Research, Parkville, Melbourne, Vic 3052, Australia; Department Of Medical Biology, University Of Melbourne, Parkville, Melbourne, Vic 3010, Australia. Electronic Address: Chua.N@Wehi.Edu.Au.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Michele Pagano": {
+    "name": "Michele Pagano",
+    "h_index": 121,
+    "citations": 63804,
+    "works_count": 757,
+    "affiliation": "Department Of Biochemistry And Molecular Pharmacology, New York University Grossman School Of Medicine, New York, Ny 10016, Usa; Laura And Isaac Perlmutter Cancer Center, New York University Grossman School Of Medicine, New York, Ny 10016, Usa; Howard Hughes Medical Institute, New York University Grossman School Of Medicine, New York, Ny 10016, Usa.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Kay Hofmann": {
+    "name": "Kay Hofmann",
+    "h_index": 111,
+    "citations": 51790,
+    "works_count": 473,
+    "affiliation": "Institute For Genetics, University Of Cologne, 50674 Cologne, Germany.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Rebecca Feltham": {
+    "name": "Rebecca Feltham",
+    "h_index": 25,
+    "citations": 4770,
+    "works_count": 47,
+    "affiliation": "Walter And Eliza Hall Institute Of Medical Research, Parkville, Melbourne, Vic 3052, Australia; Department Of Medical Biology, University Of Melbourne, Parkville, Melbourne, Vic 3010, Australia. Electronic Address: Feltham.R@Wehi.Edu.Au.",
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Shuai Jin": {
+    "name": "Shuai Jin",
+    "h_index": 13,
+    "citations": 3885,
+    "works_count": 26,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Zixu Zhu": {
+    "name": "Zixu Zhu",
+    "h_index": 31,
+    "citations": 6084,
+    "works_count": 128,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yunjia Li": {
+    "name": "Yunjia Li",
+    "h_index": 23,
+    "citations": 2063,
+    "works_count": 145,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Yong E. Zhang": {
+    "name": "Yong E. Zhang",
+    "h_index": 63,
+    "citations": 48909,
+    "works_count": 538,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Jun-Jie Gogo Liu": {
+    "name": "Jun-Jie Gogo Liu",
+    "h_index": 58,
+    "citations": 14986,
+    "works_count": 1048,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Caixia Gao": {
+    "name": "Caixia Gao",
+    "h_index": 78,
+    "citations": 34098,
+    "works_count": 287,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Matthew Levine": {
+    "name": "Matthew Levine",
+    "h_index": 41,
+    "citations": 7764,
+    "works_count": 165,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Benjamin Emert": {
+    "name": "Benjamin Emert",
+    "h_index": 18,
+    "citations": 3126,
+    "works_count": 52,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Andrew Stuart": {
+    "name": "Andrew Stuart",
+    "h_index": 97,
+    "citations": 69900,
+    "works_count": 472,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Michael B. Elowitz": {
+    "name": "Michael B. Elowitz",
+    "h_index": 69,
+    "citations": 32382,
+    "works_count": 164,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 2,
+    "last_seen": "2026-04-11"
+  },
+  "Steven W. Flavell": {
+    "name": "Steven W. Flavell",
+    "h_index": 23,
+    "citations": 5621,
+    "works_count": 70,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Li Liu": {
+    "name": "Li Liu",
+    "h_index": 85,
+    "citations": 39379,
+    "works_count": 1782,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Jiewei Zheng": {
+    "name": "Jiewei Zheng",
+    "h_index": 17,
+    "citations": 1283,
+    "works_count": 48,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Chengchen Zhang": {
+    "name": "Chengchen Zhang",
+    "h_index": 20,
+    "citations": 1544,
+    "works_count": 82,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Pablo Laborda": {
+    "name": "Pablo Laborda",
+    "h_index": 20,
+    "citations": 1083,
+    "works_count": 50,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Helle Krogh Johansen": {
+    "name": "Helle Krogh Johansen",
+    "h_index": 71,
+    "citations": 18249,
+    "works_count": 355,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Boqi Liu": {
+    "name": "Boqi Liu",
+    "h_index": 27,
+    "citations": 3095,
+    "works_count": 118,
+    "affiliation": "State Key Laboratory Of Membrane Biology, School Of Life Sciences, Tsinghua University, Beijing, China.",
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Zheng Jiang": {
+    "name": "Zheng Jiang",
+    "h_index": 86,
+    "citations": 39619,
+    "works_count": 418,
+    "affiliation": "State Key Laboratory Of Membrane Biology, School Of Life Sciences, Tsinghua University, Beijing, China.",
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Li Yu": {
+    "name": "Li Yu",
+    "h_index": 83,
+    "citations": 30777,
+    "works_count": 1171,
+    "affiliation": "State Key Laboratory Of Membrane Biology, School Of Life Sciences, Tsinghua University, Beijing, China. Liyulab@Mail.Tsinghua.Edu.Cn.",
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Arun Das": {
+    "name": "Arun Das",
+    "h_index": 150,
+    "citations": 122078,
+    "works_count": 2282,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Arjun Biddanda": {
+    "name": "Arjun Biddanda",
+    "h_index": 13,
+    "citations": 1391,
+    "works_count": 47,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Michael C. Schatz": {
+    "name": "Michael C. Schatz",
+    "h_index": 101,
+    "citations": 63173,
+    "works_count": 438,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Peyman Golshani": {
+    "name": "Peyman Golshani",
+    "h_index": 45,
+    "citations": 11565,
+    "works_count": 148,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Toni Gabaldón": {
+    "name": "Toni Gabaldón",
+    "h_index": 93,
+    "citations": 45690,
+    "works_count": 585,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Yihua Zhou": {
+    "name": "Yihua Zhou",
+    "h_index": 53,
+    "citations": 9790,
+    "works_count": 217,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Derrick Gibbings": {
+    "name": "Derrick Gibbings",
+    "h_index": 20,
+    "citations": 8751,
+    "works_count": 38,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Chieh-Chin Li": {
+    "name": "Chieh-Chin Li",
+    "h_index": 53,
+    "citations": 10134,
+    "works_count": 405,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Crina M. Nimigean": {
+    "name": "Crina M. Nimigean",
+    "h_index": 35,
+    "citations": 3152,
+    "works_count": 145,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Simone Reano": {
+    "name": "Simone Reano",
+    "h_index": 13,
+    "citations": 570,
+    "works_count": 40,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Nicoletta Filigheddu": {
+    "name": "Nicoletta Filigheddu",
+    "h_index": 26,
+    "citations": 6454,
+    "works_count": 74,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Danhui Dong": {
+    "name": "Danhui Dong",
+    "h_index": 63,
+    "citations": 17670,
+    "works_count": 1126,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Yang-Dong Guo": {
+    "name": "Yang-Dong Guo",
+    "h_index": 34,
+    "citations": 6105,
+    "works_count": 76,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Haizhou Jiang": {
+    "name": "Haizhou Jiang",
+    "h_index": 58,
+    "citations": 8940,
+    "works_count": 327,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Feifan Guo": {
+    "name": "Feifan Guo",
+    "h_index": 32,
+    "citations": 3046,
+    "works_count": 59,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Avi-Hai Hovav": {
+    "name": "Avi-Hai Hovav",
+    "h_index": 30,
+    "citations": 3123,
+    "works_count": 81,
+    "affiliation": "Institute Of Biomedical And Oral Research, Faculty Of Dental Medicine, Hebrew University, Jerusalem, Israel. Avihaih@Ekmd.Huji.Ac.Il.",
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Shuying Shen": {
+    "name": "Shuying Shen",
+    "h_index": 36,
+    "citations": 4887,
+    "works_count": 87,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Jiemei Li": {
+    "name": "Jiemei Li",
+    "h_index": 16,
+    "citations": 654,
+    "works_count": 40,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Lili Zhou": {
+    "name": "Lili Zhou",
+    "h_index": 55,
+    "citations": 15475,
+    "works_count": 434,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Jingming Liu": {
+    "name": "Jingming Liu",
+    "h_index": 14,
+    "citations": 957,
+    "works_count": 43,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Sebastian J. Pomplun": {
+    "name": "Sebastian J. Pomplun",
+    "h_index": 14,
+    "citations": 720,
+    "works_count": 41,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Lu Tian": {
+    "name": "Lu Tian",
+    "h_index": 57,
+    "citations": 70307,
+    "works_count": 220,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Ya-Wen Chen": {
+    "name": "Ya-Wen Chen",
+    "h_index": 320,
+    "citations": 469343,
+    "works_count": 3917,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Sarah Genon": {
+    "name": "Sarah Genon",
+    "h_index": 30,
+    "citations": 4409,
+    "works_count": 192,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Jiao Yan": {
+    "name": "Jiao Yan",
+    "h_index": 87,
+    "citations": 46297,
+    "works_count": 264,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Lai Liu": {
+    "name": "Lai Liu",
+    "h_index": 72,
+    "citations": 25166,
+    "works_count": 1005,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Haiyuan Zhang": {
+    "name": "Haiyuan Zhang",
+    "h_index": 59,
+    "citations": 13837,
+    "works_count": 249,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 2,
+    "last_seen": "2026-04-10"
+  },
+  "Roberts MJ": {
+    "name": "Roberts MJ",
+    "h_index": 35,
+    "citations": 6010,
+    "works_count": 108,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "De Weerd P": {
+    "name": "De Weerd P",
+    "h_index": 36,
+    "citations": 9443,
+    "works_count": 194,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Senden M": {
+    "name": "Senden M",
+    "h_index": 44,
+    "citations": 9380,
+    "works_count": 133,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Dobrzynski M": {
+    "name": "Dobrzynski M",
+    "h_index": 118,
+    "citations": 71873,
+    "works_count": 1134,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Pertz O": {
+    "name": "Pertz O",
+    "h_index": 34,
+    "citations": 6565,
+    "works_count": 166,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Yue F": {
+    "name": "Yue F",
+    "h_index": 162,
+    "citations": 125459,
+    "works_count": 2768,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Liu Q": {
+    "name": "Liu Q",
+    "h_index": 154,
+    "citations": 128318,
+    "works_count": 2038,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Lin X": {
+    "name": "Lin X",
+    "h_index": 75,
+    "citations": 27843,
+    "works_count": 424,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Li Y": {
+    "name": "Li Y",
+    "h_index": 60,
+    "citations": 119703,
+    "works_count": 425,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Wong C": {
+    "name": "Wong C",
+    "h_index": 156,
+    "citations": 126211,
+    "works_count": 3141,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Uttam S": {
+    "name": "Uttam S",
+    "h_index": 101,
+    "citations": 55633,
+    "works_count": 654,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Atlasi Y": {
+    "name": "Atlasi Y",
+    "h_index": 20,
+    "citations": 3105,
+    "works_count": 66,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Khoutorsky A": {
+    "name": "Khoutorsky A",
+    "h_index": 36,
+    "citations": 5320,
+    "works_count": 98,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Islam F": {
+    "name": "Islam F",
+    "h_index": 176,
+    "citations": 168953,
+    "works_count": 2696,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Williams C": {
+    "name": "Williams C",
+    "h_index": 119,
+    "citations": 124562,
+    "works_count": 1189,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Hogan T": {
+    "name": "Hogan T",
+    "h_index": 148,
+    "citations": 125590,
+    "works_count": 2342,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Seddon B": {
+    "name": "Seddon B",
+    "h_index": 33,
+    "citations": 9058,
+    "works_count": 123,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Mu Nan": {
+    "name": "Mu Nan",
+    "h_index": 28,
+    "citations": 2082,
+    "works_count": 81,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Muquan Yu": {
+    "name": "Muquan Yu",
+    "h_index": 21,
+    "citations": 1549,
+    "works_count": 93,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Michael J. Tarr": {
+    "name": "Michael J. Tarr",
+    "h_index": 59,
+    "citations": 16760,
+    "works_count": 289,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Xiaoqing Hu": {
+    "name": "Xiaoqing Hu",
+    "h_index": 43,
+    "citations": 6597,
+    "works_count": 230,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Andrew F. Luo": {
+    "name": "Andrew F. Luo",
+    "h_index": 79,
+    "citations": 27690,
+    "works_count": 1062,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Alessio Franci": {
+    "name": "Alessio Franci",
+    "h_index": 19,
+    "citations": 1430,
+    "works_count": 153,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Pierre Sacré": {
+    "name": "Pierre Sacré",
+    "h_index": 31,
+    "citations": 2507,
+    "works_count": 192,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Guillaume Drion": {
+    "name": "Guillaume Drion",
+    "h_index": 17,
+    "citations": 1027,
+    "works_count": 89,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Tim Sainburg": {
+    "name": "Tim Sainburg",
+    "h_index": 12,
+    "citations": 756,
+    "works_count": 44,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Caleb Weinreb": {
+    "name": "Caleb Weinreb",
+    "h_index": 23,
+    "citations": 7278,
+    "works_count": 49,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Jasper Zhang": {
+    "name": "Jasper Zhang",
+    "h_index": 146,
+    "citations": 90934,
+    "works_count": 2749,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Bryan Cheng": {
+    "name": "Bryan Cheng",
+    "h_index": 19,
+    "citations": 1092,
+    "works_count": 92,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Frank J. H. Gijsen": {
+    "name": "Frank J. H. Gijsen",
+    "h_index": 47,
+    "citations": 8044,
+    "works_count": 248,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Aaron L. Fogelson": {
+    "name": "Aaron L. Fogelson",
+    "h_index": 37,
+    "citations": 5231,
+    "works_count": 151,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Seungjun Ahn": {
+    "name": "Seungjun Ahn",
+    "h_index": 22,
+    "citations": 1453,
+    "works_count": 182,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Panos Roussos": {
+    "name": "Panos Roussos",
+    "h_index": 94,
+    "citations": 48569,
+    "works_count": 471,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Maaike van Gerwen": {
+    "name": "Maaike van Gerwen",
+    "h_index": 22,
+    "citations": 2305,
+    "works_count": 100,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Qing Lu": {
+    "name": "Qing Lu",
+    "h_index": 145,
+    "citations": 91638,
+    "works_count": 925,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhigang Li": {
+    "name": "Zhigang Li",
+    "h_index": 75,
+    "citations": 24669,
+    "works_count": 1758,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Amr Ahmed": {
+    "name": "Amr Ahmed",
+    "h_index": 36,
+    "citations": 8051,
+    "works_count": 192,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Ardhendu Behera": {
+    "name": "Ardhendu Behera",
+    "h_index": 21,
+    "citations": 2053,
+    "works_count": 76,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Mahmoud Khattab": {
+    "name": "Mahmoud Khattab",
+    "h_index": 30,
+    "citations": 2480,
+    "works_count": 112,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Pan Jia Wern": {
+    "name": "Pan Jia Wern",
+    "h_index": 8,
+    "citations": 279,
+    "works_count": 73,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Benedict A. Williams": {
+    "name": "Benedict A. Williams",
+    "h_index": 151,
+    "citations": 155822,
+    "works_count": 1598,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Josep Cornella": {
+    "name": "Josep Cornella",
+    "h_index": 53,
+    "citations": 9743,
+    "works_count": 345,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jacob Moran": {
+    "name": "Jacob Moran",
+    "h_index": 40,
+    "citations": 7536,
+    "works_count": 236,
+    "affiliation": "Department Of Physics, Washington University In St Louis, St Louis, Mo, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mikhail Tikhonov": {
+    "name": "Mikhail Tikhonov",
+    "h_index": 20,
+    "citations": 4695,
+    "works_count": 68,
+    "affiliation": "Department Of Physics, Washington University In St Louis, St Louis, Mo, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yingying Cui": {
+    "name": "Yingying Cui",
+    "h_index": 19,
+    "citations": 1477,
+    "works_count": 96,
+    "affiliation": "Guangdong Provincial Key Laboratory Of Insect Developmental Biology And Applied Technology, Institute Of Insect Science And Technology & School Of Life Sciences, South China Normal University, Guangzhou, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Fangfang Liu": {
+    "name": "Fangfang Liu",
+    "h_index": 137,
+    "citations": 108381,
+    "works_count": 5900,
+    "affiliation": "Guangdong Provincial Key Laboratory Of Insect Developmental Biology And Applied Technology, Institute Of Insect Science And Technology & School Of Life Sciences, South China Normal University, Guangzhou, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jacobus J. Boomsma": {
+    "name": "Jacobus J. Boomsma",
+    "h_index": 81,
+    "citations": 22567,
+    "works_count": 400,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Shuai Zhan": {
+    "name": "Shuai Zhan",
+    "h_index": 32,
+    "citations": 4701,
+    "works_count": 112,
+    "affiliation": "State Key Laboratory Of Plant Trait Design, Cas Center For Excellence In Molecular Plant Sciences, Chinese Academy Of Sciences, Shanghai, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Sheng Li": {
+    "name": "Sheng Li",
+    "h_index": 99,
+    "citations": 131233,
+    "works_count": 1168,
+    "affiliation": "Guangdong Provincial Key Laboratory Of Insect Developmental Biology And Applied Technology, Institute Of Insect Science And Technology & School Of Life Sciences, South China Normal University, Guangzhou, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "C. M. Reed": {
+    "name": "C. M. Reed",
+    "h_index": 41,
+    "citations": 29410,
+    "works_count": 53,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "J. M. Chung": {
+    "name": "J. M. Chung",
+    "h_index": 67,
+    "citations": 22781,
+    "works_count": 186,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "A. N. Mamelak": {
+    "name": "A. N. Mamelak",
+    "h_index": 61,
+    "citations": 11780,
+    "works_count": 284,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "U. Rutishauser": {
+    "name": "U. Rutishauser",
+    "h_index": 84,
+    "citations": 21621,
+    "works_count": 206,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "D. Y. Tsao": {
+    "name": "D. Y. Tsao",
+    "h_index": 44,
+    "citations": 11958,
+    "works_count": 115,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Marion Leleu": {
+    "name": "Marion Leleu",
+    "h_index": 30,
+    "citations": 6146,
+    "works_count": 66,
+    "affiliation": "Bioinformatics Competence Center, Epfl, Lausanne, Switzerland.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Lijun Liu": {
+    "name": "Lijun Liu",
+    "h_index": 85,
+    "citations": 39379,
+    "works_count": 1782,
+    "affiliation": "State Key Laboratory Of Lithospheric And Environmental Coevolution, Institute Of Geology And Geophysics, Chinese Academy Of Sciences, Beijing, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Bo Wan": {
+    "name": "Bo Wan",
+    "h_index": 31,
+    "citations": 13250,
+    "works_count": 115,
+    "affiliation": "State Key Laboratory Of Lithospheric And Environmental Coevolution, Institute Of Geology And Geophysics, Chinese Academy Of Sciences, Beijing, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Ling Chen": {
+    "name": "Ling Chen",
+    "h_index": 67,
+    "citations": 41978,
+    "works_count": 313,
+    "affiliation": "State Key Laboratory Of Lithospheric And Environmental Coevolution, Institute Of Geology And Geophysics, Chinese Academy Of Sciences, Beijing, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Craig Lundstrom": {
+    "name": "Craig Lundstrom",
+    "h_index": 44,
+    "citations": 5904,
+    "works_count": 233,
+    "affiliation": "Department Of Earth Science And Environmental Change, University Of Illinois At Urbana-Champaign, Urbana, Il, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Joseph J. Y. Wong": {
+    "name": "Joseph J. Y. Wong",
+    "h_index": 34,
+    "citations": 28928,
+    "works_count": 161,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kristian Franze": {
+    "name": "Kristian Franze",
+    "h_index": 48,
+    "citations": 10893,
+    "works_count": 156,
+    "affiliation": "Department Of Physiology, Development And Neuroscience, University Of Cambridge, Cambridge, Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kevin J. Chalut": {
+    "name": "Kevin J. Chalut",
+    "h_index": 33,
+    "citations": 4166,
+    "works_count": 104,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mekayla A. Storer": {
+    "name": "Mekayla A. Storer",
+    "h_index": 16,
+    "citations": 3527,
+    "works_count": 34,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jooho Chung": {
+    "name": "Jooho Chung",
+    "h_index": 35,
+    "citations": 4868,
+    "works_count": 277,
+    "affiliation": "Broad Institute Of Harvard And Massachusetts Institute Of Technology, Cambridge, Ma, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kathleen B. Yates": {
+    "name": "Kathleen B. Yates",
+    "h_index": 26,
+    "citations": 8125,
+    "works_count": 77,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Todd R. Golub": {
+    "name": "Todd R. Golub",
+    "h_index": 176,
+    "citations": 267340,
+    "works_count": 749,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Robert T. Manguso": {
+    "name": "Robert T. Manguso",
+    "h_index": 23,
+    "citations": 6898,
+    "works_count": 102,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Hanumantha Rao Vutukuri": {
+    "name": "Hanumantha Rao Vutukuri",
+    "h_index": 15,
+    "citations": 935,
+    "works_count": 52,
+    "affiliation": "Active Soft Matter And Bio-Inspired Materials Lab, Faculty Of Science And Technology, Mesa+ Institute, University Of Twente, Enschede, Netherlands.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Aaron A. Sandel": {
+    "name": "Aaron A. Sandel",
+    "h_index": 17,
+    "citations": 1895,
+    "works_count": 55,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yixuan He": {
+    "name": "Yixuan He",
+    "h_index": 24,
+    "citations": 1788,
+    "works_count": 134,
+    "affiliation": "School Of Mathematical And Natural Sciences, Arizona State University, Phoenix, Az, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kevin E. Langergraber": {
+    "name": "Kevin E. Langergraber",
+    "h_index": 37,
+    "citations": 6237,
+    "works_count": 119,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "David P. Watts": {
+    "name": "David P. Watts",
+    "h_index": 66,
+    "citations": 12877,
+    "works_count": 171,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "John C. Mitani": {
+    "name": "John C. Mitani",
+    "h_index": 64,
+    "citations": 14417,
+    "works_count": 169,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zijian Zhu": {
+    "name": "Zijian Zhu",
+    "h_index": 113,
+    "citations": 62107,
+    "works_count": 1772,
+    "affiliation": "Janelia Research Campus, Howard Hughes Medical Institute, Ashburn, Va, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yupu Wang": {
+    "name": "Yupu Wang",
+    "h_index": 10,
+    "citations": 417,
+    "works_count": 56,
+    "affiliation": "Janelia Research Campus, Howard Hughes Medical Institute, Ashburn, Va, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Steven A. Carr": {
+    "name": "Steven A. Carr",
+    "h_index": 152,
+    "citations": 94655,
+    "works_count": 987,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Namrata D. Udeshi": {
+    "name": "Namrata D. Udeshi",
+    "h_index": 53,
+    "citations": 18245,
+    "works_count": 179,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jiefu Li": {
+    "name": "Jiefu Li",
+    "h_index": 58,
+    "citations": 18814,
+    "works_count": 424,
+    "affiliation": "Janelia Research Campus, Howard Hughes Medical Institute, Ashburn, Va, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Simon Betzold": {
+    "name": "Simon Betzold",
+    "h_index": 14,
+    "citations": 951,
+    "works_count": 51,
+    "affiliation": "Julius-Maximilians-Universität Würzburg, Physikalisches Institut And Würzburg-Dresden Cluster Of Excellence Ctd.Qmat, Lehrstuhl Für Technische Physik, Am Hubland, Würzburg, Germany.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Sebastian Klembt": {
+    "name": "Sebastian Klembt",
+    "h_index": 26,
+    "citations": 2662,
+    "works_count": 118,
+    "affiliation": "Julius-Maximilians-Universität Würzburg, Physikalisches Institut And Würzburg-Dresden Cluster Of Excellence Ctd.Qmat, Lehrstuhl Für Technische Physik, Am Hubland, Würzburg, Germany.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "David G. Rand": {
+    "name": "David G. Rand",
+    "h_index": 99,
+    "citations": 48934,
+    "works_count": 567,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Duncan J. Watts": {
+    "name": "Duncan J. Watts",
+    "h_index": 70,
+    "citations": 97218,
+    "works_count": 233,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Abdullah Almaatouq": {
+    "name": "Abdullah Almaatouq",
+    "h_index": 17,
+    "citations": 1512,
+    "works_count": 104,
+    "affiliation": "Sloan School Of Management, Massachusetts Institute Of Technology, Cambridge, Ma, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Melanie Blokesch": {
+    "name": "Melanie Blokesch",
+    "h_index": 48,
+    "citations": 7010,
+    "works_count": 126,
+    "affiliation": "Laboratory Of Molecular Microbiology, Global Health Institute, School Of Life Sciences, Ecole Polytechnique Fédérale De Lausanne (Epfl), Lausanne, Switzerland.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "S. Reale": {
+    "name": "S. Reale",
+    "h_index": 168,
+    "citations": 159521,
+    "works_count": 3441,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jin L": {
+    "name": "Jin L",
+    "h_index": 149,
+    "citations": 128344,
+    "works_count": 4455,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Qi X": {
+    "name": "Qi X",
+    "h_index": 100,
+    "citations": 44813,
+    "works_count": 774,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Liu J": {
+    "name": "Liu J",
+    "h_index": 131,
+    "citations": 107314,
+    "works_count": 2536,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wang C": {
+    "name": "Wang C",
+    "h_index": 140,
+    "citations": 99034,
+    "works_count": 1351,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wang L": {
+    "name": "Wang L",
+    "h_index": 128,
+    "citations": 134113,
+    "works_count": 828,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Dong Y": {
+    "name": "Dong Y",
+    "h_index": 98,
+    "citations": 47583,
+    "works_count": 1725,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Rezaei A": {
+    "name": "Rezaei A",
+    "h_index": 142,
+    "citations": 110378,
+    "works_count": 1737,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Chen J": {
+    "name": "Chen J",
+    "h_index": 119,
+    "citations": 85506,
+    "works_count": 2292,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Flanagan JR": {
+    "name": "Flanagan JR",
+    "h_index": 29,
+    "citations": 4948,
+    "works_count": 84,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Liang JC": {
+    "name": "Liang JC",
+    "h_index": 43,
+    "citations": 6594,
+    "works_count": 444,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ryan JD": {
+    "name": "Ryan JD",
+    "h_index": 73,
+    "citations": 23403,
+    "works_count": 859,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Olsen RK": {
+    "name": "Olsen RK",
+    "h_index": 35,
+    "citations": 4858,
+    "works_count": 109,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Smith SA": {
+    "name": "Smith SA",
+    "h_index": 149,
+    "citations": 128684,
+    "works_count": 2250,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mao R": {
+    "name": "Mao R",
+    "h_index": 141,
+    "citations": 112512,
+    "works_count": 2159,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Luo X": {
+    "name": "Luo X",
+    "h_index": 153,
+    "citations": 133149,
+    "works_count": 2197,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Hu R": {
+    "name": "Hu R",
+    "h_index": 320,
+    "citations": 469343,
+    "works_count": 3917,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yang Z": {
+    "name": "Yang Z",
+    "h_index": 129,
+    "citations": 88697,
+    "works_count": 1780,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Manga M": {
+    "name": "Manga M",
+    "h_index": 82,
+    "citations": 22746,
+    "works_count": 823,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lücke P": {
+    "name": "Lücke P",
+    "h_index": 35,
+    "citations": 3860,
+    "works_count": 100,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Cao T": {
+    "name": "Cao T",
+    "h_index": 74,
+    "citations": 18792,
+    "works_count": 330,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Bai X": {
+    "name": "Bai X",
+    "h_index": 81,
+    "citations": 29007,
+    "works_count": 611,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "You T": {
+    "name": "You T",
+    "h_index": 171,
+    "citations": 129323,
+    "works_count": 2027,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jiang Y": {
+    "name": "Jiang Y",
+    "h_index": 103,
+    "citations": 47290,
+    "works_count": 1060,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lohr M": {
+    "name": "Lohr M",
+    "h_index": 78,
+    "citations": 26660,
+    "works_count": 819,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Li X": {
+    "name": "Li X",
+    "h_index": 176,
+    "citations": 159803,
+    "works_count": 2357,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wang Y": {
+    "name": "Wang Y",
+    "h_index": 209,
+    "citations": 251993,
+    "works_count": 3872,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Miao Y": {
+    "name": "Miao Y",
+    "h_index": 76,
+    "citations": 27965,
+    "works_count": 518,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lai F": {
+    "name": "Lai F",
+    "h_index": 61,
+    "citations": 13193,
+    "works_count": 260,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhang G": {
+    "name": "Zhang G",
+    "h_index": 139,
+    "citations": 107472,
+    "works_count": 1810,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Chen D": {
+    "name": "Chen D",
+    "h_index": 110,
+    "citations": 54873,
+    "works_count": 976,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhou Z": {
+    "name": "Zhou Z",
+    "h_index": 320,
+    "citations": 469343,
+    "works_count": 3917,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Dai F": {
+    "name": "Dai F",
+    "h_index": 90,
+    "citations": 60800,
+    "works_count": 489,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Cheng D": {
+    "name": "Cheng D",
+    "h_index": 217,
+    "citations": 254493,
+    "works_count": 5918,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wong ES": {
+    "name": "Wong ES",
+    "h_index": 16,
+    "citations": 1174,
+    "works_count": 54,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhang Y": {
+    "name": "Zhang Y",
+    "h_index": 109,
+    "citations": 121498,
+    "works_count": 1409,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Cox CD": {
+    "name": "Cox CD",
+    "h_index": 49,
+    "citations": 8147,
+    "works_count": 222,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xu J": {
+    "name": "Xu J",
+    "h_index": 26,
+    "citations": 100063,
+    "works_count": 72,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Nakamura S": {
+    "name": "Nakamura S",
+    "h_index": 119,
+    "citations": 73014,
+    "works_count": 1056,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Shimabuku R": {
+    "name": "Shimabuku R",
+    "h_index": 5,
+    "citations": 317,
+    "works_count": 42,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Tomioka R": {
+    "name": "Tomioka R",
+    "h_index": 38,
+    "citations": 8583,
+    "works_count": 132,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yamashiro T": {
+    "name": "Yamashiro T",
+    "h_index": 43,
+    "citations": 6780,
+    "works_count": 314,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Tang S": {
+    "name": "Tang S",
+    "h_index": 76,
+    "citations": 27188,
+    "works_count": 532,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zong L": {
+    "name": "Zong L",
+    "h_index": 320,
+    "citations": 469343,
+    "works_count": 3917,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ma S": {
+    "name": "Ma S",
+    "h_index": 126,
+    "citations": 54129,
+    "works_count": 634,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Li Z": {
+    "name": "Li Z",
+    "h_index": 183,
+    "citations": 205661,
+    "works_count": 3267,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Baylin SB": {
+    "name": "Baylin SB",
+    "h_index": 182,
+    "citations": 178210,
+    "works_count": 1322,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kong X": {
+    "name": "Kong X",
+    "h_index": 145,
+    "citations": 109140,
+    "works_count": 1682,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ornelas A": {
+    "name": "Ornelas A",
+    "h_index": 144,
+    "citations": 112453,
+    "works_count": 2354,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kim JY": {
+    "name": "Kim JY",
+    "h_index": 149,
+    "citations": 127180,
+    "works_count": 2501,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Funsten M": {
+    "name": "Funsten M",
+    "h_index": 79,
+    "citations": 23515,
+    "works_count": 695,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Varanasi V": {
+    "name": "Varanasi V",
+    "h_index": 26,
+    "citations": 3030,
+    "works_count": 121,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Serreze D": {
+    "name": "Serreze D",
+    "h_index": 59,
+    "citations": 12968,
+    "works_count": 329,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Huang H": {
+    "name": "Huang H",
+    "h_index": 74,
+    "citations": 55324,
+    "works_count": 326,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Chervonsky A": {
+    "name": "Chervonsky A",
+    "h_index": 44,
+    "citations": 9736,
+    "works_count": 106,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Banerjee R": {
+    "name": "Banerjee R",
+    "h_index": 83,
+    "citations": 21548,
+    "works_count": 448,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Bertram N": {
+    "name": "Bertram N",
+    "h_index": 40,
+    "citations": 7739,
+    "works_count": 89,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Osman C": {
+    "name": "Osman C",
+    "h_index": 32,
+    "citations": 5507,
+    "works_count": 114,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mokranjac D": {
+    "name": "Mokranjac D",
+    "h_index": 37,
+    "citations": 4899,
+    "works_count": 77,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zurita C": {
+    "name": "Zurita C",
+    "h_index": 23,
+    "citations": 1441,
+    "works_count": 94,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lewis SC": {
+    "name": "Lewis SC",
+    "h_index": 68,
+    "citations": 17049,
+    "works_count": 349,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wang W": {
+    "name": "Wang W",
+    "h_index": 209,
+    "citations": 251993,
+    "works_count": 3872,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Chen X": {
+    "name": "Chen X",
+    "h_index": 251,
+    "citations": 478138,
+    "works_count": 18863,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Asta M": {
+    "name": "Asta M",
+    "h_index": 94,
+    "citations": 35874,
+    "works_count": 581,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ritchie RO": {
+    "name": "Ritchie RO",
+    "h_index": 147,
+    "citations": 95067,
+    "works_count": 1008,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Farkas D": {
+    "name": "Farkas D",
+    "h_index": 54,
+    "citations": 11076,
+    "works_count": 271,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhao K": {
+    "name": "Zhao K",
+    "h_index": 100,
+    "citations": 46134,
+    "works_count": 388,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lanzoni S": {
+    "name": "Lanzoni S",
+    "h_index": 48,
+    "citations": 7236,
+    "works_count": 227,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Coco G": {
+    "name": "Coco G",
+    "h_index": 97,
+    "citations": 42470,
+    "works_count": 1204,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xu F": {
+    "name": "Xu F",
+    "h_index": 150,
+    "citations": 129133,
+    "works_count": 1086,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhang K": {
+    "name": "Zhang K",
+    "h_index": 86,
+    "citations": 34867,
+    "works_count": 1256,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Gong Z": {
+    "name": "Gong Z",
+    "h_index": 18,
+    "citations": 25851,
+    "works_count": 106,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Sean F. Brady": {
+    "name": "Sean F. Brady",
+    "h_index": 63,
+    "citations": 14422,
+    "works_count": 199,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "David Jones": {
+    "name": "David Jones",
+    "h_index": 144,
+    "citations": 104393,
+    "works_count": 1480,
+    "affiliation": "Genome Damage And Stability Centre, School Of Life Sciences, University Of Sussex, Falmer, Brighton, Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Wei Xia": {
+    "name": "Wei Xia",
+    "h_index": 125,
+    "citations": 56517,
+    "works_count": 596,
+    "affiliation": "Department Of Otorhinolaryngology Head And Neck Surgery, The First Affiliated Hospital Of Guangxi Medical University, Nanning, Guangxi, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Nan Shi": {
+    "name": "Nan Shi",
+    "h_index": 28,
+    "citations": 2886,
+    "works_count": 127,
+    "affiliation": "Department Of Otorhinolaryngology Head And Neck Surgery, The First Affiliated Hospital Of Guangxi Medical University, Nanning, Guangxi, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Anzhou Tang": {
+    "name": "Anzhou Tang",
+    "h_index": 17,
+    "citations": 1156,
+    "works_count": 134,
+    "affiliation": "Department Of Otorhinolaryngology Head And Neck Surgery, The First Affiliated Hospital Of Guangxi Medical University, Nanning, Guangxi, China. Tanganzhou@Gxmu.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Huu An Bui Nguyen": {
+    "name": "Huu An Bui Nguyen",
+    "h_index": 2,
+    "citations": 10,
+    "works_count": 226,
+    "affiliation": "Genome Institute Of Singapore (Gis), Agency For Science, Technology And Research (A*Star), Singapore, Republic Of Singapore.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Anders Jacobsen Skanderup": {
+    "name": "Anders Jacobsen Skanderup",
+    "h_index": 48,
+    "citations": 66772,
+    "works_count": 243,
+    "affiliation": "Genome Institute Of Singapore (Gis), Agency For Science, Technology And Research (A*Star), Singapore, Republic Of Singapore. Skanderupamj@A-Star.Edu.Sg.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zheng Zhou": {
+    "name": "Zheng Zhou",
+    "h_index": 161,
+    "citations": 150538,
+    "works_count": 2776,
+    "affiliation": "State Key Laboratory Of Pharmaceutical Biotechnology And Moe Key Laboratory Of Model Animal For Disease Study, Model Animal Research Center, Division Of Spine Surgery, Department Of Orthopedic Surgery, Nanjing Drum Tower Hospital, The Affiliated Hospital Of Nanjing University Medical School, Medical School Of Nanjing University, Nanjing University, Nanjing, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lin Liu": {
+    "name": "Lin Liu",
+    "h_index": 175,
+    "citations": 142245,
+    "works_count": 3474,
+    "affiliation": "Institute For Diabetes, Obesity And Metabolism, Perelman School Of Medicine, University Of Pennsylvania, Philadelphia, Pa, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Zhenji Gan": {
+    "name": "Zhenji Gan",
+    "h_index": 27,
+    "citations": 2605,
+    "works_count": 64,
+    "affiliation": "State Key Laboratory Of Pharmaceutical Biotechnology And Moe Key Laboratory Of Model Animal For Disease Study, Model Animal Research Center, Division Of Spine Surgery, Department Of Orthopedic Surgery, Nanjing Drum Tower Hospital, The Affiliated Hospital Of Nanjing University Medical School, Medical School Of Nanjing University, Nanjing University, Nanjing, China. Ganzj@Nju.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kai Ye": {
+    "name": "Kai Ye",
+    "h_index": 77,
+    "citations": 83436,
+    "works_count": 461,
+    "affiliation": "Department Of Biosciences, Rice University, Houston, Tx, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xiu-Feng Wan": {
+    "name": "Xiu-Feng Wan",
+    "h_index": 39,
+    "citations": 5921,
+    "works_count": 192,
+    "affiliation": "Nextgen Center For Influenza And Emerging Infectious Diseases, University Of Missouri, Columbia, Mo, Usa. Wanx@Missouri.Edu.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yong Zhang": {
+    "name": "Yong Zhang",
+    "h_index": 124,
+    "citations": 72020,
+    "works_count": 2216,
+    "affiliation": "State Key Laboratory Of Rna Innovation, Science And Engineering, Cas Center For Excellence In Molecular Cell Science, Shanghai Institute Of Biochemistry And Cell Biology, Chinese Academy Of Sciences, University Of Chinese Academy Of Sciences, Shanghai, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Shi-Ying Yao": {
+    "name": "Shi-Ying Yao",
+    "h_index": 84,
+    "citations": 31354,
+    "works_count": 1783,
+    "affiliation": "State Key Laboratory Of Rna Innovation, Science And Engineering, Cas Center For Excellence In Molecular Cell Science, Shanghai Institute Of Biochemistry And Cell Biology, Chinese Academy Of Sciences, University Of Chinese Academy Of Sciences, Shanghai, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xiao-Long Zhou": {
+    "name": "Xiao-Long Zhou",
+    "h_index": 24,
+    "citations": 1719,
+    "works_count": 84,
+    "affiliation": "State Key Laboratory Of Rna Innovation, Science And Engineering, Cas Center For Excellence In Molecular Cell Science, Shanghai Institute Of Biochemistry And Cell Biology, Chinese Academy Of Sciences, University Of Chinese Academy Of Sciences, Shanghai, China. Xlzhou@Sibcb.Ac.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xiaoyan Guo": {
+    "name": "Xiaoyan Guo",
+    "h_index": 171,
+    "citations": 193930,
+    "works_count": 9125,
+    "affiliation": "Department Of Genetics And Genome Sciences, University Of Connecticut Health Center, Farmington, Ct, Usa. Xguo@Uchc.Edu.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Benjamin P. Barré": {
+    "name": "Benjamin P. Barré",
+    "h_index": 27,
+    "citations": 3501,
+    "works_count": 73,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Gianni Liti": {
+    "name": "Gianni Liti",
+    "h_index": 52,
+    "citations": 11214,
+    "works_count": 223,
+    "affiliation": "Université Côte D'Azur, Cnrs, Inserm, Ircan, Nice, France. Gianni.Liti@Cnrs.Fr.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Vinay Shukla": {
+    "name": "Vinay Shukla",
+    "h_index": 51,
+    "citations": 14091,
+    "works_count": 381,
+    "affiliation": "Department Of Biology, University Of Oxford, South Parks Road, Oxford, United Kingdom.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Francesco Licausi": {
+    "name": "Francesco Licausi",
+    "h_index": 37,
+    "citations": 8529,
+    "works_count": 87,
+    "affiliation": "Department Of Biology, University Of Oxford, South Parks Road, Oxford, United Kingdom. Francesco.Licausi@Biology.Ox.Ac.Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Hong Liang": {
+    "name": "Hong Liang",
+    "h_index": 80,
+    "citations": 28780,
+    "works_count": 505,
+    "affiliation": "Department Of Food Science And Technology, School Of Agriculture And Biology, Shanghai Jiao Tong University, Shanghai, The People'S Republic Of China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xiaoqiang Ma": {
+    "name": "Xiaoqiang Ma",
+    "h_index": 31,
+    "citations": 2773,
+    "works_count": 95,
+    "affiliation": "Department Of Food Science And Technology, School Of Agriculture And Biology, Shanghai Jiao Tong University, Shanghai, The People'S Republic Of China. Xq_Ma@Sjtu.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mafalda Almeida": {
+    "name": "Mafalda Almeida",
+    "h_index": 41,
+    "citations": 5245,
+    "works_count": 216,
+    "affiliation": "Developmental Epigenetics Lab, Department Of Biochemistry, University Of Oxford, Oxford, Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Guifeng Wei": {
+    "name": "Guifeng Wei",
+    "h_index": 20,
+    "citations": 2041,
+    "works_count": 79,
+    "affiliation": "Developmental Epigenetics Lab, Department Of Biochemistry, University Of Oxford, Oxford, Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Neil Brockdorff": {
+    "name": "Neil Brockdorff",
+    "h_index": 71,
+    "citations": 21708,
+    "works_count": 216,
+    "affiliation": "Developmental Epigenetics Lab, Department Of Biochemistry, University Of Oxford, Oxford, Uk. Neil.Brockdorff@Bioch.Ox.Ac.Uk.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Imri Lifshitz": {
+    "name": "Imri Lifshitz",
+    "h_index": 15,
+    "citations": 10790,
+    "works_count": 47,
+    "affiliation": "Edmond And Lily Safra Center For Brain Sciences, The Hebrew University Of Jerusalem, Jerusalem, Israel.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Chunling Hu": {
+    "name": "Chunling Hu",
+    "h_index": 41,
+    "citations": 7181,
+    "works_count": 401,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Sounak Sahu": {
+    "name": "Sounak Sahu",
+    "h_index": 12,
+    "citations": 410,
+    "works_count": 88,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Fergus J. Couch": {
+    "name": "Fergus J. Couch",
+    "h_index": 119,
+    "citations": 60975,
+    "works_count": 1326,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Vinay K. Pathak": {
+    "name": "Vinay K. Pathak",
+    "h_index": 59,
+    "citations": 9931,
+    "works_count": 188,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Jia Li": {
+    "name": "Jia Li",
+    "h_index": 48,
+    "citations": 84968,
+    "works_count": 125,
+    "affiliation": "Department Of Neurodegenerative Diseases, Beckman Research Institute Of City Of Hope, 1500 E. Duarte Rd., Duarte, Ca, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Shyambabu Chaurasiya": {
+    "name": "Shyambabu Chaurasiya",
+    "h_index": 19,
+    "citations": 903,
+    "works_count": 88,
+    "affiliation": "Department Of Surgery, City Of Hope, 1500 E. Duarte Rd., Duarte, Ca, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yanhong Shi": {
+    "name": "Yanhong Shi",
+    "h_index": 58,
+    "citations": 17160,
+    "works_count": 232,
+    "affiliation": "Department Of Neurodegenerative Diseases, Beckman Research Institute Of City Of Hope, 1500 E. Duarte Rd., Duarte, Ca, Usa. Yshi@Coh.Org.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Jia Guo": {
+    "name": "Jia Guo",
+    "h_index": 230,
+    "citations": 199055,
+    "works_count": 1083,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xiang Chen": {
+    "name": "Xiang Chen",
+    "h_index": 98,
+    "citations": 37177,
+    "works_count": 638,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Dong Joo Yang": {
+    "name": "Dong Joo Yang",
+    "h_index": 154,
+    "citations": 116826,
+    "works_count": 1307,
+    "affiliation": "Division Of Physiology, Department Of Oral Biology, Yonsei University College Of Dentistry, Seoul, 03722, Korea.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ki Woo Kim": {
+    "name": "Ki Woo Kim",
+    "h_index": 39,
+    "citations": 4727,
+    "works_count": 122,
+    "affiliation": "Division Of Physiology, Department Of Oral Biology, Yonsei University College Of Dentistry, Seoul, 03722, Korea. Kiwoo-Kim@Yuhs.Ac.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Hyunyoung Kim": {
+    "name": "Hyunyoung Kim",
+    "h_index": 31,
+    "citations": 3850,
+    "works_count": 304,
+    "affiliation": "Research Group For Neurovascular Unit, Korea Brain Research Institute (Kbri), Daegu, Republic Of Korea.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Hyungju Park": {
+    "name": "Hyungju Park",
+    "h_index": 27,
+    "citations": 5204,
+    "works_count": 96,
+    "affiliation": "Research Group For Neurovascular Unit, Korea Brain Research Institute (Kbri), Daegu, Republic Of Korea. Phj2@Kbri.Re.Kr.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Antonio Rivero-Juarez": {
+    "name": "Antonio Rivero-Juarez",
+    "h_index": 51,
+    "citations": 9704,
+    "works_count": 447,
+    "affiliation": "Clinical Virology And Zoonoses Research Group, Unit Of Infectious Diseases, Hospital Universitario Reina Sofía, Instituto Maimonides De Investigacion Biomedica De Cordoba (Imibic), Universidad De Cordoba (Uco), Cordoba, Spain. Arjvet@Gmail.Com.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Reimar Johne": {
+    "name": "Reimar Johne",
+    "h_index": 59,
+    "citations": 13279,
+    "works_count": 231,
+    "affiliation": "Department Of Biological Safety, German Federal Institute For Risk Assessment, Berlin, Germany.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Siddharth Sridhar": {
+    "name": "Siddharth Sridhar",
+    "h_index": 40,
+    "citations": 8241,
+    "works_count": 181,
+    "affiliation": "Department Of Microbiology, School Of Clinical Medicine, Lks Faculty Of Medicine, The University Of Hong Kong, Pokfulam, Hong Kong Special Administrative Region, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Tongchao Wang": {
+    "name": "Tongchao Wang",
+    "h_index": 180,
+    "citations": 109700,
+    "works_count": 1173,
+    "affiliation": "State Food And Drug Administration Center For Drug Evaluation, Beijing, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Yuxiang Wang": {
+    "name": "Yuxiang Wang",
+    "h_index": 126,
+    "citations": 78662,
+    "works_count": 1209,
+    "affiliation": "Department Of Pathology, School Of Basic Medical Sciences, Fudan University & Shanghai Pudong Hospital, Fudan University Pudong Medical Center, Shanghai, China. Yuxiang_Wang@Fudan.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Petra S. Hüppi": {
+    "name": "Petra S. Hüppi",
+    "h_index": 68,
+    "citations": 20580,
+    "works_count": 399,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Xingjie Wu": {
+    "name": "Xingjie Wu",
+    "h_index": 57,
+    "citations": 9750,
+    "works_count": 300,
+    "affiliation": "State Key Laboratory Of Discovery And Utilization Of Functional Components In Traditional Chinese Medicine, School Of Pharmaceutical Sciences, Guizhou Medical University, No.6 Ankang Avenue, Guiyang City And Guian New District, Guiyang, China. Wuxingjie@Gmc.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Shasha Xiong": {
+    "name": "Shasha Xiong",
+    "h_index": 17,
+    "citations": 1733,
+    "works_count": 96,
+    "affiliation": "State Key Laboratory Of Discovery And Utilization Of Functional Components In Traditional Chinese Medicine, School Of Pharmaceutical Sciences, Guizhou Medical University, No.6 Ankang Avenue, Guiyang City And Guian New District, Guiyang, China.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Haitao Zhao": {
+    "name": "Haitao Zhao",
+    "h_index": 58,
+    "citations": 14927,
+    "works_count": 542,
+    "affiliation": "Ministry Of Education Key Laboratory Of Micro And Nano Systems For Aerospace, School Of Mechanical Engineering, Northwestern Polytechnical University, Xi'An, China. Zhaoht@Nwpu.Edu.Cn.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Simiao Gao": {
+    "name": "Simiao Gao",
+    "h_index": 13,
+    "citations": 802,
+    "works_count": 103,
+    "affiliation": "Department Of Biostatistics, Yale University, New Haven, Ct, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Yize Zhao": {
+    "name": "Yize Zhao",
+    "h_index": 52,
+    "citations": 8488,
+    "works_count": 305,
+    "affiliation": "Department Of Biostatistics, Yale University, New Haven, Ct, Usa. Yize.Zhao@Yale.Edu.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Yifei Wang": {
+    "name": "Yifei Wang",
+    "h_index": 63,
+    "citations": 18602,
+    "works_count": 895,
+    "affiliation": "Center For Pharmacogenetics, Department Of Pharmaceutical Sciences, University Of Pittsburgh, Pittsburgh, Pa, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Yueshan Zhao": {
+    "name": "Yueshan Zhao",
+    "h_index": 15,
+    "citations": 1094,
+    "works_count": 60,
+    "affiliation": "Center For Pharmacogenetics, Department Of Pharmaceutical Sciences, University Of Pittsburgh, Pittsburgh, Pa, Usa.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Da Yang": {
+    "name": "Da Yang",
+    "h_index": 163,
+    "citations": 188939,
+    "works_count": 988,
+    "affiliation": "Center For Pharmacogenetics, Department Of Pharmaceutical Sciences, University Of Pittsburgh, Pittsburgh, Pa, Usa. Dyang@Pitt.Edu.",
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Caleigh M. Azumaya": {
+    "name": "Caleigh M. Azumaya",
+    "h_index": 21,
+    "citations": 3915,
+    "works_count": 43,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Robert A. Lazarus": {
+    "name": "Robert A. Lazarus",
+    "h_index": 47,
+    "citations": 6495,
+    "works_count": 132,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Ralf J. Sommer": {
+    "name": "Ralf J. Sommer",
+    "h_index": 64,
+    "citations": 12719,
+    "works_count": 346,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 2,
+    "last_seen": "2026-04-09"
+  },
+  "Luiza Handschuh": {
+    "name": "Luiza Handschuh",
+    "h_index": 21,
+    "citations": 1173,
+    "works_count": 111,
+    "affiliation": "Institute Of Bioorganic Chemistry Polish Academy Of Sciences, Poznan, Poland.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Marek Figlerowicz": {
+    "name": "Marek Figlerowicz",
+    "h_index": 36,
+    "citations": 4459,
+    "works_count": 244,
+    "affiliation": "Institute Of Bioorganic Chemistry Polish Academy Of Sciences, Poznan, Poland. Marekf@Ibch.Poznan.Pl.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Marcus Renner": {
+    "name": "Marcus Renner",
+    "h_index": 30,
+    "citations": 3257,
+    "works_count": 140,
+    "affiliation": "Division Of Translational Medical Oncology, German Cancer Research Center (Dkfz), Heidelberg, Germany.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Mao Kinoshita": {
+    "name": "Mao Kinoshita",
+    "h_index": 15,
+    "citations": 661,
+    "works_count": 68,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Satoshi Uchida": {
+    "name": "Satoshi Uchida",
+    "h_index": 62,
+    "citations": 18010,
+    "works_count": 443,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Lyduine E. Collij": {
+    "name": "Lyduine E. Collij",
+    "h_index": 27,
+    "citations": 2564,
+    "works_count": 167,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Gemma Salvadó": {
+    "name": "Gemma Salvadó",
+    "h_index": 37,
+    "citations": 6015,
+    "works_count": 186,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Oskar Hansson": {
+    "name": "Oskar Hansson",
+    "h_index": 144,
+    "citations": 84334,
+    "works_count": 1626,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Kern S": {
+    "name": "Kern S",
+    "h_index": 49,
+    "citations": 15622,
+    "works_count": 170,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Nagel J": {
+    "name": "Nagel J",
+    "h_index": 146,
+    "citations": 109792,
+    "works_count": 1656,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Gais S": {
+    "name": "Gais S",
+    "h_index": 45,
+    "citations": 12768,
+    "works_count": 150,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Dolan RJ": {
+    "name": "Dolan RJ",
+    "h_index": 214,
+    "citations": 162329,
+    "works_count": 1272,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Feld GB": {
+    "name": "Feld GB",
+    "h_index": 138,
+    "citations": 96985,
+    "works_count": 1740,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Alexander DM": {
+    "name": "Alexander DM",
+    "h_index": 117,
+    "citations": 53791,
+    "works_count": 1039,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Dugué L": {
+    "name": "Dugué L",
+    "h_index": 19,
+    "citations": 1779,
+    "works_count": 103,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Ghosh T": {
+    "name": "Ghosh T",
+    "h_index": 58,
+    "citations": 54551,
+    "works_count": 74,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Spanos C": {
+    "name": "Spanos C",
+    "h_index": 55,
+    "citations": 10476,
+    "works_count": 409,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Danyal Akarca": {
+    "name": "Danyal Akarca",
+    "h_index": 14,
+    "citations": 523,
+    "works_count": 76,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jascha Achterberg": {
+    "name": "Jascha Achterberg",
+    "h_index": 9,
+    "citations": 416,
+    "works_count": 40,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Akihiro Miki": {
+    "name": "Akihiro Miki",
+    "h_index": 31,
+    "citations": 2454,
+    "works_count": 159,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Shun Hasegawa": {
+    "name": "Shun Hasegawa",
+    "h_index": 58,
+    "citations": 12847,
+    "works_count": 491,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Kento Kawaharazuka": {
+    "name": "Kento Kawaharazuka",
+    "h_index": 17,
+    "citations": 1208,
+    "works_count": 249,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Kei Okada": {
+    "name": "Kei Okada",
+    "h_index": 38,
+    "citations": 6623,
+    "works_count": 822,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Alan Veliz-Cuba": {
+    "name": "Alan Veliz-Cuba",
+    "h_index": 18,
+    "citations": 1328,
+    "works_count": 69,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zeyu Wang": {
+    "name": "Zeyu Wang",
+    "h_index": 41,
+    "citations": 5888,
+    "works_count": 186,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "David Nordsletten": {
+    "name": "David Nordsletten",
+    "h_index": 38,
+    "citations": 4313,
+    "works_count": 183,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Brendon M. Baker": {
+    "name": "Brendon M. Baker",
+    "h_index": 42,
+    "citations": 10929,
+    "works_count": 158,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Emma Lejeune": {
+    "name": "Emma Lejeune",
+    "h_index": 21,
+    "citations": 7168,
+    "works_count": 95,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Jeffrey D. Varner": {
+    "name": "Jeffrey D. Varner",
+    "h_index": 26,
+    "citations": 2935,
+    "works_count": 112,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Maria Cristina Bravo": {
+    "name": "Maria Cristina Bravo",
+    "h_index": 8,
+    "citations": 197,
+    "works_count": 41,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Carole McBride": {
+    "name": "Carole McBride",
+    "h_index": 13,
+    "citations": 1007,
+    "works_count": 62,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Thomas Orfeo": {
+    "name": "Thomas Orfeo",
+    "h_index": 33,
+    "citations": 4217,
+    "works_count": 112,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ira Bernstein": {
+    "name": "Ira Bernstein",
+    "h_index": 43,
+    "citations": 7320,
+    "works_count": 224,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Jordi Ripoll": {
+    "name": "Jordi Ripoll",
+    "h_index": 12,
+    "citations": 407,
+    "works_count": 62,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Mattia Dalla Brida": {
+    "name": "Mattia Dalla Brida",
+    "h_index": 15,
+    "citations": 809,
+    "works_count": 139,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Xiaoying Li": {
+    "name": "Xiaoying Li",
+    "h_index": 43,
+    "citations": 6788,
+    "works_count": 344,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jiamin Li": {
+    "name": "Jiamin Li",
+    "h_index": 63,
+    "citations": 22340,
+    "works_count": 1400,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Xinyang Hu": {
+    "name": "Xinyang Hu",
+    "h_index": 42,
+    "citations": 6446,
+    "works_count": 169,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Nina Farwig": {
+    "name": "Nina Farwig",
+    "h_index": 42,
+    "citations": 8098,
+    "works_count": 225,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 2,
+    "last_seen": "2026-04-08"
+  },
+  "Nico Blüthgen": {
+    "name": "Nico Blüthgen",
+    "h_index": 73,
+    "citations": 25571,
+    "works_count": 312,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yann Kiefer": {
+    "name": "Yann Kiefer",
+    "h_index": 14,
+    "citations": 705,
+    "works_count": 97,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zijie Zhu": {
+    "name": "Zijie Zhu",
+    "h_index": 95,
+    "citations": 35592,
+    "works_count": 586,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tilman Esslinger": {
+    "name": "Tilman Esslinger",
+    "h_index": 70,
+    "citations": 29150,
+    "works_count": 292,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Hyung Chul Kim": {
+    "name": "Hyung Chul Kim",
+    "h_index": 45,
+    "citations": 7253,
+    "works_count": 144,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Gregory M. Findlay": {
+    "name": "Gregory M. Findlay",
+    "h_index": 14,
+    "citations": 3476,
+    "works_count": 37,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Han Xu": {
+    "name": "Han Xu",
+    "h_index": 75,
+    "citations": 18814,
+    "works_count": 845,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Matteo Detto": {
+    "name": "Matteo Detto",
+    "h_index": 54,
+    "citations": 8792,
+    "works_count": 268,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Fangliang He": {
+    "name": "Fangliang He",
+    "h_index": 65,
+    "citations": 16154,
+    "works_count": 254,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jaclyn E. Smith": {
+    "name": "Jaclyn E. Smith",
+    "h_index": 13,
+    "citations": 1228,
+    "works_count": 52,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kevin J. Wang": {
+    "name": "Kevin J. Wang",
+    "h_index": 186,
+    "citations": 142794,
+    "works_count": 912,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Monica R. Mugnier": {
+    "name": "Monica R. Mugnier",
+    "h_index": 15,
+    "citations": 1426,
+    "works_count": 48,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Cheng Wang": {
+    "name": "Cheng Wang",
+    "h_index": 320,
+    "citations": 469343,
+    "works_count": 3917,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yan Zhou": {
+    "name": "Yan Zhou",
+    "h_index": 77,
+    "citations": 26250,
+    "works_count": 828,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jingjing Li": {
+    "name": "Jingjing Li",
+    "h_index": 55,
+    "citations": 11672,
+    "works_count": 598,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "V. Chekhovsky": {
+    "name": "V. Chekhovsky",
+    "h_index": 145,
+    "citations": 104085,
+    "works_count": 1693,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "A. Hayrapetyan": {
+    "name": "A. Hayrapetyan",
+    "h_index": 38,
+    "citations": 9318,
+    "works_count": 69,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "D. Druzhkin": {
+    "name": "D. Druzhkin",
+    "h_index": 146,
+    "citations": 124921,
+    "works_count": 2248,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Adam Auton": {
+    "name": "Adam Auton",
+    "h_index": 81,
+    "citations": 100977,
+    "works_count": 179,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Robert R. Reisz": {
+    "name": "Robert R. Reisz",
+    "h_index": 55,
+    "citations": 10493,
+    "works_count": 312,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jun Chen": {
+    "name": "Jun Chen",
+    "h_index": 177,
+    "citations": 115372,
+    "works_count": 1179,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yongrong Lai": {
+    "name": "Yongrong Lai",
+    "h_index": 24,
+    "citations": 2432,
+    "works_count": 124,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Rongrong Liu": {
+    "name": "Rongrong Liu",
+    "h_index": 32,
+    "citations": 4013,
+    "works_count": 136,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jia Chen": {
+    "name": "Jia Chen",
+    "h_index": 162,
+    "citations": 134771,
+    "works_count": 2184,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Hui Lin": {
+    "name": "Hui Lin",
+    "h_index": 75,
+    "citations": 17860,
+    "works_count": 429,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zuhua He": {
+    "name": "Zuhua He",
+    "h_index": 61,
+    "citations": 15189,
+    "works_count": 154,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Betty B. Liu": {
+    "name": "Betty B. Liu",
+    "h_index": 142,
+    "citations": 115589,
+    "works_count": 2002,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Selin Jessa": {
+    "name": "Selin Jessa",
+    "h_index": 10,
+    "citations": 1061,
+    "works_count": 90,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "William J. Greenleaf": {
+    "name": "William J. Greenleaf",
+    "h_index": 88,
+    "citations": 48445,
+    "works_count": 505,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jae Hoon Sul": {
+    "name": "Jae Hoon Sul",
+    "h_index": 34,
+    "citations": 13584,
+    "works_count": 91,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Sahar Gelfman": {
+    "name": "Sahar Gelfman",
+    "h_index": 20,
+    "citations": 2116,
+    "works_count": 49,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tian Li": {
+    "name": "Tian Li",
+    "h_index": 76,
+    "citations": 27765,
+    "works_count": 640,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zhuosen Wang": {
+    "name": "Zhuosen Wang",
+    "h_index": 44,
+    "citations": 6867,
+    "works_count": 126,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zhe Zhu": {
+    "name": "Zhe Zhu",
+    "h_index": 51,
+    "citations": 21098,
+    "works_count": 175,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yueying Li": {
+    "name": "Yueying Li",
+    "h_index": 25,
+    "citations": 2025,
+    "works_count": 180,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zhuoyu Chen": {
+    "name": "Zhuoyu Chen",
+    "h_index": 19,
+    "citations": 1788,
+    "works_count": 53,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Steven M. Pollard": {
+    "name": "Steven M. Pollard",
+    "h_index": 48,
+    "citations": 10166,
+    "works_count": 212,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zhao J": {
+    "name": "Zhao J",
+    "h_index": 59,
+    "citations": 84028,
+    "works_count": 472,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Sun SH": {
+    "name": "Sun SH",
+    "h_index": 92,
+    "citations": 78022,
+    "works_count": 831,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ibbotson MR": {
+    "name": "Ibbotson MR",
+    "h_index": 36,
+    "citations": 4198,
+    "works_count": 190,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kim JH": {
+    "name": "Kim JH",
+    "h_index": 113,
+    "citations": 52345,
+    "works_count": 1545,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Vezina G": {
+    "name": "Vezina G",
+    "h_index": 58,
+    "citations": 11903,
+    "works_count": 262,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "du Plessis A": {
+    "name": "du Plessis A",
+    "h_index": 51,
+    "citations": 13548,
+    "works_count": 341,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Limperopoulos C": {
+    "name": "Limperopoulos C",
+    "h_index": 62,
+    "citations": 13337,
+    "works_count": 304,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Peters A": {
+    "name": "Peters A",
+    "h_index": 176,
+    "citations": 175156,
+    "works_count": 2369,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Weiss K": {
+    "name": "Weiss K",
+    "h_index": 116,
+    "citations": 96797,
+    "works_count": 436,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Straube T": {
+    "name": "Straube T",
+    "h_index": 49,
+    "citations": 7642,
+    "works_count": 228,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Schindler S": {
+    "name": "Schindler S",
+    "h_index": 43,
+    "citations": 6248,
+    "works_count": 317,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Sunahara M": {
+    "name": "Sunahara M",
+    "h_index": 38,
+    "citations": 5499,
+    "works_count": 458,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Rios A": {
+    "name": "Rios A",
+    "h_index": 89,
+    "citations": 36195,
+    "works_count": 316,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kawabata M": {
+    "name": "Kawabata M",
+    "h_index": 46,
+    "citations": 35890,
+    "works_count": 205,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kobayashi K": {
+    "name": "Kobayashi K",
+    "h_index": 93,
+    "citations": 31745,
+    "works_count": 717,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Takahashi H": {
+    "name": "Takahashi H",
+    "h_index": 121,
+    "citations": 56842,
+    "works_count": 869,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Isomura Y": {
+    "name": "Isomura Y",
+    "h_index": 35,
+    "citations": 5312,
+    "works_count": 160,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "McKenzie C": {
+    "name": "McKenzie C",
+    "h_index": 70,
+    "citations": 19021,
+    "works_count": 537,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Amorim FE": {
+    "name": "Amorim FE",
+    "h_index": 0,
+    "citations": 0,
+    "works_count": 118,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yano K": {
+    "name": "Yano K",
+    "h_index": 47,
+    "citations": 12199,
+    "works_count": 381,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Robbins TW": {
+    "name": "Robbins TW",
+    "h_index": 242,
+    "citations": 194866,
+    "works_count": 4125,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Siddiqui Y": {
+    "name": "Siddiqui Y",
+    "h_index": 34,
+    "citations": 3941,
+    "works_count": 170,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Alam T": {
+    "name": "Alam T",
+    "h_index": 41,
+    "citations": 139367,
+    "works_count": 109,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Evans K": {
+    "name": "Evans K",
+    "h_index": 66,
+    "citations": 18428,
+    "works_count": 301,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kim T": {
+    "name": "Kim T",
+    "h_index": 149,
+    "citations": 132976,
+    "works_count": 2474,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kamath R": {
+    "name": "Kamath R",
+    "h_index": 25,
+    "citations": 18350,
+    "works_count": 40,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Dylla C": {
+    "name": "Dylla C",
+    "h_index": 15,
+    "citations": 1191,
+    "works_count": 102,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Bair W": {
+    "name": "Bair W",
+    "h_index": 31,
+    "citations": 3679,
+    "works_count": 80,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Pasupathy A": {
+    "name": "Pasupathy A",
+    "h_index": 55,
+    "citations": 15784,
+    "works_count": 350,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Rauniyar S": {
+    "name": "Rauniyar S",
+    "h_index": 14,
+    "citations": 1099,
+    "works_count": 45,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Dhaka A": {
+    "name": "Dhaka A",
+    "h_index": 22,
+    "citations": 4072,
+    "works_count": 49,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tang T": {
+    "name": "Tang T",
+    "h_index": 80,
+    "citations": 24723,
+    "works_count": 643,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Martin LJ": {
+    "name": "Martin LJ",
+    "h_index": 76,
+    "citations": 24168,
+    "works_count": 550,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Adachi T": {
+    "name": "Adachi T",
+    "h_index": 149,
+    "citations": 125017,
+    "works_count": 1777,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Hoshino M": {
+    "name": "Hoshino M",
+    "h_index": 54,
+    "citations": 9385,
+    "works_count": 410,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Suzuki A": {
+    "name": "Suzuki A",
+    "h_index": 162,
+    "citations": 112117,
+    "works_count": 907,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Nielsen KJ": {
+    "name": "Nielsen KJ",
+    "h_index": 21,
+    "citations": 2675,
+    "works_count": 58,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ye F": {
+    "name": "Ye F",
+    "h_index": 70,
+    "citations": 17423,
+    "works_count": 310,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Han X": {
+    "name": "Han X",
+    "h_index": 104,
+    "citations": 41918,
+    "works_count": 589,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Li W": {
+    "name": "Li W",
+    "h_index": 115,
+    "citations": 98463,
+    "works_count": 949,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jiang H": {
+    "name": "Jiang H",
+    "h_index": 162,
+    "citations": 134771,
+    "works_count": 2184,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zheng L": {
+    "name": "Zheng L",
+    "h_index": 135,
+    "citations": 81045,
+    "works_count": 1083,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Oyabu M": {
+    "name": "Oyabu M",
+    "h_index": 29,
+    "citations": 4906,
+    "works_count": 321,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Sakaue M": {
+    "name": "Sakaue M",
+    "h_index": 19,
+    "citations": 2280,
+    "works_count": 41,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kubo A": {
+    "name": "Kubo A",
+    "h_index": 104,
+    "citations": 44580,
+    "works_count": 1004,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Takahashi SI": {
+    "name": "Takahashi SI",
+    "h_index": 37,
+    "citations": 5393,
+    "works_count": 278,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Goto T": {
+    "name": "Goto T",
+    "h_index": 56,
+    "citations": 16938,
+    "works_count": 563,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kamei Y": {
+    "name": "Kamei Y",
+    "h_index": 49,
+    "citations": 12917,
+    "works_count": 154,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Cantaş Alev": {
+    "name": "Cantaş Alev",
+    "h_index": 27,
+    "citations": 2477,
+    "works_count": 89,
+    "affiliation": "Institute For The Advanced Study Of Human Biology (Ashbi), Kyoto University, Kyoto, Japan.",
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Christian von Mering": {
+    "name": "Christian von Mering",
+    "h_index": 100,
+    "citations": 126882,
+    "works_count": 272,
+    "affiliation": null,
+    "first_seen": "2026-04-11",
+    "paper_count": 1,
+    "last_seen": "2026-04-11"
+  },
+  "Patrícia Coelho": {
+    "name": "Patrícia Coelho",
+    "h_index": 22,
+    "citations": 1597,
+    "works_count": 63,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Linus Sandegren": {
+    "name": "Linus Sandegren",
+    "h_index": 31,
+    "citations": 5264,
+    "works_count": 80,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Elvira D’Ippolito": {
+    "name": "Elvira D’Ippolito",
+    "h_index": 18,
+    "citations": 1174,
+    "works_count": 61,
+    "affiliation": null,
+    "first_seen": "2026-04-10",
+    "paper_count": 1,
+    "last_seen": "2026-04-10"
+  },
+  "Meredith L. Gore": {
+    "name": "Meredith L. Gore",
+    "h_index": 29,
+    "citations": 3184,
+    "works_count": 159,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Sara A. Wickström": {
+    "name": "Sara A. Wickström",
+    "h_index": 43,
+    "citations": 7663,
+    "works_count": 153,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Fides Zenk": {
+    "name": "Fides Zenk",
+    "h_index": 15,
+    "citations": 1233,
+    "works_count": 54,
+    "affiliation": "School Of Life Sciences, Epfl, Lausanne, Switzerland.",
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "L. M. K. Vandersypen": {
+    "name": "L. M. K. Vandersypen",
+    "h_index": 67,
+    "citations": 31491,
+    "works_count": 352,
+    "affiliation": null,
+    "first_seen": "2026-04-09",
+    "paper_count": 1,
+    "last_seen": "2026-04-09"
+  },
+  "Joan Saldaña": {
+    "name": "Joan Saldaña",
+    "h_index": 20,
+    "citations": 1652,
+    "works_count": 54,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Roman Höllwieser": {
+    "name": "Roman Höllwieser",
+    "h_index": 16,
+    "citations": 1342,
+    "works_count": 143,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Rainer Sommer": {
+    "name": "Rainer Sommer",
+    "h_index": 34,
+    "citations": 6543,
+    "works_count": 193,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Nicholas O’Toole": {
+    "name": "Nicholas O’Toole",
+    "h_index": 19,
+    "citations": 2687,
+    "works_count": 52,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Michael J. Meaney": {
+    "name": "Michael J. Meaney",
+    "h_index": 139,
+    "citations": 90108,
+    "works_count": 815,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Frank A. Giordano": {
+    "name": "Frank A. Giordano",
+    "h_index": 34,
+    "citations": 4029,
+    "works_count": 345,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Michael Hölzel": {
+    "name": "Michael Hölzel",
+    "h_index": 47,
+    "citations": 10405,
+    "works_count": 344,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yuefeng Tang": {
+    "name": "Yuefeng Tang",
+    "h_index": 32,
+    "citations": 2772,
+    "works_count": 86,
+    "affiliation": "Northwell, 2000 Marcus Ave, Suite 300, New Hyde Park, Ny, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Te Ling": {
+    "name": "Te Ling",
+    "h_index": 9,
+    "citations": 510,
+    "works_count": 55,
+    "affiliation": "St. Jude Children'S Research Hospital, Memphis, Tn, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Lionel Blanc": {
+    "name": "Lionel Blanc",
+    "h_index": 34,
+    "citations": 9572,
+    "works_count": 169,
+    "affiliation": "Northwell, 2000 Marcus Ave, Suite 300, New Hyde Park, Ny, Usa. Lblanc@Northwell.Edu.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jing Zhang": {
+    "name": "Jing Zhang",
+    "h_index": 28,
+    "citations": 47392,
+    "works_count": 127,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Wenhua Zhu": {
+    "name": "Wenhua Zhu",
+    "h_index": 22,
+    "citations": 7588,
+    "works_count": 151,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Benjamin P. Lee": {
+    "name": "Benjamin P. Lee",
+    "h_index": 22,
+    "citations": 1496,
+    "works_count": 46,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Andrew L. Hong": {
+    "name": "Andrew L. Hong",
+    "h_index": 24,
+    "citations": 3507,
+    "works_count": 148,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Chi Zhang": {
+    "name": "Chi Zhang",
+    "h_index": 79,
+    "citations": 26715,
+    "works_count": 1204,
+    "affiliation": "Department Of Ophthalmology, Vagelos College Of Physicians And Surgeons, Columbia University Irving Medical Center, New York, Ny, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Simon W. M. John": {
+    "name": "Simon W. M. John",
+    "h_index": 75,
+    "citations": 21228,
+    "works_count": 285,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Omar Nadeem": {
+    "name": "Omar Nadeem",
+    "h_index": 23,
+    "citations": 2161,
+    "works_count": 264,
+    "affiliation": "Center For Early Detection And Interception Of Blood Cancers, Dana-Farber Cancer Institute, Boston, Ma, Usa. Omar_Nadeem@Dfci.Harvard.Edu.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Irene M. Ghobrial": {
+    "name": "Irene M. Ghobrial",
+    "h_index": 99,
+    "citations": 45591,
+    "works_count": 1111,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Alexios Matikas": {
+    "name": "Alexios Matikas",
+    "h_index": 24,
+    "citations": 2251,
+    "works_count": 208,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Theodoros Foukakis": {
+    "name": "Theodoros Foukakis",
+    "h_index": 42,
+    "citations": 10201,
+    "works_count": 298,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Daewook Kim": {
+    "name": "Daewook Kim",
+    "h_index": 16,
+    "citations": 1167,
+    "works_count": 286,
+    "affiliation": "Museum Of Yeungnam University, Yeungnam University, Gyeongsan 38541, Republic Of Korea.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Johannes Krause": {
+    "name": "Johannes Krause",
+    "h_index": 115,
+    "citations": 52185,
+    "works_count": 449,
+    "affiliation": "Department Of Archaeogenetics, Max Planck Institute For Evolutionary Anthropology, 04103 Leipzig, Germany.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Eun Jin Woo": {
+    "name": "Eun Jin Woo",
+    "h_index": 54,
+    "citations": 10100,
+    "works_count": 288,
+    "affiliation": "Department Of History, Sejong University, Seoul 05006, Republic Of Korea.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Choongwon Jeong": {
+    "name": "Choongwon Jeong",
+    "h_index": 37,
+    "citations": 7371,
+    "works_count": 122,
+    "affiliation": "School Of Biological Sciences, Seoul National University, Seoul 08826, Republic Of Korea.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Hanafy M. Ismail": {
+    "name": "Hanafy M. Ismail",
+    "h_index": 23,
+    "citations": 2646,
+    "works_count": 88,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jeff Jones": {
+    "name": "Jeff Jones",
+    "h_index": 19,
+    "citations": 2142,
+    "works_count": 205,
+    "affiliation": "Liverpool School Of Tropical Medicine, Pembroke Place, Liverpool L35Qa, Uk.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Stephan Karl": {
+    "name": "Stephan Karl",
+    "h_index": 33,
+    "citations": 3179,
+    "works_count": 200,
+    "affiliation": "Png Institute Of Medical Research, Madang, Madang Province, Papua New Guinea, Australian Institute Of Tropical Health And Medicine, James Cook University, Smithfield, Queensland, Australia.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Rasmita Raval": {
+    "name": "Rasmita Raval",
+    "h_index": 50,
+    "citations": 8810,
+    "works_count": 200,
+    "affiliation": "Open Innovation Hub For Antimicrobial Surfaces And Surface Science Research Centre, Department Of Chemistry, University Of Liverpool, Liverpool L69 7Zd, Uk.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Abhimanyu Thakur": {
+    "name": "Abhimanyu Thakur",
+    "h_index": 30,
+    "citations": 3662,
+    "works_count": 127,
+    "affiliation": "Pritzker School Of Molecular Engineering, The University Of Chicago, Chicago, Il, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kui Zhang": {
+    "name": "Kui Zhang",
+    "h_index": 61,
+    "citations": 13590,
+    "works_count": 512,
+    "affiliation": "Pritzker School Of Molecular Engineering, The University Of Chicago, Chicago, Il, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jonathan Chen": {
+    "name": "Jonathan Chen",
+    "h_index": 26,
+    "citations": 7906,
+    "works_count": 74,
+    "affiliation": "Pritzker School Of Molecular Engineering, The University Of Chicago, Chicago, Il, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Julian Solway": {
+    "name": "Julian Solway",
+    "h_index": 65,
+    "citations": 13145,
+    "works_count": 306,
+    "affiliation": "Department Of Medicine, Section Of Pulmonary And Critical Care Medicine, The University Of Chicago, Chicago, Il, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Shunpeng Xing": {
+    "name": "Shunpeng Xing",
+    "h_index": 16,
+    "citations": 1204,
+    "works_count": 59,
+    "affiliation": "Department Of Critical Care Medicine, Ren Ji Hospital, Shanghai Jiao Tong University School Of Medicine, Shanghai, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Huanhuan Joyce Chen": {
+    "name": "Huanhuan Joyce Chen",
+    "h_index": 23,
+    "citations": 3570,
+    "works_count": 57,
+    "affiliation": "Pritzker School Of Molecular Engineering, The University Of Chicago, Chicago, Il, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Noa Lipstein": {
+    "name": "Noa Lipstein",
+    "h_index": 18,
+    "citations": 4856,
+    "works_count": 49,
+    "affiliation": "Leibniz-Forschungsinstitut Für Molekulare Pharmakologie (Fmp), 13125 Berlin, Germany.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Nils Brose": {
+    "name": "Nils Brose",
+    "h_index": 103,
+    "citations": 36978,
+    "works_count": 405,
+    "affiliation": "Department Of Molecular Neurobiology, Max Planck Institute For Multidisciplinary Sciences, Göttingen 37075, Germany.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kohei Matsuda": {
+    "name": "Kohei Matsuda",
+    "h_index": 21,
+    "citations": 1954,
+    "works_count": 106,
+    "affiliation": "Geodynamics Research Center, Ehime University, 2-5 Bunkyo-Cho, Matsuyama, Ehime 790-8577, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tomohiro Ohuchi": {
+    "name": "Tomohiro Ohuchi",
+    "h_index": 17,
+    "citations": 932,
+    "works_count": 99,
+    "affiliation": "Geodynamics Research Center, Ehime University, 2-5 Bunkyo-Cho, Matsuyama, Ehime 790-8577, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Noriyoshi Tsujino": {
+    "name": "Noriyoshi Tsujino",
+    "h_index": 16,
+    "citations": 946,
+    "works_count": 111,
+    "affiliation": "Japan Synchrotron Radiation Research Institute, 1-1-1 Koto, Sayo-Cho, Sayo-Gun, Hyogo, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Sho Kakizawa": {
+    "name": "Sho Kakizawa",
+    "h_index": 28,
+    "citations": 2464,
+    "works_count": 88,
+    "affiliation": "Japan Synchrotron Radiation Research Institute, 1-1-1 Koto, Sayo-Cho, Sayo-Gun, Hyogo, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Takeshi Sakai": {
+    "name": "Takeshi Sakai",
+    "h_index": 55,
+    "citations": 10856,
+    "works_count": 826,
+    "affiliation": "Geodynamics Research Center, Ehime University, 2-5 Bunkyo-Cho, Matsuyama, Ehime 790-8577, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ru Chen": {
+    "name": "Ru Chen",
+    "h_index": 47,
+    "citations": 15298,
+    "works_count": 152,
+    "affiliation": "Tianjin Key Laboratory For Marine Environmental Research And Service, School Of Marine Science And Technology, Tianjin University, Tianjin 300072, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Qianqian Geng": {
+    "name": "Qianqian Geng",
+    "h_index": 22,
+    "citations": 1368,
+    "works_count": 65,
+    "affiliation": "Tianjin Key Laboratory For Marine Environmental Research And Service, School Of Marine Science And Technology, Tianjin University, Tianjin 300072, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Zhengguang Zhang": {
+    "name": "Zhengguang Zhang",
+    "h_index": 51,
+    "citations": 10982,
+    "works_count": 202,
+    "affiliation": "Frontiers Science Center For Deep Ocean Multispheres And Earth System (Fdomes) And Key Laboratory Of Physical Oceanography, Academy Of The Future Ocean, Ocean University Of China, Qingdao, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Andrew Stewart": {
+    "name": "Andrew Stewart",
+    "h_index": 68,
+    "citations": 19943,
+    "works_count": 236,
+    "affiliation": "The University Of California, Los Angeles, Los Angeles, Ca 90025, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Guihua Wang": {
+    "name": "Guihua Wang",
+    "h_index": 34,
+    "citations": 4422,
+    "works_count": 196,
+    "affiliation": "Department Of Atmospheric And Oceanic Science And Cma-Fdu Joint Laboratory Of Marine Meteorology, Fudan University, Shanghai, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Shane Elipot": {
+    "name": "Shane Elipot",
+    "h_index": 23,
+    "citations": 2146,
+    "works_count": 82,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "William E. Johns": {
+    "name": "William E. Johns",
+    "h_index": 63,
+    "citations": 14423,
+    "works_count": 329,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "David A. Smeed": {
+    "name": "David A. Smeed",
+    "h_index": 41,
+    "citations": 7730,
+    "works_count": 215,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "John W. Loder": {
+    "name": "John W. Loder",
+    "h_index": 39,
+    "citations": 4517,
+    "works_count": 91,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Carl Spandler": {
+    "name": "Carl Spandler",
+    "h_index": 45,
+    "citations": 8156,
+    "works_count": 189,
+    "affiliation": "Department Of Earth Science, Adelaide University, Adelaide, South Australia.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Manoochehr Shirzaei": {
+    "name": "Manoochehr Shirzaei",
+    "h_index": 38,
+    "citations": 4345,
+    "works_count": 245,
+    "affiliation": "Department Of Geosciences, Virginia Tech, Blacksburg, Va, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Praveen Kumar": {
+    "name": "Praveen Kumar",
+    "h_index": 58,
+    "citations": 12336,
+    "works_count": 296,
+    "affiliation": "Department Of Earth And Planetary Sciences, Rutgers University, Piscataway, Nj, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Robert J. Nicholls": {
+    "name": "Robert J. Nicholls",
+    "h_index": 103,
+    "citations": 50158,
+    "works_count": 880,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Philip S.J. Minderhoud": {
+    "name": "Philip S.J. Minderhoud",
+    "h_index": 22,
+    "citations": 2457,
+    "works_count": 120,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yihao Liu": {
+    "name": "Yihao Liu",
+    "h_index": 24,
+    "citations": 7414,
+    "works_count": 173,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Philippe Ciais": {
+    "name": "Philippe Ciais",
+    "h_index": 221,
+    "citations": 224386,
+    "works_count": 2708,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Bo Zheng": {
+    "name": "Bo Zheng",
+    "h_index": 81,
+    "citations": 40305,
+    "works_count": 485,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Haikun Wang": {
+    "name": "Haikun Wang",
+    "h_index": 51,
+    "citations": 8027,
+    "works_count": 164,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Huilin Chen": {
+    "name": "Huilin Chen",
+    "h_index": 50,
+    "citations": 9839,
+    "works_count": 431,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tolga Görüm": {
+    "name": "Tolga Görüm",
+    "h_index": 30,
+    "citations": 3736,
+    "works_count": 164,
+    "affiliation": "Eurasia Institute Of Earth Sciences, Istanbul Technical University, Istanbul 34469, Türkiye.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Abdullah Akbaş": {
+    "name": "Abdullah Akbaş",
+    "h_index": 10,
+    "citations": 314,
+    "works_count": 60,
+    "affiliation": "Department Of Geography, Faculty Of Arts And Science, Bursa Uludag University, Bursa 16059, Türkiye.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jialong Hao": {
+    "name": "Jialong Hao",
+    "h_index": 28,
+    "citations": 2333,
+    "works_count": 119,
+    "affiliation": "Key Laboratory Of Earth And Planetary Physics, Institute Of Geology And Geophysics, Chinese Academy Of Sciences, Beijing 100029, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "H. G. Changela": {
+    "name": "H. G. Changela",
+    "h_index": 13,
+    "citations": 669,
+    "works_count": 46,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Yangting Lin": {
+    "name": "Yangting Lin",
+    "h_index": 44,
+    "citations": 6643,
+    "works_count": 311,
+    "affiliation": "Key Laboratory Of Earth And Planetary Physics, Institute Of Geology And Geophysics, Chinese Academy Of Sciences, Beijing 100029, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Bart de Nijs": {
+    "name": "Bart de Nijs",
+    "h_index": 37,
+    "citations": 7223,
+    "works_count": 116,
+    "affiliation": "Physics For Sustainable Chemistry Group, Department Of Physics, Jj Thompson Avenue, University Of Cambridge, Cambridge Cb3 0Us, Uk.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jeremy J. Baumberg": {
+    "name": "Jeremy J. Baumberg",
+    "h_index": 106,
+    "citations": 44896,
+    "works_count": 858,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Haoyu Wang": {
+    "name": "Haoyu Wang",
+    "h_index": 43,
+    "citations": 8253,
+    "works_count": 544,
+    "affiliation": "Department Of Mechanical And Automation Engineering, The Chinese University Of Hong Kong, Shatin, N.T., Hong Kong, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Martijn Schouten": {
+    "name": "Martijn Schouten",
+    "h_index": 17,
+    "citations": 1174,
+    "works_count": 42,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Herbert Shea": {
+    "name": "Herbert Shea",
+    "h_index": 63,
+    "citations": 17436,
+    "works_count": 363,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Esther J. Ocola": {
+    "name": "Esther J. Ocola",
+    "h_index": 9,
+    "citations": 279,
+    "works_count": 54,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Benjamin W. Neuman": {
+    "name": "Benjamin W. Neuman",
+    "h_index": 34,
+    "citations": 15058,
+    "works_count": 109,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Alexei V. Sokolov": {
+    "name": "Alexei V. Sokolov",
+    "h_index": 33,
+    "citations": 4633,
+    "works_count": 324,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Marlan O. Scully": {
+    "name": "Marlan O. Scully",
+    "h_index": 102,
+    "citations": 55574,
+    "works_count": 1328,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Xinkang Wang": {
+    "name": "Xinkang Wang",
+    "h_index": 47,
+    "citations": 7529,
+    "works_count": 455,
+    "affiliation": "Institute Of Polymer Optoelectronic Materials And Devices, State Key Laboratory Of Luminescent Materials And Devices, South China University Of Technology, Guangzhou 510640, P. R. China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Tao Jia": {
+    "name": "Tao Jia",
+    "h_index": 39,
+    "citations": 6567,
+    "works_count": 176,
+    "affiliation": "School Of Optoelectronic Engineering, Guangdong Polytechnic Normal University, Guangzhou 510665, P. R. China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Fei Huang": {
+    "name": "Fei Huang",
+    "h_index": 121,
+    "citations": 57350,
+    "works_count": 1356,
+    "affiliation": "Institute Of Polymer Optoelectronic Materials And Devices, State Key Laboratory Of Luminescent Materials And Devices, South China University Of Technology, Guangzhou 510640, P. R. China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Simon Olsson": {
+    "name": "Simon Olsson",
+    "h_index": 25,
+    "citations": 3364,
+    "works_count": 116,
+    "affiliation": "Department Of Computer Science And Engineering, Chalmers University Of Technology And University Of Gothenburg, Se-41296 Gothenburg, Sweden.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Shining Zhu": {
+    "name": "Shining Zhu",
+    "h_index": 80,
+    "citations": 34927,
+    "works_count": 897,
+    "affiliation": "National Laboratory Of Solid-State Microstructures, School Of Physics, Nanjing University, Nanjing 210093, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Olivier J. F. Martin": {
+    "name": "Olivier J. F. Martin",
+    "h_index": 69,
+    "citations": 20501,
+    "works_count": 667,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "C. T. Chan": {
+    "name": "C. T. Chan",
+    "h_index": 109,
+    "citations": 53050,
+    "works_count": 795,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Junnan Hao": {
+    "name": "Junnan Hao",
+    "h_index": 61,
+    "citations": 16128,
+    "works_count": 118,
+    "affiliation": "School Of Chemical Engineering, Adelaide University, Adelaide, Sa 5005, Australia.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Shao-Jian Zhang": {
+    "name": "Shao-Jian Zhang",
+    "h_index": 40,
+    "citations": 5161,
+    "works_count": 144,
+    "affiliation": "School Of Chemical Engineering, Adelaide University, Adelaide, Sa 5005, Australia.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Chunsheng Wang": {
+    "name": "Chunsheng Wang",
+    "h_index": 161,
+    "citations": 94559,
+    "works_count": 776,
+    "affiliation": "Department Of Chemical And Biomolecular Engineering, University Of Maryland, College Park, Md, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Chiaki Iwamura": {
+    "name": "Chiaki Iwamura",
+    "h_index": 21,
+    "citations": 2161,
+    "works_count": 62,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Masahiro Kiuchi": {
+    "name": "Masahiro Kiuchi",
+    "h_index": 23,
+    "citations": 2127,
+    "works_count": 114,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Toshinori Nakayama": {
+    "name": "Toshinori Nakayama",
+    "h_index": 97,
+    "citations": 33809,
+    "works_count": 686,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kiyoshi Hirahara": {
+    "name": "Kiyoshi Hirahara",
+    "h_index": 47,
+    "citations": 8093,
+    "works_count": 171,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Haiying Zhu": {
+    "name": "Haiying Zhu",
+    "h_index": 30,
+    "citations": 4022,
+    "works_count": 139,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Petr Tomek": {
+    "name": "Petr Tomek",
+    "h_index": 12,
+    "citations": 430,
+    "works_count": 45,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Wenbin Zhao": {
+    "name": "Wenbin Zhao",
+    "h_index": 22,
+    "citations": 1438,
+    "works_count": 94,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ji Cao": {
+    "name": "Ji Cao",
+    "h_index": 50,
+    "citations": 7174,
+    "works_count": 180,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jian Wang": {
+    "name": "Jian Wang",
+    "h_index": 46,
+    "citations": 67664,
+    "works_count": 146,
+    "affiliation": "Department Of Neurology And Neuroscience, University Of Virginia, School Of Medicine, Charlottesville, Va, Usa.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Nikolay V. Dokholyan": {
+    "name": "Nikolay V. Dokholyan",
+    "h_index": 79,
+    "citations": 22321,
+    "works_count": 749,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "W. David Arnold": {
+    "name": "W. David Arnold",
+    "h_index": 48,
+    "citations": 9547,
+    "works_count": 317,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Amy M. Moore": {
+    "name": "Amy M. Moore",
+    "h_index": 38,
+    "citations": 4532,
+    "works_count": 161,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Daniel Gallego Perez": {
+    "name": "Daniel Gallego Perez",
+    "h_index": 31,
+    "citations": 2909,
+    "works_count": 115,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Chadi M. Saad-Roy": {
+    "name": "Chadi M. Saad-Roy",
+    "h_index": 19,
+    "citations": 1499,
+    "works_count": 71,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Ayesha S. Mahmud": {
+    "name": "Ayesha S. Mahmud",
+    "h_index": 25,
+    "citations": 5199,
+    "works_count": 85,
+    "affiliation": null,
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Mengyao Qin": {
+    "name": "Mengyao Qin",
+    "h_index": 19,
+    "citations": 1612,
+    "works_count": 43,
+    "affiliation": "Department Of Pharmacology, School Of Pharmacy, China Pharmaceutical University, Nanjing, Jiangsu 210009, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Haiping Hao": {
+    "name": "Haiping Hao",
+    "h_index": 66,
+    "citations": 15698,
+    "works_count": 480,
+    "affiliation": "Department Of Pharmacology, School Of Pharmacy, China Pharmaceutical University, Nanjing, Jiangsu 210009, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jing Xiong": {
+    "name": "Jing Xiong",
+    "h_index": 41,
+    "citations": 6642,
+    "works_count": 248,
+    "affiliation": "Department Of Pharmacology, School Of Pharmacy, China Pharmaceutical University, Nanjing, Jiangsu 210009, China.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Jan Huertas": {
+    "name": "Jan Huertas",
+    "h_index": 15,
+    "citations": 782,
+    "works_count": 68,
+    "affiliation": "Department Of Chemistry, University Of Cambridge, Lensfield Road, Cambridge Cb2 1Ew, Uk.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Charles Phillips": {
+    "name": "Charles Phillips",
+    "h_index": 27,
+    "citations": 5083,
+    "works_count": 82,
+    "affiliation": "Department Of Chemistry, University Of Cambridge, Lensfield Road, Cambridge Cb2 1Ew, Uk.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Masaki Sasai": {
+    "name": "Masaki Sasai",
+    "h_index": 33,
+    "citations": 3822,
+    "works_count": 307,
+    "affiliation": "Fukui Institute For Fundamental Chemistry, Kyoto University, Kyoto 606-8103, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Kazuhiro Maeshima": {
+    "name": "Kazuhiro Maeshima",
+    "h_index": 49,
+    "citations": 9133,
+    "works_count": 170,
+    "affiliation": "Genome Dynamics Laboratory, National Institute Of Genetics, Rois, Mishima 411-8540, Shizuoka, Japan.",
+    "first_seen": "2026-04-08",
+    "paper_count": 1,
+    "last_seen": "2026-04-08"
+  },
+  "Alessio Basti": {
+    "name": "Alessio Basti",
+    "h_index": 10,
+    "citations": 432,
+    "works_count": 42,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Giovanna Tomaiuolo": {
+    "name": "Giovanna Tomaiuolo",
+    "h_index": 25,
+    "citations": 2386,
+    "works_count": 89,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Stefano Guido": {
+    "name": "Stefano Guido",
+    "h_index": 45,
+    "citations": 7234,
+    "works_count": 218,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Saumya Pandey": {
+    "name": "Saumya Pandey",
+    "h_index": 13,
+    "citations": 715,
+    "works_count": 102,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Varun Chandola": {
+    "name": "Varun Chandola",
+    "h_index": 19,
+    "citations": 13427,
+    "works_count": 129,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Zelin Zang": {
+    "name": "Zelin Zang",
+    "h_index": 13,
+    "citations": 488,
+    "works_count": 86,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Jiebo Luo": {
+    "name": "Jiebo Luo",
+    "h_index": 98,
+    "citations": 44496,
+    "works_count": 1197,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Zhen Lei": {
+    "name": "Zhen Lei",
+    "h_index": 76,
+    "citations": 27112,
+    "works_count": 582,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Jaewoo Kang": {
+    "name": "Jaewoo Kang",
+    "h_index": 48,
+    "citations": 16021,
+    "works_count": 341,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Chuang Zhao": {
+    "name": "Chuang Zhao",
+    "h_index": 26,
+    "citations": 5593,
+    "works_count": 117,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Hongke Zhao": {
+    "name": "Hongke Zhao",
+    "h_index": 25,
+    "citations": 2183,
+    "works_count": 122,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Xiaofang Zhou": {
+    "name": "Xiaofang Zhou",
+    "h_index": 71,
+    "citations": 24159,
+    "works_count": 1011,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Liwei Wang": {
+    "name": "Liwei Wang",
+    "h_index": 59,
+    "citations": 13642,
+    "works_count": 390,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Jens Helby": {
+    "name": "Jens Helby",
+    "h_index": 11,
+    "citations": 662,
+    "works_count": 43,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Andreas Glenthøj": {
+    "name": "Andreas Glenthøj",
+    "h_index": 25,
+    "citations": 2592,
+    "works_count": 195,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Hrishikesh Suresh": {
+    "name": "Hrishikesh Suresh",
+    "h_index": 11,
+    "citations": 316,
+    "works_count": 47,
+    "affiliation": "Institute Of Biomedical Engineering, University Of Toronto, Toronto, On, Canada.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Karim Mithani": {
+    "name": "Karim Mithani",
+    "h_index": 17,
+    "citations": 844,
+    "works_count": 71,
+    "affiliation": "Institute Of Biomedical Engineering, University Of Toronto, Toronto, On, Canada.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "George M. Ibrahim": {
+    "name": "George M. Ibrahim",
+    "h_index": 44,
+    "citations": 7346,
+    "works_count": 395,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Neil S. Zheng": {
+    "name": "Neil S. Zheng",
+    "h_index": 13,
+    "citations": 1695,
+    "works_count": 50,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Evan L. Brittain": {
+    "name": "Evan L. Brittain",
+    "h_index": 42,
+    "citations": 6843,
+    "works_count": 323,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "John Muthii Muriuki": {
+    "name": "John Muthii Muriuki",
+    "h_index": 14,
+    "citations": 598,
+    "works_count": 87,
+    "affiliation": "Kemri-Wellcome Trust Research Programme, Kilifi, Kenya. Jmuriuki@Kemri-Wellcome.Org.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Alexander J. Mentzer": {
+    "name": "Alexander J. Mentzer",
+    "h_index": 76,
+    "citations": 34923,
+    "works_count": 323,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Sarah H. Atkinson": {
+    "name": "Sarah H. Atkinson",
+    "h_index": 25,
+    "citations": 2149,
+    "works_count": 113,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Pengfei Xia": {
+    "name": "Pengfei Xia",
+    "h_index": 30,
+    "citations": 7241,
+    "works_count": 60,
+    "affiliation": "Department Of Orthopaedics, Center For Spinal Minimally Invasive Research, Shanghai Key Laboratory Of Flexible Medical Robotics, Tongren Hospital, Shanghai Jiao Tong University School Of Medicine, 1111 Xianxia Road, Shanghai, 200336, People'S Republic Of China.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Wenguo Cui": {
+    "name": "Wenguo Cui",
+    "h_index": 95,
+    "citations": 31899,
+    "works_count": 675,
+    "affiliation": "Department Of Orthopaedics, Center For Spinal Minimally Invasive Research, Shanghai Key Laboratory Of Flexible Medical Robotics, Tongren Hospital, Shanghai Jiao Tong University School Of Medicine, 1111 Xianxia Road, Shanghai, 200336, People'S Republic Of China. Wgcui80@Hotmail.Com.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Maria Ogrzewalska": {
+    "name": "Maria Ogrzewalska",
+    "h_index": 32,
+    "citations": 2892,
+    "works_count": 108,
+    "affiliation": "Laboratory Of Respiratory Viruses, Exanthematic, Enteroviruses And Viral Emergencies, Oswaldo Cruz Institute, Fiocruz Foundation, Rio De Janeiro, Rj, Brazil. Maria.Ogrzewalska@Ioc.Fiocruz.Br.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Ralph Eric Thijl Vanstreels": {
+    "name": "Ralph Eric Thijl Vanstreels",
+    "h_index": 24,
+    "citations": 2124,
+    "works_count": 143,
+    "affiliation": "Karen C. Drayer Wildlife Health Center, One Health Institute, School Of Veterinary Medicine, University Of California, Davis, Ca, Usa.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Paola Cristina Resende": {
+    "name": "Paola Cristina Resende",
+    "h_index": 28,
+    "citations": 6047,
+    "works_count": 155,
+    "affiliation": "Laboratory Of Respiratory Viruses, Exanthematic, Enteroviruses And Viral Emergencies, Oswaldo Cruz Institute, Fiocruz Foundation, Rio De Janeiro, Rj, Brazil. Paola@Ioc.Fiocruz.Br.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Elizabeth M. Krantz": {
+    "name": "Elizabeth M. Krantz",
+    "h_index": 33,
+    "citations": 3722,
+    "works_count": 152,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Joshua A. Hill": {
+    "name": "Joshua A. Hill",
+    "h_index": 45,
+    "citations": 9454,
+    "works_count": 219,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Alain R. Baulard": {
+    "name": "Alain R. Baulard",
+    "h_index": 40,
+    "citations": 5136,
+    "works_count": 107,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Xiaomeng Wang": {
+    "name": "Xiaomeng Wang",
+    "h_index": 42,
+    "citations": 7002,
+    "works_count": 348,
+    "affiliation": null,
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Cedric Bardy": {
+    "name": "Cedric Bardy",
+    "h_index": 28,
+    "citations": 4692,
+    "works_count": 59,
+    "affiliation": "Laboratory For Human Neurophysiology And Genetics, South Australian Health And Medical Research Institute (Sahmri), Adelaide, Sa, Australia. Cedric.Bardy@Flinders.Edu.Au.",
+    "first_seen": "2026-04-07",
+    "paper_count": 1,
+    "last_seen": "2026-04-07"
+  },
+  "Stephen Foldes": {
+    "name": "Stephen Foldes",
+    "h_index": 21,
+    "citations": 2219,
+    "works_count": 51,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Andrew Yang": {
+    "name": "Andrew Yang",
+    "h_index": 15,
+    "citations": 4999,
+    "works_count": 39,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Yalin Wang": {
+    "name": "Yalin Wang",
+    "h_index": 56,
+    "citations": 11650,
+    "works_count": 603,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Francesco Bullo": {
+    "name": "Francesco Bullo",
+    "h_index": 76,
+    "citations": 30308,
+    "works_count": 652,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Dmitry Krotov": {
+    "name": "Dmitry Krotov",
+    "h_index": 11,
+    "citations": 804,
+    "works_count": 40,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Adilson E. Motter": {
+    "name": "Adilson E. Motter",
+    "h_index": 48,
+    "citations": 12145,
+    "works_count": 195,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Yoshiyuki Ohmura": {
+    "name": "Yoshiyuki Ohmura",
+    "h_index": 16,
+    "citations": 1085,
+    "works_count": 80,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Yasuo Kuniyoshi": {
+    "name": "Yasuo Kuniyoshi",
+    "h_index": 49,
+    "citations": 10980,
+    "works_count": 546,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Vignesh Subbian": {
+    "name": "Vignesh Subbian",
+    "h_index": 27,
+    "citations": 3294,
+    "works_count": 180,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Young Mie Kim": {
+    "name": "Young Mie Kim",
+    "h_index": 15,
+    "citations": 1699,
+    "works_count": 51,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Joshua A. Tucker": {
+    "name": "Joshua A. Tucker",
+    "h_index": 63,
+    "citations": 23996,
+    "works_count": 423,
+    "affiliation": null,
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Ville Salo": {
+    "name": "Ville Salo",
+    "h_index": 9,
+    "citations": 336,
+    "works_count": 153,
+    "affiliation": "Research Unit Of Population Health, Faculty Of Medicine, And Biocenter Oulu, University Of Oulu, Oulu, Finland. Ville.Salo@Oulu.Fi.",
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Juhani Määttä": {
+    "name": "Juhani Määttä",
+    "h_index": 16,
+    "citations": 1112,
+    "works_count": 61,
+    "affiliation": "Research Unit Of Health Sciences And Technology, Faculty Of Medicine, University Of Oulu, Oulu, Finland.",
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Johannes Kettunen": {
+    "name": "Johannes Kettunen",
+    "h_index": 75,
+    "citations": 49024,
+    "works_count": 352,
+    "affiliation": "Research Unit Of Population Health, Faculty Of Medicine, And Biocenter Oulu, University Of Oulu, Oulu, Finland.",
+    "first_seen": "2026-04-06",
+    "paper_count": 1,
+    "last_seen": "2026-04-06"
+  },
+  "Gunn Kim": {
+    "name": "Gunn Kim",
+    "h_index": 28,
+    "citations": 2826,
+    "works_count": 142,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "David Soloveichik": {
+    "name": "David Soloveichik",
+    "h_index": 23,
+    "citations": 4874,
+    "works_count": 89,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Yiqing Sun": {
+    "name": "Yiqing Sun",
+    "h_index": 29,
+    "citations": 8255,
+    "works_count": 67,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Jiayue Qin": {
+    "name": "Jiayue Qin",
+    "h_index": 8,
+    "citations": 278,
+    "works_count": 74,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Zhigang Yao": {
+    "name": "Zhigang Yao",
+    "h_index": 26,
+    "citations": 2329,
+    "works_count": 151,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Jiaqi Han": {
+    "name": "Jiaqi Han",
+    "h_index": 30,
+    "citations": 2676,
+    "works_count": 214,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Pengwei Sun": {
+    "name": "Pengwei Sun",
+    "h_index": 16,
+    "citations": 1048,
+    "works_count": 50,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Jianwen Xie": {
+    "name": "Jianwen Xie",
+    "h_index": 29,
+    "citations": 2796,
+    "works_count": 124,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  },
+  "Stefano Ermon": {
+    "name": "Stefano Ermon",
+    "h_index": 65,
+    "citations": 24533,
+    "works_count": 471,
+    "affiliation": null,
+    "first_seen": "2026-04-05",
+    "paper_count": 1,
+    "last_seen": "2026-04-05"
+  }
+}

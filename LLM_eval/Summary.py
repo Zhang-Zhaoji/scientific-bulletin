@@ -3,6 +3,7 @@ from typing import List, Dict, Optional, Literal
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from datetime import datetime
+import argparse
 
 
 class ReportGenerator:
@@ -45,6 +46,7 @@ class ReportGenerator:
         
         # 生成Markdown报告
         report_path = self.output_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
+        self.report_path = report_path
         
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(self._generate_markdown(tiers))
@@ -187,40 +189,61 @@ class ReportGenerator:
         target_audience = result.get("target_audience", "")
         recommendation_text = result.get("recommendation_text", "")
         
+        # 提取作者增强信息
+        paper_raw = result.get("paper", {}).get("raw_data", {})
+        senior_authors = paper_raw.get("senior_authors", [])
+        countries = paper_raw.get("countries", [])
+        affiliations = paper_raw.get("affiliations", [])
+        
         # 构建标题（英文+中文翻译）
         md = f"""### {title}"""
         if title_zh:
-            md += f"\n**中文标题**: {title_zh}"
+            md += f"\n\n**中文标题**: {title_zh}"
         md += "\n\n"
         
-        md += f"""**作者**: {', '.join(authors[:3])}{' et al.' if len(authors) > 3 else ''}  
-**期刊**: {journal} | **日期**: {date}  
-**分类**: {primary_category}"""
+        md += f"""**作者**: {', '.join(authors[:3])}{' et al.' if len(authors) > 3 else ''}  \n\n
+**期刊**: {journal} | **日期**: {date}"""
+        
+        # 添加大牛作者信息
+        if senior_authors:
+            md += "\n\n**知名学者**: "
+            senior_summaries = []
+            for sr in senior_authors[:2]:  # 最多显示2个
+                name = sr.get('name', '')
+                h_idx = sr.get('h_index', 'N/A')
+                senior_summaries.append(f"{name} (h={h_idx})")
+            md += "; ".join(senior_summaries)
+        
+        # 添加国家信息
+        if countries:
+            md += f"\n\n**研究地区**: {', '.join(countries)}"
+        
+        md += f"\n\n**分类**: {primary_category}"
         
         if secondary_category:
             md += f" / {secondary_category}"
         
         if cross_tags:
-            md += f"\n**标签**: {', '.join(cross_tags[:5])}"
+            md += f"\n\n**标签**: {', '.join(cross_tags[:5])}"
         
         # 显示推荐等级
         if recommendation_tier:
-            md += f"\n**推荐等级**: {recommendation_tier}"
+            md += f"\n\n**推荐等级**: {recommendation_tier}"
         
         if detailed:
-            md += f"""
+            md += f"""\n\n
 
-**评分**: {total_score:.1f}/10  
+**评分**: {total_score:.1f}/10  \n\n
 **亮点**: {feature_angle}
 """
             
             # 添加优势、局限和目标受众
             if key_strength:
-                md += f"\n**核心优势**: {key_strength}"
+                md += f"\n\n**核心优势**: {key_strength}"
             if key_limitation:
-                md += f"\n**主要局限**: {key_limitation}"
+                md += f"\n\n**主要局限**: {key_limitation}"
             if target_audience:
-                md += f"\n**目标读者**: {target_audience}"
+                md += f"\n\n**目标读者**: {target_audience}"
             
             # 为头条和深度解读添加推荐文本
             if show_recommendation and recommendation_text:
@@ -228,14 +251,14 @@ class ReportGenerator:
             
             md += "\n\n"
             
-            if crossover and domain == "域外高影响":
-                md += "**跨界价值**: 该研究虽非神经科学领域，但可能为神经科学带来重要方法学或理论启发。\n\n"
+            if crossover and domain == "\n\n域外高影响":
+                md += "\n\n**跨界价值**: 该研究虽非神经科学领域，但可能为神经科学带来重要方法学或理论启发。\n\n"
         else:
-            md += f"\n**评分**: {total_score:.1f}/10 | **要点**: {feature_angle}"
+            md += f"\n\n**评分**: {total_score:.1f}/10 | **要点**: {feature_angle}"
             
             # 简要提及显示简洁版信息
             if key_strength or key_limitation or target_audience:
-                md += "\n"
+                md += "\n\n"
                 if key_strength:
                     md +=  f"**优势**: {key_strength}\n"
                 if key_limitation:
@@ -248,24 +271,73 @@ class ReportGenerator:
         return md
 
 
+def find_latest_result(results_dir: Path = Path("./LLM_Results")) -> Optional[Path]:
+    """找到最新的 LLM 结果文件"""
+    if not results_dir.exists():
+        return None
+    
+    result_files = list(results_dir.glob("LLM_results_*.json"))
+    if not result_files:
+        return None
+    
+    # 按修改时间排序
+    latest = max(result_files, key=lambda p: p.stat().st_mtime)
+    return latest
+
+def add_Enter(md:str) -> str:
+    """添加换行符"""
+    return md.replace("\n", "\n\n")
+
+
 def main():
     """主函数"""
-    # 读取结果文件
-    result_file = Path(r"LLM_Results\LLM_results_20260328_004204.json")
-    if not result_file.exists():
-        print(f"结果文件不存在: {result_file}")
-        return
+    parser = argparse.ArgumentParser(
+        description='Generate Markdown report from LLM results',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python Summary.py                          # Use latest result file
+  python Summary.py -i results.json          # Use specific file
+  python Summary.py -o ./output              # Specify output directory
+        """
+    )
+    
+    parser.add_argument('-i', '--input',
+                        help='Input JSON file from LLM processing (default: latest in LLM_Results)')
+    parser.add_argument('-o', '--output', default='./LLM_Results',
+                        help='Output directory for markdown report (default: ./LLM_Results)')
+    parser.add_argument('--title', action='store_true',
+                        help='Generate title using LLM (requires API)')
+    
+    args = parser.parse_args()
+    
+    # 确定输入文件
+    if args.input:
+        result_file = Path(args.input)
+        if not result_file.exists():
+            print(f"错误: 输入文件不存在: {result_file}")
+            return
+    else:
+        # 自动查找最新文件
+        result_file = find_latest_result()
+        if not result_file:
+            print("错误: 未找到 LLM 结果文件，请先用 main.py 处理论文")
+            return
+        print(f"使用最新的结果文件: {result_file}")
     
     # 创建报告生成器
-    generator = ReportGenerator(output_dir=r".\LLM_Results")
+    generator = ReportGenerator(output_dir=args.output)
     
     # 生成报告
+    print(f"\n生成报告 from: {result_file}")
     report = generator.generate_from_json(str(result_file))
     
     # 打印统计信息
+    print("\n" + "=" * 60)
     print("报告生成完成！")
+    print("=" * 60)
     print(f"Markdown报告路径: {report['markdown_path']}")
-    print("统计信息:")
+    print("\n统计信息:")
     print(f"- 总文章数: {report['statistics']['total']}")
     print(f"- 头条推荐: {report['statistics']['headline']}")
     print(f"- 深度解读: {report['statistics']['deep']}")
@@ -273,33 +345,58 @@ def main():
     print(f"- 跨界启发: {report['statistics']['crossover']}")
     print(f"- 已过滤: {report['statistics']['rejected']}")
     print(f"- 平均评分: {report['statistics']['avg_score']:.2f}")
+    
+    title = generate_title_with_llm(report['markdown_path'])
+
+    
+    with open(generator.report_path, 'r+', encoding="utf-8") as f:
+        content = f.read()
+        f.seek(0)
+        f.write(title + "\n\n" + content)
+    
+
+
+def generate_title_with_llm(markdown_path: str):
+    """使用 LLM 生成标题"""
     from call_API import LLM_process
     from dotenv import load_dotenv
     import os
+    
     load_dotenv()
     api_key = os.getenv("DASHSCOPE_API_KEY")
-    if not api_key:
-        raise ValueError("DASHSCOPE_API_KEY not set")
     base_url = os.getenv("API_BASE_URL")
-    if not base_url:
-        raise ValueError("API_BASE_URL not set")
-
-    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.5-plus-2026-02-15")
+    
+    if not api_key or not base_url:
+        print("[WARNING] API 配置缺失，跳过标题生成")
+        return
+    
+    print("\n正在生成标题...")
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.6-plus")
+    
     System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
-    main_text_md = report['markdown_path']
-    with open(main_text_md, "r", encoding="utf-8") as f:
+    
+    with open(markdown_path, "r", encoding="utf-8") as f:
         main_text_md = f.read()
-    User_prompt = f"下面是神经科学简报内容：{main_text_md} 请根据以上内容，生成标题。"
-    response = LLM_engine.client.chat.completions.parse(
-            model = LLM_engine.model,
+    
+    User_prompt = f"下面是神经科学简报内容：{main_text_md[:3000]}... 请根据以上内容，生成标题。"
+    
+    try:
+        response = LLM_engine.client.chat.completions.parse(
+            model=LLM_engine.model,
             messages=[
-                    {"role": "system", "content": System_prompt},
-                    {"role": "user", "content": User_prompt},
-                ],
-            extra_body={"enable_thinking":True}
-            )
-    result = response.choices[0].message.content
-    print(result)
+                {"role": "system", "content": System_prompt},
+                {"role": "user", "content": User_prompt},
+            ],
+            extra_body={"enable_thinking": True}
+        )
+        result = response.choices[0].message.content
+        print("\n" + "=" * 60)
+        print("生成的标题:")
+        print("=" * 60)
+        print(result)
+        return result
+    except Exception as e:
+        print(f"[ERROR] 标题生成失败: {e}")
 
 
 if __name__ == "__main__":

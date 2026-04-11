@@ -373,10 +373,33 @@ def fetch_articles_by_journal(
         
         print(f"  -> {len(papers)} fetched, {len(all_papers)} kept after filtering")
     
+    # Client-side date filtering
+    # PubMed's PDAT may include articles with early online publication dates
+    # We need to filter to ensure only articles within the requested date range are returned
+    print(f"\nApplying client-side date filtering (last {days} days)...")
+    filtered_papers = []
+    cutoff_date = end_date - datetime.timedelta(days=days)
+    
+    for paper in all_papers:
+        paper_date_str = paper.get('date', '')
+        try:
+            paper_date = datetime.datetime.strptime(paper_date_str, '%d %b %Y')
+            # Keep only papers within the date range
+            if cutoff_date <= paper_date <= end_date:
+                filtered_papers.append(paper)
+        except ValueError:
+            # If we can't parse the date, keep the paper (conservative approach)
+            filtered_papers.append(paper)
+    
+    removed_count = len(all_papers) - len(filtered_papers)
+    if removed_count > 0:
+        print(f"  -> Removed {removed_count} papers outside date range")
+    print(f"  -> {len(filtered_papers)} papers after date filtering")
+    
     # Fetch abstracts if requested
-    if fetch_abstracts and all_papers:
+    if fetch_abstracts and filtered_papers:
         print("\nFetching abstracts...")
-        pmids_for_abstracts = [p['pmid'] for p in all_papers if p.get('pmid')]
+        pmids_for_abstracts = [p['pmid'] for p in filtered_papers if p.get('pmid')]
         
         abstracts = {}
         for i in range(0, len(pmids_for_abstracts), batch_size):
@@ -385,7 +408,7 @@ def fetch_articles_by_journal(
             abstracts.update(batch_abstracts)
         
         # Add abstracts to papers
-        for paper in all_papers:
+        for paper in filtered_papers:
             pmid = paper.get('pmid')
             if pmid and pmid in abstracts:
                 paper['abstract'] = abstracts[pmid]
@@ -397,9 +420,9 @@ def fetch_articles_by_journal(
         except ValueError:
             return datetime.datetime.min
     
-    all_papers.sort(key=parse_date_for_sort, reverse=True)
+    filtered_papers.sort(key=parse_date_for_sort, reverse=True)
     
-    return all_papers
+    return filtered_papers
 
 
 def save_pubmed_papers(papers: List[Dict], filepath: Optional[str] = None) -> str:

@@ -5,7 +5,7 @@ from StructuredPrompt import PromptGenerator, Response1, Response2General, Respo
 from util import Paper, PaperResult, DomainType
 
 class LLM_process:
-    def __init__(self, api_key:str, base_url:str ="https://dashscope.aliyuncs.com/compatible-mode/v1", model="qwen3.5-plus-2026-02-15", thinking:bool=False) -> None:
+    def __init__(self, api_key:str, base_url:str ="https://dashscope.aliyuncs.com/compatible-mode/v1", model="qwen3.6-plus", thinking:bool=False) -> None:
         self.api_key :str = api_key # type: ignore # 
         self.base_url:str = base_url
         self.client = OpenAI(

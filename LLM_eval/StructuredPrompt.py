@@ -238,6 +238,20 @@ class PromptGenerator:
         if domain == "域外局限":
             return '' # if _stage2_prompt
         
+        # 提取大牛作者信息作为评分参考
+        raw_data = getattr(paper, 'raw_data', {})
+        senior_info_text = ""
+        
+        senior_authors = raw_data.get('senior_authors', [])
+        if senior_authors:
+            senior_info_text = "\n【作者影响力参考】\n该论文包含以下知名学者（可作为质量参考，但不直接决定评分）：\n"
+            for sr in senior_authors:
+                name = sr.get('name', '')
+                h_idx = sr.get('h_index', 'N/A')
+                cites = sr.get('citations', 'N/A')
+                senior_info_text += f"- {name}: h-index={h_idx}, 总引用={cites}\n"
+            senior_info_text += "\n"
+        
         # 针对不同域调整评分标准
         if domain == "域外高影响":
             scoring_criteria = """
@@ -296,6 +310,7 @@ class PromptGenerator:
 作者：{', '.join(paper.authors[:5]) + ('' if len(paper.authors) <=5 else 'et. al.')}
 期刊：{paper.journal}
 日期：{paper.date}
+{senior_info_text}
 摘要：{paper.abstract}
 
 {scoring_criteria}
