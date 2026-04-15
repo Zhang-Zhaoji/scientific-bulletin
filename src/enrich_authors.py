@@ -23,6 +23,10 @@ from datetime import datetime
 from difflib import SequenceMatcher
 
 
+# HTTP Headers for API requests
+HEADERS = {'User-Agent': 'mailto:zhang-zj@stu.pku.edu.cn'}
+
+
 @dataclass
 class AuthorInfo:
     """作者信息数据结构"""
@@ -479,9 +483,7 @@ def fetch_author_impact_strict(author_name: str,
     
     url = "https://api.openalex.org/authors"
     params = {'search': author_name, 'per-page': 10}
-    headers = {'User-Agent': 'mailto:zhang-zj@stu.pku.edu.cn'}
-    
-    data = fetch_with_retry(url, params, headers, max_retries=3, delay=delay)
+    data = fetch_with_retry(url, params, HEADERS, max_retries=3, delay=delay)
     if not data or not data.get('results'):
         return None
     
@@ -543,9 +545,7 @@ def fetch_author_impact_loose(author_name: str, delay: float = 0.3) -> Optional[
     """宽松模式获取作者信息"""
     url = "https://api.openalex.org/authors"
     params = {'search': author_name, 'per-page': 5}
-    headers = {'User-Agent': 'mailto:zhang-zj@stu.pku.edu.cn'}
-    
-    data = fetch_with_retry(url, params, headers, max_retries=3, delay=delay)
+    data = fetch_with_retry(url, params, HEADERS, max_retries=3, delay=delay)
     if not data or not data.get('results'):
         return None
     
@@ -784,6 +784,321 @@ def test_author_enrichment():
         
         print(f"\n    Countries: {enriched.get('countries', [])}")
         print("-" * 80)
+
+
+if __name__ == '__main__':
+    test_author_enrichment()
+
+
+# ============== Concurrent Batch Processing ==============
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections import defaultdict
+
+def fetch_affiliations_batch(pmids: List[str], delay: float = None) -> Dict[str, Dict[str, str]]:
+    """
+    Batch fetch affiliations from PubMed using efetch with multiple PMIDs
+    
+    Args:
+        pmids: List of PubMed IDs
+        delay: Delay between batches (auto-detect based on API key)
+    
+    Returns:
+        Dict mapping PMID to {author_name: affiliation}
+    """
+    if not pmids:
+        return {}
+    
+    # Auto-configure rate limits based on API key
+    ncbi_key = os.environ.get('NCBI_API_KEY', '')
+    if delay is None:
+        delay = 0.12 if ncbi_key else 0.35  # 10/sec vs 3/sec
+    
+    results = {}
+    url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+    
+    # Process in batches of 100 (PubMed limit)
+    for i in range(0, len(pmids), 100):
+        batch = pmids[i:i+100]
+        
+        params = {
+            'db': 'pubmed',
+            'id': ','.join(batch),
+            'retmode': 'xml'
+        }
+        
+        # Add API key if available
+        if ncbi_key:
+            params['api_key'] = ncbi_key
+        
+        try:
+            # Direct request (not using fetch_with_retry which expects JSON)
+            response = requests.get(url, params=params, headers=HEADERS, timeout=30)
+            response.raise_for_status()
+            
+            # Parse XML
+            import xml.etree.ElementTree as ET
+            root = ET.fromstring(response.content)
+            
+            # Find all PubmedArticle elements
+            for article in root.findall('.//PubmedArticle'):
+                pmid_elem = article.find('.//PMID')
+                if pmid_elem is None:
+                    continue
+                pmid = pmid_elem.text
+                
+                author_affiliations = {}
+                
+                # Extract author list
+                author_list = article.find('.//AuthorList')
+                if author_list is not None:
+                    for author in author_list.findall('Author'):
+                        last_name = author.find('LastName')
+                        fore_name = author.find('ForeName')
+                        
+                        if last_name is not None:
+                            name = last_name.text
+                            if fore_name is not None:
+                                name = f"{fore_name.text} {name}"
+                            
+                            # Find affiliation
+                            affiliation = author.find('AffiliationInfo/Affiliation')
+                            if affiliation is not None and affiliation.text:
+                                author_affiliations[name] = affiliation.text
+                
+                if author_affiliations:
+                    results[pmid] = author_affiliations
+            
+            time.sleep(delay)  # Rate limit compliance
+            
+        except Exception as e:
+            print(f"        [PubMed Batch Error] Batch {i//100 + 1}: {e}")
+            continue
+    
+    return results
+
+
+def enrich_papers_concurrent(papers: List[Dict], max_workers: int = 5) -> List[Dict]:
+    """
+    Batch enrich papers with concurrent processing and PubMed batch fetching
+    
+    Args:
+        papers: List of paper dictionaries
+        max_workers: Maximum concurrent threads for OpenAlex queries
+    
+    Returns:
+        List of enriched paper dictionaries
+    """
+    db = get_database()
+    
+    # Step 1: Batch fetch PubMed affiliations
+    print("=" * 60)
+    print("Step 1: Batch fetching PubMed affiliations")
+    print("=" * 60)
+    
+    pmid_to_paper = {}
+    pmids = []
+    for paper in papers:
+        pmid = paper.get('pmid') or paper.get('pm_id') or paper.get('PMID')
+        if pmid:
+            pmids.append(pmid)
+            pmid_to_paper[pmid] = paper
+    
+    print(f"Found {len(pmids)} papers with PMIDs")
+    
+    pmid_affiliations = {}
+    if pmids:
+        # Fetch in batches
+        batch_size = 100
+        for i in range(0, len(pmids), batch_size):
+            batch = pmids[i:i+batch_size]
+            print(f"    [PubMed Batch] Fetching {len(batch)} PMIDs ({i+1}-{i+len(batch)}/{len(pmids)})")
+            batch_results = fetch_affiliations_batch(batch)
+            pmid_affiliations.update(batch_results)
+            time.sleep(0.35)  # Rate limit between batches
+        
+        print(f"    [PubMed Batch] Fetched affiliations for {len(pmid_affiliations)} articles")
+    
+    # Step 2: Prepare author queries
+    print("\n" + "=" * 60)
+    print("Step 2: Preparing author queries")
+    print("=" * 60)
+    
+    # Collect unique authors to query
+    author_queries = []  # [(author_name, affiliation, paper_date, paper)]
+    cached_authors = set()
+    
+    for paper in papers:
+        pmid = paper.get('pmid') or paper.get('pm_id') or paper.get('PMID')
+        paper_date = paper.get('date', '')
+        
+        # Get PubMed affiliations for this paper
+        pubmed_affils = pmid_affiliations.get(pmid, {})
+        
+        for author_name in paper.get('authors', []):
+            # Check cache
+            cached = db.authors.get(author_name)
+            if cached and cached.get('h_index') is not None:
+                cached_authors.add(author_name)
+                continue
+            
+            # Get affiliation
+            affiliation = pubmed_affils.get(author_name, paper.get('affiliation', ''))
+            author_queries.append((author_name, affiliation, paper_date, paper))
+    
+    print(f"Total unique authors to query: {len(author_queries)} (cached: {len(cached_authors)})")
+    
+    # Step 3: Concurrent OpenAlex fetching
+    print("\n" + "=" * 60)
+    print(f"Step 3: Concurrent OpenAlex fetching (max {max_workers} workers)")
+    print("=" * 60)
+    
+    # Use ThreadPoolExecutor for concurrent API calls
+    completed = 0
+    total_queries = len(author_queries)
+    
+    # Rate limiting for OpenAlex: max 10 requests/sec
+    # With N workers, each worker should have delay >= N/10
+    openalex_delay = max(0.15, max_workers / 10.0)  # 确保不超限制
+    print(f"    [Rate Limit] OpenAlex delay: {openalex_delay:.2f}s per request")
+    
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        future_to_query = {}
+        for author_name, affiliation, paper_date, paper in author_queries:
+            # Determine strict vs loose mode
+            name_type = classify_name(author_name)
+            is_strict = name_type in ['abbreviation', 'chinese']
+            
+            if is_strict:
+                future = executor.submit(fetch_author_impact_strict, author_name, affiliation, openalex_delay)
+            else:
+                future = executor.submit(fetch_author_impact_loose, author_name, openalex_delay)
+            
+            future_to_query[future] = (author_name, paper_date)
+        
+        # Process results as they complete
+        for future in as_completed(future_to_query):
+            author_name, paper_date = future_to_query[future]
+            try:
+                metrics = future.result()
+                completed += 1
+                
+                # Build info dict
+                info = {'name': author_name}
+                if metrics:
+                    info['h_index'] = metrics.get('h_index')
+                    info['citations'] = metrics.get('citations')
+                    info['works_count'] = metrics.get('works_count')
+                    info['i10_index'] = metrics.get('i10_index')
+                    info['orcid'] = metrics.get('orcid')
+                    info['is_senior_researcher'] = is_senior_researcher(metrics)
+                    info['source'] = 'OpenAlex'
+                    info['matched_name'] = metrics.get('matched_name', author_name)
+                    
+                    mode = "strict" if classify_name(author_name) in ['abbreviation', 'chinese'] else "loose"
+                    status = "SENIOR" if info['is_senior_researcher'] else "OK"
+                    print(f"    [{completed}/{total_queries}] {author_name}: h={info['h_index']}, cites={info['citations']} ({mode})")
+                else:
+                    print(f"    [{completed}/{total_queries}] {author_name}: name_mismatch")
+                    info['source'] = 'Not found'
+                
+                # Update database
+                db.update_author(author_name, info, paper_date)
+                
+            except Exception as e:
+                completed += 1
+                print(f"    [{completed}/{total_queries}] {author_name}: error - {e}")
+    
+    # Save database after all queries
+    db.save_databases()
+    
+    # Step 4: Compile enriched papers
+    print("\n" + "=" * 60)
+    print("Step 4: Compiling results")
+    print("=" * 60)
+    
+    enriched_papers = []
+    for paper in papers:
+        enriched = compile_enriched_paper(paper, db, pmid_affiliations)
+        enriched_papers.append(enriched)
+    
+    return enriched_papers
+
+
+def compile_enriched_paper(paper: Dict, db: AuthorDatabase, pmid_affiliations: Dict) -> Dict:
+    """Compile enriched paper from database"""
+    enriched = paper.copy()
+    
+    pmid = paper.get('pmid') or paper.get('pm_id') or paper.get('PMID')
+    pubmed_affils = pmid_affiliations.get(pmid, {})
+    
+    author_details = []
+    senior_authors_info = []
+    all_affiliations = []
+    all_countries = []
+    
+    for author_name in paper.get('authors', []):
+        # Get from database
+        cached = db.authors.get(author_name, {})
+        
+        info = {
+            'name': author_name,
+            'h_index': cached.get('h_index'),
+            'citations': cached.get('citations'),
+            'works_count': cached.get('works_count'),
+            'i10_index': cached.get('i10_index'),
+            'orcid': cached.get('orcid'),
+            'is_senior_researcher': cached.get('is_senior_researcher', False),
+            'source': cached.get('source', 'Unknown'),
+        }
+        
+        # Get affiliation
+        affiliation = pubmed_affils.get(author_name, paper.get('affiliation', ''))
+        if affiliation:
+            info['affiliation'] = affiliation
+            info['normalized_affiliation'] = normalize_affiliation(affiliation)
+            
+            # Split and collect
+            split_affils = split_affiliation(affiliation)
+            for affil in split_affils:
+                norm_affil = normalize_affiliation(affil)
+                if norm_affil and norm_affil not in all_affiliations:
+                    all_affiliations.append(norm_affil)
+                
+                country = infer_country_from_affiliation(affil)
+                if country and country not in all_countries:
+                    all_countries.append(country)
+        
+        author_details.append(info)
+        
+        # Collect senior authors
+        if info.get('is_senior_researcher'):
+            senior_info = {
+                'name': author_name,
+                'h_index': info.get('h_index'),
+                'citations': info.get('citations'),
+                'works_count': info.get('works_count'),
+                'institution': info.get('normalized_affiliation') or info.get('affiliation', 'N/A'),
+            }
+            senior_authors_info.append(senior_info)
+    
+    # Build result
+    enriched['affiliations'] = all_affiliations
+    enriched['author_details'] = author_details
+    enriched['senior_authors'] = senior_authors_info
+    enriched['senior_author_names'] = [s['name'] for s in senior_authors_info]
+    enriched['senior_author_count'] = len(senior_authors_info)
+    enriched['has_senior_researcher'] = len(senior_authors_info) > 0
+    enriched['countries'] = all_countries
+    enriched['author_enrichment_status'] = 'enriched' if author_details else 'failed'
+    
+    return enriched
+
+
+def get_db() -> AuthorDatabase:
+    """Alias for get_database() for compatibility"""
+    return get_database()
 
 
 if __name__ == '__main__':
