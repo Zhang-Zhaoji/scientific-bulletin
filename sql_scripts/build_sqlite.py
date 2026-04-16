@@ -5,122 +5,142 @@ import argparse
 import os
 import hashlib
 import jsonlines
+from dateutil import parser
 
 def init_db(db_path="data/literature.db"):
     conn = sqlite3.connect(db_path)
     conn.executescript(open('sql_scripts/schema.sql', 'r', encoding='utf-8').read())
     return conn
 
-def extract_country_from_normalized_aff(aff: str, countries_map: dict):
-    """
-    针对已标准化的机构名：国家通常在最后，用逗号分隔
-    如 "..., Rotterdam, Netherlands" -> 匹配 Netherlands
-    """
-    if not aff:
-        return None
-    
-    # 按逗号分割，从后向前检查
-    parts = [p.strip() for p in aff.split(',')]
-    
-    for part in reversed(parts):
-        part_clean = part.rstrip('.').lower()  # 去掉末尾句点
-        for country_en, cid in countries_map.items():
-            if part_clean == country_en.lower():
-                return (country_en, cid, aff)
-            # 也检查 ch_name（如果你的 countries_map 包含中文）
-    
-    return None  # 未找到
+'''
+One example of an article in the jsonL file:
+{"type": "Article", 
+"title": "Atomic unification in molecular AI", 
+"authors": ["Xiaozhi Fu"], 
+"date": "import time", 
+"url": "https://www.cell.com/cell/fulltext/S0092-8674(26)00277-1", 
+"doi": "10.1016/j.cell.2026.03.010", 
+"abstract": "Artificial intelligence has rapidly advanced molecular science, yet progress has largely unfolded through specialized models tailored to specific tasks. In this issue of Cell, Peng et al. introduce PocketXMol, a unified 3D generative framework that reframes molecular design problems as conditional reconstruction of atomic interactions. Demonstrations across design scenarios highlight its potential in molecular engineering.", 
+"source": "Cell + Europe PMC", 
+"enrichment_status": "europepmc_title", 
+"pmid": "41932325", 
+"pmcid": "", 
+"journal": "", 
+"is_open_access": false, 
+"affiliations": ["Department Of Life Sciences, Chalmers University Of Technology, Kemivägen 10, Se-412 96 Gothenburg, Sweden", "Electronic Address: Xiaozhi", "Fu@Chalmers"], 
+"author_details": [
+    {"name": "Xiaozhi Fu", 
+    "affiliation": "Department of Life Sciences, Chalmers University of Technology, Kemivägen 10, SE-412 96 Gothenburg, Sweden. Electronic address: xiaozhi.fu@chalmers.se.", 
+    "normalized_affiliation": "Department Of Life Sciences, Chalmers University Of Technology, Kemivägen 10, Se-412 96 Gothenburg, Sweden. Electronic Address: Xiaozhi.Fu@Chalmers.Se.", 
+    "country": "Sweden", 
+    "orcid": null, 
+    "h_index": null, 
+    "citations": null, 
+    "works_count": null, 
+    "i10_index": null, 
+    "is_senior_researcher": false, 
+    "source": "Not found", 
+    "last_updated": "2026-04-11T02:34:24.989435", 
+    "first_seen": "2026-04-11", 
+    "last_seen": "2026-04-11"}
+    ], 
+"senior_authors": [], 
+"senior_author_names": [], 
+"senior_author_count": 0, 
+"has_senior_researcher": false, 
+"countries": ["Sweden"], 
+"author_enrichment_status": "enriched"}
+'''
 
-def insert_article(conn, article_json: dict, countries_map: dict):
+def parse_work_details(work_json:dict):
     """
-    article_json: 你附件那样的文献JSON
-    countries_map: 国家名到id的映射（从你的政权JSON构建）
+    Parse the work details from the JSON object.
     """
-    cur = conn.cursor()
-    
-    # 1. 插入文章主表
-    cur.execute("""
-        INSERT OR REPLACE INTO articles 
-        (doi, pmid, pmcid, title, abstract, journal, pub_date, pub_year, 
-         source, is_open_access, url, raw_json)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        article_json.get("doi"),
-        article_json.get("pmid"),
-        article_json.get("pmcid"),
-        article_json.get("title"),
-        article_json.get("abstract"),
-        article_json.get("journal"),
-        article_json.get("date"),
-        int(article_json.get("date")[-4:]) if article_json.get("date") else None,
-        article_json.get("source"),
-        article_json.get("is_open_access"),
-        article_json.get("url"),
-        json.dumps(article_json, ensure_ascii=False)
-    ))
-    article_id = cur.lastrowid or cur.execute(
-        "SELECT id FROM articles WHERE doi=?", (article_json["doi"],)
-    ).fetchone()[0]
-    
-    # 2. 处理作者（去重插入 + 关联）
-    senior_names = set(article_json.get("senior_author_names", []))
-    for idx, author in enumerate(article_json.get("author_details", [])):
-        
-        # ... 插入/获取 author_id 的代码 ...
-        author_id = author.get("https://orcid.org/0000-0001-7830-9989", None)
-        # 3. 处理机构（支持多机构）
-        aff = author.get("normalized_affiliation") or author.get("affiliation", "")
-        
-        # 提取所有国家匹配
-        country_matches = extract_country_from_normalized_aff(aff, countries_map)
-        
-        if country_matches:
-            # 有匹配到国家的机构
-            print(country_matches)
-            # input("Press Enter to continue...")
-            
-            for country_en, cid, segment in [country_matches]:
-                cid = hashlib.md5(cid['en_name'].encode()).hexdigest()
-                # 用原始片段作为机构名（或进一步清洗）
-                inst_name = segment.strip()
-                
-                cur.execute("""
-                    INSERT OR IGNORE INTO institutions 
-                    (name, normalized_name, country_id, raw_affiliation)
-                    VALUES (?, ?, ?, ?)
-                """, (inst_name, inst_name, cid, aff))
-                
-                inst_id = cur.execute(
-                    "SELECT id FROM institutions WHERE name=? AND country_id=?", 
-                    (inst_name, cid)
-                ).fetchone()[0]
-                
-                cur.execute("""
-                    INSERT OR IGNORE INTO article_institutions 
-                    (article_id, institution_id, author_id)
-                    VALUES (?, ?, ?)
-                """, (article_id, inst_id, author_id))
-        else:
-            # 未匹配到任何国家，仍然记录但 country_id 为 NULL
-            cur.execute("""
-                INSERT OR IGNORE INTO institutions 
-                (name, normalized_name, country_id, raw_affiliation)
-                VALUES (?, ?, ?, ?)
-            """, (aff, aff, None, aff))
-            
-            inst_id = cur.execute(
-                "SELECT id FROM institutions WHERE normalized_name=? AND country_id IS NULL", 
-                (aff,)
-            ).fetchone()
-            
-            if inst_id:  # 确保有返回
-                cur.execute("""
-                    INSERT OR IGNORE INTO institutions 
-                    (article_id, id, author_id)
-                    VALUES (?, ?, ?)
-                """, (article_id, inst_id[0], author_id))
-    conn.commit()
-    return article_id
+    # first extract article infos:
+    ''' 
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    doi TEXT UNIQUE,
+    pmid TEXT,
+    pmcid TEXT,
+    abstract TEXT,
+    journal TEXT,
+    pub_date TEXT,
+    pub_year INTEGER,
+    is_open_access BOOLEAN,
+    url TEXT,
+    '''
+    title = work_json.get('title', None)
+    doi = work_json.get('doi', None)
+    pmid = work_json.get('pmid', None)
+    pmcid = work_json.get('pmcid', None)
+    abstract = work_json.get('abstract', None)
+    journal = work_json.get('source', '').split('+')[0]
+    if not journal:
+        journal = work_json.get('journal', None)
+    pub_time = parser.parse(work_json.get('date', None))
+    pub_date = pub_time.strftime('%Y-%m-%d')
+    pub_year = pub_time.year
+    is_open_access = work_json.get('is_open_access', None)
+    url = work_json.get('url', None)
+    article_info = {
+        'title': title,
+        'doi': doi,
+        'pmid': pmid,
+        'pmcid': pmcid,
+        'abstract': abstract,
+        'journal': journal,
+        'pub_date': pub_date,
+        'pub_year': pub_year,
+        'is_open_access': is_open_access,
+        'url': url,
+    }
+    # ==================
+    # then extract author infos:
+    important_authors = []
+    '''
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    orcid TEXT UNIQUE,
+    h_index INTEGER,
+    citations INTEGER,
+    is_senior_researcher BOOLEAN,
+    -- normalized_name TEXT, it seems not useful
+    UNIQUE(name, orcid)
+    '''
+    for iauthor in work_json.get('author_details', None):
+        author_name = iauthor.get('name', None)
+        orcid = iauthor.get('orcid', None)
+        h_index = iauthor.get('h_index', None)
+        citations = iauthor.get('citations', None)
+        is_senior_researcher = iauthor.get('is_senior_researcher', None)
+        important_authors.append({
+            'name': author_name,
+            'orcid': orcid,
+            'h_index': h_index,
+            'citations': citations,
+            'is_senior_researcher': is_senior_researcher,
+        })
+    # ==================
+    # then extract institution infos:
+    institutions_in_article = []
+    """
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    raw_affiliation TEXT,
+    country_name TEXT,
+    """
+    for iauthor in work_json.get('author_details', None):
+        institute_name = iauthor.get('normalized_affiliation', None)
+        country = iauthor.get('country', None)
+        institutions_in_article.append({
+            'name': institute_name,
+            'raw_affiliation': iauthor.get('affiliation', None),
+            'country_name': country,
+        })
+    return article_info, important_authors, institutions_in_article
+
+
 
 def main():
     parser = argparse.ArgumentParser(description="Build SQLite database from JSONL files.")
