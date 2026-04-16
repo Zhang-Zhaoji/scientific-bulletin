@@ -77,7 +77,7 @@ def insert_article(conn, article_json: dict, countries_map: dict):
         if country_matches:
             # 有匹配到国家的机构
             print(country_matches)
-            input("Press Enter to continue...")
+            # input("Press Enter to continue...")
             
             for country_en, cid, segment in [country_matches]:
                 cid = hashlib.md5(cid['en_name'].encode()).hexdigest()
