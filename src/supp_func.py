@@ -162,6 +162,8 @@ class ROR_Search():
         if score < threshold:
             # not pass strict, continue        
             for part in parts:
+                if not part:
+                    continue
                 first_char = part[0].upper()
                 candidates = self.alias_index.get(first_char, self.alias_name_dict.keys())
                 result = process.extract(part, candidates, limit=1, scorer=fuzz.ratio)

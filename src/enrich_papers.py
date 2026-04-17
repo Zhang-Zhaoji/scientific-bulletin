@@ -222,30 +222,7 @@ def enrich_single_paper(paper: Dict, delay: float = 0.5) -> Dict:
     enriched['enrichment_status'] = 'original'
     enriched['source'] = paper.get('source', 'Unknown')
     
-    # Step 1: Try Europe PMC via DOI
-    if doi:
-        print(f"    Trying Europe PMC (DOI: {doi[:40]}...)")
-        try:
-            result = search_by_doi(doi)
-            if result:
-                # Merge Europe PMC data
-                enriched.update({
-                    'abstract': result.get('abstract', paper.get('abstract', '')),
-                    'pmid': result.get('pmid', ''),
-                    'pmcid': result.get('pmcid', ''),
-                    'doi': doi,
-                    'journal': result.get('journal', paper.get('journal', '')),
-                    'is_open_access': result.get('is_open_access', False),
-                    'enrichment_status': 'europepmc_doi',
-                    'source': f'{enriched["source"]} + Europe PMC'
-                })
-                print(f"    [OK] Found in Europe PMC (PMID: {result.get('pmid', 'N/A')})")
-                time.sleep(delay)
-                return enriched
-        except Exception as e:
-            print(f"    Europe PMC error: {e}")
-    
-    # Step 2: Try Europe PMC via title
+    # Step 1: Try Europe PMC via title
     print(f"    Trying Europe PMC (title search)...")
     try:
         result = search_by_title(title)
@@ -270,6 +247,29 @@ def enrich_single_paper(paper: Dict, delay: float = 0.5) -> Dict:
                 print(f"    [SKIP] Title similarity too low ({similarity:.2f})")
     except Exception as e:
         print(f"    Europe PMC title search error: {e}")
+        
+    # Step 2: Try Europe PMC via DOI
+    if doi:
+        print(f"    Trying Europe PMC (DOI: {doi[:40]}...)")
+        try:
+            result = search_by_doi(doi)
+            if result:
+                # Merge Europe PMC data
+                enriched.update({
+                    'abstract': result.get('abstract', paper.get('abstract', '')),
+                    'pmid': result.get('pmid', ''),
+                    'pmcid': result.get('pmcid', ''),
+                    'doi': doi,
+                    'journal': result.get('journal', paper.get('journal', '')),
+                    'is_open_access': result.get('is_open_access', False),
+                    'enrichment_status': 'europepmc_doi',
+                    'source': f'{enriched["source"]} + Europe PMC'
+                })
+                print(f"    [OK] Found in Europe PMC (PMID: {result.get('pmid', 'N/A')})")
+                time.sleep(delay)
+                return enriched
+        except Exception as e:
+            print(f"    Europe PMC error: {e}")
     
     # Step 3: Try preprint servers (for very recent papers)
     print(f"    Trying preprint servers...")
