@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS authors (
     citations INTEGER,
     is_senior_researcher BOOLEAN,
     -- normalized_name TEXT, it seems not useful
-    UNIQUE(name, orcid)
+    -- UNIQUE(name, orcid)
 );
 
 -- 机构表
@@ -25,11 +25,11 @@ CREATE TABLE IF NOT EXISTS institutions (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
     raw_affiliation TEXT,
-    country_name TEXT,
+    country_id INTEGER REFERENCES countries(id),
     -- country_id INTEGER REFERENCES countries(id),
     -- article_id INTEGER REFERENCES articles(id),
     -- author_id INTEGER REFERENCES authors(id),
-    UNIQUE(normalized_name, country_name)
+    UNIQUE(normalized_name)
 );
 
 -- 文章主表
