@@ -1,4 +1,4 @@
-from fuzzywuzzy import process
+from thefuzz import process
 from thefuzz import fuzz
 import json    
 import time
@@ -9,6 +9,7 @@ ALIAS_JSON_PATH = 'data/RORAliasNameDict.json'
 LOC_JSON_PATH = 'data/RORLocInfo.json'
 COUNTRY_JSON_PATH = 'data/CountryList.json' 
 SUBREGION_JSON_PATH = 'data/CountrySubdivisionList.json' 
+ABR2COUNTRY_JSON_PATH = 'data/abbr2country.json'
 
 # example affiliation string:
 '''
@@ -31,10 +32,11 @@ class ROR_Search():
         self.threshold = threshold
         self.standard_name_dict, self.alias_name_dict, self.loc_info = self.load_institute_info()
         self.key_words = ['@', 'Electronic', 'Department Of', 'Key Laboratory', 'School Of']
-        self.country_set, self.subregion_set = self.load_regions()
+        self.country_set, self.subregion_set, self.abbr2country = self.load_regions()
         self._build_index()
+        self.trans = str.maketrans('', '', '0123456789')
     
-    def load_regions(self) -> tuple[set[str], set[str]]:
+    def load_regions(self) -> tuple[set[str], set[str], dict[str, str]]:
         """
         Load the regions from the ROR location info.
         """
@@ -42,7 +44,9 @@ class ROR_Search():
             countries = json.load(f)
         with open(SUBREGION_JSON_PATH, 'r', encoding='utf-8') as f:
             subregions = json.load(f)
-        return set[str](countries), set[str](subregions)
+        with open(ABR2COUNTRY_JSON_PATH, 'r', encoding='utf-8') as f:
+            abbr2country = json.load(f)
+        return set[str](countries), set[str](subregions), abbr2country
     
     def _build_index(self):
         """
@@ -66,7 +70,7 @@ class ROR_Search():
                 self.alias_index[first_char] = []
             self.alias_index[first_char].append(alias)
 
-    def load_institute_info(self) -> tuple[list[str], dict[str, int], dict[str, list[dict[str,str|dict]]]]:
+    def load_institute_info(self) -> tuple[list[str], dict[str, str], dict[str, list[dict]]]:
         """
         Load the ROR standard name dict, alias name dict, and location info.
         """
@@ -91,6 +95,8 @@ class ROR_Search():
             return 2
         elif part in self.subregion_set:
             return 3
+        elif part.lower() in self.abbr2country.keys():
+            return 4
         else:
             return 0
     
@@ -99,18 +105,27 @@ class ROR_Search():
         """
         Split affiliation into parts by comma, clean each part.
         """
+        location_info = [None, None]
         parts = affiliation.split(',')
-        cleaned_parts = []
-        for part in parts:
-            cleaned = part.strip()
-            if len(cleaned) > 2 and not self.exclude(cleaned):
-                cleaned_parts.append(cleaned)
-        cleaned_parts.reverse()
-        return cleaned_parts
+        parts = [part.replace('.', '').translate(self.trans).strip() for part in parts]
+        kinds = [self.exclude(part) for part in parts]
+        parts = parts[::-1]
+        kinds = kinds[::-1]
+        cleaned_parts = [part for i, part in enumerate(parts) if kinds[i] == 0]
+        country = next((part for i, part in enumerate(parts) if kinds[i] == 2), None)
+        subregion = next((part for i, part in enumerate(parts) if kinds[i] == 3), None)
+        abbr = next((part for i, part in enumerate(parts) if kinds[i] == 4), None)
+        if abbr:
+            country = self.abbr2country[abbr.lower().strip()]
+        if country:
+            location_info[0] = country
+        if subregion:
+            location_info[1] = subregion
+        return cleaned_parts, location_info
     
 
     # @timer
-    def extract_institute_info(self, affiliation: str, threshold: int|None = None) -> str|None:
+    def extract_institute_info(self, affiliation: str, threshold: int|None = None) -> tuple[str|None, int|None, list]:
         """
         Search the institute name in the ROR standard name dict.
         Strategy:
@@ -122,28 +137,53 @@ class ROR_Search():
         2. score
         3. location info(country, subdivision)
         """
+        standard_name, score, location_info = None, 0, [None, None]
         if threshold is None:
             threshold = self.threshold
+            
+        parts, location_info = self.split_affiliation_parts(affiliation)
         
-        parts = self.split_affiliation_parts(affiliation)
-        
+        tmp_standard_name = None
+        tmp_score = 0
         for part in parts:
+            if not part:
+                continue
             first_char = part[0].upper()
             candidates = self.standard_index.get(first_char, self.standard_name_dict)
             result = process.extract(part, candidates, limit=1, scorer=fuzz.ratio)
-            standard_name, score = result[0]
-            if score >= threshold:
-                return standard_name, score
-        
-        for part in parts:
-            first_char = part[0].upper()
-            candidates = self.alias_index.get(first_char, self.alias_name_dict)
-            result = process.extract(part, candidates, limit=1, scorer=fuzz.ratio)
-            alias, score = result[0]
-            if score >= threshold:
-                return self.alias_name_dict[alias], score
-        
-        return None, None
+            candidate_name, candidate_score = result[0]
+            if candidate_score > tmp_score:
+                tmp_standard_name = candidate_name
+                tmp_score = candidate_score
+            if candidate_score >= threshold:
+                standard_name = candidate_name
+                score = candidate_score
+                break
+        if score < threshold:
+            # not pass strict, continue        
+            for part in parts:
+                first_char = part[0].upper()
+                candidates = self.alias_index.get(first_char, self.alias_name_dict.keys())
+                result = process.extract(part, candidates, limit=1, scorer=fuzz.ratio)
+                alias, alias_score = result[0]
+                if alias_score >= tmp_score:
+                    alias_standard_name = self.alias_name_dict[alias]
+                    tmp_standard_name = alias_standard_name
+                    tmp_score = alias_score
+                    if alias_score >= threshold:
+                        standard_name = tmp_standard_name
+                        score = alias_score
+                        break
+        if standard_name is not None and standard_name in self.loc_info:
+            loc_entry = self.loc_info[standard_name][0]
+            score_related_country = loc_entry['geonames_details']['country_name']
+            score_related_subregion = loc_entry['geonames_details'].get('country_subdivision_name')
+            if location_info[0] is None:
+                location_info[0] = score_related_country
+            if location_info[0] == score_related_country and location_info[1] is None and score_related_subregion:
+                location_info[1] = score_related_subregion
+
+        return standard_name, score, location_info
 
 
 if __name__ == '__main__':
