@@ -437,9 +437,9 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
 def main():
     DB_PATH="data/literature.db"
     parser = argparse.ArgumentParser(description="Build SQLite database from JSONL files.")
-    parser.add_argument("--jsonl", type=str, default="getfiles/all_papers_2026-04-11_enriched_ror_refined.jsonl",
+    parser.add_argument("--jsonl", type=str, default="getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl",
                         help="Path to the JSONL file containing articles.")
-    parser.add_argument("--LLM_results", type=str, default="LLM_Results/LLM_results_20260411_125808.json",
+    parser.add_argument("--LLM_results", type=str, default="LLM_Results/LLM_results_20260418_023838.json",
                         help="Path to the JSON file containing LLM feedback results.")
     args = parser.parse_args()
     jsonl_path = args.jsonl

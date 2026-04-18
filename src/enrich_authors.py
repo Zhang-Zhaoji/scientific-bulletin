@@ -934,8 +934,8 @@ def enrich_papers_concurrent(papers: List[Dict], max_workers: int = 5) -> List[D
         
         # Get PubMed affiliations for this paper
         pubmed_affils = pmid_affiliations.get(pmid, {})
-        
-        for author_name in paper.get('authors', []):
+        authors = paper.get('authors', [])
+        for author_name in list(set(authors[:2] + authors[-2:])):
             # Check cache
             cached = db.authors.get(author_name)
             if cached and cached.get('h_index') is not None:

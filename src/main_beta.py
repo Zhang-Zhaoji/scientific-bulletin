@@ -50,7 +50,7 @@ from supp_func import ROR_Search
 # Default configuration
 DEFAULT_DAYS = 7
 DEFAULT_OUTPUT_DIR = "getfiles"
-DEFAULT_WORKERS = 5
+DEFAULT_WORKERS = 2
 DEFAULT_ROR_THRESHOLD = 90
 
 # Nature journal URLs to crawl
@@ -101,15 +101,16 @@ def fetch_all_biorxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 200) -
     print("\n" + "=" * 80)
     print("Fetching from bioRxiv (neuroscience category)...")
     print("=" * 80)
+    print('We do not do it here, for speed and articles on bioRxiv are of great amount.')
+    return []
+    # papers = fetch_recent_biorxiv_papers(
+    #     days=days,
+    #     category='neuroscience',
+    #     max_results=max_results
+    # )
 
-    papers = fetch_recent_biorxiv_papers(
-        days=days,
-        category='neuroscience',
-        max_results=max_results
-    )
-
-    print(f"Total bioRxiv papers: {len(papers)}")
-    return papers
+    # print(f"Total bioRxiv papers: {len(papers)}")
+    # return papers
 
 
 def fetch_all_nature_papers(days: int = DEFAULT_DAYS) -> List[Dict]:

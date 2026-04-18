@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-18",
+  "sources": {
+    "arxiv": {
+      "count": 0,
+      "date_range": null
+    },
+    "biorxiv": {
+      "count": 0,
+      "date_range": null
+    },
+    "nature": {
+      "count": 0,
+      "date_range": null
+    },
+    "science": {
+      "count": 16,
+      "date_range": {
+        "min": "16 Apr 2026",
+        "max": "16 Apr 2026"
+      }
+    },
+    "cell": {
+      "count": 0,
+      "date_range": null
+    },
+    "jneurophys": {
+      "count": 0,
+      "date_range": null
+    },
+    "jneurosci": {
+      "count": 0,
+      "date_range": null
+    },
+    "jcogn": {
+      "count": 0,
+      "date_range": null
+    },
+    "jvis": {
+      "count": 0,
+      "date_range": null
+    },
+    "pnas": {
+      "count": 0,
+      "date_range": null
+    },
+    "natcomm": {
+      "count": 0,
+      "date_range": null
+    },
+    "brain": {
+      "count": 0,
+      "date_range": null
+    },
+    "sciadv": {
+      "count": 0,
+      "date_range": null
+    },
+    "elife": {
+      "count": 0,
+      "date_range": null
+    }
+  }
+}

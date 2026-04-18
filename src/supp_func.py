@@ -95,7 +95,7 @@ class ROR_Search():
             return 2
         elif part in self.subregion_set:
             return 3
-        elif part.lower() in self.abbr2country.keys():
+        elif part in self.abbr2country.keys():
             return 4
         else:
             return 0
@@ -107,7 +107,7 @@ class ROR_Search():
         """
         location_info = [None, None]
         parts = affiliation.split(',')
-        parts = [part.replace('.', '').translate(self.trans).strip() for part in parts]
+        parts = [part.replace('.', '').translate(self.trans).strip().lower() for part in parts]
         kinds = [self.exclude(part) for part in parts]
         parts = parts[::-1]
         kinds = kinds[::-1]

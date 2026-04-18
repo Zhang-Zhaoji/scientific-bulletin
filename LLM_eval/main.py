@@ -54,8 +54,8 @@ Examples:
     )
     
     parser.add_argument('-i', '--input', 
-                        default='getfiles/all_papers_2026-04-11.jsonl',
-                        help='Input JSONL file path (default: getfiles/all_papers_2026-04-11.jsonl)')
+                        default='getfiles/all_papers_2026-04-18_enriched.jsonl',
+                        help='Input JSONL file path (default: getfiles/all_papers_2026-04-18_enriched.jsonl)')
     parser.add_argument('-o', '--output',
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
