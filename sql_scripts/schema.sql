@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS countries (
     en_name TEXT,
     ch_name TEXT,
     iso_code TEXT,
-    conutry_name TEXT,
+    country_name TEXT,
     standard_name TEXT UNIQUE NOT NULL
 );
 

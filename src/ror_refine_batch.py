@@ -13,6 +13,7 @@ import json
 import os
 import time
 from typing import List, Dict
+import tqdm
 
 from supp_func import ROR_Search
 
@@ -34,17 +35,16 @@ def ror_refine_paper(paper: Dict, ror_search: ROR_Search) -> Dict:
         paper['author_details'][idx]['ror_subregion'] = []
         for affiliation in affiliations:
             standard_name, score, location_info = ror_search.extract_institute_info(affiliation)
-            print(f"  - {affiliation} -> {standard_name} ({score}), location: {location_info}")
-            # input()
-            
             if standard_name and score >= ror_search.threshold:
                 paper['author_details'][idx]['ror_normalized_affiliation'].append(standard_name)
                 paper['author_details'][idx]['ror_match_score'].append(score)
-                if location_info[0] is not None:
-                    paper['author_details'][idx]['ror_country'].append(location_info[0])
-                if location_info[1] is not None:
-                    paper['author_details'][idx]['ror_subregion'].append(location_info[1])
-        
+            if location_info[0] is not None:
+                paper['author_details'][idx]['ror_country'].append(location_info[0])
+            if location_info[1] is not None:
+                paper['author_details'][idx]['ror_subregion'].append(location_info[1])
+            if location_info[0] is None:
+                print(f"\nno country detected for {affiliation}")
+                print(f"affiliation = {affiliation}, -> {location_info}")
     return paper
 
 
@@ -103,19 +103,17 @@ def ror_refine_batch(input_file: str, output_file: str = None, threshold: int = 
     matched_affiliations = 0
     
     refined_papers = []
-    for i, paper in enumerate(papers, 1):
-        if i % 100 == 0:
-            print(f"  Processed {i}/{total_papers} papers...")
-        
-        if paper.get('authors_enriched'):
-            for author in paper['authors_enriched']:
+    for i, paper in enumerate(tqdm.tqdm(papers), 1):        
+        if paper.get('author_details') or paper.get('authors_enriched'):
+            authors = paper.get('author_details', paper.get('authors_enriched', []))
+            for author in authors:
                 if author.get('affiliation'):
                     total_affiliations += 1
         
         refined_paper = ror_refine_paper(paper, ror_search)
         refined_papers.append(refined_paper)
         
-        for author in refined_paper.get('authors_enriched', []):
+        for author in refined_paper.get('author_details', []):
             if 'ror_normalized_affiliation' in author:
                 matched_affiliations += 1
     
@@ -141,7 +139,12 @@ def ror_refine_batch(input_file: str, output_file: str = None, threshold: int = 
           f"({elapsed/max(1, total_papers):.2f}s per paper)")
     print(f"\nOutput saved to: {output_file}")
     print('example of refined paper')
-    print(json.dumps(refined_papers[0], ensure_ascii=False, indent=2))
+    # Handle Unicode encoding for Windows PowerShell
+    # try:
+    #     print(json.dumps(refined_papers[0], ensure_ascii=False, indent=2))
+    # except UnicodeEncodeError:
+    #     # Convert to ASCII with replacement for non-ASCII characters
+    #     print(json.dumps(refined_papers[0], ensure_ascii=True, indent=2))
     return output_file
 
 
@@ -157,7 +160,7 @@ Examples:
         """
     )
     
-    parser.add_argument('input', help='Input enriched JSONL file path')
+    parser.add_argument('--input', help='Input enriched JSONL file path', default="./getfiles/all_papers_2026-03-14_enriched.jsonl" )
     parser.add_argument('-o', '--output', help='Output JSONL file path (default: input_ror_refined.jsonl)')
     parser.add_argument('--threshold', type=int, default=90, 
                         help=f'ROR matching score threshold (default: 90)')

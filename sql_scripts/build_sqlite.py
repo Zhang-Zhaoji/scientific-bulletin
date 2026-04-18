@@ -248,22 +248,31 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
     name TEXT NOT NULL,
     raw_affiliation TEXT,
     country_name TEXT,
+    normalized_name TEXT UNIQUE,
     """
     author_details = work_json.get('author_details', None)
     if author_details:
         for iauthor in author_details:
             institute_name = iauthor.get('normalized_affiliation', None)
+            if not institute_name:
+                continue
             if isinstance(institute_name, str):
                 institute_name = institute_name.split(';') # default to be a list
-            country = iauthor.get('country', None)
+            institute_name = [i.strip() for i in institute_name]
+            country = iauthor.get('ror_country', iauthor.get('country', [None]))
             if isinstance(country, str):
-                country = country.split(';') # default to be a list, too
+                country = country.strip()
+                country = [country] * len(institute_name) if institute_name else [None]
+            if country and isinstance(country, list) and len(country) > 0 and isinstance(country[0], list):
+                country = country[0]
             # the above lines should be ensured during the enrichment process
+            score = iauthor.get('score', 0)
             institutions_in_article.append({
-                'name': institute_name,
+                'name': iauthor.get('ror_normalized_affiliation', None) if iauthor.get('ror_normalized_affiliation', None) else institute_name,
                 'raw_affiliation': iauthor.get('affiliation', None), # original_affiliation string
                 'country_name': country,
-            })
+                'normalized_name': iauthor.get('ror_normalized_affiliation', None),
+                })
     # finally, theme infos:
     """
     -- 主题表
@@ -320,10 +329,10 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
     """
     table_names = ['countries', 'articles', 'authors', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_themes', 'article_subthemes', 'article_crosstags']
     
-    table_keys = {'countries': ['standard_name'],
+    table_keys = {'countries': ['country_name','standard_name'],
                   'articles': ['title','title_zh', 'doi', 'pmid', 'pmcid', 'abstract', 'journal', 'pub_date', 'pub_year', 'is_open_access', 'score', 'url'], 
                   'authors': ['name', 'orcid', 'h_index', 'citations', 'is_senior_researcher'], 
-                  'institutions': ['name', 'raw_affiliation', 'country_id'], 
+                  'institutions': ['name', 'raw_affiliation', 'country_id', 'normalized_name'], 
                   'themes': ['name'],
                   'subthemes': ['name'],
                   'crosstags': ['name'],
@@ -354,17 +363,20 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
     for inst in institutions_in_article:
         institute_names = inst['name']
         country_names = inst.get('country_name', [])
-        raw_affiliation = inst.get('raw_affiliation')
+        normalized_names = inst.get('normalized_name', [])
+        raw_affiliation = inst.get('raw_affiliation',[])
         
         if not isinstance(institute_names, list):
             institute_names = [institute_names]
         if not isinstance(country_names, list):
             country_names = [country_names]
+        if not isinstance(normalized_names, list):
+            normalized_names = [normalized_names]
         
         if len(country_names) < len(institute_names):
             country_names.extend([None] * (len(institute_names) - len(country_names)))
         
-        for institute_name, country_name in zip(institute_names, country_names):
+        for institute_name, country_name, normalized_name in zip(institute_names, country_names, normalized_names):
             if not institute_name:
                 continue
             
@@ -374,11 +386,13 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
                 result = cursor.fetchone()
                 if result:
                     country_id = result[0]
-            
+                else:
+                    raise ValueError(f"Country {country_name} not found in database database.")
             inst_data = {
                 'name': institute_name,
                 'raw_affiliation': raw_affiliation,
-                'country_id': country_id
+                'country_id': country_id,
+                'normalized_name': normalized_name,
             }
             institution_id = search_or_insert(conn, 'institutions', conflict_keys['institutions'], inst_data)
             all_institution_ids.append(institution_id)
@@ -437,7 +451,7 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
 def main():
     DB_PATH="data/literature.db"
     parser = argparse.ArgumentParser(description="Build SQLite database from JSONL files.")
-    parser.add_argument("--jsonl", type=str, default="getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl",
+    parser.add_argument("--jsonl", type=str, default="getfiles/all_papers_2026-04-18_enriched_ror_refined_new.jsonl",
                         help="Path to the JSONL file containing articles.")
     parser.add_argument("--LLM_results", type=str, default="LLM_Results/LLM_results_20260418_023838.json",
                         help="Path to the JSON file containing LLM feedback results.")
@@ -445,12 +459,22 @@ def main():
     jsonl_path = args.jsonl
     LLM_results_path = args.LLM_results
     conn = init_db(DB_PATH)
+
     countries_list_path = 'data/CountryList.json'
+    alias_country_path = 'data/aliasCountryName.json'
+    abbr2country_path = 'data/abbr2country.json'
+    with open(alias_country_path, 'r', encoding='utf-8') as f:
+        alias_country = json.load(f)
     with open(countries_list_path, 'r', encoding='utf-8') as f:
         countries_list = json.load(f)
+    with open(abbr2country_path, 'r', encoding='utf-8') as f:
+        abbr2country = json.load(f)
+    all_country_names = countries_list + list(alias_country.values()) + list(abbr2country.values())
+    all_country_names = list(set(all_country_names))
     
-    for country_name in countries_list:
+    for country_name in all_country_names:
         country_data = {
+            'country_name': country_name,
             'standard_name': country_name
         }
         search_or_insert(conn, 'countries', ['standard_name'], country_data)

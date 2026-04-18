@@ -1,6 +1,7 @@
 from pyecharts.charts import Map, Pie
 from pyecharts import options as opts
-import sqlite3
+from pyecharts.render import make_snapshot
+from snapshot_selenium import snapshot
 import datetime
 import os
 
@@ -61,6 +62,7 @@ class WorldHeatmap:
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.PIE_ROOT_DIR, f"{date}_pie.html")
         pie.render(output_path)
+        make_snapshot(snapshot, pie.render(), output_path.replace(".html", ".png"))
 
     def get_world_data(self, date_range)->list[tuple[str, int]]:
         """
@@ -100,8 +102,10 @@ class WorldHeatmap:
            )
         )
         date = datetime.datetime.now().strftime("%Y-%m-%d")
-        output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}.html")
+        output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}_heatmap.html")
         world_map.render(output_path)
+        make_snapshot(snapshot, world_map.render(), output_path.replace(".html", ".png"))
+        
 
 
 if __name__ == "__main__":
@@ -111,3 +115,4 @@ if __name__ == "__main__":
     world_heatmap.render_heatmap(country_article_count)
     world_heatmap.render_pie_chart(country_article_count, top_n=10)
     db_api.close()
+    os.remove('render.html')

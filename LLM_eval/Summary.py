@@ -4,6 +4,13 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from datetime import datetime
 import argparse
+import os
+import sys
+
+# 添加visualize目录到路径，方便导入统计模块
+sys.path.append(os.path.join(os.path.dirname(__file__), '../visualize'))
+from dbapi import DBAPI
+from vis_stat import StatisticsVisualizer
 
 
 class ReportGenerator:
@@ -44,12 +51,51 @@ class ReportGenerator:
                 total_score += result.get("total_score", 0)
                 scored_papers += 1
         
+        # 获取日期范围（从结果中提取最早和最晚的日期）
+        dates = []
+        for result in results:
+            date = result.get('paper', {}).get('date', None)
+            if date and len(date) >= 10:
+                dates.append(date[:10])
+        start_date = min(dates) if dates else None
+        end_date = max(dates) if dates else None
+        
+        # 先初始化，确保即使失败也有定义
+        statistics_text = ""
+        
+        # 生成统计信息文字和可视化
+        try:
+            db_api = DBAPI()
+            stats_vis = StatisticsVisualizer(db_api)
+            
+            # 获取国家统计
+            country_stats = db_api.get_country_article_count(start_date, end_date)
+            
+            # 获取机构TOP 10
+            institution_stats = stats_vis.get_institution_topn(start_date, end_date, top_n=10)
+            
+            # 获取评分分布
+            score_stats = stats_vis.get_score_distribution(results)
+            
+            # 生成可视化图表（HTML）
+            stats_vis.render_score_histogram(score_stats)
+            statistics_text += "### 📊 可视化图表\n\n"
+            
+            # 生成统计文字
+            statistics_text = stats_vis.get_statistics_text(country_stats[:10], institution_stats, score_stats)
+        except Exception as e:
+            print(f"[WARNING] 生成统计图表失败: {e}")
+            statistics_text = ""
+        finally:
+            if 'db_api' in locals():
+                db_api.close()
+        
         # 生成Markdown报告
         report_path = self.output_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M')}.md"
         self.report_path = report_path
         
         with open(report_path, 'w', encoding='utf-8') as f:
-            f.write(self._generate_markdown(tiers))
+            f.write(self._generate_markdown(tiers, statistics_text))
         
         # 生成统计摘要
         stats = {
@@ -65,10 +111,11 @@ class ReportGenerator:
         return {
             "markdown_path": str(report_path),
             "statistics": stats,
+            "statistics_text": statistics_text,
             "tiers": {k: len(v) for k, v in tiers.items()}
         }
     
-    def _generate_markdown(self, tiers: Dict) -> str:
+    def _generate_markdown(self, tiers: Dict, statistics_text: str = "") -> str:
         """生成Markdown格式报告"""
         
         md = f"""# 神经科学文献策展报告
@@ -85,6 +132,8 @@ class ReportGenerator:
 - **已过滤**: {len(tiers['不推送']) + len(tiers['错误'])} 篇
 
 ---
+
+{statistics_text}
 
 """
         
@@ -289,6 +338,51 @@ def add_Enter(md:str) -> str:
     return md.replace("\n", "\n\n")
 
 
+
+
+
+def generate_title_with_llm(markdown_path: str):
+    """使用 LLM 生成标题"""
+    from call_API import LLM_process
+    from dotenv import load_dotenv
+    import os
+    
+    load_dotenv()
+    api_key = os.getenv("DASHSCOPE_API_KEY")
+    base_url = os.getenv("API_BASE_URL")
+    
+    if not api_key or not base_url:
+        print("[WARNING] API 配置缺失，跳过标题生成")
+        return
+    
+    print("\n正在生成标题...")
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.6-plus")
+    
+    System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
+    
+    with open(markdown_path, "r", encoding="utf-8") as f:
+        main_text_md = f.read()
+    
+    User_prompt = f"下面是神经科学简报内容：{main_text_md[:3000]}... 请根据以上内容，生成标题。"
+    
+    try:
+        response = LLM_engine.client.chat.completions.parse(
+            model=LLM_engine.model,
+            messages=[
+                {"role": "system", "content": System_prompt},
+                {"role": "user", "content": User_prompt},
+            ],
+            extra_body={"enable_thinking": True}
+        )
+        result = response.choices[0].message.content
+        print("\n" + "=" * 60)
+        print("生成的标题:")
+        print("=" * 60)
+        print(result)
+        return result
+    except Exception as e:
+        print(f"[ERROR] 标题生成失败: {e}")
+
 def main():
     """主函数"""
     parser = argparse.ArgumentParser(
@@ -354,50 +448,6 @@ Examples:
         f.seek(0)
         f.write(title + "\n\n" + content)
     
-
-
-def generate_title_with_llm(markdown_path: str):
-    """使用 LLM 生成标题"""
-    from call_API import LLM_process
-    from dotenv import load_dotenv
-    import os
-    
-    load_dotenv()
-    api_key = os.getenv("DASHSCOPE_API_KEY")
-    base_url = os.getenv("API_BASE_URL")
-    
-    if not api_key or not base_url:
-        print("[WARNING] API 配置缺失，跳过标题生成")
-        return
-    
-    print("\n正在生成标题...")
-    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.6-plus")
-    
-    System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
-    
-    with open(markdown_path, "r", encoding="utf-8") as f:
-        main_text_md = f.read()
-    
-    User_prompt = f"下面是神经科学简报内容：{main_text_md[:3000]}... 请根据以上内容，生成标题。"
-    
-    try:
-        response = LLM_engine.client.chat.completions.parse(
-            model=LLM_engine.model,
-            messages=[
-                {"role": "system", "content": System_prompt},
-                {"role": "user", "content": User_prompt},
-            ],
-            extra_body={"enable_thinking": True}
-        )
-        result = response.choices[0].message.content
-        print("\n" + "=" * 60)
-        print("生成的标题:")
-        print("=" * 60)
-        print(result)
-        return result
-    except Exception as e:
-        print(f"[ERROR] 标题生成失败: {e}")
-
 
 if __name__ == "__main__":
     main()

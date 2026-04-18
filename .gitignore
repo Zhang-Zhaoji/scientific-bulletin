@@ -1,7 +1,5 @@
 .vscode/
-*.html
 .env
-
 # Python bytecode & cache
 __pycache__/
 *.py[cod]

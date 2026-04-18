@@ -3,6 +3,7 @@ from thefuzz import fuzz
 import json    
 import time
 import tqdm
+import re
 
 STANDARD_NAME_JSON_PATH = 'data/RORStandardNameDict.json'
 ALIAS_JSON_PATH = 'data/RORAliasNameDict.json'
@@ -10,11 +11,13 @@ LOC_JSON_PATH = 'data/RORLocInfo.json'
 COUNTRY_JSON_PATH = 'data/CountryList.json' 
 SUBREGION_JSON_PATH = 'data/CountrySubdivisionList.json' 
 ABR2COUNTRY_JSON_PATH = 'data/abbr2country.json'
+ALIAS_COUNTRY_JSON_PATH = 'data/aliasCountryName.json'
 
 # example affiliation string:
 '''
 "Department Of Physiology And Neuroscience, Keck School Of Medicine, University Of Southern California, Los Angeles, Ca 90033, Usa"
 '''
+
 def timer(func):
     def wrapper(*args, **kwargs):
         """
@@ -32,11 +35,11 @@ class ROR_Search():
         self.threshold = threshold
         self.standard_name_dict, self.alias_name_dict, self.loc_info = self.load_institute_info()
         self.key_words = ['@', 'Electronic', 'Department Of', 'Key Laboratory', 'School Of']
-        self.country_set, self.subregion_set, self.abbr2country = self.load_regions()
+        self.country_set, self.subregion_set, self.abbr2country, self.alias_country = self.load_regions()
         self._build_index()
-        self.trans = str.maketrans('', '', '0123456789')
+        self.trans = str.maketrans('.?!@#$%^&*()-,;:/\\`\'\"[]', ' ' * len('.?!@#$%^&*()-,;:/\\`\'\"[]'), '0123456789')
     
-    def load_regions(self) -> tuple[set[str], set[str], dict[str, str]]:
+    def load_regions(self) -> tuple[set[str], set[str], dict[str, str], dict[str, str]]:
         """
         Load the regions from the ROR location info.
         """
@@ -46,7 +49,9 @@ class ROR_Search():
             subregions = json.load(f)
         with open(ABR2COUNTRY_JSON_PATH, 'r', encoding='utf-8') as f:
             abbr2country = json.load(f)
-        return set[str](countries), set[str](subregions), abbr2country
+        with open(ALIAS_COUNTRY_JSON_PATH, 'r', encoding='utf-8') as f:
+            alias_country = json.load(f)
+        return set[str](countries), set[str](subregions), abbr2country, alias_country
     
     def _build_index(self):
         """
@@ -95,8 +100,10 @@ class ROR_Search():
             return 2
         elif part in self.subregion_set:
             return 3
-        elif part in self.abbr2country.keys():
+        elif part.lower() in self.abbr2country.keys():
             return 4
+        elif part in self.alias_country.keys():
+            return 5
         else:
             return 0
     
@@ -106,8 +113,9 @@ class ROR_Search():
         Split affiliation into parts by comma, clean each part.
         """
         location_info = [None, None]
-        parts = affiliation.split(',')
-        parts = [part.replace('.', '').translate(self.trans).strip().lower() for part in parts]
+        parts = re.split(r',|\.', affiliation)
+        parts = [part.translate(self.trans).strip() for part in parts]
+        parts = [part for part in parts if part]
         kinds = [self.exclude(part) for part in parts]
         parts = parts[::-1]
         kinds = kinds[::-1]
@@ -115,16 +123,27 @@ class ROR_Search():
         country = next((part for i, part in enumerate(parts) if kinds[i] == 2), None)
         subregion = next((part for i, part in enumerate(parts) if kinds[i] == 3), None)
         abbr = next((part for i, part in enumerate(parts) if kinds[i] == 4), None)
+        alias = next((part for i, part in enumerate(parts) if kinds[i] == 5), None)
         if abbr:
             country = self.abbr2country[abbr.lower().strip()]
+            # print(f"abbr = {abbr}, country = {country}")
         if country:
             location_info[0] = country
+            # print(f"country = {country}")
         if subregion:
             location_info[1] = subregion
+            # print(f"subregion = {subregion}")
+        if alias:
+            country = self.alias_country[alias]
+            location_info[0] = country
+            # print(f"alias = {alias}, country = {country}")
+        # if not abbr and not country and not subregion:
+            # print(f"no country or subregion detected for {affiliation}")
+            # print(f"parts, kinds = {[(part, kind) for part, kind in zip(parts, kinds)]}")
         return cleaned_parts, location_info
     
 
-    # @timer
+
     def extract_institute_info(self, affiliation: str, threshold: int|None = None) -> tuple[str|None, int|None, list]:
         """
         Search the institute name in the ROR standard name dict.
@@ -184,7 +203,6 @@ class ROR_Search():
                 location_info[0] = score_related_country
             if location_info[0] == score_related_country and location_info[1] is None and score_related_subregion:
                 location_info[1] = score_related_subregion
-
         return standard_name, score, location_info
 
 
@@ -192,7 +210,7 @@ if __name__ == '__main__':
 
     
     ror_search = ROR_Search(threshold=90)
-    example_institute_path = 'data/example_institutions.json'
+    example_institute_path = "tmp_files/test_insts.json"
     
     with open(example_institute_path, 'r', encoding='utf-8') as f:
         examples = json.load(f)
@@ -205,12 +223,16 @@ if __name__ == '__main__':
     start_time = time.time()
     
     for example in tqdm.tqdm(examples):
-        result, score, location_info = ror_search.extract_institute_info(example)
+        affiliation = example['name']
+        result, score, location_info = ror_search.extract_institute_info(affiliation)
+        if location_info[0] is None:
+            print(f"\n{affiliation} -> {result} (score: {score}) -> {location_info[0]}, {location_info[1]}")
+            input()
         if result:
             found += 1
             top_candidates.append((result, score, location_info))
         elif result is None:
-            not_found.append(example)
+            not_found.append(affiliation)
             top_candidates.append((result, score, location_info))
     
     elapsed = time.time() - start_time
@@ -226,7 +248,15 @@ if __name__ == '__main__':
     #     input()
     
     if not_found:
-        print(f"未找到 ({len(not_found)} 条):")
+        print(f"未找到 ({len(not_found)}/{total} 条):")
         for aff in not_found:
+            print(f"  {aff}")
+            print(ror_search.extract_institute_info(aff, threshold=0))
+    
+    if not_found:
+        no_location = [aff for aff in not_found if aff[1] is None]
+        print(f"未找到 ({len(no_location)}/{total}) 条 无位置信息:")
+        input()
+        for aff in no_location:
             print(f"  {aff}")
             print(ror_search.extract_institute_info(aff, threshold=0))
