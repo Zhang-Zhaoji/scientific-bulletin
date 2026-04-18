@@ -725,7 +725,26 @@ def print_enrichment_statistics(enriched_papers: List[Dict]):
     print("\n" + "=" * 80)
     print("DATABASE STATISTICS")
     print("=" * 80)
-    print(f"Cached authors: {len(db.authors)}")
+    # 从数据库获取作者数量
+    cursor = db.conn.execute('SELECT COUNT(*) FROM authors')
+    total_authors = cursor.fetchone()[0]
+    print(f"Cached authors: {total_authors}")
+    
+    # 显示缓存命中率
+    print("\n" + "=" * 80)
+    print("CACHE PERFORMANCE")
+    print("=" * 80)
+    hits = db.cache_stats.get('hits', 0)
+    misses = db.cache_stats.get('misses', 0)
+    total = hits + misses
+    if total > 0:
+        hit_rate = hits / total * 100
+        print(f"Cache hits: {hits}")
+        print(f"Cache misses: {misses}")
+        print(f"Cache hit rate: {hit_rate:.2f}%")
+        print(f"API calls saved: {hits} ({hit_rate:.1f}%)")
+    else:
+        print("No cache queries performed")
 
 
 def main():

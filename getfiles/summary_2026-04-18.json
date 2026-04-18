@@ -2,8 +2,11 @@
   "date": "2026-04-18",
   "sources": {
     "arxiv": {
-      "count": 0,
-      "date_range": null
+      "count": 4,
+      "date_range": {
+        "min": "16 Apr 2026",
+        "max": "16 Apr 2026"
+      }
     },
     "biorxiv": {
       "count": 0,
@@ -14,11 +17,8 @@
       "date_range": null
     },
     "science": {
-      "count": 16,
-      "date_range": {
-        "min": "16 Apr 2026",
-        "max": "16 Apr 2026"
-      }
+      "count": 0,
+      "date_range": null
     },
     "cell": {
       "count": 0,

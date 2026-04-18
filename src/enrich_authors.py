@@ -17,10 +17,16 @@ import time
 import json
 import os
 import re
+import sqlite3
+import sys
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from difflib import SequenceMatcher
+
+# 导入SQLite操作函数
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from sql_scripts.sqlfuncs import init_db, search_item, insert_item, search_or_insert
 
 
 # HTTP Headers for API requests
@@ -53,149 +59,137 @@ SENIOR_RESEARCHER_THRESHOLD = {
 
 # 数据库文件路径
 DATA_DIR = "data"
-AUTHOR_DB_FILE = os.path.join(DATA_DIR, "author_database.json")
-INSTITUTION_DB_FILE = os.path.join(DATA_DIR, "institution_database.json")
-SENIOR_RESEARCHERS_FILE = os.path.join(DATA_DIR, "senior_researchers.json")
+DB_PATH = os.path.join(DATA_DIR, "literature.db")
 
 
 class AuthorDatabase:
     """作者数据库管理类"""
     
     def __init__(self):
-        self.authors: Dict[str, Dict] = {}
-        self.institutions: Dict[str, Dict] = {}
-        self.senior_researchers: Dict[str, Dict] = {}
-        self._load_databases()
-    
-    def _load_databases(self):
-        """加载所有数据库"""
-        os.makedirs(DATA_DIR, exist_ok=True)
-        
-        if os.path.exists(AUTHOR_DB_FILE):
-            with open(AUTHOR_DB_FILE, 'r', encoding='utf-8') as f:
-                self.authors = json.load(f)
-            print(f"[DB] Loaded {len(self.authors)} authors from database")
-        
-        if os.path.exists(INSTITUTION_DB_FILE):
-            with open(INSTITUTION_DB_FILE, 'r', encoding='utf-8') as f:
-                self.institutions = json.load(f)
-            print(f"[DB] Loaded {len(self.institutions)} institutions from database")
-        
-        if os.path.exists(SENIOR_RESEARCHERS_FILE):
-            with open(SENIOR_RESEARCHERS_FILE, 'r', encoding='utf-8') as f:
-                self.senior_researchers = json.load(f)
-            print(f"[DB] Loaded {len(self.senior_researchers)} senior researchers from database")
-    
-    def save_databases(self):
-        """保存所有数据库"""
-        with open(AUTHOR_DB_FILE, 'w', encoding='utf-8') as f:
-            json.dump(self.authors, f, ensure_ascii=False, indent=2)
-        
-        with open(INSTITUTION_DB_FILE, 'w', encoding='utf-8') as f:
-            json.dump(self.institutions, f, ensure_ascii=False, indent=2)
-        
-        with open(SENIOR_RESEARCHERS_FILE, 'w', encoding='utf-8') as f:
-            json.dump(self.senior_researchers, f, ensure_ascii=False, indent=2)
-        
-        print(f"[DB] Saved databases: {len(self.authors)} authors, {len(self.institutions)} institutions, {len(self.senior_researchers)} senior researchers")
+        self.conn = init_db(DB_PATH)
+        self.cache_stats = {'hits': 0, 'misses': 0}
+        print("[DB] Connected to SQLite database")
     
     def get_author(self, name: str) -> Optional[Dict]:
-        """从缓存获取作者信息"""
-        return self.authors.get(name)
+        """从数据库获取作者信息，包括机构信息"""
+        query = """
+            SELECT id, name, orcid, h_index, citations, is_senior_researcher 
+            FROM authors 
+            WHERE name = ?
+        """
+        cursor = self.conn.execute(query, (name,))
+        result = cursor.fetchone()
+        if not result:
+            self.cache_stats['misses'] += 1
+            return None
+        self.cache_stats['hits'] += 1
+        
+        author_id, name, orcid, h_index, citations, is_senior_researcher = result
+        
+        # 获取作者的机构信息
+        affiliations = []
+        normalized_affiliations = []
+        countries = []
+        
+        inst_query = """
+            SELECT i.name, i.normalized_name, c.standard_name
+            FROM author_institutions ai
+            JOIN institutions i ON ai.institution_id = i.id
+            LEFT JOIN countries c ON i.country_id = c.id
+            WHERE ai.author_id = ?
+        """
+        inst_cursor = self.conn.execute(inst_query, (author_id,))
+        for row in inst_cursor.fetchall():
+            inst_name, norm_name, country = row
+            if inst_name and inst_name not in affiliations:
+                affiliations.append(inst_name)
+            if norm_name and norm_name not in normalized_affiliations:
+                normalized_affiliations.append(norm_name)
+            if country and country not in countries:
+                countries.append(country)
+        
+        return {
+            'id': author_id,
+            'name': name,
+            'orcid': orcid,
+            'h_index': h_index,
+            'citations': citations,
+            'is_senior_researcher': is_senior_researcher,
+            'affiliation': '; '.join(affiliations) if affiliations else None,
+            'normalized_affiliation': '; '.join(normalized_affiliations) if normalized_affiliations else None,
+            'country': countries[0] if countries else None,
+            'countries': countries
+        }
     
     def update_author(self, name: str, info: Dict, paper_date: str = ""):
-        """更新作者信息，使用文章日期作为first_seen/last_seen"""
-        info['last_updated'] = datetime.now().isoformat()
+        """更新作者信息"""
+        author_data = {
+            'name': name,
+            'orcid': info.get('orcid'),
+            'h_index': info.get('h_index'),
+            'citations': info.get('citations'),
+            'is_senior_researcher': info.get('is_senior_researcher', False)
+        }
         
-        # 使用文章日期而不是当前时间
-        if paper_date:
-            # 尝试解析日期格式
-            try:
-                # 支持格式: "14 Mar 2026" 或 "2026-03-14"
-                for fmt in ['%d %b %Y', '%Y-%m-%d', '%d %B %Y']:
-                    try:
-                        parsed_date = datetime.strptime(paper_date, fmt)
-                        date_str = parsed_date.strftime('%Y-%m-%d')
-                        break
-                    except ValueError:
-                        continue
-                else:
-                    date_str = paper_date
-            except:
-                date_str = paper_date
-        else:
-            date_str = datetime.now().strftime('%Y-%m-%d')
+        author_id = search_or_insert(self.conn, 'authors', ['name'], author_data)
         
-        # 更新first_seen和last_seen
-        if name not in self.authors:
-            info['first_seen'] = date_str
-            info['last_seen'] = date_str
-        else:
-            # 保留最早的first_seen，更新last_seen
-            existing = self.authors[name]
-            info['first_seen'] = existing.get('first_seen', date_str)
-            # 比较日期，保留最晚的
-            existing_last = existing.get('last_seen', date_str)
-            info['last_seen'] = max(date_str, existing_last)
+        if 'affiliation' in info:
+            affiliations = split_affiliation(info['affiliation'])
+            for affil in affiliations:
+                norm_affil = normalize_affiliation(affil)
+                if norm_affil:
+                    institution_data = {
+                        'name': norm_affil,
+                        'raw_affiliation': affil,
+                        'country_id': None,
+                        'normalized_name': norm_affil
+                    }
+                    institution_id = search_or_insert(self.conn, 'institutions', ['name'], institution_data)
+                    
+                    author_inst_data = {
+                        'author_id': author_id,
+                        'institution_id': institution_id
+                    }
+                    search_or_insert(self.conn, 'author_institutions', ['author_id', 'institution_id'], author_inst_data)
         
-        self.authors[name] = info
-        
-        # 如果是大牛，更新大牛数据库
-        if info.get('is_senior_researcher'):
-            if name not in self.senior_researchers:
-                self.senior_researchers[name] = {
-                    'name': name,
-                    'h_index': info.get('h_index'),
-                    'citations': info.get('citations'),
-                    'works_count': info.get('works_count'),
-                    'affiliation': info.get('normalized_affiliation') or info.get('affiliation'),
-                    'first_seen': info.get('first_seen', date_str),
-                    'paper_count': 0
-                }
-            
-            # 更新last_seen和paper_count
-            sr = self.senior_researchers[name]
-            sr['last_seen'] = max(sr.get('last_seen', date_str), date_str)
-            sr['paper_count'] = sr.get('paper_count', 0) + 1
+        self.conn.commit()
     
     def get_institution(self, name: str) -> Optional[Dict]:
-        """从缓存获取单位信息"""
-        return self.institutions.get(name)
+        """从数据库获取单位信息"""
+        query = """
+            SELECT id, name, raw_affiliation, country_id, normalized_name 
+            FROM institutions 
+            WHERE name = ?
+        """
+        cursor = self.conn.execute(query, (name,))
+        result = cursor.fetchone()
+        if result:
+            return {
+                'id': result[0],
+                'name': result[1],
+                'raw_affiliation': result[2],
+                'country_id': result[3],
+                'normalized_name': result[4]
+            }
+        return None
     
     def update_institution(self, name: str, info: Dict, paper_date: str = ""):
-        """更新单位信息，使用文章日期"""
-        # 使用文章日期
-        if paper_date:
-            date_str = paper_date
-            try:
-                for fmt in ['%d %b %Y', '%Y-%m-%d', '%d %B %Y']:
-                    try:
-                        parsed_date = datetime.strptime(paper_date, fmt)
-                        date_str = parsed_date.strftime('%Y-%m-%d')
-                        break
-                    except ValueError:
-                        continue
-            except:
-                pass
-        else:
-            date_str = datetime.now().strftime('%Y-%m-%d')
+        """更新单位信息"""
+        institution_data = {
+            'name': name,
+            'raw_affiliation': info.get('affiliation'),
+            'country_id': None,
+            'normalized_name': name
+        }
         
-        if name not in self.institutions:
-            self.institutions[name] = {
-                'name': name,
-                'first_seen': date_str,
-                'countries': [],
-                'count': 0
-            }
+        search_or_insert(self.conn, 'institutions', ['name'], institution_data)
         
-        # 更新last_seen和count
-        existing_last = self.institutions[name].get('last_seen', date_str)
-        self.institutions[name]['last_seen'] = max(date_str, existing_last)
-        self.institutions[name]['count'] = self.institutions[name].get('count', 0) + 1
-        
-        # 更新国籍信息
-        if info.get('country') and info['country'] not in self.institutions[name]['countries']:
-            self.institutions[name]['countries'].append(info['country'])
+        self.conn.commit()
+    
+    def save_databases(self):
+        """保存数据库（SQLite自动保存，这里只是提交事务）"""
+        self.conn.commit()
+        print("[DB] Database committed")
 
 
 # 全局数据库实例
@@ -937,7 +931,7 @@ def enrich_papers_concurrent(papers: List[Dict], max_workers: int = 5) -> List[D
         authors = paper.get('authors', [])
         for author_name in list(set(authors[:2] + authors[-2:])):
             # Check cache
-            cached = db.authors.get(author_name)
+            cached = db.get_author(author_name)
             if cached and cached.get('h_index') is not None:
                 cached_authors.add(author_name)
                 continue
@@ -1040,7 +1034,7 @@ def compile_enriched_paper(paper: Dict, db: AuthorDatabase, pmid_affiliations: D
     
     for author_name in paper.get('authors', []):
         # Get from database
-        cached = db.authors.get(author_name, {})
+        cached = db.get_author(author_name) or {}
         
         info = {
             'name': author_name,
