@@ -229,7 +229,10 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
             citations = iauthor.get('citations', None)
             is_senior_researcher = iauthor.get('is_senior_researcher', None)
             # add institute_name for further check
-            institute_names = iauthor.get('normalized_affiliation', None)
+            # 优先使用 ROR 标准化的机构名称
+            institute_names = iauthor.get('ror_normalized_affiliation', None)
+            if not institute_names:
+                institute_names = iauthor.get('normalized_affiliation', None)
             if isinstance(institute_names, str):
                 institute_names = institute_names.split(';') # default to be a list
             important_authors.append({
@@ -408,9 +411,23 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
         
         current_institution_ids = []
         for institute_name in institute_names:
+            if not institute_name:
+                continue
+            # 先尝试使用原始名称搜索
             found_ids = search_item(conn, 'institutions', ['name'], [institute_name])
             if found_ids:
                 current_institution_ids.extend(found_ids)
+            else:
+                # 如果没找到，尝试使用 normalized_name 搜索
+                found_ids = search_item(conn, 'institutions', ['normalized_name'], [institute_name])
+                if found_ids:
+                    current_institution_ids.extend(found_ids)
+                else:
+                    # 尝试模糊搜索
+                    cursor = conn.execute("SELECT id FROM institutions WHERE name LIKE ? OR normalized_name LIKE ?", (f"%{institute_name}%", f"%{institute_name}%"))
+                    result = cursor.fetchall()
+                    if result:
+                        current_institution_ids.extend([row[0] for row in result])
         
         candidate_ids = search_item(conn, 'authors', ['name'], [author['name']])
         matched_id = None

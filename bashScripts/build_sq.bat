@@ -3,4 +3,4 @@ python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-03-21_e
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-03-28_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260328_004204.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-04-04_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260404_020849.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-04-11_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260411_125808.json"
-python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260418_023838.json"
+:: python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260418_023838.json"
