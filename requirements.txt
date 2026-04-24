@@ -1,0 +1,15 @@
+beautifulsoup4
+fuzzywuzzy
+jsonlines
+matplotlib
+openai
+pydantic
+pyecharts
+python-dotenv
+python_dateutil
+Requests
+selenium
+snapshot_selenium
+thefuzz
+tqdm
+webdriver_manager

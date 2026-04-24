@@ -376,7 +376,7 @@ def generate_title_with_llm(markdown_path: str):
         return
     
     print("\n正在生成标题...")
-    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="kimi-k2.6")
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="deepseek-v4-flash")
     
     System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
     
