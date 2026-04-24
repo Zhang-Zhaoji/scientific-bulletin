@@ -250,30 +250,50 @@ class ReportGenerator:
             md += f"\n\n**中文标题**: {title_zh}"
         md += "\n\n"
         
-        md += f"""**作者**: {', '.join(authors[:3])}{' et al.' if len(authors) > 3 else ''}  \n\n
-**期刊**: {journal} | **日期**: {date}"""
+        # 作者信息
+        md += f"**作者**: {', '.join(authors[:3])}{' et al.' if len(authors) > 3 else ''}"
         
-        # 添加大牛作者信息
+        # 机构/工作单位信息
+        if affiliations:
+            md += "\n\n**单位**: "
+            unique_affiliations = list(set(affiliations[:3]))  # 去重，最多显示3个单位
+            md += "; ".join(unique_affiliations)
+            if len(affiliations) > 3:
+                md += " 等"
+        elif senior_authors:
+            # 如果没有全局affiliations，尝试从资深作者信息提取
+            author_institutions = []
+            for sr in senior_authors[:2]:
+                inst = sr.get('institution', '')
+                if inst and inst != 'N/A':
+                    author_institutions.append(inst)
+            if author_institutions:
+                md += "\n\n**单位**: " + "; ".join(list(set(author_institutions)))
+        
+        # 基础信息
+        md += f"\n\n**期刊**: {journal} | **发表日期**: {date}"
+        
+        # 知名学者信息
         if senior_authors:
-            md += "\n\n**知名学者**: "
+            md += "\n\n**资深研究者**: "
             senior_summaries = []
             for sr in senior_authors[:2]:  # 最多显示2个
                 name = sr.get('name', '')
                 h_idx = sr.get('h_index', 'N/A')
-                senior_summaries.append(f"{name} (h={h_idx})")
+                senior_summaries.append(f"{name} (h指数={h_idx})")
             md += "; ".join(senior_summaries)
         
-        # 添加国家信息
+        # 国家信息
         if countries:
             md += f"\n\n**研究地区**: {', '.join(countries)}"
         
-        md += f"\n\n**分类**: {primary_category}"
+        md += f"\n\n**研究领域**: {primary_category}"
         
         if secondary_category:
             md += f" / {secondary_category}"
         
         if cross_tags:
-            md += f"\n\n**标签**: {', '.join(cross_tags[:5])}"
+            md += f"\n\n**关键词**: {', '.join(cross_tags[:6])}"
         
         # 显示推荐等级
         if recommendation_tier:
@@ -290,7 +310,7 @@ class ReportGenerator:
             if key_strength:
                 md += f"\n\n**核心优势**: {key_strength}"
             if key_limitation:
-                md += f"\n\n**主要局限**: {key_limitation}"
+                md += f"\n\n**研究局限**: {key_limitation}"
             if target_audience:
                 md += f"\n\n**目标读者**: {target_audience}"
             
@@ -300,10 +320,10 @@ class ReportGenerator:
             
             md += "\n\n"
             
-            if crossover and domain == "\n\n域外高影响":
-                md += "\n\n**跨界价值**: 该研究虽非神经科学领域，但可能为神经科学带来重要方法学或理论启发。\n\n"
+            if crossover and domain == "域外高影响":
+                md += f"\n\n**跨界价值**: {result.get('crossover_value', '该研究虽非神经科学领域，但可能为神经科学带来重要方法学或理论启发。')}\n\n"
         else:
-            md += f"\n\n**评分**: {total_score:.1f}/10 | **要点**: {feature_angle}"
+            md += f"\n\n**评分**: {total_score:.1f}/10 | **摘要**: {feature_angle}"
             
             # 简要提及显示简洁版信息
             if key_strength or key_limitation or target_audience:
@@ -356,7 +376,7 @@ def generate_title_with_llm(markdown_path: str):
         return
     
     print("\n正在生成标题...")
-    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="qwen3.6-plus")
+    LLM_engine = LLM_process(api_key=api_key, base_url=base_url, model="kimi-k2.6")
     
     System_prompt = "你是一个专业的神经科学论文编辑，下面是最新一周的神经科学简报内容，按照不同等级进行了推荐。你被要求从推荐中找到几个最让人关心的内容来生成标题。"
     

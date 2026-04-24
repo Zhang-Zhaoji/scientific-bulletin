@@ -60,8 +60,8 @@ Examples:
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
                         help='Limit number of papers to process')
-    parser.add_argument('--model', default='qwen3.6-plus',
-                        help='LLM model to use (default: qwen3.6-plus)')
+    parser.add_argument('--model', default='kimi-k2.6',
+                        help='LLM model to use (default: kimi-k2.6)')
     
     args = parser.parse_args()
     
