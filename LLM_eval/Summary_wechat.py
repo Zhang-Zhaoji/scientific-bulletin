@@ -363,7 +363,7 @@ def generate_title_with_llm(markdown_path: str):
     with open(markdown_path, "r", encoding="utf-8") as f:
         main_text_md = f.read()
     
-    User_prompt = f"下面是神经科学简报内容：{main_text_md[:3000]}... 请根据以上内容，生成标题。"
+    User_prompt = f"下面是神经科学简报内容：```{main_text_md}``` 请根据以上内容，生成标题。"
     
     try:
         response = LLM_engine.client.chat.completions.parse(

@@ -111,7 +111,7 @@ class WorldHeatmap:
 if __name__ == "__main__":
     db_api = DBAPI()
     world_heatmap = WorldHeatmap(db_api)
-    country_article_count = world_heatmap.get_world_data(("2026-04-04", "2099-12-31"))
+    country_article_count = world_heatmap.get_world_data(("2026-04-18", "2099-12-31"))
     world_heatmap.render_heatmap(country_article_count)
     world_heatmap.render_pie_chart(country_article_count, top_n=10)
     db_api.close()

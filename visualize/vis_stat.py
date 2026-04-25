@@ -26,6 +26,9 @@ class StatisticsVisualizer:
         counts = [0] * len(bins)
         
         for result in results:
+            domain = result.get('domain', 'Notfound')
+            if domain == '域外局限':
+                continue
             score = result.get('total_score', 0)
             for i, (low, high) in enumerate(bins):
                 if low <= score < high:
@@ -47,7 +50,7 @@ class StatisticsVisualizer:
         FROM institutions i
         JOIN article_institutions ai ON i.id = ai.institution_id
         JOIN articles a ON ai.article_id = a.id
-        WHERE 1=1
+        WHERE a.id NOT IN (SELECT article_id FROM article_themes WHERE theme_id = 1)
         """
         params = []
         
@@ -120,8 +123,7 @@ class StatisticsVisualizer:
             text += "| 排名 | 机构 | 文章数量 |\n"
             text += "|------|------|----------|\n"
             for i, (name, count) in enumerate(institution_stats[:10], 1):
-                short_name = name if len(name) < 30 else name[:27] + "..."
-                text += f"| {i} | {short_name} | {count} |\n"
+                text += f"| {i} | {name} | {count} |\n"
             text += "\n"
         
         if score_stats:

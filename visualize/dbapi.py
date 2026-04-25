@@ -27,7 +27,7 @@ class DBAPI:
         JOIN institutions i ON c.id = i.country_id
         JOIN article_institutions ai ON i.id = ai.institution_id
         JOIN articles a ON ai.article_id = a.id
-        WHERE 1=1
+        WHERE a.id NOT IN (SELECT article_id FROM article_themes WHERE theme_id = 1)
         """
         params = []
         

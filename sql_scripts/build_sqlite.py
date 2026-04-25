@@ -411,9 +411,6 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
         
         current_institution_ids = []
         for institute_name in institute_names:
-            if not institute_name:
-                continue
-            # 先尝试使用原始名称搜索
             found_ids = search_item(conn, 'institutions', ['name'], [institute_name])
             if found_ids:
                 current_institution_ids.extend(found_ids)
