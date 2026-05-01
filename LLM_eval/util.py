@@ -83,3 +83,4 @@ class PaperResult:
     target_audience: str
     crossover_value: str
     editor_note: str
+    cross_domain_potential: float = 0.0

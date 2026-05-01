@@ -8,13 +8,20 @@ INTEGRATED: Automatic author enrichment + ROR institution name normalization
 
 import argparse
 import datetime
+import glob
 import json
 import jsonlines
 import os
+import re
 import sys
 import time
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple, Set
+
+try:
+    from thefuzz import fuzz
+except ImportError:
+    from fuzzywuzzy import fuzz
 
 # Add src directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -48,10 +55,19 @@ from enrich_authors import enrich_papers_concurrent, get_database
 from supp_func import ROR_Search
 
 # Default configuration
-DEFAULT_DAYS = 7
+DEFAULT_DAYS = 8 # more than 1 week to ensure not losing one week of data
 DEFAULT_OUTPUT_DIR = "getfiles"
 DEFAULT_WORKERS = 2
 DEFAULT_ROR_THRESHOLD = 90
+DEFAULT_FUZZY_THRESHOLD = 90
+DEFAULT_HISTORY_WEEKS = 1
+
+# Known non-article titles to filter out
+JUNK_TITLE_PATTERNS = [
+    re.compile(r'^subscription\s+(and|&)\s+copyright\s+information', re.IGNORECASE),
+    re.compile(r'^in\s+this\s+issue', re.IGNORECASE),
+    re.compile(r'^table\s+of\s+contents', re.IGNORECASE),
+]
 
 # Nature journal URLs to crawl
 NATURE_JOURNALS = [
@@ -66,6 +82,105 @@ NATURE_JOURNALS = [
     'https://www.nature.com/nathumbehav/research-articles',
     'https://www.nature.com/nathumbehav/reviews-and-analysis',
 ]
+
+
+def is_junk_title(title: str) -> bool:
+    """Return True if title is a known non-article entry (TOC, subscription info, etc.)."""
+    if not title or not title.strip():
+        return True
+    t = title.strip()
+    for pat in JUNK_TITLE_PATTERNS:
+        if pat.search(t):
+            return True
+    return False
+
+
+def normalize_title(title: str) -> str:
+    """Normalize title for comparison: lowercase, strip, collapse whitespace, remove punctuation."""
+    t = title.lower().strip()
+    t = re.sub(r'[^\w\s]', '', t)
+    t = re.sub(r'\s+', ' ', t)
+    return t
+
+
+def has_meaningful_abstract(paper: Dict) -> bool:
+    """Return True if paper has a non-empty, non-placeholder abstract."""
+    ab = paper.get('abstract')
+    if not ab or not str(ab).strip():
+        return False
+    ab = str(ab).strip().lower()
+    if ab in ('', 'none', 'null', 'n/a', 'not available'):
+        return False
+    return True
+
+
+def load_historical_identifiers(
+    output_dir: str = DEFAULT_OUTPUT_DIR,
+    max_weeks: int = DEFAULT_HISTORY_WEEKS
+) -> Tuple[Set[str], Set[str], Set[str], Set[str], Set[str], Set[str]]:
+    """
+    Load DOIs, PMIDs, and normalized titles from historical enriched files.
+
+    Returns 6 sets:
+        (seen_dois, seen_pmids, seen_titles,
+         recheck_dois, recheck_pmids, recheck_titles)
+    The "recheck" sets contain identifiers of papers that LACK an abstract,
+    so they should be re-fetched in the current run.
+    """
+    pattern = os.path.join(output_dir, 'all_papers_*_enriched_ror_refined.jsonl')
+    files = sorted(glob.glob(pattern))
+    files = files[-max_weeks:]
+
+    # Exclude today's file to avoid self-deduplication when re-running the same day
+    today_str = datetime.datetime.now().strftime('%Y-%m-%d')
+    files = [f for f in files if today_str not in os.path.basename(f)]
+
+    seen_dois: Set[str] = set()
+    seen_pmids: Set[str] = set()
+    seen_titles: Set[str] = set()
+
+    recheck_dois: Set[str] = set()
+    recheck_pmids: Set[str] = set()
+    recheck_titles: Set[str] = set()
+
+    if not files:
+        return seen_dois, seen_pmids, seen_titles, recheck_dois, recheck_pmids, recheck_titles
+
+    print(f"[DEDUP] Loading historical identifiers from {len(files)} previous issue(s)...")
+
+    for f in files:
+        try:
+            with jsonlines.open(f) as reader:
+                for obj in reader:
+                    has_ab = has_meaningful_abstract(obj)
+
+                    d = obj.get('doi')
+                    if d and str(d).strip() and str(d).lower() != 'none':
+                        doi_key = str(d).strip().lower()
+                        seen_dois.add(doi_key)
+                        if not has_ab:
+                            recheck_dois.add(doi_key)
+
+                    p = obj.get('pmid')
+                    if p and str(p).strip() and str(p).lower() != 'none':
+                        pmid_key = str(p).strip().lower()
+                        seen_pmids.add(pmid_key)
+                        if not has_ab:
+                            recheck_pmids.add(pmid_key)
+
+                    t = obj.get('title', '').strip()
+                    if t:
+                        nt = normalize_title(t)
+                        seen_titles.add(nt)
+                        if not has_ab:
+                            recheck_titles.add(nt)
+        except Exception as e:
+            print(f"[WARN] Failed to read historical file {f}: {e}")
+            continue
+
+    print(f"[DEDUP] Historical cache: {len(seen_dois)} DOIs, {len(seen_pmids)} PMIDs, {len(seen_titles)} titles")
+    print(f"[DEDUP] Missing abstract & queued for recheck: {len(recheck_dois)} DOIs, {len(recheck_pmids)} PMIDs, {len(recheck_titles)} titles")
+    return seen_dois, seen_pmids, seen_titles, recheck_dois, recheck_pmids, recheck_titles
 
 
 def fetch_all_arxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 999, use_extended: bool = False) -> List[Dict]:
@@ -420,14 +535,34 @@ def fetch_all_cell_papers() -> List[Dict]:
         return []
 
 
-def merge_papers(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
-                 nature_papers: List[Dict], science_papers: List[Dict],
-                 cell_papers: List[Dict], jneurophys_papers: List[Dict],
-                 jneurosci_papers: List[Dict], jcogn_papers: List[Dict],
-                 jvis_papers: List[Dict], pnas_papers: List[Dict],
-                 natcomm_papers: List[Dict], brain_papers: List[Dict],
-                 sciadv_papers: List[Dict], elife_papers: List[Dict]) -> List[Dict]:
-    """Merge papers from multiple sources, removing duplicates."""
+def merge_papers(
+    arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
+    nature_papers: List[Dict], science_papers: List[Dict],
+    cell_papers: List[Dict], jneurophys_papers: List[Dict],
+    jneurosci_papers: List[Dict], jcogn_papers: List[Dict],
+    jvis_papers: List[Dict], pnas_papers: List[Dict],
+    natcomm_papers: List[Dict], brain_papers: List[Dict],
+    sciadv_papers: List[Dict], elife_papers: List[Dict],
+    historical_dois: Optional[Set[str]] = None,
+    historical_pmids: Optional[Set[str]] = None,
+    historical_titles: Optional[Set[str]] = None,
+    recheck_dois: Optional[Set[str]] = None,
+    recheck_pmids: Optional[Set[str]] = None,
+    recheck_titles: Optional[Set[str]] = None,
+    fuzzy_threshold: int = DEFAULT_FUZZY_THRESHOLD
+) -> List[Dict]:
+    """Merge papers from multiple sources, removing duplicates.
+
+    Deduplication priority:
+      1. Exact DOI match (most reliable)
+      2. Exact PMID match
+      3. Exact normalized title match
+      4. Fuzzy title match (thefuzz ratio >= threshold)
+
+    Papers that matched historically but lacked an abstract are "rechecked" —
+    they are kept in the current run so enrichment has a chance to fill the gap.
+    Also filters known junk titles (TOC pages, subscription info, etc.).
+    """
     print("\n" + "=" * 80)
     print("Merging and deduplicating papers...")
     print("=" * 80)
@@ -450,21 +585,100 @@ def merge_papers(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
 
     print(f"Total papers before deduplication: {len(all_papers)}")
 
-    seen_titles = set()
+    # Filter junk titles
+    filtered = [p for p in all_papers if not is_junk_title(p.get('title', ''))]
+    junk_removed = len(all_papers) - len(filtered)
+    if junk_removed:
+        print(f"Junk / non-article titles removed: {junk_removed}")
+
+    # Initialize tracking sets
+    seen_dois: Set[str] = set(historical_dois) if historical_dois else set()
+    seen_pmids: Set[str] = set(historical_pmids) if historical_pmids else set()
+    seen_titles: Set[str] = set(historical_titles) if historical_titles else set()
+
+    recheck_doi_set: Set[str] = set(recheck_dois) if recheck_dois else set()
+    recheck_pmid_set: Set[str] = set(recheck_pmids) if recheck_pmids else set()
+    recheck_title_set: Set[str] = set(recheck_titles) if recheck_titles else set()
+
     unique_papers = []
     duplicates = 0
+    historical_duplicates = 0
+    recheck_kept = 0
 
-    for paper in all_papers:
-        title_key = paper.get('title', '').lower().strip()
-        title_key = ''.join(c for c in title_key if c.isalnum() or c.isspace())
+    for paper in filtered:
+        doi = paper.get('doi')
+        pmid = paper.get('pmid')
+        title = paper.get('title', '').strip()
+        norm_title = normalize_title(title)
 
-        if title_key and title_key not in seen_titles:
-            seen_titles.add(title_key)
-            unique_papers.append(paper)
-        else:
-            duplicates += 1
+        is_recheck = False
+
+        # 1. Exact DOI match
+        if doi and str(doi).strip() and str(doi).lower() != 'none':
+            doi_key = str(doi).strip().lower()
+            if doi_key in seen_dois:
+                if doi_key in recheck_doi_set:
+                    is_recheck = True
+                else:
+                    duplicates += 1
+                    if historical_dois and doi_key in historical_dois:
+                        historical_duplicates += 1
+                    continue
+            seen_dois.add(doi_key)
+
+        # 2. Exact PMID match
+        if pmid and str(pmid).strip() and str(pmid).lower() != 'none':
+            pmid_key = str(pmid).strip().lower()
+            if pmid_key in seen_pmids:
+                if pmid_key in recheck_pmid_set:
+                    is_recheck = True
+                else:
+                    duplicates += 1
+                    if historical_pmids and pmid_key in historical_pmids:
+                        historical_duplicates += 1
+                    continue
+            seen_pmids.add(pmid_key)
+
+        # 3. Exact normalized title match
+        if norm_title:
+            if norm_title in seen_titles:
+                if norm_title in recheck_title_set:
+                    is_recheck = True
+                else:
+                    duplicates += 1
+                    if historical_titles and norm_title in historical_titles:
+                        historical_duplicates += 1
+                    continue
+
+            # 4. Fuzzy title match (only if exact match missed)
+            is_dup = False
+            for existing in seen_titles:
+                min_len = min(len(existing), len(norm_title))
+                max_len = max(len(existing), len(norm_title))
+                if max_len == 0:
+                    continue
+                if abs(max_len - min_len) / max_len > 0.3:
+                    continue
+                if fuzz.ratio(norm_title, existing) >= fuzzy_threshold:
+                    is_dup = True
+                    break
+            if is_dup:
+                duplicates += 1
+                continue
+
+            seen_titles.add(norm_title)
+
+        if is_recheck:
+            paper['_abstract_recheck'] = True
+            recheck_kept += 1
+
+        unique_papers.append(paper)
 
     print(f"Duplicates removed: {duplicates}")
+    if historical_duplicates:
+        print(f"  (including {historical_duplicates} historical duplicates from previous issues)")
+    if recheck_kept:
+        print(f"  {recheck_kept} historical paper(s) kept for abstract recheck")
     print(f"Unique papers: {len(unique_papers)}")
 
     def parse_date(paper: Dict) -> datetime.datetime:
@@ -775,6 +989,10 @@ Examples:
                         help='Save separate files per source, do not merge')
     parser.add_argument('--skip-dedup', action='store_true',
                         help='Skip deduplication when merging')
+    parser.add_argument('--no-historical-dedup', action='store_true',
+                        help='Skip deduplication against previous issues (default: historical dedup is ON)')
+    parser.add_argument('--history-weeks', type=int, default=DEFAULT_HISTORY_WEEKS,
+                        help=f'How many previous issues to check for historical dedup (default: {DEFAULT_HISTORY_WEEKS})')
     parser.add_argument('--arxiv-only', action='store_true', help='Only fetch from arXiv')
     parser.add_argument('--biorxiv-only', action='store_true', help='Only fetch from bioRxiv')
     parser.add_argument('--nature-only', action='store_true', help='Only fetch from Nature journals')
@@ -1004,6 +1222,19 @@ Examples:
             print("\n[OK] Done!")
 
         else:
+            # Load historical identifiers for cross-issue deduplication
+            hist_dois = set()
+            hist_pmids = set()
+            hist_titles = set()
+            recheck_dois = set()
+            recheck_pmids = set()
+            recheck_titles = set()
+            if not args.skip_dedup and not args.no_historical_dedup:
+                (hist_dois, hist_pmids, hist_titles,
+                 recheck_dois, recheck_pmids, recheck_titles) = load_historical_identifiers(
+                    args.output_dir, max_weeks=args.history_weeks
+                )
+
             if args.skip_dedup:
                 merged_papers = []
                 merged_papers.extend(arxiv_papers)
@@ -1033,10 +1264,18 @@ Examples:
                         return datetime.datetime.min
                 merged_papers.sort(key=parse_date, reverse=True)
             else:
-                merged_papers = merge_papers(arxiv_papers, biorxiv_papers, nature_papers, science_papers,
-                                         cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers,
-                                         jvis_papers, pnas_papers, natcomm_papers, brain_papers,
-                                         sciadv_papers, elife_papers)
+                merged_papers = merge_papers(
+                    arxiv_papers, biorxiv_papers, nature_papers, science_papers,
+                    cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers,
+                    jvis_papers, pnas_papers, natcomm_papers, brain_papers,
+                    sciadv_papers, elife_papers,
+                    historical_dois=hist_dois if hist_dois else None,
+                    historical_pmids=hist_pmids if hist_pmids else None,
+                    historical_titles=hist_titles if hist_titles else None,
+                    recheck_dois=recheck_dois if recheck_dois else None,
+                    recheck_pmids=recheck_pmids if recheck_pmids else None,
+                    recheck_titles=recheck_titles if recheck_titles else None,
+                )
 
             raw_filepath = save_merged_papers(merged_papers, args.output_dir)
             save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers,

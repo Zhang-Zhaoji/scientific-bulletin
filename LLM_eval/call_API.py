@@ -1,7 +1,7 @@
 import json
 from openai import OpenAI
 import os
-from StructuredPrompt import PromptGenerator, Response1, Response2General, Response2Neuro, Response3, GeneralScores
+from StructuredPrompt import PromptGenerator, Response1, Response2General, Response2Neuro, Response2Skipped, Response3
 from util import Paper, PaperResult, DomainType
 
 class LLM_process:
@@ -48,11 +48,12 @@ class ArticleProcess:
 
         # 直接访问 Pydantic 模型对象的属性
         self.title_zh = result_json1.title_zh
-        
+
         self.domain = result_json1.domain
         self.domain_confidence = result_json1.confidence
         self.primary_category = result_json1.primary_category
         self.domain_reasoning = result_json1.reasoning
+        self.cross_domain_potential = result_json1.cross_domain_potential
 
         # 将 Pydantic 模型对象转换为字典传递给 _stage2_strict_scoring 方法
         prompt2 = PaperPromptGenerator._stage2_strict_scoring(paper=self.paper, domain_result=result_json1.model_dump())
@@ -61,16 +62,7 @@ class ArticleProcess:
         elif self.domain == DomainType.CROSS_HIGH_IMPACT and prompt2:
             result_json2 = LLM_api.completion(PaperPromptGenerator.SYSTEM_PROMPT, prompt2, Response2General)
         elif self.domain == DomainType.CROSS_LIMITED and not prompt2:
-            scores = GeneralScores(Importance=0.,Transferability=0.,Inspiration=0.,Timeliness=0., Accessibility=0.)
-            # 为字符串字段提供有效的默认值
-            result_json2 = {
-                'scores': scores.model_dump(),
-                'confidence': 0,
-                'feature_angle': '无',
-                'key_strength': '无',
-                'key_limitation': '无',
-                'target_audience': '无'
-            }
+            result_json2 = Response2Skipped()
         else:
             raise RuntimeError(f'The type of research is {self.domain}, but the prompt is not empty = {prompt2}')
         assert result_json2 is not None
@@ -125,6 +117,7 @@ class ArticleProcess:
             target_audience=self.target_audience,
             crossover_value=self.crossover_value,
             editor_note=self.editor_note,
+            cross_domain_potential=self.cross_domain_potential,
         )
 
         return AnalyzeResult
