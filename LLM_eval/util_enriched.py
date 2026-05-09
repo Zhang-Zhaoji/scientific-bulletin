@@ -68,7 +68,7 @@ class EnrichedPaper(Paper):
             # 尝试提取大学/研究所名称
             if 'University' in affil or 'Institute' in affil or 'College' in affil:
                 # 取前50字符
-                inst_short = affil[:50] + "..." if len(affil) > 50 else affil
+                inst_short =  affil
                 institutions.append(inst_short)
         
         if not institutions and self.affiliations:

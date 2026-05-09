@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python3 *)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "WebFetch(domain:www.science.org)",
+      "Bash(pip install *)"
     ]
   }
 }

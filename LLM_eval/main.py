@@ -60,8 +60,8 @@ Examples:
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
                         help='Limit number of papers to process')
-    parser.add_argument('--model', default='deepseek-v4-flash',
-                        help='LLM model to use (default: deepseek-v4-flash)')
+    parser.add_argument('--model', default='deepseek-v4-pro',
+                        help='LLM model to use (default: deepseek-v4-pro)')
     
     args = parser.parse_args()
     

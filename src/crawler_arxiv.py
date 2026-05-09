@@ -14,6 +14,10 @@ from xml.etree import ElementTree as ET
 from typing import List, Dict, Optional
 import jsonlines
 
+ARXIV_HEADERS = {
+    'User-Agent': 'scientific-bulletin/1.0 (zhang-zj@stu.pku.edu.cn)'  # You may replace with your email
+}
+
 # arXiv API base URL
 ARXIV_API_URL = "http://export.arxiv.org/api/query"
 
@@ -85,8 +89,9 @@ def fetch_arxiv_papers(
         "sortOrder": sort_order
     }
     
+    # Make API request with headers
     try:
-        response = requests.get(ARXIV_API_URL, params=params, timeout=30)
+        response = requests.get(ARXIV_API_URL, params=params, timeout=30, headers=ARXIV_HEADERS)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"[ERROR] Failed to fetch from arXiv: {e}")
@@ -260,6 +265,7 @@ def fetch_recent_arxiv_papers(
         
         # Fetch recent papers without API date filter (it's unreliable)
         # Fetch more than needed to ensure we get enough after filtering
+        # Add arXiv headers to API request
         fetch_count = max(max_results_per_category * 2, 100)
         papers = fetch_arxiv_papers(
             category=category,

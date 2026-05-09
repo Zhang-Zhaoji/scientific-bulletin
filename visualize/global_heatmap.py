@@ -1,11 +1,10 @@
 from pyecharts.charts import Map, Pie
 from pyecharts import options as opts
-from pyecharts.render import make_snapshot
-from snapshot_selenium import snapshot
 import datetime
 import os
 
 from dbapi import DBAPI
+from snapshot_helper import take_screenshot
 
 HEATMAP_ROOT_DIR = '../Imgs/visulize_img/globalHeatmap'
 PIE_ROOT_DIR = '../Imgs/visulize_img/countryPie'
@@ -21,6 +20,7 @@ class WorldHeatmap:
         self.HEATMAP_ROOT_DIR = HEATMAP_ROOT_DIR
         self.PIE_ROOT_DIR = PIE_ROOT_DIR
         
+        os.makedirs(self.HEATMAP_ROOT_DIR, exist_ok=True)
         os.makedirs(self.PIE_ROOT_DIR, exist_ok=True)
 
     def render_pie_chart(self, country_article_count: list[tuple[str, int]], top_n: int = 10):
@@ -62,17 +62,22 @@ class WorldHeatmap:
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.PIE_ROOT_DIR, f"{date}_pie.html")
         pie.render(output_path)
-        make_snapshot(snapshot, pie.render(), output_path.replace(".html", ".png"))
+        take_screenshot(output_path, output_path.replace(".html", ".png"))
 
-    def get_world_data(self, date_range)->list[tuple[str, int]]:
+    def get_world_data(self, start_date=None, end_date=None)->list[tuple[str, int]]:
         """
         从数据库中获取全球文章数量
-        :param date_range: 日期范围, 格式为 (start_date, end_date)
+        :param start_date: 起始日期 (YYYY-MM-DD)，None 表示7天前
+        :param end_date: 结束日期 (YYYY-MM-DD)，None 表示今天
         :return: 国家-文章数量列表
         """
-        start_date, end_date = date_range
+        if end_date is None:
+            end_date = datetime.datetime.now().strftime("%Y-%m-%d")
+        if start_date is None:
+            start_date = (datetime.datetime.now() - datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+        
         country_article_count = self.db_api.get_country_article_count(start_date, end_date)
-        print(f"获取到 {start_date} 到 {end_date} 之间的文章数量: {len(country_article_count)} 个")
+        print(f"获取到 {start_date} 到 {end_date} 之间的文章数量: {len(country_article_count)} 个国家/地区")
         print("国家-文章数量列表:")
         print("="*20)
         for name_count in country_article_count:
@@ -87,6 +92,9 @@ class WorldHeatmap:
         :return: None
         """ 
         filtered_data = [(name, count) for name, count in country_article_count if count > 0]
+        if not filtered_data:
+            print("没有数据可供渲染热力图")
+            return
         max_article_count = max([count for _, count in filtered_data])
         world_map = (
            Map()
@@ -104,15 +112,16 @@ class WorldHeatmap:
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}_heatmap.html")
         world_map.render(output_path)
-        make_snapshot(snapshot, world_map.render(), output_path.replace(".html", ".png"))
+        take_screenshot(output_path, output_path.replace(".html", ".png"))
         
 
 
 if __name__ == "__main__":
     db_api = DBAPI()
     world_heatmap = WorldHeatmap(db_api)
-    country_article_count = world_heatmap.get_world_data(("2026-04-18", "2099-12-31"))
+    country_article_count = world_heatmap.get_world_data()
     world_heatmap.render_heatmap(country_article_count)
     world_heatmap.render_pie_chart(country_article_count, top_n=10)
     db_api.close()
-    os.remove('render.html')
+    if os.path.exists('render.html'):
+        os.remove('render.html')
