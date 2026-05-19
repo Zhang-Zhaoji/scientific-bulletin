@@ -31,6 +31,9 @@ class WorldHeatmap:
         :return: None
         """
         filtered_data = [(name, count) for name, count in country_article_count if count > 0]
+        if not filtered_data:
+            print("没有数据可供渲染饼图")
+            return
         sorted_data = sorted(filtered_data, key=lambda x: x[1], reverse=True)
         
         if len(sorted_data) > top_n:
@@ -67,15 +70,41 @@ class WorldHeatmap:
     def get_world_data(self, start_date=None, end_date=None)->list[tuple[str, int]]:
         """
         从数据库中获取全球文章数量
-        :param start_date: 起始日期 (YYYY-MM-DD)，None 表示7天前
-        :param end_date: 结束日期 (YYYY-MM-DD)，None 表示今天
+        :param start_date: 起始日期 (YYYY-MM-DD)，None 表示自动推断
+        :param end_date: 结束日期 (YYYY-MM-DD)，None 表示自动推断
         :return: 国家-文章数量列表
         """
-        if end_date is None:
-            end_date = datetime.datetime.now().strftime("%Y-%m-%d")
-        if start_date is None:
-            start_date = (datetime.datetime.now() - datetime.timedelta(days=7)).strftime("%Y-%m-%d")
-        
+        if end_date is None or start_date is None:
+            # 查询数据库中有国家关联的最新和最旧日期
+            self.db_api.cursor.execute("""
+                SELECT MAX(a.pub_date), MIN(a.pub_date)
+                FROM articles a
+                JOIN article_institutions ai ON a.id = ai.article_id
+                JOIN institutions i ON ai.institution_id = i.id
+                JOIN countries c ON i.country_id = c.id
+                WHERE a.id NOT IN (SELECT article_id FROM article_themes WHERE theme_id = 1)
+            """)
+            max_date, min_date = self.db_api.cursor.fetchone()
+
+            if end_date is None:
+                if max_date:
+                    end_date = max_date
+                else:
+                    end_date = datetime.datetime.now().strftime("%Y-%m-%d")
+
+            if start_date is None:
+                if max_date:
+                    # 以有国家数据的最新日期为基准往前推7天，但不早于最早日期
+                    from datetime import datetime as dt
+                    end_dt = dt.strptime(end_date, "%Y-%m-%d")
+                    start_dt = max(
+                        end_dt - datetime.timedelta(days=7),
+                        dt.strptime(min_date, "%Y-%m-%d") if min_date else end_dt - datetime.timedelta(days=7)
+                    )
+                    start_date = start_dt.strftime("%Y-%m-%d")
+                else:
+                    start_date = (datetime.datetime.now() - datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+
         country_article_count = self.db_api.get_country_article_count(start_date, end_date)
         print(f"获取到 {start_date} 到 {end_date} 之间的文章数量: {len(country_article_count)} 个国家/地区")
         print("国家-文章数量列表:")

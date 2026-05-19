@@ -17,7 +17,10 @@ def take_screenshot(html_path: str, output_png_path: str, width: int = 1200, hei
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument(f"--window-size={width},{height}")
     chrome_options.add_argument("--hide-scrollbars")
-    
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_argument("--ignore-certificate-errors-spki-list")
+    chrome_options.add_argument("--allow-insecure-localhost")
+
     driver = webdriver.Chrome(options=chrome_options)
     
     try:

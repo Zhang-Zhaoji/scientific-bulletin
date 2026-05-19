@@ -4,7 +4,9 @@
       "Bash(python3 *)",
       "Bash(python *)",
       "WebFetch(domain:www.science.org)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "PowerShell(conda activate *)",
+      "PowerShell(conda env *)"
     ]
   }
 }

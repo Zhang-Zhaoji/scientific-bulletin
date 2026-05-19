@@ -60,8 +60,8 @@ Examples:
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
                         help='Limit number of papers to process')
-    parser.add_argument('--model', default='deepseek-v4-pro',
-                        help='LLM model to use (default: deepseek-v4-pro)')
+    parser.add_argument('--model', default='qwen3.6-plus-2026-04-02',
+                        help='LLM model to use (default: qwen3.6-plus-2026-04-02)')
     
     args = parser.parse_args()
     
@@ -114,7 +114,7 @@ Examples:
         
         success = False
         retries = 0
-        max_retries = 3
+        max_retries = 10
         
         while not success and retries < max_retries:
             try:
@@ -125,7 +125,7 @@ Examples:
                 retries += 1
                 print(f"    [ERROR] Attempt {retries}/{max_retries}: {e}")
                 if retries < max_retries:
-                    time.sleep(2 ** retries)  # Exponential backoff
+                    time.sleep(2 * retries)  # Exponential backoff
                 else:
                     print(f"    [FAILED] Skipping after {max_retries} attempts")
         
