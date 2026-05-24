@@ -116,3 +116,36 @@ CREATE TABLE IF NOT EXISTS article_crosstags (
     tag_id INTEGER REFERENCES crosstags(id)
     --PRIMARY KEY (article_id, tag_id)
 );
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_articles_title
+ON articles(title);
+
+CREATE INDEX IF NOT EXISTS idx_authors_name
+ON authors(name);
+
+CREATE INDEX IF NOT EXISTS idx_institutions_name
+ON institutions(name);
+
+CREATE INDEX IF NOT EXISTS idx_institutions_normalized_name
+ON institutions(normalized_name);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_author_institutions_pair
+ON author_institutions(author_id, institution_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_authors_pair
+ON article_authors(article_id, author_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_institutions_pair
+ON article_institutions(article_id, institution_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_countries_pair
+ON article_countries(article_id, country_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_themes_pair
+ON article_themes(article_id, theme_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_subthemes_pair
+ON article_subthemes(article_id, subtheme_id);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_article_crosstags_pair
+ON article_crosstags(article_id, tag_id);

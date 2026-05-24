@@ -1,0 +1,15 @@
+echo "start visualizing ..."
+
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-03-14_enriched_ror_refined.jsonl" --date "2026-03-14"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-03-21_enriched_ror_refined.jsonl" --date "2026-02-21"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-03-28_enriched_ror_refined.jsonl" --date "2026-03-28"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-04-04_enriched_ror_refined.jsonl" --date "2026-04-04"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-04-11_enriched_ror_refined.jsonl" --date "2026-04-11"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl" --date "2026-04-18"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-04-25_enriched_ror_refined.jsonl" --date "2026-04-25"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-05-02_enriched_ror_refined.jsonl" --date "2026-05-02"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-05-10_enriched_ror_refined.jsonl" --date "2026-05-10"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-05-16_enriched_ror_refined.jsonl" --date "2026-05-16"
+python visualize\global_heatmap.py --jsonl "./getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl" --date "2026-05-23"
+
+echo "visualizing Finished"

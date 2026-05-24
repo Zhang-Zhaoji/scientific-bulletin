@@ -75,7 +75,11 @@ def search_or_insert(conn, table_name: str, conflict_columns: list[str], insert_
     """
     validate_request(table_name, conflict_columns, insert_data)
     conflict_values = [insert_data[col] for col in conflict_columns]
-    existing_ids = search_item(conn, table_name, conflict_columns, conflict_values)
+    existing_ids = None
+    # NULL is not a useful conflict key here. Searching for "orcid IS NULL" or
+    # "normalized_name IS NULL" can match many unrelated rows and pollute joins.
+    if all(value is not None for value in conflict_values):
+        existing_ids = search_item(conn, table_name, conflict_columns, conflict_values)
     if existing_ids is not None:
         if table_name in ['countries', 'articles', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_countries', 'article_themes', 'article_subthemes', 'article_crosstags']:
             assert len(existing_ids) == 1
@@ -117,6 +121,14 @@ def compare_authors(conn, author: dict, conflict_author_ids: list[int]) -> int|N
     institutions: list[str] = author.get('institute_name', None)
     if isinstance(institutions, str):
         institutions = institutions.split(';')
+    if institutions:
+        institutions = [
+            institution.strip()
+            for institution in institutions
+            if institution is not None
+            and str(institution).strip()
+            and str(institution).strip().lower() not in {'n/a', 'na', 'none', 'null', 'unknown'}
+        ]
     if not institutions:
         return None
     

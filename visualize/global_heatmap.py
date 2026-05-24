@@ -2,6 +2,10 @@ from pyecharts.charts import Map, Pie
 from pyecharts import options as opts
 import datetime
 import os
+import re
+from collections import Counter
+
+import jsonlines
 
 from dbapi import DBAPI
 from snapshot_helper import take_screenshot
@@ -23,7 +27,7 @@ class WorldHeatmap:
         os.makedirs(self.HEATMAP_ROOT_DIR, exist_ok=True)
         os.makedirs(self.PIE_ROOT_DIR, exist_ok=True)
 
-    def render_pie_chart(self, country_article_count: list[tuple[str, int]], top_n: int = 10):
+    def render_pie_chart(self, country_article_count: list[tuple[str, int]], top_n: int = 10, output_date: str | None = None):
         """
         渲染各国文章数量饼图，默认只显示文章数最多的前N个国家
         :param country_article_count: 国家-文章数量列表
@@ -62,10 +66,17 @@ class WorldHeatmap:
             )
         )
         
-        date = datetime.datetime.now().strftime("%Y-%m-%d")
+        date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.PIE_ROOT_DIR, f"{date}_pie.html")
         pie.render(output_path)
         take_screenshot(output_path, output_path.replace(".html", ".png"))
+
+    def get_jsonl_country_data(self, jsonl_path: str) -> list[tuple[str, int]]:
+        country_counter = Counter()
+        with jsonlines.open(jsonl_path) as reader:
+            for article in reader:
+                country_counter.update(country for country in article.get('countries', []) if country)
+        return country_counter.most_common()
 
     def get_world_data(self, start_date=None, end_date=None)->list[tuple[str, int]]:
         """
@@ -113,7 +124,7 @@ class WorldHeatmap:
         print("="*20)
         return country_article_count
 
-    def render_heatmap(self, country_article_count: list[tuple[str, int]]):
+    def render_heatmap(self, country_article_count: list[tuple[str, int]], output_date: str | None = None):
         """
         渲染全球热力图, 并保存到HTML文件
         :param country_article_count: 国家-文章数量列表
@@ -137,19 +148,42 @@ class WorldHeatmap:
                visualmap_opts=opts.VisualMapOpts(max_=max_article_count, min_=0, is_piecewise=False)
            )
         )
-        date = datetime.datetime.now().strftime("%Y-%m-%d")
+        date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}_heatmap.html")
         world_map.render(output_path)
         take_screenshot(output_path, output_path.replace(".html", ".png"))
-        
+
+
+def date_from_path(path: str) -> str | None:
+    match = re.search(r"(\d{4})-(\d{2})-(\d{2})", path)
+    if match:
+        return match.group(0)
+    match = re.search(r"(\d{4})(\d{2})(\d{2})", path)
+    if match:
+        return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+    return None
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Render country heatmap and pie chart.")
+    parser.add_argument("--jsonl", help="Use a weekly JSONL file instead of querying the database.")
+    parser.add_argument("--date", help="Output date label, for example 2026-05-23.")
+    parser.add_argument("--start-date", help="Database start date, YYYY-MM-DD.")
+    parser.add_argument("--end-date", help="Database end date, YYYY-MM-DD.")
+    args = parser.parse_args()
+
     db_api = DBAPI()
     world_heatmap = WorldHeatmap(db_api)
-    country_article_count = world_heatmap.get_world_data()
-    world_heatmap.render_heatmap(country_article_count)
-    world_heatmap.render_pie_chart(country_article_count, top_n=10)
+    if args.jsonl:
+        country_article_count = world_heatmap.get_jsonl_country_data(args.jsonl)
+        output_date = args.date or date_from_path(args.jsonl)
+    else:
+        country_article_count = world_heatmap.get_world_data(args.start_date, args.end_date)
+        output_date = args.date or args.end_date
+    world_heatmap.render_heatmap(country_article_count, output_date)
+    world_heatmap.render_pie_chart(country_article_count, top_n=10, output_date=output_date)
     db_api.close()
     if os.path.exists('render.html'):
         os.remove('render.html')

@@ -60,6 +60,9 @@ python src/batch_enrich_authors.py
 # 从处理后的论文构建SQLite数据库
 python sql_scripts/build_sqlite.py
 
+# 从所有每周 JSONL/LLM 输出重建完整 SQLite 数据库
+bashScripts/build_sq.bat
+
 # 生成LLM总结和报告
 python LLM_eval/main.py
 
@@ -68,6 +71,9 @@ python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.j
 
 # 生成数据可视化图表
 python visualize/main.py
+
+# 从每周 JSONL 生成国家热力图和国家分布饼图
+python visualize/global_heatmap.py --jsonl getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl --date 2026-05-23
 
 # 将生成的Markdown报告构建为静态网页
 python scripts/build_pages.py --input-dir LLM_Results --output-dir docs

@@ -1,5 +1,6 @@
 import os
 import time
+import base64
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -38,7 +39,29 @@ def take_screenshot(html_path: str, output_png_path: str, width: int = 1200, hei
         # 再额外等待确保渲染完成（包括地图数据加载）
         time.sleep(3)
         
-        driver.save_screenshot(output_png_path)
-        print(f"截图已保存: {output_png_path}")
+        data_url = driver.execute_script("""
+            const canvases = Array.from(document.querySelectorAll('canvas'));
+            if (!canvases.length) {
+                return null;
+            }
+            const chartDom = canvases[0].closest('.chart-container') || canvases[0].parentElement;
+            const chart = window.echarts && echarts.getInstanceByDom(chartDom);
+            if (!chart) {
+                return null;
+            }
+            return chart.getDataURL({
+                type: 'png',
+                pixelRatio: 2,
+                backgroundColor: 'rgba(0,0,0,0)'
+            });
+        """)
+        if data_url:
+            _, encoded_png = data_url.split(",", 1)
+            with open(output_png_path, "wb") as f:
+                f.write(base64.b64decode(encoded_png))
+            print(f"Canvas image saved: {output_png_path}")
+        else:
+            driver.save_screenshot(output_png_path)
+            print(f"Screenshot saved: {output_png_path}")
     finally:
         driver.quit()

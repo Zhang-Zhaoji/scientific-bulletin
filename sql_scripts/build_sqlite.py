@@ -38,6 +38,15 @@ def clean_text(value):
     return value if value else None
 
 
+def is_missing_text(value):
+    value = clean_text(value)
+    return value is None or value.lower() in {'n/a', 'na', 'none', 'null', 'unknown'}
+
+
+def clean_text_list(values):
+    return [clean_text(value) for value in as_list(values) if not is_missing_text(value)]
+
+
 def load_country_reference():
     global COUNTRY_ALIASES, COUNTRY_NAMES
     if COUNTRY_ALIASES is not None and COUNTRY_NAMES is not None:
@@ -329,6 +338,7 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
                 institute_names = iauthor.get('normalized_affiliation', None)
             if isinstance(institute_names, str):
                 institute_names = institute_names.split(';') # default to be a list
+            institute_names = clean_text_list(institute_names)
             important_authors.append({
                 'name': author_name,
                 'orcid': orcid,
@@ -358,7 +368,9 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
                 continue
             if isinstance(institute_name, str):
                 institute_name = institute_name.split(';') # default to be a list
-            institute_name = [i.strip() for i in institute_name]
+            institute_name = clean_text_list(institute_name)
+            if not institute_name:
+                continue
             country = iauthor.get('ror_country', iauthor.get('country', [None]))
             country = [normalize_country_name(c) for c in as_list(country)]
             article_countries.extend(country)
@@ -487,7 +499,9 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
         
         if not isinstance(institute_names, list):
             institute_names = [institute_names]
-        institute_names = [clean_text(name) for name in institute_names]
+        institute_names = clean_text_list(institute_names)
+        if not institute_names:
+            continue
         country_names = [normalize_country_name(name) for name in align_list(country_names, len(institute_names))]
         normalized_names = align_list(normalized_names, len(institute_names))
         
@@ -522,9 +536,12 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
         institute_names = author.get('institute_name', [])
         if not isinstance(institute_names, list):
             institute_names = [institute_names]
+        institute_names = clean_text_list(institute_names)
         
         current_institution_ids = []
         for institute_name in institute_names:
+            if not institute_name:
+                continue
             found_ids = search_item(conn, 'institutions', ['name'], [institute_name])
             if found_ids:
                 current_institution_ids.extend(found_ids)

@@ -2,7 +2,8 @@ name: Deploy reports to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: 
+      - main
   workflow_dispatch:
 
 permissions:
@@ -27,6 +28,8 @@ jobs:
       - name: Build static site
         run: python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs

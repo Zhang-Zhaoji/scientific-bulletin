@@ -62,6 +62,9 @@ python src/batch_enrich_authors.py
 # Build SQLite database from processed papers
 python sql_scripts/build_sqlite.py
 
+# Rebuild the full bundled SQLite database from all weekly JSONL/LLM outputs
+bashScripts/build_sq.bat
+
 # Generate LLM summaries and reports
 python LLM_eval/main.py
 
@@ -70,6 +73,9 @@ python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.j
 
 # Generate data visualizations
 python visualize/main.py
+
+# Generate a weekly country heatmap and country distribution pie chart from JSONL
+python visualize/global_heatmap.py --jsonl getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl --date 2026-05-23
 
 # Build a static website from generated Markdown reports
 python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
@@ -195,6 +201,7 @@ Built-in visualization module for analyzing research trends:
 - **Institution Ranking**: Generate top institution tables for the report period
 - **Report Statistics Text**: Insert country, institution and score summaries into generated Markdown reports
 - **Output Formats**: Static PNG images, interactive HTML charts
+- **Weekly Country View**: `visualize/global_heatmap.py --jsonl ... --date ...` can render a country heatmap and country distribution pie chart directly from a weekly JSONL file
 - All visualizations are automatically generated as part of the weekly pipeline
 
 ---
@@ -204,7 +211,9 @@ Built-in visualization module for analyzing research trends:
 Reports can be published as standalone HTML pages so the layout is not constrained by Zhihu or WeChat formatting rules.
 
 - `scripts/build_pages.py` converts `LLM_Results/report_*.md` into a static site under `docs/`
-- The GitHub Actions workflow `.github/workflows/pages.yml` builds and deploys the site to GitHub Pages on pushes to `main`
+- Report pages embed matching cover images, country heatmaps and country distribution charts from `Imgs/`
+- The index page includes a compact cover thumbnail for each report
+- The GitHub Actions workflow `.github/workflows/pages.yml` builds and deploys the site to GitHub Pages on pushes to `main`; it can enable Pages automatically when the repository is configured for GitHub Actions Pages deployments
 - The builder uses the Python `markdown` package with table/list extensions, so inline Markdown such as `**bold**` and Markdown tables are rendered as real HTML
 - If local rendering fails with a missing dependency, run `python -m pip install markdown` or `pip install -r requirements.txt`
 

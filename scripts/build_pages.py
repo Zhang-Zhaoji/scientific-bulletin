@@ -11,7 +11,9 @@ from __future__ import annotations
 import argparse
 import html
 import re
+import shutil
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 try:
@@ -70,6 +72,20 @@ header {
 main {
   padding: 28px 0 48px;
 }
+.cover-hero {
+  width: min(60%, 980px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cover-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cover-hero + main {
+  margin-top: -96px;
+  position: relative;
+}
 .paper {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -98,13 +114,22 @@ main {
   list-style: none;
 }
 .report-list a {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 132px;
+  align-items: center;
+  gap: 16px;
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
   color: var(--accent);
   text-decoration: none;
+}
+.report-thumb {
+  width: 132px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
 }
 h1, h2, h3 {
   line-height: 1.25;
@@ -150,10 +175,30 @@ img {
 .meta {
   color: var(--muted);
 }
+.report-media {
+  display: grid;
+  gap: 20px;
+  margin: 28px 0;
+}
+.chart-grid {
+  display: grid;
+  gap: 18px;
+}
+.chart-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+}
 @media (max-width: 680px) {
   .site-head { align-items: flex-start; flex-direction: column; }
   .nav a { margin-left: 0; margin-right: 14px; }
+  .cover-hero { width: 100%; }
+  .cover-hero + main { margin-top: -36px; }
   .paper { padding: 18px; }
+  .report-list a { grid-template-columns: 1fr; }
+  .report-thumb { width: 100%; }
   table { display: block; overflow-x: auto; white-space: nowrap; }
 }
 """
@@ -170,6 +215,71 @@ def report_date_from_name(path: Path) -> str:
     if not match:
         return path.stem
     return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+
+
+def report_asset_dates(report_path: Path) -> list[datetime]:
+    report_date = datetime.strptime(report_date_from_name(report_path), "%Y-%m-%d")
+    return [report_date - timedelta(days=1), report_date]
+
+
+def copy_asset(source_path: Path, output_dir: Path, asset_subdir: str) -> str:
+    asset_dir = output_dir / "assets" / asset_subdir
+    asset_dir.mkdir(parents=True, exist_ok=True)
+    target_path = asset_dir / source_path.name
+    shutil.copy2(source_path, target_path)
+    return f"assets/{asset_subdir}/{html.escape(target_path.name)}"
+
+
+def first_existing(paths: list[Path]) -> Path | None:
+    return next((path for path in paths if path.exists()), None)
+
+
+def report_cover_src(report_path: Path, output_dir: Path) -> str | None:
+    candidate_dates = report_asset_dates(report_path)
+    compact_dates = [date.strftime("%Y%m%d") for date in candidate_dates]
+    cover_path = first_existing([Path("Imgs") / f"{date}.png" for date in compact_dates])
+    if not cover_path:
+        return None
+    return copy_asset(cover_path, output_dir, "covers")
+
+
+def render_report_media(report_path: Path, output_dir: Path) -> str:
+    candidate_dates = report_asset_dates(report_path)
+    iso_dates = [date.strftime("%Y-%m-%d") for date in candidate_dates]
+
+    heatmap_path = first_existing([
+        Path("Imgs") / "visulize_img" / "globalHeatmap" / f"{date}_heatmap.html"
+        for date in iso_dates
+    ])
+    pie_path = first_existing([
+        Path("Imgs") / "visulize_img" / "countryPie" / f"{date}_pie.html"
+        for date in iso_dates
+    ])
+
+    media_parts = []
+    chart_frames = []
+    if heatmap_path:
+        heatmap_src = copy_asset(heatmap_path, output_dir, "charts")
+        chart_frames.append(f'<iframe class="chart-frame" title="Country heatmap" src="{heatmap_src}" loading="lazy"></iframe>')
+    if pie_path:
+        pie_src = copy_asset(pie_path, output_dir, "charts")
+        chart_frames.append(f'<iframe class="chart-frame" title="Country distribution pie chart" src="{pie_src}" loading="lazy"></iframe>')
+    if chart_frames:
+        media_parts.append(f'<div class="chart-grid">\n{"".join(chart_frames)}\n</div>')
+
+    if not media_parts:
+        return ""
+    return '<section class="report-media">\n<h2>🌏 环球视野</h2>\n' + "\n".join(media_parts) + "\n</section>\n"
+
+
+def insert_report_media_after_overview(report_body: str, media_html: str) -> str:
+    if not media_html:
+        return report_body
+    lines = report_body.splitlines()
+    for idx, line in enumerate(lines):
+        if line.strip() in {"---", "***", "___"}:
+            return "\n".join(lines[:idx + 1]) + "\n\n" + media_html + "\n" + "\n".join(lines[idx + 1:])
+    return media_html + "\n" + report_body
 
 
 def pre_overview_text(markdown_text: str) -> str:
@@ -218,7 +328,10 @@ def trim_report_body(markdown_text: str) -> str:
     return markdown_text.strip()
 
 
-def render_page(title: str, body: str, root_prefix: str = "") -> str:
+def render_page(title: str, body: str, root_prefix: str = "", cover_src: str | None = None) -> str:
+    cover_html = ""
+    if cover_src:
+        cover_html = f'  <section class="cover-hero"><img src="{cover_src}" alt=""></section>\n'
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -232,12 +345,12 @@ def render_page(title: str, body: str, root_prefix: str = "") -> str:
     <div class="wrap site-head">
       <a class="brand" href="{root_prefix}index.html">{DEFAULT_TITLE}</a>
       <nav class="nav">
-        <a href="{root_prefix}index.html">Reports</a>
-        <a href="https://github.com/">GitHub</a>
+        <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/issues">Reports</a>
+        <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/">GitHub</a>
       </nav>
     </div>
   </header>
-  <main class="wrap">
+{cover_html}  <main class="wrap">
     <article class="paper">
 {body}
     </article>
@@ -377,15 +490,19 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
         markdown_text = report_path.read_text(encoding="utf-8")
         title = generated_report_title(report_path, markdown_text, issue_numbers[report_path])
         report_body = trim_report_body(markdown_text)
+        cover_src = report_cover_src(report_path, output_dir)
+        media_html = render_report_media(report_path, output_dir)
+        report_body = insert_report_media_after_overview(report_body, media_html)
         body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}")
         page_name = slugify(report_path)
-        (output_dir / page_name).write_text(render_page(title, body), encoding="utf-8")
-        report_links.append((title, page_name, report_path.name))
+        (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
+        report_links.append((title, page_name, report_path.name, cover_src))
 
     items = "\n".join(
-        f'<li><a href="{html.escape(page_name)}"><strong>{html.escape(title)}</strong>'
-        f'<br><span class="meta">{html.escape(source_name)}</span></a></li>'
-        for title, page_name, source_name in report_links
+        f'<li><a href="{html.escape(page_name)}"><span><strong>{html.escape(title)}</strong>'
+        f'<br><span class="meta">{html.escape(source_name)}</span></span>'
+        f'{f"<img class=\"report-thumb\" src=\"{cover_src}\" alt=\"\">" if cover_src else ""}</a></li>'
+        for title, page_name, source_name, cover_src in report_links
     )
     if not items:
         items = '<li class="meta">No reports found.</li>'

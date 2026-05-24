@@ -44,6 +44,20 @@ header {
 main {
   padding: 28px 0 48px;
 }
+.cover-hero {
+  width: min(60%, 980px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cover-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cover-hero + main {
+  margin-top: -96px;
+  position: relative;
+}
 .paper {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -72,13 +86,22 @@ main {
   list-style: none;
 }
 .report-list a {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 132px;
+  align-items: center;
+  gap: 16px;
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
   color: var(--accent);
   text-decoration: none;
+}
+.report-thumb {
+  width: 132px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 6px;
 }
 h1, h2, h3 {
   line-height: 1.25;
@@ -124,9 +147,29 @@ img {
 .meta {
   color: var(--muted);
 }
+.report-media {
+  display: grid;
+  gap: 20px;
+  margin: 28px 0;
+}
+.chart-grid {
+  display: grid;
+  gap: 18px;
+}
+.chart-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+}
 @media (max-width: 680px) {
   .site-head { align-items: flex-start; flex-direction: column; }
   .nav a { margin-left: 0; margin-right: 14px; }
+  .cover-hero { width: 100%; }
+  .cover-hero + main { margin-top: -36px; }
   .paper { padding: 18px; }
+  .report-list a { grid-template-columns: 1fr; }
+  .report-thumb { width: 100%; }
   table { display: block; overflow-x: auto; white-space: nowrap; }
 }
