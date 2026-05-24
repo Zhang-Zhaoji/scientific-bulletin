@@ -230,6 +230,19 @@ def copy_asset(source_path: Path, output_dir: Path, asset_subdir: str) -> str:
     return f"assets/{asset_subdir}/{html.escape(target_path.name)}"
 
 
+def localize_chart_html(chart_path: Path) -> None:
+    text = chart_path.read_text(encoding="utf-8")
+    text = text.replace(
+        "https://assets.pyecharts.org/assets/v6/echarts.min.js",
+        "../vendor/echarts.min.js",
+    )
+    text = text.replace(
+        "https://assets.pyecharts.org/assets/v6/maps/world.js",
+        "../vendor/world.js",
+    )
+    chart_path.write_text(text, encoding="utf-8")
+
+
 def first_existing(paths: list[Path]) -> Path | None:
     return next((path for path in paths if path.exists()), None)
 
@@ -260,9 +273,11 @@ def render_report_media(report_path: Path, output_dir: Path) -> str:
     chart_frames = []
     if heatmap_path:
         heatmap_src = copy_asset(heatmap_path, output_dir, "charts")
+        localize_chart_html(output_dir / heatmap_src)
         chart_frames.append(f'<iframe class="chart-frame" title="Country heatmap" src="{heatmap_src}" loading="lazy"></iframe>')
     if pie_path:
         pie_src = copy_asset(pie_path, output_dir, "charts")
+        localize_chart_html(output_dir / pie_src)
         chart_frames.append(f'<iframe class="chart-frame" title="Country distribution pie chart" src="{pie_src}" loading="lazy"></iframe>')
     if chart_frames:
         media_parts.append(f'<div class="chart-grid">\n{"".join(chart_frames)}\n</div>')
