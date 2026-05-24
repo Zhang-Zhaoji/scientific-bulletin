@@ -85,6 +85,14 @@ CREATE TABLE IF NOT EXISTS article_institutions (
     --PRIMARY KEY (article_id, institution_id)
 );
 
+-- 文章-国家/地区关联
+CREATE TABLE IF NOT EXISTS article_countries (
+    id INTEGER PRIMARY KEY,
+    article_id INTEGER REFERENCES articles(id) ON DELETE CASCADE,
+    country_id INTEGER REFERENCES countries(id)
+    --PRIMARY KEY (article_id, country_id)
+);
+
 -- 文章-主题关联
 CREATE TABLE IF NOT EXISTS article_themes (
     id INTEGER PRIMARY KEY,

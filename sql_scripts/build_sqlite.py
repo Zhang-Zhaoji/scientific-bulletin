@@ -1,6 +1,9 @@
 import json
 import sqlite3
-from sqlfuncs import init_db, search_item, insert_item, validate_request, search_or_insert, compare_authors
+try:
+    from sqlfuncs import init_db, search_item, insert_item, validate_request, search_or_insert, compare_authors
+except ImportError:
+    from sql_scripts.sqlfuncs import init_db, search_item, insert_item, validate_request, search_or_insert, compare_authors
 from datetime import datetime
 import argparse
 import os
@@ -8,6 +11,97 @@ import hashlib
 import jsonlines
 from dateutil import parser
 import tqdm
+
+COUNTRY_ALIASES = None
+COUNTRY_NAMES = None
+
+
+def as_list(value):
+    """Normalize scalar/list/None values into a flat list."""
+    if value is None:
+        return []
+    if isinstance(value, list):
+        result = []
+        for item in value:
+            if isinstance(item, list):
+                result.extend(as_list(item))
+            elif item is not None:
+                result.append(item)
+        return result
+    return [value]
+
+
+def clean_text(value):
+    if value is None:
+        return None
+    value = str(value).strip()
+    return value if value else None
+
+
+def load_country_reference():
+    global COUNTRY_ALIASES, COUNTRY_NAMES
+    if COUNTRY_ALIASES is not None and COUNTRY_NAMES is not None:
+        return COUNTRY_ALIASES, COUNTRY_NAMES
+
+    with open('data/CountryList.json', 'r', encoding='utf-8') as f:
+        countries_list = json.load(f)
+    with open('data/aliasCountryName.json', 'r', encoding='utf-8') as f:
+        alias_country = json.load(f)
+    with open('data/abbr2country.json', 'r', encoding='utf-8') as f:
+        abbr2country = json.load(f)
+    normalized_map_path = 'data/normalized_country_map.json'
+    if os.path.exists(normalized_map_path):
+        with open(normalized_map_path, 'r', encoding='utf-8') as f:
+            normalized_abbr = json.load(f)
+    else:
+        normalized_abbr = {}
+
+    COUNTRY_NAMES = set(countries_list)
+    COUNTRY_ALIASES = {c.lower(): c for c in countries_list}
+    COUNTRY_ALIASES.update({k.lower(): v for k, v in alias_country.items()})
+    COUNTRY_ALIASES.update({k.lower(): v for k, v in abbr2country.items()})
+    COUNTRY_ALIASES.update({k.lower(): v for k, v in normalized_abbr.items() if v})
+    COUNTRY_ALIASES.update({
+        'koera': 'Korea',
+        'republic of korea': 'Korea',
+        'korea, republic of': 'Korea',
+        'south korea': 'Korea',
+        'the netherlands': 'Netherlands',
+        'united states of america': 'United States',
+        'usa': 'United States',
+        'u.s.a.': 'United States',
+        'uk': 'United Kingdom',
+    })
+    return COUNTRY_ALIASES, COUNTRY_NAMES
+
+
+def normalize_country_name(country_name):
+    country_name = clean_text(country_name)
+    if not country_name:
+        return None
+    aliases, _ = load_country_reference()
+    return aliases.get(country_name.lower(), country_name)
+
+
+def unique_ordered(values):
+    seen = set()
+    result = []
+    for value in values:
+        value = clean_text(value)
+        if value and value not in seen:
+            seen.add(value)
+            result.append(value)
+    return result
+
+
+def ensure_country(conn, country_name):
+    country_name = normalize_country_name(country_name)
+    if not country_name:
+        return None
+    return search_or_insert(conn, 'countries', ['standard_name'], {
+        'country_name': country_name,
+        'standard_name': country_name
+    })
 
 
 # One example of an article in the jsonL file:
@@ -253,6 +347,9 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
     country_name TEXT,
     normalized_name TEXT UNIQUE,
     """
+    article_countries = []
+    article_countries.extend(as_list(work_json.get('countries')))
+
     author_details = work_json.get('author_details', None)
     if author_details:
         for iauthor in author_details:
@@ -263,11 +360,8 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
                 institute_name = institute_name.split(';') # default to be a list
             institute_name = [i.strip() for i in institute_name]
             country = iauthor.get('ror_country', iauthor.get('country', [None]))
-            if isinstance(country, str):
-                country = country.strip()
-                country = [country] * len(institute_name) if institute_name else [None]
-            if country and isinstance(country, list) and len(country) > 0 and isinstance(country[0], list):
-                country = country[0]
+            country = [normalize_country_name(c) for c in as_list(country)]
+            article_countries.extend(country)
             # the above lines should be ensured during the enrichment process
             score = iauthor.get('score', 0)
             institutions_in_article.append({
@@ -323,14 +417,26 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
             })
     else:
         raise ValueError(f"Unknown domain: {LLM_json.get('domain', None)}")
-    return article_info, important_authors, institutions_in_article, themes, subthemes, crosstags
+    article_countries = [{'name': country} for country in unique_ordered(
+        normalize_country_name(country) for country in article_countries
+    )]
+    return article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags
 
 
-def insert_article_info(conn, article_info, important_authors, institutions_in_article, themes, subthemes, crosstags):
+def align_list(values, target_len, fill=None):
+    values = as_list(values)
+    if not values:
+        return [fill] * target_len
+    if len(values) < target_len:
+        values.extend([fill] * (target_len - len(values)))
+    return values[:target_len]
+
+
+def insert_article_info(conn, article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags):
     """
     Insert the article into the database.
     """
-    table_names = ['countries', 'articles', 'authors', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_themes', 'article_subthemes', 'article_crosstags']
+    table_names = ['countries', 'articles', 'authors', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_countries', 'article_themes', 'article_subthemes', 'article_crosstags']
     
     table_keys = {'countries': ['country_name','standard_name'],
                   'articles': ['title','title_zh', 'doi', 'pmid', 'pmcid', 'abstract', 'journal', 'pub_date', 'pub_year', 'is_open_access', 'score', 'url'], 
@@ -342,6 +448,7 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
                   'author_institutions': ['author_id', 'institution_id'],
                   'article_authors': ['article_id', 'author_id'], 
                   'article_institutions': ['article_id', 'institution_id'], 
+                  'article_countries': ['article_id', 'country_id'],
                   'article_themes': ['article_id', 'theme_id'],
                   'article_subthemes': ['article_id', 'subtheme_id'],
                   'article_crosstags': ['article_id', 'tag_id']}
@@ -356,11 +463,20 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
                      'author_institutions': ['author_id', 'institution_id'],
                      'article_authors': ['article_id', 'author_id'], 
                      'article_institutions': ['article_id', 'institution_id'], 
+                     'article_countries': ['article_id', 'country_id'],
                      'article_themes': ['article_id', 'theme_id'],
                      'article_subthemes': ['article_id', 'subtheme_id'],
                      'article_crosstags': ['article_id', 'tag_id']}
     
     article_id = search_or_insert(conn, 'articles', conflict_keys['articles'], article_info)
+    article_country_ids = set()
+
+    for country in article_countries:
+        country_id = ensure_country(conn, country.get('name'))
+        if country_id:
+            article_country_ids.add(country_id)
+            search_or_insert(conn, 'article_countries', conflict_keys['article_countries'],
+                            {'article_id': article_id, 'country_id': country_id})
     
     all_institution_ids = []
     for inst in institutions_in_article:
@@ -371,26 +487,19 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
         
         if not isinstance(institute_names, list):
             institute_names = [institute_names]
-        if not isinstance(country_names, list):
-            country_names = [country_names]
-        if not isinstance(normalized_names, list):
-            normalized_names = [normalized_names]
-        
-        if len(country_names) < len(institute_names):
-            country_names.extend([None] * (len(institute_names) - len(country_names)))
+        institute_names = [clean_text(name) for name in institute_names]
+        country_names = [normalize_country_name(name) for name in align_list(country_names, len(institute_names))]
+        normalized_names = align_list(normalized_names, len(institute_names))
         
         for institute_name, country_name, normalized_name in zip(institute_names, country_names, normalized_names):
             if not institute_name:
                 continue
             
-            country_id = None
-            if country_name:
-                cursor = conn.execute("SELECT id FROM countries WHERE standard_name = ?", (country_name,))
-                result = cursor.fetchone()
-                if result:
-                    country_id = result[0]
-                else:
-                    raise ValueError(f"Country {country_name} not found in database database.")
+            country_id = ensure_country(conn, country_name)
+            if country_id:
+                article_country_ids.add(country_id)
+                search_or_insert(conn, 'article_countries', conflict_keys['article_countries'],
+                                {'article_id': article_id, 'country_id': country_id})
             inst_data = {
                 'name': institute_name,
                 'raw_affiliation': raw_affiliation,
@@ -398,6 +507,11 @@ def insert_article_info(conn, article_info, important_authors, institutions_in_a
                 'normalized_name': normalized_name,
             }
             institution_id = search_or_insert(conn, 'institutions', conflict_keys['institutions'], inst_data)
+            if country_id:
+                conn.execute(
+                    "UPDATE institutions SET country_id = COALESCE(country_id, ?) WHERE id = ?",
+                    (country_id, institution_id)
+                )
             all_institution_ids.append(institution_id)
             
             search_or_insert(conn, 'article_institutions', conflict_keys['article_institutions'],
@@ -501,9 +615,9 @@ def main():
         assert article_json.get('title') is not None, "Article title is None"
         assert article_json.get('title').replace(' ', '').replace('\n', '') == LLM_json.get('paper').get('raw_data').get('title').replace(' ', '').replace('\n', ''), f"Article title in JSONL and LLM do not match: \n{article_json.get('title')} != \n{LLM_json.get('paper').get('raw_data').get('title')}"
         # 1. parse the article details
-        article_info, important_authors, institutions_in_article, themes, subthemes, crosstags = parse_work_details(article_json, LLM_json)
+        article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags = parse_work_details(article_json, LLM_json)
         # 2. insert the article into the database
-        insert_article_info(conn, article_info, important_authors, institutions_in_article, themes, subthemes, crosstags)
+        insert_article_info(conn, article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags)
     
     conn.commit()
     conn.close()

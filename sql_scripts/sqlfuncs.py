@@ -77,7 +77,7 @@ def search_or_insert(conn, table_name: str, conflict_columns: list[str], insert_
     conflict_values = [insert_data[col] for col in conflict_columns]
     existing_ids = search_item(conn, table_name, conflict_columns, conflict_values)
     if existing_ids is not None:
-        if table_name in ['countries', 'articles', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_themes', 'article_subthemes', 'article_crosstags']:
+        if table_name in ['countries', 'articles', 'institutions', 'themes', 'subthemes', 'crosstags', 'author_institutions', 'article_authors', 'article_institutions', 'article_countries', 'article_themes', 'article_subthemes', 'article_crosstags']:
             assert len(existing_ids) == 1
             return existing_ids[0]
         elif table_name == 'authors':

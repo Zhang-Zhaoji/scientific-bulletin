@@ -8,3 +8,5 @@ python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-04-25_e
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-02_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260502_020545.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-10_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260510_024906.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-16_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260516_204536.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260524_023612.json"
+

@@ -2,6 +2,7 @@ beautifulsoup4
 fuzzywuzzy
 jsonlines
 matplotlib
+markdown
 openai
 pydantic
 pyecharts

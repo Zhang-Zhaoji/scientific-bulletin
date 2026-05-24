@@ -79,9 +79,8 @@ class WorldHeatmap:
             self.db_api.cursor.execute("""
                 SELECT MAX(a.pub_date), MIN(a.pub_date)
                 FROM articles a
-                JOIN article_institutions ai ON a.id = ai.article_id
-                JOIN institutions i ON ai.institution_id = i.id
-                JOIN countries c ON i.country_id = c.id
+                JOIN article_countries ac ON a.id = ac.article_id
+                JOIN countries c ON ac.country_id = c.id
                 WHERE a.id NOT IN (SELECT article_id FROM article_themes WHERE theme_id = 1)
             """)
             max_date, min_date = self.db_api.cursor.fetchone()

@@ -24,9 +24,8 @@ class DBAPI:
         query = """
         SELECT c.standard_name, COUNT(DISTINCT a.id) as article_count
         FROM countries c
-        JOIN institutions i ON c.id = i.country_id
-        JOIN article_institutions ai ON i.id = ai.institution_id
-        JOIN articles a ON ai.article_id = a.id
+        JOIN article_countries ac ON c.id = ac.country_id
+        JOIN articles a ON ac.article_id = a.id
         WHERE a.id NOT IN (SELECT article_id FROM article_themes WHERE theme_id = 1)
         """
         params = []

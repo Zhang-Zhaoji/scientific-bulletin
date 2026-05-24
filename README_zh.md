@@ -2,15 +2,14 @@
 
 **注意：部分代码由 Kimi K2.5 模型和其他大语言模型生成，可能包含幻觉内容，请谨慎使用。**
 
-本项目致力于打造一个神经科学领域的微信公众号内容平台，自动追踪最新的神经科学研究论文并分享给读者。我们提供完整的端到端处理流水线：
+本项目致力于打造一个神经科学领域的微信公众号内容平台，自动追踪近期神经科学研究论文并分享给读者。仓库提供完整的端到端文献策展流水线：
 - 🕷️ 从15+顶级神经科学相关期刊和预印本服务器爬取论文标题、摘要和元数据
-- 🔍 使用欧洲PMC和ROR（研究机构注册表）对论文进行摘要和机构信息富集
+- 🔍 使用欧洲PMC和ROR（研究机构注册表）对论文进行摘要、作者机构和标准机构名称富集
 - 💾 将所有处理后的数据存储在SQLite数据库中，方便查询和分析
-- 🤖 使用多个大语言模型（通义千问3.5-plus、豆包-Seed-1.8_TPM、DeepSeek-V3.2）对论文进行总结并生成每周研究报告
-- 📊 生成全球科研产出、国家分布和论文统计的数据可视化图表
+- 🤖 使用大语言模型对论文进行领域分类、评分、分级推荐和总结，并生成每周Markdown报告与微信公众号格式报告
+- 📊 生成全球科研产出、国家分布、机构排名和论文评分统计的数据可视化图表
 
-目前已发布6期内容，所有内容汇总在知乎专栏【神经科学快讯】：https://www.zhihu.com/column/c_2016331747525157941
-最新一期（第六期）：https://zhuanlan.zhihu.com/p/2028897146196206750
+仓库目前包含2026年3月至5月的每周抓取数据、富集后的JSONL文件、LLM分析结果、报告和配图。本地最新报告产物生成于 **2026-05-24**。公开发布内容汇总在知乎专栏【神经科学快讯】：https://www.zhihu.com/column/c_2016331747525157941
 
 本仓库包含神经科学通报项目的所有代码和数据，我们希望将项目开源并惠及更多研究者。如果您有任何问题或建议，欢迎联系我们。
 
@@ -21,24 +20,33 @@
 ### 环境依赖
 
 ```bash
+# 推荐方式
+pip install -r requirements.txt
+
 # 核心爬虫依赖
 pip install requests beautifulsoup4 jsonlines python-dateutil tqdm selenium
 
-# 数据富集和数据库依赖
-pip install pandas numpy sqlite3
+# 数据富集依赖；数据库使用Python内置sqlite3模块
+pip install pandas numpy
 
 # LLM处理依赖
 pip install openai tiktoken
 
 # 可视化依赖
-pip install plotly matplotlib seaborn
+pip install matplotlib pyecharts snapshot_selenium
 ```
 
 ### 使用方法
 
 ```bash
-# 从所有来源抓取论文（默认最近7天）
+# 从所有来源抓取论文（默认最近8天）
 python src/main.py
+
+# 抓取论文，但跳过自动作者/ROR机构富集
+python src/main.py --no-auto-enrich
+
+# 增加富集并发数，并检查更多历史期次用于跨期去重
+python src/main.py --workers 4 --history-weeks 3
 
 # 仅从arXiv和bioRxiv抓取预印本
 python src/main.py --arxiv-only --biorxiv-only
@@ -55,11 +63,17 @@ python sql_scripts/build_sqlite.py
 # 生成LLM总结和报告
 python LLM_eval/main.py
 
+# 处理指定的富集JSONL文件，并指定模型
+python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl --model glm-5.1
+
 # 生成数据可视化图表
 python visualize/main.py
+
+# 将生成的Markdown报告构建为静态网页
+python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 ```
 
-更多爬虫选项请查看 `python src/main.py --help`。
+更多爬虫和LLM处理选项请查看 `python src/main.py --help` 与 `python LLM_eval/main.py --help`。LLM处理需要在环境变量或 `.env` 文件中提供 `DASHSCOPE_API_KEY` 和 `API_BASE_URL`。
 
 ---
 
@@ -85,7 +99,6 @@ python visualize/main.py
 | Nature Biomedical Engineering | ✅ |
 | Nature Methods | ✅ |
 | Nature Neuroscience | ✅ |
-| Nature Reviews Neuroscience | ✅ |
 | Nature Human Behaviour | ✅ |
 
 ### 其他期刊 ✅
@@ -103,7 +116,15 @@ python visualize/main.py
 | **Journal of Neuroscience** | ✅ 已支持 | PubMed API（默认过滤Journal Club文章） |
 | **Journal of Cognitive Neuroscience** | ✅ 已支持 | PubMed API |
 | **Journal of Vision** | ✅ 已支持 | PubMed API |
-| **Scientific Reports** | ✅ 已支持 | PubMed API |
+
+### Cell Press 期刊 ✅
+
+| 期刊 | 状态 | 实现方法 |
+|---------|--------|--------|
+| **Cell** | ✅ 已支持 | 当前期目录页 + 欧洲PMC数据富集 |
+| **Neuron** | ✅ 已支持 | 当前期目录页 + 欧洲PMC数据富集 |
+| **Current Biology** | ✅ 已支持 | 当前期目录页 + 欧洲PMC数据富集 |
+| **Trends in Neurosciences** | ✅ 已支持 | 当前期目录页 + 欧洲PMC数据富集 |
 
 **Science说明**：采用智能富集策略：
 1. 从Science列表页获取基本信息（无需验证码）
@@ -129,6 +150,11 @@ python visualize/main.py
 - 提取所有作者的国家/地区信息
 - 生成全球科研产出分布统计
 - 支持大规模论文数据集的批处理
+- 支持在主爬虫流程中自动完成作者/ROR富集，并可配置并发数和ROR匹配阈值
+
+### 去重与重查
+
+主爬虫可以合并多来源论文，并基于DOI、PMID和标准化标题去重。它还会检查最近若干历史期次，避免重复收录已覆盖论文；对于历史期次中缺少摘要的论文，则会保留重查机会，以便后续补全。
 
 ---
 
@@ -144,14 +170,17 @@ python visualize/main.py
 
 ## 🤖 LLM分析与报告生成
 
-我们使用多个大语言模型处理收集到的论文：
-- **支持的模型**：通义千问3.5-plus、豆包-Seed-1.8_TPM、DeepSeek-V3.2
+我们使用兼容OpenAI接口的大语言模型处理收集到的论文：
+- **默认处理模型**：`LLM_eval/main.py` 中默认为 `glm-5.1`
+- **报告润色脚本模型**：报告脚本中使用 `qwen3.6-flash-2026-04-16`
 - **核心功能**：
+  - 判断论文属于核心神经科学、高影响跨界、有限跨界或域外内容
+  - 对符合条件的论文进行结构化评分并分配推荐等级
   - 将论文摘要总结为简洁易懂的亮点
-  - 按研究主题对论文分类（认知神经科学、分子神经科学、临床神经科学等）
+  - 按研究主题和跨界标签对论文分类
   - 生成适合微信公众号和知乎的每周研究报告
   - 支持自定义Prompt模板以适应不同场景
-- **输出格式**：结构化JSON分析结果、格式化Markdown报告
+- **输出格式**：结构化JSON分析结果、格式化Markdown报告、微信公众号格式Markdown报告
 
 ---
 
@@ -161,8 +190,21 @@ python visualize/main.py
 - **全球热力图**：可视化不同国家/地区的科研产出分布
 - **国家分布饼图**：展示不同国家论文数量占比
 - **论文评分直方图**：论文影响力指标的统计分布
+- **机构排名**：生成报告周期内的研究机构TOP表格
+- **报告统计文字**：将国家、机构和评分分布统计写入生成的Markdown报告
 - **输出格式**：静态PNG图片、交互式HTML图表
 - 所有可视化内容会作为每周流水线的一部分自动生成
+
+---
+
+## 🌐 静态网页 / GitHub Pages
+
+报告可以发布为独立HTML网页，避免受知乎和微信公众号排版规则限制。
+
+- `scripts/build_pages.py` 会将 `LLM_Results/report_*.md` 转换成 `docs/` 下的静态站点
+- `.github/workflows/pages.yml` 会在推送到 `main` 时自动构建并部署到 GitHub Pages
+- 构建脚本使用 Python `markdown` 包及表格/列表扩展，因此 `**加粗**`、Markdown表格等语法会转换为真正的HTML
+- 如果本地构建提示缺少依赖，请先运行 `python -m pip install markdown` 或 `pip install -r requirements.txt`
 
 ---
 
@@ -170,9 +212,9 @@ python visualize/main.py
 
 ```
 .
+├── .github/workflows/            # GitHub Pages部署工作流
 ├── src/                          # 核心爬虫和数据富集代码
 │   ├── main.py                  # 爬虫主入口
-│   ├── main_beta.py             # 测试版爬虫
 │   ├── crawler_*.py             # 15+期刊/预印本服务器的独立爬虫
 │   ├── enrich_papers.py         # 一级论文富集（从欧洲PMC获取摘要、PMID/PMCID）
 │   ├── enrich_authors.py        # 使用ROR数据对作者机构信息富集
@@ -182,7 +224,7 @@ python visualize/main.py
 │   └── utils.py                 # 工具函数
 ├── LLM_eval/                     # LLM分析和报告生成模块
 │   ├── main.py                  # LLM处理主入口
-│   ├── call_API.py              # 通义千问、豆包、DeepSeek的LLM API客户端
+│   ├── call_API.py              # 兼容OpenAI接口的LLM API客户端
 │   ├── Summary.py               # 论文总结逻辑
 │   ├── Summary_wechat.py        # 微信公众号报告生成
 │   ├── StructuredPrompt.py      # LLM提示词模板
@@ -218,6 +260,7 @@ python visualize/main.py
 │   ├── build_sql.*              # 数据库构建脚本
 │   └── sql_pipeline.bat         # 完整数据流水线脚本
 ├── logs/                         # 日志文件
+├── scripts/                      # 工具脚本，例如静态站点生成
 ├── .gitignore
 ├── LICENSE
 ├── README.md                    # 英文说明文档
@@ -314,10 +357,9 @@ python src/crawler_biorxiv.py
 
 **增强功能：**
 - 引用数和替代计量学指标富集
-- 论文主题分类模型
 - 数据库高级搜索功能
 - 改进的LLM总结提示词
-- 更多可视化选项（研究趋势折线图、机构排名）
+- 更多可视化选项（研究趋势折线图、作者合作网络）
 - 微信公众号自动发布
 
 ---

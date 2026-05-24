@@ -88,21 +88,30 @@ class ROR_Search():
         return standard_name_dict, alias_name_dict, loc_info
     
 
-    def exclude(self, part:str) -> bool:
+    def exclude(self, part: str, raw_part: str | None = None) -> bool:
         """
         Exclude parts that are not valid institute names.
         """
         # email
-        
-        if any(keyword in part for keyword in self.key_words):
+        raw_part = raw_part if raw_part is not None else part
+        clean_part = part.strip()
+        raw_clean = raw_part.strip()
+        lower_part = clean_part.lower()
+        ambiguous_tlds = {'com', 'org', 'net', 'edu', 'gov', 'ac'}
+
+        if not clean_part:
+            return 0
+        if lower_part in ambiguous_tlds:
+            return 0
+        if any(keyword in raw_part for keyword in self.key_words):
             return 1
-        elif part in self.country_set:
+        elif clean_part in self.country_set:
             return 2
-        elif part in self.subregion_set:
+        elif clean_part in self.subregion_set:
             return 3
-        elif part.lower() in self.abbr2country.keys():
+        elif lower_part in self.abbr2country.keys() and raw_clean.isupper():
             return 4
-        elif part in self.alias_country.keys():
+        elif clean_part in self.alias_country.keys():
             return 5
         else:
             return 0
@@ -113,10 +122,16 @@ class ROR_Search():
         Split affiliation into parts by comma, clean each part.
         """
         location_info = [None, None]
+        affiliation = re.sub(r'Electronic address:\s*\S+', ' ', affiliation, flags=re.IGNORECASE)
+        affiliation = re.sub(r'\b\S+@\S+\b', ' ', affiliation)
+        affiliation = re.sub(r'https?://\S+', ' ', affiliation)
         parts = re.split(r',|\.', affiliation)
-        parts = [part.translate(self.trans).strip() for part in parts]
-        parts = [part for part in parts if part]
-        kinds = [self.exclude(part) for part in parts]
+        raw_parts = [part.strip() for part in parts]
+        parts = [part.translate(self.trans).strip() for part in raw_parts]
+        part_pairs = [(part, raw) for part, raw in zip(parts, raw_parts) if part]
+        parts = [part for part, _ in part_pairs]
+        raw_parts = [raw for _, raw in part_pairs]
+        kinds = [self.exclude(part, raw) for part, raw in zip(parts, raw_parts)]
         parts = parts[::-1]
         kinds = kinds[::-1]
         cleaned_parts = [part for i, part in enumerate(parts) if kinds[i] == 0]
