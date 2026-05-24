@@ -8,6 +8,7 @@ from call_API import LLM_process, ArticleProcess
 from StructuredPrompt import PromptGenerator
 import datetime
 import tqdm
+import time
 
 # 加载环境变量
 load_dotenv()  # load .env file
@@ -60,8 +61,8 @@ Examples:
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
                         help='Limit number of papers to process')
-    parser.add_argument('--model', default='qwen3.6-plus-2026-04-02',
-                        help='LLM model to use (default: qwen3.6-plus-2026-04-02)')
+    parser.add_argument('--model', default='glm-5.1',
+                        help='LLM model to use (default: glm-5.1)')
     
     args = parser.parse_args()
     
@@ -114,7 +115,7 @@ Examples:
         
         success = False
         retries = 0
-        max_retries = 10
+        max_retries = 15
         
         while not success and retries < max_retries:
             try:
