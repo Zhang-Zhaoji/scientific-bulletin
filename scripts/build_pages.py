@@ -282,6 +282,17 @@ def insert_report_media_after_overview(report_body: str, media_html: str) -> str
     return media_html + "\n" + report_body
 
 
+def render_report_link(title: str, page_name: str, source_name: str, cover_src: str | None) -> str:
+    cover_html = ""
+    if cover_src:
+        cover_html = f'<img class="report-thumb" src="{html.escape(cover_src)}" alt="">'
+    return (
+        f'<li><a href="{html.escape(page_name)}"><span><strong>{html.escape(title)}</strong>'
+        f'<br><span class="meta">{html.escape(source_name)}</span></span>'
+        f'{cover_html}</a></li>'
+    )
+
+
 def pre_overview_text(markdown_text: str) -> str:
     lines = markdown_text.splitlines()
     overview_idx = next(
@@ -498,12 +509,7 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
         (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
         report_links.append((title, page_name, report_path.name, cover_src))
 
-    items = "\n".join(
-        f'<li><a href="{html.escape(page_name)}"><span><strong>{html.escape(title)}</strong>'
-        f'<br><span class="meta">{html.escape(source_name)}</span></span>'
-        f'{f"<img class=\"report-thumb\" src=\"{cover_src}\" alt=\"\">" if cover_src else ""}</a></li>'
-        for title, page_name, source_name, cover_src in report_links
-    )
+    items = "\n".join(render_report_link(*report_link) for report_link in report_links)
     if not items:
         items = '<li class="meta">No reports found.</li>'
 
