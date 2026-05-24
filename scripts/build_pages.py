@@ -217,8 +217,22 @@ def report_date_from_name(path: Path) -> str:
     return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
 
 
+def is_special_issue(path: Path) -> bool:
+    return path.stem.endswith("_specialissue")
+
+
+def first_markdown_heading(markdown_text: str) -> str:
+    for line in markdown_text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            return stripped[2:].strip()
+    return ""
+
+
 def report_asset_dates(report_path: Path) -> list[datetime]:
     report_date = datetime.strptime(report_date_from_name(report_path), "%Y-%m-%d")
+    if is_special_issue(report_path):
+        return [report_date, report_date - timedelta(days=1)]
     return [report_date - timedelta(days=1), report_date]
 
 
@@ -306,6 +320,31 @@ def render_report_link(title: str, page_name: str, source_name: str, cover_src: 
         f'<br><span class="meta">{html.escape(source_name)}</span></span>'
         f'{cover_html}</a></li>'
     )
+
+
+def copy_special_issue_assets(input_dir: Path, output_dir: Path, special_issue_idx: int) -> None:
+    source_dir = input_dir / "specialissue" / str(special_issue_idx)
+    if not source_dir.exists():
+        return
+    target_dir = output_dir / "assets" / "specialissue" / str(special_issue_idx)
+    target_dir.mkdir(parents=True, exist_ok=True)
+    for source_path in source_dir.iterdir():
+        if source_path.is_file():
+            shutil.copy2(source_path, target_dir / source_path.name)
+
+
+def rewrite_special_issue_asset_paths(markdown_text: str, special_issue_idx: int) -> str:
+    source_prefix = rf"specialissue[\\/]{special_issue_idx}[\\/]"
+    target_prefix = f"assets/specialissue/{special_issue_idx}/"
+    return re.sub(rf"(?<!assets[\\/]){source_prefix}", target_prefix, markdown_text)
+
+
+def strip_first_markdown_heading(markdown_text: str) -> str:
+    lines = markdown_text.splitlines()
+    for idx, line in enumerate(lines):
+        if line.strip().startswith("# "):
+            return "\n".join(lines[:idx] + lines[idx + 1:]).strip()
+    return markdown_text.strip()
 
 
 def pre_overview_text(markdown_text: str) -> str:
@@ -504,7 +543,10 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
         (path for path in input_dir.glob("report_*.md") if "_wechat" not in path.stem),
         key=lambda path: (report_date_from_name(path), path.name),
     )
-    issue_numbers = {path: idx for idx, path in enumerate(reports, 1)}
+    regular_reports = [path for path in reports if not is_special_issue(path)]
+    special_reports = [path for path in reports if is_special_issue(path)]
+    issue_numbers = {path: idx for idx, path in enumerate(regular_reports, 1)}
+    special_issue_numbers = {path: idx for idx, path in enumerate(special_reports, 1)}
     display_reports = list(reversed(reports))
     output_dir.mkdir(parents=True, exist_ok=True)
     assets_dir = output_dir / "assets"
@@ -514,11 +556,22 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
     report_links = []
     for report_path in display_reports:
         markdown_text = report_path.read_text(encoding="utf-8")
-        title = generated_report_title(report_path, markdown_text, issue_numbers[report_path])
-        report_body = trim_report_body(markdown_text)
+        if is_special_issue(report_path):
+            special_issue_idx = special_issue_numbers[report_path]
+            copy_special_issue_assets(input_dir, output_dir, special_issue_idx)
+            heading = first_markdown_heading(markdown_text)
+            title = f"神经科学快讯·special issue"
+            if heading:
+                title = f"{title}｜{heading}"
+            report_body = strip_first_markdown_heading(markdown_text)
+            report_body = rewrite_special_issue_asset_paths(report_body, special_issue_idx)
+        else:
+            title = generated_report_title(report_path, markdown_text, issue_numbers[report_path])
+            report_body = trim_report_body(markdown_text)
         cover_src = report_cover_src(report_path, output_dir)
-        media_html = render_report_media(report_path, output_dir)
-        report_body = insert_report_media_after_overview(report_body, media_html)
+        if not is_special_issue(report_path):
+            media_html = render_report_media(report_path, output_dir)
+            report_body = insert_report_media_after_overview(report_body, media_html)
         body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}")
         page_name = slugify(report_path)
         (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
