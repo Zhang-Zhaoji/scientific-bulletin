@@ -210,12 +210,12 @@ class Response3(BaseModel):
     @model_validator(mode='after')
     def validate_crossover_logic(self):
         has_external = any("域外" in cat for cat in self.final_categories)
+        # 因为报错太多暂时取消
+        # if has_external and not self.crossover_value:
+        #     raise ValueError("包含'域外'类别的论文必须提供 crossover_value")
 
-        if has_external and not self.crossover_value:
-            raise ValueError("包含'域外'类别的论文必须提供 crossover_value")
-
-        if not has_external and self.crossover_value:
-            self.crossover_value = None
+        # if not has_external and self.crossover_value:
+        #     self.crossover_value = None
 
         return self
 
@@ -272,7 +272,7 @@ class PromptGenerator:
             "title_zh": "标题的中文翻译",
             "domain": "核心域 | 域外高影响 | 域外局限",
             "confidence": "0.0-10.0",
-            "primary_category": "如果核心域，必须从上述预定义的神经科学子领域中选择一个",
+            "primary_category": "如果核心域，必须从上述预定义的神经科学子领域中选择一个，否则随机选择一个",
             "reasoning": "一句话理由",
             "cross_domain_potential": "如果是域外，说明其价值（0-10分）",
         }

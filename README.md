@@ -179,7 +179,7 @@ All processed papers are stored in a SQLite database for efficient querying and 
 ## 🤖 LLM Analysis & Report Generation
 
 We use OpenAI-compatible LLM APIs to process collected papers:
-- **Default processing model**: `glm-5.1` in `LLM_eval/main.py`
+- **Default processing model**: `qwen3.7-max` in `LLM_eval/main.py`
 - **Report polishing model used by report scripts**: `qwen3.6-flash-2026-04-16`
 - **Core Functions**:
   - Classify papers as core neuroscience, high-impact cross-domain work, limited cross-domain work, or out-of-scope work
