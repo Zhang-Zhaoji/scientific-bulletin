@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-07",
+  "sources": {
+    "arxiv": {
+      "count": 46,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "31 May 2026"
+      }
+    },
+    "biorxiv": {
+      "count": 0,
+      "date_range": null
+    },
+    "nature": {
+      "count": 37,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "05 Jun 2026"
+      }
+    },
+    "science": {
+      "count": 38,
+      "date_range": {
+        "min": "04 Jun 2026",
+        "max": "04 Jun 2026"
+      }
+    },
+    "cell": {
+      "count": 17,
+      "date_range": {
+        "min": "07 Jun 2026",
+        "max": "07 Jun 2026"
+      }
+    },
+    "jneurophys": {
+      "count": 15,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "05 Jun 2026"
+      }
+    },
+    "jneurosci": {
+      "count": 25,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "05 Jun 2026"
+      }
+    },
+    "jcogn": {
+      "count": 13,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "01 Jun 2026"
+      }
+    },
+    "jvis": {
+      "count": 3,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "01 Jun 2026"
+      }
+    },
+    "pnas": {
+      "count": 84,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "05 Jun 2026"
+      }
+    },
+    "natcomm": {
+      "count": 74,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "06 Jun 2026"
+      }
+    },
+    "brain": {
+      "count": 41,
+      "date_range": {
+        "min": "01 Jun 2026",
+        "max": "06 Jun 2026"
+      }
+    },
+    "sciadv": {
+      "count": 0,
+      "date_range": null
+    },
+    "elife": {
+      "count": 0,
+      "date_range": null
+    }
+  }
+}
