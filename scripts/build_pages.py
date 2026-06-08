@@ -201,6 +201,22 @@ img {
   .report-thumb { width: 100%; }
   table { display: block; overflow-x: auto; white-space: nowrap; }
 }
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 """
 
 
