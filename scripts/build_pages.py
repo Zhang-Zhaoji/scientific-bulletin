@@ -373,15 +373,27 @@ def generated_report_title(path: Path, markdown_text: str, issue_idx: int) -> st
     return f"神经科学快讯·第{issue_idx:03d}期 {subtitle}({report_date_from_name(path)})"
 
 
+# def trim_report_body(markdown_text: str) -> str:
+#     lines = markdown_text.splitlines()
+
+#     quote_idx = next(
+#         (idx for idx, line in enumerate(lines) if line.lstrip().startswith(">")),
+#         None
+#     )
+#     if quote_idx is not None:
+#         return "\n".join(lines[quote_idx:]).strip()
+
+#     overview_idx = next(
+#         (idx for idx, line in enumerate(lines) if "📊 本周概览" in line),
+#         None
+#     )
+#     if overview_idx is not None:
+#         return "\n".join(lines[overview_idx:]).strip()
+
+#     return markdown_text.strip()
+
 def trim_report_body(markdown_text: str) -> str:
     lines = markdown_text.splitlines()
-
-    quote_idx = next(
-        (idx for idx, line in enumerate(lines) if line.lstrip().startswith(">")),
-        None
-    )
-    if quote_idx is not None:
-        return "\n".join(lines[quote_idx:]).strip()
 
     overview_idx = next(
         (idx for idx, line in enumerate(lines) if "📊 本周概览" in line),
@@ -389,6 +401,13 @@ def trim_report_body(markdown_text: str) -> str:
     )
     if overview_idx is not None:
         return "\n".join(lines[overview_idx:]).strip()
+
+    quote_idx = next(
+        (idx for idx, line in enumerate(lines) if line.lstrip().startswith(">")),
+        None
+    )
+    if quote_idx is not None:
+        return "\n".join(lines[quote_idx:]).strip()
 
     return markdown_text.strip()
 
