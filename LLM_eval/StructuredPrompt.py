@@ -52,6 +52,89 @@ def _build_json_example(criteria: list) -> str:
     return json.dumps(example, ensure_ascii=False, indent=2)
 
 
+def _format_json_examples(examples: list[dict]) -> str:
+    """Format few-shot JSON examples for prompts."""
+    return "\n\n".join(
+        f"示例 {idx}:\n{json.dumps(example, ensure_ascii=False, indent=2)}"
+        for idx, example in enumerate(examples, 1)
+    )
+
+
+STAGE1_EXAMPLES = [
+    {
+        "title_zh": "视觉皮层中稳定与漂移刺激表征的神经元-星形胶质细胞协同维持",
+        "domain": "核心域",
+        "confidence": 9.2,
+        "primary_category": "系统与环路神经科学",
+        "reasoning": "该研究直接解析视觉皮层神经元与胶质细胞群体表征，属于系统神经科学核心问题。",
+        "cross_domain_potential": 0.0,
+    },
+    {
+        "title_zh": "帮助科学家编写专家级实证软件的AI系统",
+        "domain": "域外高影响",
+        "confidence": 8.8,
+        "primary_category": None,
+        "reasoning": "该研究并非神经科学本体，但自动化科研软件生成可显著影响神经数据分析与计算建模。",
+        "cross_domain_potential": 9.0,
+    },
+    {
+        "title_zh": "热带生态系统中白蚁分解者优势的演化起源",
+        "domain": "域外局限",
+        "confidence": 9.0,
+        "primary_category": None,
+        "reasoning": "该研究主要属于生态演化领域，与神经科学问题缺乏直接联系或明确迁移价值。",
+        "cross_domain_potential": 0.0,
+    },
+]
+
+STAGE2_NEURO_EXAMPLE = {
+    "scores": {
+        "breakthrough": 8.6,
+        "methodology": 8.4,
+        "evidence": 8.2,
+        "contribution": 8.5,
+        "accessibility": 7.6,
+    },
+    "confidence": 8,
+    "feature_angle": "跨细胞类型群体活动揭示皮层表征稳定性的新机制",
+    "key_strength": "结合长期成像与群体分析，将神经元和胶质细胞协同动态与刺激表征稳定性直接联系起来。",
+    "key_limitation": "主要基于特定感觉皮层和实验范式，跨脑区及跨任务泛化仍需进一步验证。",
+    "target_audience": "系统神经科学、神经影像、胶质细胞生物学和计算建模研究者",
+}
+
+STAGE2_GENERAL_EXAMPLE = {
+    "scores": {
+        "Importance": 9.2,
+        "Transferability": 9.0,
+        "Inspiration": 8.8,
+        "Timeliness": 9.4,
+        "Accessibility": 8.0,
+    },
+    "confidence": 8,
+    "feature_angle": "多智能体AI将科研流程从辅助分析推进到假设生成与迭代验证",
+    "key_strength": "展示了从文献理解、假设提出到实验设计的自动化闭环，对复杂科学发现流程具有范式意义。",
+    "key_limitation": "目前验证场景仍有限，系统在高噪声、多变量神经科学实验中的可靠性需要更多实证。",
+    "target_audience": "AI4Science、计算神经科学、系统生物学和科研自动化平台开发者",
+}
+
+STAGE3_EXAMPLES = [
+    {
+        "final_categories": ["系统与环路神经科学", "方法学"],
+        "cross_tags": ["视觉皮层", "群体编码", "钙成像", "星形胶质细胞", "表征漂移"],
+        "recommendation_text": "这项研究把神经元群体活动与星形胶质细胞动态放在同一表征框架中，解释了感觉刺激表征为何能在长期尺度上兼具稳定与漂移。它不仅为理解皮层编码稳定性提供了新的细胞级机制，也为分析慢性成像数据中的群体动力学提供了可迁移的方法学思路。",
+        "crossover_value": None,
+        "editor_note": "适合作为系统神经科学与胶质细胞交叉主题的深度解读候选。",
+    },
+    {
+        "final_categories": ["域外高影响", "方法学"],
+        "cross_tags": ["AI4Science", "多智能体", "自动化发现", "计算建模", "科研工作流"],
+        "recommendation_text": "该研究虽然不属于传统神经科学实验论文，但它展示了多智能体系统在科学假设生成、实验设计和结果迭代中的潜力。对依赖复杂数据分析与模型构建的神经科学领域而言，这类系统可能改变从文献阅读到机制建模的完整工作流。",
+        "crossover_value": "神经科学面临高维数据、复杂实验设计和跨尺度模型整合难题，自动化科研智能体有望加速假设生成和分析流程。",
+        "editor_note": "可放入AI驱动科研范式变化专题。",
+    },
+]
+
+
 # ── Pydantic response models ──
 
 class Response1(BaseModel):
@@ -300,7 +383,10 @@ class PromptGenerator:
 - 方法学
 
 输出JSON格式：
-{json.dumps(example, ensure_ascii=False, indent=2)}"""
+{json.dumps(example, ensure_ascii=False, indent=2)}
+
+参考示例（只学习格式和判断边界，不要复制示例内容）：
+{_format_json_examples(STAGE1_EXAMPLES)}"""
         return prompt
 
     def _stage2_strict_scoring(self, paper: Paper, domain_result: Dict) -> str:
@@ -349,9 +435,11 @@ JSON 键名映射（必须严格遵守，以便下游程序统一计算）：
         if domain == "域外高影响":
             original_scoring = _build_score_prompt(GENERAL_CRITERIA)
             json_criteria = _build_json_example(GENERAL_CRITERIA)
+            scoring_example = STAGE2_GENERAL_EXAMPLE
         else:
             original_scoring = _build_score_prompt(NEURO_CRITERIA)
             json_criteria = _build_json_example(NEURO_CRITERIA)
+            scoring_example = STAGE2_NEURO_EXAMPLE
 
         prompt = f"""对以下论文进行顶刊级严苛评分：
 
@@ -367,7 +455,10 @@ JSON 键名映射（必须严格遵守，以便下游程序统一计算）：
 {original_scoring}
 
 输出JSON格式：
-{json_criteria}"""
+{json_criteria}
+
+参考示例（只学习字段、数值范围和写作粒度，不要复制示例内容）：
+{json.dumps(scoring_example, ensure_ascii=False, indent=2)}"""
 
         return prompt
 
@@ -401,5 +492,8 @@ JSON 键名映射（必须严格遵守，以便下游程序统一计算）：
 4. 如果是域外高影响，撰写"跨界价值说明"（为何领域外读者应该关注）
 
 输出JSON：
-{json.dumps(example, ensure_ascii=False, indent=2)}"""
+{json.dumps(example, ensure_ascii=False, indent=2)}
+
+参考示例（只学习格式、标签粒度和推荐语风格，不要复制示例内容）：
+{_format_json_examples(STAGE3_EXAMPLES)}"""
         return prompt

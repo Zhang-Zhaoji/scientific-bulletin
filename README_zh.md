@@ -66,8 +66,11 @@ bashScripts/build_sq.bat
 # 生成LLM总结和报告
 python LLM_eval/main.py
 
-# 处理指定的富集JSONL文件，并指定模型
-python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl --model glm-5.1
+# 使用配置好的平台/模型处理指定的富集JSONL文件
+python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl
+
+# 临时覆盖配置中的平台/模型
+python LLM_eval/main.py --platform Aliyuncs --model qwen3.7-plus
 
 # 生成数据可视化图表
 python visualize/main.py
@@ -79,7 +82,7 @@ python visualize/global_heatmap.py --jsonl getfiles/all_papers_2026-05-23_enrich
 python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 ```
 
-更多爬虫和LLM处理选项请查看 `python src/main.py --help` 与 `python LLM_eval/main.py --help`。LLM处理需要在环境变量或 `.env` 文件中提供 `DASHSCOPE_API_KEY` 和 `API_BASE_URL`。
+更多爬虫和LLM处理选项请查看 `python src/main.py --help` 与 `python LLM_eval/main.py --help`。LLM平台和默认模型在 `LLM_eval/config.py` 中配置；API key 可以放在 `.env`、`.env.DeepSeek` 或 `.env.Aliyuncs` 中。
 
 ---
 

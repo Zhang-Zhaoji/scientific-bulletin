@@ -9,12 +9,15 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import ast
 import html
 import re
 import shutil
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
+import json
+from urllib.parse import quote_plus, urljoin
 
 try:
     import markdown
@@ -102,6 +105,50 @@ main {
 .article-card h3 {
   margin-top: 0;
   color: var(--accent);
+}
+.article-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-card h3 a:hover {
+  text-decoration: underline;
+}
+.article-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.article-card-head h3 {
+  margin-bottom: 10px;
+}
+.article-badge {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #e9f3ff;
+  color: #0f5d9e;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 16px;
+}
+.article-chip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.3;
 }
 .article-card p:last-child,
 .article-card ul:last-child {
@@ -197,6 +244,7 @@ img {
   .cover-hero { width: 100%; }
   .cover-hero + main { margin-top: -36px; }
   .paper { padding: 18px; }
+  .article-card-head { flex-direction: column; gap: 6px; }
   .report-list a { grid-template-columns: 1fr; }
   .report-thumb { width: 100%; }
   table { display: block; overflow-x: auto; white-space: nowrap; }
@@ -231,6 +279,57 @@ def report_date_from_name(path: Path) -> str:
     if not match:
         return path.stem
     return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+
+def json_date_from_name(path: Path) -> str:
+    match = re.search(r"LLM_results_(\d{4})(\d{2})(\d{2})", path.stem)
+    if not match:
+        return path.stem
+    return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+
+
+def parse_iso_date(date_text: str) -> datetime | None:
+    try:
+        return datetime.strptime(date_text, "%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def normalize_title_key(title: str) -> str:
+    return re.sub(r"\s+", " ", title or "").strip().casefold()
+
+
+def source_base_url(raw_data: dict) -> str:
+    source = str(raw_data.get("source") or raw_data.get("original_source") or raw_data.get("journal") or "").lower()
+    if "nature" in source:
+        return "https://www.nature.com/"
+    if "science" in source:
+        return "https://www.science.org/"
+    if "cell" in source or "neuron" in source or "current biology" in source:
+        return "https://www.cell.com/"
+    if "pnas" in source:
+        return "https://www.pnas.org/"
+    return "https://www.google.com/"
+
+
+def google_search_url(title: str) -> str:
+    return f"https://www.google.com/search?q={quote_plus(title)}"
+
+
+def article_link_from_raw_data(raw_data: dict, title: str) -> str:
+    url = raw_data.get("url")
+    doi = raw_data.get("doi")
+
+    if url:
+        url = str(url).strip()
+        if re.match(r"^https?://", url):
+            return url
+        if url.startswith("/") or not re.match(r"^[a-z]+:", url, flags=re.IGNORECASE):
+            return urljoin(source_base_url(raw_data), url)
+
+    if doi:
+        return f"https://doi.org/{doi}"
+
+    return google_search_url(title)
 
 
 def is_special_issue(path: Path) -> bool:
@@ -389,25 +488,6 @@ def generated_report_title(path: Path, markdown_text: str, issue_idx: int) -> st
     return f"神经科学快讯·第{issue_idx:03d}期 {subtitle}({report_date_from_name(path)})"
 
 
-# def trim_report_body(markdown_text: str) -> str:
-#     lines = markdown_text.splitlines()
-
-#     quote_idx = next(
-#         (idx for idx, line in enumerate(lines) if line.lstrip().startswith(">")),
-#         None
-#     )
-#     if quote_idx is not None:
-#         return "\n".join(lines[quote_idx:]).strip()
-
-#     overview_idx = next(
-#         (idx for idx, line in enumerate(lines) if "📊 本周概览" in line),
-#         None
-#     )
-#     if overview_idx is not None:
-#         return "\n".join(lines[overview_idx:]).strip()
-
-#     return markdown_text.strip()
-
 def trim_report_body(markdown_text: str) -> str:
     lines = markdown_text.splitlines()
 
@@ -514,6 +594,221 @@ def markdown_to_html(markdown_text: str) -> str:
     return md.convert(markdown_text)
 
 
+def build_article_url_map(json_path: Path) -> dict[str, str]:
+    """
+    Load one LLM result JSON and return title -> source URL.
+    """
+    with json_path.open("r", encoding="utf-8") as f:
+        json_list = json.load(f)
+
+    url_map = {}
+    for item in json_list:
+        raw_data = item.get("paper", {}).get("raw_data", {})
+        title_candidates = [
+            raw_data.get("title"),
+            item.get("paper", {}).get("title"),
+        ]
+        for title in title_candidates:
+            if title:
+                url = article_link_from_raw_data(raw_data, title)
+                url_map[normalize_title_key(title)] = url
+    return url_map
+
+
+def exact_date_article_url_map(input_dir: Path, report_path: Path) -> dict[str, str]:
+    """
+    Find the LLM result JSON for a report date and build a title -> URL map.
+    If there are multiple JSON files for the same date, the lexicographically
+    latest one is used.
+    """
+    report_date = report_date_from_name(report_path)
+    candidates = sorted(
+        (path for path in input_dir.glob("LLM_results_*.json") if json_date_from_name(path) == report_date),
+        key=lambda path: path.name,
+    )
+    if not candidates:
+        return {}
+    return build_article_url_map(candidates[-1])
+
+
+def report_article_url_maps_by_order(input_dir: Path, regular_reports: list[Path]) -> dict[Path, dict[str, str]]:
+    """
+    Pair regular reports with LLM result JSON files.
+    The report and JSON dates may differ slightly, so each report prefers the
+    latest unused JSON whose date is not later than the report date.
+    """
+    json_files = sorted(
+        input_dir.glob("LLM_results_*.json"),
+        key=lambda path: (json_date_from_name(path), path.name),
+    )
+    json_entries = [
+        (path, parse_iso_date(json_date_from_name(path)))
+        for path in json_files
+    ]
+
+    article_url_maps = {}
+    used_json_paths = set()
+    for report_path in regular_reports:
+        report_dt = parse_iso_date(report_date_from_name(report_path))
+        selected_json = None
+
+        if report_dt is not None:
+            eligible = [
+                (json_path, json_dt)
+                for json_path, json_dt in json_entries
+                if json_path not in used_json_paths and json_dt is not None and json_dt <= report_dt
+            ]
+            if eligible:
+                selected_json = max(eligible, key=lambda item: (item[1], item[0].name))[0]
+
+        if selected_json is None:
+            selected_json = next(
+                (json_path for json_path, _ in json_entries if json_path not in used_json_paths),
+                None
+            )
+
+        if selected_json is not None:
+            used_json_paths.add(selected_json)
+            article_url_maps[report_path] = build_article_url_map(selected_json)
+
+    for report_path in regular_reports:
+        if report_path not in article_url_maps:
+            article_url_maps[report_path] = exact_date_article_url_map(input_dir, report_path)
+    return article_url_maps
+
+
+def link_article_heading(article_markdown: str, article_urls: dict[str, str]) -> str:
+    lines = article_markdown.splitlines()
+    if not lines:
+        return article_markdown
+
+    match = re.match(r"^(###\s+)(.+?)\s*$", lines[0])
+    if not match:
+        return article_markdown
+
+    prefix, title = match.groups()
+    if "](" in title:
+        return article_markdown
+
+    url = article_urls.get(normalize_title_key(title)) or google_search_url(title)
+
+    escaped_title = title.replace("[", "\\[").replace("]", "\\]")
+    safe_url = url.replace("<", "%3C").replace(">", "%3E")
+    lines[0] = f"{prefix}[{escaped_title}](<{safe_url}>)"
+    return "\n".join(lines)
+
+
+def parse_bold_field(line: str) -> tuple[str, str] | None:
+    match = re.match(r"^\*\*([^*]+)\*\*:\s*(.+?)\s*$", line.strip())
+    if not match:
+        return None
+    return match.group(1).strip(), match.group(2).strip()
+
+
+def clean_inline_markdown(value: str) -> str:
+    value = re.sub(r"\*\*(.*?)\*\*", r"\1", value)
+    value = re.sub(r"\[(.*?)\]\([^)]*\)", r"\1", value)
+    return value.strip()
+
+
+def split_journal_date(value: str) -> tuple[str, str | None]:
+    parts = [clean_inline_markdown(part) for part in value.split("|")]
+    journal = parts[0].strip()
+    date = None
+    for part in parts[1:]:
+        if "发表日期" in part:
+            date = part.split(":", 1)[-1].strip()
+    return journal, date
+
+
+def clean_domain_value(value: str) -> str:
+    value = clean_inline_markdown(value)
+    value = re.sub(r"^None\s*/\s*", "", value).strip()
+    if value.startswith("[") and value.endswith("]"):
+        try:
+            parsed = ast.literal_eval(value)
+        except (SyntaxError, ValueError):
+            parsed = None
+        if isinstance(parsed, list):
+            return " · ".join(str(item).strip() for item in parsed if str(item).strip())
+    parts = [part.strip() for part in value.split(" / ") if part.strip() and part.strip() != "None"]
+    cleaned_parts = []
+    for part in parts:
+        if part.startswith("[") and part.endswith("]"):
+            try:
+                parsed = ast.literal_eval(part)
+            except (SyntaxError, ValueError):
+                parsed = None
+            if isinstance(parsed, list):
+                cleaned_parts.extend(str(item).strip() for item in parsed if str(item).strip())
+                continue
+        cleaned_parts.append(part)
+    return " · ".join(cleaned_parts)
+
+
+def article_card_metadata(article_markdown: str) -> tuple[str, dict[str, str]]:
+    lines = article_markdown.splitlines()
+    fields = {}
+    kept_lines = []
+
+    for line in lines:
+        parsed = parse_bold_field(line)
+        if parsed:
+            field_name, field_value = parsed
+            fields[field_name] = clean_inline_markdown(field_value)
+            if field_name in {"推荐等级", "评分", "期刊", "研究领域"}:
+                continue
+        kept_lines.append(line)
+
+    metadata = {}
+    if fields.get("推荐等级") or fields.get("评分"):
+        badge_parts = [part for part in [fields.get("推荐等级"), fields.get("评分")] if part]
+        metadata["badge"] = " ".join(badge_parts)
+    if fields.get("期刊"):
+        journal, date = split_journal_date(fields["期刊"])
+        if journal:
+            metadata["journal"] = journal
+        if date:
+            metadata["date"] = date
+    if fields.get("研究领域"):
+        metadata["domain"] = clean_domain_value(fields["研究领域"])
+
+    return "\n".join(kept_lines).strip(), metadata
+
+
+def render_article_metadata(metadata: dict[str, str]) -> str:
+    chips = []
+    if metadata.get("journal"):
+        chips.append(f'<span class="article-chip">{html.escape(metadata["journal"])}</span>')
+    if metadata.get("date"):
+        chips.append(f'<span class="article-chip">{html.escape(metadata["date"])}</span>')
+    if metadata.get("domain"):
+        chips.append(f'<span class="article-chip">{html.escape(metadata["domain"])}</span>')
+    if not chips:
+        return ""
+    return '<div class="article-meta">' + "".join(chips) + "</div>"
+
+
+def add_article_card_chrome(article_html: str, metadata: dict[str, str]) -> str:
+    badge = metadata.get("badge")
+    if badge:
+        article_html = re.sub(
+            r"(<h3[^>]*>.*?</h3>)",
+            r'<div class="article-card-head">\1'
+            + f'<span class="article-badge">{html.escape(badge)}</span></div>',
+            article_html,
+            count=1,
+            flags=re.DOTALL,
+        )
+    meta_html = render_article_metadata(metadata)
+    if meta_html:
+        if 'class="article-card-head"' in article_html:
+            article_html = article_html.replace("</div>", f"</div>\n{meta_html}", 1)
+        else:
+            article_html = re.sub(r"(</h3>)", r"\1\n" + meta_html, article_html, count=1)
+    return article_html
+
+
 def is_article_heading(lines: list[str], index: int) -> bool:
     line = lines[index].strip()
     if not line.startswith("### "):
@@ -534,7 +829,8 @@ def is_article_heading(lines: list[str], index: int) -> bool:
     return marker_count >= 2
 
 
-def render_markdown_with_article_cards(markdown_text: str) -> str:
+def render_markdown_with_article_cards(markdown_text: str, article_urls: dict[str, str] | None = None) -> str:
+    article_urls = article_urls or {}
     lines = markdown_text.splitlines()
     parts = []
     plain_buffer = []
@@ -557,7 +853,10 @@ def render_markdown_with_article_cards(markdown_text: str) -> str:
                     break
                 index += 1
             article_markdown = "\n".join(lines[start:index]).strip()
-            parts.append(f'<section class="article-card">\n{markdown_to_html(article_markdown)}\n</section>')
+            article_markdown = link_article_heading(article_markdown, article_urls)
+            article_markdown, metadata = article_card_metadata(article_markdown)
+            article_html = add_article_card_chrome(markdown_to_html(article_markdown), metadata)
+            parts.append(f'<section class="article-card">\n{article_html}\n</section>')
             continue
 
         plain_buffer.append(lines[index])
@@ -582,6 +881,7 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
     special_reports = [path for path in reports if is_special_issue(path)]
     issue_numbers = {path: idx for idx, path in enumerate(regular_reports, 1)}
     special_issue_numbers = {path: idx for idx, path in enumerate(special_reports, 1)}
+    article_url_maps = report_article_url_maps_by_order(input_dir, regular_reports)
     display_reports = list(reversed(reports))
     output_dir.mkdir(parents=True, exist_ok=True)
     assets_dir = output_dir / "assets"
@@ -607,7 +907,8 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
         if not is_special_issue(report_path):
             media_html = render_report_media(report_path, output_dir)
             report_body = insert_report_media_after_overview(report_body, media_html)
-        body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}")
+        article_urls = {} if is_special_issue(report_path) else article_url_maps.get(report_path, {})
+        body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}", article_urls)
         page_name = slugify(report_path)
         (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
         report_links.append((title, page_name, report_path.name, cover_src))
@@ -625,9 +926,18 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
 """
     (output_dir / "index.html").write_text(render_page(DEFAULT_TITLE, index_body), encoding="utf-8")
 
+def build_dict_on_dict(json_file_name)->dict:
+    """
+    load json files from LLM_results. return a dict of title -> info_json. currently the info_json is used as a simple {url:'...'}
+    """
+    return build_article_url_map(Path(json_file_name))
+
+def build_site_with_json(input_dir: Path, output_dir: Path) -> None:
+    build_site(input_dir, output_dir)
+
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build GitHub Pages static HTML from Markdown reports.")
+    parser = argparse.ArgumentParser(description="Build GitHub Pages static HTML from Markdown reports, and use ref jsons as information source")
     parser.add_argument("--input-dir", default="LLM_Results", help="Directory containing report_*.md files.")
     parser.add_argument("--output-dir", default="docs", help="Output directory for static HTML.")
     args = parser.parse_args()

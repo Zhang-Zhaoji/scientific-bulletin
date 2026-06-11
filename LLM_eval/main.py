@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 import json
 import argparse
@@ -9,19 +8,12 @@ from StructuredPrompt import PromptGenerator
 import datetime
 import tqdm
 import time
-
-# 加载环境变量
-load_dotenv()  # load .env file
-api_key = os.getenv("DASHSCOPE_API_KEY")
-if not api_key:
-    raise ValueError("DASHSCOPE_API_KEY not set")
-base_url = os.getenv("API_BASE_URL")
-if not base_url:
-    raise ValueError("API_BASE_URL not set")
+from util import load_api_url
+from config import PLATFORM as DEFAULT_PLATFORM, default_model, supported_platforms
 
 # 创建结果目录
-results_dir = Path(r"D:\工作\scientific bulletin\LLM_Results")
-results_dir.mkdir(exist_ok=True)
+results_dir = Path("LLM_Results")
+results_dir.mkdir(parents=True, exist_ok=True)
 
 
 def clean_article(article: dict) -> dict:
@@ -61,10 +53,14 @@ Examples:
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
                         help='Limit number of papers to process')
-    parser.add_argument('--model', default='qwen3.7-plus',
-                        help='LLM model to use (default: qwen3.7-plus)')
+    parser.add_argument('--model',
+                        help='LLM model to use (default: configured in LLM_eval/config.py)')
+    parser.add_argument('--platform', default=DEFAULT_PLATFORM, choices=supported_platforms(),
+                        help=f'Model provider platform (default: {DEFAULT_PLATFORM}, configured in LLM_eval/config.py)')
     
     args = parser.parse_args()
+    if not args.model:
+        args.model = default_model(args.platform)
     
     # 确定输入文件
     input_file = Path(args.input)
@@ -76,6 +72,7 @@ Examples:
     print("Neuroscience Paper Curation - LLM Processing")
     print("=" * 80)
     print(f"Input file: {input_file}")
+    print(f"Platform: {args.platform}")
     print(f"Model: {args.model}")
     if args.limit:
         print(f"Limit: {args.limit} papers")
@@ -102,7 +99,8 @@ Examples:
         print("[INFO] Detected enriched file with author information")
     
     # 初始化 LLM
-    llm_api = LLM_process(api_key=api_key, base_url=base_url, model=args.model)
+    api_key, base_url = load_api_url(PLATFORM=args.platform)
+    llm_api = LLM_process(api_key=api_key, base_url=base_url, model=args.model, provider=args.platform)
     
     # 初始化提示词生成器
     prompt_generator = PromptGenerator()

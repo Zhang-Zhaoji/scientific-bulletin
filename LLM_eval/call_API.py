@@ -3,9 +3,16 @@ from openai import OpenAI
 import os
 from StructuredPrompt import PromptGenerator, Response1, Response2General, Response2Neuro, Response2Skipped, Response3
 from util import Paper, PaperResult, DomainType
+from pydantic import BaseModel, ValidationError
 
 class LLM_process:
-    def __init__(self, api_key:str, base_url:str ="https://dashscope.aliyuncs.com/compatible-mode/v1", model="qwen3.7-plus", thinking:bool=False) -> None:
+    def __init__(self, api_key:str, base_url:str ="https://api.deepseek.com", model="deepseek-v4-flash", thinking:bool=False, provider: str | None = None) -> None:
+        """
+        dpsk: https://api.deepseek.com
+            models : deepseek-v4-flash, deepseek-v4-pro
+        aliyuncs: https://dashscope.aliyuncs.com/compatible-mode/v1
+            models: check their website, including qwen3.7-plus
+        """
         self.api_key :str = api_key # type: ignore # 
         self.base_url:str = base_url
         self.client = OpenAI(
@@ -14,8 +21,46 @@ class LLM_process:
             )
         self.model = model
         self.thinking = thinking
-        
-    def completion(self, SystemPrompt:str, UserPrompt:str, response_format:type):   
+        self.provider = (provider or self._detect_provider(base_url)).lower()
+
+    @staticmethod
+    def _detect_provider(base_url: str) -> str:
+        base_url = (base_url or "").lower()
+        if "deepseek" in base_url:
+            return "deepseek"
+        if "dashscope" in base_url or "aliyun" in base_url:
+            return "aliyuncs"
+        return "openai_compatible"
+
+    @staticmethod
+    def _extract_json_object(content: str) -> dict:
+        """
+        Parse a JSON object from model content.
+        DeepSeek JSON mode should return valid JSON, but this also tolerates
+        accidental fenced code blocks.
+        """
+        if not content or not content.strip():
+            raise ValueError("empty model content")
+        content = content.strip()
+        if content.startswith("```"):
+            content = content.strip("`").strip()
+            if content.lower().startswith("json"):
+                content = content[4:].strip()
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            start = content.find("{")
+            end = content.rfind("}")
+            if start >= 0 and end > start:
+                return json.loads(content[start:end + 1])
+            raise
+
+    @staticmethod
+    def _json_schema_hint(response_model: type[BaseModel]) -> str:
+        schema = response_model.model_json_schema()
+        return json.dumps(schema, ensure_ascii=False, indent=2)
+
+    def _completion_with_provider_schema(self, SystemPrompt: str, UserPrompt: str, response_format: type[BaseModel]):
         completion = self.client.chat.completions.parse(
             model = self.model,
             messages=[
@@ -26,8 +71,54 @@ class LLM_process:
             response_format=response_format,
             )
         result = completion.choices[0].message.parsed  # 类型安全的解析结果
-        
         return result
+
+    def _completion_with_json_mode(self, SystemPrompt: str, UserPrompt: str, response_format: type[BaseModel]):
+        schema_hint = self._json_schema_hint(response_format)
+        system_prompt = (
+            f"{SystemPrompt}\n\n"
+            "You must output only one valid JSON object. Do not output Markdown, code fences, or explanations.\n"
+            "The JSON object must satisfy this JSON Schema. If a field is optional and unknown, use null or an empty list as appropriate.\n"
+            f"{schema_hint}"
+        )
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": UserPrompt},
+        ]
+        last_error = None
+
+        for attempt in range(3):
+            kwargs = {
+                "model": self.model,
+                "messages": messages,
+                "response_format": {"type": "json_object"},
+                "max_tokens": 4096,
+            }
+            if self.thinking:
+                kwargs["extra_body"] = {"enable_thinking": self.thinking}
+            response = self.client.chat.completions.create(**kwargs)
+            content = response.choices[0].message.content
+            try:
+                parsed_json = self._extract_json_object(content)
+                return response_format.model_validate(parsed_json)
+            except (json.JSONDecodeError, ValidationError, ValueError) as exc:
+                last_error = exc
+                messages.append({"role": "assistant", "content": content or ""})
+                messages.append({
+                    "role": "user",
+                    "content": (
+                        "The previous response was not valid for the required JSON schema. "
+                        f"Validation/parsing error: {str(exc)[:1200]}\n"
+                        "Return a corrected JSON object only."
+                    ),
+                })
+
+        raise RuntimeError(f"Failed to get valid JSON after retries: {last_error}")
+
+    def completion(self, SystemPrompt:str, UserPrompt:str, response_format:type):
+        if self.provider in {"aliyuncs", "dashscope"}:
+            return self._completion_with_provider_schema(SystemPrompt, UserPrompt, response_format)
+        return self._completion_with_json_mode(SystemPrompt, UserPrompt, response_format)
 
 
 class ArticleProcess:

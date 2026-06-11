@@ -8,6 +8,29 @@ from typing import List, Dict, Optional, Literal
 from dataclasses import dataclass, asdict
 from enum import Enum
 import logging
+import os
+from dotenv import load_dotenv
+from config import API_KEY_ENV, BASE_URL_ENV, BASE_URLS, ENV_FILES
+
+
+
+def load_api_url(PLATFORM:str)->tuple[str,str]:
+    # 加载环境变量
+    for env_file in ENV_FILES:
+        load_dotenv(env_file, override=True)
+    load_dotenv(f".env.{PLATFORM}", override=True)  # optional runtime override
+
+    if PLATFORM not in API_KEY_ENV:
+        raise RuntimeError(f'not supported platform {PLATFORM}')
+
+    api_key_env = API_KEY_ENV[PLATFORM]
+    base_url_env = BASE_URL_ENV[PLATFORM]
+    api_key = os.getenv(api_key_env)
+    if not api_key:
+        raise ValueError(f"{api_key_env} not set")
+    base_url = os.getenv(base_url_env, BASE_URLS[PLATFORM])
+    return api_key, base_url
+
 
 # 配置日志
 logging.basicConfig(

@@ -68,8 +68,11 @@ bashScripts/build_sq.bat
 # Generate LLM summaries and reports
 python LLM_eval/main.py
 
-# Process a specific enriched JSONL file with a chosen model
-python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl --model glm-5.1
+# Process a specific enriched JSONL file with the configured provider/model
+python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl
+
+# Temporarily override the configured provider/model
+python LLM_eval/main.py --platform Aliyuncs --model qwen3.7-plus
 
 # Generate data visualizations
 python visualize/main.py
@@ -81,7 +84,7 @@ python visualize/global_heatmap.py --jsonl getfiles/all_papers_2026-05-23_enrich
 python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 ```
 
-See `python src/main.py --help` and `python LLM_eval/main.py --help` for all crawler and LLM options. LLM processing expects `DASHSCOPE_API_KEY` and `API_BASE_URL` to be available in the environment or a `.env` file.
+See `python src/main.py --help` and `python LLM_eval/main.py --help` for all crawler and LLM options. LLM provider defaults live in `LLM_eval/config.py`; API keys can be placed in `.env`, `.env.DeepSeek`, or `.env.Aliyuncs`.
 
 ---
 
