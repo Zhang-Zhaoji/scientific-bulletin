@@ -79,6 +79,7 @@ def report_cover_src(report_path: Path, output_dir: Path) -> str | None:
 def render_report_media(report_path: Path, output_dir: Path) -> str:
     candidate_dates = report_asset_dates(report_path)
     iso_dates = [date.strftime("%Y-%m-%d") for date in candidate_dates]
+    stats_dates = [date.strftime("%Y-%m-%d") for date in reversed(candidate_dates)]
 
     heatmap_path = first_existing([
         Path("Imgs") / "visulize_img" / "globalHeatmap" / f"{date}_heatmap.html"
@@ -87,6 +88,10 @@ def render_report_media(report_path: Path, output_dir: Path) -> str:
     pie_path = first_existing([
         Path("Imgs") / "visulize_img" / "countryPie" / f"{date}_pie.html"
         for date in iso_dates
+    ])
+    stats_path = first_existing([
+        Path("Imgs") / "visulize_img" / "statistics" / f"{date}_score_histogram.png"
+        for date in stats_dates
     ])
 
     media_parts = []
@@ -101,6 +106,13 @@ def render_report_media(report_path: Path, output_dir: Path) -> str:
         chart_frames.append(f'<iframe class="chart-frame" title="Country distribution pie chart" src="{pie_src}" loading="lazy"></iframe>')
     if chart_frames:
         media_parts.append(f'<div class="chart-grid">\n{"".join(chart_frames)}\n</div>')
+    if stats_path:
+        stats_src = copy_asset(stats_path, output_dir, "statistics")
+        media_parts.append(
+            '<figure class="stats-figure">'
+            f'<img src="{stats_src}" alt="Score distribution histogram" loading="lazy">'
+            '</figure>'
+        )
 
     if not media_parts:
         return ""

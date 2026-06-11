@@ -360,6 +360,16 @@ img {
   border-radius: 8px;
   background: transparent;
 }
+.stats-figure {
+  margin: 0;
+}
+.stats-figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
 .floating-toc {
   position: fixed;
   top: 92px;

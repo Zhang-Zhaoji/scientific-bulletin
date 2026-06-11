@@ -35,6 +35,8 @@ class ROR_Search():
         self.threshold = threshold
         self.standard_name_dict, self.alias_name_dict, self.loc_info = self.load_institute_info()
         self.key_words = ['@', 'Electronic', 'Department Of', 'Key Laboratory', 'School Of']
+        self.email_fragment_words = {'com', 'org', 'net', 'edu', 'gov', 'ac', 'cn', 'uk'}
+        self.blocked_aliases = {'edu'}
         self.country_set, self.subregion_set, self.abbr2country, self.alias_country = self.load_regions()
         self._build_index()
         self.trans = str.maketrans('.?!@#$%^&*()-,;:/\\`\'\"[]', ' ' * len('.?!@#$%^&*()-,;:/\\`\'\"[]'), '0123456789')
@@ -97,12 +99,12 @@ class ROR_Search():
         clean_part = part.strip()
         raw_clean = raw_part.strip()
         lower_part = clean_part.lower()
-        ambiguous_tlds = {'com', 'org', 'net', 'edu', 'gov', 'ac'}
-
         if not clean_part:
             return 0
-        if lower_part in ambiguous_tlds:
-            return 0
+        if lower_part in self.email_fragment_words:
+            return 6
+        if '@' in raw_clean:
+            return 6
         if any(keyword in raw_part for keyword in self.key_words):
             return 1
         elif clean_part in self.country_set:
@@ -115,6 +117,35 @@ class ROR_Search():
             return 5
         else:
             return 0
+
+    def valid_match_part(self, part: str) -> bool:
+        """
+        Keep tiny email/domain fragments and bare grant-agency acronyms out of
+        institution matching.
+        """
+        lower_part = part.strip().lower()
+        if not lower_part:
+            return False
+        if lower_part in self.email_fragment_words:
+            return False
+        if lower_part in self.blocked_aliases:
+            return False
+        if len(lower_part) <= 3 and lower_part.isascii():
+            return False
+        return True
+
+    def valid_alias_match(self, part: str, alias: str, score: int, threshold: int) -> bool:
+        if score < threshold:
+            return False
+        part_lower = part.strip().lower()
+        alias_lower = alias.strip().lower()
+        if alias_lower in self.blocked_aliases:
+            return False
+        if part_lower in self.email_fragment_words:
+            return False
+        if len(alias_lower) <= 3 and part_lower == alias_lower:
+            return False
+        return True
     
     # @timer
     def split_affiliation_parts(self, affiliation: str) -> list[str]:
@@ -180,7 +211,7 @@ class ROR_Search():
         tmp_standard_name = None
         tmp_score = 0
         for part in parts:
-            if not part:
+            if not self.valid_match_part(part):
                 continue
             first_char = part[0].upper()
             candidates = self.standard_index.get(first_char, self.standard_name_dict)
@@ -196,7 +227,7 @@ class ROR_Search():
         if score < threshold:
             # not pass strict, continue        
             for part in parts:
-                if not part:
+                if not self.valid_match_part(part):
                     continue
                 first_char = part[0].upper()
                 candidates = self.alias_index.get(first_char, self.alias_name_dict.keys())
@@ -206,7 +237,7 @@ class ROR_Search():
                     alias_standard_name = self.alias_name_dict[alias]
                     tmp_standard_name = alias_standard_name
                     tmp_score = alias_score
-                    if alias_score >= threshold:
+                    if self.valid_alias_match(part, alias, alias_score, threshold):
                         standard_name = tmp_standard_name
                         score = alias_score
                         break
