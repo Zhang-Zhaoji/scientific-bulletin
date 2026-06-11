@@ -1,24 +1,11 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Neuroscience Bulletin | Neuroscience Bulletin</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-  <header>
-    <div class="wrap site-head">
-      <a class="brand" href="index.html">Neuroscience Bulletin</a>
-      <nav class="nav">
-        <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/issues">Reports</a>
-        <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/">GitHub</a>
-      </nav>
-    </div>
-  </header>
+from __future__ import annotations
 
+
+def favorites_panel(root_prefix: str = "") -> str:
+    folder_src = f"{root_prefix}assets/icons/folder.svg"
+    return f"""
   <button class="favorite-tray-button" type="button" data-favorite-open aria-label="打开收藏夹">
-    <img src="assets/icons/folder.svg" alt="">
+    <img src="{folder_src}" alt="">
     <span data-favorite-count>0</span>
   </button>
   <aside class="favorite-drawer" data-favorite-drawer hidden aria-label="收藏夹">
@@ -36,32 +23,11 @@
       <button type="button" data-favorite-clear>清空</button>
     </div>
   </aside>
-  <main class="wrap">
-    <article class="paper">
+"""
 
-<h1>Neuroscience Bulletin</h1>
-<p class="meta">Static archive generated from Markdown reports in <code>LLM_Results</code>.</p>
-<ul class="report-list">
-<li><a href="report_20260608_2321_specialissue.html"><span><strong>神经科学快讯·special issue｜Embodied Intelligence: From Robotics, VLA Models towards AI4Neuroscience</strong><br><span class="meta">report_20260608_2321_specialissue.md</span></span><img class="report-thumb" src="assets/covers/20260608.png" alt=""></a></li>
-<li><a href="report_20260608_1549.html"><span><strong>神经科学快讯·第013期 微小大脑的“大智慧”：Science揭秘熊蜂无需训练即可自发解决复杂问题 (2026-06-08)</strong><br><span class="meta">report_20260608_1549.md</span></span><img class="report-thumb" src="assets/covers/20260607.png" alt=""></a></li>
-<li><a href="report_20260531_1448.html"><span><strong>神经科学快讯·第012期 嗅觉地图重绘：MERFISH全景揭示社会气味检测的空间编码与拓扑图谱 (2026-05-31)</strong><br><span class="meta">report_20260531_1448.md</span></span><img class="report-thumb" src="assets/covers/20260530.png" alt=""></a></li>
-<li><a href="report_20260524_2040_specialissue.html"><span><strong>神经科学快讯·special issue｜神经科学快讯网站上线：更稳定地浏览每周前沿报告</strong><br><span class="meta">report_20260524_2040_specialissue.md</span></span><img class="report-thumb" src="assets/covers/20260524.png" alt=""></a></li>
-<li><a href="report_20260524_0908.html"><span><strong>神经科学快讯·第011期 从工具到“研究合伙人”：多智能体AI系统如何重构神经科学发现闭环 (2026-05-24)</strong><br><span class="meta">report_20260524_0908.md</span></span><img class="report-thumb" src="assets/covers/20260523.png" alt=""></a></li>
-<li><a href="report_20260517_1108.html"><span><strong>神经科学快讯·第010期 神经科学简报｜全生命周期白质脑图谱问世、TMS抗抑郁环路获因果验证、AI-脑对齐迎来方法学重构 (2026-05-17)</strong><br><span class="meta">report_20260517_1108.md</span></span><img class="report-thumb" src="assets/covers/20260516.png" alt=""></a></li>
-<li><a href="report_20260510_2334.html"><span><strong>神经科学快讯·第009期 本周神经科学前沿：AI基础模型预测全脑活动，小胶质细胞“沉默”恐惧记忆，麻醉海马仍解语义 (2026-05-10)</strong><br><span class="meta">report_20260510_2334.md</span></span><img class="report-thumb" src="assets/covers/20260509.png" alt=""></a></li>
-<li><a href="report_20260502_0211.html"><span><strong>神经科学快讯·第008期 多感觉学习如何将视觉“写入”嗅觉记忆？AI重新定义生命字母表，精准基因编辑再突破 (2026-05-02)</strong><br><span class="meta">report_20260502_0211.md</span></span><img class="report-thumb" src="assets/covers/20260502.png" alt=""></a></li>
-<li><a href="report_20260425_1125.html"><span><strong>神经科学快讯·第007期 首张人类视交叉上核单细胞图谱揭晓：昼夜节律主时钟的分子蓝图 (2026-04-25)</strong><br><span class="meta">report_20260425_1125.md</span></span><img class="report-thumb" src="assets/covers/20260425.png" alt=""></a></li>
-<li><a href="report_20260418_1759.html"><span><strong>神经科学快讯·第006期 技术突破性强、临床转化价值高、且最具跨领域启发性 (2026-04-18)</strong><br><span class="meta">report_20260418_1759.md</span></span><img class="report-thumb" src="assets/covers/20260418.png" alt=""></a></li>
-<li><a href="report_20260411_1349.html"><span><strong>神经科学快讯·第005期 神经科学周报｜SPYTACs突破AD降解瓶颈，百万队列锁定脑萎缩前兆，跨组学绘就MS新靶点 (2026-04-11)</strong><br><span class="meta">report_20260411_1349.md</span></span><img class="report-thumb" src="assets/covers/20260411.png" alt=""></a></li>
-<li><a href="report_20260404_0211.html"><span><strong>神经科学快讯·第004期 神经科学周报：阿片镇痛无副作用新范式、慢性疼痛闭环回路解析与人脑深部无创调控 (2026-04-04)</strong><br><span class="meta">report_20260404_0211.md</span></span><img class="report-thumb" src="assets/covers/20260404.png" alt=""></a></li>
-<li><a href="report_20260328_0042.html"><span><strong>神经科学快讯·第003期 神经科学周报：AI 端到端科研自动化、TimeVault 转录组存储与炎症记忆 DNA 编码机制 (2026-03-28)</strong><br><span class="meta">report_20260328_0042.md</span></span><img class="report-thumb" src="assets/covers/20260328.png" alt=""></a></li>
-<li><a href="report_20260321_0158.html"><span><strong>神经科学快讯·第002期 突破“不可成药”壁垒与量子神经调控：ERAD 靶向降解及体内磁共振操控重塑神经科学范式 (2026-03-21)</strong><br><span class="meta">report_20260321_0158.md</span></span><img class="report-thumb" src="assets/covers/20260321.png" alt=""></a></li>
-<li><a href="report_20260315_1035.html"><span><strong>神经科学快讯·第001期 (2026-03-15)</strong><br><span class="meta">report_20260315_1035.md</span></span><img class="report-thumb" src="assets/covers/20260315.png" alt=""></a></li>
-</ul>
 
-    </article>
-  </main>
-  <script>
+def favorites_script() -> str:
+    return """  <script>
     (function () {
       var STORAGE_KEY = "scientific-bulletin:favorites";
       var drawer = document.querySelector("[data-favorite-drawer]");
@@ -87,14 +53,14 @@
           id: card.dataset.favoriteId,
           title: card.dataset.favoriteTitle || "Untitled",
           url: card.dataset.favoriteUrl || location.href,
-          pageTitle: document.title.replace(/\s+\|\s+Neuroscience Bulletin$/, ""),
+          pageTitle: document.title.replace(/\\s+\\|\\s+Neuroscience Bulletin$/, ""),
           pageUrl: location.href.split("#")[0],
           markdown: card.dataset.favoriteMarkdown || card.innerText.trim()
         };
       }
 
       function toMarkdown(items) {
-        if (!items.length) return "# 神经科学快讯收藏\n\n暂无收藏。\n";
+        if (!items.length) return "# 神经科学快讯收藏\\n\\n暂无收藏。\\n";
         var lines = ["# 神经科学快讯收藏", ""];
         items.forEach(function (item, index) {
           lines.push("## " + (index + 1) + ". " + item.title);
@@ -107,7 +73,7 @@
           lines.push("---");
           lines.push("");
         });
-        return lines.join("\n");
+        return lines.join("\\n");
       }
 
       function downloadText(filename, text) {
@@ -211,5 +177,4 @@
       renderFavorites();
     })();
   </script>
-</body>
-</html>
+"""

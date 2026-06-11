@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+
+CSS = """
 :root {
   color-scheme: light;
   --bg: #f7f8fb;
@@ -465,3 +469,4 @@ img {
   height: 100%;
   display: block;
 }
+"""
