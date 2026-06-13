@@ -166,7 +166,7 @@ def parse_biorxiv_paper(item: Dict) -> Optional[Dict]:
 def fetch_recent_biorxiv_papers(
     days: int = 7,
     category: Optional[str] = 'neuroscience',
-    max_results: int = 200
+    max_results: int = 999
 ) -> List[Dict]:
     """
     Fetch recent papers from bioRxiv within the specified number of days.

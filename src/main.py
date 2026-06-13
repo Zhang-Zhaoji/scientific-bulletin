@@ -216,16 +216,16 @@ def fetch_all_biorxiv_papers(days: int = DEFAULT_DAYS, max_results: int = 200) -
     print("\n" + "=" * 80)
     print("Fetching from bioRxiv (neuroscience category)...")
     print("=" * 80)
-    print('We do not do it here, for speed and articles on bioRxiv are of great amount.')
-    return []
-    # papers = fetch_recent_biorxiv_papers(
-    #     days=days,
-    #     category='neuroscience',
-    #     max_results=max_results
-    # )
+    # print('We do not do it here, for speed and articles on bioRxiv are of great amount.')
+    # return []
+    papers = fetch_recent_biorxiv_papers(
+        days=days,
+        category='neuroscience',
+        max_results=max_results
+    )
 
-    # print(f"Total bioRxiv papers: {len(papers)}")
-    # return papers
+    print(f"Total bioRxiv papers: {len(papers)}")
+    return papers
 
 
 def fetch_all_nature_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
