@@ -23,6 +23,7 @@ from typing import List, Dict, Optional, Tuple
 from bs4 import BeautifulSoup
 import jsonlines
 from dateutil import parser
+import requests
 
 # Import enrichment module
 try:
@@ -37,37 +38,51 @@ CELL_JOURNALS = {
         'name': 'Cell',
         'url': 'https://www.cell.com/cell/current',
         'selector': 'h2.article-title',
+        'pubmed_name': 'Cell',
+        'europepmc_journal': 'Cell',
     },
     'neuron': {
         'name': 'Neuron',
         'url': 'https://www.cell.com/neuron/current',
         'selector': '.toc__item h3',
+        'pubmed_name': 'Neuron',
+        'europepmc_journal': 'Neuron',
     },
     'current-biology': {
         'name': 'Current Biology',
         'url': 'https://www.cell.com/current-biology/current',
         'selector': '.toc__item h3',
-        'note': 'May be blocked by Cloudflare - will skip if unavailable'
+        'note': 'May be blocked by Cloudflare - will use PubMed/Europe PMC fallback if unavailable',
+        'pubmed_name': 'Current Biology',
+        'europepmc_journal': 'Current Biology',
     },
     'trends-neurosciences': {
         'name': 'Trends in Neurosciences',
         'url': 'https://www.cell.com/trends/neurosciences/current',
         'selector': '.toc__item h3',
+        'pubmed_name': 'Trends Neurosci',
+        'europepmc_journal': 'Trends in Neurosciences',
     },
     # 'cell-reports': {
     #     'name': 'Cell Reports',
     #     'url': 'https://www.cell.com/cell-reports/current',
     #     'selector': '.toc__item h3',
+    #     'pubmed_name': 'Cell Reports',
+    #     'europepmc_journal': 'Cell Reports',
     # },
-    # 'iscience': {
-    #     'name': 'iScience',
-    #     'url': 'https://www.cell.com/iscience/current',
-    #     'selector': '.toc__item h3',
-    # },
+    'iscience': {
+        'name': 'iScience',
+        'url': 'https://www.cell.com/iscience/current',
+        'selector': '.toc__item h3',
+        'pubmed_name': 'iScience',
+        'europepmc_journal': 'iScience',
+    },
     # 'cell-systems': {
     #     'name': 'Cell Systems',
     #     'url': 'https://www.cell.com/cell-systems/current',
     #     'selector': '.toc__item h3',
+    #     'pubmed_name': 'Cell Systems',
+    #     'europepmc_journal': 'Cell Systems',
     # },
 }
 
@@ -135,6 +150,163 @@ def _fetch_with_scrapling(url: str, headless: bool = True) -> Optional[str]:
     except Exception as e:
         print(f"Scrapling failed: {e}")
         return None
+
+
+def _normalize_journal_name(name: str) -> str:
+    """Normalize journal names for loose comparisons."""
+    return ' '.join((name or '').lower().replace('&', 'and').split())
+
+
+def _normalize_fallback_article(paper: Dict, journal_name: str, fallback_source: str) -> Dict:
+    """Convert PubMed/Europe PMC records into the Cell crawler schema."""
+    doi = paper.get('doi', '') or ''
+    pubmed_url = paper.get('pubmed_url', '') or (
+        f"https://pubmed.ncbi.nlm.nih.gov/{paper.get('pmid')}/" if paper.get('pmid') else ''
+    )
+    url = paper.get('doi_url') or paper.get('url') or pubmed_url
+
+    normalized = {
+        'type': paper.get('type', 'Article'),
+        'title': paper.get('title', ''),
+        'authors': paper.get('authors', []),
+        'date': paper.get('date', ''),
+        'url': url,
+        'doi': doi,
+        'abstract': paper.get('abstract', ''),
+        'source': journal_name,
+        'journal': paper.get('journal', journal_name) or journal_name,
+        'retrieval_source': fallback_source,
+    }
+
+    for key in ['pmid', 'pmcid', 'journal_volume', 'journal_issue', 'page_info',
+                'doi_url', 'pubmed_url', 'is_open_access', 'pub_type']:
+        if paper.get(key):
+            normalized[key] = paper[key]
+
+    return normalized
+
+
+def _fetch_journal_from_pubmed(journal_key: str, days: Optional[int], max_results: int = 100) -> List[Dict]:
+    """Fallback: fetch recent Cell Press articles through PubMed."""
+    config = CELL_JOURNALS[journal_key]
+    journal_name = config['name']
+    pubmed_name = config.get('pubmed_name', journal_name)
+    fallback_days = days or 14
+
+    print("\n" + "=" * 80)
+    print(f"Falling back to PubMed API for {journal_name}")
+    print("=" * 80)
+
+    try:
+        try:
+            from crawler_pubmed import fetch_articles_by_journal
+        except ImportError:
+            from src.crawler_pubmed import fetch_articles_by_journal
+
+        papers = fetch_articles_by_journal(
+            journal_name=pubmed_name,
+            days=fallback_days,
+            max_results=max_results,
+            fetch_abstracts=False,
+            exclude_types=[
+                'Erratum', 'Correction', 'Retraction', 'Editorial',
+                'News', 'Comment', 'Letter', 'Preview'
+            ]
+        )
+    except Exception as e:
+        print(f"[ERROR] PubMed fallback failed for {journal_name}: {e}")
+        return []
+
+    normalized = [
+        _normalize_fallback_article(paper, journal_name, 'PubMed fallback')
+        for paper in papers
+    ]
+    print(f"Extracted {len(normalized)} articles from PubMed for {journal_name}")
+    return normalized
+
+
+def _fetch_journal_from_europepmc(journal_key: str, days: Optional[int], max_results: int = 100) -> List[Dict]:
+    """Fallback: fetch recent Cell Press articles through Europe PMC/PMC."""
+    config = CELL_JOURNALS[journal_key]
+    journal_name = config['name']
+    europepmc_journal = config.get('europepmc_journal', journal_name)
+    fallback_days = days or 14
+
+    end_date = datetime.datetime.now()
+    start_date = end_date - datetime.timedelta(days=fallback_days)
+    start_str = start_date.strftime('%Y-%m-%d')
+    end_str = end_date.strftime('%Y-%m-%d')
+
+    print("\n" + "=" * 80)
+    print(f"Falling back to Europe PMC/PMC for {journal_name}")
+    print("=" * 80)
+
+    try:
+        try:
+            from crawler_europepmc import EUROPEPMC_API_URL, parse_europepmc_result
+        except ImportError:
+            from src.crawler_europepmc import EUROPEPMC_API_URL, parse_europepmc_result
+
+        query = f'JOURNAL:"{europepmc_journal}" AND FIRST_PDATE:[{start_str} TO {end_str}]'
+        params = {
+            'query': query,
+            'resultType': 'core',
+            'format': 'json',
+            'pageSize': max_results,
+            'sort': 'FIRST_PDATE_D desc'
+        }
+        print(f"Europe PMC query: {query}")
+
+        response = requests.get(f"{EUROPEPMC_API_URL}/search", params=params, timeout=30)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"[ERROR] Europe PMC fallback failed for {journal_name}: {e}")
+        return []
+
+    result_list = data.get('resultList', {}).get('result', [])
+    target_journal = _normalize_journal_name(journal_name)
+    normalized = []
+
+    for result in result_list:
+        parsed = parse_europepmc_result(result)
+        if not parsed:
+            continue
+
+        result_journal = _normalize_journal_name(parsed.get('journal', ''))
+        if result_journal and result_journal != target_journal:
+            continue
+
+        normalized.append(_normalize_fallback_article(parsed, journal_name, 'Europe PMC fallback'))
+
+    print(f"Extracted {len(normalized)} articles from Europe PMC for {journal_name}")
+    return normalized
+
+
+def fetch_journal_list_with_fallback(
+    journal_key: str,
+    headless: bool = True,
+    timeout: int = 30,
+    days: Optional[int] = None
+) -> Tuple[List[Dict], str]:
+    """Fetch a Cell Press journal list, falling back to PubMed then Europe PMC."""
+    articles, journal_name = fetch_journal_list(
+        journal_key=journal_key,
+        headless=headless,
+        timeout=timeout
+    )
+
+    if articles:
+        return articles, journal_name
+
+    print(f"Web scraping returned no articles for {journal_name}; trying PubMed fallback...")
+    articles = _fetch_journal_from_pubmed(journal_key, days=days)
+    if articles:
+        return articles, journal_name
+
+    print(f"PubMed returned no articles for {journal_name}; trying Europe PMC/PMC fallback...")
+    articles = _fetch_journal_from_europepmc(journal_key, days=days)
+    return articles, journal_name
 
 
 def fetch_journal_list(journal_key: str, headless: bool = True, timeout: int = 30) -> Tuple[List[Dict], str]:
@@ -352,7 +524,11 @@ def fetch_cell_papers(
 
     for journal_key in journals:
         try:
-            articles, journal_name = fetch_journal_list(journal_key, headless=headless)
+            articles, journal_name = fetch_journal_list_with_fallback(
+                journal_key,
+                headless=headless,
+                days=days
+            )
             all_articles.extend(articles)
 
             # Small delay between journals

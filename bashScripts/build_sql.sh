@@ -9,4 +9,9 @@ python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-02_e
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-10_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260510_024906.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-16_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260516_204536.json"
 python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260524_023612.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-05-30_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260531_011244.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-07_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260608_030855.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-13_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260613_140337.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-20_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260620_181803.json"
+python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-27_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260627_023238.json"
 
