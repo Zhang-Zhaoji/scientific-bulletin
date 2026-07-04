@@ -1,15 +1,19 @@
 # 神经科学通报
 
-**注意：部分代码由 Kimi K2.5 模型和其他大语言模型生成，可能包含幻觉内容，请谨慎使用。**
+[English](https://github.com/Zhang-Zhaoji/scientific-bulletin) [中文](https://github.com/Zhang-Zhaoji/scientific-bulletin/blob/main/README_zh.md)
 
-本项目致力于打造一个神经科学领域的微信公众号内容平台，自动追踪近期神经科学研究论文并分享给读者。仓库提供完整的端到端文献策展流水线：
+**注意：本项目使用AI辅助开发工具（包括 Kimi K2.5、GPT-5.3 Codex、GPT-5.5 等领先大语言模型）进行代码生成。虽然我们已对代码进行审查和测试，但部分组件可能存在意外行为，请谨慎使用并欢迎反馈问题。**
+
+神经科学通报是一个自动化文献策展平台，致力于追踪近期神经科学研究论文并通过微信公众号分享给读者。仓库提供完整的端到端流水线：
 - 🕷️ 从15+顶级神经科学相关期刊和预印本服务器爬取论文标题、摘要和元数据
 - 🔍 使用欧洲PMC和ROR（研究机构注册表）对论文进行摘要、作者机构和标准机构名称富集
 - 💾 将所有处理后的数据存储在SQLite数据库中，方便查询和分析
 - 🤖 使用大语言模型对论文进行领域分类、评分、分级推荐和总结，并生成每周Markdown报告与微信公众号格式报告
 - 📊 生成全球科研产出、国家分布、机构排名和论文评分统计的数据可视化图表
 
-仓库目前包含2026年3月至5月的每周抓取数据、富集后的JSONL文件、LLM分析结果、报告和配图。本地最新报告产物生成于 **2026-05-24**。公开发布内容汇总在知乎专栏【神经科学快讯】：https://www.zhihu.com/column/c_2016331747525157941
+仓库目前包含2026年3月至7月的每周抓取数据、富集后的JSONL文件、LLM分析结果、报告和配图。本地最新报告产物生成于 **2026-07-05**。公开发布内容汇总在知乎专栏【神经科学快讯】：https://www.zhihu.com/column/c_2016331747525157941
+
+我们已发布 **17期常规周报** 和 **2期特别专题**，涵盖神经科学前沿研究。
 
 本仓库包含神经科学通报项目的所有代码和数据，我们希望将项目开源并惠及更多研究者。如果您有任何问题或建议，欢迎联系我们。
 
@@ -180,7 +184,7 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 ## 🤖 LLM分析与报告生成
 
 我们使用兼容OpenAI接口的大语言模型处理收集到的论文：
-- **默认处理模型**：`LLM_eval/main.py` 中默认为 `glm-5.1`
+- **默认处理模型**：`deepseek-v4-flash` (DeepSeek) 或 `qwen3.7-plus` (Aliyuncs)，可在 `LLM_eval/config.py` 中配置
 - **报告润色脚本模型**：报告脚本中使用 `qwen3.6-flash-2026-04-16`
 - **核心功能**：
   - 判断论文属于核心神经科学、高影响跨界、有限跨界或域外内容
@@ -208,11 +212,17 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 
 ## 🌐 静态网页 / GitHub Pages
 
-报告可以发布为独立HTML网页，避免受知乎和微信公众号排版规则限制。
+报告发布为完整的静态网站，避免受知乎和微信公众号排版规则限制。网站通过 `.github/workflows/pages.yml` 在每次推送到 `main` 时自动构建并部署到 GitHub Pages。
 
-- `scripts/build_pages.py` 会将 `LLM_Results/report_*.md` 转换成 `docs/` 下的静态站点
-- `.github/workflows/pages.yml` 会在推送到 `main` 时自动构建并部署到 GitHub Pages
+**核心功能：**
+- `scripts/build_pages.py` 将 `LLM_Results/report_*.md` 转换成 `docs/` 下的静态站点
+- 报告页面嵌入匹配的封面图、国家热力图、国家分布饼图和评分直方图
+- 首页为每期报告显示带封面缩略图的列表
+- **浮动目录（TOC）**：每个报告页面自动生成页内目录，便于快速导航
+- **收藏夹系统**：读者可以跨报告收藏感兴趣的论文，收藏内容存储在 `localStorage` 中，支持导出为 Markdown 或 `.md` 文件
+- **论文卡片**：每篇论文渲染为带有元数据（推荐等级、评分、期刊、日期、领域）的卡片，并提供原文链接
 - 构建脚本使用 Python `markdown` 包及表格/列表扩展，因此 `**加粗**`、Markdown表格等语法会转换为真正的HTML
+- 支持特别专题报告（如 `report_*_specialissue.md`），具有自定义布局和嵌入图片
 - 如果本地构建提示缺少依赖，请先运行 `python -m pip install markdown` 或 `pip install -r requirements.txt`
 
 ---
@@ -269,7 +279,23 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 │   ├── build_sql.*              # 数据库构建脚本
 │   └── sql_pipeline.bat         # 完整数据流水线脚本
 ├── logs/                         # 日志文件
-├── scripts/                      # 工具脚本，例如静态站点生成
+├── scripts/                      # 工具脚本
+│   ├── build_pages.py           # 静态站点生成器
+│   ├── generate_score_histograms.py  # 评分分布可视化
+│   └── page_builder/            # 静态站点构建模块
+│       ├── core.py              # 核心工具（slugify、日期解析）
+│       ├── page.py              # 页面生成（含TOC和收藏夹）
+│       ├── articles.py          # 论文卡片渲染
+│       ├── favorites.py         # 收藏夹系统（localStorage）
+│       ├── reports.py           # 报告页面生成
+│       ├── sources.py           # 来源URL标准化
+│       ├── markdown_render.py   # Markdown转HTML
+│       ├── styles.py            # CSS样式
+│       └── cli.py               # 命令行接口
+├── docs/                         # 生成的静态网站（GitHub Pages）
+│   ├── index.html               # 报告索引（含缩略图）
+│   ├── report_*.html            # 各期报告页面
+│   └── assets/                  # 静态资源（封面、图表、样式）
 ├── .gitignore
 ├── LICENSE
 ├── README.md                    # 英文说明文档
