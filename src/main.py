@@ -45,6 +45,7 @@ from crawler_jneurosci import fetch_jneurosci_papers
 from crawler_jcogn import fetch_jcogn_papers
 from crawler_jvis import fetch_jvis_papers
 from crawler_pnas import fetch_pnas_papers
+from crawler_plos import fetch_plos_papers
 from crawler_natcomm import fetch_natcomm_papers
 from crawler_brain import fetch_brain_papers
 from crawler_sciadv import fetch_sciadv_papers
@@ -406,6 +407,27 @@ def fetch_all_pnas_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
         return []
 
 
+def fetch_all_plos_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
+    """
+    Fetch papers from PLOS journals.
+
+    Uses PubMed API to search for recent articles.
+    """
+    print("\n" + "=" * 80)
+    print("Fetching from PLOS...")
+    print("=" * 80)
+
+    try:
+        papers = fetch_plos_papers(days=days, max_results=999)
+        print(f"\nTotal PLOS papers: {len(papers)}")
+        return papers
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch PLOS papers: {e}")
+        import traceback
+        traceback.print_exc()
+        return []
+
+
 def fetch_all_natcomm_papers(days: int = DEFAULT_DAYS, enrich: bool = True) -> List[Dict]:
     """
     Fetch papers from Nature Communications.
@@ -543,6 +565,7 @@ def merge_papers(
     jvis_papers: List[Dict], pnas_papers: List[Dict],
     natcomm_papers: List[Dict], brain_papers: List[Dict],
     sciadv_papers: List[Dict], elife_papers: List[Dict],
+    plos_papers: List[Dict],
     historical_dois: Optional[Set[str]] = None,
     historical_pmids: Optional[Set[str]] = None,
     historical_titles: Optional[Set[str]] = None,
@@ -582,6 +605,7 @@ def merge_papers(
     all_papers.extend(brain_papers)
     all_papers.extend(sciadv_papers)
     all_papers.extend(elife_papers)
+    all_papers.extend(plos_papers)
 
     print(f"Total papers before deduplication: {len(all_papers)}")
 
@@ -739,6 +763,7 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                         jvis_papers: List[Dict], pnas_papers: List[Dict],
                         natcomm_papers: List[Dict], brain_papers: List[Dict],
                         sciadv_papers: List[Dict], elife_papers: List[Dict],
+                        plos_papers: List[Dict],
                         output_dir: str = DEFAULT_OUTPUT_DIR):
     """Save a summary of papers by source."""
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
@@ -843,6 +868,13 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                     'max': max((p['date'] for p in elife_papers), default='N/A')
                 } if elife_papers else None
             },
+            'plos': {
+                'count': len(plos_papers),
+                'date_range': {
+                    'min': min((p['date'] for p in plos_papers), default='N/A'),
+                    'max': max((p['date'] for p in plos_papers), default='N/A')
+                } if plos_papers else None
+            },
         }
     }
 
@@ -860,6 +892,7 @@ def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                   jvis_papers: List[Dict], pnas_papers: List[Dict],
                   natcomm_papers: List[Dict], brain_papers: List[Dict],
                   sciadv_papers: List[Dict], elife_papers: List[Dict],
+                  plos_papers: List[Dict],
                   merged_papers: List[Dict]):
     """Print final summary."""
     print("\n" + "=" * 80)
@@ -879,6 +912,7 @@ def print_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
     print(f"Brain: {len(brain_papers)} papers")
     print(f"Science Advances: {len(sciadv_papers)} papers")
     print(f"eLife: {len(elife_papers)} papers")
+    print(f"PLOS: {len(plos_papers)} papers")
     print(f"-> Total merged: {len(merged_papers)} papers")
 
 
@@ -1007,6 +1041,7 @@ Examples:
     parser.add_argument('--brain-only', action='store_true', help='Only fetch from Brain')
     parser.add_argument('--sciadv-only', action='store_true', help='Only fetch from Science Advances')
     parser.add_argument('--elife-only', action='store_true', help='Only fetch from eLife')
+    parser.add_argument('--plos-only', action='store_true', help='Only fetch from PLOS journals')
     parser.add_argument('--include-journal-club', action='store_true',
                         help='Include Journal Club articles in Journal of Neuroscience')
     parser.add_argument('--jneurophys-pubmed-only', action='store_true',
@@ -1045,12 +1080,13 @@ Examples:
         brain_papers = []
         sciadv_papers = []
         elife_papers = []
+        plos_papers = []
 
         fetch_all = not any([
             args.arxiv_only, args.biorxiv_only, args.nature_only, args.science_only,
             args.cell_only, args.jneurophys_only, args.jneurosci_only, args.jcogn_only,
             args.jvis_only, args.pnas_only, args.natcomm_only, args.brain_only,
-            args.sciadv_only, args.elife_only
+            args.sciadv_only, args.elife_only, args.plos_only
         ])
 
         if fetch_all or args.arxiv_only:
@@ -1105,6 +1141,9 @@ Examples:
 
         if fetch_all or args.elife_only:
             elife_papers = fetch_all_elife_papers(days=args.days)
+
+        if fetch_all or args.plos_only:
+            plos_papers = fetch_all_plos_papers(days=args.days)
 
         if args.no_merge:
             if args.arxiv_only and arxiv_papers:
@@ -1219,6 +1258,14 @@ Examples:
                         f.write(paper)
                 print(f"\nSaved eLife papers to: {filepath}")
 
+            if args.plos_only and plos_papers:
+                plos_filename = f"plos_{datetime.datetime.now().strftime('%Y-%m-%d')}.jsonl"
+                filepath = os.path.join(args.output_dir, plos_filename)
+                with jsonlines.open(filepath, 'w') as f:
+                    for paper in plos_papers:
+                        f.write(paper)
+                print(f"\nSaved PLOS papers to: {filepath}")
+
             print("\n[OK] Done!")
 
         else:
@@ -1251,6 +1298,7 @@ Examples:
                 merged_papers.extend(brain_papers)
                 merged_papers.extend(sciadv_papers)
                 merged_papers.extend(elife_papers)
+                merged_papers.extend(plos_papers)
                 def parse_date(paper: Dict) -> datetime.datetime:
                     date_str = paper.get('date', '')
                     try:
@@ -1268,7 +1316,7 @@ Examples:
                     arxiv_papers, biorxiv_papers, nature_papers, science_papers,
                     cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers,
                     jvis_papers, pnas_papers, natcomm_papers, brain_papers,
-                    sciadv_papers, elife_papers,
+                    sciadv_papers, elife_papers, plos_papers,
                     historical_dois=hist_dois if hist_dois else None,
                     historical_pmids=hist_pmids if hist_pmids else None,
                     historical_titles=hist_titles if hist_titles else None,
@@ -1280,10 +1328,10 @@ Examples:
             raw_filepath = save_merged_papers(merged_papers, args.output_dir)
             save_source_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers,
                                jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers, pnas_papers,
-                               natcomm_papers, brain_papers, sciadv_papers, elife_papers, args.output_dir)
+                               natcomm_papers, brain_papers, sciadv_papers, elife_papers, plos_papers, args.output_dir)
             print_summary(arxiv_papers, biorxiv_papers, nature_papers, science_papers, cell_papers,
                          jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers, pnas_papers,
-                         natcomm_papers, brain_papers, sciadv_papers, elife_papers, merged_papers)
+                         natcomm_papers, brain_papers, sciadv_papers, elife_papers, plos_papers, merged_papers)
 
             if not args.no_auto_enrich:
                 print("\n" + "=" * 80)

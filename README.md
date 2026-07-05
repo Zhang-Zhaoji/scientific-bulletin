@@ -5,7 +5,7 @@
 **Note: This project utilizes AI-assisted development tools (including Kimi K2.5, GPT-5.3 Codex, GPT-5.5, and other leading LLMs) for code generation. While we have reviewed and tested the code, some components may contain unexpected behavior. Please use with appropriate caution and report any issues you encounter.**
 
 Neuroscience Bulletin is an automated literature curation platform dedicated to tracking recent neuroscience research articles and sharing them with readers through a WeChat public account. The repository provides an end-to-end pipeline:
-- 🕷️ Crawl titles, abstracts and metadata from 15+ top neuroscience-related journals and preprint servers
+- 🕷️ Crawl titles, abstracts and metadata from 18+ top neuroscience-related journals and preprint servers (including PLoS Biology, PLoS Computational Biology, PLoS One)
 - 🔍 Enrich papers with abstracts, affiliation information and normalized institutions using Europe PMC and ROR (Research Organization Registry)
 - 💾 Store all processed data in SQLite database for easy querying and analysis
 - 🤖 Score, categorize and summarize papers with LLMs, then generate weekly Markdown and WeChat-style reports
@@ -54,6 +54,9 @@ python src/main.py --workers 4 --history-weeks 3
 
 # Fetch only from arXiv and bioRxiv (preprints)
 python src/main.py --arxiv-only --biorxiv-only
+
+# Fetch only from PLOS journals (PLoS Biology, PLoS Computational Biology, PLoS One)
+python src/main.py --plos-only
 
 # Fetch from last 14 days instead of 7 (applies to all sources)
 python src/main.py --days 14
@@ -129,6 +132,9 @@ See `python src/main.py --help` and `python LLM_eval/main.py --help` for all cra
 | **Journal of Neuroscience** | ✅ Supported | PubMed API (filters Journal Club articles by default) |
 | **Journal of Cognitive Neuroscience** | ✅ Supported | PubMed API |
 | **Journal of Vision** | ✅ Supported | PubMed API |
+| **PLoS Biology** | ✅ Supported | PubMed API |
+| **PLoS Computational Biology** | ✅ Supported | PubMed API |
+| **PLoS One** | ✅ Supported | PubMed API (with result cap) |
 
 ### Cell Press Journals ✅
 
@@ -219,9 +225,10 @@ Reports are published as a fully static website so the layout is not constrained
 - `scripts/build_pages.py` converts `LLM_Results/report_*.md` into a static site under `docs/`
 - Report pages embed matching cover images, country heatmaps, country distribution charts and score histograms from `Imgs/`
 - The index page includes a compact cover thumbnail for each report
+- **Full-text search**: A dedicated search page (`docs/search.html`) powered by MiniSearch enables client-side fuzzy search across all 7000+ papers (title, abstract, journal, category). Search results include favorite buttons and anchor links that jump directly to the paper's position in the report
 - **Floating Table of Contents (TOC)**: Each report page auto-generates an in-page TOC for quick navigation
-- **Favorites system**: Readers can bookmark individual papers across reports; favorites are stored in `localStorage` and can be exported as Markdown or `.md` files
-- **Article cards**: Each paper is rendered as a card with metadata (recommendation tier, score, journal, date, field) and links to the original article
+- **Favorites system**: Readers can bookmark individual papers across reports and search results; favorites are stored in `localStorage` and can be exported as Markdown or `.md` files
+- **Article cards with anchors**: Each paper is rendered as a card with metadata (recommendation tier, score, journal, date, field), an `id` anchor for deep linking, and a link to the original article
 - The builder uses the Python `markdown` package with table/list extensions, so inline Markdown such as `**bold**` and Markdown tables are rendered as real HTML
 - Special issue reports (e.g., `report_*_specialissue.md`) are supported with custom layouts and embedded images
 - If local rendering fails with a missing dependency, run `python -m pip install markdown` or `pip install -r requirements.txt`
@@ -284,10 +291,11 @@ Reports are published as a fully static website so the layout is not constrained
 │   ├── build_pages.py           # Static site generator
 │   ├── generate_score_histograms.py  # Score distribution visualization
 │   └── page_builder/            # Static site builder modules
-│       ├── core.py              # Core utilities (slugify, date parsing)
+│       ├── core.py              # Core utilities (slugify, date parsing, anchor generation)
 │       ├── page.py              # Page generation with TOC and favorites
-│       ├── articles.py          # Article card rendering
+│       ├── articles.py          # Article card rendering with anchors
 │       ├── favorites.py         # Favorites system (localStorage)
+│       ├── search_index.py      # Full-text search index + search page generation
 │       ├── reports.py           # Report page generation
 │       ├── sources.py           # Source URL normalization
 │       ├── markdown_render.py   # Markdown to HTML conversion
@@ -295,6 +303,8 @@ Reports are published as a fully static website so the layout is not constrained
 │       └── cli.py               # Command-line interface
 ├── docs/                         # Generated static website (GitHub Pages)
 │   ├── index.html               # Report index with thumbnails
+│   ├── search.html              # Full-text search page (MiniSearch)
+│   ├── search-index.js          # Search index data (JSONP format)
 │   ├── report_*.html            # Individual report pages
 │   └── assets/                  # Static assets (covers, charts, styles)
 ├── .gitignore
@@ -393,10 +403,10 @@ We are working to add more capabilities:
 
 **Enhanced Features:**
 - Citation count and altmetrics enrichment
-- Advanced search functionality in database
+- Cross-issue filtering and browsing by field/journal/score on the static site
 - Improved LLM summarization prompts
 - More visualization options (research trend line charts, author collaboration networks)
-- Automatic WeChat public account posting
+- Full-text PDF extraction with OCR for preprint deep analysis
 
 ---
 

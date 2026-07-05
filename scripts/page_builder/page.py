@@ -158,6 +158,7 @@ def render_page(title: str, body: str, root_prefix: str = "", cover_src: str | N
     <div class="wrap site-head">
       <a class="brand" href="{root_prefix}index.html">{DEFAULT_TITLE}</a>
       <nav class="nav">
+        <a href="{root_prefix}search.html">搜索</a>
         <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/issues">Reports</a>
         <a href="https://github.com/Zhang-Zhaoji/scientific-bulletin/">GitHub</a>
       </nav>

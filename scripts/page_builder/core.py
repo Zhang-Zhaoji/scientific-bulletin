@@ -25,3 +25,11 @@ def json_date_from_name(path: Path) -> str:
     if not match:
         return path.stem
     return f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+
+
+def title_to_anchor(title: str) -> str:
+    """将文章标题转换为HTML锚点id"""
+    import re
+    # 取标题前80字符，转小写，非字母数字替换为连字符
+    slug = re.sub(r'[^a-zA-Z0-9]+', '-', (title or '').lower()).strip('-')
+    return slug[:80] if slug else 'article'

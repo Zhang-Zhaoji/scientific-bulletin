@@ -5,7 +5,7 @@
 **注意：本项目使用AI辅助开发工具（包括 Kimi K2.5、GPT-5.3 Codex、GPT-5.5 等领先大语言模型）进行代码生成。虽然我们已对代码进行审查和测试，但部分组件可能存在意外行为，请谨慎使用并欢迎反馈问题。**
 
 神经科学通报是一个自动化文献策展平台，致力于追踪近期神经科学研究论文并通过微信公众号分享给读者。仓库提供完整的端到端流水线：
-- 🕷️ 从15+顶级神经科学相关期刊和预印本服务器爬取论文标题、摘要和元数据
+- 🕷️ 从18+顶级神经科学相关期刊和预印本服务器爬取论文标题、摘要和元数据（含PLoS Biology、PLoS Computational Biology、PLoS One）
 - 🔍 使用欧洲PMC和ROR（研究机构注册表）对论文进行摘要、作者机构和标准机构名称富集
 - 💾 将所有处理后的数据存储在SQLite数据库中，方便查询和分析
 - 🤖 使用大语言模型对论文进行领域分类、评分、分级推荐和总结，并生成每周Markdown报告与微信公众号格式报告
@@ -54,6 +54,9 @@ python src/main.py --workers 4 --history-weeks 3
 
 # 仅从arXiv和bioRxiv抓取预印本
 python src/main.py --arxiv-only --biorxiv-only
+
+# 仅从PLOS系列期刊抓取（PLoS Biology, PLoS Computational Biology, PLoS One）
+python src/main.py --plos-only
 
 # 抓取最近14天的论文（适用于所有来源）
 python src/main.py --days 14
@@ -129,6 +132,9 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 | **Journal of Neuroscience** | ✅ 已支持 | PubMed API（默认过滤Journal Club文章） |
 | **Journal of Cognitive Neuroscience** | ✅ 已支持 | PubMed API |
 | **Journal of Vision** | ✅ 已支持 | PubMed API |
+| **PLoS Biology** | ✅ 已支持 | PubMed API |
+| **PLoS Computational Biology** | ✅ 已支持 | PubMed API |
+| **PLoS One** | ✅ 已支持 | PubMed API（限制结果数量） |
 
 ### Cell Press 期刊 ✅
 
@@ -218,9 +224,10 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 - `scripts/build_pages.py` 将 `LLM_Results/report_*.md` 转换成 `docs/` 下的静态站点
 - 报告页面嵌入匹配的封面图、国家热力图、国家分布饼图和评分直方图
 - 首页为每期报告显示带封面缩略图的列表
+- **全文搜索**：独立的搜索页面（`docs/search.html`）基于 MiniSearch 实现客户端模糊搜索，覆盖全部 7000+ 篇论文（标题、摘要、期刊、分类）。搜索结果支持收藏和锚点跳转，点击直接定位到报告中的对应文章
 - **浮动目录（TOC）**：每个报告页面自动生成页内目录，便于快速导航
-- **收藏夹系统**：读者可以跨报告收藏感兴趣的论文，收藏内容存储在 `localStorage` 中，支持导出为 Markdown 或 `.md` 文件
-- **论文卡片**：每篇论文渲染为带有元数据（推荐等级、评分、期刊、日期、领域）的卡片，并提供原文链接
+- **收藏夹系统**：读者可以跨报告和搜索结果收藏感兴趣的论文，收藏内容存储在 `localStorage` 中，支持导出为 Markdown 或 `.md` 文件
+- **带锚点的论文卡片**：每篇论文渲染为带有元数据（推荐等级、评分、期刊、日期、领域）的卡片，具有 `id` 锚点用于深度链接，并提供原文链接
 - 构建脚本使用 Python `markdown` 包及表格/列表扩展，因此 `**加粗**`、Markdown表格等语法会转换为真正的HTML
 - 支持特别专题报告（如 `report_*_specialissue.md`），具有自定义布局和嵌入图片
 - 如果本地构建提示缺少依赖，请先运行 `python -m pip install markdown` 或 `pip install -r requirements.txt`
@@ -283,10 +290,11 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 │   ├── build_pages.py           # 静态站点生成器
 │   ├── generate_score_histograms.py  # 评分分布可视化
 │   └── page_builder/            # 静态站点构建模块
-│       ├── core.py              # 核心工具（slugify、日期解析）
+│       ├── core.py              # 核心工具（slugify、日期解析、锚点生成）
 │       ├── page.py              # 页面生成（含TOC和收藏夹）
-│       ├── articles.py          # 论文卡片渲染
+│       ├── articles.py          # 论文卡片渲染（含锚点）
 │       ├── favorites.py         # 收藏夹系统（localStorage）
+│       ├── search_index.py      # 全文搜索索引 + 搜索页面生成
 │       ├── reports.py           # 报告页面生成
 │       ├── sources.py           # 来源URL标准化
 │       ├── markdown_render.py   # Markdown转HTML
@@ -294,6 +302,8 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 │       └── cli.py               # 命令行接口
 ├── docs/                         # 生成的静态网站（GitHub Pages）
 │   ├── index.html               # 报告索引（含缩略图）
+│   ├── search.html              # 全文搜索页面（MiniSearch）
+│   ├── search-index.js          # 搜索索引数据（JSONP格式）
 │   ├── report_*.html            # 各期报告页面
 │   └── assets/                  # 静态资源（封面、图表、样式）
 ├── .gitignore
@@ -392,10 +402,10 @@ python src/crawler_biorxiv.py
 
 **增强功能：**
 - 引用数和替代计量学指标富集
-- 数据库高级搜索功能
+- 网站跨期过滤和按领域/期刊/评分浏览
 - 改进的LLM总结提示词
 - 更多可视化选项（研究趋势折线图、作者合作网络）
-- 微信公众号自动发布
+- 预印本全文PDF提取与OCR深度分析
 
 ---
 

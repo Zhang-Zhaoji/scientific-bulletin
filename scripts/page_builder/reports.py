@@ -11,6 +11,7 @@ from .articles import render_markdown_with_article_cards
 from .core import DEFAULT_TITLE, report_date_from_name, slugify
 from .markdown_render import require_markdown
 from .page import render_page
+from .search_index import build_search_index, render_search_page
 from .sources import report_article_url_maps_by_order
 from .styles import CSS
 
@@ -314,3 +315,5 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
         for report_path in reversed(reports)
     ]
     render_index_page(input_dir, output_dir, report_links)
+    build_search_index(input_dir, output_dir, regular_reports)
+    render_search_page(output_dir)

@@ -417,7 +417,7 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
         themes.append({
             'name': LLM_json.get('primary_category', None),
         })
-        for sub_theme in LLM_json.get('secondary_categories', []):
+        for sub_theme in LLM_json.get('secondary_category', []):
             subthemes.append({
                 'name': sub_theme,
             })

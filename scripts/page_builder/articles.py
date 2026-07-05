@@ -215,11 +215,14 @@ def add_article_card_chrome(article_html: str, metadata: dict[str, str]) -> str:
 
 
 def render_article_card(article_markdown: str, article_urls: dict[str, str]) -> str:
+    from .core import title_to_anchor
     article_markdown = link_article_heading(article_markdown, article_urls)
     article_attrs = article_card_attrs(article_markdown)
+    title, _ = article_title_and_url(article_markdown)
+    anchor = title_to_anchor(title)
     article_markdown, metadata = article_card_metadata(article_markdown)
     article_html = add_article_card_chrome(markdown_to_html(article_markdown), metadata)
-    return f'<section class="article-card" {article_attrs}>\n{article_html}\n</section>'
+    return f'<section class="article-card" id="{html.escape(anchor)}" {article_attrs}>\n{article_html}\n</section>'
 
 
 def is_article_heading(lines: list[str], index: int) -> bool:
