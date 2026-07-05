@@ -232,6 +232,13 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 - 支持特别专题报告（如 `report_*_specialissue.md`），具有自定义布局和嵌入图片
 - 如果本地构建提示缺少依赖，请先运行 `python -m pip install markdown` 或 `pip install -r requirements.txt`
 
+**交互式数据看板：**
+- 独立的统计看板页面（`docs/dashboard.html`），基于 sql.js + ECharts 实现交互式数据可视化
+- 精简版 SQLite 数据库（`literature_slim.db`，约7MB）在浏览器端加载，支持 IndexedDB 缓存，二次访问秒级加载
+- **9个可视化模块**：国家发文量热力图、国家平均评分热力图、国家×领域归一化热力图（支持绝对数量/贡献度/专注度三种模式）、评分分布直方图、研究领域雷达图、时间趋势线图、期刊发文量TOP20、机构排名散点图、交叉标签词云
+- **交互控件**：日期范围选择器、领域多选筛选、归一化模式切换——所有图表实时联动更新
+- 运行 `python sql_scripts/build_slim_db.py` 从 `data/literature.db` 重建精简数据库
+
 ---
 
 ## 📁 项目结构

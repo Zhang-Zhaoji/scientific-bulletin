@@ -12,6 +12,7 @@ from .core import DEFAULT_TITLE, report_date_from_name, slugify
 from .markdown_render import require_markdown
 from .page import render_page
 from .search_index import build_search_index, render_search_page
+from .dashboard import render_dashboard_page
 from .sources import report_article_url_maps_by_order
 from .styles import CSS
 
@@ -317,3 +318,30 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
     render_index_page(input_dir, output_dir, report_links)
     build_search_index(input_dir, output_dir, regular_reports)
     render_search_page(output_dir)
+    render_dashboard_page(output_dir)
+
+    # 构建精简数据库（用于 Dashboard 可视化）
+    try:
+        import sqlite3 as _sqlite3
+        import shutil as _shutil
+        _src = output_dir.parent / "data" / "literature.db"
+        _dst = output_dir / "assets" / "data" / "literature_slim.db"
+        if _src.exists():
+            _dst.parent.mkdir(parents=True, exist_ok=True)
+            _shutil.copy2(_src, _dst)
+            _conn = _sqlite3.connect(str(_dst))
+            _cur = _conn.cursor()
+            for _table, _fields in {"articles": ["abstract", "title_zh", "url", "doi"],
+                                      "institutions": ["raw_affiliation"]}.items():
+                for _field in _fields:
+                    _cols = [c[1] for c in _cur.execute(f"PRAGMA table_info({_table})").fetchall()]
+                    if _field in _cols:
+                        _cur.execute(f'UPDATE {_table} SET "{_field}" = NULL')
+            _conn.commit()
+            _conn.execute("VACUUM")
+            _conn.close()
+            print(f"[OK] 精简数据库已生成: {_dst.name} ({_dst.stat().st_size/1024/1024:.1f} MB)")
+        else:
+            print(f"[WARN] 源数据库不存在，跳过精简数据库构建: {_src}")
+    except Exception as e:
+        print(f"[WARN] 精简数据库构建失败: {e}")

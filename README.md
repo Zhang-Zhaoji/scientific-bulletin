@@ -233,6 +233,13 @@ Reports are published as a fully static website so the layout is not constrained
 - Special issue reports (e.g., `report_*_specialissue.md`) are supported with custom layouts and embedded images
 - If local rendering fails with a missing dependency, run `python -m pip install markdown` or `pip install -r requirements.txt`
 
+**Interactive Dashboard:**
+- A dedicated dashboard page (`docs/dashboard.html`) powered by sql.js + ECharts enables interactive data visualization
+- The slim SQLite database (`literature_slim.db`, ~7MB) is loaded client-side with IndexedDB caching for instant repeat visits
+- **9 visualization modules**: country publication heatmap, country average score heatmap, country × field normalized heatmap (with absolute/contribution/focus modes), score distribution histogram, research field radar chart, time trend line chart, journal TOP20 bar chart, institution scatter plot, and cross-tag word cloud
+- **Interactive controls**: date range selector, field multi-select filter, and normalization mode switcher — all charts update in real-time
+- Run `python sql_scripts/build_slim_db.py` to rebuild the slim database from `data/literature.db`
+
 ---
 
 ## 📁 Project Structure
