@@ -18,15 +18,20 @@
 .ctrl-btn:hover { background: #f0f0f0; }
 #field-checkboxes label { font-weight: normal; font-size: 13px; }
 #radar-country-select label { font-weight: normal; font-size: 13px; margin-right: 8px; }
+#score-radar-country-select label { font-weight: normal; font-size: 13px; margin-right: 8px; }
 .chart-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
-.trend-mode.active { background: #0868ac; color: #fff; border-color: #0868ac; }
-.chart-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.trend-mode.active, .field-trend-mode.active, .country-trend-mode.active { background: #0868ac; color: #fff; border-color: #0868ac; }
+.chart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
 .chart-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; }
+.card-header { display: flex; justify-content: space-between; align-items: center; }
+.card-expand-btn { background: none; border: 1px solid #ddd; border-radius: 4px; padding: 2px 8px; cursor: pointer; font-size: 14px; color: #666; }
+.card-expand-btn:hover { background: #f0f0f0; }
 .chart-card h3 { margin: 0 0 8px; font-size: 14px; color: #333; }
-.chart-wide { grid-column: span 3; }
+.chart-wide { grid-column: span 2; }
 .chart-container { width: 100%; height: 400px; }
-@media (max-width: 1200px) { .chart-grid { grid-template-columns: repeat(2, 1fr); } .chart-wide { grid-column: span 2; } }
-@media (max-width: 768px) { .chart-grid { grid-template-columns: 1fr; } .chart-wide { grid-column: span 1; } .chart-container { height: 300px; } }
+.chart-card.expanded { grid-column: 1 / -1; }
+.chart-card.expanded .chart-container { height: 500px; }
+@media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } .chart-wide { grid-column: span 1; } .chart-container { height: 300px; } }
 </style>
 </head>
 <body>
@@ -102,26 +107,100 @@
 
 <div id="dashboard-charts" hidden>
   <div class="chart-grid">
-    <div class="chart-card"><h3>国家发文量热力图</h3><div id="chart-country-heatmap" class="chart-container"></div></div>
-    <div class="chart-card"><h3>评分分布</h3><div id="chart-score-dist" class="chart-container"></div></div>
-    <div class="chart-card">
-      <h3>研究领域分布</h3>
+    <div class="chart-card" id="card-country-heatmap">
+      <div class="card-header">
+        <h3>国家/地区发文量热力图</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-country-heatmap" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-country-score">
+      <div class="card-header">
+        <h3>国家/地区平均评分</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-country-score" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-field-radar">
+      <div class="card-header">
+        <h3>研究领域分布</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
       <div class="chart-controls">
         <select id="radar-mode" class="date-input">
           <option value="overall">整体分布</option>
-          <option value="country">国家对比</option>
+          <option value="country">国家/地区对比</option>
         </select>
         <select id="radar-normalize" class="date-input">
           <option value="absolute">绝对数量</option>
           <option value="contribution">贡献比例</option>
-          <option value="focus">国家中心归一化</option>
+          <option value="focus">国家/地区中心归一化</option>
         </select>
         <div id="radar-country-select" hidden></div>
       </div>
       <div id="chart-field-radar" class="chart-container"></div>
     </div>
-    <div class="chart-card">
-      <h3>时间趋势</h3>
+    <div class="chart-card" id="card-score-radar">
+      <div class="card-header">
+        <h3>国家/地区评分领域分布</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div class="chart-controls">
+        <select id="score-radar-mode" class="date-input">
+          <option value="overall">整体分布</option>
+          <option value="country">国家/地区对比</option>
+        </select>
+        <div id="score-radar-country-select" hidden></div>
+      </div>
+      <div id="chart-score-radar" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-institution-scatter">
+      <div class="card-header">
+        <h3>机构排名（发文量 × 评分）</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-institution-scatter" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-wordcloud">
+      <div class="card-header">
+        <h3>交叉标签词云</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div class="chart-controls">
+        <select id="wordcloud-country" class="date-input">
+          <option value="">全部国家/地区</option>
+        </select>
+        <select id="wordcloud-style" class="date-input">
+          <option value="blue">蓝色渐变</option>
+          <option value="rainbow">彩虹色</option>
+          <option value="warm">暖色调</option>
+          <option value="cool">冷色调</option>
+          <option value="red">红色渐变</option>
+          <option value="green">绿色渐变</option>
+          <option value="purple">紫色渐变</option>
+        </select>
+      </div>
+      <div id="chart-wordcloud" class="chart-container"></div>
+    </div>
+    <div class="chart-card chart-wide" id="card-country-field">
+      <div class="card-header">
+        <h3>国家/地区 × 领域交叉热力图</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-country-field" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-score-dist">
+      <div class="card-header">
+        <h3>评分分布</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-score-dist" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-time-trend">
+      <div class="card-header">
+        <h3>时间趋势</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
       <div class="chart-controls">
         <button class="ctrl-btn trend-mode active" data-mode="week">按周</button>
         <button class="ctrl-btn trend-mode" data-mode="day">按天</button>
@@ -129,19 +208,42 @@
       </div>
       <div id="chart-time-trend" class="chart-container"></div>
     </div>
-    <div class="chart-card chart-wide"><h3>国家 × 领域交叉热力图</h3><div id="chart-country-field" class="chart-container"></div></div>
-    <div class="chart-card"><h3>期刊发文量 TOP20</h3><div id="chart-journal-bar" class="chart-container"></div></div>
-    <div class="chart-card"><h3>机构排名（发文量 × 评分）</h3><div id="chart-institution-scatter" class="chart-container"></div></div>
-    <div class="chart-card">
-      <h3>交叉标签词云</h3>
-      <div class="chart-controls">
-        <select id="wordcloud-country" class="date-input">
-          <option value="">全部国家</option>
-        </select>
+    <div class="chart-card" id="card-field-trend">
+      <div class="card-header">
+        <h3>领域时间趋势</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
       </div>
-      <div id="chart-wordcloud" class="chart-container"></div>
+      <div class="chart-controls">
+        <button class="ctrl-btn field-trend-mode active" data-mode="week">按周</button>
+        <button class="ctrl-btn field-trend-mode" data-mode="day">按天</button>
+      </div>
+      <div id="chart-field-trend" class="chart-container"></div>
     </div>
-    <div class="chart-card"><h3>国家平均评分</h3><div id="chart-country-score" class="chart-container"></div></div>
+    <div class="chart-card" id="card-country-trend">
+      <div class="card-header">
+        <h3>国家/地区发文趋势</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div class="chart-controls">
+        <button class="ctrl-btn country-trend-mode active" data-mode="week">按周</button>
+        <button class="ctrl-btn country-trend-mode" data-mode="day">按天</button>
+      </div>
+      <div id="chart-country-trend" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-journal-bar">
+      <div class="card-header">
+        <h3>期刊发文量 TOP20</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-journal-bar" class="chart-container"></div>
+    </div>
+    <div class="chart-card" id="card-journal-boxplot">
+      <div class="card-header">
+        <h3>期刊评分箱线图</h3>
+        <button class="card-expand-btn" onclick="toggleExpand(this)">⤢</button>
+      </div>
+      <div id="chart-journal-boxplot" class="chart-container"></div>
+    </div>
   </div>
 </div>
 
@@ -303,9 +405,9 @@
   <script src="assets/vendor/sql-wasm.js"></script>
   <script>
   (function () {
-    // ============ 国家名映射 ============
+    // ============ 国家/地区名映射 ============
     // 不映射 United States，因为 ECharts 世界地图直接用 "United States"
-    // world.js 中大部分国家用全名，只有少数需要映射
+    // world.js 中大部分国家/地区用全名，只有少数需要映射
     var COUNTRY_MAP = {
       "South Korea": "Korea",
       "North Korea": "Dem. Rep. Korea",
@@ -434,6 +536,11 @@
     var radarCountryList = [];
     var trendMode = "week";
     var trendSmooth = false;
+    var fieldTrendMode = "week";
+    var countryTrendMode = "week";
+    var wordcloudStyle = "blue";
+    var scoreRadarMode = "overall";
+    var selectedScoreRadarCountries = [];
 
     function dateWhere() {
       var conds = [];
@@ -532,6 +639,20 @@
         renderFieldRadar();
       });
 
+      // 评分雷达图模式
+      var srm = document.getElementById("score-radar-mode");
+      if (srm) {
+        srm.addEventListener("change", function () {
+          scoreRadarMode = this.value;
+          if (scoreRadarMode === "country") {
+            buildScoreRadarCountrySelect();
+          }
+          var sc = document.getElementById("score-radar-country-select");
+          if (sc) sc.hidden = scoreRadarMode !== "country";
+          renderScoreRadar();
+        });
+      }
+
       // 时间趋势模式
       var trendBtns = document.querySelectorAll(".trend-mode");
       trendBtns.forEach(function (btn) {
@@ -552,7 +673,29 @@
         });
       }
 
-      // 词云国家筛选
+      // 领域时间趋势模式
+      var fieldTrendBtns = document.querySelectorAll(".field-trend-mode");
+      fieldTrendBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          fieldTrendBtns.forEach(function(b){ b.classList.remove("active"); });
+          btn.classList.add("active");
+          fieldTrendMode = btn.dataset.mode;
+          renderFieldTrend();
+        });
+      });
+
+      // 国家/地区发文趋势模式
+      var countryTrendBtns = document.querySelectorAll(".country-trend-mode");
+      countryTrendBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          countryTrendBtns.forEach(function(b){ b.classList.remove("active"); });
+          btn.classList.add("active");
+          countryTrendMode = btn.dataset.mode;
+          renderCountryTrend();
+        });
+      });
+
+      // 词云国家/地区筛选
       var wcCountrySelect = document.getElementById("wordcloud-country");
       if (wcCountrySelect) {
         var wcSql = "SELECT c.standard_name as country, COUNT(DISTINCT a.id) as cnt " +
@@ -569,6 +712,15 @@
           });
         });
         wcCountrySelect.addEventListener("change", function () {
+          renderWordcloud();
+        });
+      }
+
+      // 词云颜色风格
+      var wcs = document.getElementById("wordcloud-style");
+      if (wcs) {
+        wcs.addEventListener("change", function () {
+          wordcloudStyle = this.value;
           renderWordcloud();
         });
       }
@@ -593,13 +745,17 @@
       renderCountryFieldHeatmap();
       renderScoreDist();
       renderFieldRadar();
+      renderScoreRadar();
       renderTimeTrend();
+      renderFieldTrend();
+      renderCountryTrend();
       renderJournalBar();
+      renderJournalBoxplot();
       renderInstitutionScatter();
       renderWordcloud();
     }
 
-    // ============ 1. 国家发文量热力图 ============
+    // ============ 1. 国家/地区发文量热力图 ============
     function renderCountryHeatmap() {
       var sql = "SELECT c.standard_name as country, COUNT(DISTINCT a.id) as cnt " +
         "FROM articles a JOIN article_countries ac ON a.id=ac.article_id " +
@@ -622,7 +778,7 @@
       });
     }
 
-    // ============ 2. 国家平均评分热力图 ============
+    // ============ 2. 国家/地区平均评分热力图 ============
     function renderCountryScoreHeatmap() {
       var sql = "SELECT c.standard_name as country, AVG(a.score) as avg_score " +
         "FROM articles a JOIN article_countries ac ON a.id=ac.article_id " +
@@ -645,7 +801,7 @@
       });
     }
 
-    // ============ 3. 国家×领域交叉热力图 ============
+    // ============ 3. 国家/地区×领域交叉热力图 ============
     function renderCountryFieldHeatmap() {
       var fieldList = Array.from(selectedFields).map(function(f){return "'"+f+"'";}).join(",");
       if (!fieldList) { var ch = getChart("chart-country-field"); if (ch) ch.clear(); return; }
@@ -685,7 +841,7 @@
         // Sort by metric, take top 15
         var topCountries = Object.keys(countrySums).sort(function(a,b){
           return (countryMetric[b]||0) - (countryMetric[a]||0);
-        }).slice(0,15);
+        }).slice(0,15).reverse();
 
         // Compute row sums for top countries
         var rowSums = {};
@@ -737,7 +893,7 @@
         var data = parseResult(res, ["bin", "cnt"]);
         var bins = [], counts = [];
         for (var i = 0; i <= 10; i++) {
-          bins.push(i + "-" + (i+1));
+          bins.push(String(i));
           var found = data.filter(function(d){return d.bin === i;});
           counts.push(found.length ? found[0].cnt : 0);
         }
@@ -818,7 +974,15 @@
           });
           var chart = getChart("chart-field-radar");
           if (chart) chart.setOption({
-            tooltip: {},
+            tooltip: { formatter: function(p) {
+              var vals = p.value || [];
+              var lines = [p.name];
+              fields.forEach(function(f, i) {
+                var v = vals[i] || 0;
+                lines.push(shortFieldName(f) + ": " + v + " 篇");
+              });
+              return lines.join("<br>");
+            }},
             radar: {
               indicator: indicators,
               radius: "65%",
@@ -842,6 +1006,7 @@
             sql = "SELECT t.name as field, COUNT(DISTINCT a.id) as cnt " +
               "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
               "JOIN themes t ON at.theme_id=t.id " +
+              "JOIN article_countries ac ON a.id=ac.article_id " +
               "WHERE " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
               "GROUP BY t.name";
           } else {
@@ -863,6 +1028,7 @@
           var sqlNorm = "SELECT t.name as field, COUNT(DISTINCT a.id) as cnt " +
             "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
             "JOIN themes t ON at.theme_id=t.id " +
+            "JOIN article_countries ac ON a.id=ac.article_id " +
             "WHERE " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
             "GROUP BY t.name";
           promiseNorm = query(sqlNorm).then(function(r){return parseResult(r, ["cnt"]);});
@@ -927,6 +1093,192 @@
       }
     }
 
+    // ============ 5b. 国家/地区评分领域分布（雷达图）============
+    function buildScoreRadarCountrySelect() {
+      var container = document.getElementById("score-radar-country-select");
+      if (!container) return;
+      container.innerHTML = "";
+
+      query("SELECT c.standard_name as country, COUNT(DISTINCT a.id) as cnt " +
+        "FROM articles a JOIN article_countries ac ON a.id=ac.article_id " +
+        "JOIN countries c ON ac.country_id=c.id " +
+        "WHERE a.score > 0 AND " + dateWhere() + " " +
+        "GROUP BY c.standard_name ORDER BY cnt DESC LIMIT 15")
+        .then(function (res) {
+          var data = parseResult(res, ["cnt"]);
+          var worldLabel = document.createElement("label");
+          worldLabel.style.marginRight = "8px";
+          var worldCb = document.createElement("input");
+          worldCb.type = "checkbox";
+          worldCb.checked = true;
+          worldCb.dataset.country = "World";
+          worldLabel.appendChild(worldCb);
+          worldLabel.appendChild(document.createTextNode(" World"));
+          container.appendChild(worldLabel);
+          worldCb.addEventListener("change", function () {
+            updateScoreRadarCountrySelection();
+          });
+
+          data.forEach(function (item, idx) {
+            var label = document.createElement("label");
+            label.style.marginRight = "8px";
+            var cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.checked = idx < 3;  // 默认选TOP3
+            cb.dataset.country = item.country;
+            label.appendChild(cb);
+            label.appendChild(document.createTextNode(" " + item.country));
+            container.appendChild(label);
+            cb.addEventListener("change", function () {
+              var checked = container.querySelectorAll('input[type="checkbox"]:checked');
+              if (checked.length > 5) {
+                this.checked = false;
+                return;
+              }
+              updateScoreRadarCountrySelection();
+            });
+          });
+          updateScoreRadarCountrySelection();
+        });
+    }
+
+    function updateScoreRadarCountrySelection() {
+      var container = document.getElementById("score-radar-country-select");
+      if (!container) return;
+      selectedScoreRadarCountries = [];
+      container.querySelectorAll('input[type="checkbox"]:checked').forEach(function (cb) {
+        selectedScoreRadarCountries.push(cb.dataset.country);
+      });
+      renderScoreRadar();
+    }
+
+    function renderScoreRadar() {
+      if (!db) return;
+
+      var fields = FIELDS.filter(function (f) { return selectedFields.has(f); });
+      if (!fields.length) { var ch = getChart("chart-score-radar"); if (ch) ch.clear(); return; }
+      var fieldList = fields.map(function (f) { return "'" + f + "'"; }).join(",");
+      var indicators = fields.map(function (f) { return { name: shortFieldName(f), max: 10 }; });
+
+      if (scoreRadarMode === "overall") {
+        var sql = "SELECT t.name as field, AVG(a.score) as avg_score " +
+          "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
+          "JOIN themes t ON at.theme_id=t.id " +
+          "WHERE a.score > 0 AND " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
+          "GROUP BY t.name";
+
+        query(sql).then(function (res) {
+          var data = parseResult(res, ["avg_score"]);
+          var values = fields.map(function (f) {
+            var item = data.find(function (d) { return d.field === f; });
+            return item ? Number(item.avg_score).toFixed(2) : 0;
+          });
+
+          var chart = getChart("chart-score-radar");
+          if (chart) chart.setOption({
+            tooltip: {
+              formatter: function (params) {
+                var html = "整体评分<br/>";
+                params.value.forEach(function (v, i) {
+                  html += fields[i] + ": " + Number(v).toFixed(2) + "<br/>";
+                });
+                return html;
+              }
+            },
+            radar: {
+              indicator: indicators,
+              radius: "65%",
+              splitNumber: 5,
+              axisName: { color: "#666", fontSize: 11 },
+              splitLine: { lineStyle: { color: "#ddd" } },
+              splitArea: { show: true, areaStyle: { color: ["rgba(8,104,172,0.05)", "rgba(8,104,172,0.1)"] } },
+              axisLine: { lineStyle: { color: "#ddd" } }
+            },
+            series: [{
+              type: "radar",
+              data: [{ value: values, name: "整体评分", areaStyle: { color: "rgba(8,104,172,0.2)" }, lineStyle: { color: "#0868ac" } }],
+              symbolSize: 5
+            }]
+          }, true);
+        });
+      } else {
+        if (!selectedScoreRadarCountries.length) {
+          var chart = getChart("chart-score-radar");
+          if (chart) chart.clear();
+          return;
+        }
+
+        var colors = ["#0868ac", "#e6550d", "#31a354", "#756bb1", "#e7298a"];
+        var seriesData = [];
+        var promises = [];
+
+        selectedScoreRadarCountries.forEach(function (country, idx) {
+          var sql;
+          if (country === "World") {
+            sql = "SELECT t.name as field, AVG(a.score) as avg_score " +
+              "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
+              "JOIN themes t ON at.theme_id=t.id " +
+              "JOIN article_countries ac ON a.id=ac.article_id " +
+              "WHERE a.score > 0 AND " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
+              "GROUP BY t.name";
+          } else {
+            sql = "SELECT t.name as field, AVG(a.score) as avg_score " +
+              "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
+              "JOIN themes t ON at.theme_id=t.id " +
+              "JOIN article_countries ac ON a.id=ac.article_id " +
+              "JOIN countries c ON ac.country_id=c.id " +
+              "WHERE a.score > 0 AND c.standard_name='" + country.replace(/'/g, "''") + "' AND " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
+              "GROUP BY t.name";
+          }
+
+          promises.push(query(sql).then(function (res) {
+            var data = parseResult(res, ["avg_score"]);
+            var values = fields.map(function (f) {
+              var item = data.find(function (d) { return d.field === f; });
+              return item ? Number(item.avg_score).toFixed(2) : 0;
+            });
+            seriesData.push({
+              value: values,
+              name: country,
+              lineStyle: { color: colors[idx % colors.length] },
+              areaStyle: { color: colors[idx % colors.length], opacity: 0.1 },
+              itemStyle: { color: colors[idx % colors.length] }
+            });
+          }));
+        });
+
+        Promise.all(promises).then(function () {
+          var chart = getChart("chart-score-radar");
+          if (chart) chart.setOption({
+            tooltip: {
+              formatter: function (params) {
+                var html = params.name + "<br/>";
+                params.value.forEach(function (v, i) {
+                  html += fields[i] + ": " + Number(v).toFixed(2) + "<br/>";
+                });
+                return html;
+              }
+            },
+            legend: { bottom: 0, type: "scroll" },
+            radar: {
+              indicator: indicators,
+              radius: "65%",
+              splitNumber: 5,
+              axisName: { color: "#666", fontSize: 11 },
+              splitLine: { lineStyle: { color: "#ddd" } },
+              splitArea: { show: true, areaStyle: { color: ["rgba(8,104,172,0.05)", "rgba(8,104,172,0.1)"] } },
+              axisLine: { lineStyle: { color: "#ddd" } }
+            },
+            series: [{
+              type: "radar",
+              data: seriesData,
+              symbolSize: 5
+            }]
+          }, true);
+        });
+      }
+    }
+
     // ============ 6. 时间趋势 ============
     function smooth(arr) {
       if (arr.length < 3) return arr;
@@ -981,6 +1333,127 @@
       });
     }
 
+    // ============ 6b. 领域时间趋势（堆叠面积图）============
+    function renderFieldTrend() {
+      if (!db) return;
+      var fields = FIELDS.filter(function(f) { return !selectedFields.size || selectedFields.has(f); });
+      var fieldList = fields.map(function(f) { return "'" + f + "'"; }).join(",");
+
+      // 按周或按天聚合
+      var dateExpr;
+      if (fieldTrendMode === "week") {
+        dateExpr = "strftime('%Y-%m-%d', pub_date, 'weekday 0', '-6 days')";  // 周一
+      } else {
+        dateExpr = "pub_date";
+      }
+
+      var sql = "SELECT " + dateExpr + " as dt, t.name as field, COUNT(DISTINCT a.id) as cnt " +
+        "FROM articles a JOIN article_themes at ON a.id=at.article_id " +
+        "JOIN themes t ON at.theme_id=t.id " +
+        "WHERE " + dateWhere() + " AND t.name IN (" + fieldList + ") " +
+        "GROUP BY dt, t.name ORDER BY dt";
+
+      query(sql).then(function(res) {
+        var data = parseResult(res, ["cnt"]);
+        // 收集所有日期
+        var datesSet = {};
+        data.forEach(function(d) { datesSet[d.dt] = true; });
+        var dates = Object.keys(datesSet).sort();
+
+        // 为每个领域构建数据系列
+        var series = fields.map(function(field) {
+          var values = dates.map(function(dt) {
+            var item = data.find(function(d) { return d.dt === dt && d.field === field; });
+            return item ? Number(item.cnt) : 0;
+          });
+          return {
+            name: field,
+            type: "line",
+            stack: "总量",
+            areaStyle: { opacity: 0.3 },
+            emphasis: { focus: "series" },
+            data: values
+          };
+        });
+
+        var chart = getChart("chart-field-trend");
+        if (chart) chart.setOption({
+          tooltip: { trigger: "axis", axisPointer: { type: "cross" } },
+          legend: { bottom: 0, type: "scroll" },
+          grid: { left: 50, right: 20, top: 20, bottom: 60 },
+          xAxis: { type: "category", data: dates, axisLabel: { rotate: 30 } },
+          yAxis: { type: "value", name: "论文数" },
+          series: series
+        }, true);
+      });
+    }
+
+    // ============ 6c. 国家/地区发文趋势（堆叠面积图）============
+    function renderCountryTrend() {
+      if (!db) return;
+
+      // 先查询发文量TOP10国家/地区
+      var topSql = "SELECT c.standard_name as country, COUNT(DISTINCT a.id) as cnt " +
+        "FROM articles a JOIN article_countries ac ON a.id=ac.article_id " +
+        "JOIN countries c ON ac.country_id=c.id " +
+        "WHERE " + dateWhere() +
+        " GROUP BY c.standard_name ORDER BY cnt DESC LIMIT 10";
+
+      query(topSql).then(function(topRes) {
+        var topCountries = parseResult(topRes, ["cnt"]).map(function(d) { return d.country; });
+        var countryList = topCountries.map(function(c) { return "'" + c.replace(/'/g, "''") + "'"; }).join(",");
+
+        var dateExpr;
+        if (countryTrendMode === "week") {
+          dateExpr = "strftime('%Y-%m-%d', pub_date, 'weekday 0', '-6 days')";
+        } else {
+          dateExpr = "pub_date";
+        }
+
+        var sql = "SELECT " + dateExpr + " as dt, c.standard_name as country, COUNT(DISTINCT a.id) as cnt " +
+          "FROM articles a JOIN article_countries ac ON a.id=ac.article_id " +
+          "JOIN countries c ON ac.country_id=c.id " +
+          "WHERE " + dateWhere() + " AND c.standard_name IN (" + countryList + ") " +
+          "GROUP BY dt, c.standard_name ORDER BY dt";
+
+        return query(sql);
+      }).then(function(res) {
+        var data = parseResult(res, ["cnt"]);
+        var datesSet = {};
+        data.forEach(function(d) { datesSet[d.dt] = true; });
+        var dates = Object.keys(datesSet).sort();
+
+        // 重新查询TOP10国家/地区列表（因为上一个promise的闭包中可能访问不到）
+        var topCountries = data.length > 0 ?
+          Array.from(new Set(data.map(function(d) { return d.country; }))) : [];
+
+        var series = topCountries.map(function(country) {
+          var values = dates.map(function(dt) {
+            var item = data.find(function(d) { return d.dt === dt && d.country === country; });
+            return item ? Number(item.cnt) : 0;
+          });
+          return {
+            name: country,
+            type: "line",
+            stack: "总量",
+            areaStyle: { opacity: 0.3 },
+            emphasis: { focus: "series" },
+            data: values
+          };
+        });
+
+        var chart = getChart("chart-country-trend");
+        if (chart) chart.setOption({
+          tooltip: { trigger: "axis", axisPointer: { type: "cross" } },
+          legend: { bottom: 0, type: "scroll" },
+          grid: { left: 50, right: 20, top: 20, bottom: 60 },
+          xAxis: { type: "category", data: dates, axisLabel: { rotate: 30 } },
+          yAxis: { type: "value", name: "论文数" },
+          series: series
+        }, true);
+      });
+    }
+
     // ============ 7. 期刊发文量TOP20 ============
     function renderJournalBar() {
       var sql = "SELECT a.journal as journal, COUNT(*) as cnt, AVG(a.score) as avg_score " +
@@ -997,6 +1470,61 @@
           yAxis: { type: "category", data: data.map(function(d){return d.journal;}), axisLabel: { fontSize: 10 } },
           series: [{ type: "bar", data: data.map(function(d){return d.cnt;}),
             itemStyle: { color: "#0868ac" }, label: { show: true, position: "right", fontSize: 10 } }]
+        }, true);
+      });
+    }
+
+    // ============ 7b. 期刊评分箱线图 ============
+    function renderJournalBoxplot() {
+      if (!db) return;
+
+      // 查询TOP15期刊的所有评分
+      var sql = "SELECT a.journal as journal, a.score as score " +
+        "FROM articles a " +
+        "WHERE a.score > 0 AND a.journal IS NOT NULL AND " + dateWhere() +
+        " AND a.journal IN (" +
+        "  SELECT journal FROM articles WHERE score > 0 AND journal IS NOT NULL AND " + dateWhere() +
+        "  GROUP BY journal ORDER BY COUNT(*) DESC LIMIT 15" +
+        ")";
+
+      query(sql).then(function(res) {
+        var data = parseResult(res, ["score"]);
+
+        // 按期刊分组
+        var groups = {};
+        data.forEach(function(d) {
+          if (!groups[d.journal]) groups[d.journal] = [];
+          groups[d.journal].push(Number(d.score));
+        });
+
+        // 计算每组的统计量
+        var journals = Object.keys(groups);
+        // 按发文量排序
+        journals.sort(function(a, b) { return groups[b].length - groups[a].length; });
+
+        var boxData = journals.map(function(j) {
+          var scores = groups[j].sort(function(a, b) { return a - b; });
+          var n = scores.length;
+          var q1 = scores[Math.floor(n * 0.25)];
+          var median = scores[Math.floor(n * 0.5)];
+          var q3 = scores[Math.floor(n * 0.75)];
+          var min = scores[0];
+          var max = scores[n - 1];
+          return [min, q1, median, q3, max];
+        });
+
+        var chart = getChart("chart-journal-boxplot");
+        if (chart) chart.setOption({
+          tooltip: { trigger: "item" },
+          grid: { left: 150, right: 20, top: 20, bottom: 20 },
+          xAxis: { type: "value", name: "评分", min: 0, max: 10 },
+          yAxis: { type: "category", data: journals, inverse: true },
+          series: [{
+            name: "评分分布",
+            type: "boxplot",
+            data: boxData,
+            itemStyle: { color: "rgba(8,104,172,0.3)", borderColor: "#0868ac" }
+          }]
         }, true);
       });
     }
@@ -1038,6 +1566,54 @@
     }
 
     // ============ 9. 交叉标签词云 ============
+    function getWordColor(style) {
+      if (style === "blue") {
+        return function () {
+          return "rgb(" +
+            Math.round(Math.random() * 50 + 30) + "," +
+            Math.round(Math.random() * 100 + 50) + "," +
+            Math.round(Math.random() * 100 + 100) + ")";
+        };
+      }
+      if (style === "rainbow") {
+        return function () {
+          var hue = Math.random() * 360;
+          return "hsl(" + hue + ",70%,50%)";
+        };
+      }
+      if (style === "warm") {
+        return function () {
+          var hue = Math.random() * 60;
+          return "hsl(" + hue + ",75%,55%)";
+        };
+      }
+      if (style === "cool") {
+        return function () {
+          var hue = 150 + Math.random() * 120;
+          return "hsl(" + hue + ",65%,50%)";
+        };
+      }
+      if (style === "red") {
+        return function () {
+          var hue = Math.random() * 30 - 10;  // -10到20: 偏红
+          return "hsl(" + (hue + 360) % 360 + ",75%,50%)";
+        };
+      }
+      if (style === "green") {
+        return function () {
+          var hue = 80 + Math.random() * 60;  // 80-140: 绿色范围
+          return "hsl(" + hue + ",65%,45%)";
+        };
+      }
+      if (style === "purple") {
+        return function () {
+          var hue = 250 + Math.random() * 40;  // 250-290: 紫色范围
+          return "hsl(" + hue + ",65%,50%)";
+        };
+      }
+      return function () { return "#0868ac"; };
+    }
+
     function renderWordcloud() {
       var wcCountryEl = document.getElementById("wordcloud-country");
       var country = wcCountryEl ? wcCountryEl.value : "";
@@ -1063,12 +1639,29 @@
         var chart = getChart("chart-wordcloud");
         if (chart) chart.setOption({
           tooltip: { formatter: "{b}: {c}" },
-          series: [{ type: "wordCloud", shape: "circle", sizeRange: [12, 50], rotationRange: [-30, 30],
-            rotationStep: 15, gridSize: 8, data: cloudData,
-            textStyle: { color: function(){return "rgb(" + Math.floor(Math.random()*100+50) + "," + Math.floor(Math.random()*100+80) + "," + Math.floor(Math.random()*100+120) + ")";} } }]
+          series: [{ type: "wordCloud", shape: "square", left: "center", top: "center", width: "100%", height: "100%",
+            sizeRange: [12, 50], rotationRange: [0, 0], rotationStep: 0, gridSize: 8, drawOutOfBound: false,
+            textStyle: { fontFamily: "sans-serif", fontWeight: "bold",
+              color: getWordColor(wordcloudStyle) },
+            emphasis: { focus: "self", textStyle: { shadowBlur: 10, shadowColor: "#333" } },
+            data: cloudData }]
         }, true);
       });
     }
+
+    // ============ 卡片展开/收起 ============
+    window.toggleExpand = function(btn) {
+      var card = btn.closest('.chart-card');
+      card.classList.toggle('expanded');
+      // 通知ECharts重新resize
+      setTimeout(function() {
+        var chartId = card.querySelector('.chart-container').id;
+        var chart = echarts.getInstanceByDom(document.getElementById(chartId));
+        if (chart) chart.resize();
+      }, 100);
+      // 更新按钮图标
+      btn.textContent = card.classList.contains('expanded') ? '⤡' : '⤢';
+    };
 
     // 窗口大小变化时重绘
     window.addEventListener("resize", function() {

@@ -236,8 +236,9 @@ Reports are published as a fully static website so the layout is not constrained
 **Interactive Dashboard:**
 - A dedicated dashboard page (`docs/dashboard.html`) powered by sql.js + ECharts enables interactive data visualization
 - The slim SQLite database (`literature_slim.db`, ~7MB) is loaded client-side with IndexedDB caching for instant repeat visits
-- **9 visualization modules**: country publication heatmap, country average score heatmap, country × field normalized heatmap (with absolute/contribution/focus modes), score distribution histogram, research field radar chart, time trend line chart, journal TOP20 bar chart, institution scatter plot, and cross-tag word cloud
-- **Interactive controls**: date range selector, field multi-select filter, and normalization mode switcher — all charts update in real-time
+- **13 visualization modules**: country/region publication heatmap, country/region average score heatmap, research field radar chart (with country/region comparison and contribution/focus normalization), country/region score field radar, institution scatter plot, cross-tag word cloud (with 7 color schemes), country/region × field cross heatmap (with absolute/contribution/focus modes), score distribution, time trend (with smoothing), field time trend, country/region publication trend, journal TOP20 bar chart, and journal score boxplot
+- **Interactive controls**: date range selector, field multi-select filter, normalization mode switcher, chart expand/collapse — all charts update in real-time
+- Each chart card has a expand button (⤢) for full-width viewing
 - Run `python sql_scripts/build_slim_db.py` to rebuild the slim database from `data/literature.db`
 
 ---
