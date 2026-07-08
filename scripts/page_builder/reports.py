@@ -69,13 +69,10 @@ def first_existing(paths: list[Path]) -> Path | None:
     return next((path for path in paths if path.exists()), None)
 
 
-def report_cover_src(report_path: Path, output_dir: Path) -> str | None:
-    candidate_dates = report_asset_dates(report_path)
-    compact_dates = [date.strftime("%Y%m%d") for date in candidate_dates]
-    cover_path = first_existing([Path("Imgs") / f"{date}.png" for date in compact_dates])
-    if not cover_path:
-        return None
-    return copy_asset(cover_path, output_dir, "covers")
+def assign_covers(reports: list[Path]) -> dict[Path, Path]:
+    """Assign cover images to reports by dictionary order (filename sort)."""
+    covers = sorted(Path("Imgs").glob("*.png"), key=lambda p: p.name)
+    return dict(zip(reports, covers))
 
 
 def render_report_media(report_path: Path, output_dir: Path) -> str:
@@ -159,6 +156,26 @@ def rewrite_special_issue_asset_paths(markdown_text: str, special_issue_idx: int
     return re.sub(rf"(?<!assets[\\/]){source_prefix}", target_prefix, markdown_text)
 
 
+def copy_conf_visualization_assets(markdown_text: str, output_dir: Path) -> None:
+    """Copy conference visualization images referenced in the markdown to the output directory."""
+    for match in re.finditer(r"conf_visualization[\\/]([^)\s]+\.\w+)", markdown_text):
+        rel_path = match.group(1).replace("\\", "/")
+        src = Path("Imgs") / "conf_visualization" / rel_path
+        if src.is_file():
+            target = output_dir / "assets" / "conf_visualization" / rel_path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, target)
+
+
+def rewrite_conf_visualization_paths(markdown_text: str) -> str:
+    """Rewrite conf_visualization/ paths to assets/conf_visualization/ for HTML output."""
+    return re.sub(
+        r"(?<!assets[\\/])conf_visualization[\\/]",
+        "assets/conf_visualization/",
+        markdown_text,
+    )
+
+
 def strip_first_markdown_heading(markdown_text: str) -> str:
     lines = markdown_text.splitlines()
     for idx, line in enumerate(lines):
@@ -216,7 +233,7 @@ def trim_report_body(markdown_text: str) -> str:
 def discover_reports(input_dir: Path) -> list[Path]:
     return sorted(
         (path for path in input_dir.glob("report_*.md") if "_wechat" not in path.stem),
-        key=lambda path: (report_date_from_name(path), path.name),
+        key=lambda path: path.name,
     )
 
 
@@ -242,12 +259,14 @@ def regular_report_body(report_path: Path, markdown_text: str, issue_idx: int, o
 
 def special_issue_body(input_dir: Path, output_dir: Path, report_path: Path, markdown_text: str, issue_idx: int) -> tuple[str, str]:
     copy_special_issue_assets(input_dir, output_dir, issue_idx)
+    copy_conf_visualization_assets(markdown_text, output_dir)
     heading = first_markdown_heading(markdown_text)
     title = "神经科学快讯·special issue"
     if heading:
         title = f"{title}｜{heading}"
     report_body = strip_first_markdown_heading(markdown_text)
     report_body = rewrite_special_issue_asset_paths(report_body, issue_idx)
+    report_body = rewrite_conf_visualization_paths(report_body)
     return title, report_body
 
 
@@ -258,6 +277,7 @@ def render_report_page(
     issue_numbers: dict[Path, int],
     special_issue_numbers: dict[Path, int],
     article_url_maps: dict[Path, dict[str, str]],
+    cover_path: Path | None = None,
 ) -> ReportLink:
     markdown_text = report_path.read_text(encoding="utf-8")
     is_special = is_special_issue(report_path)
@@ -275,7 +295,9 @@ def render_report_page(
         title, report_body = regular_report_body(report_path, markdown_text, issue_numbers[report_path], output_dir)
         article_urls = article_url_maps.get(report_path, {})
 
-    cover_src = report_cover_src(report_path, output_dir)
+    cover_src = None
+    if cover_path and cover_path.exists():
+        cover_src = copy_asset(cover_path, output_dir, "covers")
     body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}", article_urls)
     page_name = slugify(report_path)
     (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
@@ -309,10 +331,11 @@ def build_site(input_dir: Path, output_dir: Path) -> None:
     issue_numbers = {path: idx for idx, path in enumerate(regular_reports, 1)}
     special_issue_numbers = {path: idx for idx, path in enumerate(special_reports, 1)}
     article_url_maps = report_article_url_maps_by_order(input_dir, regular_reports)
+    cover_assignment = assign_covers(reports)
 
     write_site_assets(output_dir)
     report_links = [
-        render_report_page(input_dir, output_dir, report_path, issue_numbers, special_issue_numbers, article_url_maps)
+        render_report_page(input_dir, output_dir, report_path, issue_numbers, special_issue_numbers, article_url_maps, cover_assignment.get(report_path))
         for report_path in reversed(reports)
     ]
     render_index_page(input_dir, output_dir, report_links)

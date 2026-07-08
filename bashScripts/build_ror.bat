@@ -11,3 +11,7 @@ python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-05-16_enric
 python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-05-23_enriched.jsonl"
 python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-05-30_enriched.jsonl"
 python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-06-07_enriched.jsonl"
+python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-06-13_enriched.jsonl"
+python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-06-20_enriched.jsonl"
+python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-06-27_enriched.jsonl"
+python ./src/ror_refine_batch.py --input "./getfiles/all_papers_2026-07-04_enriched.jsonl"

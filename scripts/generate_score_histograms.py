@@ -63,7 +63,10 @@ def render_histogram(distribution: list[tuple[str, int]], output_path: Path) -> 
 
 
 def generate_histogram(result_path: Path, output_dir: Path, overwrite: bool = False) -> Path | None:
-    date = result_date(result_path)
+    try:
+        date = result_date(result_path)
+    except ValueError:
+        return None
     output_path = output_dir / f"{date}_score_histogram.png"
     if output_path.exists() and not overwrite:
         return None

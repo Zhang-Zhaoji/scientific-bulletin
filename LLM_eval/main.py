@@ -8,6 +8,7 @@ from StructuredPrompt import PromptGenerator
 import datetime
 import tqdm
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from util import load_api_url
 from config import PLATFORM as DEFAULT_PLATFORM, default_model, supported_platforms
 
@@ -32,6 +33,19 @@ def process_article(llm_api, prompt_generator, article_info):
     return result
 
 
+def worker(article, llm_api, prompt_generator, max_retries=15):
+    """单篇文章处理（带重试），供线程池调用"""
+    for retry in range(max_retries):
+        try:
+            result = process_article(llm_api, prompt_generator, article)
+            return result, None
+        except Exception as e:
+            if retry < max_retries - 1:
+                time.sleep(2 * (retry + 1))
+            else:
+                return None, str(e)
+
+
 def main():
     """主函数"""
     parser = argparse.ArgumentParser(
@@ -41,14 +55,14 @@ def main():
 Examples:
   python main.py                          # Process default file
   python main.py -i papers.jsonl          # Process specific file
-  python main.py -i papers_enriched.jsonl # Process enriched file with author info
   python main.py -i papers.jsonl -l 10    # Process only first 10 papers
+  python main.py -i papers.jsonl -w 20    # 20 parallel workers
         """
     )
     
     parser.add_argument('-i', '--input', 
                         default='getfiles/all_papers_2026-04-18_enriched.jsonl',
-                        help='Input JSONL file path (default: getfiles/all_papers_2026-04-18_enriched.jsonl)')
+                        help='Input JSONL file path')
     parser.add_argument('-o', '--output',
                         help='Output JSON file path (default: auto-generated in LLM_Results)')
     parser.add_argument('-l', '--limit', type=int,
@@ -56,7 +70,9 @@ Examples:
     parser.add_argument('--model',
                         help='LLM model to use (default: configured in LLM_eval/config.py)')
     parser.add_argument('--platform', default=DEFAULT_PLATFORM, choices=supported_platforms(),
-                        help=f'Model provider platform (default: {DEFAULT_PLATFORM}, configured in LLM_eval/config.py)')
+                        help=f'Model provider platform (default: {DEFAULT_PLATFORM})')
+    parser.add_argument('-w', '--workers', type=int, default=20,
+                        help='Number of parallel workers (default: 20)')
     
     args = parser.parse_args()
     if not args.model:
@@ -74,6 +90,7 @@ Examples:
     print(f"Input file: {input_file}")
     print(f"Platform: {args.platform}")
     print(f"Model: {args.model}")
+    print(f"Workers: {args.workers}")
     if args.limit:
         print(f"Limit: {args.limit} papers")
     print()
@@ -105,53 +122,69 @@ Examples:
     # 初始化提示词生成器
     prompt_generator = PromptGenerator()
     
-    # 处理每篇文章
-    print("\nProcessing papers...")
-    results = []
-    for i, article in enumerate(tqdm.tqdm(articles, desc="Processing"), 1):
-        print(f"\n[{i}/{len(articles)}] {article.get('title', 'Unknown')[:60]}...")
-        
-        success = False
-        retries = 0
-        max_retries = 15
-        
-        while not success and retries < max_retries:
-            try:
-                result = process_article(llm_api, prompt_generator, article)
-                success = True
-                print(f"    Recommendation: {result.recommendation_tier}")
-            except Exception as e:
-                retries += 1
-                print(f"    [ERROR] Attempt {retries}/{max_retries}: {e}")
-                if retries < max_retries:
-                    time.sleep(2 * retries)  # Exponential backoff
-                else:
-                    print(f"    [FAILED] Skipping after {max_retries} attempts")
-        
-        if success:
-            results.append(result)
+    # 确定输出文件
+    if args.output:
+        output_file = Path(args.output)
+    else:
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        output_file = results_dir / f"LLM_results_{timestamp}.json"
     
-    # 保存结果
-    if results:
-        # 确定输出文件名
-        if args.output:
-            output_file = Path(args.output)
-        else:
-            timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_file = results_dir / f"LLM_results_{timestamp}.json"
+    # 并行处理
+    print(f"\nProcessing papers with {args.workers} workers...")
+    total = len(articles)
+    results = [None] * total  # 按索引保存，保持顺序
+    failed = [None] * total
+    completed = 0
+    saved_count = 0
+    
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        # 提交所有任务
+        future_to_idx = {
+            executor.submit(worker, article, llm_api, prompt_generator): i
+            for i, article in enumerate(articles)
+        }
         
+        # 按完成顺序收集结果（但按索引存储保持顺序）
+        with tqdm.tqdm(total=total, desc="Processing") as pbar:
+            for future in as_completed(future_to_idx):
+                idx = future_to_idx[future]
+                result, error = future.result()
+                results[idx] = result
+                failed[idx] = error
+                completed += 1
+                pbar.update(1)
+                
+                # 每100篇保存一次（增量保存，防止中断丢失）
+                if completed % 100 == 0 and completed < total:
+                    valid = [r for r in results if r is not None]
+                    if valid:
+                        with open(output_file, 'w', encoding='utf-8') as f:
+                            json.dump([asdict(r) for r in valid], f, ensure_ascii=False, indent=2)
+                        saved_count = len(valid)
+                        print(f"  [Checkpoint] Saved {saved_count} results ({completed}/{total} processed)")
+    
+    # 过滤掉失败的结果
+    valid_results = [(i, r) for i, r in enumerate(results) if r is not None]
+    failed_results = [(i, failed[i]) for i in range(total) if results[i] is None]
+    
+    # 保存最终结果
+    if valid_results:
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump([asdict(result) for result in results], f, ensure_ascii=False, indent=2)
+            json.dump([asdict(r) for _, r in valid_results], f, ensure_ascii=False, indent=2)
         
         print("\n" + "=" * 80)
         print("Processing Complete!")
         print("=" * 80)
         print(f"Results saved to: {output_file}")
-        print(f"Total processed: {len(results)}/{len(articles)}")
+        print(f"Total processed: {len(valid_results)}/{total}")
+        if failed_results:
+            print(f"Failed: {len(failed_results)}")
+            for i, err in failed_results[:5]:
+                print(f"  [{i}] {articles[i].get('title', 'Unknown')[:50]}...: {err[:80]}")
         
         # 统计推荐等级
         tier_counts = {}
-        for r in results:
+        for _, r in valid_results:
             tier = r.recommendation_tier
             tier_counts[tier] = tier_counts.get(tier, 0) + 1
         
@@ -163,5 +196,4 @@ Examples:
 
 
 if __name__ == "__main__":
-    import time  # Import here for retry backoff
     main()

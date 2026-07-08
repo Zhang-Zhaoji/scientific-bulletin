@@ -101,6 +101,11 @@ class ROR_Search():
         lower_part = clean_part.lower()
         if not clean_part:
             return 0
+        # Check country abbreviation FIRST (before email fragment check).
+        # 'uk', 'cn' etc. appear in both abbr2country and email_fragment_words;
+        # all-uppercase forms (e.g. "UK", "CN") are country codes, not email fragments.
+        if lower_part in self.abbr2country.keys() and raw_clean.isupper():
+            return 4
         if lower_part in self.email_fragment_words:
             return 6
         if '@' in raw_clean:
@@ -111,8 +116,6 @@ class ROR_Search():
             return 2
         elif clean_part in self.subregion_set:
             return 3
-        elif lower_part in self.abbr2country.keys() and raw_clean.isupper():
-            return 4
         elif clean_part in self.alias_country.keys():
             return 5
         else:
@@ -252,9 +255,71 @@ class ROR_Search():
         return standard_name, score, location_info
 
 
-if __name__ == '__main__':
+def check_affiliation_coverage():
+    """
+    统计所有 ror_refined 文件中作者地址信息的覆盖率。
+    """
+    import glob
+    import jsonlines
+    import os
 
-    
+    files = sorted(glob.glob('getfiles/all_papers_*_enriched_ror_refined.jsonl'))
+    files = [f for f in files if '_replenished' not in f]
+
+    total = 0
+    has_affil = 0
+    has_ror_country = 0
+    has_ror_inst = 0
+
+    print("\n" + "=" * 70)
+    print("Affiliation Coverage Report")
+    print("=" * 70)
+
+    for fp in files:
+        file_total = 0
+        file_affil = 0
+        file_country = 0
+        file_inst = 0
+
+        with jsonlines.open(fp) as r:
+            for paper in r:
+                total += 1
+                file_total += 1
+                details = paper.get('author_details', [])
+
+                affil_found = any(d.get('affiliation') for d in details)
+                country_found = any(d.get('ror_country') for d in details)
+                inst_found = any(d.get('ror_normalized_affiliation') for d in details)
+
+                if affil_found:
+                    has_affil += 1
+                    file_affil += 1
+                if country_found:
+                    has_ror_country += 1
+                    file_country += 1
+                if inst_found:
+                    has_ror_inst += 1
+                    file_inst += 1
+
+        pct_a = file_affil / file_total * 100 if file_total else 0
+        pct_c = file_country / file_total * 100 if file_total else 0
+        print(f"  {os.path.basename(fp):55s} {file_total:4d} papers | affil {pct_a:5.1f}% | country {pct_c:5.1f}%")
+
+    print("-" * 70)
+    print(f"  {'TOTAL':55s} {total:4d} papers")
+    print(f"  Has affiliation:        {has_affil:4d} ({has_affil/total*100:.1f}%)")
+    print(f"  Has ROR country:        {has_ror_country:4d} ({has_ror_country/total*100:.1f}%)")
+    print(f"  Has ROR institution:    {has_ror_inst:4d} ({has_ror_inst/total*100:.1f}%)")
+    print("=" * 70)
+
+
+if __name__ == '__main__':
+    import sys
+
+    if '--coverage' in sys.argv:
+        check_affiliation_coverage()
+        sys.exit(0)
+
     ror_search = ROR_Search(threshold=90)
     example_institute_path = "tmp_files/test_insts.json"
     

@@ -42,9 +42,6 @@ def ror_refine_paper(paper: Dict, ror_search: ROR_Search) -> Dict:
                 paper['author_details'][idx]['ror_country'].append(location_info[0])
             if location_info[1] is not None:
                 paper['author_details'][idx]['ror_subregion'].append(location_info[1])
-            if location_info[0] is None:
-                print(f"\nno country detected for {affiliation}")
-                print(f"affiliation = {affiliation}, -> {location_info}")
     return paper
 
 

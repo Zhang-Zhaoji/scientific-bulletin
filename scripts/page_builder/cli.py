@@ -11,7 +11,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Build GitHub Pages static HTML from Markdown reports, and use ref jsons as information source")
     parser.add_argument("--input-dir", default="LLM_Results", help="Directory containing report_*.md files.")
     parser.add_argument("--output-dir", default="docs", help="Output directory for static HTML.")
+    parser.add_argument("--visualize", action="store_true",
+                        help="Run the visualization pipeline before building the site.")
     args = parser.parse_args()
+
+    if args.visualize:
+        from visualize_pipeline import main as run_viz
+        run_viz([])
+
     try:
         build_site(Path(args.input_dir), Path(args.output_dir))
     except RuntimeError as exc:

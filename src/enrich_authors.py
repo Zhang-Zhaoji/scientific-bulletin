@@ -19,10 +19,14 @@ import os
 import re
 import sqlite3
 import sys
+import threading
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from difflib import SequenceMatcher
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # 导入SQLite操作函数
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -31,6 +35,41 @@ from sql_scripts.sqlfuncs import init_db, search_item, insert_item, search_or_in
 
 # HTTP Headers for API requests
 HEADERS = {'User-Agent': 'mailto:zhang-zj@stu.pku.edu.cn'}
+
+# Reusable session for NCBI E-utilities to reduce connection resets
+NCBI_SESSION = requests.Session()
+NCBI_SESSION.headers.update(HEADERS)
+
+
+class TokenBucket:
+    """Simple thread-safe token bucket for rate limiting."""
+    def __init__(self, rate: float, capacity: float):
+        self.rate = rate
+        self.capacity = capacity
+        self.tokens = capacity
+        self.last_update = time.time()
+        self.lock = threading.Lock()
+
+    def consume(self, tokens: float = 1.0) -> None:
+        with self.lock:
+            now = time.time()
+            elapsed = now - self.last_update
+            self.tokens = min(self.capacity, self.tokens + elapsed * self.rate)
+            self.last_update = now
+
+            if self.tokens < tokens:
+                wait_time = (tokens - self.tokens) / self.rate
+                time.sleep(wait_time)
+                self.tokens = 0.0
+            else:
+                self.tokens -= tokens
+
+
+# NCBI rate limit: 3/sec without API key, 10/sec with key.
+# Use a shared token bucket to allow safe multi-threaded access.
+# Stay slightly below the documented limit to reduce 429 errors.
+_NCBI_RATE = 8.0 if os.environ.get('NCBI_API_KEY') else 3.0
+NCBI_BUCKET = TokenBucket(rate=_NCBI_RATE, capacity=_NCBI_RATE)
 
 
 @dataclass
@@ -60,6 +99,33 @@ SENIOR_RESEARCHER_THRESHOLD = {
 # 数据库文件路径
 DATA_DIR = "data"
 DB_PATH = os.path.join(DATA_DIR, "literature.db")
+PUBMED_TITLE_CACHE_PATH = os.path.join(DATA_DIR, "pubmed_title_cache.json")
+
+
+def _load_pubmed_title_cache() -> Dict[str, Optional[str]]:
+    """加载 PubMed 标题搜索缓存"""
+    if os.path.exists(PUBMED_TITLE_CACHE_PATH):
+        try:
+            with open(PUBMED_TITLE_CACHE_PATH, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def _save_pubmed_title_cache(cache: Dict[str, Optional[str]]) -> None:
+    """保存 PubMed 标题搜索缓存（线程安全：先复制再写入）"""
+    os.makedirs(DATA_DIR, exist_ok=True)
+    try:
+        snapshot = dict(cache)  # avoid "dictionary changed size during iteration"
+        with open(PUBMED_TITLE_CACHE_PATH, 'w', encoding='utf-8') as f:
+            json.dump(snapshot, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"        [WARN] Failed to save PubMed title cache: {e}")
+
+
+# Module-level cache for title search results
+_PUBMED_TITLE_CACHE = _load_pubmed_title_cache()
 
 
 class AuthorDatabase:
@@ -67,13 +133,24 @@ class AuthorDatabase:
     
     def __init__(self):
         self.conn = init_db(DB_PATH)
+        self._migrate()
         self.cache_stats = {'hits': 0, 'misses': 0}
         print("[DB] Connected to SQLite database")
+    
+    def _migrate(self):
+        """Add missing columns to existing tables (non-destructive migration)."""
+        cursor = self.conn.execute("PRAGMA table_info(authors)")
+        existing_cols = {row[1] for row in cursor.fetchall()}
+        for col in ['works_count', 'i10_index']:
+            if col not in existing_cols:
+                self.conn.execute(f"ALTER TABLE authors ADD COLUMN {col} INTEGER")
+                print(f"[DB] Migration: added column '{col}' to authors table")
+        self.conn.commit()
     
     def get_author(self, name: str) -> Optional[Dict]:
         """从数据库获取作者信息，包括机构信息"""
         query = """
-            SELECT id, name, orcid, h_index, citations, is_senior_researcher 
+            SELECT id, name, orcid, h_index, citations, works_count, i10_index, is_senior_researcher 
             FROM authors 
             WHERE name = ?
         """
@@ -84,7 +161,7 @@ class AuthorDatabase:
             return None
         self.cache_stats['hits'] += 1
         
-        author_id, name, orcid, h_index, citations, is_senior_researcher = result
+        author_id, name, orcid, h_index, citations, works_count, i10_index, is_senior_researcher = result
         
         # 获取作者的机构信息
         affiliations = []
@@ -114,6 +191,8 @@ class AuthorDatabase:
             'orcid': orcid,
             'h_index': h_index,
             'citations': citations,
+            'works_count': works_count,
+            'i10_index': i10_index,
             'is_senior_researcher': is_senior_researcher,
             'affiliation': '; '.join(affiliations) if affiliations else None,
             'normalized_affiliation': '; '.join(normalized_affiliations) if normalized_affiliations else None,
@@ -128,6 +207,8 @@ class AuthorDatabase:
             'orcid': info.get('orcid'),
             'h_index': info.get('h_index'),
             'citations': info.get('citations'),
+            'works_count': info.get('works_count'),
+            'i10_index': info.get('i10_index'),
             'is_senior_researcher': info.get('is_senior_researcher', False)
         }
         
@@ -185,6 +266,44 @@ class AuthorDatabase:
         search_or_insert(self.conn, 'institutions', ['name'], institution_data)
         
         self.conn.commit()
+
+    def update_author_metrics(self, name: str, info: Dict):
+        """
+        Update author metrics for replenishment.
+        Only updates non-None fields; does not overwrite existing good data with None.
+        Creates the author if it doesn't exist.
+        """
+        cursor = self.conn.execute("SELECT id FROM authors WHERE name = ?", (name,))
+        row = cursor.fetchone()
+
+        if row:
+            author_id = row[0]
+            set_clauses = []
+            values = []
+            for col in ['orcid', 'h_index', 'citations', 'works_count', 'i10_index', 'is_senior_researcher']:
+                val = info.get(col)
+                if val is not None:
+                    set_clauses.append(f"{col} = ?")
+                    values.append(val)
+            if set_clauses:
+                values.append(author_id)
+                query = f"UPDATE authors SET {', '.join(set_clauses)} WHERE id = ?"
+                self.conn.execute(query, tuple(values))
+                self.conn.commit()
+            return author_id
+        else:
+            author_data = {
+                'name': name,
+                'orcid': info.get('orcid'),
+                'h_index': info.get('h_index'),
+                'citations': info.get('citations'),
+                'works_count': info.get('works_count'),
+                'i10_index': info.get('i10_index'),
+                'is_senior_researcher': info.get('is_senior_researcher', False)
+            }
+            author_id = search_or_insert(self.conn, 'authors', ['name'], author_data)
+            self.conn.commit()
+            return author_id
     
     def save_databases(self):
         """保存数据库（SQLite自动保存，这里只是提交事务）"""
@@ -789,86 +908,232 @@ if __name__ == '__main__':
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
 
+
+def _normalize_title_for_search(title: str) -> str:
+    """标准化标题用于比较：小写、合并空白"""
+    return ' '.join(str(title).lower().split())
+
+
+def _title_similarity(a: str, b: str) -> float:
+    """计算两个标题的相似度"""
+    return SequenceMatcher(None, _normalize_title_for_search(a), _normalize_title_for_search(b)).ratio()
+
+
+def search_pmid_by_title(title: str, delay: float = None, retmax: int = 5) -> List[str]:
+    """
+    通过标题在 PubMed 中搜索 PMID。
+    使用精确短语搜索（加引号），返回候选 PMID 列表。
+    """
+    if not title or not str(title).strip():
+        return []
+
+    ncbi_key = os.environ.get('NCBI_API_KEY', '')
+
+    url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+    params = {
+        'db': 'pubmed',
+        'term': f'"{title}"',
+        'retmax': retmax,
+        'retmode': 'json'
+    }
+    if ncbi_key:
+        params['api_key'] = ncbi_key
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            NCBI_BUCKET.consume()
+            response = NCBI_SESSION.get(url, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            idlist = data.get('esearchresult', {}).get('idlist', [])
+            return idlist
+        except requests.exceptions.RequestException as e:
+            print(f"        [PubMed Title Search Error] '{title[:40]}...' attempt {attempt+1}/{max_retries}: {e}")
+            if attempt < max_retries - 1:
+                wait = 0.5 * (2 ** attempt)
+                print(f"        [RETRY] Waiting {wait:.1f}s...")
+                time.sleep(wait)
+            else:
+                print(f"        [FAIL] Title search failed after {max_retries} attempts")
+                return []
+        except Exception as e:
+            print(f"        [PubMed Title Search Error] '{title[:40]}...': {e}")
+            return []
+
+
+def fetch_titles_for_pmids(pmids: List[str], delay: float = None) -> Dict[str, str]:
+    """
+    批量获取多个 PMID 的标题（用于标题匹配验证）。
+    """
+    if not pmids:
+        return {}
+
+    ncbi_key = os.environ.get('NCBI_API_KEY', '')
+
+    url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
+    params = {
+        'db': 'pubmed',
+        'id': ','.join(pmids),
+        'retmode': 'json'
+    }
+    if ncbi_key:
+        params['api_key'] = ncbi_key
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            NCBI_BUCKET.consume()
+            response = NCBI_SESSION.get(url, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            result = data.get('result', {})
+            titles = {}
+            for pmid in pmids:
+                info = result.get(pmid, {})
+                titles[pmid] = info.get('title', '')
+            return titles
+        except requests.exceptions.RequestException as e:
+            print(f"        [PubMed Summary Error] attempt {attempt+1}/{max_retries}: {e}")
+            if attempt < max_retries - 1:
+                wait = 0.5 * (2 ** attempt)
+                time.sleep(wait)
+            else:
+                return {}
+        except Exception:
+            return {}
+
+
+def find_best_pmid_by_title(title: str, delay: float = None, min_similarity: float = 0.8) -> Optional[str]:
+    """
+    通过标题搜索 PubMed，返回最匹配的 PMID。
+    如果返回多个候选，用 esummary 验证标题相似度。
+    结果会缓存到 data/pubmed_title_cache.json，避免重复搜索。
+    """
+    global _PUBMED_TITLE_CACHE
+    cache_key = _normalize_title_for_search(title)
+    if cache_key in _PUBMED_TITLE_CACHE:
+        cached = _PUBMED_TITLE_CACHE[cache_key]
+        return cached if cached else None
+
+    pmids = search_pmid_by_title(title, delay=delay)
+    if not pmids:
+        _PUBMED_TITLE_CACHE[cache_key] = None
+        _save_pubmed_title_cache(_PUBMED_TITLE_CACHE)
+        return None
+
+    if len(pmids) == 1:
+        _PUBMED_TITLE_CACHE[cache_key] = pmids[0]
+        _save_pubmed_title_cache(_PUBMED_TITLE_CACHE)
+        return pmids[0]
+
+    titles = fetch_titles_for_pmids(pmids, delay=delay)
+    best_pmid = None
+    best_score = 0.0
+    for pmid, pub_title in titles.items():
+        score = _title_similarity(title, pub_title)
+        if score > best_score:
+            best_score = score
+            best_pmid = pmid
+
+    result = best_pmid if best_pmid and best_score >= min_similarity else None
+    _PUBMED_TITLE_CACHE[cache_key] = result
+    _save_pubmed_title_cache(_PUBMED_TITLE_CACHE)
+    return result
+
+
 def fetch_affiliations_batch(pmids: List[str], delay: float = None) -> Dict[str, Dict[str, str]]:
     """
-    Batch fetch affiliations from PubMed using efetch with multiple PMIDs
-    
+    Batch fetch affiliations from PubMed using efetch with multiple PMIDs.
+    Rate limiting is handled by the shared NCBI_BUCKET token bucket.
+    Uses a fresh requests Session per batch to avoid stale connection resets.
+
     Args:
         pmids: List of PubMed IDs
-        delay: Delay between batches (auto-detect based on API key)
-    
+        delay: Deprecated, kept for backward compatibility
+
     Returns:
         Dict mapping PMID to {author_name: affiliation}
     """
     if not pmids:
         return {}
-    
-    # Auto-configure rate limits based on API key
+
     ncbi_key = os.environ.get('NCBI_API_KEY', '')
-    if delay is None:
-        delay = 0.12 if ncbi_key else 0.35  # 10/sec vs 3/sec
-    
     results = {}
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-    
+
     # Process in batches of 100 (PubMed limit)
     for i in range(0, len(pmids), 100):
         batch = pmids[i:i+100]
-        
+
         params = {
             'db': 'pubmed',
             'id': ','.join(batch),
             'retmode': 'xml'
         }
-        
+
         # Add API key if available
         if ncbi_key:
             params['api_key'] = ncbi_key
-        
-        try:
-            # Direct request (not using fetch_with_retry which expects JSON)
-            response = requests.get(url, params=params, headers=HEADERS, timeout=30)
-            response.raise_for_status()
-            
-            # Parse XML
-            import xml.etree.ElementTree as ET
-            root = ET.fromstring(response.content)
-            
-            # Find all PubmedArticle elements
-            for article in root.findall('.//PubmedArticle'):
-                pmid_elem = article.find('.//PMID')
-                if pmid_elem is None:
-                    continue
-                pmid = pmid_elem.text
-                
-                author_affiliations = {}
-                
-                # Extract author list
-                author_list = article.find('.//AuthorList')
-                if author_list is not None:
-                    for author in author_list.findall('Author'):
-                        last_name = author.find('LastName')
-                        fore_name = author.find('ForeName')
-                        
-                        if last_name is not None:
-                            name = last_name.text
-                            if fore_name is not None:
-                                name = f"{fore_name.text} {name}"
-                            
-                            # Find affiliation
-                            affiliation = author.find('AffiliationInfo/Affiliation')
-                            if affiliation is not None and affiliation.text:
-                                author_affiliations[name] = affiliation.text
-                
-                if author_affiliations:
-                    results[pmid] = author_affiliations
-            
-            time.sleep(delay)  # Rate limit compliance
-            
-        except Exception as e:
-            print(f"        [PubMed Batch Error] Batch {i//100 + 1}: {e}")
-            continue
-    
+
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                NCBI_BUCKET.consume()
+                # Use a fresh session for each batch to avoid stale connections
+                with requests.Session() as session:
+                    session.headers.update(HEADERS)
+                    response = session.get(url, params=params, timeout=60)
+                    response.raise_for_status()
+
+                    # Parse XML
+                    import xml.etree.ElementTree as ET
+                    root = ET.fromstring(response.content)
+
+                    # Find all PubmedArticle elements
+                    for article in root.findall('.//PubmedArticle'):
+                        pmid_elem = article.find('.//PMID')
+                        if pmid_elem is None:
+                            continue
+                        pmid = pmid_elem.text
+
+                        author_affiliations = {}
+
+                        # Extract author list
+                        author_list = article.find('.//AuthorList')
+                        if author_list is not None:
+                            for author in author_list.findall('Author'):
+                                last_name = author.find('LastName')
+                                fore_name = author.find('ForeName')
+
+                                if last_name is not None:
+                                    name = last_name.text
+                                    if fore_name is not None:
+                                        name = f"{fore_name.text} {name}"
+
+                                    # Find affiliation
+                                    affiliation = author.find('AffiliationInfo/Affiliation')
+                                    if affiliation is not None and affiliation.text:
+                                        author_affiliations[name] = affiliation.text
+
+                        if author_affiliations:
+                            results[pmid] = author_affiliations
+
+                break  # Success, exit retry loop
+
+            except requests.exceptions.RequestException as e:
+                print(f"        [PubMed Batch Error] Batch {i//100 + 1}, attempt {attempt+1}/{max_retries}: {e}")
+                if attempt < max_retries - 1:
+                    # Longer wait for connection resets
+                    wait = 1.0 * (2 ** attempt)
+                    print(f"        [RETRY] Waiting {wait:.1f}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"        [FAIL] Batch {i//100 + 1} failed after {max_retries} attempts")
+            except Exception as e:
+                print(f"        [PubMed Batch Error] Batch {i//100 + 1}: {e}")
+                break
+
     return results
 
 

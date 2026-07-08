@@ -4,6 +4,8 @@ jsonlines
 matplotlib
 markdown
 openai
+pandas
+plotly
 pydantic
 pyecharts
 python-dotenv
@@ -11,6 +13,8 @@ python_dateutil
 Requests
 selenium
 snapshot_selenium
+squarify
 thefuzz
 tqdm
 webdriver_manager
+wordcloud

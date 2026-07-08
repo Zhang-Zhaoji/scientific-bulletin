@@ -94,7 +94,7 @@ class ReportGenerator:
         self.report_path = report_path
         
         with open(report_path, 'w', encoding='utf-8') as f:
-            f.write(self._generate_markdown(tiers, statistics_text))
+            f.write(self._generate_markdown(tiers, statistics_text, results))
         
         # 生成统计摘要
         stats = {
@@ -114,8 +114,10 @@ class ReportGenerator:
             "tiers": {k: len(v) for k, v in tiers.items()}
         }
     
-    def _generate_markdown(self, tiers: Dict, statistics_text: str = "") -> str:
+    def _generate_markdown(self, tiers: Dict, statistics_text: str = "", results: List[Dict] = None) -> str:
         """生成Markdown格式报告"""
+        if results is None:
+            results = []
         
         md = f"""# 神经科学文献策展报告
 生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M')}
@@ -126,9 +128,8 @@ class ReportGenerator:
 
 - **头条推荐**: {len(tiers['头条推荐'])} 篇
 - **深度解读**: {len(tiers['深度解读'])} 篇  
-- **简要提及**: {len(tiers['简要提及'])} 篇
-- **跨界启发**: {len(tiers['域外高影响'])} 篇
-- **已过滤**: {len(tiers['不推送']) + len(tiers['错误'])} 篇
+- **域外高影响**: {len([r for r in results if r.get('domain') == '域外高影响' and r.get('total_score', 0) >= 8.0])} 篇
+- **已过滤**: {len(tiers['简要提及']) + len(tiers['不推送']) + len(tiers['错误']) - len([r for r in results if r.get('domain') == '域外高影响' and r.get('total_score', 0) >= 8.0])} 篇
 
 ---
 
@@ -136,36 +137,36 @@ class ReportGenerator:
 
 """
         
-        # 统计每个子领域的文章数量
+        # 统计每个子领域的文章数量（仅头条推荐+深度解读）
+        headline_results = tiers.get("头条推荐", [])
         deep_results = tiers.get("深度解读", [])
-        brief_results = tiers.get("简要提及", [])
-        all_selected = deep_results + brief_results
+        all_selected = headline_results + deep_results
         
         # 按领域统计数量
         domain_stats = {}
         for result in all_selected:
             domain = result.get("primary_category", "未知领域") or "未知领域"
             if domain not in domain_stats:
-                domain_stats[domain] = {"深度解读": 0, "简要提及": 0, "总计": 0}
+                domain_stats[domain] = {"头条推荐": 0, "深度解读": 0, "总计": 0}
             
             recommendation_tier = result.get("recommendation_tier", "")
-            if recommendation_tier == "深度解读":
+            if recommendation_tier == "头条推荐":
+                domain_stats[domain]["头条推荐"] += 1
+            elif recommendation_tier == "深度解读":
                 domain_stats[domain]["深度解读"] += 1
-            elif recommendation_tier == "简要提及":
-                domain_stats[domain]["简要提及"] += 1
             domain_stats[domain]["总计"] += 1
         
         # 添加领域统计表格
         if domain_stats:
             md += "## 📈 各领域文章分布\n\n"
-            md += "| 领域 | 深度解读 | 简要提及 | 总计 |\n"
+            md += "| 领域 | 头条推荐 | 深度解读 | 总计 |\n"
             md += "|------|----------|----------|------|\n"
             
             # 按总数排序
             for domain, stats in sorted(domain_stats.items(), key=lambda x: x[1]["总计"], reverse=True):
-                md += f"| {domain} | {stats['深度解读']} | {stats['简要提及']} | {stats['总计']} |\n"
+                md += f"| {domain} | {stats['头条推荐']} | {stats['深度解读']} | {stats['总计']} |\n"
             
-            md += f"\n**合计**: 深度解读 {sum(s['深度解读'] for s in domain_stats.values())} 篇，简要提及 {sum(s['简要提及'] for s in domain_stats.values())} 篇，共 {sum(s['总计'] for s in domain_stats.values())} 篇\n\n"
+            md += f"\n**合计**: 头条推荐 {sum(s['头条推荐'] for s in domain_stats.values())} 篇，深度解读 {sum(s['深度解读'] for s in domain_stats.values())} 篇，共 {sum(s['总计'] for s in domain_stats.values())} 篇\n\n"
             md += "---\n\n"
         
         # 头条推荐 - 按分数从高到低排序
@@ -177,13 +178,13 @@ class ReportGenerator:
                 md += self._format_paper_entry(result, detailed=True, show_recommendation=True)
             md += "---\n\n"
         
-        # 深度解读和简要提及合并 - 按领域分类，再按分数排序
-        if all_selected:
+        # 深度解读 - 按领域分类，再按分数排序
+        if deep_results:
             md += "## 📚 精选文献（按领域分类）\n\n"
             
             # 按领域分组
             domain_groups = {}
-            for result in all_selected:
+            for result in deep_results:
                 domain = result.get("primary_category", result.get("domain", "跨界")) or "跨界"
                 if domain not in domain_groups:
                     domain_groups[domain] = []
@@ -192,18 +193,20 @@ class ReportGenerator:
             # 对每个领域内的文章按分数排序（高分在前）
             for domain, articles in sorted(domain_groups.items()):
                 sorted_articles = sorted(articles, key=lambda x: x.get("total_score", 0), reverse=True)
-                sorted_articles = [article for article in sorted_articles if article.get("total_score", 0) >= 6.0]
                 md += f"### {domain}\n\n"
                 for result in sorted_articles:
-                    # 根据推荐等级决定详细程度
-                    is_deep = result.get("recommendation_tier") == "深度解读"
-                    md += self._format_paper_entry(result, detailed=is_deep, show_recommendation=is_deep)
+                    md += self._format_paper_entry(result, detailed=True, show_recommendation=True)
             md += "---\n\n"
         
-        # 域外高影响
-        if tiers["域外高影响"]:
+        # 域外高影响 - 只保留 8 分以上的跨界文章
+        crossover_results = [
+            r for r in results
+            if r.get('domain') == '域外高影响' and r.get('total_score', 0) >= 8.0
+        ]
+        if crossover_results:
             md += "## 🌉 跨界高影响（域外精选）\n\n"
-            for result in tiers["域外高影响"]:
+            sorted_crossover = sorted(crossover_results, key=lambda x: x.get("total_score", 0), reverse=True)
+            for result in sorted_crossover:
                 md += self._format_paper_entry(result, detailed=True, crossover=True)
             md += "---\n\n"
         
@@ -300,7 +303,7 @@ class ReportGenerator:
             
             md += "\n\n"
             
-            if crossover and domain == "\n\n域外高影响":
+            if crossover and domain == "域外高影响":
                 md += "\n\n**跨界价值**: 该研究虽非神经科学领域，但可能为神经科学带来重要方法学或理论启发。\n\n"
         else:
             md += f"\n\n**评分**: {total_score:.1f}/10 | **要点**: {feature_angle}"

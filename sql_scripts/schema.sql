@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS authors (
     orcid TEXT UNIQUE,
     h_index INTEGER,
     citations INTEGER,
+    works_count INTEGER,
+    i10_index INTEGER,
     is_senior_researcher BOOLEAN
 );
 

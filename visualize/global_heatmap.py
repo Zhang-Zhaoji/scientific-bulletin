@@ -8,7 +8,12 @@ from collections import Counter
 import jsonlines
 
 from dbapi import DBAPI
-from snapshot_helper import take_screenshot
+
+try:
+    from snapshot_helper import take_screenshot
+except Exception:
+    def take_screenshot(*args, **kwargs):
+        print("  [SKIP] Selenium not available, skipping screenshot")
 
 HEATMAP_ROOT_DIR = '../Imgs/visulize_img/globalHeatmap'
 PIE_ROOT_DIR = '../Imgs/visulize_img/countryPie'
