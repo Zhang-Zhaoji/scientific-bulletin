@@ -70,13 +70,13 @@ CELL_JOURNALS = {
     #     'pubmed_name': 'Cell Reports',
     #     'europepmc_journal': 'Cell Reports',
     # },
-    'iscience': {
-        'name': 'iScience',
-        'url': 'https://www.cell.com/iscience/current',
-        'selector': '.toc__item h3',
-        'pubmed_name': 'iScience',
-        'europepmc_journal': 'iScience',
-    },
+    # 'iscience': {
+    #     'name': 'iScience',
+    #     'url': 'https://www.cell.com/iscience/current',
+    #     'selector': '.toc__item h3',
+    #     'pubmed_name': 'iScience',
+    #     'europepmc_journal': 'iScience',
+    # },
     # 'cell-systems': {
     #     'name': 'Cell Systems',
     #     'url': 'https://www.cell.com/cell-systems/current',

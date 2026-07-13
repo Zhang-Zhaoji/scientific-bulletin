@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="../vendor/echarts.min.js"></script>
+            <script type="text/javascript" src="../vendor/world.js"></script>
+
+    
+</head>
+<body >
+    <div id="8e3cfe81559b405fbc951cb98620fcc4" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+        var chart_8e3cfe81559b405fbc951cb98620fcc4 = echarts.init(
+            document.getElementById('8e3cfe81559b405fbc951cb98620fcc4'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_8e3cfe81559b405fbc951cb98620fcc4 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "series": [
+        {
+            "type": "map",
+            "label": {
+                "show": false,
+                "margin": 8,
+                "richInheritPlainLabel": true,
+                "valueAnimation": false
+            },
+            "map": "world",
+            "data": [
+                {
+                    "name": "China",
+                    "value": 263
+                },
+                {
+                    "name": "United States",
+                    "value": 143
+                },
+                {
+                    "name": "United Kingdom",
+                    "value": 51
+                },
+                {
+                    "name": "Germany",
+                    "value": 32
+                },
+                {
+                    "name": "Australia",
+                    "value": 22
+                },
+                {
+                    "name": "Italy",
+                    "value": 21
+                },
+                {
+                    "name": "France",
+                    "value": 21
+                },
+                {
+                    "name": "Japan",
+                    "value": 19
+                },
+                {
+                    "name": "Sweden",
+                    "value": 14
+                },
+                {
+                    "name": "Canada",
+                    "value": 13
+                },
+                {
+                    "name": "Netherlands",
+                    "value": 13
+                },
+                {
+                    "name": "Spain",
+                    "value": 12
+                },
+                {
+                    "name": "Switzerland",
+                    "value": 9
+                },
+                {
+                    "name": "Israel",
+                    "value": 8
+                },
+                {
+                    "name": "Denmark",
+                    "value": 7
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": true,
+            "preserveAspect": false,
+            "clip": false,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10,
+            "triggerEvent": false
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "displayTransition": true,
+        "textStyle": {
+            "fontSize": 14,
+            "richInheritPlainLabel": true
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Publication Heatmap",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 0,
+        "max": 263,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_8e3cfe81559b405fbc951cb98620fcc4.setOption(option_8e3cfe81559b405fbc951cb98620fcc4);
+    </script>
+</body>
+</html>
