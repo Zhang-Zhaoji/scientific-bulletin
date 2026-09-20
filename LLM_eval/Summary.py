@@ -460,13 +460,13 @@ Examples:
     print(f"- 已过滤: {report['statistics']['rejected']}")
     print(f"- 平均评分: {report['statistics']['avg_score']:.2f}")
     
-    title = generate_title_with_llm(report['markdown_path'])
-
-    
-    with open(generator.report_path, 'r+', encoding="utf-8") as f:
-        content = f.read()
-        f.seek(0)
-        f.write(title + "\n\n" + content)
+    if args.title:
+        title = generate_title_with_llm(report['markdown_path'])
+        if title:
+            with open(generator.report_path, 'r+', encoding="utf-8") as f:
+                content = f.read()
+                f.seek(0)
+                f.write(title + "\n\n" + content)
     
 
 if __name__ == "__main__":

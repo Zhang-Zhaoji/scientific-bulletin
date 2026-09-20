@@ -4,6 +4,7 @@ import datetime
 import os
 import re
 from collections import Counter
+from pathlib import Path
 
 import jsonlines
 
@@ -14,6 +15,22 @@ try:
 except Exception:
     def take_screenshot(*args, **kwargs):
         print("  [SKIP] Selenium not available, skipping screenshot")
+
+# 本地 echarts/地图资源（assets.pyecharts.org CDN 可能不可达，改为引用本地文件）
+_ASSET_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets')
+_ECHARTS_LOCAL = Path(_ASSET_DIR, 'echarts.min.js').as_uri()
+_WORLD_MAP_LOCAL = Path(_ASSET_DIR, 'maps', 'world.js').as_uri()
+
+
+def _use_local_assets(html_path: str):
+    """将生成的 HTML 中的 CDN 引用替换为本地资源，避免网络不可达导致截图超时"""
+    with open(html_path, encoding='utf-8') as f:
+        html = f.read()
+    html = html.replace('https://assets.pyecharts.org/assets/v6/echarts.min.js', _ECHARTS_LOCAL)
+    html = html.replace('https://assets.pyecharts.org/assets/v6/maps/world.js', _WORLD_MAP_LOCAL)
+    with open(html_path, 'w', encoding='utf-8') as f:
+        f.write(html)
+
 
 HEATMAP_ROOT_DIR = '../Imgs/visulize_img/globalHeatmap'
 PIE_ROOT_DIR = '../Imgs/visulize_img/countryPie'
@@ -74,6 +91,7 @@ class WorldHeatmap:
         date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.PIE_ROOT_DIR, f"{date}_pie.html")
         pie.render(output_path)
+        _use_local_assets(output_path)
         take_screenshot(output_path, output_path.replace(".html", ".png"))
 
     def get_jsonl_country_data(self, jsonl_path: str) -> list[tuple[str, int]]:
@@ -156,6 +174,7 @@ class WorldHeatmap:
         date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}_heatmap.html")
         world_map.render(output_path)
+        _use_local_assets(output_path)
         take_screenshot(output_path, output_path.replace(".html", ".png"))
 
 

@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-06",
+  "sources": {
+    "arxiv": {
+      "count": 47,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "biorxiv": {
+      "count": 30,
+      "date_range": {
+        "min": "28 Aug 2026",
+        "max": "28 Aug 2026"
+      }
+    },
+    "nature": {
+      "count": 37,
+      "date_range": {
+        "min": "01 Sept 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "science": {
+      "count": 35,
+      "date_range": {
+        "min": "03 Sep 2026",
+        "max": "03 Sep 2026"
+      }
+    },
+    "cell": {
+      "count": 57,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "jneurophys": {
+      "count": 4,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "02 Sep 2026"
+      }
+    },
+    "jneurosci": {
+      "count": 29,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "jcogn": {
+      "count": 13,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "01 Sep 2026"
+      }
+    },
+    "jvis": {
+      "count": 5,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "01 Sep 2026"
+      }
+    },
+    "pnas": {
+      "count": 82,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "natcomm": {
+      "count": 82,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    },
+    "brain": {
+      "count": 2,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "05 Sep 2026"
+      }
+    },
+    "sciadv": {
+      "count": 87,
+      "date_range": {
+        "min": "",
+        "max": "04 Sep 2026"
+      }
+    },
+    "elife": {
+      "count": 19,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "04 Sep 2026"
+      }
+    },
+    "plos": {
+      "count": 78,
+      "date_range": {
+        "min": "01 Sep 2026",
+        "max": "31 Aug 2026"
+      }
+    }
+  }
+}

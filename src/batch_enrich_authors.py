@@ -117,21 +117,20 @@ def batch_enrich(input_file: str, output_file: str = None, max_workers: int = 5,
     print("\n" + "=" * 80)
     print("DATABASE STATISTICS")
     print("=" * 80)
-    print(f"Cached authors: {len(db.authors)}")
-    
-    if db.authors:
+    total_authors = db.conn.execute("SELECT COUNT(*) FROM authors").fetchone()[0]
+    print(f"Cached authors: {total_authors}")
+
+    top_authors = db.conn.execute(
+        "SELECT name, h_index, citations FROM authors "
+        "WHERE h_index >= 25 ORDER BY h_index DESC LIMIT 15"
+    ).fetchall()
+
+    if top_authors:
         print("\nTop senior researchers:")
-        sorted_authors = sorted(
-            [(name, data) for name, data in db.authors.items() if (data.get('h_index') or 0) >= 25],
-            key=lambda x: x[1].get('h_index') or 0,
-            reverse=True
-        )[:15]
-        
-        for name, data in sorted_authors:
-            h_idx = data.get('h_index', 'N/A')
-            cites = data.get('citations', 'N/A')
-            warn = " [!]" if data.get('warning') else ""
-            print(f"  - {name:<30} h={h_idx:<4} cites={cites}{warn}")
+        for name, h_idx, cites in top_authors:
+            h_str = h_idx if h_idx is not None else 'N/A'
+            c_str = cites if cites is not None else 'N/A'
+            print(f"  - {name:<30} h={h_str:<4} cites={c_str}")
     
     print(f"\nOutput saved to: {output_file}")
     return output_file

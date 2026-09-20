@@ -1,0 +1,107 @@
+{
+  "date": "2026-08-02",
+  "sources": {
+    "arxiv": {
+      "count": 46,
+      "date_range": {
+        "min": "26 Jul 2026",
+        "max": "30 Jul 2026"
+      }
+    },
+    "biorxiv": {
+      "count": 27,
+      "date_range": {
+        "min": "25 Jul 2026",
+        "max": "26 Jul 2026"
+      }
+    },
+    "nature": {
+      "count": 43,
+      "date_range": {
+        "min": "27 Jul 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "science": {
+      "count": 40,
+      "date_range": {
+        "min": "30 Jul 2026",
+        "max": "30 Jul 2026"
+      }
+    },
+    "cell": {
+      "count": 85,
+      "date_range": {
+        "min": "02 Aug 2026",
+        "max": "02 Aug 2026"
+      }
+    },
+    "jneurophys": {
+      "count": 18,
+      "date_range": {
+        "min": "01 Aug 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "jneurosci": {
+      "count": 28,
+      "date_range": {
+        "min": "27 Jul 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "jcogn": {
+      "count": 12,
+      "date_range": {
+        "min": "01 Aug 2026",
+        "max": "01 Aug 2026"
+      }
+    },
+    "jvis": {
+      "count": 0,
+      "date_range": null
+    },
+    "pnas": {
+      "count": 83,
+      "date_range": {
+        "min": "27 Jul 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "natcomm": {
+      "count": 85,
+      "date_range": {
+        "min": "01 Aug 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "brain": {
+      "count": 11,
+      "date_range": {
+        "min": "01 Aug 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "sciadv": {
+      "count": 91,
+      "date_range": {
+        "min": "",
+        "max": "31 Jul 2026"
+      }
+    },
+    "elife": {
+      "count": 21,
+      "date_range": {
+        "min": "27 Jul 2026",
+        "max": "31 Jul 2026"
+      }
+    },
+    "plos": {
+      "count": 85,
+      "date_range": {
+        "min": "27 Jul 2026",
+        "max": "31 Jul 2026"
+      }
+    }
+  }
+}

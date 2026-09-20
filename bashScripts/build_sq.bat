@@ -18,6 +18,10 @@ call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_20
 call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-20_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260620_181803.json"
 call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-06-27_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260627_023238.json"
 call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-07-04_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260705_010755.json"
+call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-07-11_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260711_181829.json"
+call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-07-18_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260718_120221.json"
+call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-07-25_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260725_212418.json"
+call :run python ./sql_scripts/build_sqlite.py --jsonl "./getfiles/all_papers_2026-08-02_enriched_ror_refined.jsonl" --LLM_results "./LLM_Results/LLM_results_20260802_163549.json"
 exit /b 0
 
 :run

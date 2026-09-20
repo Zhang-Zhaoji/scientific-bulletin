@@ -1,0 +1,432 @@
+{
+  "limit_characters_per_part": 100000,
+  "character_counts": "Unicode code points and UTF-16 code units; both are capped at 100,000",
+  "issues": [
+    {
+      "date": "20260726",
+      "issue": "020",
+      "source": "LLM_Results/report_20260726_2350.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-07-25.json",
+        "selected": 238,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 131,
+          "简要提及": 107,
+          "跨界启发": 0,
+          "已过滤": 320
+        },
+        "top_sources": [
+          [
+            "Nature Communications",
+            90
+          ],
+          [
+            "Science Advances",
+            81
+          ],
+          [
+            "Cell",
+            79
+          ],
+          [
+            "PLOS",
+            78
+          ],
+          [
+            "PNAS",
+            60
+          ]
+        ],
+        "source_total_un_deduplicated": 602
+      },
+      "image": "assets/stats_20260726.png",
+      "parts": [
+        {
+          "file": "20260726_part01.md",
+          "characters": 87909,
+          "utf16_code_units": 87915
+        },
+        {
+          "file": "20260726_part02.md",
+          "characters": 63719,
+          "utf16_code_units": 63719
+        }
+      ]
+    },
+    {
+      "date": "20260802",
+      "issue": "021",
+      "source": "LLM_Results/report_20260802_1723.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-08-02.json",
+        "selected": 331,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 191,
+          "简要提及": 140,
+          "跨界启发": 0,
+          "已过滤": 321
+        },
+        "top_sources": [
+          [
+            "Science Advances",
+            91
+          ],
+          [
+            "Cell",
+            85
+          ],
+          [
+            "Nature Communications",
+            85
+          ],
+          [
+            "PLOS",
+            85
+          ],
+          [
+            "PNAS",
+            83
+          ]
+        ],
+        "source_total_un_deduplicated": 675
+      },
+      "image": "assets/stats_20260802.png",
+      "parts": [
+        {
+          "file": "20260802_part01.md",
+          "characters": 87780,
+          "utf16_code_units": 87786
+        },
+        {
+          "file": "20260802_part02.md",
+          "characters": 87995,
+          "utf16_code_units": 87995
+        },
+        {
+          "file": "20260802_part03.md",
+          "characters": 61647,
+          "utf16_code_units": 61647
+        }
+      ]
+    },
+    {
+      "date": "20260809",
+      "issue": "022",
+      "source": "LLM_Results/report_20260809_summary.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-08-08.json",
+        "selected": 236,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 132,
+          "简要提及": 104,
+          "跨界启发": 0,
+          "已过滤": 201
+        },
+        "top_sources": [
+          [
+            "Science Advances",
+            87
+          ],
+          [
+            "Cell",
+            68
+          ],
+          [
+            "Nature Communications",
+            68
+          ],
+          [
+            "arXiv",
+            54
+          ],
+          [
+            "Nature",
+            38
+          ]
+        ],
+        "source_total_un_deduplicated": 459
+      },
+      "image": "assets/stats_20260809.png",
+      "parts": [
+        {
+          "file": "20260809_part01.md",
+          "characters": 88009,
+          "utf16_code_units": 88015
+        },
+        {
+          "file": "20260809_part02.md",
+          "characters": 71262,
+          "utf16_code_units": 71262
+        }
+      ]
+    },
+    {
+      "date": "20260817",
+      "issue": "023",
+      "source": "LLM_Results/report_20260817_0139.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-08-17.json",
+        "selected": 233,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 130,
+          "简要提及": 103,
+          "跨界启发": 0,
+          "已过滤": 270
+        },
+        "top_sources": [
+          [
+            "Science Advances",
+            86
+          ],
+          [
+            "PLOS",
+            81
+          ],
+          [
+            "Nature Communications",
+            72
+          ],
+          [
+            "Cell",
+            60
+          ],
+          [
+            "PNAS",
+            57
+          ]
+        ],
+        "source_total_un_deduplicated": 529
+      },
+      "image": "assets/stats_20260817.png",
+      "parts": [
+        {
+          "file": "20260817_part01.md",
+          "characters": 87690,
+          "utf16_code_units": 87694
+        },
+        {
+          "file": "20260817_part02.md",
+          "characters": 76742,
+          "utf16_code_units": 76742
+        }
+      ]
+    },
+    {
+      "date": "20260823",
+      "issue": "024",
+      "source": "LLM_Results/report_20260823_1005.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-08-22.json",
+        "selected": 255,
+        "report_counts": {
+          "头条推荐": 1,
+          "深度解读": 134,
+          "简要提及": 120,
+          "跨界启发": 0,
+          "已过滤": 289
+        },
+        "top_sources": [
+          [
+            "Science Advances",
+            92
+          ],
+          [
+            "PNAS",
+            89
+          ],
+          [
+            "PLOS",
+            78
+          ],
+          [
+            "Cell",
+            73
+          ],
+          [
+            "Nature Communications",
+            50
+          ]
+        ],
+        "source_total_un_deduplicated": 583
+      },
+      "image": "assets/stats_20260823.png",
+      "parts": [
+        {
+          "file": "20260823_part01.md",
+          "characters": 87838,
+          "utf16_code_units": 87845
+        },
+        {
+          "file": "20260823_part02.md",
+          "characters": 86662,
+          "utf16_code_units": 86662
+        }
+      ]
+    },
+    {
+      "date": "20260829",
+      "issue": "025",
+      "source": "LLM_Results/report_20260829_summary.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-08-29.json",
+        "selected": 156,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 87,
+          "简要提及": 69,
+          "跨界启发": 0,
+          "已过滤": 128
+        },
+        "top_sources": [
+          [
+            "PNAS",
+            86
+          ],
+          [
+            "Nature Communications",
+            76
+          ],
+          [
+            "Cell",
+            63
+          ],
+          [
+            "Nature",
+            37
+          ],
+          [
+            "Science",
+            35
+          ]
+        ],
+        "source_total_un_deduplicated": 361
+      },
+      "image": "assets/stats_20260829.png",
+      "parts": [
+        {
+          "file": "20260829_part01.md",
+          "characters": 88064,
+          "utf16_code_units": 88070
+        },
+        {
+          "file": "20260829_part02.md",
+          "characters": 13135,
+          "utf16_code_units": 13135
+        }
+      ]
+    },
+    {
+      "date": "20260906",
+      "issue": "026",
+      "source": "LLM_Results/report_20260906_summary.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-09-06.json",
+        "selected": 273,
+        "report_counts": {
+          "头条推荐": 2,
+          "深度解读": 153,
+          "简要提及": 118,
+          "跨界启发": 0,
+          "已过滤": 318
+        },
+        "top_sources": [
+          [
+            "Science Advances",
+            87
+          ],
+          [
+            "Nature Communications",
+            82
+          ],
+          [
+            "PNAS",
+            82
+          ],
+          [
+            "PLOS",
+            78
+          ],
+          [
+            "Cell",
+            57
+          ]
+        ],
+        "source_total_un_deduplicated": 607
+      },
+      "image": "assets/stats_20260906.png",
+      "parts": [
+        {
+          "file": "20260906_part01.md",
+          "characters": 87871,
+          "utf16_code_units": 87878
+        },
+        {
+          "file": "20260906_part02.md",
+          "characters": 87641,
+          "utf16_code_units": 87641
+        },
+        {
+          "file": "20260906_part03.md",
+          "characters": 12598,
+          "utf16_code_units": 12598
+        }
+      ]
+    },
+    {
+      "date": "20260913",
+      "issue": "027",
+      "source": "LLM_Results/report_20260913_summary.md",
+      "statistics": {
+        "summary_file": "getfiles/summary_2026-09-13.json",
+        "selected": 237,
+        "report_counts": {
+          "头条推荐": 0,
+          "深度解读": 106,
+          "简要提及": 131,
+          "跨界启发": 0,
+          "已过滤": 272
+        },
+        "top_sources": [
+          [
+            "Cell",
+            82
+          ],
+          [
+            "PNAS",
+            81
+          ],
+          [
+            "Nature Communications",
+            76
+          ],
+          [
+            "PLOS",
+            76
+          ],
+          [
+            "arXiv",
+            45
+          ]
+        ],
+        "source_total_un_deduplicated": 552
+      },
+      "image": "assets/stats_20260913.png",
+      "parts": [
+        {
+          "file": "20260913_part01.md",
+          "characters": 88037,
+          "utf16_code_units": 88041
+        },
+        {
+          "file": "20260913_part02.md",
+          "characters": 68991,
+          "utf16_code_units": 68991
+        }
+      ]
+    }
+  ]
+}
