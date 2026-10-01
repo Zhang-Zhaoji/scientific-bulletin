@@ -212,7 +212,8 @@ Built-in visualization module for analyzing research trends:
 - **Institution Ranking**: Generate top institution tables for the report period
 - **Report Statistics Text**: Insert country, institution and score summaries into generated Markdown reports
 - **Output Formats**: Static PNG images, interactive HTML charts
-- **Weekly Country View**: `visualize/global_heatmap.py --jsonl ... --date ...` can render a country heatmap and country distribution pie chart directly from a weekly JSONL file
+- **Weekly Country View**: `visualize/global_heatmap.py --jsonl ... --date ...` renders a country heatmap and country distribution pie chart from weekly JSONL files. It combines `countries` with author ROR countries and counts each paper once per country; international collaborations count in multiple countries. Charts show the number of papers with geographic information and explicitly label missing coverage. Matching `.data.json` files record the source and counts. HTML uses relative, bundled ECharts assets and resizes inside report frames.
+- Rebuild all weekly charts with `python scripts/visualize_pipeline.py --only weekly --overwrite`, then rebuild Pages with `python scripts/build_pages.py --input-dir LLM_Results --output-dir docs`. Charts retain the existing heatmap and pie templates.
 - All visualizations are automatically generated as part of the weekly pipeline
 
 ---

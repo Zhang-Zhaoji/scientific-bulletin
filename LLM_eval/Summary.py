@@ -6,6 +6,7 @@ from datetime import datetime
 import argparse
 import os
 import sys
+from collections import Counter
 
 # 添加visualize目录到路径，方便导入统计模块
 sys.path.append(os.path.join(os.path.dirname(__file__), '../visualize'))
@@ -20,7 +21,7 @@ class ReportGenerator:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
     
-    def generate_from_json(self, json_file: str) -> Dict:
+    def generate_from_json(self, json_file: str, source_statistics: bool = False) -> Dict:
         """从JSON文件生成报告"""
         # 读取JSON文件
         with open(json_file, 'r', encoding='utf-8') as f:
@@ -65,14 +66,26 @@ class ReportGenerator:
         
         # 生成统计信息文字和可视化
         try:
-            db_api = DBAPI()
-            stats_vis = StatisticsVisualizer(db_api)
-            
-            # 获取国家统计
-            country_stats = db_api.get_country_article_count(start_date, end_date)
-            
-            # 获取机构TOP 10
-            institution_stats = stats_vis.get_institution_topn(start_date, end_date, top_n=10)
+            if source_statistics:
+                stats_vis = StatisticsVisualizer(None)
+                country_counts, institution_counts = Counter(), Counter()
+                for result in results:
+                    if result.get('domain') == '域外局限':
+                        continue
+                    countries, institutions = set(), set()
+                    for author in result.get('paper', {}).get('raw_data', {}).get('author_details', []):
+                        for field, target in [('ror_country', countries), ('ror_normalized_affiliation', institutions)]:
+                            values = author.get(field, [])
+                            target.update([values] if isinstance(values, str) else values)
+                    country_counts.update(countries)
+                    institution_counts.update(institutions)
+                country_stats = country_counts.most_common(10)
+                institution_stats = institution_counts.most_common(10)
+            else:
+                db_api = DBAPI()
+                stats_vis = StatisticsVisualizer(db_api)
+                country_stats = db_api.get_country_article_count(start_date, end_date)
+                institution_stats = stats_vis.get_institution_topn(start_date, end_date, top_n=10)
             
             # 获取评分分布
             score_stats = stats_vis.get_score_distribution(results)
@@ -83,6 +96,9 @@ class ReportGenerator:
             
             # 生成统计文字
             statistics_text = stats_vis.get_statistics_text(country_stats[:10], institution_stats, score_stats)
+            if source_statistics:
+                statistics_text = '> 地区与机构按本期原始来源及 ROR 匹配信息统计，仅覆盖取得机构信息的论文；跨地区合作可重复计入，不作为完整机构排名。评分分布不含“域外局限”文章。\n\n' + statistics_text
+                statistics_text = statistics_text.replace(f"**总计**: {sum(count for _, count in country_stats)} 篇文章", f"**地区计次合计**: {sum(count for _, count in country_stats)} 次")
         except Exception as e:
             print(f"[WARNING] 生成统计图表失败: {e}")
             statistics_text = ""
@@ -226,6 +242,8 @@ class ReportGenerator:
         date = result.get("paper", {}).get("date", "未知日期")
         primary_category = result.get("primary_category", "跨界")
         secondary_category = result.get("secondary_category", None)
+        if isinstance(secondary_category, list):
+            secondary_category = '、'.join(category for category in secondary_category if category != primary_category)
         cross_tags = result.get("cross_tags", [])
         total_score = result.get("total_score", 0)
         feature_angle = result.get("feature_angle", "")
@@ -248,6 +266,8 @@ class ReportGenerator:
         md = f"""### {title}"""
         if title_zh:
             md += f"\n\n**中文标题**: {title_zh}"
+        if result.get('input_quality_warning'):
+            md += "\n\n**输入资料不足**：原始摘要未取得，当前评估仅供初筛，推送前需核对原文。"
         md += "\n\n"
         
         # 作者信息
@@ -272,6 +292,11 @@ class ReportGenerator:
         
         # 基础信息
         md += f"\n\n**期刊**: {journal} | **发表日期**: {date}"
+        url = paper_raw.get('url', '')
+        if url.startswith('/') and 'nature' in journal.lower():
+            url = 'https://www.nature.com' + url
+        if url.startswith(('https://', 'http://')):
+            md += f"\n\n[原文链接]({url})"
         
         # 知名学者信息
         if senior_authors:
@@ -422,6 +447,8 @@ Examples:
                         help='Output directory for markdown report (default: ./LLM_Results)')
     parser.add_argument('--title', action='store_true',
                         help='Generate title using LLM (requires API)')
+    parser.add_argument('--source-statistics', action='store_true',
+                        help='Compute institution/country statistics from this input JSON, without historical database queries')
     
     args = parser.parse_args()
     
@@ -444,7 +471,7 @@ Examples:
     
     # 生成报告
     print(f"\n生成报告 from: {result_file}")
-    report = generator.generate_from_json(str(result_file))
+    report = generator.generate_from_json(str(result_file), source_statistics=args.source_statistics)
     
     # 打印统计信息
     print("\n" + "=" * 60)

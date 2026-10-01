@@ -35,6 +35,7 @@ from sql_scripts.sqlfuncs import init_db, search_item, insert_item, search_or_in
 
 # HTTP Headers for API requests
 HEADERS = {'User-Agent': 'mailto:zhang-zj@stu.pku.edu.cn'}
+OPENALEX_RATE_LIMITED = threading.Event()
 
 # Reusable session for NCBI E-utilities to reduce connection resets
 NCBI_SESSION = requests.Session()
@@ -342,8 +343,14 @@ def get_priority_authors(authors: List[str]) -> List[Tuple[int, str]]:
 def fetch_with_retry(url: str, params: Dict, headers: Dict, max_retries: int = 3, delay: float = 1.0) -> Optional[Dict]:
     """带重试机制的 HTTP GET 请求"""
     for attempt in range(max_retries):
+        if 'api.openalex.org/' in url and OPENALEX_RATE_LIMITED.is_set():
+            return None
         try:
             response = requests.get(url, params=params, headers=headers, timeout=10)
+            if response.status_code == 429 and 'api.openalex.org/' in url and attempt == max_retries - 1:
+                OPENALEX_RATE_LIMITED.set()
+                print('[WARN] OpenAlex remains rate limited; using cached metrics and continuing affiliation enrichment.')
+                return None
             response.raise_for_status()
             return response.json()
         except requests.exceptions.Timeout:

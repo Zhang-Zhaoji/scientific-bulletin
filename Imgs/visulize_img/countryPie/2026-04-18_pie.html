@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="file:///D:/working/scientific%20bulletin/visualize/assets/echarts.min.js"></script>
+                <script type="text/javascript" src="../vendor/echarts.min.js"></script>
 
     
-</head>
-<body >
-    <div id="b788ac4c7eda4b3a9a81b2250479e1b1" class="chart-container" style="width:900px; height:500px; "></div>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;font:14px system-ui,"Microsoft YaHei",sans-serif;background:#fff;color:#182b3a}header{height:64px;box-sizing:border-box;padding:12px 16px}header strong,header span{display:block}header strong{font-size:17px}header span{font-size:12px;color:#627383;margin-top:4px}.chart-container{width:100%!important;height:calc(100vh - 64px)!important}</style></head>
+<body><header><strong>Country Publication Distribution</strong><span>日期：2026-04-18 · 取得地区信息 158/377 篇</span></header>
+    <div id="9b2a4b32643c4c78bec57a2a66150f6b" class="chart-container" style="width:100%; height:100%; "></div>
     <script>
-        var chart_b788ac4c7eda4b3a9a81b2250479e1b1 = echarts.init(
-            document.getElementById('b788ac4c7eda4b3a9a81b2250479e1b1'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_b788ac4c7eda4b3a9a81b2250479e1b1 = {
+        var chart_9b2a4b32643c4c78bec57a2a66150f6b = echarts.init(
+            document.getElementById('9b2a4b32643c4c78bec57a2a66150f6b'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_9b2a4b32643c4c78bec57a2a66150f6b = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -76,24 +76,24 @@
                     "value": 9
                 },
                 {
+                    "name": "Switzerland",
+                    "value": 8
+                },
+                {
                     "name": "Netherlands",
                     "value": 8
                 },
                 {
-                    "name": "Switzerland",
-                    "value": 6
-                },
-                {
-                    "name": "Spain",
-                    "value": 6
+                    "name": "Belgium",
+                    "value": 8
                 },
                 {
                     "name": "Japan",
-                    "value": 6
+                    "value": 7
                 },
                 {
                     "name": "\u5176\u4ed6",
-                    "value": 18
+                    "value": 55
                 }
             ],
             "radius": [
@@ -137,9 +137,9 @@
                 "Germany",
                 "Canada",
                 "France",
-                "Netherlands",
                 "Switzerland",
-                "Spain",
+                "Netherlands",
+                "Belgium",
                 "Japan",
                 "\u5176\u4ed6"
             ],
@@ -196,7 +196,6 @@
     "title": [
         {
             "show": true,
-            "text": "Country Publication Distribution",
             "target": "blank",
             "subtarget": "blank",
             "padding": 5,
@@ -207,7 +206,10 @@
         }
     ]
 };
-        chart_b788ac4c7eda4b3a9a81b2250479e1b1.setOption(option_b788ac4c7eda4b3a9a81b2250479e1b1);
+        chart_9b2a4b32643c4c78bec57a2a66150f6b.setOption(option_9b2a4b32643c4c78bec57a2a66150f6b);
+            window.addEventListener('resize', function(){
+                chart_9b2a4b32643c4c78bec57a2a66150f6b.resize();
+            })
     </script>
-</body>
+<script>window.addEventListener("resize",function(){document.querySelectorAll(".chart-container").forEach(function(el){var c=echarts.getInstanceByDom(el);if(c)c.resize();})});</script></body>
 </html>

@@ -85,7 +85,7 @@ def extract_text(base_url: str, days_back: int = DEFAULT_DAYS_BACK, max_pages: i
             author_elements = article.find_all('li', itemprop='creator')
             authors = [author.text.strip() for author in author_elements] if author_elements else ['No author']
             date_element = article.find('time', itemprop='datePublished')
-            date = date_element.text.strip() if date_element else 'No date'
+            date = (date_element.get('datetime') or date_element.text.strip()) if date_element else 'No date'
             url_element = article.find('a', class_='c-card__link u-link-inherit')
             url = url_element['href'] if url_element else 'No url'
             article_type_element = article.find('span', class_='c-meta__type')

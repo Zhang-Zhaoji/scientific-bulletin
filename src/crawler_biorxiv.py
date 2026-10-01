@@ -76,15 +76,12 @@ def fetch_biorxiv_papers_by_date_range(
     
     Note: Category filtering is done via query parameter ?category=xxx
     """
-    url = f"{BIORXIV_API_URL}/details/biorxiv/{date_from}/{date_to}"
+    url = f"{BIORXIV_API_URL}/details/biorxiv/{date_from}/{date_to}/{cursor or 0}"
     
     params = {
         "format": "json",
         "limit": min(limit, 100)
     }
-    
-    if cursor:
-        params["cursor"] = cursor
     
     if category:
         params["category"] = category
@@ -211,9 +208,10 @@ def fetch_recent_biorxiv_papers(
         # Get next cursor from messages
         next_cursor = None
         if messages:
-            next_cursor = messages[0].get('cursor', None)
-            count = messages[0].get('count', 0)
-            total = messages[0].get('total', 0)
+            # The API returns the current offset, not a next-page token.
+            count = len(papers_data)
+            next_cursor = int(cursor or 0) + count
+            total = int(messages[0].get('total', 0))
             status = messages[0].get('status', 'unknown')
         else:
             count = 0
@@ -234,7 +232,7 @@ def fetch_recent_biorxiv_papers(
         print(f"  Fetched {fetched_count}/{total} papers")
         
         # Check if there are more pages
-        if not next_cursor or next_cursor == cursor:
+        if next_cursor >= total:
             break
         
         cursor = next_cursor

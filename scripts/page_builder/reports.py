@@ -54,6 +54,11 @@ def copy_asset(source_path: Path, output_dir: Path, asset_subdir: str) -> str:
 
 def localize_chart_html(chart_path: Path) -> None:
     text = chart_path.read_text(encoding="utf-8")
+    # Historical charts used absolute file:// scripts, which cannot load on GitHub Pages.
+    text = re.sub(r'(?:file:///[^"\s]+/|https://assets\.pyecharts\.org/assets/v\d+/)echarts\.min\.js',
+                  '../vendor/echarts.min.js', text)
+    text = re.sub(r'(?:file:///[^"\s]+/|https://assets\.pyecharts\.org/assets/v\d+/maps/)world\.js',
+                  '../vendor/world.js', text)
     text = text.replace(
         "https://assets.pyecharts.org/assets/v6/echarts.min.js",
         "../vendor/echarts.min.js",
@@ -70,9 +75,15 @@ def first_existing(paths: list[Path]) -> Path | None:
 
 
 def assign_covers(reports: list[Path]) -> dict[Path, Path]:
-    """Assign cover images to reports by dictionary order (filename sort)."""
-    covers = sorted(Path("Imgs").glob("*.png"), key=lambda p: p.name)
-    return dict(zip(reports, covers))
+    """Match covers by report date, with a previous-day fallback for legacy issues."""
+    assigned = {}
+    for report in reports:
+        date = datetime.strptime(report_date_from_name(report), '%Y-%m-%d')
+        cover = first_existing([Path('Imgs') / f"{candidate.strftime('%Y%m%d')}.png"
+                                for candidate in (date, date - timedelta(days=1))])
+        if cover:
+            assigned[report] = cover
+    return assigned
 
 
 def render_report_media(report_path: Path, output_dir: Path) -> str:
@@ -102,7 +113,7 @@ def render_report_media(report_path: Path, output_dir: Path) -> str:
     if pie_path:
         pie_src = copy_asset(pie_path, output_dir, "charts")
         localize_chart_html(output_dir / pie_src)
-        chart_frames.append(f'<iframe class="chart-frame" title="Country distribution pie chart" src="{pie_src}" loading="lazy"></iframe>')
+        chart_frames.append(f'<iframe class="chart-frame" title="Country publication distribution" src="{pie_src}" loading="lazy"></iframe>')
     if chart_frames:
         media_parts.append(f'<div class="chart-grid">\n{"".join(chart_frames)}\n</div>')
     if stats_path:

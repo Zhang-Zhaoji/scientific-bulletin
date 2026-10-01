@@ -355,7 +355,9 @@ img {
 }
 .chart-frame {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 460px;
+  min-width: 0;
+  box-sizing: border-box;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: transparent;

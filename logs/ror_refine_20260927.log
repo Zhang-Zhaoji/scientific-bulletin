@@ -1,0 +1,30 @@
+================================================================================
+ROR Batch Refine - Re-normalize affiliations with local ROR matching
+================================================================================
+Input:       D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched.jsonl
+Output:      D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl
+Threshold:   90
+
+Loading ROR index...
+ROR index loaded in 0.44s
+  - Standard names: 89290
+  - Aliases: 95896
+
+Loading input papers...
+Loaded 702 papers
+
+Starting ROR refinement...
+  0%|          | 0/702 [00:00<?, ?it/s]100%|██████████| 702/702 [00:00<00:00, 24936.07it/s]
+
+Saving to D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl...
+
+================================================================================
+REFINEMENT COMPLETE
+================================================================================
+Total papers:     702
+Total affiliations checked: 6
+Successfully matched with ROR: 6 (100.0%)
+Processing time:  0.0s (0.00s per paper)
+
+Output saved to: D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl
+example of refined paper

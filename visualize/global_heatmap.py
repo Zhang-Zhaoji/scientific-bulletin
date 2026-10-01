@@ -3,6 +3,9 @@ from pyecharts import options as opts
 import datetime
 import os
 import re
+import html
+import json
+import shutil
 from collections import Counter
 from pathlib import Path
 
@@ -18,8 +21,8 @@ except Exception:
 
 # 本地 echarts/地图资源（assets.pyecharts.org CDN 可能不可达，改为引用本地文件）
 _ASSET_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets')
-_ECHARTS_LOCAL = Path(_ASSET_DIR, 'echarts.min.js').as_uri()
-_WORLD_MAP_LOCAL = Path(_ASSET_DIR, 'maps', 'world.js').as_uri()
+_ECHARTS_LOCAL = '../vendor/echarts.min.js'
+_WORLD_MAP_LOCAL = '../vendor/world.js'
 
 
 def _use_local_assets(html_path: str):
@@ -31,14 +34,43 @@ def _use_local_assets(html_path: str):
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html)
 
+COUNTRY_ALIASES = {'USA': 'United States', 'United States of America': 'United States',
+                   'UK': 'United Kingdom', 'United Kingdom of Great Britain and Northern Ireland': 'United Kingdom',
+                   'Czechia': 'Czech Rep.', 'Laos': 'Lao PDR', "Lao People's Democratic Republic": 'Lao PDR',
+                   'Eswatini': 'Swaziland', 'South Korea': 'Korea', 'North Korea': 'Dem. Rep. Korea',
+                   'Czech Republic': 'Czech Rep.', 'Dominican Republic': 'Dominican Rep.',
+                   'Bosnia and Herzegovina': 'Bosnia and Herz.', 'Equatorial Guinea': 'Eq. Guinea',
+                   'Democratic Republic of the Congo': 'Dem. Rep. Congo', 'Republic of the Congo': 'Congo',
+                   'Central African Republic': 'Central African Rep.', 'South Sudan': 'S. Sudan'}
 
-HEATMAP_ROOT_DIR = '../Imgs/visulize_img/globalHeatmap'
-PIE_ROOT_DIR = '../Imgs/visulize_img/countryPie'
+def list_values(value):
+    return [value] if isinstance(value, str) else (value or [])
 
-if not os.path.exists(HEATMAP_ROOT_DIR):
-    HEATMAP_ROOT_DIR = 'Imgs/visulize_img/globalHeatmap'
-if not os.path.exists(PIE_ROOT_DIR):
-    PIE_ROOT_DIR = 'Imgs/visulize_img/countryPie'
+def article_countries(article):
+    countries = set(list_values(article.get('countries')))
+    for author in article.get('author_details', article.get('authors_enriched', [])):
+        countries.update(list_values(author.get('ror_country')))
+    return {COUNTRY_ALIASES.get(str(c).strip(), str(c).strip()) for c in countries if c and str(c).strip()}
+
+def portable_chart(chart, output_path, title, metadata):
+    chart.render(output_path)
+    _use_local_assets(output_path)
+    path = Path(output_path)
+    content = path.read_text(encoding='utf-8')
+    content = content.replace('<body >', '<body>')
+    details = f"日期：{metadata.get('date', '')} · 取得地区信息 {metadata.get('located', 0)}/{metadata.get('total', 0)} 篇"
+    header = f'<header><strong>{html.escape(title)}</strong><span>{html.escape(details)}</span></header>'
+    content = content.replace('<body>', '<body>' + header)
+    css = '<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;font:14px system-ui,"Microsoft YaHei",sans-serif;background:#fff;color:#182b3a}header{height:64px;box-sizing:border-box;padding:12px 16px}header strong,header span{display:block}header strong{font-size:17px}header span{font-size:12px;color:#627383;margin-top:4px}.chart-container{width:100%!important;height:calc(100vh - 64px)!important}</style>'
+    content = content.replace('</head>', '<meta name="viewport" content="width=device-width, initial-scale=1">' + css + '</head>')
+    script = '<script>window.addEventListener("resize",function(){document.querySelectorAll(".chart-container").forEach(function(el){var c=echarts.getInstanceByDom(el);if(c)c.resize();})});</script>'
+    content = content.replace('</body>', script + '</body>')
+    path.write_text(content, encoding='utf-8')
+
+
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+HEATMAP_ROOT_DIR = str(_PROJECT_ROOT / 'Imgs/visulize_img/globalHeatmap')
+PIE_ROOT_DIR = str(_PROJECT_ROOT / 'Imgs/visulize_img/countryPie')
 
 class WorldHeatmap:
     def __init__(self, db_api: DBAPI):
@@ -48,6 +80,12 @@ class WorldHeatmap:
         
         os.makedirs(self.HEATMAP_ROOT_DIR, exist_ok=True)
         os.makedirs(self.PIE_ROOT_DIR, exist_ok=True)
+        vendor = Path(self.HEATMAP_ROOT_DIR).parent / 'vendor'
+        vendor.mkdir(exist_ok=True)
+        shutil.copy2(Path(_ASSET_DIR) / 'echarts.min.js', vendor / 'echarts.min.js')
+        shutil.copy2(Path(_ASSET_DIR) / 'maps/world.js', vendor / 'world.js')
+        self.metadata = {}
+        self.skip_screenshots = False
 
     def render_pie_chart(self, country_article_count: list[tuple[str, int]], top_n: int = 10, output_date: str | None = None):
         """
@@ -57,48 +95,40 @@ class WorldHeatmap:
         :return: None
         """
         filtered_data = [(name, count) for name, count in country_article_count if count > 0]
-        if not filtered_data:
-            print("没有数据可供渲染饼图")
-            return
         sorted_data = sorted(filtered_data, key=lambda x: x[1], reverse=True)
         
+        top_data = sorted_data[:top_n]
         if len(sorted_data) > top_n:
-            top_data = sorted_data[:top_n]
-            other_count = sum(count for _, count in sorted_data[top_n:])
-            top_data.append(("其他", other_count))
-        else:
-            top_data = sorted_data
-        
-        pie = (
-            Pie()
-            .add(
-                "",
-                top_data,
-                radius=["30%", "75%"],
-                center=["50%", "50%"],
-            )
-            .set_series_opts(
-                label_opts=opts.LabelOpts(
-                    formatter="{b}: {c} ({d}%)"
-                )
-            )
-            .set_global_opts(
-                title_opts=opts.TitleOpts(title="Country Publication Distribution"),
-                legend_opts=opts.LegendOpts(orient="vertical", pos_left="0%", pos_top="15%")
-            )
-        )
+            top_data.append(('其他', sum(count for _, count in sorted_data[top_n:])))
+        pie = (Pie(init_opts=opts.InitOpts(width='100%', height='100%'))
+               .add('', top_data or [('无地区信息', 0)], radius=['30%', '75%'], center=['50%', '50%'])
+               .set_series_opts(label_opts=opts.LabelOpts(formatter='{b}: {c} ({d}%)'))
+               .set_global_opts(legend_opts=opts.LegendOpts(orient='vertical', pos_left='0%', pos_top='15%')))
+        if not top_data:
+            pie.options['series'][0]['data'] = []
         
         date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.PIE_ROOT_DIR, f"{date}_pie.html")
-        pie.render(output_path)
-        _use_local_assets(output_path)
-        take_screenshot(output_path, output_path.replace(".html", ".png"))
+        self.metadata['date'] = date
+        portable_chart(pie, output_path, 'Country Publication Distribution' if top_data else '本期未取得地区信息', self.metadata)
+        if not self.skip_screenshots:
+            take_screenshot(output_path, output_path.replace(".html", ".png"))
 
     def get_jsonl_country_data(self, jsonl_path: str) -> list[tuple[str, int]]:
         country_counter = Counter()
+        total, located = 0, 0
         with jsonlines.open(jsonl_path) as reader:
             for article in reader:
-                country_counter.update(country for country in article.get('countries', []) if country)
+                total += 1
+                countries = article_countries(article)
+                located += bool(countries)
+                country_counter.update(countries)
+        self.metadata = {'source': str(jsonl_path), 'total': total, 'located': located,
+                         'counting_unit': 'one paper per country; countries can overlap',
+                         'counts': dict(country_counter.most_common())}
+        map_names = set(re.findall(r'"name"\s*:\s*"([^"]+)"', Path(_ASSET_DIR, 'maps/world.js').read_text(encoding='utf-8')))
+        self.metadata['unmapped_countries'] = sorted(set(country_counter) - map_names)
+        print(f'地区信息覆盖：{located}/{total} 篇；{len(country_counter)} 个地区')
         return country_counter.most_common()
 
     def get_world_data(self, start_date=None, end_date=None)->list[tuple[str, int]]:
@@ -154,28 +184,35 @@ class WorldHeatmap:
         :return: None
         """ 
         filtered_data = [(name, count) for name, count in country_article_count if count > 0]
-        if not filtered_data:
-            print("没有数据可供渲染热力图")
-            return
-        max_article_count = max([count for _, count in filtered_data])
+        max_article_count = max([count for _, count in filtered_data], default=1)
         world_map = (
-           Map()
-           .add("", filtered_data, "world")
+           Map(init_opts=opts.InitOpts(width='100%', height='100%'))
+           .add("", filtered_data or [('__initialization_only__', None)], "world")
            .set_series_opts(
                label_opts=opts.LabelOpts(
                    is_show=False,
                )
            )
            .set_global_opts(
-               title_opts=opts.TitleOpts(title="Publication Heatmap"),
-               visualmap_opts=opts.VisualMapOpts(max_=max_article_count, min_=0, is_piecewise=False)
+               legend_opts=opts.LegendOpts(is_show=False),
+               tooltip_opts=opts.TooltipOpts(trigger='item'),
+               visualmap_opts=opts.VisualMapOpts(max_=max_article_count, min_=0, is_piecewise=False,
+                                                pos_left='left', pos_bottom='bottom', range_color=['#e3eef2', '#31869c', '#123e59'])
            )
         )
         date = output_date or datetime.datetime.now().strftime("%Y-%m-%d")
         output_path = os.path.join(self.HEATMAP_ROOT_DIR, f"{date}_heatmap.html")
-        world_map.render(output_path)
-        _use_local_assets(output_path)
-        take_screenshot(output_path, output_path.replace(".html", ".png"))
+        world_map.options['series'][0].update(roam=True, layoutCenter=['54%', '48%'], layoutSize='100%',
+                                              showLegendSymbol=False,
+                                              itemStyle={'areaColor': '#e7e9eb', 'borderColor': '#fff', 'borderWidth': .4})
+        if not filtered_data:
+            world_map.options['series'][0]['data'] = []
+            world_map.options['visualMap'] = []
+        self.metadata['date'] = date
+        portable_chart(world_map, output_path, '全球论文地区分布' if filtered_data else '本期未取得地区信息', self.metadata)
+        Path(output_path).with_suffix('.data.json').write_text(json.dumps(self.metadata, ensure_ascii=False, indent=2), encoding='utf-8')
+        if not self.skip_screenshots:
+            take_screenshot(output_path, output_path.replace(".html", ".png"))
 
 
 def date_from_path(path: str) -> str | None:
@@ -196,10 +233,12 @@ if __name__ == "__main__":
     parser.add_argument("--date", help="Output date label, for example 2026-05-23.")
     parser.add_argument("--start-date", help="Database start date, YYYY-MM-DD.")
     parser.add_argument("--end-date", help="Database end date, YYYY-MM-DD.")
+    parser.add_argument('--skip-screenshots', action='store_true')
     args = parser.parse_args()
 
-    db_api = DBAPI()
+    db_api = None if args.jsonl else DBAPI()
     world_heatmap = WorldHeatmap(db_api)
+    world_heatmap.skip_screenshots = args.skip_screenshots
     if args.jsonl:
         country_article_count = world_heatmap.get_jsonl_country_data(args.jsonl)
         output_date = args.date or date_from_path(args.jsonl)
@@ -208,6 +247,7 @@ if __name__ == "__main__":
         output_date = args.date or args.end_date
     world_heatmap.render_heatmap(country_article_count, output_date)
     world_heatmap.render_pie_chart(country_article_count, top_n=10, output_date=output_date)
-    db_api.close()
+    if db_api:
+        db_api.close()
     if os.path.exists('render.html'):
         os.remove('render.html')

@@ -1,0 +1,14 @@
+{
+  "source": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-13_enriched_ror_refined.jsonl",
+  "total": 509,
+  "located": 7,
+  "counting_unit": "one paper per country; countries can overlap",
+  "counts": {
+    "United States": 3,
+    "Germany": 2,
+    "India": 1,
+    "Denmark": 1
+  },
+  "unmapped_countries": [],
+  "date": "2026-09-13"
+}

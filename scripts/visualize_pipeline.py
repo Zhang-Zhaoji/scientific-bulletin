@@ -91,7 +91,7 @@ def generate_weekly_charts(overwrite: bool = False) -> None:
         env = {"PYTHONPATH": str(VIZ_DIR)}
         ok = _run(
             [sys.executable, "visualize/global_heatmap.py",
-             "--jsonl", str(jsonl), "--date", date],
+             "--jsonl", str(jsonl), "--date", date, "--skip-screenshots"],
             env_extra=env,
         )
         generated += 1 if ok else 0

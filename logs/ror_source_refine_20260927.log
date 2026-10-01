@@ -1,0 +1,30 @@
+================================================================================
+ROR Batch Refine - Re-normalize affiliations with local ROR matching
+================================================================================
+Input:       D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched.jsonl
+Output:      D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl
+Threshold:   90
+
+Loading ROR index...
+ROR index loaded in 0.35s
+  - Standard names: 89290
+  - Aliases: 95896
+
+Loading input papers...
+Loaded 702 papers
+
+Starting ROR refinement...
+  0%|          | 0/702 [00:00<?, ?it/s]  8%|▊         | 59/702 [00:00<00:01, 447.47it/s] 15%|█▍        | 104/702 [00:01<00:08, 70.74it/s] 22%|██▏       | 151/702 [00:01<00:05, 95.64it/s] 24%|██▍       | 171/702 [00:02<00:11, 47.45it/s] 26%|██▌       | 184/702 [00:03<00:12, 41.35it/s] 27%|██▋       | 193/702 [00:03<00:12, 40.75it/s] 29%|██▊       | 201/702 [00:03<00:11, 42.08it/s] 30%|██▉       | 208/702 [00:03<00:13, 36.50it/s] 36%|███▋      | 256/702 [00:04<00:05, 83.13it/s] 44%|████▍     | 308/702 [00:04<00:03, 123.70it/s] 47%|████▋     | 329/702 [00:04<00:04, 78.10it/s]  49%|████▉     | 345/702 [00:05<00:05, 60.12it/s] 51%|█████     | 357/702 [00:05<00:06, 53.46it/s] 53%|█████▎    | 373/702 [00:05<00:05, 63.82it/s] 62%|██████▏   | 438/702 [00:06<00:02, 129.10it/s] 66%|██████▌   | 460/702 [00:06<00:02, 83.56it/s]  68%|██████▊   | 477/702 [00:06<00:02, 77.10it/s] 70%|██████▉   | 491/702 [00:07<00:02, 78.08it/s] 80%|████████  | 563/702 [00:07<00:01, 138.16it/s] 83%|████████▎ | 581/702 [00:07<00:01, 115.40it/s] 85%|████████▍ | 596/702 [00:07<00:00, 107.02it/s] 87%|████████▋ | 609/702 [00:08<00:01, 65.12it/s]  88%|████████▊ | 619/702 [00:08<00:01, 63.21it/s] 89%|████████▉ | 628/702 [00:08<00:01, 60.93it/s]100%|█████████▉| 699/702 [00:08<00:00, 152.77it/s]100%|██████████| 702/702 [00:08<00:00, 79.67it/s] 
+
+Saving to D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl...
+
+================================================================================
+REFINEMENT COMPLETE
+================================================================================
+Total papers:     702
+Total affiliations checked: 2586
+Successfully matched with ROR: 1947 (75.3%)
+Processing time:  8.8s (0.01s per paper)
+
+Output saved to: D:\working\scientific bulletin\getfiles\all_papers_2026-09-27_enriched_ror_refined.jsonl
+example of refined paper

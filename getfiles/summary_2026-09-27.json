@@ -1,0 +1,138 @@
+{
+  "date": "2026-09-27",
+  "sources": {
+    "arxiv": {
+      "count": 62,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "27 Sep 2026"
+      }
+    },
+    "biorxiv": {
+      "count": 331,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "27 Sep 2026"
+      }
+    },
+    "nature": {
+      "count": 33,
+      "date_range": {
+        "min": "2026-09-21",
+        "max": "2026-09-23"
+      }
+    },
+    "science": {
+      "count": 37,
+      "date_range": {
+        "min": "24 Sep 2026",
+        "max": "24 Sep 2026"
+      }
+    },
+    "cell": {
+      "count": 39,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "jneurophys": {
+      "count": 4,
+      "date_range": {
+        "min": "22 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "jneurosci": {
+      "count": 21,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "jcogn": {
+      "count": 3,
+      "date_range": {
+        "min": "22 Sep 2026",
+        "max": "22 Sep 2026"
+      }
+    },
+    "jvis": {
+      "count": 0,
+      "date_range": null
+    },
+    "pnas": {
+      "count": 85,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "natcomm": {
+      "count": 26,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "26 Sep 2026"
+      }
+    },
+    "brain": {
+      "count": 6,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "sciadv": {
+      "count": 0,
+      "date_range": null
+    },
+    "elife": {
+      "count": 20,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    },
+    "plos": {
+      "count": 38,
+      "date_range": {
+        "min": "21 Sep 2026",
+        "max": "25 Sep 2026"
+      }
+    }
+  },
+  "publication_date_range": {
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "inclusive": true
+  },
+  "merged_count": 702,
+  "author_metrics_status": "not requested; source metadata only",
+  "unavailable_sources": [
+    "Cell Reports",
+    "iScience",
+    "Cell Systems"
+  ],
+  "source_counts_after_merge": {
+    "arXiv": 62,
+    "bioRxiv": 329,
+    "Nature Communications": 20,
+    "Nature Communications + Europe PMC": 6,
+    "Cell + Europe PMC": 11,
+    "Neuron + Europe PMC": 4,
+    "Current Biology + Europe PMC": 24,
+    "Journal of Neurophysiology": 4,
+    "Journal of Neuroscience": 21,
+    "PNAS": 84,
+    "Brain": 6,
+    "eLife": 20,
+    "PLOS": 38,
+    "Science + Europe PMC": 37,
+    "Nature": 29,
+    "Nature BME": 4,
+    "Journal of Cognitive Neuroscience": 3
+  },
+  "missing_abstract_count": 201,
+  "final_quality_report": "getfiles/quality_2026-09-27.json",
+  "final_report": "LLM_Results/report_20260927.md"
+}

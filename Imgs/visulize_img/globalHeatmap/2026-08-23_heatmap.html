@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="file:///D:/working/scientific%20bulletin/visualize/assets/echarts.min.js"></script>
-            <script type="text/javascript" src="file:///D:/working/scientific%20bulletin/visualize/assets/maps/world.js"></script>
+                <script type="text/javascript" src="../vendor/echarts.min.js"></script>
+            <script type="text/javascript" src="../vendor/world.js"></script>
 
     
-</head>
-<body >
-    <div id="645d202378a54119ab2d2c9eb110901c" class="chart-container" style="width:900px; height:500px; "></div>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;font:14px system-ui,"Microsoft YaHei",sans-serif;background:#fff;color:#182b3a}header{height:64px;box-sizing:border-box;padding:12px 16px}header strong,header span{display:block}header strong{font-size:17px}header span{font-size:12px;color:#627383;margin-top:4px}.chart-container{width:100%!important;height:calc(100vh - 64px)!important}</style></head>
+<body><header><strong>全球论文地区分布</strong><span>日期：2026-08-23 · 取得地区信息 88/544 篇</span></header>
+    <div id="536c9e13922e49f089074c8fae73036f" class="chart-container" style="width:100%; height:100%; "></div>
     <script>
-        var chart_645d202378a54119ab2d2c9eb110901c = echarts.init(
-            document.getElementById('645d202378a54119ab2d2c9eb110901c'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_645d202378a54119ab2d2c9eb110901c = {
+        var chart_536c9e13922e49f089074c8fae73036f = echarts.init(
+            document.getElementById('536c9e13922e49f089074c8fae73036f'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_536c9e13922e49f089074c8fae73036f = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -42,7 +42,7 @@
                 },
                 {
                     "name": "China",
-                    "value": 34
+                    "value": 36
                 },
                 {
                     "name": "Germany",
@@ -55,6 +55,18 @@
                 {
                     "name": "Japan",
                     "value": 4
+                },
+                {
+                    "name": "Singapore",
+                    "value": 3
+                },
+                {
+                    "name": "Austria",
+                    "value": 3
+                },
+                {
+                    "name": "Korea",
+                    "value": 3
                 },
                 {
                     "name": "Sweden",
@@ -77,7 +89,31 @@
                     "value": 2
                 },
                 {
+                    "name": "New Caledonia",
+                    "value": 1
+                },
+                {
+                    "name": "Puerto Rico",
+                    "value": 1
+                },
+                {
+                    "name": "Taiwan",
+                    "value": 1
+                },
+                {
+                    "name": "Norway",
+                    "value": 1
+                },
+                {
+                    "name": "Poland",
+                    "value": 1
+                },
+                {
                     "name": "Italy",
+                    "value": 1
+                },
+                {
+                    "name": "India",
                     "value": 1
                 },
                 {
@@ -85,7 +121,39 @@
                     "value": 1
                 },
                 {
+                    "name": "Ireland",
+                    "value": 1
+                },
+                {
+                    "name": "Bangladesh",
+                    "value": 1
+                },
+                {
                     "name": "France",
+                    "value": 1
+                },
+                {
+                    "name": "Morocco",
+                    "value": 1
+                },
+                {
+                    "name": "Tunisia",
+                    "value": 1
+                },
+                {
+                    "name": "Russia",
+                    "value": 1
+                },
+                {
+                    "name": "Finland",
+                    "value": 1
+                },
+                {
+                    "name": "Brazil",
+                    "value": 1
+                },
+                {
+                    "name": "Indonesia",
                     "value": 1
                 }
             ],
@@ -99,9 +167,19 @@
             "seriesLayoutBy": "column",
             "datasetIndex": 0,
             "mapValueCalculation": "sum",
-            "showLegendSymbol": true,
+            "showLegendSymbol": false,
+            "layoutCenter": [
+                "54%",
+                "48%"
+            ],
+            "layoutSize": "100%",
             "preserveAspect": false,
             "clip": false,
+            "itemStyle": {
+                "areaColor": "#e7e9eb",
+                "borderColor": "#fff",
+                "borderWidth": 0.4
+            },
             "emphasis": {},
             "rippleEffect": {
                 "show": true,
@@ -117,7 +195,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -166,7 +244,6 @@
     "title": [
         {
             "show": true,
-            "text": "Publication Heatmap",
             "target": "blank",
             "subtarget": "blank",
             "padding": 5,
@@ -183,9 +260,9 @@
         "max": 40,
         "inRange": {
             "color": [
-                "#50a3ba",
-                "#eac763",
-                "#d94e5d"
+                "#e3eef2",
+                "#31869c",
+                "#123e59"
             ]
         },
         "calculable": true,
@@ -193,6 +270,8 @@
         "splitNumber": 5,
         "hoverLink": true,
         "orient": "vertical",
+        "left": "left",
+        "bottom": "bottom",
         "padding": 5,
         "showLabel": true,
         "itemWidth": 20,
@@ -200,7 +279,10 @@
         "borderWidth": 0
     }
 };
-        chart_645d202378a54119ab2d2c9eb110901c.setOption(option_645d202378a54119ab2d2c9eb110901c);
+        chart_536c9e13922e49f089074c8fae73036f.setOption(option_536c9e13922e49f089074c8fae73036f);
+            window.addEventListener('resize', function(){
+                chart_536c9e13922e49f089074c8fae73036f.resize();
+            })
     </script>
-</body>
+<script>window.addEventListener("resize",function(){document.querySelectorAll(".chart-container").forEach(function(el){var c=echarts.getInstanceByDom(el);if(c)c.resize();})});</script></body>
 </html>

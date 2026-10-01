@@ -1,0 +1,28 @@
+{
+  "source": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-04-04_enriched_ror_refined.jsonl",
+  "total": 191,
+  "located": 70,
+  "counting_unit": "one paper per country; countries can overlap",
+  "counts": {
+    "United States": 41,
+    "China": 16,
+    "United Kingdom": 12,
+    "France": 5,
+    "Germany": 4,
+    "Australia": 3,
+    "Spain": 2,
+    "Canada": 2,
+    "Korea": 1,
+    "Japan": 1,
+    "Belgium": 1,
+    "Switzerland": 1,
+    "Sweden": 1,
+    "Panama": 1,
+    "Colombia": 1,
+    "Netherlands": 1,
+    "Bangladesh": 1,
+    "Hungary": 1
+  },
+  "unmapped_countries": [],
+  "date": "2026-04-04"
+}

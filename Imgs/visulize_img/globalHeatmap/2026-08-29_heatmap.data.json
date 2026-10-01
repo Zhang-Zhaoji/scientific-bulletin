@@ -1,0 +1,9 @@
+{
+  "source": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+  "total": 284,
+  "located": 0,
+  "counting_unit": "one paper per country; countries can overlap",
+  "counts": {},
+  "unmapped_countries": [],
+  "date": "2026-08-29"
+}

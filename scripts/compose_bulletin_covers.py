@@ -16,6 +16,11 @@ RED = (184, 24, 20, 255)
 GOLD = (210, 153, 35, 255)
 
 COVERS = {
+    "20260927": {
+        "issue": "029",
+        "date": "2026/09/27",
+        "headline": ["小鼠大脑脂质图谱", "揭示脑区分化与妊娠重塑"],
+    },
     "20260726": {
         "issue": "020",
         "date": "2026/07/26",
@@ -174,10 +179,14 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=ROOT / "Imgs")
     parser.add_argument("--style", choices=("panel", "panel-large", "simple-outline"), default="panel")
     parser.add_argument("--suffix", default="", help="Filename suffix inserted before .png")
+    parser.add_argument("--dates", nargs='+', choices=list(COVERS), help="Generate only these cover dates")
+    parser.add_argument("--no-review-sheet", action='store_true', help="Skip temporary contact sheet")
     args = parser.parse_args()
 
     outputs: list[Path] = []
     for date_key, spec in COVERS.items():
+        if args.dates and date_key not in args.dates:
+            continue
         source = args.source_dir / f"{date_key}_background.png"
         if not source.exists():
             raise FileNotFoundError(source)
@@ -186,6 +195,8 @@ def main() -> None:
         outputs.append(output)
         print(output)
 
+    if args.no_review_sheet:
+        return
     thumb_size = (724, 543)
     gap = 18
     sheet = Image.new("RGB", (thumb_size[0] * 2 + gap * 3, thumb_size[1] * 4 + gap * 5), (24, 22, 20))

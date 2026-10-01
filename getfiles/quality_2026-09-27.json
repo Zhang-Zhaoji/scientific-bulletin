@@ -1,0 +1,24 @@
+{
+  "papers": 702,
+  "authors_present": 702,
+  "papers_with_affiliation": 569,
+  "authors_with_affiliation": 2586,
+  "abstracts_recovered": 184,
+  "missing_abstracts": 17,
+  "authors_with_metrics": 0,
+  "author_metrics_status": "not requested; source metadata only",
+  "reevaluated_count": 184,
+  "llm_result_count": 702,
+  "recommendation_distribution": {
+    "简要提及": 256,
+    "深度解读": 243,
+    "不推送": 203
+  },
+  "initial_distribution": {
+    "简要提及": 270,
+    "深度解读": 222,
+    "不推送": 210
+  },
+  "tier_changed_count": 38,
+  "authors_with_ror_match": 1947
+}

@@ -62,6 +62,28 @@ DEFAULT_WORKERS = 2
 DEFAULT_ROR_THRESHOLD = 90
 DEFAULT_FUZZY_THRESHOLD = 90
 DEFAULT_HISTORY_WEEKS = 1
+OUTPUT_DATE = None
+
+
+def filter_date_range(papers, start_date, end_date):
+    """Keep only papers with a complete publication date inside inclusive bounds."""
+    kept = []
+    unknown = 0
+    for paper in papers:
+        value = re.sub(r'\bSept\b', 'Sep', str(paper.get('date', '')).strip())
+        parsed = None
+        for fmt in ('%d %b %Y', '%Y-%m-%d', '%d %B %Y', '%b %d %Y'):
+            try:
+                parsed = datetime.datetime.strptime(value, fmt).date()
+                break
+            except ValueError:
+                continue
+        if parsed is None:
+            unknown += 1
+        elif start_date <= parsed <= end_date:
+            kept.append(paper)
+    print(f"[DATE] Kept {len(kept)}/{len(papers)} papers; unknown dates: {unknown}")
+    return kept
 
 # Known non-article titles to filter out
 JUNK_TITLE_PATTERNS = [
@@ -304,7 +326,7 @@ def fetch_all_jneurosci_papers(days: int = DEFAULT_DAYS, include_journal_club: b
     print("=" * 80)
 
     try:
-        papers = fetch_jneurosci_papers(days=days, max_results=999, include_journal_club=include_journal_club)
+        papers = fetch_jneurosci_papers(days=days, max_results=999, include_journal_club=include_journal_club, fetch_abstracts=True)
         print(f"\nTotal Journal of Neuroscience papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -355,7 +377,7 @@ def fetch_all_jcogn_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_jcogn_papers(days=days, max_results=999)
+        papers = fetch_jcogn_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal Journal of Cognitive Neuroscience papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -376,7 +398,7 @@ def fetch_all_jvis_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_jvis_papers(days=days, max_results=999)
+        papers = fetch_jvis_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal Journal of Vision papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -397,7 +419,7 @@ def fetch_all_pnas_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_pnas_papers(days=days, max_results=999)
+        papers = fetch_pnas_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal PNAS papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -418,7 +440,7 @@ def fetch_all_plos_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_plos_papers(days=days, max_results=999)
+        papers = fetch_plos_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal PLOS papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -462,7 +484,7 @@ def fetch_all_brain_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_brain_papers(days=days, max_results=999)
+        papers = fetch_brain_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal Brain papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -506,7 +528,7 @@ def fetch_all_elife_papers(days: int = DEFAULT_DAYS) -> List[Dict]:
     print("=" * 80)
 
     try:
-        papers = fetch_elife_papers(days=days, max_results=999)
+        papers = fetch_elife_papers(days=days, max_results=999, fetch_abstracts=True)
         print(f"\nTotal eLife papers: {len(papers)}")
         return papers
     except Exception as e:
@@ -726,7 +748,7 @@ def save_merged_papers(papers: List[Dict], output_dir: str = DEFAULT_OUTPUT_DIR)
     """Save merged papers to JSONL file."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
+    timestamp = OUTPUT_DATE or datetime.datetime.now().strftime('%Y-%m-%d')
     filepath = os.path.join(output_dir, f'all_papers_{timestamp}.jsonl')
 
     with jsonlines.open(filepath, 'w') as f:
@@ -743,7 +765,7 @@ def save_enriched_papers(papers: List[Dict], output_dir: str = DEFAULT_OUTPUT_DI
     """Save enriched papers to JSONL file."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
+    timestamp = OUTPUT_DATE or datetime.datetime.now().strftime('%Y-%m-%d')
     filepath = os.path.join(output_dir, f'all_papers_{timestamp}_enriched.jsonl')
 
     with jsonlines.open(filepath, 'w') as f:
@@ -766,7 +788,7 @@ def save_source_summary(arxiv_papers: List[Dict], biorxiv_papers: List[Dict],
                         plos_papers: List[Dict],
                         output_dir: str = DEFAULT_OUTPUT_DIR):
     """Save a summary of papers by source."""
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d')
+    timestamp = OUTPUT_DATE or datetime.datetime.now().strftime('%Y-%m-%d')
     summary = {
         'date': timestamp,
         'sources': {
@@ -1011,6 +1033,10 @@ Examples:
 
     parser.add_argument('--days', type=int, default=DEFAULT_DAYS,
                         help=f'Number of days to look back (default: {DEFAULT_DAYS})')
+    parser.add_argument('--start-date', type=datetime.date.fromisoformat,
+                        help='Inclusive publication start date (YYYY-MM-DD)')
+    parser.add_argument('--end-date', type=datetime.date.fromisoformat,
+                        help='Inclusive publication end date (YYYY-MM-DD)')
     parser.add_argument('--output-dir', default=DEFAULT_OUTPUT_DIR,
                         help=f'Output directory (default: {DEFAULT_OUTPUT_DIR})')
     parser.add_argument('--workers', type=int, default=DEFAULT_WORKERS,
@@ -1052,11 +1078,21 @@ Examples:
                         help='Run Selenium in headless mode (true/false, default: true)')
 
     args = parser.parse_args()
+    if bool(args.start_date) != bool(args.end_date):
+        parser.error('--start-date and --end-date must be supplied together')
+    if args.start_date:
+        if args.start_date > args.end_date or args.end_date > datetime.date.today():
+            parser.error('Dates must be ordered and cannot be in the future')
+        args.days = (datetime.date.today() - args.start_date).days + 1
+        global OUTPUT_DATE
+        OUTPUT_DATE = args.end_date.isoformat()
 
     print("\n" + "=" * 80)
     print("Neuroscience Bulletin - BETA with Integrated Enrichment")
     print("=" * 80)
     print(f"Date range: last {args.days} days")
+    if args.start_date:
+        print(f"Publication filter (inclusive): {args.start_date} to {args.end_date}")
     print(f"Output directory: {args.output_dir}")
     if not args.no_auto_enrich:
         print(f"Auto-enrichment: ENABLED (workers: {args.workers})")
@@ -1090,7 +1126,7 @@ Examples:
         ])
 
         if fetch_all or args.arxiv_only:
-            max_results = 99 if fetch_all else 99
+            max_results = 999 if args.start_date else 99
             arxiv_papers = fetch_all_arxiv_papers(
                 days=args.days,
                 max_results=max_results,
@@ -1098,7 +1134,7 @@ Examples:
             )
 
         if fetch_all or args.biorxiv_only:
-            max_results = 200 if fetch_all else 500
+            max_results = 999 if args.start_date else (200 if fetch_all else 500)
             biorxiv_papers = fetch_all_biorxiv_papers(days=args.days, max_results=max_results)
 
         if fetch_all or args.nature_only:
@@ -1144,6 +1180,19 @@ Examples:
 
         if fetch_all or args.plos_only:
             plos_papers = fetch_all_plos_papers(days=args.days)
+
+        if args.start_date:
+            (arxiv_papers, biorxiv_papers, nature_papers, science_papers,
+             cell_papers, jneurophys_papers, jneurosci_papers, jcogn_papers,
+             jvis_papers, pnas_papers, natcomm_papers, brain_papers,
+             sciadv_papers, elife_papers, plos_papers) = [
+                filter_date_range(papers, args.start_date, args.end_date)
+                for papers in (arxiv_papers, biorxiv_papers, nature_papers,
+                               science_papers, cell_papers, jneurophys_papers,
+                               jneurosci_papers, jcogn_papers, jvis_papers,
+                               pnas_papers, natcomm_papers, brain_papers,
+                               sciadv_papers, elife_papers, plos_papers)
+            ]
 
         if args.no_merge:
             if args.arxiv_only and arxiv_papers:
@@ -1333,7 +1382,7 @@ Examples:
                          jneurophys_papers, jneurosci_papers, jcogn_papers, jvis_papers, pnas_papers,
                          natcomm_papers, brain_papers, sciadv_papers, elife_papers, plos_papers, merged_papers)
 
-            if not args.no_auto_enrich:
+            if not args.no_auto_enrich and merged_papers:
                 print("\n" + "=" * 80)
                 print("STARTING AUTOMATIC AUTHOR ENRICHMENT")
                 print("=" * 80)

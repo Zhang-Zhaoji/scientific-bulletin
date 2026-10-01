@@ -151,22 +151,14 @@ def fetch_article_abstracts(
                 continue
             pmid = pmid_elem.text
             
-            abstract_elem = article.find('.//Abstract/AbstractText')
-            if abstract_elem is not None and abstract_elem.text:
-                abstracts[pmid] = abstract_elem.text
-            else:
-                # Try to get other abstract fields
-                abstract_parts = article.findall('.//Abstract/AbstractText')
-                parts = []
-                for part in abstract_parts:
-                    label = part.get('Label', '')
-                    text = part.text or ''
-                    if label:
-                        parts.append(f"{label}: {text}")
-                    else:
-                        parts.append(text)
-                if parts:
-                    abstracts[pmid] = ' '.join(parts)
+            parts = []
+            for part in article.findall('.//Abstract/AbstractText'):
+                label = part.get('Label', '')
+                content = ''.join(part.itertext()).strip()
+                if content:
+                    parts.append(f"{label}: {content}" if label else content)
+            if parts:
+                abstracts[pmid] = ' '.join(parts)
         
         time.sleep(delay)
         return abstracts

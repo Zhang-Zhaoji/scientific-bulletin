@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
-                <script type="text/javascript" src="file:///D:/working/scientific%20bulletin/visualize/assets/echarts.min.js"></script>
-            <script type="text/javascript" src="file:///D:/working/scientific%20bulletin/visualize/assets/maps/world.js"></script>
+                <script type="text/javascript" src="../vendor/echarts.min.js"></script>
+            <script type="text/javascript" src="../vendor/world.js"></script>
 
     
-</head>
-<body >
-    <div id="0f20cc2b37c143d187fde3a07e42ae41" class="chart-container" style="width:900px; height:500px; "></div>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;font:14px system-ui,"Microsoft YaHei",sans-serif;background:#fff;color:#182b3a}header{height:64px;box-sizing:border-box;padding:12px 16px}header strong,header span{display:block}header strong{font-size:17px}header span{font-size:12px;color:#627383;margin-top:4px}.chart-container{width:100%!important;height:calc(100vh - 64px)!important}</style></head>
+<body><header><strong>全球论文地区分布</strong><span>日期：2026-07-25 · 取得地区信息 98/558 篇</span></header>
+    <div id="4fbff2dd915144a5b6a9b22c44e5c885" class="chart-container" style="width:100%; height:100%; "></div>
     <script>
-        var chart_0f20cc2b37c143d187fde3a07e42ae41 = echarts.init(
-            document.getElementById('0f20cc2b37c143d187fde3a07e42ae41'), 'white', {renderer: 'canvas', locale: 'ZH'});
-        var option_0f20cc2b37c143d187fde3a07e42ae41 = {
+        var chart_4fbff2dd915144a5b6a9b22c44e5c885 = echarts.init(
+            document.getElementById('4fbff2dd915144a5b6a9b22c44e5c885'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_4fbff2dd915144a5b6a9b22c44e5c885 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -58,10 +58,18 @@
                 },
                 {
                     "name": "Australia",
+                    "value": 6
+                },
+                {
+                    "name": "Switzerland",
                     "value": 5
                 },
                 {
                     "name": "Sweden",
+                    "value": 4
+                },
+                {
+                    "name": "Finland",
                     "value": 4
                 },
                 {
@@ -73,19 +81,31 @@
                     "value": 4
                 },
                 {
-                    "name": "Switzerland",
+                    "name": "Japan",
                     "value": 4
                 },
                 {
-                    "name": "Japan",
-                    "value": 4
+                    "name": "India",
+                    "value": 3
+                },
+                {
+                    "name": "Korea",
+                    "value": 3
                 },
                 {
                     "name": "Spain",
                     "value": 3
                 },
                 {
+                    "name": "Norway",
+                    "value": 2
+                },
+                {
                     "name": "Canada",
+                    "value": 2
+                },
+                {
+                    "name": "Brazil",
                     "value": 2
                 },
                 {
@@ -93,7 +113,87 @@
                     "value": 2
                 },
                 {
+                    "name": "Singapore",
+                    "value": 1
+                },
+                {
+                    "name": "Hong Kong",
+                    "value": 1
+                },
+                {
+                    "name": "New Zealand",
+                    "value": 1
+                },
+                {
                     "name": "Israel",
+                    "value": 1
+                },
+                {
+                    "name": "Uzbekistan",
+                    "value": 1
+                },
+                {
+                    "name": "Cuba",
+                    "value": 1
+                },
+                {
+                    "name": "Kenya",
+                    "value": 1
+                },
+                {
+                    "name": "Argentina",
+                    "value": 1
+                },
+                {
+                    "name": "Hungary",
+                    "value": 1
+                },
+                {
+                    "name": "Belgium",
+                    "value": 1
+                },
+                {
+                    "name": "Cura\u00e7ao",
+                    "value": 1
+                },
+                {
+                    "name": "Czech Rep.",
+                    "value": 1
+                },
+                {
+                    "name": "Pakistan",
+                    "value": 1
+                },
+                {
+                    "name": "Benin",
+                    "value": 1
+                },
+                {
+                    "name": "Thailand",
+                    "value": 1
+                },
+                {
+                    "name": "Poland",
+                    "value": 1
+                },
+                {
+                    "name": "Mexico",
+                    "value": 1
+                },
+                {
+                    "name": "Bangladesh",
+                    "value": 1
+                },
+                {
+                    "name": "Portugal",
+                    "value": 1
+                },
+                {
+                    "name": "Tanzania",
+                    "value": 1
+                },
+                {
+                    "name": "Indonesia",
                     "value": 1
                 }
             ],
@@ -107,9 +207,19 @@
             "seriesLayoutBy": "column",
             "datasetIndex": 0,
             "mapValueCalculation": "sum",
-            "showLegendSymbol": true,
+            "showLegendSymbol": false,
+            "layoutCenter": [
+                "54%",
+                "48%"
+            ],
+            "layoutSize": "100%",
             "preserveAspect": false,
             "clip": false,
+            "itemStyle": {
+                "areaColor": "#e7e9eb",
+                "borderColor": "#fff",
+                "borderWidth": 0.4
+            },
             "emphasis": {},
             "rippleEffect": {
                 "show": true,
@@ -125,7 +235,7 @@
                 ""
             ],
             "selected": {},
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -174,7 +284,6 @@
     "title": [
         {
             "show": true,
-            "text": "Publication Heatmap",
             "target": "blank",
             "subtarget": "blank",
             "padding": 5,
@@ -191,9 +300,9 @@
         "max": 43,
         "inRange": {
             "color": [
-                "#50a3ba",
-                "#eac763",
-                "#d94e5d"
+                "#e3eef2",
+                "#31869c",
+                "#123e59"
             ]
         },
         "calculable": true,
@@ -201,6 +310,8 @@
         "splitNumber": 5,
         "hoverLink": true,
         "orient": "vertical",
+        "left": "left",
+        "bottom": "bottom",
         "padding": 5,
         "showLabel": true,
         "itemWidth": 20,
@@ -208,7 +319,10 @@
         "borderWidth": 0
     }
 };
-        chart_0f20cc2b37c143d187fde3a07e42ae41.setOption(option_0f20cc2b37c143d187fde3a07e42ae41);
+        chart_4fbff2dd915144a5b6a9b22c44e5c885.setOption(option_4fbff2dd915144a5b6a9b22c44e5c885);
+            window.addEventListener('resize', function(){
+                chart_4fbff2dd915144a5b6a9b22c44e5c885.resize();
+            })
     </script>
-</body>
+<script>window.addEventListener("resize",function(){document.querySelectorAll(".chart-container").forEach(function(el){var c=echarts.getInstanceByDom(el);if(c)c.resize();})});</script></body>
 </html>

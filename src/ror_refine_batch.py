@@ -111,7 +111,7 @@ def ror_refine_batch(input_file: str, output_file: str = None, threshold: int = 
         refined_papers.append(refined_paper)
         
         for author in refined_paper.get('author_details', []):
-            if 'ror_normalized_affiliation' in author:
+            if author.get('ror_normalized_affiliation'):
                 matched_affiliations += 1
     
     elapsed = time.time() - start_time

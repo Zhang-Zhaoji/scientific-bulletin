@@ -1,0 +1,42 @@
+{
+  "source": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-23_enriched_ror_refined.jsonl",
+  "total": 544,
+  "located": 88,
+  "counting_unit": "one paper per country; countries can overlap",
+  "counts": {
+    "United States": 40,
+    "China": 36,
+    "Germany": 7,
+    "United Kingdom": 5,
+    "Japan": 4,
+    "Singapore": 3,
+    "Austria": 3,
+    "Korea": 3,
+    "Sweden": 2,
+    "Israel": 2,
+    "Switzerland": 2,
+    "Spain": 2,
+    "Canada": 2,
+    "New Caledonia": 1,
+    "Puerto Rico": 1,
+    "Taiwan": 1,
+    "Norway": 1,
+    "Poland": 1,
+    "Italy": 1,
+    "India": 1,
+    "Australia": 1,
+    "Ireland": 1,
+    "Bangladesh": 1,
+    "France": 1,
+    "Morocco": 1,
+    "Tunisia": 1,
+    "Russia": 1,
+    "Finland": 1,
+    "Brazil": 1,
+    "Indonesia": 1
+  },
+  "unmapped_countries": [
+    "Taiwan"
+  ],
+  "date": "2026-08-23"
+}

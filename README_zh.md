@@ -76,6 +76,11 @@ python LLM_eval/main.py
 # 使用配置好的平台/模型处理指定的富集JSONL文件
 python LLM_eval/main.py -i getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl
 
+# 使用原始来源补全作者、机构和摘要，不依赖 OpenAlex
+python src/enrich_source_metadata.py getfiles/all_papers_2026-09-27.jsonl -o getfiles/all_papers_2026-09-27_enriched.jsonl
+python src/ror_refine_batch.py --input getfiles/all_papers_2026-09-27_enriched.jsonl
+python LLM_eval/main.py -i getfiles/all_papers_2026-09-27_enriched_ror_refined.jsonl
+
 # 临时覆盖配置中的平台/模型
 python LLM_eval/main.py --platform Aliyuncs --model qwen3.7-plus
 
