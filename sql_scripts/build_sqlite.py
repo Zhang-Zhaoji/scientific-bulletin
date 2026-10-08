@@ -11,6 +11,10 @@ import hashlib
 import jsonlines
 from dateutil import parser
 import tqdm
+from pathlib import Path
+import sys
+
+DATA_DIR = Path(__file__).resolve().parents[1] / 'data'
 
 COUNTRY_ALIASES = None
 COUNTRY_NAMES = None
@@ -62,13 +66,13 @@ def load_country_reference():
     if COUNTRY_ALIASES is not None and COUNTRY_NAMES is not None:
         return COUNTRY_ALIASES, COUNTRY_NAMES
 
-    with open('data/CountryList.json', 'r', encoding='utf-8') as f:
+    with (DATA_DIR / 'CountryList.json').open(encoding='utf-8') as f:
         countries_list = json.load(f)
-    with open('data/aliasCountryName.json', 'r', encoding='utf-8') as f:
+    with (DATA_DIR / 'aliasCountryName.json').open(encoding='utf-8') as f:
         alias_country = json.load(f)
-    with open('data/abbr2country.json', 'r', encoding='utf-8') as f:
+    with (DATA_DIR / 'abbr2country.json').open(encoding='utf-8') as f:
         abbr2country = json.load(f)
-    normalized_map_path = 'data/normalized_country_map.json'
+    normalized_map_path = DATA_DIR / 'normalized_country_map.json'
     if os.path.exists(normalized_map_path):
         with open(normalized_map_path, 'r', encoding='utf-8') as f:
             normalized_abbr = json.load(f)
@@ -90,6 +94,9 @@ def load_country_reference():
         'usa': 'United States',
         'u.s.a.': 'United States',
         'uk': 'United Kingdom',
+        'united kingdom': 'United Kingdom',
+        'united kingdom of great britain and northern ireland': 'United Kingdom',
+        'czech republic': 'Czechia',
     })
     return COUNTRY_ALIASES, COUNTRY_NAMES
 
@@ -111,6 +118,48 @@ def unique_ordered(values):
             seen.add(value)
             result.append(value)
     return result
+
+
+def resolved_author_institutions(author):
+    """Keep each institution attached to its own geographic evidence.
+
+    New resolutions are authoritative, including an empty result. Independent
+    country arrays cannot be zipped to a list of multiple institutions.
+    """
+    if 'affiliation_resolution' in author:
+        rows = []
+        for resolution in as_list(author['affiliation_resolution']):
+            for institution in resolution.get('institutions', []):
+                if not clean_institution_list(institution.get('name')):
+                    continue
+                rows.append({'name': institution['name'], 'normalized_name': institution['name'],
+                             'ror_id':institution.get('ror_id'),
+                             'country_name': normalize_country_name(institution.get('country')),
+                             'raw_affiliation': resolution.get('input')})
+        return rows
+    names = clean_institution_list(author.get('ror_normalized_affiliation') or author.get('normalized_affiliation'))
+    countries = as_list(author.get('ror_country') or author.get('country'))
+    # A single known country is shared; multiple legacy values require exact
+    # alignment. An inconsistent list leaves institution geography unresolved.
+    countries = countries * len(names) if len(countries) == 1 else countries
+    if len(countries) != len(names):
+        countries = [None] * len(names)
+    return [{'name': name, 'normalized_name': name if author.get('ror_normalized_affiliation') else None,
+             'ror_id':None,
+             'country_name': normalize_country_name(country), 'raw_affiliation': author.get('affiliation')}
+            for name,country in zip(names,countries)]
+
+
+def ensure_affiliation_schema(conn):
+    if 'ror_id' not in {r[1] for r in conn.execute('PRAGMA table_info(institutions)')}:
+        conn.execute('ALTER TABLE institutions ADD COLUMN ror_id TEXT')
+    conn.execute('CREATE UNIQUE INDEX IF NOT EXISTS idx_institutions_ror_id ON institutions(ror_id) WHERE ror_id IS NOT NULL')
+    conn.execute('''CREATE TABLE IF NOT EXISTS article_author_institutions (
+        article_id INTEGER NOT NULL REFERENCES articles(id) ON DELETE CASCADE,
+        author_id INTEGER NOT NULL REFERENCES authors(id),
+        institution_id INTEGER NOT NULL REFERENCES institutions(id),
+        evidence_json TEXT,
+        PRIMARY KEY(article_id,author_id,institution_id))''')
 
 
 def ensure_country(conn, country_name):
@@ -343,12 +392,7 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
             is_senior_researcher = iauthor.get('is_senior_researcher', None)
             # add institute_name for further check
             # 优先使用 ROR 标准化的机构名称
-            institute_names = iauthor.get('ror_normalized_affiliation', None)
-            if not institute_names:
-                institute_names = iauthor.get('normalized_affiliation', None)
-            if isinstance(institute_names, str):
-                institute_names = institute_names.split(';') # default to be a list
-            institute_names = clean_institution_list(institute_names)
+            institute_names = unique_ordered(r['name'] for r in resolved_author_institutions(iauthor))
             important_authors.append({
                 'name': author_name,
                 'orcid': orcid,
@@ -373,25 +417,10 @@ def parse_work_details(work_json:dict, LLM_json:dict)->tuple[dict[str, any], lis
     author_details = work_json.get('author_details', None)
     if author_details:
         for iauthor in author_details:
-            institute_name = iauthor.get('normalized_affiliation', None)
-            if not institute_name:
-                continue
-            if isinstance(institute_name, str):
-                institute_name = institute_name.split(';') # default to be a list
-            institute_name = clean_institution_list(institute_name)
-            if not institute_name:
-                continue
-            country = iauthor.get('ror_country', iauthor.get('country', [None]))
-            country = [normalize_country_name(c) for c in as_list(country)]
-            article_countries.extend(country)
-            # the above lines should be ensured during the enrichment process
-            score = iauthor.get('score', 0)
-            institutions_in_article.append({
-                'name': iauthor.get('ror_normalized_affiliation', None) if iauthor.get('ror_normalized_affiliation', None) else institute_name,
-                'raw_affiliation': iauthor.get('affiliation', None), # original_affiliation string
-                'country_name': country,
-                'normalized_name': iauthor.get('ror_normalized_affiliation', None),
-                })
+            article_countries.extend(as_list(iauthor.get('ror_country') or iauthor.get('country')))
+            for row in resolved_author_institutions(iauthor):
+                institutions_in_article.append(row)
+                article_countries.append(row['country_name'])
     # finally, theme infos:
     """
     -- 主题表
@@ -637,14 +666,21 @@ def main():
     with open(LLM_results_path, 'r', encoding='utf-8') as f:
         LLM_results = json.load(f)
 
-    for article_json, LLM_json in tqdm.tqdm(zip(jsonlines.open(jsonl_path), LLM_results)):
+    # Use the same ROR-aware importer as the maintained weekly pipeline. The
+    # legacy name-only insertion path cannot distinguish homonymous units.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from scripts.update_bulletin_database import Importer
+    importer = Importer(conn)
+    with jsonlines.open(jsonl_path) as stream:
+        papers = list(stream)
+    if len(papers) != len(LLM_results):
+        conn.close()
+        raise ValueError('JSONL and LLM result counts differ; refusing a truncated import')
+    for article_json, LLM_json in tqdm.tqdm(zip(papers, LLM_results), total=len(papers)):
         # 0. check the title matches
         assert article_json.get('title') is not None, "Article title is None"
         assert article_json.get('title').replace(' ', '').replace('\n', '') == LLM_json.get('paper').get('raw_data').get('title').replace(' ', '').replace('\n', ''), f"Article title in JSONL and LLM do not match: \n{article_json.get('title')} != \n{LLM_json.get('paper').get('raw_data').get('title')}"
-        # 1. parse the article details
-        article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags = parse_work_details(article_json, LLM_json)
-        # 2. insert the article into the database
-        insert_article_info(conn, article_info, important_authors, institutions_in_article, article_countries, themes, subthemes, crosstags)
+        importer.ingest(article_json, LLM_json, target=True)
     
     conn.commit()
     conn.close()

@@ -2,9 +2,9 @@
 ROR Batch Refine - Re-normalize affiliations with local ROR matching
 
 Usage:
-    python src/ror_refine_batch.py input_enriched.jsonl
-    python src/ror_refine_batch.py input_enriched.jsonl -o output_refined.jsonl
-    python src/ror_refine_batch.py input_enriched.jsonl --threshold 85
+    python src/ror_refine_batch.py --input input_enriched.jsonl
+    python src/ror_refine_batch.py --input input_enriched.jsonl -o output_refined.jsonl
+    python src/ror_refine_batch.py --input input_enriched.jsonl --threshold 85
 """
 
 import argparse
@@ -20,28 +20,36 @@ from supp_func import ROR_Search
 
 def ror_refine_paper(paper: Dict, ror_search: ROR_Search) -> Dict:
     """Refine affiliations in one paper with ROR matching."""
-    if not paper.get('author_details'):
+    authors = paper.get('author_details') or paper.get('authors_enriched') or []
+    if not authors:
         return paper
+    paper['author_details'] = authors
     
     for idx, author in enumerate(paper['author_details']):
         affiliations = author.get('affiliation')
-        if not affiliations:
-            continue
         if isinstance(affiliations, str):
             affiliations = affiliations.split(';')
         paper['author_details'][idx]['ror_normalized_affiliation'] = []
         paper['author_details'][idx]['ror_match_score'] = []
         paper['author_details'][idx]['ror_country'] = []
         paper['author_details'][idx]['ror_subregion'] = []
-        for affiliation in affiliations:
-            standard_name, score, location_info = ror_search.extract_institute_info(affiliation)
-            if standard_name and score >= ror_search.threshold:
-                paper['author_details'][idx]['ror_normalized_affiliation'].append(standard_name)
-                paper['author_details'][idx]['ror_match_score'].append(score)
-            if location_info[0] is not None:
-                paper['author_details'][idx]['ror_country'].append(location_info[0])
-            if location_info[1] is not None:
-                paper['author_details'][idx]['ror_subregion'].append(location_info[1])
+        paper['author_details'][idx]['affiliation_resolution'] = []
+        for affiliation in affiliations or []:
+            if not affiliation or not str(affiliation).strip():
+                continue
+            resolution = ror_search.match_affiliation(affiliation)
+            paper['author_details'][idx]['affiliation_resolution'].append({'input':affiliation,**resolution})
+            for institution in resolution['institutions']:
+                if institution['name'] not in paper['author_details'][idx]['ror_normalized_affiliation']:
+                    paper['author_details'][idx]['ror_normalized_affiliation'].append(institution['name'])
+                    paper['author_details'][idx]['ror_match_score'].append(institution['score'])
+            for country in resolution['countries']:
+                if country not in paper['author_details'][idx]['ror_country']:
+                    paper['author_details'][idx]['ror_country'].append(country)
+            for subregion in resolution['subregions']:
+                if subregion not in paper['author_details'][idx]['ror_subregion']:
+                    paper['author_details'][idx]['ror_subregion'].append(subregion)
+    paper['countries'] = list(dict.fromkeys(c for a in authors for c in a.get('ror_country', [])))
     return paper
 
 
@@ -151,9 +159,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python src/ror_refine_batch.py getfiles/all_papers_2026-04-11_enriched.jsonl
-  python src/ror_refine_batch.py input.jsonl -o output.jsonl
-  python src/ror_refine_batch.py input.jsonl --threshold 85
+  python src/ror_refine_batch.py --input getfiles/all_papers_2026-04-11_enriched.jsonl
+  python src/ror_refine_batch.py --input input.jsonl -o output.jsonl
+  python src/ror_refine_batch.py --input input.jsonl --threshold 85
         """
     )
     

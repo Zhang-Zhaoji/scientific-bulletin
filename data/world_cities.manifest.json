@@ -1,0 +1,46 @@
+{
+  "source": "https://www.geonames.org/",
+  "licence": "CC BY 4.0",
+  "dataset": "cities500",
+  "coverage": "Cities with population over 500 or administrative seats; smaller settlements can be absent.",
+  "postal_countries": [
+    "DE",
+    "US"
+  ],
+  "built_on": "2026-10-08",
+  "counts": {
+    "countries": 252,
+    "regions": 3865,
+    "cities": 236014,
+    "city_aliases": 1115626,
+    "postcodes": 64787
+  },
+  "downloads": {
+    "cities500.zip": {
+      "source_url": "https://download.geonames.org/export/dump/cities500.zip",
+      "bytes": 13869905,
+      "sha256": "b5782a2f689e3d7acc9f57d543f481610e207bc07b2ba5709c351b78bd34cbed"
+    },
+    "admin1CodesASCII.txt": {
+      "source_url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "bytes": 151583,
+      "sha256": "1da92a6323a5fec3176f3f743bf4cf4040fd56a876da55e46fbca23c863aa60a"
+    },
+    "countryInfo.txt": {
+      "source_url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "bytes": 31678,
+      "sha256": "93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512"
+    },
+    "postal_US.zip": {
+      "source_url": "https://download.geonames.org/export/zip/US.zip",
+      "bytes": 634329,
+      "sha256": "7e34efabd0a38185ec9897589b5edffa57cb3ad9be74a995da07e1c719cf54cf"
+    },
+    "postal_DE.zip": {
+      "source_url": "https://download.geonames.org/export/zip/DE.zip",
+      "bytes": 383822,
+      "sha256": "59376351237fbd603fc0ee7df413456b6073d5aa3986646a213224dd85a260cb"
+    }
+  },
+  "sha256": "fa13b38c1e39ac09d513eea84125eb4eefa74de67c2cc076cc28dc6451a05542"
+}

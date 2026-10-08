@@ -1,0 +1,1068 @@
+{
+  "schema_version": 1,
+  "description": "Reviewed additions to the ROR snapshot; no inferred author affiliations.",
+  "reviewed_on": "2026-10-08",
+  "institutions": [
+    {
+      "name": "Massachusetts General Hospital",
+      "ror_id": "https://ror.org/002pd6e78",
+      "aliases": [
+        "Hospital General de Massachusetts",
+        "MGH",
+        "Mass General"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MA",
+            "country_subdivision_name": "Massachusetts",
+            "lat": 42.35843,
+            "lng": -71.05977,
+            "name": "Boston"
+          },
+          "geonames_id": 4930956
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/002pd6e78",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Harvard University",
+      "ror_id": "https://ror.org/03vek6s52",
+      "aliases": [
+        "Universidad de Harvard",
+        "Harvard Medical School"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MA",
+            "country_subdivision_name": "Massachusetts",
+            "lat": 42.3751,
+            "lng": -71.10561,
+            "name": "Cambridge"
+          },
+          "geonames_id": 4931972
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/03vek6s52",
+      "reason": "Explicitly reviewed subunit/system mapping; keep source unit name in resolution evidence.",
+      "parent_aliases": [
+        "Harvard Medical School"
+      ],
+      "parent_mapping_source": "https://www.harvard.edu/academics/schools/"
+    },
+    {
+      "name": "Baylor College of Medicine",
+      "ror_id": "https://ror.org/02pttbw34",
+      "aliases": [
+        "BCM",
+        "Escuela de Medicina de Baylor"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "TX",
+            "country_subdivision_name": "Texas",
+            "lat": 29.76328,
+            "lng": -95.36327,
+            "name": "Houston"
+          },
+          "geonames_id": 4699066
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02pttbw34",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "German Center for Neurodegenerative Diseases",
+      "ror_id": "https://ror.org/043j0f473",
+      "aliases": [
+        "DZNE",
+        "Deutsches Zentrum für Neurodegenerative Erkrankungen"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "DE",
+            "country_name": "Germany",
+            "country_subdivision_code": "NW",
+            "country_subdivision_name": "North Rhine-Westphalia",
+            "lat": 50.73438,
+            "lng": 7.09549,
+            "name": "Bonn"
+          },
+          "geonames_id": 2946447
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/043j0f473",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Icahn School of Medicine at Mount Sinai",
+      "ror_id": "https://ror.org/04a9tmd77",
+      "aliases": [
+        "ISMMS",
+        "MSSM",
+        "Mount Sinai School of Medicine"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "NY",
+            "country_subdivision_name": "New York",
+            "lat": 40.71427,
+            "lng": -74.00597,
+            "name": "New York"
+          },
+          "geonames_id": 5128581
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/04a9tmd77",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Purdue University System",
+      "ror_id": "https://ror.org/05p8z3f47",
+      "aliases": [
+        "Purdue University"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "IN",
+            "country_subdivision_name": "Indiana",
+            "lat": 40.42587,
+            "lng": -86.90807,
+            "name": "West Lafayette"
+          },
+          "geonames_id": 4928096
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/05p8z3f47",
+      "reason": "Explicitly reviewed subunit/system mapping; keep source unit name in resolution evidence.",
+      "parent_aliases": [
+        "Purdue University"
+      ],
+      "parent_mapping_source": "https://api.ror.org/v2/organizations/05p8z3f47"
+    },
+    {
+      "name": "Telethon Institute Of Genetics And Medicine",
+      "ror_id": "https://ror.org/04xfdsg27",
+      "aliases": [
+        "TIGEM"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "IT",
+            "country_name": "Italy",
+            "country_subdivision_code": "72",
+            "country_subdivision_name": "Campania",
+            "lat": 40.85216,
+            "lng": 14.26811,
+            "name": "Naples"
+          },
+          "geonames_id": 3172394
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/04xfdsg27",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Frederick National Laboratory for Cancer Research",
+      "ror_id": "https://ror.org/03v6m3209",
+      "aliases": [],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MD",
+            "country_subdivision_name": "Maryland",
+            "lat": 39.41427,
+            "lng": -77.41054,
+            "name": "Frederick"
+          },
+          "geonames_id": 4355585
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/03v6m3209",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Mayo Clinic",
+      "ror_id": "https://ror.org/02qp3tb03",
+      "aliases": [
+        "Clínica Mayo",
+        "Mayo Clinic in Rochester, Minnesota",
+        "Mayo Clinic Rochester"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MN",
+            "country_subdivision_name": "Minnesota",
+            "lat": 44.02163,
+            "lng": -92.4699,
+            "name": "Rochester"
+          },
+          "geonames_id": 5043473
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02qp3tb03",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "University of Pittsburgh",
+      "ror_id": "https://ror.org/01an3r305",
+      "aliases": [
+        "Universidad de Pittsburgh",
+        "Université de Pittsburgh"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "PA",
+            "country_subdivision_name": "Pennsylvania",
+            "lat": 40.44062,
+            "lng": -79.99589,
+            "name": "Pittsburgh"
+          },
+          "geonames_id": 5206379
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/01an3r305",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "The University of Texas Southwestern Medical Center",
+      "ror_id": "https://ror.org/05byvp690",
+      "aliases": [
+        "UT Southwestern"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "TX",
+            "country_subdivision_name": "Texas",
+            "lat": 32.78306,
+            "lng": -96.80667,
+            "name": "Dallas"
+          },
+          "geonames_id": 4684888
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/05byvp690",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Albert Einstein College of Medicine",
+      "ror_id": "https://ror.org/05cf8a891",
+      "aliases": [
+        "AECOM",
+        "Einstein"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "NY",
+            "country_subdivision_name": "New York",
+            "lat": 40.84985,
+            "lng": -73.86641,
+            "name": "Bronx"
+          },
+          "geonames_id": 5110266
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/05cf8a891",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Weill Cornell Medicine",
+      "ror_id": "https://ror.org/02r109517",
+      "aliases": [
+        "WCM"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "NY",
+            "country_subdivision_name": "New York",
+            "lat": 40.71427,
+            "lng": -74.00597,
+            "name": "New York"
+          },
+          "geonames_id": 5128581
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02r109517",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "The University of Texas Medical Branch at Galveston",
+      "ror_id": "https://ror.org/016tfm930",
+      "aliases": [
+        "Centro Médico de la Universidad de Texas",
+        "The University of Texas Medical Branch",
+        "UTMB",
+        "University of Texas Medical Branch"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "TX",
+            "country_subdivision_name": "Texas",
+            "lat": 29.30135,
+            "lng": -94.7977,
+            "name": "Galveston"
+          },
+          "geonames_id": 4692883
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/016tfm930",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "University of Chicago",
+      "ror_id": "https://ror.org/024mw5h28",
+      "aliases": [
+        "UC",
+        "UChicago",
+        "Universidad de Chicago",
+        "Université de chicago"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "IL",
+            "country_subdivision_name": "Illinois",
+            "lat": 41.85003,
+            "lng": -87.65005,
+            "name": "Chicago"
+          },
+          "geonames_id": 4887398
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/024mw5h28",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "The Ohio State University",
+      "ror_id": "https://ror.org/00rs6vg23",
+      "aliases": [
+        "OSU",
+        "Universidad Estatal de Ohio",
+        "Université d'État de l'Ohio"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "OH",
+            "country_subdivision_name": "Ohio",
+            "lat": 39.96118,
+            "lng": -82.99879,
+            "name": "Columbus"
+          },
+          "geonames_id": 4509177
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/00rs6vg23",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "ror_id": "https://ror.org/047426m28",
+      "aliases": [
+        "UIUC",
+        "Universidad de Illinois en Urbana-Champaign",
+        "University of Illinois",
+        "Université de l'Illinois à Urbana-Champaign"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "IL",
+            "country_subdivision_name": "Illinois",
+            "lat": 40.11059,
+            "lng": -88.20727,
+            "name": "Urbana"
+          },
+          "geonames_id": 4914570
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/047426m28",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Wake Forest University Health Sciences",
+      "ror_id": "https://ror.org/046r1r105",
+      "aliases": [
+        "Wake Forest School of Medicine"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "NC",
+            "country_subdivision_name": "North Carolina",
+            "lat": 36.09986,
+            "lng": -80.24422,
+            "name": "Winston-Salem"
+          },
+          "geonames_id": 4499612
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/046r1r105",
+      "reason": "Explicitly reviewed subunit/system mapping; keep source unit name in resolution evidence.",
+      "parent_aliases": [
+        "Wake Forest School of Medicine"
+      ],
+      "parent_mapping_source": "https://school.wakehealth.edu/about-the-school/office-of-education-institutional-effectiveness/academic-accreditation"
+    },
+    {
+      "name": "St. Anne's University Hospital Brno",
+      "ror_id": "https://ror.org/049bjee35",
+      "aliases": [
+        "FNUSA",
+        "St. Anne's University Hospital"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "CZ",
+            "country_name": "Czechia",
+            "country_subdivision_code": "64",
+            "country_subdivision_name": "South Moravian",
+            "lat": 49.19522,
+            "lng": 16.60796,
+            "name": "Brno"
+          },
+          "geonames_id": 3078610
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/049bjee35",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Charité - Universitätsmedizin Berlin",
+      "ror_id": "https://ror.org/001w7jn25",
+      "aliases": [
+        "Charité"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "DE",
+            "country_name": "Germany",
+            "country_subdivision_code": "BE",
+            "country_subdivision_name": "State of Berlin",
+            "lat": 52.52437,
+            "lng": 13.41053,
+            "name": "Berlin"
+          },
+          "geonames_id": 2950159
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/001w7jn25",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "University of Maryland, Baltimore",
+      "ror_id": "https://ror.org/04rq5mt64",
+      "aliases": [
+        "UMAB",
+        "UMB"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MD",
+            "country_subdivision_name": "Maryland",
+            "lat": 39.29038,
+            "lng": -76.61219,
+            "name": "Baltimore"
+          },
+          "geonames_id": 4347778
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/04rq5mt64",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "St. Jude Children's Research Hospital",
+      "ror_id": "https://ror.org/02r3e0967",
+      "aliases": [],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "TN",
+            "country_subdivision_name": "Tennessee",
+            "lat": 35.14953,
+            "lng": -90.04898,
+            "name": "Memphis"
+          },
+          "geonames_id": 4641239
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02r3e0967",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "ror_id": "https://ror.org/046rm7j60",
+      "aliases": [
+        "State Normal School at Los Angeles",
+        "UC Los Angeles",
+        "UCLA",
+        "Universidad de California en Los Ángeles",
+        "University of California Southern Branch",
+        "University of California at Los Angeles",
+        "Université de Californie à Los Angeles"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "CA",
+            "country_subdivision_name": "California",
+            "lat": 34.05223,
+            "lng": -118.24368,
+            "name": "Los Angeles"
+          },
+          "geonames_id": 5368361
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/046rm7j60",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+      "ror_id": "https://ror.org/00adh9b73",
+      "aliases": [
+        "NIDDK"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MD",
+            "country_subdivision_name": "Maryland",
+            "lat": 38.98067,
+            "lng": -77.10026,
+            "name": "Bethesda"
+          },
+          "geonames_id": 4348599
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/00adh9b73",
+      "reason": "Missing or incomplete in the bundled April 2026 name/location index."
+    },
+    {
+      "name": "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
+      "ror_id": "https://ror.org/0493xsw21",
+      "aliases": [
+        "Berlin Institute of Health",
+        "BIH",
+        "Berlin Institute for Health Research",
+        "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
+        "Berliner Institut für Gesundheitsforschung"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "DE",
+            "country_name": "Germany",
+            "country_subdivision_code": "BE",
+            "country_subdivision_name": "State of Berlin",
+            "lat": 52.52437,
+            "lng": 13.41053,
+            "name": "Berlin"
+          },
+          "geonames_id": 2950159
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/0493xsw21",
+      "reason": "Verified abbreviated institutional name."
+    },
+    {
+      "name": "University of Florida",
+      "ror_id": "https://ror.org/02y3ad647",
+      "aliases": [
+        "UF",
+        "Universidad de la Florida",
+        "University of the State of Florida",
+        "Université de floride"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "FL",
+            "country_subdivision_name": "Florida",
+            "lat": 29.65163,
+            "lng": -82.32483,
+            "name": "Gainesville"
+          },
+          "geonames_id": 4156404
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02y3ad647",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "University of Illinois Chicago",
+      "ror_id": "https://ror.org/02mpq6x41",
+      "aliases": [
+        "UIC",
+        "University of Illinois at Chicago",
+        "University of Illinois at Chicago Circle",
+        "Université de l'illinois à chicago"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "IL",
+            "country_subdivision_name": "Illinois",
+            "lat": 41.85003,
+            "lng": -87.65005,
+            "name": "Chicago"
+          },
+          "geonames_id": 4887398
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/02mpq6x41",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "Georgia Institute of Technology",
+      "ror_id": "https://ror.org/01zkghx44",
+      "aliases": [
+        "GT",
+        "Georgia Tech",
+        "Instituto de Tecnología de Georgia"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "GA",
+            "country_subdivision_name": "Georgia",
+            "lat": 33.749,
+            "lng": -84.38798,
+            "name": "Atlanta"
+          },
+          "geonames_id": 4180439
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/01zkghx44",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "The University of Texas at Austin",
+      "ror_id": "https://ror.org/00hj54h04",
+      "aliases": [
+        "UT Austin",
+        "Universidad de Texas en Austin",
+        "Université du texas à austin"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "TX",
+            "country_subdivision_name": "Texas",
+            "lat": 30.26715,
+            "lng": -97.74306,
+            "name": "Austin"
+          },
+          "geonames_id": 4671654
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/00hj54h04",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "Marine Biological Laboratory",
+      "ror_id": "https://ror.org/046dg4z72",
+      "aliases": [
+        "MBL"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "MA",
+            "country_subdivision_name": "Massachusetts",
+            "lat": 41.52701,
+            "lng": -70.67324,
+            "name": "Woods Hole"
+          },
+          "geonames_id": 4956152
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/046dg4z72",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "Philipps University of Marburg",
+      "ror_id": "https://ror.org/01rdrb571",
+      "aliases": [
+        "Philipps-Universität Marburg",
+        "Universität Marburg",
+        "Marburg University",
+        "University of Marburg"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "EU",
+            "continent_name": "Europe",
+            "country_code": "DE",
+            "country_name": "Germany",
+            "country_subdivision_code": "HE",
+            "country_subdivision_name": "Hesse",
+            "lat": 50.80904,
+            "lng": 8.77069,
+            "name": "Marburg"
+          },
+          "geonames_id": 2873759
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/01rdrb571",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot.",
+      "alias_source": "https://www.uni-marburg.de/en"
+    },
+    {
+      "name": "University of Cincinnati",
+      "ror_id": "https://ror.org/01e3m7079",
+      "aliases": [
+        "UC",
+        "Universidad de Cincinnati",
+        "Université de cincinnati"
+      ],
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "OH",
+            "country_subdivision_name": "Ohio",
+            "lat": 39.12711,
+            "lng": -84.51439,
+            "name": "Cincinnati"
+          },
+          "geonames_id": 4508722
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://api.ror.org/v2/organizations/01e3m7079",
+      "reason": "Reviewed missing name or campus disambiguation in local snapshot."
+    },
+    {
+      "name": "Yale University",
+      "ror_id": "https://ror.org/03v76x132",
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "CT",
+            "country_subdivision_name": "Connecticut",
+            "lat": 41.30815,
+            "lng": -72.92816,
+            "name": "New Haven"
+          },
+          "geonames_id": 4839366
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://medicine.yale.edu/about/",
+      "reason": "Explicitly named medical-school subunit mapped to its university; original affiliation text retained.",
+      "aliases": [
+        "Yale School of Medicine"
+      ],
+      "parent_aliases": [
+        "Yale School of Medicine"
+      ],
+      "parent_mapping_source": "https://medicine.yale.edu/about/"
+    },
+    {
+      "name": "Stanford University",
+      "ror_id": "https://ror.org/00f54p054",
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "CA",
+            "country_subdivision_name": "California",
+            "lat": 37.42411,
+            "lng": -122.16608,
+            "name": "Stanford"
+          },
+          "geonames_id": 5398563
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://www.stanford.edu/academics/schools/",
+      "reason": "Explicitly named medical-school subunit mapped to its university; original affiliation text retained.",
+      "aliases": [
+        "Stanford School of Medicine",
+        "Stanford University School of Medicine"
+      ],
+      "parent_aliases": [
+        "Stanford School of Medicine",
+        "Stanford University School of Medicine"
+      ],
+      "parent_mapping_source": "https://www.stanford.edu/academics/schools/"
+    },
+    {
+      "name": "New York University",
+      "ror_id": "https://ror.org/0190ak572",
+      "locations": [
+        {
+          "geonames_details": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_subdivision_code": "NY",
+            "country_subdivision_name": "New York",
+            "lat": 40.71427,
+            "lng": -74.00597,
+            "name": "New York"
+          },
+          "geonames_id": 5128581
+        }
+      ],
+      "status": "active",
+      "verified_on": "2026-10-08",
+      "source": "https://med.nyu.edu/research/office-science-research/clinical-research/resources-sponsors",
+      "reason": "Explicitly named medical-school subunit mapped to its university; original affiliation text retained.",
+      "aliases": [
+        "NYU Grossman School of Medicine",
+        "New York University Grossman School of Medicine"
+      ],
+      "parent_aliases": [
+        "NYU Grossman School of Medicine",
+        "New York University Grossman School of Medicine"
+      ],
+      "additional_sources": [
+        "https://bulletins.nyu.edu/nyu/about/locations-facilities/"
+      ],
+      "parent_mapping_source": "https://med.nyu.edu/research/office-science-research/clinical-research/resources-sponsors"
+    }
+  ],
+  "country_aliases": {
+    "People's Republic of China": "China",
+    "PR China": "China",
+    "P R China": "China",
+    "Czech Republic": "Czechia",
+    "Czechia": "Czechia",
+    "South Korea": "South Korea",
+    "Republic of Korea": "South Korea",
+    "Korea": "South Korea",
+    "United States of America": "United States",
+    "United States of America the": "United States",
+    "United Kingdom of Great Britain and Northern Ireland": "United Kingdom",
+    "United Kingdom": "United Kingdom",
+    "England": "United Kingdom",
+    "Scotland": "United Kingdom",
+    "Wales": "United Kingdom",
+    "Northern Ireland": "United Kingdom",
+    "México": "Mexico",
+    "Netherlands": "The Netherlands",
+    "The Netherlands": "The Netherlands",
+    "Turkey": "Türkiye",
+    "Turkiye": "Türkiye",
+    "Türkiye": "Türkiye"
+  },
+  "country_codes": {
+    "USA": "United States",
+    "US": "United States",
+    "UK": "United Kingdom",
+    "GB": "United Kingdom",
+    "PRC": "China",
+    "CHN": "China",
+    "CN": "China",
+    "UAE": "United Arab Emirates"
+  },
+  "notes": [
+    "Only verified parent aliases are mapped to a broader organization.",
+    "Acronyms of three letters or fewer need explicit compatible country evidence.",
+    "Empty, unverified and geographically ambiguous affiliations remain unresolved."
+  ]
+}

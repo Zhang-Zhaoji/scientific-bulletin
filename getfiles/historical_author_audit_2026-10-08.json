@@ -1,0 +1,813 @@
+{
+  "status": "verified",
+  "verified_on": "2026-10-08",
+  "regular_issues": 30,
+  "weekly_paper_occurrences": 14417,
+  "unique_database_articles": 14121,
+  "counting_unit": "Author records count each paper-author occurrence, including repeated papers in weekly archives; they are not unique people.",
+  "author_record_totals": {
+    "before_authors": 104516,
+    "before_affiliated_authors": 36181,
+    "after_authors": 133782,
+    "after_affiliated_authors": 115745,
+    "source_verified": 10860,
+    "source_orcids": 51464
+  },
+  "source_orcid_unique": 46435,
+  "database_country_coverage": {
+    "before": 5137,
+    "after": 11926,
+    "total": 14121
+  },
+  "database_institution_coverage": {
+    "before": 5154,
+    "after": 11724,
+    "total": 14121
+  },
+  "database_before": {
+    "counts": {
+      "countries": 285,
+      "authors": 115692,
+      "institutions": 7382,
+      "articles": 14121,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 13022,
+      "author_institutions": 37352,
+      "article_authors": 103099,
+      "article_institutions": 14324,
+      "article_countries": 7768,
+      "article_themes": 14196,
+      "article_subthemes": 9075,
+      "article_crosstags": 29087
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-04"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "database_after": {
+    "counts": {
+      "countries": 288,
+      "authors": 145814,
+      "institutions": 12501,
+      "articles": 14121,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 13022,
+      "author_institutions": 147146,
+      "article_authors": 131469,
+      "article_institutions": 49762,
+      "article_countries": 21357,
+      "article_themes": 14196,
+      "article_subthemes": 9075,
+      "article_crosstags": 29087,
+      "article_author_institutions": 154867
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-04"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "full_slim_counts_and_publication_affiliation_links_match": true,
+  "article_ids_dates_metadata_scores_preserved": true,
+  "all_editorial_blocks_and_assessments_preserved": true,
+  "source_affiliation_evidence_missing": 0,
+  "ror_index": {
+    "official_records": 144717,
+    "statuses": {
+      "active": 141387,
+      "inactive": 1897,
+      "withdrawn": 1433
+    },
+    "display_names": 141931,
+    "unique_aliases": 165505,
+    "ambiguous_aliases": 8124,
+    "ambiguous_display_names": 826,
+    "release_id": 23187250,
+    "version": "v2.14",
+    "source": "https://zenodo.org/records/23187250",
+    "file": "v2.14-2026-10-06-ror-data.zip",
+    "md5": "e16a5ceb8ff06f1a274dbd9288fe0159",
+    "verified_on": "2026-10-08",
+    "overrides_preserved": true,
+    "inactive_policy": "Retained for historical affiliations; withdrawn records excluded."
+  },
+  "reviewed_override_organizations": 35,
+  "source_fetch": {
+    "pubmed_fetch_audit.json": {
+      "requested": 9539,
+      "cached": 808,
+      "fetched": 8718,
+      "failed_batches": []
+    },
+    "arxiv_fetch_audit.json": {
+      "requested": 1371,
+      "status_counts": {
+        "404": 234,
+        "200": 1137
+      },
+      "authors_with_affiliation": 3151
+    },
+    "doi_fetch_audit.json": {
+      "requested": 1405,
+      "matched": 1043,
+      "failed_batches": []
+    }
+  },
+  "unresolved_affiliation_texts": 8673,
+  "same_title_variant_policy": "Database projection chooses the original stored DOI/PMID/URL identity; each weekly version stays in its archive.",
+  "legacy_orcid_policy": "Unverified author-profile identifiers are archived, excluded from publication identity matching; source check digits and within-paper collisions checked.",
+  "limitations": [
+    "Coverage is not measured accuracy. Missing source affiliations, ambiguous names and absent registry units remain unresolved.",
+    "Preprint index metadata can describe a later version; only uniquely matched authors receive its explicit units or identifiers.",
+    "Legacy h-index/citation metrics were not revalidated."
+  ],
+  "baseline_database_backup": "tmps\\affiliation_history_20261008\\database_model_checked\\literature_before_20261008_204141.db",
+  "weeks": [
+    {
+      "week": "2026-03-14",
+      "paper_occurrences": 164,
+      "author_records": {
+        "before_authors": 833,
+        "before_affiliated_authors": 634,
+        "after_authors": 1658,
+        "after_affiliated_authors": 1493,
+        "source_verified": 120,
+        "source_orcids": 613
+      },
+      "papers_with_source_affiliation_before": 123,
+      "papers_with_source_affiliation_after": 129,
+      "papers_with_country_before": 121,
+      "papers_with_country_after": 129,
+      "papers_with_resolved_institution_after": 127,
+      "report": "LLM_Results\\report_20260315_1035.md",
+      "editorial_blocks_preserved": 84,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-03-21",
+      "paper_occurrences": 214,
+      "author_records": {
+        "before_authors": 1557,
+        "before_affiliated_authors": 1011,
+        "after_authors": 2013,
+        "after_affiliated_authors": 1656,
+        "source_verified": 137,
+        "source_orcids": 558
+      },
+      "papers_with_source_affiliation_before": 124,
+      "papers_with_source_affiliation_after": 161,
+      "papers_with_country_before": 121,
+      "papers_with_country_after": 160,
+      "papers_with_resolved_institution_after": 156,
+      "report": "LLM_Results\\report_20260321_0158.md",
+      "editorial_blocks_preserved": 114,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-03-28",
+      "paper_occurrences": 111,
+      "author_records": {
+        "before_authors": 773,
+        "before_affiliated_authors": 417,
+        "after_authors": 1243,
+        "after_affiliated_authors": 1105,
+        "source_verified": 76,
+        "source_orcids": 604
+      },
+      "papers_with_source_affiliation_before": 47,
+      "papers_with_source_affiliation_after": 88,
+      "papers_with_country_before": 46,
+      "papers_with_country_after": 87,
+      "papers_with_resolved_institution_after": 85,
+      "report": "LLM_Results\\report_20260328_0042.md",
+      "editorial_blocks_preserved": 69,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-04-04",
+      "paper_occurrences": 191,
+      "author_records": {
+        "before_authors": 747,
+        "before_affiliated_authors": 270,
+        "after_authors": 2339,
+        "after_affiliated_authors": 2150,
+        "source_verified": 133,
+        "source_orcids": 1050
+      },
+      "papers_with_source_affiliation_before": 70,
+      "papers_with_source_affiliation_after": 150,
+      "papers_with_country_before": 70,
+      "papers_with_country_after": 150,
+      "papers_with_resolved_institution_after": 148,
+      "report": "LLM_Results\\report_20260404_0211.md",
+      "editorial_blocks_preserved": 136,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-04-11",
+      "paper_occurrences": 388,
+      "author_records": {
+        "before_authors": 1664,
+        "before_affiliated_authors": 561,
+        "after_authors": 4161,
+        "after_affiliated_authors": 4036,
+        "source_verified": 341,
+        "source_orcids": 1857
+      },
+      "papers_with_source_affiliation_before": 143,
+      "papers_with_source_affiliation_after": 362,
+      "papers_with_country_before": 136,
+      "papers_with_country_after": 358,
+      "papers_with_resolved_institution_after": 350,
+      "report": "LLM_Results\\report_20260411_1349.md",
+      "editorial_blocks_preserved": 165,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-04-18",
+      "paper_occurrences": 377,
+      "author_records": {
+        "before_authors": 2391,
+        "before_affiliated_authors": 962,
+        "after_authors": 3765,
+        "after_affiliated_authors": 3424,
+        "source_verified": 298,
+        "source_orcids": 1657
+      },
+      "papers_with_source_affiliation_before": 159,
+      "papers_with_source_affiliation_after": 310,
+      "papers_with_country_before": 151,
+      "papers_with_country_after": 309,
+      "papers_with_resolved_institution_after": 305,
+      "report": "LLM_Results\\report_20260418_1759.md",
+      "editorial_blocks_preserved": 167,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-04-25",
+      "paper_occurrences": 426,
+      "author_records": {
+        "before_authors": 2587,
+        "before_affiliated_authors": 1229,
+        "after_authors": 4142,
+        "after_affiliated_authors": 3820,
+        "source_verified": 347,
+        "source_orcids": 1696
+      },
+      "papers_with_source_affiliation_before": 214,
+      "papers_with_source_affiliation_after": 358,
+      "papers_with_country_before": 202,
+      "papers_with_country_after": 357,
+      "papers_with_resolved_institution_after": 351,
+      "report": "LLM_Results\\report_20260425_1125.md",
+      "editorial_blocks_preserved": 182,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-05-02",
+      "paper_occurrences": 407,
+      "author_records": {
+        "before_authors": 2840,
+        "before_affiliated_authors": 855,
+        "after_authors": 4031,
+        "after_affiliated_authors": 3681,
+        "source_verified": 346,
+        "source_orcids": 1722
+      },
+      "papers_with_source_affiliation_before": 135,
+      "papers_with_source_affiliation_after": 353,
+      "papers_with_country_before": 129,
+      "papers_with_country_after": 351,
+      "papers_with_resolved_institution_after": 347,
+      "report": "LLM_Results\\report_20260502_0211.md",
+      "editorial_blocks_preserved": 148,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-05-10",
+      "paper_occurrences": 413,
+      "author_records": {
+        "before_authors": 3318,
+        "before_affiliated_authors": 937,
+        "after_authors": 4412,
+        "after_affiliated_authors": 4109,
+        "source_verified": 367,
+        "source_orcids": 2207
+      },
+      "papers_with_source_affiliation_before": 121,
+      "papers_with_source_affiliation_after": 365,
+      "papers_with_country_before": 116,
+      "papers_with_country_after": 365,
+      "papers_with_resolved_institution_after": 365,
+      "report": "LLM_Results\\report_20260510_2334.md",
+      "editorial_blocks_preserved": 167,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-05-16",
+      "paper_occurrences": 518,
+      "author_records": {
+        "before_authors": 4014,
+        "before_affiliated_authors": 1999,
+        "after_authors": 5299,
+        "after_affiliated_authors": 4873,
+        "source_verified": 417,
+        "source_orcids": 2147
+      },
+      "papers_with_source_affiliation_before": 233,
+      "papers_with_source_affiliation_after": 453,
+      "papers_with_country_before": 227,
+      "papers_with_country_after": 451,
+      "papers_with_resolved_institution_after": 448,
+      "report": "LLM_Results\\report_20260517_1108.md",
+      "editorial_blocks_preserved": 239,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-05-23",
+      "paper_occurrences": 474,
+      "author_records": {
+        "before_authors": 3126,
+        "before_affiliated_authors": 1641,
+        "after_authors": 4735,
+        "after_affiliated_authors": 4522,
+        "source_verified": 402,
+        "source_orcids": 2247
+      },
+      "papers_with_source_affiliation_before": 241,
+      "papers_with_source_affiliation_after": 434,
+      "papers_with_country_before": 226,
+      "papers_with_country_after": 433,
+      "papers_with_resolved_institution_after": 427,
+      "report": "LLM_Results\\report_20260524_0908.md",
+      "editorial_blocks_preserved": 200,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-05-30",
+      "paper_occurrences": 402,
+      "author_records": {
+        "before_authors": 2906,
+        "before_affiliated_authors": 620,
+        "after_authors": 4264,
+        "after_affiliated_authors": 3870,
+        "source_verified": 319,
+        "source_orcids": 1819
+      },
+      "papers_with_source_affiliation_before": 108,
+      "papers_with_source_affiliation_after": 339,
+      "papers_with_country_before": 104,
+      "papers_with_country_after": 335,
+      "papers_with_resolved_institution_after": 329,
+      "report": "LLM_Results\\report_20260531_1448.md",
+      "editorial_blocks_preserved": 155,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-06-07",
+      "paper_occurrences": 386,
+      "author_records": {
+        "before_authors": 2446,
+        "before_affiliated_authors": 436,
+        "after_authors": 3717,
+        "after_affiliated_authors": 3609,
+        "source_verified": 336,
+        "source_orcids": 1653
+      },
+      "papers_with_source_affiliation_before": 119,
+      "papers_with_source_affiliation_after": 359,
+      "papers_with_country_before": 109,
+      "papers_with_country_after": 356,
+      "papers_with_resolved_institution_after": 350,
+      "report": "LLM_Results\\report_20260608_1549.md",
+      "editorial_blocks_preserved": 205,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-06-13",
+      "paper_occurrences": 578,
+      "author_records": {
+        "before_authors": 4166,
+        "before_affiliated_authors": 1767,
+        "after_authors": 5665,
+        "after_affiliated_authors": 4920,
+        "source_verified": 427,
+        "source_orcids": 2265
+      },
+      "papers_with_source_affiliation_before": 247,
+      "papers_with_source_affiliation_after": 513,
+      "papers_with_country_before": 239,
+      "papers_with_country_after": 491,
+      "papers_with_resolved_institution_after": 479,
+      "report": "LLM_Results\\report_20260613_1654.md",
+      "editorial_blocks_preserved": 282,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-06-20",
+      "paper_occurrences": 438,
+      "author_records": {
+        "before_authors": 3361,
+        "before_affiliated_authors": 1359,
+        "after_authors": 4772,
+        "after_affiliated_authors": 4414,
+        "source_verified": 346,
+        "source_orcids": 2260
+      },
+      "papers_with_source_affiliation_before": 172,
+      "papers_with_source_affiliation_after": 401,
+      "papers_with_country_before": 167,
+      "papers_with_country_after": 395,
+      "papers_with_resolved_institution_after": 388,
+      "report": "LLM_Results\\report_20260620_2005.md",
+      "editorial_blocks_preserved": 202,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-06-27",
+      "paper_occurrences": 348,
+      "author_records": {
+        "before_authors": 2834,
+        "before_affiliated_authors": 1198,
+        "after_authors": 3511,
+        "after_affiliated_authors": 3135,
+        "source_verified": 258,
+        "source_orcids": 1539
+      },
+      "papers_with_source_affiliation_before": 122,
+      "papers_with_source_affiliation_after": 313,
+      "papers_with_country_before": 118,
+      "papers_with_country_after": 306,
+      "papers_with_resolved_institution_after": 302,
+      "report": "LLM_Results\\report_20260627_1247.md",
+      "editorial_blocks_preserved": 178,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-07-04",
+      "paper_occurrences": 656,
+      "author_records": {
+        "before_authors": 5167,
+        "before_affiliated_authors": 1162,
+        "after_authors": 6730,
+        "after_affiliated_authors": 6101,
+        "source_verified": 566,
+        "source_orcids": 2648
+      },
+      "papers_with_source_affiliation_before": 189,
+      "papers_with_source_affiliation_after": 597,
+      "papers_with_country_before": 177,
+      "papers_with_country_after": 594,
+      "papers_with_resolved_institution_after": 590,
+      "report": "LLM_Results\\report_20260705_0111.md",
+      "editorial_blocks_preserved": 300,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-07-11",
+      "paper_occurrences": 982,
+      "author_records": {
+        "before_authors": 7939,
+        "before_affiliated_authors": 4047,
+        "after_authors": 8815,
+        "after_affiliated_authors": 7761,
+        "source_verified": 802,
+        "source_orcids": 1780
+      },
+      "papers_with_source_affiliation_before": 548,
+      "papers_with_source_affiliation_after": 843,
+      "papers_with_country_before": 508,
+      "papers_with_country_after": 837,
+      "papers_with_resolved_institution_after": 824,
+      "report": "LLM_Results\\report_20260711_2030.md",
+      "editorial_blocks_preserved": 344,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-07-18",
+      "paper_occurrences": 507,
+      "author_records": {
+        "before_authors": 3827,
+        "before_affiliated_authors": 706,
+        "after_authors": 4785,
+        "after_affiliated_authors": 4169,
+        "source_verified": 408,
+        "source_orcids": 1956
+      },
+      "papers_with_source_affiliation_before": 114,
+      "papers_with_source_affiliation_after": 434,
+      "papers_with_country_before": 109,
+      "papers_with_country_after": 427,
+      "papers_with_resolved_institution_after": 415,
+      "report": "LLM_Results\\report_20260718_1337.md",
+      "editorial_blocks_preserved": 230,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-07-25",
+      "paper_occurrences": 558,
+      "author_records": {
+        "before_authors": 3959,
+        "before_affiliated_authors": 932,
+        "after_authors": 4893,
+        "after_affiliated_authors": 4310,
+        "source_verified": 439,
+        "source_orcids": 2172
+      },
+      "papers_with_source_affiliation_before": 98,
+      "papers_with_source_affiliation_after": 475,
+      "papers_with_country_before": 97,
+      "papers_with_country_after": 466,
+      "papers_with_resolved_institution_after": 461,
+      "report": "LLM_Results\\report_20260726_2350.md",
+      "editorial_blocks_preserved": 238,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-08-02",
+      "paper_occurrences": 652,
+      "author_records": {
+        "before_authors": 4349,
+        "before_affiliated_authors": 960,
+        "after_authors": 5244,
+        "after_affiliated_authors": 4523,
+        "source_verified": 525,
+        "source_orcids": 2154
+      },
+      "papers_with_source_affiliation_before": 115,
+      "papers_with_source_affiliation_after": 541,
+      "papers_with_country_before": 113,
+      "papers_with_country_after": 535,
+      "papers_with_resolved_institution_after": 527,
+      "report": "LLM_Results\\report_20260802_1723.md",
+      "editorial_blocks_preserved": 331,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-08-09",
+      "paper_occurrences": 437,
+      "author_records": {
+        "before_authors": 3176,
+        "before_affiliated_authors": 390,
+        "after_authors": 3896,
+        "after_affiliated_authors": 3234,
+        "source_verified": 313,
+        "source_orcids": 1393
+      },
+      "papers_with_source_affiliation_before": 44,
+      "papers_with_source_affiliation_after": 345,
+      "papers_with_country_before": 43,
+      "papers_with_country_after": 336,
+      "papers_with_resolved_institution_after": 331,
+      "report": "LLM_Results\\report_20260809_0123.md",
+      "editorial_blocks_preserved": 236,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-08-17",
+      "paper_occurrences": 503,
+      "author_records": {
+        "before_authors": 3745,
+        "before_affiliated_authors": 737,
+        "after_authors": 4498,
+        "after_affiliated_authors": 4020,
+        "source_verified": 403,
+        "source_orcids": 1791
+      },
+      "papers_with_source_affiliation_before": 93,
+      "papers_with_source_affiliation_after": 423,
+      "papers_with_country_before": 85,
+      "papers_with_country_after": 418,
+      "papers_with_resolved_institution_after": 410,
+      "report": "LLM_Results\\report_20260817_0139.md",
+      "editorial_blocks_preserved": 233,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-08-23",
+      "paper_occurrences": 544,
+      "author_records": {
+        "before_authors": 3853,
+        "before_affiliated_authors": 752,
+        "after_authors": 4338,
+        "after_affiliated_authors": 3831,
+        "source_verified": 425,
+        "source_orcids": 1902
+      },
+      "papers_with_source_affiliation_before": 88,
+      "papers_with_source_affiliation_after": 462,
+      "papers_with_country_before": 80,
+      "papers_with_country_after": 457,
+      "papers_with_resolved_institution_after": 450,
+      "report": "LLM_Results\\report_20260823_1005.md",
+      "editorial_blocks_preserved": 255,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-08-29",
+      "paper_occurrences": 284,
+      "author_records": {
+        "before_authors": 1926,
+        "before_affiliated_authors": 0,
+        "after_authors": 2678,
+        "after_affiliated_authors": 2236,
+        "source_verified": 244,
+        "source_orcids": 1114
+      },
+      "papers_with_source_affiliation_before": 0,
+      "papers_with_source_affiliation_after": 217,
+      "papers_with_country_before": 0,
+      "papers_with_country_after": 215,
+      "papers_with_resolved_institution_after": 208,
+      "report": "LLM_Results\\report_20260829_0123.md",
+      "editorial_blocks_preserved": 156,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-09-06",
+      "paper_occurrences": 591,
+      "author_records": {
+        "before_authors": 5179,
+        "before_affiliated_authors": 805,
+        "after_authors": 5819,
+        "after_affiliated_authors": 4431,
+        "source_verified": 451,
+        "source_orcids": 2198
+      },
+      "papers_with_source_affiliation_before": 91,
+      "papers_with_source_affiliation_after": 473,
+      "papers_with_country_before": 88,
+      "papers_with_country_after": 467,
+      "papers_with_resolved_institution_after": 460,
+      "report": "LLM_Results\\report_20260906_0123.md",
+      "editorial_blocks_preserved": 273,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-09-13",
+      "paper_occurrences": 509,
+      "author_records": {
+        "before_authors": 3503,
+        "before_affiliated_authors": 12,
+        "after_authors": 3696,
+        "after_affiliated_authors": 3038,
+        "source_verified": 343,
+        "source_orcids": 1229
+      },
+      "papers_with_source_affiliation_before": 7,
+      "papers_with_source_affiliation_after": 384,
+      "papers_with_country_before": 6,
+      "papers_with_country_after": 382,
+      "papers_with_resolved_institution_after": 370,
+      "report": "LLM_Results\\report_20260913_0123.md",
+      "editorial_blocks_preserved": 237,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-09-20",
+      "paper_occurrences": 583,
+      "author_records": {
+        "before_authors": 4185,
+        "before_affiliated_authors": 746,
+        "after_authors": 4431,
+        "after_affiliated_authors": 3799,
+        "source_verified": 425,
+        "source_orcids": 1822
+      },
+      "papers_with_source_affiliation_before": 96,
+      "papers_with_source_affiliation_after": 462,
+      "papers_with_country_before": 93,
+      "papers_with_country_after": 455,
+      "papers_with_resolved_institution_after": 449,
+      "report": "LLM_Results\\report_20260920_1209.md",
+      "editorial_blocks_preserved": 244,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-09-27",
+      "paper_occurrences": 702,
+      "author_records": {
+        "before_authors": 5115,
+        "before_affiliated_authors": 2586,
+        "after_authors": 5202,
+        "after_affiliated_authors": 2768,
+        "source_verified": 259,
+        "source_orcids": 1050
+      },
+      "papers_with_source_affiliation_before": 569,
+      "papers_with_source_affiliation_after": 609,
+      "papers_with_country_before": 0,
+      "papers_with_country_after": 567,
+      "papers_with_resolved_institution_after": 560,
+      "report": "LLM_Results\\report_20260927.md",
+      "editorial_blocks_preserved": 499,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    },
+    {
+      "week": "2026-10-04",
+      "paper_occurrences": 1074,
+      "author_records": {
+        "before_authors": 9030,
+        "before_affiliated_authors": 6450,
+        "after_authors": 9030,
+        "after_affiliated_authors": 6707,
+        "source_verified": 587,
+        "source_orcids": 2361
+      },
+      "papers_with_source_affiliation_before": 946,
+      "papers_with_source_affiliation_after": 1009,
+      "papers_with_country_before": 896,
+      "papers_with_country_after": 971,
+      "papers_with_resolved_institution_after": 941,
+      "report": "LLM_Results\\report_20261004.md",
+      "editorial_blocks_preserved": 528,
+      "assessment_digest_preserved": true,
+      "original_article_fields_preserved": true
+    }
+  ],
+  "website_render_validation": {
+    "report_20260829_0123": {
+      "cards": 156,
+      "cover": 1448,
+      "overflow": false,
+      "source_note": true,
+      "title": "神经科学快讯·第025期 斑马鱼全脑内感受询问、ERBB4驱动AD病理与软体机器人康复 (2026-08-29) | Neuroscience Bulletin"
+    },
+    "report_20260913_0123": {
+      "cards": 237,
+      "cover": 1448,
+      "overflow": false,
+      "source_note": true,
+      "title": "神经科学快讯·第027期 新皮层长程抑制驱动睡眠同步化、血清素投射组架构与全器官成像 (2026-09-13) | Neuroscience Bulletin"
+    },
+    "report_20261004": {
+      "cards": 528,
+      "cover": 1448,
+      "overflow": false,
+      "source_note": true,
+      "title": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04) | Neuroscience Bulletin"
+    },
+    "2026-08-29_heatmap": {
+      "countries": 42,
+      "map": true,
+      "overflow": false,
+      "sum": 211
+    },
+    "2026-09-13_heatmap": {
+      "countries": 34,
+      "map": true,
+      "overflow": false,
+      "sum": 311
+    },
+    "2026-10-04_heatmap": {
+      "countries": 51,
+      "map": true,
+      "overflow": false,
+      "sum": 668
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "status": "passed"
+  },
+  "regression_tests": {
+    "passed": 66,
+    "log": "tmps\\affiliation_history_20261008\\all_tests_final.log"
+  }
+}

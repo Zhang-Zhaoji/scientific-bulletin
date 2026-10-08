@@ -1,0 +1,247 @@
+{
+  "status": "audited",
+  "input": "D:\\working\\scientific bulletin\\getfiles\\affiliation_review_queue_2026-10-08.jsonl",
+  "distinct_affiliation_texts": 8673,
+  "city_status_counts": {
+    "unresolved": 1501,
+    "matched": 6213,
+    "ambiguous": 905,
+    "matched_with_conflict": 54
+  },
+  "author_record_occurrences_by_status": {
+    "unresolved": 3267,
+    "matched": 12927,
+    "ambiguous": 1850,
+    "matched_with_conflict": 95
+  },
+  "addresses_with_new_country_candidates": 0,
+  "llm_review_items": 2460,
+  "llm_calls_performed": 0,
+  "automatic_writeback": false,
+  "examples": [
+    {
+      "affiliation": "GNOME Diagnostics, Powell, OH 143081.",
+      "source_examples": [
+        {
+          "title": "MiR-155-driven loss of ICOSL and SOCS1 in EBV+ gastric cancers renders abundant cytotoxic T cells ineffective, enabling immune evasion.",
+          "doi": "10.1073/pnas.2536375123",
+          "author": "Gerard J Nuovo",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/42102000/"
+        }
+      ],
+      "existing_countries": [
+        "United States"
+      ],
+      "city_evidence": {
+        "cities": [
+          {
+            "id": 5167350,
+            "name": "Powell",
+            "country_code": "US",
+            "region_code": "US.OH",
+            "latitude": 40.15784,
+            "longitude": -83.07519,
+            "population": 12972,
+            "feature_code": "PPL",
+            "region": "Ohio",
+            "country": "United States",
+            "source_url": "https://www.geonames.org/5167350",
+            "matched_text": "Powell",
+            "method": "exact_address_city"
+          }
+        ],
+        "ambiguous": [],
+        "warnings": [
+          {
+            "type": "invalid_postal_format",
+            "value": "143081",
+            "country_code": "US"
+          }
+        ],
+        "status": "matched_with_conflict",
+        "source": "GeoNames cities500; postal checks cover DE, US"
+      },
+      "review_status": "pending; no LLM call performed",
+      "writeback_approved": false
+    },
+    {
+      "affiliation": "GNOME Diagnostics, Powell, OH 43081.",
+      "source_examples": [
+        {
+          "title": "MicroRNA-driven regulation of immunosuppressive microenvironment in hepatocellular carcinoma.",
+          "doi": "10.1073/pnas.2618249123",
+          "author": "Gerard J Nuovo",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/42804630/"
+        }
+      ],
+      "existing_countries": [
+        "United States"
+      ],
+      "city_evidence": {
+        "cities": [
+          {
+            "id": 5167350,
+            "name": "Powell",
+            "country_code": "US",
+            "region_code": "US.OH",
+            "latitude": 40.15784,
+            "longitude": -83.07519,
+            "population": 12972,
+            "feature_code": "PPL",
+            "region": "Ohio",
+            "country": "United States",
+            "source_url": "https://www.geonames.org/5167350",
+            "matched_text": "Powell",
+            "method": "exact_address_city"
+          }
+        ],
+        "ambiguous": [],
+        "warnings": [
+          {
+            "type": "city_postal_conflict",
+            "city": "Powell",
+            "postal_code": "43081",
+            "postal_places": [
+              "Westerville"
+            ],
+            "postal_regions": [
+              "Ohio"
+            ],
+            "country_code": "US"
+          }
+        ],
+        "status": "matched_with_conflict",
+        "source": "GeoNames cities500; postal checks cover DE, US"
+      },
+      "review_status": "pending; no LLM call performed",
+      "writeback_approved": false
+    },
+    {
+      "affiliation": "Institute for Applied Training Science, Leipzig 04109, Germany.",
+      "source_examples": [
+        {
+          "title": "The Mader model of muscle energy metabolism simulates key metabolic exercise phenomena.",
+          "doi": "10.1073/pnas.2525555123",
+          "author": "Anna Katharina Dunst",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/42804649/"
+        }
+      ],
+      "existing_countries": [
+        "Germany"
+      ],
+      "city_evidence": {
+        "cities": [
+          {
+            "id": 2879139,
+            "name": "Leipzig",
+            "country_code": "DE",
+            "region_code": "DE.13",
+            "latitude": 51.33962,
+            "longitude": 12.37129,
+            "population": 504971,
+            "feature_code": "PPLA3",
+            "region": "Saxony",
+            "country": "Germany",
+            "source_url": "https://www.geonames.org/2879139",
+            "matched_text": "Leipzig 04109",
+            "method": "exact_address_city"
+          }
+        ],
+        "ambiguous": [],
+        "warnings": [],
+        "status": "matched",
+        "source": "GeoNames cities500; postal checks cover DE, US"
+      },
+      "review_status": "pending; no LLM call performed",
+      "writeback_approved": false
+    }
+  ],
+  "new_country_examples": [],
+  "city_index": {
+    "source": "https://www.geonames.org/",
+    "licence": "CC BY 4.0",
+    "dataset": "cities500",
+    "coverage": "Cities with population over 500 or administrative seats; smaller settlements can be absent.",
+    "postal_countries": [
+      "DE",
+      "US"
+    ],
+    "built_on": "2026-10-08",
+    "counts": {
+      "countries": 252,
+      "regions": 3865,
+      "cities": 236014,
+      "city_aliases": 1115626,
+      "postcodes": 64787
+    },
+    "downloads": {
+      "cities500.zip": {
+        "source_url": "https://download.geonames.org/export/dump/cities500.zip",
+        "bytes": 13869905,
+        "sha256": "b5782a2f689e3d7acc9f57d543f481610e207bc07b2ba5709c351b78bd34cbed"
+      },
+      "admin1CodesASCII.txt": {
+        "source_url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+        "bytes": 151583,
+        "sha256": "1da92a6323a5fec3176f3f743bf4cf4040fd56a876da55e46fbca23c863aa60a"
+      },
+      "countryInfo.txt": {
+        "source_url": "https://download.geonames.org/export/dump/countryInfo.txt",
+        "bytes": 31678,
+        "sha256": "93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512"
+      },
+      "postal_US.zip": {
+        "source_url": "https://download.geonames.org/export/zip/US.zip",
+        "bytes": 634329,
+        "sha256": "7e34efabd0a38185ec9897589b5edffa57cb3ad9be74a995da07e1c719cf54cf"
+      },
+      "postal_DE.zip": {
+        "source_url": "https://download.geonames.org/export/zip/DE.zip",
+        "bytes": 383822,
+        "sha256": "59376351237fbd603fc0ee7df413456b6073d5aa3986646a213224dd85a260cb"
+      }
+    }
+  },
+  "limitations": [
+    "City matching does not identify the institution.",
+    "GeoNames cities500 excludes some smaller settlements.",
+    "Postal consistency is an indication for source review; it does not prove a paper address is wrong.",
+    "Postal checks currently cover US and DE only."
+  ],
+  "production_history_bulk_update_applied": true,
+  "history_rewrite_audit": "getfiles/city_rule_rewrite_audit_2026-10-08.json",
+  "regression_tests": {
+    "passed": 66
+  },
+  "prototype_validation": {
+    "leipzig": {
+      "canvas": true,
+      "overflow": false,
+      "results": 1,
+      "status": "已匹配地址中的城市",
+      "text": "LeipzigSaxony · Germany纬度 51.33962，经度 12.37129查看地名来源",
+      "warnings": ""
+    },
+    "powell": {
+      "canvas": true,
+      "overflow": false,
+      "results": 1,
+      "status": "已定位城市，地址存在冲突",
+      "text": "PowellOhio · United States纬度 40.15784，经度 -83.07519查看地名来源",
+      "warnings": "Powell 与邮编 43081 不一致：邮编库对应 Westerville（Ohio）。请核对原文或机构官网。"
+    },
+    "paris": {
+      "canvas": true,
+      "overflow": false,
+      "results": 12,
+      "status": "城市存在歧义，请补充国家或州省",
+      "text": "ParisÎle-de-France · France纬度 48.85341，经度 2.3488查看地名来源ParysFree State · South Africa纬度 -26.9033，经度 27.45727查看地名来源ParisTexas · United States纬度 33.66094，经度 -95.55551查看地名来源ParisOntario · Canada纬度 43.2，经度 -80.38333查看地名来源ParisTennessee · United States纬度 36.302，经度 -88.32671查看地名来源ParisKentucky · United States纬度 38.2098，经度 -84.25299查看地名来源ParisIllinois · United States纬度 39.61115，经度 -87.69614查看地名来源SwainsboroGeorgia · United States纬度 32.59739，经度 -82.33374查看地名来源KosciuskoMississippi · United States纬度 33.058，经度 -89.58956查看地名来源ParisMaine · United States纬度 44.25979，经度 -70.50062查看地名来源ParisArkansas · United States纬度 35.29203，经度 -93.72992查看地名来源ParizhChelyabinsk · Russia纬度 53.2974，经度 60.1005查看地名来源",
+      "warnings": ""
+    },
+    "mobile": {
+      "scroll": 390,
+      "width": 390
+    },
+    "status": "passed"
+  }
+}

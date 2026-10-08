@@ -36,6 +36,9 @@ def _use_local_assets(html_path: str):
 
 COUNTRY_ALIASES = {'USA': 'United States', 'United States of America': 'United States',
                    'UK': 'United Kingdom', 'United Kingdom of Great Britain and Northern Ireland': 'United Kingdom',
+                   'The Netherlands': 'Netherlands', 'Türkiye': 'Turkey',
+                   'Ivory Coast': "Côte d'Ivoire", 'North Macedonia': 'Macedonia',
+                   'Solomon Islands': 'Solomon Is.', 'The Gambia': 'Gambia',
                    'Czechia': 'Czech Rep.', 'Laos': 'Lao PDR', "Lao People's Democratic Republic": 'Lao PDR',
                    'Eswatini': 'Swaziland', 'South Korea': 'Korea', 'North Korea': 'Dem. Rep. Korea',
                    'Czech Republic': 'Czech Rep.', 'Dominican Republic': 'Dominican Rep.',

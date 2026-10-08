@@ -139,10 +139,15 @@ def parse_arxiv_entry(entry: ET.Element, ns: Dict[str, str]) -> Optional[Dict]:
         
         # Extract authors
         authors = []
+        author_details = []
         for author_elem in entry.findall('atom:author', ns):
             name_elem = author_elem.find('atom:name', ns)
             if name_elem is not None:
                 authors.append(name_elem.text.strip())
+                affiliations = [''.join(a.itertext()).strip() for a in author_elem.findall('arxiv:affiliation', ns)]
+                author_details.append({'name':name_elem.text.strip(),
+                                       'affiliation':'; '.join(a for a in affiliations if a),
+                                       'source':'arXiv Atom author metadata'})
         
         # Extract published date
         published_elem = entry.find('atom:published', ns)
@@ -210,6 +215,7 @@ def parse_arxiv_entry(entry: ET.Element, ns: Dict[str, str]) -> Optional[Dict]:
             'type': 'Article',
             'title': title,
             'authors': authors,
+            'author_details': author_details,
             'date': published_formatted,
             'url': html_url,
             'abstract': abstract,

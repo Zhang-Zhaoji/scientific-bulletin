@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from sql_scripts.build_sqlite import (  # noqa: E402
     align_list, as_list, clean_text, clean_text_list, is_missing_text, normalize_country_name,
-    parse_work_details,
+    parse_work_details, resolved_author_institutions, ensure_affiliation_schema,
 )
 from sql_scripts.build_slim_db import build_slim_db, verify_slim_db  # noqa: E402
 
@@ -219,6 +219,7 @@ class Importer:
 
     def __init__(self, conn: sqlite3.Connection):
         self.conn = conn
+        ensure_affiliation_schema(conn)
         self.stats = collections.Counter()
         self.score_updates = []
         self.reevaluations = []
@@ -227,7 +228,7 @@ class Importer:
         self.title_aliases = []
         self.tables = {}
         for table, keys in {"articles": ("title",), "countries": ("standard_name",),
-                            "institutions": ("name", "normalized_name"),
+                            "institutions": ("ror_id", "normalized_name", "name"),
                             "themes": ("name",), "subthemes": ("name",), "crosstags": ("name",)}.items():
             self.tables[table] = {key: {value: ident for ident, value in conn.execute(
                 f'SELECT id, "{key}" FROM "{table}" WHERE "{key}" IS NOT NULL')}
@@ -259,6 +260,19 @@ class Importer:
         ordered = ([preferred_key] if preferred_key else []) + [key for key in indexes if key != preferred_key]
         ident = next((indexes[key].get(values.get(key)) for key in ordered
                       if key in indexes and values.get(key) and indexes[key].get(values[key])), None)
+        if table=='institutions' and values.get('ror_id'):
+            ident=indexes['ror_id'].get(values['ror_id'])
+            if ident is None:
+                for key in ('normalized_name','name'):
+                    candidate=indexes[key].get(values.get(key))
+                    if candidate is None:continue
+                    old_id,old_country=self.conn.execute('SELECT ror_id,country_id FROM institutions WHERE id=?',(candidate,)).fetchone()
+                    if old_id is None and (old_country is None or old_country==values.get('country_id')):
+                        ident=candidate;break
+            if ident is None and values.get('normalized_name') in indexes['normalized_name']:
+                values=dict(values,normalized_name=None)
+            elif ident is not None and values.get('normalized_name') and indexes['normalized_name'].get(values['normalized_name']) not in (None,ident):
+                values=dict(values,normalized_name=None)
         if ident is None:
             keys = list(values)
             cursor = self.conn.execute(
@@ -295,12 +309,14 @@ class Importer:
             return None
         return self.entity("countries", {"standard_name": name, "country_name": name})
 
-    def author(self, article: int, info: dict, institution_ids: set[int]) -> int:
+    def author(self, article: int, info: dict, institution_ids: set[int], preferred_id: int | None = None) -> int:
         name = clean_text(info.get("name"))
         orcid = clean_text(info.get("orcid"))
         compatible = lambda ident: not (orcid and self.author_records[ident]["orcid"]
                                        and orcid != self.author_records[ident]["orcid"])
         ident = self.author_orcids.get(orcid) if orcid else None
+        if ident is None and preferred_id is not None and compatible(preferred_id):
+            ident=preferred_id
         if ident is None:
             ident = next((candidate for candidate in self.article_authors[article]
                           if self.author_records[candidate]["name"] == name and compatible(candidate)), None)
@@ -399,24 +415,29 @@ class Importer:
         for info in details:
             if not clean_text(info.get("name")):
                 continue
-            ror_names = clean_text_list(info.get("ror_normalized_affiliation"))
-            # Source affiliation strings remain usable even when ROR is unavailable.
-            names = ror_names or clean_text_list(info.get("normalized_affiliation")) or clean_text_list(info.get("affiliation"))
-            country_names = align_list(info.get("ror_country") or info.get("country"), len(names))
             institution_ids = set()
-            for index, name in enumerate(names):
-                if name.lower() in {"n/a", "na", "none", "null", "unknown"}:
-                    continue
-                country_id = self.country(country_names[index])
+            source_evidence=collections.defaultdict(list)
+            for row in resolved_author_institutions(info):
+                name = row['name']
+                country_id = self.country(row['country_name'])
                 institution = self.entity("institutions", {
-                    "name": name, "normalized_name": name if ror_names else None,
-                    "raw_affiliation": scalar(info.get("affiliation")), "country_id": country_id,
-                }, preferred_key="normalized_name")
+                    "name": name, "normalized_name": row['normalized_name'],
+                    "raw_affiliation": scalar(row['raw_affiliation']), "country_id": country_id,
+                    "ror_id":row.get('ror_id'),
+                }, preferred_key="ror_id" if row.get('ror_id') else "normalized_name")
                 institution_ids.add(institution)
+                source_evidence[institution].append({'affiliation':row['raw_affiliation'],'source':info.get('source'),
+                                                    'source_url':info.get('source_url') or paper.get('url'),
+                                                    'ror_id':row.get('ror_id')})
                 self.link("article_institutions", article, institution)
                 if country_id:
                     self.link("article_countries", article, country_id)
-            self.author(article, info, institution_ids)
+            author=self.author(article, info, institution_ids)
+            for institution in institution_ids:
+                self.conn.execute('''INSERT INTO article_author_institutions(article_id,author_id,institution_id,evidence_json)
+                                     VALUES(?,?,?,?) ON CONFLICT(article_id,author_id,institution_id)
+                                     DO UPDATE SET evidence_json=excluded.evidence_json''',
+                                  (article,author,institution,json.dumps(source_evidence[institution],ensure_ascii=False,separators=(',',':'))))
         for entities, entity_table, link_table in (
             (themes, "themes", "article_themes"),
             (subthemes, "subthemes", "article_subthemes"),

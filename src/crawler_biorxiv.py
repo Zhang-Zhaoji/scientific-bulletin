@@ -152,7 +152,8 @@ def parse_biorxiv_paper(item: Dict) -> Optional[Dict]:
             'author_corresponding': author_corresponding,
             'author_corresponding_institution': author_corresponding_institution,
             'version_date': version_date,
-            'source': 'bioRxiv'
+            'source': 'bioRxiv',
+            'jatsxml': item.get('jatsxml', '')
         }
     
     except Exception as e:

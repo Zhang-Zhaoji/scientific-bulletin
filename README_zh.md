@@ -96,6 +96,60 @@ python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
 
 更多爬虫和LLM处理选项请查看 `python src/main.py --help` 与 `python LLM_eval/main.py --help`。LLM平台和默认模型在 `LLM_eval/config.py` 中配置；API key 可以放在 `.env`、`.env.DeepSeek` 或 `.env.Aliyuncs` 中。
 
+单位识别使用原始作者单位文本；缺失单位不会按姓名、邮箱域名或共同作者推断。`src/affiliation_matcher.py` 保留完整名称、多个单位和各自的地区证据，拒绝地区冲突、歧义缩写及关键地名不同的模糊匹配。匹配分数表示字符串相似度，不表示正确概率。
+
+人工补充统一写入 `data/affiliation_overrides.json`，每个条目包含官方 ROR ID、名称、别名、位置、来源和核验日期。学院或校区映射到上级组织时，额外填写 `parent_aliases` 和 `parent_mapping_source`；原始单位名称仍保留在 `affiliation_resolution` 中。这样更新 ROR 快照时可以保留独立的人工核验记录。
+
+```bash
+# 统计来源缺失、单位/地区覆盖和未解决的原始文本
+python scripts/audit_affiliation_matching.py --input getfiles/all_papers_2026-10-04_enriched.jsonl --output tmps/affiliation_audit.json
+
+# 明确选定已重新识别的语料，备份后更新完整及网页数据库中的单位/地区链接
+python scripts/refresh_bulletin_affiliations.py --input getfiles/all_papers_2026-10-04_enriched_ror_refined.jsonl --run-dir tmps/affiliation_refresh
+```
+
+回填保留文章 ID、日期、评分及未选中文章的链接。`institutions.ror_id` 区分同名机构，`article_author_institutions` 保存每篇论文的作者与单位关系及来源证据。只回填部分论文时，跨期共享作者的旧全局单位链接会保留；论文级关系以新表为准。统计识别率时需区分“作者是否有单位文本”和“已有文本的匹配覆盖率”，并单独检查误匹配。
+
+2026-10-08 已按原始发表记录回填 30 期常规周报。完整作者名单优先使用 PubMed/Europe PMC；预印本保留原始版本名单，只为唯一对应的作者补入明确单位或 ORCID。arXiv HTML 仅接受显式作者单位标记。旧作者档案、未经核验的 ORCID 和计量指标存入 `legacy_*` 字段；缺失或歧义不填猜测值。逐期覆盖率及未解决项见 `getfiles/historical_author_audit_2026-10-08.json` 和 `getfiles/affiliation_review_queue_2026-10-08.jsonl`。
+
+官方 ROR 数据包的来源、校验值和版本记在 `data/RORIndexManifest.json`，转换入口为 `scripts/rebuild_ror_index.py`。同名及同别名的多个实体分别保留，历史机构保留 inactive 记录，排除 withdrawn 记录。人工校验仍独立保存在覆盖文件中。
+
+城市证据使用独立的 `data/world_cities.db`，由 GeoNames `cities500`、州省字典及美国/德国邮编表构建。出处、SHA-256、覆盖范围及 CC BY 4.0 授权记录在 `data/world_cities.manifest.json`。`AffiliationMatcher` 会从独立地址片段提取城市，以国家和州省约束同名候选；机构名称中的地名不会直接当作地址。城市、机构识别状态分别保存，邮编冲突和异常格式写入 `geography_warnings`，原始地址保持不变。城市坐标不表示机构建筑地址，较小村镇可能不在该城市集合中。
+
+城市别名也包含机场代码及旧地名，因此不能把所有短词当作城市。无独立国家/州省证据的三字母短词、公司后缀、电话/邮箱片段、街道名和组织名称的逗号片段会排除。完整州名后的邮编用于约束城市；作者 ORCID、通讯说明等尾注不会吞掉前面的国家信息。`NYU` 不会因城市别名被定位到缅甸，`17 Queen Square` 不会被定位到加拿大居民点。
+
+索引有 252 个国家/地区代码，其中 246 个有城市记录，共 236,014 个居民点；代码表包含属地和历史代码。邮编一致性检查目前仅覆盖美国和德国。实际文献覆盖按 30 期的数据库论文身份去重，再按非空单位/地址片段去重；统计入口为 `scripts/audit_city_rewrite.py`，结果和待核验地址分别写入 `getfiles/city_rule_rewrite_audit_2026-10-08.json` 与 `getfiles/geography_review_queue_2026-10-08.jsonl`。识别覆盖率不等于正确率，也不等于门牌地址的验证率。
+
+2026-10-08 已将城市规则写回全部 30 期、完整/网页数据库及历史图表。14,121 篇去重论文中 11,926 篇取得国家/地区信息（84.456%），覆盖 175 个国家/地区；66,150 条不同单位/地址文本中 65,370 条取得国家信息（98.821%，较城市规则应用前净增 83 条），53,493 条取得城市信息（80.866%）。458 条地址保留地理冲突或邮编警告，歧义不强行选择，未调用 LLM。
+
+```bash
+# 从下载的官方数据包重建离线索引
+python scripts/build_city_index.py --source-dir tmps/city_lookup_20261008
+
+# 启动本机可搜索地图：http://127.0.0.1:8786/
+python scripts/serve_city_lookup.py --port 8786
+
+# 为未解决单位地址核验城市，并生成去重后的 LLM 待复核输入（不会调用模型）
+python scripts/audit_city_enrichment.py
+```
+
+LLM 适合从复杂地址提取候选城市或单位片段，并复核歧义与冲突。`tmps/city_lookup_20261008/llm_review_inputs.jsonl` 保存原文、来源、城市候选和约束提示词。模型建议必须再次经过本地城市库/ROR 或原始来源验证，不直接写库；没有原始单位信息时保留缺失值。
+
+```bash
+# 使用已缓存的原始来源生成历史补全阶段文件
+python scripts/backfill_historical_authors.py --run-dir tmps/affiliation_history_20261008
+
+# 仅按更新后的 ROR/城市规则重跑已有阶段文件，保留作者来源及原评分
+python scripts/backfill_historical_authors.py --run-dir tmps/affiliation_history_20261008 --refine-only
+
+# 核对阶段结果后应用；再次核验来源时可用 --from-backups 保留原始基线
+python scripts/backfill_historical_authors.py --run-dir tmps/affiliation_history_20261008 --apply
+python scripts/refresh_bulletin_affiliations.py --input tmps/affiliation_history_20261008/all_refined.jsonl --run-dir tmps/affiliation_history_20261008/database_refresh
+python scripts/refresh_historical_reports.py --run-dir tmps/affiliation_history_20261008
+python scripts/audit_historical_authors.py --run-dir tmps/affiliation_history_20261008
+python scripts/build_pages.py --input-dir LLM_Results --output-dir docs
+```
+
 ---
 
 ## 📚 支持的数据源

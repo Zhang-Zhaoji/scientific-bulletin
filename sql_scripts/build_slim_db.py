@@ -23,6 +23,7 @@ from pathlib import Path
 SLIM_FIELDS = {
     "articles": ["abstract", "title_zh", "url", "doi"],
     "institutions": ["raw_affiliation"],
+    "article_author_institutions": ["evidence_json"],
 }
 
 # 默认路径

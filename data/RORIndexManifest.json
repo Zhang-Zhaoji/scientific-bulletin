@@ -1,0 +1,20 @@
+{
+  "official_records": 144717,
+  "statuses": {
+    "active": 141387,
+    "inactive": 1897,
+    "withdrawn": 1433
+  },
+  "display_names": 141931,
+  "unique_aliases": 165505,
+  "ambiguous_aliases": 8124,
+  "ambiguous_display_names": 826,
+  "release_id": 23187250,
+  "version": "v2.14",
+  "source": "https://zenodo.org/records/23187250",
+  "file": "v2.14-2026-10-06-ror-data.zip",
+  "md5": "e16a5ceb8ff06f1a274dbd9288fe0159",
+  "verified_on": "2026-10-08",
+  "overrides_preserved": true,
+  "inactive_policy": "Retained for historical affiliations; withdrawn records excluded."
+}

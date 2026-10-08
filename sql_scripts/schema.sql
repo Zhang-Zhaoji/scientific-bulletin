@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS institutions (
     name TEXT NOT NULL,
     raw_affiliation TEXT,
     country_id INTEGER REFERENCES countries(id),
-    normalized_name TEXT UNIQUE
+    normalized_name TEXT UNIQUE,
+    ror_id TEXT UNIQUE
 );
 
 -- 文章主表
@@ -117,6 +118,15 @@ CREATE TABLE IF NOT EXISTS article_crosstags (
     article_id INTEGER REFERENCES articles(id) ON DELETE CASCADE,
     tag_id INTEGER REFERENCES crosstags(id)
     --PRIMARY KEY (article_id, tag_id)
+);
+
+-- Publication-specific author affiliations preserve source evidence.
+CREATE TABLE IF NOT EXISTS article_author_institutions (
+    article_id INTEGER NOT NULL REFERENCES articles(id) ON DELETE CASCADE,
+    author_id INTEGER NOT NULL REFERENCES authors(id),
+    institution_id INTEGER NOT NULL REFERENCES institutions(id),
+    evidence_json TEXT,
+    PRIMARY KEY (article_id, author_id, institution_id)
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS idx_articles_title

@@ -1,0 +1,5975 @@
+{
+  "status": "applied",
+  "verified_on": "2026-10-08",
+  "regular_issues": 30,
+  "definitions": {
+    "paper": "One original database publication identity; repeated weekly appearances are deduplicated.",
+    "address": "Nonempty publication affiliation segment, split at semicolons; whitespace and case are normalized for deduplication.",
+    "country_address_pair": "One distinct normalized country and address pair; multinational addresses may contribute multiple pairs.",
+    "coverage": "Observed fields populated by the rule; this is not measured accuracy. Missing source addresses do not enter the address denominator."
+  },
+  "before": {
+    "unique_papers": 14121,
+    "papers_with_country": 11913,
+    "paper_country_coverage_pct": 84.364,
+    "papers_with_address_text": 12128,
+    "papers_with_city": 0,
+    "author_records": 131552,
+    "authors_with_address_text": 113996,
+    "address_occurrences": 164154,
+    "address_occurrences_with_country": 161993,
+    "distinct_addresses": 66150,
+    "distinct_addresses_with_country": 65287,
+    "address_country_coverage_pct": 98.695,
+    "country_address_pairs": 65811,
+    "represented_countries_and_regions": 174,
+    "distinct_addresses_with_city": 0,
+    "address_city_coverage_pct": 0.0,
+    "distinct_addresses_with_city_ambiguities": 0,
+    "addresses_with_geography_warnings": 0
+  },
+  "after": {
+    "unique_papers": 14121,
+    "papers_with_country": 11926,
+    "paper_country_coverage_pct": 84.456,
+    "papers_with_address_text": 12128,
+    "papers_with_city": 10149,
+    "author_records": 131552,
+    "authors_with_address_text": 113996,
+    "address_occurrences": 164154,
+    "address_occurrences_with_country": 162234,
+    "distinct_addresses": 66150,
+    "distinct_addresses_with_country": 65370,
+    "address_country_coverage_pct": 98.821,
+    "country_address_pairs": 65749,
+    "represented_countries_and_regions": 175,
+    "distinct_addresses_with_city": 53493,
+    "address_city_coverage_pct": 80.866,
+    "distinct_addresses_with_city_ambiguities": 5787,
+    "addresses_with_geography_warnings": 458
+  },
+  "net_new_located_addresses": 83,
+  "newly_located_addresses": [
+    {
+      "address": " Departments of Pharmacology, University of North Carolina, Chapel Hill, North Carolina 27599.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4460162,
+          "name": "Chapel Hill",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": " Psychiatry, University of North Carolina, Chapel Hill, North Carolina 27599.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4460162,
+          "name": "Chapel Hill",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": "Nazareth University, Rochester, NY.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5134086,
+          "name": "Rochester",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Gesture-based Instruction Enhances Neural Synchrony and Predicts Children's Mathematical Learning."
+      ]
+    },
+    {
+      "address": "Sababi Institute, Hargeisa, Somaliland.",
+      "countries_before": [],
+      "countries_after": [
+        "Somalia"
+      ],
+      "cities": [
+        {
+          "id": 57289,
+          "name": "Hargeysa",
+          "country_code": "SO"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Investigating the analytical robustness of the social and behavioural sciences"
+      ]
+    },
+    {
+      "address": " Department of Ophthalmology, LSU Health New Orleans School of Medicine, New Orleans, Louisiana 70112.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4335045,
+          "name": "New Orleans",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "RGR-Mediated Photopic Visual Cycle and Oxidative Stress: Potential Mechanisms for Cone Vision Impairment and Retinal Degeneration in Retinitis Pigmentosa Linked to D1080N-IRBP."
+      ]
+    },
+    {
+      "address": "National Institute of Health, SLCR, Bethesda, Maryland 20892.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4348599,
+          "name": "Bethesda",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Circadian Changes in CA1 LTP Are Driven by Shifts in Excitation-Inhibition Balance and Reverse Direction after Puberty in Mice."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Feinberg School of Medicine, Northwestern University, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": " Northwestern University Interdepartmental Neuroscience Program, Northwestern University, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Feinberg School of Medicine, Northwestern University, Chicago, Illinois 60611 j-surmeier@northwestern.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": "Department of Biochemistry & Cell Biology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02215.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Progressive Supranuclear Palsy PERK Haplotype B Selectively Translates DLX1 Promoting Tau Toxicity."
+      ]
+    },
+    {
+      "address": " Oregon Hearing Research Center, OHSU, Portland, Oregon 97239.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5746545,
+          "name": "Portland",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Synaptic Facilitation Enhances the Reliability and Precision of High-Frequency Neurotransmission."
+      ]
+    },
+    {
+      "address": " Department of Physical Medicine and Rehabilitation, Northwestern University, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Descending Brainstem Systems Contribute to Ankle Clonus in Humans with Spinal Cord Injury.",
+        "Enhanced Reticulospinal Output in Subacute Spinal Cord Injury Patients with Spasticity."
+      ]
+    },
+    {
+      "address": " A. Franci is with the WEL-T Department, WEL Research Institute, 1300 Wavre, Belgium. {afyon, afranci, p.sacre, gdrion}@uliege.be.",
+      "countries_before": [],
+      "countries_after": [
+        "Belgium"
+      ],
+      "cities": [
+        {
+          "id": 2783941,
+          "name": "Wavre",
+          "country_code": "BE"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Neuromodulation supports robust rhythmic pattern transitions in degenerate central pattern generators with fixed connectivity"
+      ]
+    },
+    {
+      "address": "Eaton-Peabody Laboratories, Massachusetts Eye and Ear, Boston, Massachusetts.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Parallel Age-Related Cochlear Neural Degeneration and Cortical Gain Adaptation in Normal-Hearing Humans.",
+        "Parallel age-related cochlear neural degeneration and cortical gain adaptation in normal-hearing humans."
+      ]
+    },
+    {
+      "address": "Affiliation: PsiDagger, San Diego, CA",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5391811,
+          "name": "San Diego",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Polyformer: a generative framework for thermodynamic modeling of polymeric molecules"
+      ]
+    },
+    {
+      "address": "Affiliation: Jinan University, Guangzhou Correspondence: avrillliu@hkust-gz.edu.cn",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1809858,
+          "name": "Guangzhou",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "CAGenMol: Condition-Aware Diffusion Language Model for Goal-Directed Molecular Generation"
+      ]
+    },
+    {
+      "address": " Spinal Cord and Brain Injury Research Group, Stark Neuroscience Research Institute, Indianapolis, Indiana 46202.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4259418,
+          "name": "Indianapolis",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Repurposing Dexmedetomidine: Early Pharmacological Hypothermia Enhances Neuroprotection and Improves Locomotor and Bladder Functional Recovery after Spinal Cord Injury."
+      ]
+    },
+    {
+      "address": " Aligning Science Across Parkinson's (ASAP) Collaborative Research Network, Chevy Chase, MD.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4351335,
+          "name": "Chevy Chase",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Integrated Representations of Threat and Controllability in the Lateral Frontal Pole."
+      ]
+    },
+    {
+      "address": "Departments of Neuroscience, Feinberg School of Medicine, Chicago, Illinois 60611 toshihiro.nomura@northwestern.edu tnomura@inst-hsc.jp a-contractor@northwestern.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": "Departments of Neuroscience, Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": " Psychiatry and Behavioral Sciences, Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": " Department of Neurobiology, Weinberg College of Arts and Sciences Northwestern University, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": " Otopathology Laboratory, Massachusetts Eye and Ear, Boston, Massachusetts 02114.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Primary Neural Degeneration after Cochlear Implantation: Histological and Electrophysiological Evidence from a Mouse Model."
+      ]
+    },
+    {
+      "address": " Eaton-Peabody Laboratories, Massachusetts Eye and Ear, Boston, Massachusetts 02114.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Primary Neural Degeneration after Cochlear Implantation: Histological and Electrophysiological Evidence from a Mouse Model."
+      ]
+    },
+    {
+      "address": " Department of Neuroscience and Experimental Therapeutics, Texas A&M University Naresh K. Vashisht College of Medicine, Bryan, Texas 77807.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4677008,
+          "name": "Bryan",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Genetically Encoded Constitutive Upregulation of β2 Subunit-Containing Neuronal Nicotinic Acetylcholine Receptors Is Neuroprotective in Female Parkinsonian Mice.",
+        "Genetically encoded constitutive upregulation of β2 subunit containing neuronal nicotinic acetylcholine receptors is neuroprotective in female parkinsonian mice."
+      ]
+    },
+    {
+      "address": "GNOME Diagnostics, Powell, OH 143081.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5167350,
+          "name": "Powell",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "invalid_postal_format",
+          "value": "143081",
+          "country_code": "US"
+        }
+      ],
+      "papers": [
+        "MiR-155-driven loss of ICOSL and SOCS1 in EBV+ gastric cancers renders abundant cytotoxic T cells ineffective, enabling immune evasion."
+      ]
+    },
+    {
+      "address": "Affiliation: Neurospin, CEA, Gif sur Yvette",
+      "countries_before": [],
+      "countries_after": [
+        "France"
+      ],
+      "cities": [
+        {
+          "id": 3016078,
+          "name": "Gif-sur-Yvette",
+          "country_code": "FR"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "NeuralSet: A High-Performing Python Package for Neuro-AI"
+      ]
+    },
+    {
+      "address": "Centre Hospitalier et Universitaire de Bouaké, Bouaké, Côte d'Ivoire.",
+      "countries_before": [],
+      "countries_after": [
+        "Ivory Coast"
+      ],
+      "cities": [
+        {
+          "id": 2290956,
+          "name": "Bouaké",
+          "country_code": "CI"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Continental-scale genomic surveillance ofPlasmodium falciparummalaria across sub-Saharan Africa with rapid nanopore sequencing"
+      ]
+    },
+    {
+      "address": "Lilly Research Laboratories, Indianapolis, Indiana 46225.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4259418,
+          "name": "Indianapolis",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Expression and Localization of NMDA Receptor GluN2 Subunits in Dorsal Horn Pain Circuits across Sex, Species, and Late Postnatal Development.",
+        "Expression and localization of NMDA receptor GluN2 subunits in dorsal horn pain circuits across sex, species, and late postnatal development."
+      ]
+    },
+    {
+      "address": " National Center for Adaptive Neurotechnologies, St. Louis, Missouri 63110.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4407066,
+          "name": "St. Louis",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Pulvinar Subregions Influence Select Cortical Pathways in Humans.",
+        "Pulvinar subregions influence select cortical pathways in humans.",
+        "Three Fundamental Neurophysiological Features of Neural Dynamics: Aperiodic, Waveform, and Transient."
+      ]
+    },
+    {
+      "address": " NSF-Simons National Institute for Theory and Mathematics in Biology, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Multiple Scales of Coordination along the Body Axis during Drosophila Larval Locomotion."
+      ]
+    },
+    {
+      "address": " Affiliation: Alljoined, San Francisco, California, Unites States of America",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5391959,
+          "name": "San Francisco",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Robust multi-modal architectures translate fMRI-to-image models from vision to mental imagery"
+      ]
+    },
+    {
+      "address": " Affiliation: Sophont, San Francisco, California, Unites States of America",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5391959,
+          "name": "San Francisco",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Robust multi-modal architectures translate fMRI-to-image models from vision to mental imagery"
+      ]
+    },
+    {
+      "address": "New Haven, Connecticut.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4839366,
+          "name": "New Haven",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Disembodied human brains used for drug testing."
+      ]
+    },
+    {
+      "address": " Walloon ExceLlence Research Institute, Wavre 1300, Belgique.",
+      "countries_before": [],
+      "countries_after": [
+        "Belgium"
+      ],
+      "cities": [
+        {
+          "id": 2783941,
+          "name": "Wavre",
+          "country_code": "BE"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Aging increases the cortical resources allocated to static balance maintenance."
+      ]
+    },
+    {
+      "address": "Center for Learning and Memory, Department of Neuroscience, University of Texas at Austin, Austin, Texas 78712 lyndskirk@utexas.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.",
+        "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP."
+      ]
+    },
+    {
+      "address": "Center for Learning and Memory, Department of Neuroscience, University of Texas at Austin, Austin, Texas 78712.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.",
+        "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP."
+      ]
+    },
+    {
+      "address": " Northwestern University, Chicago, IL.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Transient Frontal Fracturing: A Theoretical Account of Hyperfocus."
+      ]
+    },
+    {
+      "address": "Affiliation: RIKEN AIP, Tokyo, Japan ORCID: 0000-0003-3644-276X",
+      "countries_before": [],
+      "countries_after": [
+        "Japan"
+      ],
+      "cities": [
+        {
+          "id": 1850147,
+          "name": "Tokyo",
+          "country_code": "JP"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "End-to-End Machine Learning for Depressive State Classification via EEG and fNIRS"
+      ]
+    },
+    {
+      "address": " Key Laboratory of Cancer Prevention and Therapy, Tianjin",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1792947,
+          "name": "Tianjin",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Capsaicin acts as a novel NRF2 agonist to suppress ethanol induced gastric mucosa oxidative damage by directly disrupting the KEAP1-NRF2 interaction.",
+        "XPO1-mediated TRIM21 nuclear export reprograms TREM2+ macrophage polarization by targeting IRF3 to augment anti-PD-1 efficacy in small cell lung cancer"
+      ]
+    },
+    {
+      "address": "Department of Epidemiology & Public Health, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Brain-Selective Estrogen Therapy in Male and Female Marmosets Partially Counteracts the Adverse Effects of Aromatase Inhibition on the Brain and Behavior.",
+        "Brain-selective estrogen therapy in male and female marmosets partially counteracts the adverse effects of aromatase inhibition on the brain and behavior."
+      ]
+    },
+    {
+      "address": "Affiliation: Extropic Corp., Boston, MA",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Energy-efficient codon optimization on thermodynamic hardware"
+      ]
+    },
+    {
+      "address": "Atria Research and Global Health Institute, New York, New York, 10022  USA.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5128581,
+          "name": "New York City",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Identification of a central CGRP circuit for trigeminal V1-mediated migraine-like pain in mice."
+      ]
+    },
+    {
+      "address": "Department of Pharmacology and Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201 matthewbruce@som.umaryland.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Program in Neuroscience, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": " Medical Scientist Training Program, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Department of Pharmacology and Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": " UM-MIND, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Ocean Shores, Washington.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5805505,
+          "name": "Ocean Shores",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "As the Arctic warms, gray whale boom turns into a bust."
+      ]
+    },
+    {
+      "address": " Department of Biomedical Engineering, City University of Hongkong, Hongkong.",
+      "countries_before": [],
+      "countries_after": [
+        "Hong Kong"
+      ],
+      "cities": [
+        {
+          "id": 1819729,
+          "name": "Hong Kong",
+          "country_code": "HK"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Ultrasoft, adhesive, pH-tunable hydrogel based on in situ functionalized laser-induced graphene for through-hair concurrent biosensing"
+      ]
+    },
+    {
+      "address": "Affiliation: Interdisciplinary Life Sciences, University of Texas at Austin, Austin, TX.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling"
+      ]
+    },
+    {
+      "address": " Affiliation: Molecular AI, Novo Nordisk, Lexington, MA",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4941935,
+          "name": "Lexington",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling"
+      ]
+    },
+    {
+      "address": "Affiliation: Zhongguancun Laboratory, Beijing, China {zihanzhang, ybao, xding}@ir.hit.edu.cn, xiongk@zgclab.edu.cn",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1816670,
+          "name": "Beijing",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Is EEG-to-Text Feasible in Real-World Scenarios? An In-Depth Analysis Using a Neuropsychology-Inspired Benchmark"
+      ]
+    },
+    {
+      "address": "Department of Anatomy & Neurobiology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02118 zhouybu@bu.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Subregional and Laminar Specializations of Pyramidal Neurons in the Macaque Anterior Cingulate Cortex.",
+        "Subregional and laminar specializations of pyramidal neurons in the macaque anterior cingulate cortex."
+      ]
+    },
+    {
+      "address": "Department of Anatomy & Neurobiology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02118.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4930956,
+          "name": "Boston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Subregional and Laminar Specializations of Pyramidal Neurons in the Macaque Anterior Cingulate Cortex.",
+        "Subregional and laminar specializations of pyramidal neurons in the macaque anterior cingulate cortex."
+      ]
+    },
+    {
+      "address": " Roger and Angie Karalis Johnson Retina Center, Seattle, Washington 98109.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5809844,
+          "name": "Seattle",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Optoretinography in R9AP-Bradyopsia Reveals an Essential Role of G-Protein Activation and Deactivation in the Human Cone Elongation Response.",
+        "Optoretinography in R9AP-Bradyopsia Reveals an Essential role of G-protein Activation and Deactivation in the Human Cone Elongation Response."
+      ]
+    },
+    {
+      "address": " Neuroscience Graduate Program, Weill Cornell Graduate School of Medical Sciences, New York, New York 10065.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5128581,
+          "name": "New York City",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Agonist-Dependent Signaling through Metabotropic Glutamate Receptor 5 Is a Key Gatekeeper of Synaptic Upscaling."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Northwestern University, Chicago, Illinois 60208.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Distinct Neural Modes Carry Information About Attempted Grasp Timing and Force in the Sensorimotor Cortex.",
+        "Distinct neural modes carry information about attempted grasp timing and force in the sensorimotor cortex."
+      ]
+    },
+    {
+      "address": " University Medical Center-Eppendorf, Hamburg",
+      "countries_before": [],
+      "countries_after": [
+        "Germany"
+      ],
+      "cities": [
+        {
+          "id": 2911298,
+          "name": "Hamburg",
+          "country_code": "DE"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "High-amplitude oscillatory events coordinate large-scale cortical interactions during decision-making and attention allocation"
+      ]
+    },
+    {
+      "address": "Rio de Janeiro.",
+      "countries_before": [],
+      "countries_after": [
+        "Brazil"
+      ],
+      "cities": [
+        {
+          "id": 3451190,
+          "name": "Rio de Janeiro",
+          "country_code": "BR"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Weekly HIV pill moves closer but vaccine studies face new questions."
+      ]
+    },
+    {
+      "address": "School of Neuroscience, Virginia Polytechnic and State University, Blacksburg, Virginia 24061.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4747845,
+          "name": "Blacksburg",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Astrocyte TrkB.T1 Deficiency Disrupts Glutamatergic Synaptogenesis and Astrocyte-Synapse Interactions."
+      ]
+    },
+    {
+      "address": "School of Neuroscience, Virginia Polytechnic and State University, Blacksburg, Virginia 24061 molsen1@vt.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4747845,
+          "name": "Blacksburg",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Astrocyte TrkB.T1 Deficiency Disrupts Glutamatergic Synaptogenesis and Astrocyte-Synapse Interactions."
+      ]
+    },
+    {
+      "address": " Department of Physical Therapy and Movement Science, Northwestern University, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Descending Brainstem Systems Contribute to Ankle Clonus in Humans with Spinal Cord Injury."
+      ]
+    },
+    {
+      "address": "ASM affiliates, Hilo, Hawaii.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5855927,
+          "name": "Hilo",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Ancient genomes reveal distinct human dispersals and social stratification in the settlement history of western Remote Oceania."
+      ]
+    },
+    {
+      "address": "University of Texas, Austin, TX.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Tracking the baryon number with nuclear collisions."
+      ]
+    },
+    {
+      "address": " Yale Child Study Center, New Haven, Connecticut 06510.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4839366,
+          "name": "New Haven",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Corticolimbic Structure-Function Coupling Is Sensitive to Childhood Adversity and Buffers Adversity-Related Symptoms during Development.",
+        "Corticolimbic structure-function coupling is sensitive to childhood adversity and buffers adversity-related symptoms during development."
+      ]
+    },
+    {
+      "address": " Affiliation: Yulin AI-Enhanced HealthCare Lab, Shanghai, China * Correspondence: zhengzhu@fudan.edu.cn",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1796236,
+          "name": "Shanghai",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "tSymPerturb converts longitudinal symptom networks into time-indexed intervention strategies"
+      ]
+    },
+    {
+      "address": "El Segundo, California.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 5345860,
+          "name": "El Segundo",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Orbital alchemy."
+      ]
+    },
+    {
+      "address": ", , Campus-Vienna-Biocenter 1, Vienna , , ,",
+      "countries_before": [],
+      "countries_after": [
+        "Austria"
+      ],
+      "cities": [
+        {
+          "id": 2761369,
+          "name": "Vienna",
+          "country_code": "AT"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Unified down-stream analysis of crosslinking mass spectrometry results with pyXLMS"
+      ]
+    },
+    {
+      "address": "Department of Neurology, Northwestern University Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Cycle-by-Cycle Respiration Waveforms Are Coupled with the Shape of Neural Oscillations.",
+        "Cycle-by-cycle respiration waveforms are coupled with the shape of neural oscillations."
+      ]
+    },
+    {
+      "address": "Department of Neurosurgery, Northwestern University Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4887398,
+          "name": "Chicago",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Cycle-by-Cycle Respiration Waveforms Are Coupled with the Shape of Neural Oscillations.",
+        "Cycle-by-cycle respiration waveforms are coupled with the shape of neural oscillations."
+      ]
+    },
+    {
+      "address": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712 sajana-aryal@uiowa.edu.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes."
+      ]
+    },
+    {
+      "address": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4671654,
+          "name": "Austin",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes."
+      ]
+    },
+    {
+      "address": "The University of Texas Health Science Center, Houston, Texas 77030.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4699066,
+          "name": "Houston",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Targeting TLR4-lipid rafts reverses hyper-excitability in pain-associated human dorsal root ganglia."
+      ]
+    },
+    {
+      "address": "Bethesda, Maryland.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4348599,
+          "name": "Bethesda",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "NCI director counters gloomy forecast for cancer institute."
+      ]
+    },
+    {
+      "address": " Affiliation: National Engineering Laboratory for Big Data Analysis and Applications, Beijing",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1816670,
+          "name": "Beijing",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Dynamic Generalized Gromov-Wasserstein Optimal Transport"
+      ]
+    },
+    {
+      "address": " Affiliation: AI for Science Institute, Beijing",
+      "countries_before": [],
+      "countries_after": [
+        "China"
+      ],
+      "cities": [
+        {
+          "id": 1816670,
+          "name": "Beijing",
+          "country_code": "CN"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Dynamic Generalized Gromov-Wasserstein Optimal Transport"
+      ]
+    },
+    {
+      "address": "National Institute on Drug Abuse Intramural Research Program, Baltimore, Maryland.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "A parietal grid-like code rotates with cognitive maps but lags rapid behavioral transfer."
+      ]
+    },
+    {
+      "address": "Affiliation: DeepBio Scientific, Winter Park, FL",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4178560,
+          "name": "Winter Park",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Measuring Interpolation and Redundancy in Affinity GEneralization"
+      ]
+    },
+    {
+      "address": "Department of Neurology, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Regulation of protein kinase pathways in primary neuron model of anti-NMDA receptor encephalitis."
+      ]
+    },
+    {
+      "address": "Department of Pharmaceutical Sciences, University of Maryland School of Pharmacy, Baltimore, Maryland 21201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4347778,
+          "name": "Baltimore",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Regulation of protein kinase pathways in primary neuron model of anti-NMDA receptor encephalitis."
+      ]
+    },
+    {
+      "address": " Glenn Biggs Institute for Alzheimer's and Neurodegenerative Diseases, San Antonio, TX.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4726206,
+          "name": "San Antonio",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [],
+      "papers": [
+        "Diagnostic Images for Mild Cognitive Impairment Are Sensitive to Alzheimer's Disease Biomarkers and Reveal Abnormal Scene Processing."
+      ]
+    },
+    {
+      "address": " Communication Sciences and Disorders, College of Liberal Arts and Sciences, Wayne State Universsity, Detroit, MI 428201.",
+      "countries_before": [],
+      "countries_after": [
+        "United States"
+      ],
+      "cities": [
+        {
+          "id": 4990729,
+          "name": "Detroit",
+          "country_code": "US"
+        }
+      ],
+      "warnings": [
+        {
+          "type": "invalid_postal_format",
+          "value": "428201",
+          "country_code": "US"
+        }
+      ],
+      "papers": [
+        "Longitudinal adaptations in neural and behavioral systems following hearing restoration using cochlear implants."
+      ]
+    }
+  ],
+  "address_country_changes": [
+    {
+      "address": "School of Psychology, University of New South Wales, Sydney, New South Wales, Australia",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A neurobiological perspective on prolonged grief disorder"
+      ]
+    },
+    {
+      "address": " Brain Dynamics Centre, Westmead Institute for Medical Research, Sydney, New South Wales, Australia",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A neurobiological perspective on prolonged grief disorder"
+      ]
+    },
+    {
+      "address": " Black Dog Institute, Sydney, New South Wales, Australia. Electronic address: r.bryant@unsw.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A neurobiological perspective on prolonged grief disorder"
+      ]
+    },
+    {
+      "address": "Brain Dynamics Centre, Westmead Institute for Medical Research, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A neurobiological perspective on prolonged grief disorder"
+      ]
+    },
+    {
+      "address": "Affiliation: Escola Paulista de Medicina, Universidade Federal de São Paulo, São Paulo, SP 04039-032, Brazil. Email: fernando.antoneli@unifesp.br",
+      "before": [
+        "Brazil",
+        "Poland"
+      ],
+      "after": [
+        "Brazil"
+      ],
+      "warnings": [],
+      "papers": [
+        "Automated Classification of Homeostasis Structure in Input-Output Networks"
+      ]
+    },
+    {
+      "address": " School of Psychological Sciences, Macquarie University, North Ryde, New South Wales 2108, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Bed Nucleus of Stria Terminalis Enkephalin Neurons Contribute to Depletion-Induced Salt Appetite.",
+        "Bed nucleus of stria terminalis enkephalin neurons contribute to depletion-induced salt appetite."
+      ]
+    },
+    {
+      "address": "Bowles Center for Alcohol Studies, University of North Carolina, Chapel Hill, North Carolina 27599.",
+      "before": [
+        "Thailand"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": " Departments of Pharmacology, University of North Carolina, Chapel Hill, North Carolina 27599.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": " Psychiatry, University of North Carolina, Chapel Hill, North Carolina 27599.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": "Bowles Center for Alcohol Studies, University of North Carolina, Chapel Hill, North Carolina 27599 rvetreno@email.unc.edu.",
+      "before": [
+        "Thailand"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Epigenetic Repression of the Serotonergic Neuron Phenotype Following Adolescent Binge Drinking Is Restored through Inhibition of Proinflammatory Signaling by Exercise and Glycyrrhizic Acid.",
+        "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid."
+      ]
+    },
+    {
+      "address": "Affiliation: Princeton AI Lab, Princeton University, New Jersey, USA",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Can we automatize scientific discovery in the cognitive sciences?"
+      ]
+    },
+    {
+      "address": "Nazareth University, Rochester, NY.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gesture-based Instruction Enhances Neural Synchrony and Predicts Children's Mathematical Learning."
+      ]
+    },
+    {
+      "address": "Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania 15213.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Attention to Pseudo-Tone Melodies Enhances Cortical but Not Brainstem Responses in Humans.",
+        "Attention to Pseudotone Melodies Enhances Cortical But Not Brainstem Responses in Humans.",
+        "Distinct Neural Modes Carry Information About Attempted Grasp Timing and Force in the Sensorimotor Cortex.",
+        "Distinct neural modes carry information about attempted grasp timing and force in the sensorimotor cortex.",
+        "Ih Shapes Pathway-Specific Inhibition in Substantia Nigra Pars Reticulata.",
+        "Ih Shapes Pathway-Specific Inhibition in the Substantia Nigra Pars Reticulata."
+      ]
+    },
+    {
+      "address": "Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania 15213 vif@andrew.cmu.edu bgsc@andrew.cmu.edu.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Attention to Pseudo-Tone Melodies Enhances Cortical but Not Brainstem Responses in Humans.",
+        "Attention to Pseudotone Melodies Enhances Cortical But Not Brainstem Responses in Humans."
+      ]
+    },
+    {
+      "address": "UTS Business School, University of Technology Sydney, Ultimo, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Investigating the analytical robustness of the social and behavioural sciences"
+      ]
+    },
+    {
+      "address": "Sababi Institute, Hargeisa, Somaliland.",
+      "before": [],
+      "after": [
+        "Somalia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Investigating the analytical robustness of the social and behavioural sciences"
+      ]
+    },
+    {
+      "address": "School of Psychological Sciences, Macquarie University, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Investigating the analytical robustness of the social and behavioural sciences"
+      ]
+    },
+    {
+      "address": "Centre for Marine Science and Innovation, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Investigating the analytical robustness of the social and behavioural sciences"
+      ]
+    },
+    {
+      "address": "University of Technology Sydney, Ultimo, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Reproducibility and robustness of economics and political science research"
+      ]
+    },
+    {
+      "address": "Center for Mind and Brain, University of California, Davis, California 95618 ejbeier@ucdavis.edu.",
+      "before": [
+        "United Kingdom",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Testing the Role of Temporal Attention in Speech: Pretarget Alpha Predicts Memory Encoding Rather Than Effects of Linguistic Focus.",
+        "Testing the role of temporal attention in speech: Pre-target alpha predicts memory encoding rather than effects of linguistic focus."
+      ]
+    },
+    {
+      "address": "Center for Mind and Brain, University of California, Davis, California 95618.",
+      "before": [
+        "United Kingdom",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Testing the Role of Temporal Attention in Speech: Pretarget Alpha Predicts Memory Encoding Rather Than Effects of Linguistic Focus.",
+        "Testing the role of temporal attention in speech: Pre-target alpha predicts memory encoding rather than effects of linguistic focus."
+      ]
+    },
+    {
+      "address": "Neuroscience Center of Excellence, LSU Health New Orleans School of Medicine, New Orleans, Louisiana 70112.",
+      "before": [
+        "Netherlands"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "RGR-Mediated Photopic Visual Cycle and Oxidative Stress: Potential Mechanisms for Cone Vision Impairment and Retinal Degeneration in Retinitis Pigmentosa Linked to D1080N-IRBP."
+      ]
+    },
+    {
+      "address": " Department of Ophthalmology, LSU Health New Orleans School of Medicine, New Orleans, Louisiana 70112.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "RGR-Mediated Photopic Visual Cycle and Oxidative Stress: Potential Mechanisms for Cone Vision Impairment and Retinal Degeneration in Retinitis Pigmentosa Linked to D1080N-IRBP."
+      ]
+    },
+    {
+      "address": "National Institute of Health, SLCR, Bethesda, Maryland 20892.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Circadian Changes in CA1 LTP Are Driven by Shifts in Excitation-Inhibition Balance and Reverse Direction after Puberty in Mice."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Feinberg School of Medicine, Northwestern University, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": " Northwestern University Interdepartmental Neuroscience Program, Northwestern University, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Feinberg School of Medicine, Northwestern University, Chicago, Illinois 60611 j-surmeier@northwestern.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons."
+      ]
+    },
+    {
+      "address": "Department of Biochemistry & Cell Biology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02215.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Progressive Supranuclear Palsy PERK Haplotype B Selectively Translates DLX1 Promoting Tau Toxicity."
+      ]
+    },
+    {
+      "address": " Department of Physiological Sciences, College of Veterinary Medicine, Gainesville, Florida 32610.",
+      "before": [
+        "Russia"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Progressive Supranuclear Palsy PERK Haplotype B Selectively Translates DLX1 Promoting Tau Toxicity."
+      ]
+    },
+    {
+      "address": " Oregon Hearing Research Center, OHSU, Portland, Oregon 97239.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Synaptic Facilitation Enhances the Reliability and Precision of High-Frequency Neurotransmission."
+      ]
+    },
+    {
+      "address": " Department of Physical Medicine and Rehabilitation, Northwestern University, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Descending Brainstem Systems Contribute to Ankle Clonus in Humans with Spinal Cord Injury.",
+        "Enhanced Reticulospinal Output in Subacute Spinal Cord Injury Patients with Spasticity."
+      ]
+    },
+    {
+      "address": " Princeton Neuroscience Institute, Princeton University, Princeton, New Jersey, United States.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Characteristics of cross-modal negative BOLD responses in the human sensory subcortex and cortex.",
+        "Revisiting the explicit-implicit additivity assumption in visuomotor adaptation."
+      ]
+    },
+    {
+      "address": "School of Chemical and Biomolecular Engineering, University of Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": " School of Chemical Engineering, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": "Bioanalytical Mass Spectrometry Facility, Mark Wainwright Analytical Centre, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": "Ramaciotti Centre for Genomics, School of Biotechnology and Biomolecular Sciences, Faculty of Science, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": " Australian Centre for Nano Medicine, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": "School of Biomedical Engineering, Faculty of Engineering, University of New South Wales, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": " School of Mechanical and Manufacturing Engineering, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": "School of Chemical and Biomolecular Engineering, University of Sydney, Sydney, New South Wales, Australia. kourosh.kalantarzadeh@sydney.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Gallium in liquid state shows nuclease-mimicking activity"
+      ]
+    },
+    {
+      "address": " A. Franci is with the WEL-T Department, WEL Research Institute, 1300 Wavre, Belgium. {afyon, afranci, p.sacre, gdrion}@uliege.be.",
+      "before": [],
+      "after": [
+        "Belgium"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neuromodulation supports robust rhythmic pattern transitions in degenerate central pattern generators with fixed connectivity"
+      ]
+    },
+    {
+      "address": "Affiliation: Department of Mathematics and Statistics, University of New Mexico, Albuquerque, New Mexico, United States",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Platelet plug microstructure and flow modulate fibrin gelation dynamics: Insights from computational simulations"
+      ]
+    },
+    {
+      "address": "Eaton-Peabody Laboratories, Massachusetts Eye and Ear, Boston, Massachusetts.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Parallel Age-Related Cochlear Neural Degeneration and Cortical Gain Adaptation in Normal-Hearing Humans.",
+        "Parallel age-related cochlear neural degeneration and cortical gain adaptation in normal-hearing humans."
+      ]
+    },
+    {
+      "address": "Centre for Population Genomics, Garvan Institute of Medical Research, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Saturation editing of RNU4-2 reveals distinct dominant and recessive disorders"
+      ]
+    },
+    {
+      "address": "Australian Centre for Neutron Scattering, Australian Nuclear Science and Technology Organisation, Lucas Heights, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mummified early Permian reptile reveals ancient amniote breathing apparatus"
+      ]
+    },
+    {
+      "address": "Los Alamos National Laboratory, Los Alamos, New Mexico 87545.",
+      "before": [
+        "Mexico"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Distinct Hippocampal Mechanisms Support Concept Formation and Updating."
+      ]
+    },
+    {
+      "address": "Department of Neurobiology & Biophysics and Washington National Biomedical Research Center, University of Washington, Seattle, Washington 98195 taekjun@uw.edu pasupat@u.washington.edu.",
+      "before": [
+        "United States",
+        "Vietnam"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Functional Clusters for Shape, Texture, and Motion Encoding in Macaque V2."
+      ]
+    },
+    {
+      "address": "Department of Neurobiology & Biophysics and Washington National Biomedical Research Center, University of Washington, Seattle, Washington 98195.",
+      "before": [
+        "United States",
+        "Vietnam"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Functional Clusters for Shape, Texture, and Motion Encoding in Macaque V2."
+      ]
+    },
+    {
+      "address": "Inner Mongolia Key Laboratory of Dairy Biotechnology and Engineering, Inner Mongolia Agricultural University, Hohhot, Inner Mongolia, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "A microbiome catalog of Chinese traditional artisanal cheeses provides insights into functional and microbial diversity"
+      ]
+    },
+    {
+      "address": "Affiliation: PsiDagger, San Diego, CA",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Polyformer: a generative framework for thermodynamic modeling of polymeric molecules"
+      ]
+    },
+    {
+      "address": "Epilepsy Center of Excellence, VA Puget Sound, Seattle, Washington 98108.",
+      "before": [
+        "Netherlands",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Suppression of In Vitro Epileptiform Activity by GABA Transaminase Inhibition Is Dependent on GABA(B) Receptors and GABA Transporter Type 1 (GAT1)."
+      ]
+    },
+    {
+      "address": "Epilepsy Center of Excellence, VA Puget Sound, Seattle, Washington 98108 cbr5@uw.edu.",
+      "before": [
+        "Netherlands",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Suppression of In Vitro Epileptiform Activity by GABA Transaminase Inhibition Is Dependent on GABA(B) Receptors and GABA Transporter Type 1 (GAT1)."
+      ]
+    },
+    {
+      "address": " Santa Fe Institute, Santa Fe, New Mexico.",
+      "before": [
+        "Mexico"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "A Spinal Origin for the Obligate Flexor Synergy in the Nonhuman Primate: Implications for Control of Reaching."
+      ]
+    },
+    {
+      "address": "School of Psychology, The University of Sydney, Sydney, New South Wales 2050, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neurochemical Correlates of Mind-Wandering and Meta-Awareness."
+      ]
+    },
+    {
+      "address": "Affiliation: Jinan University, Guangzhou Correspondence: avrillliu@hkust-gz.edu.cn",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "CAGenMol: Condition-Aware Diffusion Language Model for Goal-Directed Molecular Generation"
+      ]
+    },
+    {
+      "address": "Sydney Medical School & School of Biomedical Engineering, University of Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Towards a general-purpose foundation model for functional MRI analysis"
+      ]
+    },
+    {
+      "address": " Spinal Cord and Brain Injury Research Group, Stark Neuroscience Research Institute, Indianapolis, Indiana 46202.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Repurposing Dexmedetomidine: Early Pharmacological Hypothermia Enhances Neuroprotection and Improves Locomotor and Bladder Functional Recovery after Spinal Cord Injury."
+      ]
+    },
+    {
+      "address": "Brain and Mind Centre, School of Medical Sciences, Faculty of Medicine and Health, The University of Sydney, Sydney, New South Wales, Australia, 2006.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Collapse of feed-forward inhibition underpins hyperexcitability in GABAA gain-of-function epilepsy."
+      ]
+    },
+    {
+      "address": " School of Science, University of Western Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Collapse of feed-forward inhibition underpins hyperexcitability in GABAA gain-of-function epilepsy."
+      ]
+    },
+    {
+      "address": "Department of Psychology, Princeton University, Princeton, New Jersey, United States.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Revisiting the explicit-implicit additivity assumption in visuomotor adaptation."
+      ]
+    },
+    {
+      "address": "Department of Rheumatology and Immunology, the First Affiliated Hospital of Baotou Medical College, Inner Mongolia, University of Science and Technology, Baotou, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Low dose IL-2 therapy restores regulatory T cells in patients with systemic lupus erythematosus in a dose-dependent manner: a phase IIb trial"
+      ]
+    },
+    {
+      "address": " Aligning Science Across Parkinson's (ASAP) Collaborative Research Network, Chevy Chase, MD.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Integrated Representations of Threat and Controllability in the Lateral Frontal Pole."
+      ]
+    },
+    {
+      "address": "Departments of Neuroscience, Feinberg School of Medicine, Chicago, Illinois 60611 toshihiro.nomura@northwestern.edu tnomura@inst-hsc.jp a-contractor@northwestern.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": "Departments of Neuroscience, Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": " Psychiatry and Behavioral Sciences, Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": " Department of Neurobiology, Weinberg College of Arts and Sciences Northwestern University, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice."
+      ]
+    },
+    {
+      "address": "Cochlear Limited, Macquarie University, 1 University Avenue, Sydney, New South Wales 2109, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Primary Neural Degeneration after Cochlear Implantation: Histological and Electrophysiological Evidence from a Mouse Model."
+      ]
+    },
+    {
+      "address": " Otopathology Laboratory, Massachusetts Eye and Ear, Boston, Massachusetts 02114.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Primary Neural Degeneration after Cochlear Implantation: Histological and Electrophysiological Evidence from a Mouse Model."
+      ]
+    },
+    {
+      "address": " Eaton-Peabody Laboratories, Massachusetts Eye and Ear, Boston, Massachusetts 02114.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Primary Neural Degeneration after Cochlear Implantation: Histological and Electrophysiological Evidence from a Mouse Model."
+      ]
+    },
+    {
+      "address": " Department of Neuroscience and Experimental Therapeutics, Texas A&M University Naresh K. Vashisht College of Medicine, Bryan, Texas 77807.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Genetically Encoded Constitutive Upregulation of β2 Subunit-Containing Neuronal Nicotinic Acetylcholine Receptors Is Neuroprotective in Female Parkinsonian Mice.",
+        "Genetically encoded constitutive upregulation of β2 subunit containing neuronal nicotinic acetylcholine receptors is neuroprotective in female parkinsonian mice."
+      ]
+    },
+    {
+      "address": " Washington National Biomedical Research Center, Seattle, Washington 98115.",
+      "before": [
+        "Vietnam"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "The Spatiotemporal Structure of Neural Activity in Motor Cortex during Reaching.",
+        "The spatiotemporal structure of neural activity in motor cortex during reaching."
+      ]
+    },
+    {
+      "address": "GNOME Diagnostics, Powell, OH 143081.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [
+        {
+          "type": "invalid_postal_format",
+          "value": "143081",
+          "country_code": "US"
+        }
+      ],
+      "papers": [
+        "MiR-155-driven loss of ICOSL and SOCS1 in EBV+ gastric cancers renders abundant cytotoxic T cells ineffective, enabling immune evasion."
+      ]
+    },
+    {
+      "address": "Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania 15213 agittis@cmu.edu.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Ih Shapes Pathway-Specific Inhibition in Substantia Nigra Pars Reticulata.",
+        "Ih Shapes Pathway-Specific Inhibition in the Substantia Nigra Pars Reticulata."
+      ]
+    },
+    {
+      "address": " Hawkesbury Institute for the Environment, Western Sydney University, Penrith, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Predicting temporal stability and resilience from resistance and recovery"
+      ]
+    },
+    {
+      "address": "Division of Neurology, Department of Medicine, Children's Hospital of Eastern Ontario Research Institute, The Ottawa Hospital, Brain and Mind Research Institute, University of Ottawa, Ottawa, Ontario, Canada K1H 8L1.",
+      "before": [
+        "Canada",
+        "United States"
+      ],
+      "after": [
+        "Canada"
+      ],
+      "warnings": [],
+      "papers": [
+        "EIPR1 variants cause a neurodevelopmental disorder with endolysosomal and dense core vesicle defects."
+      ]
+    },
+    {
+      "address": "Affiliation: Neurospin, CEA, Gif sur Yvette",
+      "before": [],
+      "after": [
+        "France"
+      ],
+      "warnings": [],
+      "papers": [
+        "NeuralSet: A High-Performing Python Package for Neuro-AI"
+      ]
+    },
+    {
+      "address": "Independent researcher, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Ancient DNA evidence for the history of the Albanians"
+      ]
+    },
+    {
+      "address": "MSTP Program, University of Pittsburgh and Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania 15213.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Aberrant Cerebellar-Recipient Thalamic Activity in Two Mouse Models with Prominent Tremor or Bradykinesia."
+      ]
+    },
+    {
+      "address": "Department of Neurobiology, Systems Neuroscience Institute and Center for the Neural Basis of Cognition, University of Pittsburgh, Pittsburgh, Pennsylvania 15261.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Aberrant Cerebellar-Recipient Thalamic Activity in Two Mouse Models with Prominent Tremor or Bradykinesia."
+      ]
+    },
+    {
+      "address": "Department of Biological Sciences and the Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania 15213 agittis@cmu.edu.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Aberrant Cerebellar-Recipient Thalamic Activity in Two Mouse Models with Prominent Tremor or Bradykinesia."
+      ]
+    },
+    {
+      "address": " Affiliation: Goethe University Frankfurt, Institute of Computer Science, Frankfurt am Main, Germany * Both authors jointly supervised this work. † Corresponding author: triesch@fias.uni-frankfurt.de",
+      "before": [
+        "Germany",
+        "Poland"
+      ],
+      "after": [
+        "Germany"
+      ],
+      "warnings": [],
+      "papers": [
+        "Predictive Coding Light+: learning to predict visual sequences with spike timing-dependent plasticity and synaptic delays"
+      ]
+    },
+    {
+      "address": "Mosman, New South Wales 2088, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Reply: Is nociception necessary for pain?"
+      ]
+    },
+    {
+      "address": "Centre Hospitalier et Universitaire de Bouaké, Bouaké, Côte d'Ivoire.",
+      "before": [],
+      "after": [
+        "Ivory Coast"
+      ],
+      "warnings": [],
+      "papers": [
+        "Continental-scale genomic surveillance ofPlasmodium falciparummalaria across sub-Saharan Africa with rapid nanopore sequencing"
+      ]
+    },
+    {
+      "address": "Mark Hughes Foundation Centre for Brain Cancer Research, University of Newcastle, Newcastle, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neurophysiology of brain temperature dysregulation in humans."
+      ]
+    },
+    {
+      "address": " School of Medicine and Public Health, College of Medicine, Health and Wellbeing, University of Newcastle, Newcastle, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neurophysiology of brain temperature dysregulation in humans."
+      ]
+    },
+    {
+      "address": " Hunter Medical Research Institute, Newcastle, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neurophysiology of brain temperature dysregulation in humans."
+      ]
+    },
+    {
+      "address": " School of Psychological Sciences, College of Engineering, Science and the Environment, University of Newcastle, Newcastle, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Neurophysiology of brain temperature dysregulation in humans."
+      ]
+    },
+    {
+      "address": "Lilly Research Laboratories, Indianapolis, Indiana 46225.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Expression and Localization of NMDA Receptor GluN2 Subunits in Dorsal Horn Pain Circuits across Sex, Species, and Late Postnatal Development.",
+        "Expression and localization of NMDA receptor GluN2 subunits in dorsal horn pain circuits across sex, species, and late postnatal development."
+      ]
+    },
+    {
+      "address": "Spinal Circuits and Plasticity Unit, National Institute of Neurological Disorders and Stroke, Bethesda, Maryland 20892.",
+      "before": [
+        "Austria",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Expression and Localization of NMDA Receptor GluN2 Subunits in Dorsal Horn Pain Circuits across Sex, Species, and Late Postnatal Development.",
+        "Expression and localization of NMDA receptor GluN2 subunits in dorsal horn pain circuits across sex, species, and late postnatal development."
+      ]
+    },
+    {
+      "address": " School of Geosciences, The University of Sydney, Sydney, New South Wales, Australia. maxlechte@gmail.com.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Early fossil eukaryotes were benthic aerobes"
+      ]
+    },
+    {
+      "address": " National Center for Adaptive Neurotechnologies, St. Louis, Missouri 63110.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Pulvinar Subregions Influence Select Cortical Pathways in Humans.",
+        "Pulvinar subregions influence select cortical pathways in humans.",
+        "Three Fundamental Neurophysiological Features of Neural Dynamics: Aperiodic, Waveform, and Transient."
+      ]
+    },
+    {
+      "address": "Neuroscience Institute, New York University Grossman School of Medicine, New York, New York 10016.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Dendritic Inhibition Terminates Plateau Potentials in CA1 Pyramidal Neurons."
+      ]
+    },
+    {
+      "address": " Neuroscience Institute, The University of Chicago, Chicago, Illinois 60637.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Multiple Scales of Coordination along the Body Axis during Drosophila Larval Locomotion."
+      ]
+    },
+    {
+      "address": "Neuroscience Institute, The University of Chicago, Chicago, Illinois 60637 heckscher@uchicago.edu mattkaufman@uchicago.edu.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Multiple Scales of Coordination along the Body Axis during Drosophila Larval Locomotion."
+      ]
+    },
+    {
+      "address": " NSF-Simons National Institute for Theory and Mathematics in Biology, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Multiple Scales of Coordination along the Body Axis during Drosophila Larval Locomotion."
+      ]
+    },
+    {
+      "address": " Affiliation: Alljoined, San Francisco, California, Unites States of America",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Robust multi-modal architectures translate fMRI-to-image models from vision to mental imagery"
+      ]
+    },
+    {
+      "address": " Affiliation: Sophont, San Francisco, California, Unites States of America",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Robust multi-modal architectures translate fMRI-to-image models from vision to mental imagery"
+      ]
+    },
+    {
+      "address": " Affiliation: Princeton Neuroscience Institute, Princeton, New Jersey, United States of America * Corresponding author: reesekneeland@gmail.com † Core contribution.",
+      "before": [
+        "Jersey"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Robust multi-modal architectures translate fMRI-to-image models from vision to mental imagery"
+      ]
+    },
+    {
+      "address": " Iowa Neuroscience Institute, University of Iowa, Iowa City, Iowa 52242.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "A Transient Feature of the Inferior Olive Supports the Development of Cerebellar Internal Models.",
+        "A transient feature of the inferior olive supports the development of cerebellar internal models.",
+        "Homeostatic Coupling of Cortical and Brainstem Delta Rhythms in Sleeping Infant Rats.",
+        "Homeostatic coupling of cortical and brainstem delta rhythms in sleeping infant rats."
+      ]
+    },
+    {
+      "address": "New Haven, Connecticut.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Disembodied human brains used for drug testing."
+      ]
+    },
+    {
+      "address": " Walloon ExceLlence Research Institute, Wavre 1300, Belgique.",
+      "before": [],
+      "after": [
+        "Belgium"
+      ],
+      "warnings": [],
+      "papers": [
+        "Aging increases the cortical resources allocated to static balance maintenance."
+      ]
+    },
+    {
+      "address": "Princeton Neuroscience Institute, Princeton University, Princeton, New Jersey 08544 kb9590@princeton.edu.",
+      "before": [
+        "Jersey"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "KIASORT: Knowledge-Integrated Automated Spike Sorting for Geometry-Free Neuron Tracking."
+      ]
+    },
+    {
+      "address": "Princeton Neuroscience Institute, Princeton University, Princeton, New Jersey 08544.",
+      "before": [
+        "Jersey"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Altered Postnatal Chromatin Development in the Nucleus Accumbens Primes Enduring Stress Sensitivity.",
+        "Altered postnatal chromatin development in the nucleus accumbens primes enduring stress sensitivity.",
+        "KIASORT: Knowledge-Integrated Automated Spike Sorting for Geometry-Free Neuron Tracking."
+      ]
+    },
+    {
+      "address": " Department of Psychology, Princeton University, Princeton, New Jersey 08544.",
+      "before": [
+        "Jersey"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "KIASORT: Knowledge-Integrated Automated Spike Sorting for Geometry-Free Neuron Tracking."
+      ]
+    },
+    {
+      "address": "Kirby Institute, University of New South Wales, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Atypical B cells and inflammatory profiles delineate immunity to influenza vaccination in First Nations and non-Indigenous people with chronic multimorbidity"
+      ]
+    },
+    {
+      "address": " School of Natural Sciences, Macquarie University, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Head direction and the evolutionary origins of spatial representation",
+        "High-fidelity modular skeletons authenticate a Cambrian origin for Bryozoa"
+      ]
+    },
+    {
+      "address": "Center for Learning and Memory, Department of Neuroscience, University of Texas at Austin, Austin, Texas 78712 lyndskirk@utexas.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.",
+        "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP."
+      ]
+    },
+    {
+      "address": "Center for Learning and Memory, Department of Neuroscience, University of Texas at Austin, Austin, Texas 78712.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.",
+        "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP."
+      ]
+    },
+    {
+      "address": "Charles Perkins Centre and School of Life and Environmental Sciences, University of Sydney, Sydney, New South Wales 2006, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mating-dependent lifespan cost of sterol depletion in male Drosophila melanogaster."
+      ]
+    },
+    {
+      "address": " Northwestern University, Chicago, IL.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Transient Frontal Fracturing: A Theoretical Account of Hyperfocus."
+      ]
+    },
+    {
+      "address": "School of Natural Sciences, Macquarie University, Sydney, New South Wales, Australia. Electronic address: marcel.sayre@mq.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Head direction and the evolutionary origins of spatial representation"
+      ]
+    },
+    {
+      "address": "School of Mechanical, Materials, Mechatronic and Biomedical Engineering, University of Wollongong, Wollongong, New South Wales 2522, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A biodegradable low-voltage soft actuator with exceptional energy density and ultrafast response"
+      ]
+    },
+    {
+      "address": "Affiliation: Graduate School of Engineering and Science Shibaura Institute of Technology, Tokyo, Japan FINDEX Inc., Tokyo, Japan RIKEN AIP, Tokyo, Japan ORCID:0009-0006-3576-845X",
+      "before": [
+        "France",
+        "Japan"
+      ],
+      "after": [
+        "Japan"
+      ],
+      "warnings": [],
+      "papers": [
+        "End-to-End Machine Learning for Depressive State Classification via EEG and fNIRS"
+      ]
+    },
+    {
+      "address": "Affiliation: RIKEN AIP, Tokyo, Japan ORCID: 0000-0003-3644-276X",
+      "before": [],
+      "after": [
+        "Japan"
+      ],
+      "warnings": [],
+      "papers": [
+        "End-to-End Machine Learning for Depressive State Classification via EEG and fNIRS"
+      ]
+    },
+    {
+      "address": "Brain and Mind Centre, The University of Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Genome-wide meta-analysis of quantitatively measured generalized anxiety symptoms in individuals of European ancestry"
+      ]
+    },
+    {
+      "address": " Key Laboratory of Cancer Prevention and Therapy, Tianjin",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Capsaicin acts as a novel NRF2 agonist to suppress ethanol induced gastric mucosa oxidative damage by directly disrupting the KEAP1-NRF2 interaction.",
+        "XPO1-mediated TRIM21 nuclear export reprograms TREM2+ macrophage polarization by targeting IRF3 to augment anti-PD-1 efficacy in small cell lung cancer"
+      ]
+    },
+    {
+      "address": "Department of Epidemiology & Public Health, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Brain-Selective Estrogen Therapy in Male and Female Marmosets Partially Counteracts the Adverse Effects of Aromatase Inhibition on the Brain and Behavior.",
+        "Brain-selective estrogen therapy in male and female marmosets partially counteracts the adverse effects of aromatase inhibition on the brain and behavior."
+      ]
+    },
+    {
+      "address": " National Center of Technology Innovation for Dairy, Inner Mongolia Dairy Technology Research Institute Co. Ltd, Hohhot 010100, Inner Mongolia, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Host genetic regulation of rumen 6-hydroxymelatonin reduces methane emissions in dairy cattle."
+      ]
+    },
+    {
+      "address": " Medical Research Council Unit The Gambia at the London School of Hygiene and Tropical Medicine, Banjul, Gambia.",
+      "before": [
+        "Austria",
+        "United Kingdom"
+      ],
+      "after": [
+        "Gambia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Growth in early infancy drives optimal brain functional connectivity which predicts cognitive flexibility in later childhood."
+      ]
+    },
+    {
+      "address": "School of Mathematical and Physical Sciences, University of Technology Sydney, Ultimo, New South Wales 2007, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Twist-controlled modulation of quantum emitters in hexagonal boron nitride"
+      ]
+    },
+    {
+      "address": " ARC Centre of Excellence for Transformative Meta-Optical Systems, Faculty of Science, University of Technology Sydney, Ultimo, New South Wales 2007, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Twist-controlled modulation of quantum emitters in hexagonal boron nitride"
+      ]
+    },
+    {
+      "address": " Intersect Australia, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A prototype differential atom interferometer for fundamental physics"
+      ]
+    },
+    {
+      "address": " Molecular Horizons, University of Wollongong, Wollongong, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Structure of the pre-initiation complex explains CMGE biogenesis"
+      ]
+    },
+    {
+      "address": "Affiliation: Joseph Henry Laboratories of Physics, Princeton University, Princeton, New Jersey 08544, USA",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Adaptive inference and function vectors in deep transformers"
+      ]
+    },
+    {
+      "address": "Affiliation: Extropic Corp., Boston, MA",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Energy-efficient codon optimization on thermodynamic hardware"
+      ]
+    },
+    {
+      "address": "Atria Research and Global Health Institute, New York, New York, 10022  USA.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Identification of a central CGRP circuit for trigeminal V1-mediated migraine-like pain in mice."
+      ]
+    },
+    {
+      "address": "Department of Integrative Biology and Helen Wills Neuroscience Institute, University of California at Berkeley, Berkeley, California 94720.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "GABAergic Signaling from Arginine Vasopressin Neurons in the Suprachiasmatic Nucleus Is Essential for Maintaining the Estrous Cycle in Mice.",
+        "GABAergic signaling from arginine vasopressin neurons in the suprachiasmatic nucleus is essential for maintaining the estrous cycle in mice."
+      ]
+    },
+    {
+      "address": "CSIRO Environment, Albury, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Food web complexity underlies biodiversity effects on ecosystem functioning"
+      ]
+    },
+    {
+      "address": " Gulbali Institute, Charles Sturt University, Albury, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Food web complexity underlies biodiversity effects on ecosystem functioning"
+      ]
+    },
+    {
+      "address": "Neuroscience Research Australia, Sydney, New South Wales, Australia",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals",
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals."
+      ]
+    },
+    {
+      "address": " The University of New South Wales, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals",
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals."
+      ]
+    },
+    {
+      "address": "Neuroscience Research Australia, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals",
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals."
+      ]
+    },
+    {
+      "address": " The University of New South Wales, Sydney, New South Wales, Australia. Electronic address: s.kassem@neura.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals",
+        "Emulating the periodic table: A unified list of CNS terms and abbreviations for humans and experimental animals."
+      ]
+    },
+    {
+      "address": "College of Forestry, Inner Mongolia Agricultural University, Inner Mongolia, Hohhot 010019, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Unveiling the drivers of carbon sequestration in Baotou shelterbelt species: A functional group perspective with xgboost-SHAP interpretation"
+      ]
+    },
+    {
+      "address": " College of Science, Inner Mongolia Agricultural University, Inner Mongolia, Hohhot 010018, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Unveiling the drivers of carbon sequestration in Baotou shelterbelt species: A functional group perspective with xgboost-SHAP interpretation"
+      ]
+    },
+    {
+      "address": "Baotou Forestry and Grassland Work Station, Inner Mongolia, Baotou 014030, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Unveiling the drivers of carbon sequestration in Baotou shelterbelt species: A functional group perspective with xgboost-SHAP interpretation"
+      ]
+    },
+    {
+      "address": "Marine Mammal Stranding Center, Brigantine, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Serological evidence of SARS-CoV-2 exposure in marine mammals in the United States between 2020 and 2025."
+      ]
+    },
+    {
+      "address": "School of Public Health, Rutgers University, Piscataway, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Early life stress enhances the association between residential nature exposure and fasting blood glucose."
+      ]
+    },
+    {
+      "address": "Department of Pharmacology and Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201 matthewbruce@som.umaryland.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Program in Neuroscience, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": " Medical Scientist Training Program, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Program in Molecular Microbiology and Immunology, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [
+        "Portugal"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Department of Pharmacology and Physiology, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": " UM-MIND, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Mast Cells in the Developing Brain."
+      ]
+    },
+    {
+      "address": "Affiliation: Princeton University , Princeton , New Jersey , USA",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Compiling Bioinformatics Recurrences"
+      ]
+    },
+    {
+      "address": "School of Biomedical Sciences and Pharmacy, University of Newcastle, Callaghan, New South Wales 2308, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Spatial transcriptomic mapping of postnatal mouse uterine development."
+      ]
+    },
+    {
+      "address": "Douglass Hanly Moir Pathology, Newcastle, New South Wales 2300, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Spatial transcriptomic mapping of postnatal mouse uterine development."
+      ]
+    },
+    {
+      "address": "The Australian Institute of Agriculture, Doonbah, New South Wales 2473, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Spatial transcriptomic mapping of postnatal mouse uterine development."
+      ]
+    },
+    {
+      "address": "Department of Ecology & Evolutionary Biology, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Zooplankton feeding behavioral signatures in the morphology of macroscale prey spatial distribution."
+      ]
+    },
+    {
+      "address": " Department of Ecology, Evolution, and Natural Resources, Rutgers University, New Brunswick, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Zooplankton feeding behavioral signatures in the morphology of macroscale prey spatial distribution."
+      ]
+    },
+    {
+      "address": "Ocean Shores, Washington.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "As the Arctic warms, gray whale boom turns into a bust."
+      ]
+    },
+    {
+      "address": "Department of Chemistry and Environmental Engineering, Hetao College, Bayannur, Inner Mongolia, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Temporal evolution of carbon footprint and emission reduction pathways of major crops in Inner mongolia under China's dual-carbon goals."
+      ]
+    },
+    {
+      "address": "College of Agronomy, Inner Mongolia Agricultural University, Hohhot, Inner Mongolia, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Temporal evolution of carbon footprint and emission reduction pathways of major crops in Inner mongolia under China's dual-carbon goals."
+      ]
+    },
+    {
+      "address": " Department of Biomedical Engineering, City University of Hongkong, Hongkong.",
+      "before": [],
+      "after": [
+        "Hong Kong"
+      ],
+      "warnings": [],
+      "papers": [
+        "Ultrasoft, adhesive, pH-tunable hydrogel based on in situ functionalized laser-induced graphene for through-hair concurrent biosensing"
+      ]
+    },
+    {
+      "address": "School of Life Sciences, Faculty of Science, University Technology Sydney, Ultimo, New South Wales 2007, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Vitronectin metabolically programs profibrotic macrophages in 3D cultures and idiopathic pulmonary fibrosis"
+      ]
+    },
+    {
+      "address": "Centre for Inflammation, Centenary Institute and University of Technology Sydney, Faculty of Science, School of Life Sciences, Camperdown, New South Wales 2050, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Vitronectin metabolically programs profibrotic macrophages in 3D cultures and idiopathic pulmonary fibrosis"
+      ]
+    },
+    {
+      "address": "Waksman Institute and Department of Molecular Biology and Biochemistry, Rutgers University, Piscataway, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Dachsous-Fat signaling shapes the Drosophila wing through mechanical forces."
+      ]
+    },
+    {
+      "address": "Affiliation: Interdisciplinary Life Sciences, University of Texas at Austin, Austin, TX.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling"
+      ]
+    },
+    {
+      "address": " Affiliation: Molecular AI, Novo Nordisk, Lexington, MA",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling"
+      ]
+    },
+    {
+      "address": "Princeton Neuroscience Institute, Princeton University, Princeton, New Jersey 08544 cpena@princeton.edu meaghan.creed@wustl.edu.",
+      "before": [
+        "Jersey"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Altered Postnatal Chromatin Development in the Nucleus Accumbens Primes Enduring Stress Sensitivity.",
+        "Altered postnatal chromatin development in the nucleus accumbens primes enduring stress sensitivity."
+      ]
+    },
+    {
+      "address": " Hawkesbury Institute for the Environment, Western Sydney University, Penrith, New South Wales 2751, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests"
+      ]
+    },
+    {
+      "address": "Gulbali Institute, Charles Sturt University, Orange, New South Wales 2800, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests"
+      ]
+    },
+    {
+      "address": "Applied Biosciences, Macquarie University, North Ryde, New South Wales 2109, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests"
+      ]
+    },
+    {
+      "address": "School of Natural Sciences, Macquarie University, Sydney, New South Wales 2109, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests"
+      ]
+    },
+    {
+      "address": " School of Psychology, University of New South Wales (UNSW) Sydney, Kensington, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Cognitive training increases sensitivity to internal uncertainty during decision-making."
+      ]
+    },
+    {
+      "address": "Affiliation: Zhongguancun Laboratory, Beijing, China {zihanzhang, ybao, xding}@ir.hit.edu.cn, xiongk@zgclab.edu.cn",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Is EEG-to-Text Feasible in Real-World Scenarios? An In-Depth Analysis Using a Neuropsychology-Inspired Benchmark"
+      ]
+    },
+    {
+      "address": "Department of Anatomy & Neurobiology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02118 zhouybu@bu.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Subregional and Laminar Specializations of Pyramidal Neurons in the Macaque Anterior Cingulate Cortex.",
+        "Subregional and laminar specializations of pyramidal neurons in the macaque anterior cingulate cortex."
+      ]
+    },
+    {
+      "address": "Department of Anatomy & Neurobiology, Boston University Chobanian & Avedisian School of Medicine, Boston, Massachusetts 02118.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Subregional and Laminar Specializations of Pyramidal Neurons in the Macaque Anterior Cingulate Cortex.",
+        "Subregional and laminar specializations of pyramidal neurons in the macaque anterior cingulate cortex."
+      ]
+    },
+    {
+      "address": "Bayer HealthCare Pharmaceuticals Inc, Whippany, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Real-world regorafenib use among patients with advanced gastrointestinal stromal tumor in the United States."
+      ]
+    },
+    {
+      "address": "Department of Linguistics, Faculty of Medicine, Health and Human Sciences, Macquarie University, Sydney, New South Wales 2109, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Brain-Wide Circuitry Underlying Altered Auditory Habituation in Zebrafish Models of Autism.",
+        "Brain-wide circuitry underlying altered auditory habituation in zebrafish models of autism."
+      ]
+    },
+    {
+      "address": " Roger and Angie Karalis Johnson Retina Center, Seattle, Washington 98109.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Optoretinography in R9AP-Bradyopsia Reveals an Essential Role of G-Protein Activation and Deactivation in the Human Cone Elongation Response.",
+        "Optoretinography in R9AP-Bradyopsia Reveals an Essential role of G-protein Activation and Deactivation in the Human Cone Elongation Response."
+      ]
+    },
+    {
+      "address": " Neuroscience Graduate Program, Weill Cornell Graduate School of Medical Sciences, New York, New York 10065.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Agonist-Dependent Signaling through Metabotropic Glutamate Receptor 5 Is a Key Gatekeeper of Synaptic Upscaling."
+      ]
+    },
+    {
+      "address": "Department of Neuroscience, Northwestern University, Chicago, Illinois 60208.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Distinct Neural Modes Carry Information About Attempted Grasp Timing and Force in the Sensorimotor Cortex.",
+        "Distinct neural modes carry information about attempted grasp timing and force in the sensorimotor cortex."
+      ]
+    },
+    {
+      "address": "Department of Medical Oncology, Prince of Wales Hospital, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Single-fraction or multi-fraction stereotactic ablative body radiotherapy followed by atezolizumab in advanced triple-negative breast cancer: a randomized phase II trial"
+      ]
+    },
+    {
+      "address": "Princeton Neuroscience Institute, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Twelve quick tips for AI-assisted coding in science."
+      ]
+    },
+    {
+      "address": " University Medical Center-Eppendorf, Hamburg",
+      "before": [],
+      "after": [
+        "Germany"
+      ],
+      "warnings": [],
+      "papers": [
+        "High-amplitude oscillatory events coordinate large-scale cortical interactions during decision-making and attention allocation"
+      ]
+    },
+    {
+      "address": "Rio de Janeiro.",
+      "before": [],
+      "after": [
+        "Brazil"
+      ],
+      "warnings": [],
+      "papers": [
+        "Weekly HIV pill moves closer but vaccine studies face new questions."
+      ]
+    },
+    {
+      "address": " Helen Wills Neuroscience Institute, University of California, Berkeley, California 94720.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Magnetogenetics: Tools for Noninvasive Neuromodulation with Cellular Resolution."
+      ]
+    },
+    {
+      "address": "Helen Wills Neuroscience Institute, University of California, Berkeley, California 94720 chunlei.liu@berkeley.edu.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Magnetogenetics: Tools for Noninvasive Neuromodulation with Cellular Resolution."
+      ]
+    },
+    {
+      "address": "School of Neuroscience, Virginia Polytechnic and State University, Blacksburg, Virginia 24061.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Astrocyte TrkB.T1 Deficiency Disrupts Glutamatergic Synaptogenesis and Astrocyte-Synapse Interactions."
+      ]
+    },
+    {
+      "address": "School of Neuroscience, Virginia Polytechnic and State University, Blacksburg, Virginia 24061 molsen1@vt.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Astrocyte TrkB.T1 Deficiency Disrupts Glutamatergic Synaptogenesis and Astrocyte-Synapse Interactions."
+      ]
+    },
+    {
+      "address": " Department of Physical Therapy and Movement Science, Northwestern University, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Descending Brainstem Systems Contribute to Ankle Clonus in Humans with Spinal Cord Injury."
+      ]
+    },
+    {
+      "address": "Affiliation: Interdisciplinary Statistical Research Unit, Indian Statistical Institute, Kolkata, India † \\dagger Corresponding author: bhsourabh@gmail.com",
+      "before": [
+        "Austria",
+        "India"
+      ],
+      "after": [
+        "India"
+      ],
+      "warnings": [],
+      "papers": [
+        "Recursive Gaussian Processes and the Bayesian Brain"
+      ]
+    },
+    {
+      "address": "ASM affiliates, Hilo, Hawaii.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Ancient genomes reveal distinct human dispersals and social stratification in the settlement history of western Remote Oceania."
+      ]
+    },
+    {
+      "address": "University of Texas, Austin, TX.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Tracking the baryon number with nuclear collisions."
+      ]
+    },
+    {
+      "address": " Neuroscience Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania.",
+      "before": [
+        "Italy",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "The Role of the Locus Ceruleus in Eye Movements during Perceptual Decision-Making.",
+        "The role of the locus coeruleus in eye movements during perceptual decision making."
+      ]
+    },
+    {
+      "address": " Santa Fe Institute, Santa Fe, New Mexico, United States of America.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "REvolutionH-tl 2.0: A fast and robust tool for decoding evolutionary gene histories."
+      ]
+    },
+    {
+      "address": "Center for Wireless Information Processing, Department of Electrical and Computer Engineering, New Jersey Institute of Technology, Newark, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Assessing the reliability of cellular decision making from noisy, multidimensional single-cell TNF-NF-κB signaling data."
+      ]
+    },
+    {
+      "address": " Department of Biological Sciences, New Jersey Institute of Technology, Newark, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Assessing the reliability of cellular decision making from noisy, multidimensional single-cell TNF-NF-κB signaling data."
+      ]
+    },
+    {
+      "address": "School of Psychology, UNSW, Sydney, New South Wales 2052, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Brain Architecture of Punishment Learning.",
+        "Brain architecture of punishment learning."
+      ]
+    },
+    {
+      "address": "School of Psychology, UNSW, Sydney, New South Wales 2052, Australia g.mcnally@unsw.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Brain Architecture of Punishment Learning.",
+        "Brain architecture of punishment learning."
+      ]
+    },
+    {
+      "address": "Department of Forest Protection, College of Forestry, Inner Mongolia Agricultural University, Hohhot, Inner Mongolia, China.",
+      "before": [
+        "China",
+        "Mongolia"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Climate change impacts on Xanthium strumarium distribution: Integrating species distribution models with rhizosphere microbiome analysis in China."
+      ]
+    },
+    {
+      "address": "Department of Neurosciences, School of Medicine, University of New Mexico Health Sciences Center, Albuquerque, New Mexico, United States.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Large-Scale In Vivo Electrophysiology Analysis Reveals Opposing Thalamic and Hippocampal Excitability After Third-Trimester-Equivalent Alcohol Exposure in Mice."
+      ]
+    },
+    {
+      "address": "Department of Psychology, University of New Mexico, Albuquerque, New Mexico, United States.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Large-Scale In Vivo Electrophysiology Analysis Reveals Opposing Thalamic and Hippocampal Excitability After Third-Trimester-Equivalent Alcohol Exposure in Mice."
+      ]
+    },
+    {
+      "address": " School of Physics, The University of Sydney, Sydney, New South Wales 2006, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "All-inorganic perovskites for four-dimensional dynamic encryption"
+      ]
+    },
+    {
+      "address": " Piscataway, New Jersey 08854, United States.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "A biomimetic, ultralow-power edge-AI-empowered and self-sustaining gait analysis system"
+      ]
+    },
+    {
+      "address": " New Brunswick, New Jersey 08901, United States.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "A biomimetic, ultralow-power edge-AI-empowered and self-sustaining gait analysis system"
+      ]
+    },
+    {
+      "address": " Yale Child Study Center, New Haven, Connecticut 06510.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Corticolimbic Structure-Function Coupling Is Sensitive to Childhood Adversity and Buffers Adversity-Related Symptoms during Development.",
+        "Corticolimbic structure-function coupling is sensitive to childhood adversity and buffers adversity-related symptoms during development."
+      ]
+    },
+    {
+      "address": " The Santa Fe Institute, Santa Fe, New Mexico, United States of America.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Species-specific barriers restrict virus spillover potential across the Caenorhabditis genus."
+      ]
+    },
+    {
+      "address": " Affiliation: Yulin AI-Enhanced HealthCare Lab, Shanghai, China * Correspondence: zhengzhu@fudan.edu.cn",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "tSymPerturb converts longitudinal symptom networks into time-indexed intervention strategies"
+      ]
+    },
+    {
+      "address": "El Segundo, California.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Orbital alchemy."
+      ]
+    },
+    {
+      "address": ", , Campus-Vienna-Biocenter 1, Vienna , , ,",
+      "before": [],
+      "after": [
+        "Austria"
+      ],
+      "warnings": [],
+      "papers": [
+        "Unified down-stream analysis of crosslinking mass spectrometry results with pyXLMS"
+      ]
+    },
+    {
+      "address": "Center for Discovery and Innovation, Hackensack Meridian Health, Nutley, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Outbreaks of fluconazole-resistant Candida parapsilosis are driven by low-biofilm-producing isolates that emerge under host selection."
+      ]
+    },
+    {
+      "address": "Climate Change Cluster, Faculty of Science, University of Technology Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "The 100 Diatom Genomes Project."
+      ]
+    },
+    {
+      "address": " Zuckerman Mind, Brain, and Behavior Institute, Columbia University, New York, New York 10027.",
+      "before": [
+        "United Kingdom",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Purkinje cells in Crus I and II encode the visual stimulus and the impending choice as monkeys learn a reinforcement based visuomotor association task."
+      ]
+    },
+    {
+      "address": " Department of Neurology, Psychiatry, and Ophthalmology, Columbia University College of Physicians and Surgeons, New York, New York 10027.",
+      "before": [
+        "United Kingdom",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Purkinje cells in Crus I and II encode the visual stimulus and the impending choice as monkeys learn a reinforcement based visuomotor association task."
+      ]
+    },
+    {
+      "address": "Department of Neurology, Northwestern University Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Cycle-by-Cycle Respiration Waveforms Are Coupled with the Shape of Neural Oscillations.",
+        "Cycle-by-cycle respiration waveforms are coupled with the shape of neural oscillations."
+      ]
+    },
+    {
+      "address": "Department of Neurosurgery, Northwestern University Feinberg School of Medicine, Chicago, Illinois 60611.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Cycle-by-Cycle Respiration Waveforms Are Coupled with the Shape of Neural Oscillations.",
+        "Cycle-by-cycle respiration waveforms are coupled with the shape of neural oscillations."
+      ]
+    },
+    {
+      "address": " Kavli Institute for Brain and Mind, University of California, San Diego, La Jolla, California 92093.",
+      "before": [
+        "United Kingdom",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Cycle-by-Cycle Respiration Waveforms Are Coupled with the Shape of Neural Oscillations.",
+        "Cycle-by-cycle respiration waveforms are coupled with the shape of neural oscillations."
+      ]
+    },
+    {
+      "address": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712 sajana-aryal@uiowa.edu.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes."
+      ]
+    },
+    {
+      "address": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes."
+      ]
+    },
+    {
+      "address": "The University of Texas Health Science Center, Houston, Texas 77030.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Targeting TLR4-lipid rafts reverses hyper-excitability in pain-associated human dorsal root ganglia."
+      ]
+    },
+    {
+      "address": "Department of Ecology and Evolutionary Biology, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Economic factors promoting vaccine nationalism in the face of viral evolution.",
+        "Leveraging perturbations to infer the population dynamics of human rhinovirus and interaction of influenza A virus.",
+        "The distribution of fitness effects of nonsynonymous mutations varies phylogenetically across animals."
+      ]
+    },
+    {
+      "address": "High Meadows Environmental Institute, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Economic factors promoting vaccine nationalism in the face of viral evolution.",
+        "Leveraging perturbations to infer the population dynamics of human rhinovirus and interaction of influenza A virus."
+      ]
+    },
+    {
+      "address": " Princeton School of Public and International Affairs, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Leveraging perturbations to infer the population dynamics of human rhinovirus and interaction of influenza A virus."
+      ]
+    },
+    {
+      "address": " Department of Biology, New Mexico State University, Las Cruces, New Mexico, United States of America.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Ecological specialization in vectors alters transmission thresholds and endemic dynamics in multi-host, multi-vector systems."
+      ]
+    },
+    {
+      "address": "Bethesda, Maryland.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "NCI director counters gloomy forecast for cancer institute."
+      ]
+    },
+    {
+      "address": "Biosecurity & Food Safety, New South Wales Department of Primary Industries, Orange, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A real-time forecasting framework for emerging infectious diseases affecting animal populations."
+      ]
+    },
+    {
+      "address": "Lewis-Sigler Institute for Integrative Genomics, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "The value of a prophage-borne defense system in phage-phage competition."
+      ]
+    },
+    {
+      "address": " Department of Molecular Biology, Princeton University, Princeton, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "The value of a prophage-borne defense system in phage-phage competition."
+      ]
+    },
+    {
+      "address": " Affiliation: National Engineering Laboratory for Big Data Analysis and Applications, Beijing",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Dynamic Generalized Gromov-Wasserstein Optimal Transport"
+      ]
+    },
+    {
+      "address": " Affiliation: AI for Science Institute, Beijing",
+      "before": [],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "Dynamic Generalized Gromov-Wasserstein Optimal Transport"
+      ]
+    },
+    {
+      "address": "Centre for Marine Science and Innovation, School of Biological, Earth and Environmental Sciences, University of New South Wales, New South Wales, Sydney 2052, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "An eco-evolutionary theory of host-associated microbiomes."
+      ]
+    },
+    {
+      "address": "National Institute on Drug Abuse Intramural Research Program, Baltimore, Maryland.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "A parietal grid-like code rotates with cognitive maps but lags rapid behavioral transfer."
+      ]
+    },
+    {
+      "address": "Affiliation: DeepBio Scientific, Winter Park, FL",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "MIRAGE: Measuring Interpolation and Redundancy in Affinity GEneralization"
+      ]
+    },
+    {
+      "address": "Department of Mathematics and Statistics, The College of New Jersey, Ewing, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Topologically-based parameter inference for agent-based model selection from spatiotemporal cellular data."
+      ]
+    },
+    {
+      "address": "Department of Neurology, University of Maryland School of Medicine, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Regulation of protein kinase pathways in primary neuron model of anti-NMDA receptor encephalitis."
+      ]
+    },
+    {
+      "address": "Department of Pharmaceutical Sciences, University of Maryland School of Pharmacy, Baltimore, Maryland 21201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Regulation of protein kinase pathways in primary neuron model of anti-NMDA receptor encephalitis."
+      ]
+    },
+    {
+      "address": "Department of Neurosciences, University of New Mexico Health Sciences Center, Albuquerque, New Mexico, 87131.",
+      "before": [
+        "Mexico"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "ASCL1 and OLIG2 Expression Dynamics Control Glial Cell Fate and Regional Diversity in the Dorsal Forebrain."
+      ]
+    },
+    {
+      "address": " New Mexico Alcohol Research Center, Albuquerque, New Mexico, 87131.",
+      "before": [
+        "Mexico"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "ASCL1 and OLIG2 Expression Dynamics Control Glial Cell Fate and Regional Diversity in the Dorsal Forebrain."
+      ]
+    },
+    {
+      "address": " University of New Mexico Comprehensive Cancer Center, Albuquerque, New Mexico, 87131.",
+      "before": [
+        "Mexico"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "ASCL1 and OLIG2 Expression Dynamics Control Glial Cell Fate and Regional Diversity in the Dorsal Forebrain."
+      ]
+    },
+    {
+      "address": "Indian Institute of Science, Bengaluru",
+      "before": [
+        "China"
+      ],
+      "after": [
+        "India"
+      ],
+      "warnings": [],
+      "papers": [
+        "Plasticity degeneracy underlies flexible formation and reconfiguration of spatial representations in hippocampal granule cells"
+      ]
+    },
+    {
+      "address": " Glenn Biggs Institute for Alzheimer's and Neurodegenerative Diseases, San Antonio, TX.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Diagnostic Images for Mild Cognitive Impairment Are Sensitive to Alzheimer's Disease Biomarkers and Reveal Abnormal Scene Processing."
+      ]
+    },
+    {
+      "address": " Snow Vision Accelerator, Sydney Precision Data Science Centre, School of Mathematics and Statistics, University of Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "A human-induced pluripotent stem cell-derived spheroid model to investigate myelin injury and repair"
+      ]
+    },
+    {
+      "address": "College of University Libraries and Learning Sciences, University of New Mexico, Albuquerque, New Mexico, United States of America.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Voters reveal public library value: Evidence from US referendums."
+      ]
+    },
+    {
+      "address": "Department of Economics, University of New Mexico, Albuquerque, New Mexico, United States of America.",
+      "before": [
+        "Mexico",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Voters reveal public library value: Evidence from US referendums."
+      ]
+    },
+    {
+      "address": "Water Research Laboratory, School of Civil and Environmental Engineering, UNSW Sydney, Sydney, New South Wales, Australia. s.wells@wrl.unsw.edu.au.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Global mangrove distribution on the open coast is controlled by waves"
+      ]
+    },
+    {
+      "address": "Water Research Laboratory, School of Civil and Environmental Engineering, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Global mangrove distribution on the open coast is controlled by waves"
+      ]
+    },
+    {
+      "address": "Water Research Centre, School of Civil and Environmental Engineering, UNSW Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Global mangrove distribution on the open coast is controlled by waves"
+      ]
+    },
+    {
+      "address": "School of Physics, The University of Sydney, Sydney, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Comprehensive profiling of brain dynamics during anesthesia across phylogeny"
+      ]
+    },
+    {
+      "address": "Garvan Institute of Medical Research, Darlinghurst, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Analysis of urinary kidney-specific cell-free DNA in preeclampsia."
+      ]
+    },
+    {
+      "address": " School of Biomedical Sciences and Pharmacy, Faculty of Health and Medicine, University of Newcastle, Callaghan, New South Wales, Australia.",
+      "before": [
+        "Australia",
+        "United Kingdom"
+      ],
+      "after": [
+        "Australia"
+      ],
+      "warnings": [],
+      "papers": [
+        "Analysis of urinary kidney-specific cell-free DNA in preeclampsia."
+      ]
+    },
+    {
+      "address": "Department of Psychiatry, Brain Health Institute, Rutgers University, Piscataway, New Jersey, United States of America.",
+      "before": [
+        "Jersey",
+        "United States"
+      ],
+      "after": [
+        "United States"
+      ],
+      "warnings": [],
+      "papers": [
+        "Intrinsic timescale develops hierarchically from sensorimotor to association cortex in youth and stabilizes in adulthood."
+      ]
+    },
+    {
+      "address": " Affiliation: National Biomedical Imaging Center, College of Future Technology, Peking University, Beijing, China * Correspondence: xiezhaoheng@pku.edu.cn",
+      "before": [
+        "China",
+        "United States"
+      ],
+      "after": [
+        "China"
+      ],
+      "warnings": [],
+      "papers": [
+        "NeuronDiscover: Agent-in-Twin for Mechanistic Discovery in Neuronal Microenvironments with World Action Models"
+      ]
+    },
+    {
+      "address": " Communication Sciences and Disorders, College of Liberal Arts and Sciences, Wayne State Universsity, Detroit, MI 428201.",
+      "before": [],
+      "after": [
+        "United States"
+      ],
+      "warnings": [
+        {
+          "type": "invalid_postal_format",
+          "value": "428201",
+          "country_code": "US"
+        }
+      ],
+      "papers": [
+        "Longitudinal adaptations in neural and behavioral systems following hearing restoration using cochlear implants."
+      ]
+    }
+  ],
+  "newly_located_papers": [
+    "Activity-Dependent Regulation of Basal Forebrain Cholinergic Neurons by Striatal Spiny Projection Neurons.",
+    "Exaggerated NMDA Receptor-Primed Metaplasticity via SK Channel Dysregulation in Fmr1 Knockout Mice.",
+    "Disembodied human brains used for drug testing.",
+    "Energy-efficient codon optimization on thermodynamic hardware",
+    "As the Arctic warms, gray whale boom turns into a bust.",
+    "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+    "High-amplitude oscillatory events coordinate large-scale cortical interactions during decision-making and attention allocation",
+    "Weekly HIV pill moves closer but vaccine studies face new questions.",
+    "Astrocyte TrkB.T1 Deficiency Disrupts Glutamatergic Synaptogenesis and Astrocyte-Synapse Interactions.",
+    "Orbital alchemy.",
+    "Unified down-stream analysis of crosslinking mass spectrometry results with pyXLMS",
+    "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+    "NCI director counters gloomy forecast for cancer institute."
+  ],
+  "lost_country_papers": [],
+  "per_country": [
+    {
+      "country": "Afghanistan",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Albania",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Algeria",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 10
+    },
+    {
+      "country": "Andorra",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Argentina",
+      "papers_before": 55,
+      "papers_after": 55,
+      "addresses_after": 118
+    },
+    {
+      "country": "Armenia",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 9
+    },
+    {
+      "country": "Australia",
+      "papers_before": 516,
+      "papers_after": 516,
+      "addresses_after": 1471
+    },
+    {
+      "country": "Austria",
+      "papers_before": 265,
+      "papers_after": 262,
+      "addresses_after": 422
+    },
+    {
+      "country": "Azerbaijan",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "Bahamas",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Bahrain",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Bangladesh",
+      "papers_before": 31,
+      "papers_after": 31,
+      "addresses_after": 49
+    },
+    {
+      "country": "Barbados",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Belarus",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Belgium",
+      "papers_before": 253,
+      "papers_after": 253,
+      "addresses_after": 569
+    },
+    {
+      "country": "Belize",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Benin",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 6
+    },
+    {
+      "country": "Bolivia",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 5
+    },
+    {
+      "country": "Botswana",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Brazil",
+      "papers_before": 147,
+      "papers_after": 148,
+      "addresses_after": 368
+    },
+    {
+      "country": "Brunei",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 4
+    },
+    {
+      "country": "Bulgaria",
+      "papers_before": 13,
+      "papers_after": 13,
+      "addresses_after": 15
+    },
+    {
+      "country": "Burkina Faso",
+      "papers_before": 9,
+      "papers_after": 9,
+      "addresses_after": 12
+    },
+    {
+      "country": "Burundi",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 3
+    },
+    {
+      "country": "Cambodia",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 2
+    },
+    {
+      "country": "Cameroon",
+      "papers_before": 6,
+      "papers_after": 6,
+      "addresses_after": 9
+    },
+    {
+      "country": "Canada",
+      "papers_before": 786,
+      "papers_after": 786,
+      "addresses_after": 1980
+    },
+    {
+      "country": "Cayman Islands",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Chad",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 5
+    },
+    {
+      "country": "Chile",
+      "papers_before": 59,
+      "papers_after": 59,
+      "addresses_after": 164
+    },
+    {
+      "country": "China",
+      "papers_before": 2917,
+      "papers_after": 2916,
+      "addresses_after": 13640
+    },
+    {
+      "country": "Colombia",
+      "papers_before": 33,
+      "papers_after": 33,
+      "addresses_after": 77
+    },
+    {
+      "country": "Costa Rica",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 11
+    },
+    {
+      "country": "Croatia",
+      "papers_before": 14,
+      "papers_after": 14,
+      "addresses_after": 19
+    },
+    {
+      "country": "Cuba",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "Cyprus",
+      "papers_before": 12,
+      "papers_after": 12,
+      "addresses_after": 15
+    },
+    {
+      "country": "Czech Republic",
+      "papers_before": 120,
+      "papers_after": 120,
+      "addresses_after": 236
+    },
+    {
+      "country": "Denmark",
+      "papers_before": 243,
+      "papers_after": 243,
+      "addresses_after": 482
+    },
+    {
+      "country": "Djibouti",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 6
+    },
+    {
+      "country": "Dominica",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Dominican Republic",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Ecuador",
+      "papers_before": 15,
+      "papers_after": 15,
+      "addresses_after": 24
+    },
+    {
+      "country": "Egypt",
+      "papers_before": 29,
+      "papers_after": 29,
+      "addresses_after": 40
+    },
+    {
+      "country": "Eritrea",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Estonia",
+      "papers_before": 25,
+      "papers_after": 25,
+      "addresses_after": 34
+    },
+    {
+      "country": "Eswatini",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 9
+    },
+    {
+      "country": "Ethiopia",
+      "papers_before": 36,
+      "papers_after": 36,
+      "addresses_after": 97
+    },
+    {
+      "country": "Faroe Islands",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Fiji",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "Finland",
+      "papers_before": 123,
+      "papers_after": 123,
+      "addresses_after": 250
+    },
+    {
+      "country": "France",
+      "papers_before": 815,
+      "papers_after": 815,
+      "addresses_after": 2132
+    },
+    {
+      "country": "French Guiana",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "French Polynesia",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Gabon",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 13
+    },
+    {
+      "country": "Gambia",
+      "papers_before": 0,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Georgia",
+      "papers_before": 23,
+      "papers_after": 23,
+      "addresses_after": 52
+    },
+    {
+      "country": "Germany",
+      "papers_before": 1452,
+      "papers_after": 1453,
+      "addresses_after": 4670
+    },
+    {
+      "country": "Ghana",
+      "papers_before": 19,
+      "papers_after": 19,
+      "addresses_after": 38
+    },
+    {
+      "country": "Gibraltar",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Greece",
+      "papers_before": 40,
+      "papers_after": 40,
+      "addresses_after": 69
+    },
+    {
+      "country": "Greenland",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 3
+    },
+    {
+      "country": "Guam",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Guatemala",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Guyana",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Haiti",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Honduras",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 4
+    },
+    {
+      "country": "Hong Kong",
+      "papers_before": 191,
+      "papers_after": 192,
+      "addresses_after": 343
+    },
+    {
+      "country": "Hungary",
+      "papers_before": 55,
+      "papers_after": 55,
+      "addresses_after": 137
+    },
+    {
+      "country": "Iceland",
+      "papers_before": 11,
+      "papers_after": 11,
+      "addresses_after": 22
+    },
+    {
+      "country": "India",
+      "papers_before": 187,
+      "papers_after": 188,
+      "addresses_after": 337
+    },
+    {
+      "country": "Indonesia",
+      "papers_before": 36,
+      "papers_after": 36,
+      "addresses_after": 60
+    },
+    {
+      "country": "Iran",
+      "papers_before": 59,
+      "papers_after": 59,
+      "addresses_after": 141
+    },
+    {
+      "country": "Iraq",
+      "papers_before": 8,
+      "papers_after": 8,
+      "addresses_after": 11
+    },
+    {
+      "country": "Ireland",
+      "papers_before": 68,
+      "papers_after": 68,
+      "addresses_after": 124
+    },
+    {
+      "country": "Israel",
+      "papers_before": 221,
+      "papers_after": 221,
+      "addresses_after": 428
+    },
+    {
+      "country": "Italy",
+      "papers_before": 504,
+      "papers_after": 486,
+      "addresses_after": 1234
+    },
+    {
+      "country": "Ivory Coast",
+      "papers_before": 3,
+      "papers_after": 4,
+      "addresses_after": 5
+    },
+    {
+      "country": "Japan",
+      "papers_before": 598,
+      "papers_after": 598,
+      "addresses_after": 2107
+    },
+    {
+      "country": "Jersey",
+      "papers_before": 34,
+      "papers_after": 10,
+      "addresses_after": 15
+    },
+    {
+      "country": "Jordan",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 8
+    },
+    {
+      "country": "Kazakhstan",
+      "papers_before": 10,
+      "papers_after": 10,
+      "addresses_after": 27
+    },
+    {
+      "country": "Kenya",
+      "papers_before": 40,
+      "papers_after": 40,
+      "addresses_after": 64
+    },
+    {
+      "country": "Korea",
+      "papers_before": 307,
+      "papers_after": 307,
+      "addresses_after": 951
+    },
+    {
+      "country": "Kosovo",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Kuwait",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 8
+    },
+    {
+      "country": "Lao People's Democratic Republic",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Latvia",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 10
+    },
+    {
+      "country": "Lebanon",
+      "papers_before": 10,
+      "papers_after": 10,
+      "addresses_after": 11
+    },
+    {
+      "country": "Lesotho",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Liechtenstein",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Lithuania",
+      "papers_before": 11,
+      "papers_after": 11,
+      "addresses_after": 17
+    },
+    {
+      "country": "Luxembourg",
+      "papers_before": 24,
+      "papers_after": 24,
+      "addresses_after": 35
+    },
+    {
+      "country": "Macao",
+      "papers_before": 12,
+      "papers_after": 12,
+      "addresses_after": 13
+    },
+    {
+      "country": "Madagascar",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 4
+    },
+    {
+      "country": "Malawi",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 8
+    },
+    {
+      "country": "Malaysia",
+      "papers_before": 33,
+      "papers_after": 33,
+      "addresses_after": 49
+    },
+    {
+      "country": "Maldives",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Mali",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 6
+    },
+    {
+      "country": "Malta",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "Martinique",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 5
+    },
+    {
+      "country": "Mexico",
+      "papers_before": 91,
+      "papers_after": 83,
+      "addresses_after": 163
+    },
+    {
+      "country": "Moldova",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Mongolia",
+      "papers_before": 10,
+      "papers_after": 4,
+      "addresses_after": 3
+    },
+    {
+      "country": "Montenegro",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 1
+    },
+    {
+      "country": "Morocco",
+      "papers_before": 8,
+      "papers_after": 8,
+      "addresses_after": 11
+    },
+    {
+      "country": "Mozambique",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 3
+    },
+    {
+      "country": "Myanmar",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 3
+    },
+    {
+      "country": "Namibia",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Nepal",
+      "papers_before": 12,
+      "papers_after": 12,
+      "addresses_after": 27
+    },
+    {
+      "country": "Netherlands",
+      "papers_before": 486,
+      "papers_after": 484,
+      "addresses_after": 1004
+    },
+    {
+      "country": "New Caledonia",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 7
+    },
+    {
+      "country": "New Zealand",
+      "papers_before": 84,
+      "papers_after": 84,
+      "addresses_after": 158
+    },
+    {
+      "country": "Nicaragua",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 3
+    },
+    {
+      "country": "Niger",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Nigeria",
+      "papers_before": 18,
+      "papers_after": 18,
+      "addresses_after": 78
+    },
+    {
+      "country": "North Macedonia",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 3
+    },
+    {
+      "country": "Norway",
+      "papers_before": 137,
+      "papers_after": 137,
+      "addresses_after": 255
+    },
+    {
+      "country": "Oman",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 6
+    },
+    {
+      "country": "Pakistan",
+      "papers_before": 35,
+      "papers_after": 35,
+      "addresses_after": 64
+    },
+    {
+      "country": "Palau",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 4
+    },
+    {
+      "country": "Palestine",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 3
+    },
+    {
+      "country": "Panama",
+      "papers_before": 10,
+      "papers_after": 10,
+      "addresses_after": 11
+    },
+    {
+      "country": "Papua New Guinea",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 5
+    },
+    {
+      "country": "Peru",
+      "papers_before": 20,
+      "papers_after": 20,
+      "addresses_after": 33
+    },
+    {
+      "country": "Philippines",
+      "papers_before": 16,
+      "papers_after": 16,
+      "addresses_after": 20
+    },
+    {
+      "country": "Poland",
+      "papers_before": 118,
+      "papers_after": 116,
+      "addresses_after": 219
+    },
+    {
+      "country": "Portugal",
+      "papers_before": 83,
+      "papers_after": 82,
+      "addresses_after": 165
+    },
+    {
+      "country": "Puerto Rico",
+      "papers_before": 17,
+      "papers_after": 17,
+      "addresses_after": 22
+    },
+    {
+      "country": "Qatar",
+      "papers_before": 10,
+      "papers_after": 10,
+      "addresses_after": 13
+    },
+    {
+      "country": "Republic of the Congo",
+      "papers_before": 8,
+      "papers_after": 8,
+      "addresses_after": 16
+    },
+    {
+      "country": "Romania",
+      "papers_before": 27,
+      "papers_after": 27,
+      "addresses_after": 36
+    },
+    {
+      "country": "Russia",
+      "papers_before": 60,
+      "papers_after": 59,
+      "addresses_after": 126
+    },
+    {
+      "country": "Rwanda",
+      "papers_before": 6,
+      "papers_after": 6,
+      "addresses_after": 8
+    },
+    {
+      "country": "Réunion",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 8
+    },
+    {
+      "country": "Saint Lucia",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Samoa",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Saudi Arabia",
+      "papers_before": 64,
+      "papers_after": 64,
+      "addresses_after": 120
+    },
+    {
+      "country": "Senegal",
+      "papers_before": 10,
+      "papers_after": 10,
+      "addresses_after": 15
+    },
+    {
+      "country": "Serbia",
+      "papers_before": 6,
+      "papers_after": 6,
+      "addresses_after": 10
+    },
+    {
+      "country": "Seychelles",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Sierra Leone",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 7
+    },
+    {
+      "country": "Singapore",
+      "papers_before": 191,
+      "papers_after": 191,
+      "addresses_after": 417
+    },
+    {
+      "country": "Slovakia",
+      "papers_before": 12,
+      "papers_after": 12,
+      "addresses_after": 17
+    },
+    {
+      "country": "Slovenia",
+      "papers_before": 11,
+      "papers_after": 11,
+      "addresses_after": 16
+    },
+    {
+      "country": "Solomon Islands",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Somalia",
+      "papers_before": 1,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "South Africa",
+      "papers_before": 86,
+      "papers_after": 86,
+      "addresses_after": 203
+    },
+    {
+      "country": "South Sudan",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 2
+    },
+    {
+      "country": "Spain",
+      "papers_before": 458,
+      "papers_after": 458,
+      "addresses_after": 1181
+    },
+    {
+      "country": "Sri Lanka",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 11
+    },
+    {
+      "country": "St Kitts and Nevis",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Sudan",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 20
+    },
+    {
+      "country": "Sweden",
+      "papers_before": 347,
+      "papers_after": 347,
+      "addresses_after": 837
+    },
+    {
+      "country": "Switzerland",
+      "papers_before": 619,
+      "papers_after": 619,
+      "addresses_after": 1305
+    },
+    {
+      "country": "Syria",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Taiwan",
+      "papers_before": 102,
+      "papers_after": 102,
+      "addresses_after": 358
+    },
+    {
+      "country": "Tanzania",
+      "papers_before": 9,
+      "papers_after": 9,
+      "addresses_after": 19
+    },
+    {
+      "country": "Thailand",
+      "papers_before": 49,
+      "papers_after": 47,
+      "addresses_after": 145
+    },
+    {
+      "country": "The Gambia",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 8
+    },
+    {
+      "country": "Tonga",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Tunisia",
+      "papers_before": 7,
+      "papers_after": 7,
+      "addresses_after": 14
+    },
+    {
+      "country": "Türkiye",
+      "papers_before": 77,
+      "papers_after": 77,
+      "addresses_after": 157
+    },
+    {
+      "country": "Uganda",
+      "papers_before": 30,
+      "papers_after": 30,
+      "addresses_after": 64
+    },
+    {
+      "country": "Ukraine",
+      "papers_before": 3,
+      "papers_after": 3,
+      "addresses_after": 5
+    },
+    {
+      "country": "United Arab Emirates",
+      "papers_before": 31,
+      "papers_after": 31,
+      "addresses_after": 49
+    },
+    {
+      "country": "United Kingdom",
+      "papers_before": 1629,
+      "papers_after": 1600,
+      "addresses_after": 3784
+    },
+    {
+      "country": "United States",
+      "papers_before": 5692,
+      "papers_after": 5707,
+      "addresses_after": 21006
+    },
+    {
+      "country": "Uruguay",
+      "papers_before": 9,
+      "papers_after": 9,
+      "addresses_after": 21
+    },
+    {
+      "country": "Uzbekistan",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 11
+    },
+    {
+      "country": "Vanuatu",
+      "papers_before": 2,
+      "papers_after": 2,
+      "addresses_after": 2
+    },
+    {
+      "country": "Venezuela",
+      "papers_before": 4,
+      "papers_after": 4,
+      "addresses_after": 5
+    },
+    {
+      "country": "Vietnam",
+      "papers_before": 37,
+      "papers_after": 34,
+      "addresses_after": 53
+    },
+    {
+      "country": "Yemen",
+      "papers_before": 1,
+      "papers_after": 1,
+      "addresses_after": 1
+    },
+    {
+      "country": "Zambia",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 9
+    },
+    {
+      "country": "Zimbabwe",
+      "papers_before": 5,
+      "papers_after": 5,
+      "addresses_after": 8
+    }
+  ],
+  "new_countries_and_regions": [
+    "Gambia"
+  ],
+  "source_metadata_and_author_lists_preserved": true,
+  "source_author_affiliations_and_identifiers_preserved": true,
+  "geography_review_queue": {
+    "file": "getfiles/geography_review_queue_2026-10-08.jsonl",
+    "distinct_address_items": 13180
+  },
+  "country_logic": "Explicit addresses, independently resolved ROR entities, or unique city constrained by state/country. City/postal conflicts remain recorded.",
+  "llm_calls_performed": 0,
+  "source_hashes": {
+    "before": "db14c9b56608dae8211760d8a3b3ca45614b8889c145fcc9b90bdf30c2a626df",
+    "after": "8bf2acc914f144038949a08ba200143e939802ae5a19ea07e08d8319112dc805"
+  },
+  "city_index_coverage": {
+    "country_codes": 252,
+    "countries_and_regions_with_city_records": 246,
+    "city_records": 236014,
+    "postal_countries": [
+      "DE",
+      "US"
+    ],
+    "coverage_note": "Country code inventory includes territories and historical codes. City coverage excludes settlements below the dataset threshold; postal validation currently covers only US and DE."
+  },
+  "database_article_ids_metadata_scores_preserved": true,
+  "validation": {
+    "regression_tests_passed": 66,
+    "country_and_acronym_refresh": {
+      "exact_cached_source_strings": 71562,
+      "recomputed_rule_affected_strings": 1828,
+      "unaffected_results_checked_against_full_final_matcher": 150,
+      "affected_reason_counts": {
+        "joined-acronym": 1680,
+        "country-components": 148
+      },
+      "regression_tests": 65,
+      "status": "verified"
+    },
+    "state_suffix_and_joined_unit_refresh": {
+      "exact_cached_source_strings": 71562,
+      "recomputed_rule_affected_strings": 1545,
+      "unaffected_results_checked_against_full_final_matcher": 150,
+      "affected_reason_counts": {
+        "state-country-suffix-or-joined-acronym": 1545
+      },
+      "regression_tests": 66,
+      "status": "verified"
+    },
+    "website_render_validation": {
+      "report_20260829_0123": {
+        "cards": 156,
+        "cover": 1448,
+        "overflow": false,
+        "source_note": true,
+        "title": "神经科学快讯·第025期 斑马鱼全脑内感受询问、ERBB4驱动AD病理与软体机器人康复 (2026-08-29) | Neuroscience Bulletin"
+      },
+      "report_20260913_0123": {
+        "cards": 237,
+        "cover": 1448,
+        "overflow": false,
+        "source_note": true,
+        "title": "神经科学快讯·第027期 新皮层长程抑制驱动睡眠同步化、血清素投射组架构与全器官成像 (2026-09-13) | Neuroscience Bulletin"
+      },
+      "report_20261004": {
+        "cards": 528,
+        "cover": 1448,
+        "overflow": false,
+        "source_note": true,
+        "title": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04) | Neuroscience Bulletin"
+      },
+      "2026-08-29_heatmap": {
+        "countries": 42,
+        "map": true,
+        "overflow": false,
+        "sum": 211
+      },
+      "2026-09-13_heatmap": {
+        "countries": 34,
+        "map": true,
+        "overflow": false,
+        "sum": 311
+      },
+      "2026-10-04_heatmap": {
+        "countries": 51,
+        "map": true,
+        "overflow": false,
+        "sum": 668
+      },
+      "mobile": {
+        "scrollWidth": 390,
+        "width": 390
+      },
+      "status": "passed"
+    }
+  }
+}

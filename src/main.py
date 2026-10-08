@@ -947,27 +947,12 @@ def normalize_affiliations_with_ror(enriched_papers: List[Dict], ror_search: ROR
     total_affiliations = 0
     matched_affiliations = 0
 
+    from ror_refine_batch import ror_refine_paper
     for paper in enriched_papers:
-        if not paper.get('authors_enriched'):
-            continue
-
-        for author in paper['authors_enriched']:
-            total_affiliations += 1
-            affiliation = author.get('affiliation')
-
-            if not affiliation:
-                continue
-
-            standard_name, score, location_info = ror_search.extract_institute_info(affiliation)
-
-            if standard_name and score >= ror_search.threshold:
-                author['ror_normalized_affiliation'] = standard_name
-                author['ror_match_score'] = score
-                if location_info[0] is not None:
-                    author['ror_country'] = location_info[0]
-                if location_info[1] is not None:
-                    author['ror_subregion'] = location_info[1]
-                matched_affiliations += 1
+        ror_refine_paper(paper, ror_search)
+        for author in paper.get('author_details', []):
+            total_affiliations += bool(author.get('affiliation'))
+            matched_affiliations += bool(author.get('ror_normalized_affiliation'))
 
     print(f"Total affiliations: {total_affiliations}")
     print(f"Matched with ROR: {matched_affiliations} ({matched_affiliations/max(1, total_affiliations)*100:.1f}%)")

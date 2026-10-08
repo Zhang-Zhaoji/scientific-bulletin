@@ -70,17 +70,29 @@ class ReportGenerator:
             if source_statistics:
                 stats_vis = StatisticsVisualizer(None)
                 country_counts, institution_counts = Counter(), Counter()
+                cohort = []
                 for result in results:
                     if result.get('domain') == '域外局限':
                         continue
-                    countries, institutions = set(), set()
-                    for author in result.get('paper', {}).get('raw_data', {}).get('author_details', []):
-                        for field, target in [('ror_country', countries), ('ror_normalized_affiliation', institutions)]:
-                            values = author.get(field, [])
-                            target.update([values] if isinstance(values, str) else values)
+                    paper = result.get('paper', {}).get('raw_data', {})
+                    cohort.append(paper)
+                    countries, institutions = set(paper.get('countries') or []), set()
+                    for author in paper.get('author_details', []):
+                        values = author.get('ror_country') or []
+                        countries.update([values] if isinstance(values, str) else values)
+                        if 'affiliation_resolution' in author:
+                            for resolution in author['affiliation_resolution']:
+                                for unit in resolution.get('institutions', []):
+                                    name = unit['name']
+                                    if unit.get('ambiguous_display_name_resolved') and unit.get('country'):
+                                        name += ' (' + unit['country'] + ')'
+                                    institutions.add(name)
+                        else:
+                            values = author.get('ror_normalized_affiliation') or []
+                            institutions.update([values] if isinstance(values, str) else values)
                     country_counts.update(countries)
                     institution_counts.update(institutions)
-                country_stats = country_counts.most_common(10)
+                country_stats = country_counts.most_common()
                 institution_stats = institution_counts.most_common(10)
             else:
                 db_api = DBAPI()
@@ -99,8 +111,10 @@ class ReportGenerator:
             # 生成统计文字
             statistics_text = stats_vis.get_statistics_text(country_stats[:10], institution_stats, score_stats)
             if source_statistics:
-                statistics_text = '> 地区与机构按本期原始来源及 ROR 匹配信息统计，仅覆盖取得机构信息的论文；跨地区合作可重复计入，不作为完整机构排名。评分分布不含“域外局限”文章。\n\n' + statistics_text
-                statistics_text = statistics_text.replace(f"**总计**: {sum(count for _, count in country_stats)} 篇文章", f"**地区计次合计**: {sum(count for _, count in country_stats)} 次")
+                statistics_text = '> 地区与机构按本期原始发表记录、ROR 及城市地址规则分别统计；跨地区合作可重复计入，不作为完整机构排名。评分分布不含“域外局限”文章。\n\n' + statistics_text
+                statistics_text = statistics_text.replace(
+                    f"**总计**: {sum(count for _, count in country_stats[:10])} 篇文章",
+                    f"**地区计次合计**: {sum(count for _, count in country_stats)} 次；取得地区信息 {sum(bool(p.get('countries')) or any(a.get('ror_country') for a in p.get('author_details', [])) for p in cohort)}/{len(cohort)} 篇", 1)
         except Exception as e:
             print(f"[WARNING] 生成统计图表失败: {e}")
             statistics_text = ""
