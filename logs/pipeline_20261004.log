@@ -1,0 +1,9 @@
+[DATE] Kept 1094/1094 papers; unknown dates: 0
+raw_validated: {'paper_count': 1094, 'source_counts': {'arXiv': 118, 'Nature Communications': 85, 'Cell Systems': 2, 'Current Biology': 10, 'Nature Human Behavior': 4, 'PLOS': 230, 'PNAS': 87, 'Science Advances': 80, 'bioRxiv': 300, 'eLife': 20, 'Brain': 10, 'Cell': 12, 'Cell Reports': 16, 'Journal of Cognitive Neuroscience': 12, 'Journal of Neurophysiology': 1, 'Journal of Neuroscience': 21, 'Journal of Vision': 4, 'Nature Method': 2, 'Nature Neuroscience': 6, 'Neuron': 14, 'Science': 35, 'Nature': 25}}
+source_enrichment: {'log': 'D:\\working\\scientific bulletin\\logs\\source_enrichment_20261004.log'}
+[DATE] Kept 1094/1094 papers; unknown dates: 0
+ror_refine: {'log': 'D:\\working\\scientific bulletin\\logs\\ror_refine_20261004.log'}
+[DATE] Kept 1094/1094 papers; unknown dates: 0
+deepseek_eval: {'evaluated': 0, 'pending': 1094, 'attempt': 1}
+deepseek_eval_1: {'log': 'D:\\working\\scientific bulletin\\logs\\deepseek_eval_1_20261004.log'}
+complete: {'status': 'complete', 'date_range': ['2026-09-28', '2026-10-04'], 'papers': 1094, 'llm_result_count': 1094, 'source_counts': {'arXiv': 118, 'Nature Communications': 85, 'Cell Systems': 2, 'Current Biology': 10, 'Nature Human Behavior': 4, 'PLOS': 230, 'PNAS': 87, 'Science Advances': 80, 'bioRxiv': 300, 'eLife': 20, 'Brain': 10, 'Cell': 12, 'Cell Reports': 16, 'Journal of Cognitive Neuroscience': 12, 'Journal of Neurophysiology': 1, 'Journal of Neuroscience': 21, 'Journal of Vision': 4, 'Nature Method': 2, 'Nature Neuroscience': 6, 'Neuron': 14, 'Science': 35, 'Nature': 25}, 'missing_abstracts': 16, 'papers_with_affiliation': 960, 'papers_with_ror': 814, 'author_metrics_status': 'not requested; source metadata only', 'model_requested': 'deepseek-flash', 'recommendation_distribution': {'简要提及': 232, '深度解读': 316, '不推送': 546}, 'result': 'D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261004.json'}

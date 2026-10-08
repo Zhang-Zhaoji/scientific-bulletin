@@ -21,7 +21,8 @@ class ReportGenerator:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
     
-    def generate_from_json(self, json_file: str, source_statistics: bool = False) -> Dict:
+    def generate_from_json(self, json_file: str, source_statistics: bool = False,
+                           render_histogram: bool = True) -> Dict:
         """从JSON文件生成报告"""
         # 读取JSON文件
         with open(json_file, 'r', encoding='utf-8') as f:
@@ -91,7 +92,8 @@ class ReportGenerator:
             score_stats = stats_vis.get_score_distribution(results)
             
             # 生成可视化图表（HTML）
-            stats_vis.render_score_histogram(score_stats)
+            if render_histogram:
+                stats_vis.render_score_histogram(score_stats)
             statistics_text += "### 📊 可视化图表\n\n"
             
             # 生成统计文字
@@ -449,6 +451,8 @@ Examples:
                         help='Generate title using LLM (requires API)')
     parser.add_argument('--source-statistics', action='store_true',
                         help='Compute institution/country statistics from this input JSON, without historical database queries')
+    parser.add_argument('--skip-histogram', action='store_true',
+                        help='Skip the current-date histogram (use the dated histogram generator separately)')
     
     args = parser.parse_args()
     
@@ -471,7 +475,8 @@ Examples:
     
     # 生成报告
     print(f"\n生成报告 from: {result_file}")
-    report = generator.generate_from_json(str(result_file), source_statistics=args.source_statistics)
+    report = generator.generate_from_json(str(result_file), source_statistics=args.source_statistics,
+                                          render_histogram=not args.skip_histogram)
     
     # 打印统计信息
     print("\n" + "=" * 60)

@@ -1,0 +1,81 @@
+{
+  "status": "complete",
+  "issue": 30,
+  "date_range": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "weekly_papers": 1074,
+  "selected_papers": 528,
+  "recommendation_distribution": {
+    "简要提及": 220,
+    "深度解读": 308,
+    "不推送": 546
+  },
+  "missing_abstracts": 16,
+  "historical_abstract_rechecks": 20,
+  "databases": [
+    {
+      "file": "data/literature.db",
+      "articles": 14121,
+      "latest_date": "2026-10-04",
+      "integrity": "ok",
+      "foreign_key_errors": 0
+    },
+    {
+      "file": "docs/assets/data/literature_slim.db",
+      "articles": 14121,
+      "latest_date": "2026-10-04",
+      "integrity": "ok",
+      "foreign_key_errors": 0
+    }
+  ],
+  "render_qa": {
+    "report": {
+      "article_cards": 528,
+      "cover": 1448,
+      "date_note": true,
+      "heading": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04)",
+      "iframes": [
+        "assets/charts/2026-10-04_heatmap.html",
+        "assets/charts/2026-10-04_pie.html"
+      ],
+      "overflow": false,
+      "title": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04) | Neuroscience Bulletin"
+    },
+    "heatmap": {
+      "canvas": true,
+      "countries": 243,
+      "height": 871,
+      "map_registered": true,
+      "width": 1432
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "status": "passed"
+  },
+  "cover": {
+    "file": "Imgs/20261004.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "theme_lines": [
+      "跨物种麻醉脑动力学",
+      "揭示神经活动的时空隔离"
+    ],
+    "generator": "built-in image_gen + panel-large composition",
+    "prompt_file": "tmps/pipeline_20261004/cover/prompt.txt"
+  },
+  "tests": "8 regression tests passed",
+  "known_source_limits": [
+    "iScience and Trends in Neurosciences: no target-week index hits; late indexing cannot be ruled out.",
+    "Nature Communications restricted to biological/health subject pages."
+  ],
+  "database_backup_dir": "tmps/pipeline_20261004/database_backup",
+  "published": false,
+  "database_update_audit": "getfiles/database_update_2026-10-04.json"
+}

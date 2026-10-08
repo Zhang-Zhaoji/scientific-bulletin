@@ -1,0 +1,1088 @@
+{
+  "through_date": "2026-10-04",
+  "before": {
+    "counts": {
+      "countries": 285,
+      "authors": 77263,
+      "institutions": 4973,
+      "articles": 8949,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 8518,
+      "author_institutions": 23655,
+      "article_authors": 63834,
+      "article_institutions": 9405,
+      "article_countries": 5014,
+      "article_themes": 9002,
+      "article_subthemes": 5286,
+      "article_crosstags": 16039
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-08-02"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "weeks": [
+    {
+      "date": "2026-08-09",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-09_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260809_194853.json",
+      "records": 437,
+      "missing_existing_titles": 434,
+      "new_unique_titles": 434
+    },
+    {
+      "date": "2026-08-17",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-17_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260817_011900.json",
+      "records": 503,
+      "missing_existing_titles": 496,
+      "new_unique_titles": 496
+    },
+    {
+      "date": "2026-08-23",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-23_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260823_002838.json",
+      "records": 544,
+      "missing_existing_titles": 543,
+      "new_unique_titles": 543
+    },
+    {
+      "date": "2026-08-29",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260829_015737.json",
+      "records": 284,
+      "missing_existing_titles": 278,
+      "new_unique_titles": 277
+    },
+    {
+      "date": "2026-09-06",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260906_011115.json",
+      "records": 591,
+      "missing_existing_titles": 579,
+      "new_unique_titles": 578
+    },
+    {
+      "date": "2026-09-13",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-13_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260913_191004.json",
+      "records": 509,
+      "missing_existing_titles": 494,
+      "new_unique_titles": 492
+    },
+    {
+      "date": "2026-09-20",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-20_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260920_114614.json",
+      "records": 583,
+      "missing_existing_titles": 583,
+      "new_unique_titles": 581
+    },
+    {
+      "date": "2026-09-27",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-27_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260927.json",
+      "records": 702,
+      "missing_existing_titles": 700,
+      "new_unique_titles": 698
+    },
+    {
+      "date": "2026-10-04",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-04_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261004.json",
+      "records": 1074,
+      "missing_existing_titles": 1074,
+      "new_unique_titles": 1073
+    }
+  ],
+  "expected_new_articles": 5172,
+  "target_ready": true,
+  "warnings": [],
+  "backups_directory": "D:\\working\\scientific bulletin\\tmps\\pipeline_20261004\\database_backup",
+  "dry_run": false,
+  "rechecks_file": "getfiles\\historical_rechecks_2026-10-04.json",
+  "historical_rechecks": 20,
+  "status": "complete",
+  "after": {
+    "counts": {
+      "countries": 285,
+      "authors": 115691,
+      "institutions": 7145,
+      "articles": 14121,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 13022,
+      "author_institutions": 36954,
+      "article_authors": 103098,
+      "article_institutions": 14638,
+      "article_countries": 7718,
+      "article_themes": 14196,
+      "article_subthemes": 9075,
+      "article_crosstags": 29087
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-04"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "slim_after": {
+    "counts": {
+      "countries": 285,
+      "authors": 115691,
+      "institutions": 7145,
+      "articles": 14121,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 13022,
+      "author_institutions": 36954,
+      "article_authors": 103098,
+      "article_institutions": 14638,
+      "article_countries": 7718,
+      "article_themes": 14196,
+      "article_subthemes": 9075,
+      "article_crosstags": 29087
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-04"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "import_counts": {
+    "articles_inserted": 5172,
+    "authors_inserted": 38428,
+    "article_authors_inserted": 39264,
+    "themes_reused": 5247,
+    "article_themes_inserted": 5194,
+    "subthemes_reused": 3822,
+    "article_subthemes_inserted": 3789,
+    "crosstags_reused": 8619,
+    "article_crosstags_inserted": 13048,
+    "crosstags_inserted": 4504,
+    "authors_reused": 1377,
+    "countries_reused": 14996,
+    "article_countries_inserted": 2704,
+    "institutions_inserted": 2172,
+    "article_institutions_inserted": 5233,
+    "author_institutions_inserted": 13299,
+    "institutions_reused": 12504,
+    "articles_reused": 75,
+    "article_scores_updated": 21
+  },
+  "backups": [
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261004\\database_backup\\literature_20261008_181019_136741.db",
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261004\\database_backup\\literature_slim_20261008_181019_136741.db"
+  ],
+  "score_updates": [
+    {
+      "article_id": 9922,
+      "source_title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+      "stored_title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.08.14.744746",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-08-21",
+      "source_date": "2026-10-01",
+      "version": "2",
+      "old_score": 7.000000000000001,
+      "new_score": 6.45
+    },
+    {
+      "article_id": 3788,
+      "source_title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "stored_title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2629",
+        "pmid": "42213524"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 5.800000000000001,
+      "new_score": 5.76
+    },
+    {
+      "article_id": 3785,
+      "source_title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "stored_title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2626",
+        "pmid": "42213535"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.5,
+      "new_score": 5.800000000000001
+    },
+    {
+      "article_id": 3784,
+      "source_title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "stored_title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2623",
+        "pmid": "42213537"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.050000000000001,
+      "new_score": 6.29
+    },
+    {
+      "article_id": 3789,
+      "source_title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "stored_title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2625",
+        "pmid": "42213518"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 5.65,
+      "new_score": 5.49
+    },
+    {
+      "article_id": 5618,
+      "source_title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "stored_title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2633",
+        "pmid": "42341285"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 8.4,
+      "new_score": 6.5
+    },
+    {
+      "article_id": 5619,
+      "source_title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "stored_title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2632",
+        "pmid": "42341284"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.73,
+      "new_score": 5.45
+    },
+    {
+      "article_id": 3790,
+      "source_title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "stored_title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2627",
+        "pmid": "42213517"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.6000000000000005,
+      "new_score": 7.83
+    },
+    {
+      "article_id": 5617,
+      "source_title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "stored_title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2630",
+        "pmid": "42341286"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.8500000000000005,
+      "new_score": 7.2700000000000005
+    },
+    {
+      "article_id": 3786,
+      "source_title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "stored_title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2624",
+        "pmid": "42213529"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 7.09,
+      "new_score": 7.36
+    },
+    {
+      "article_id": 3787,
+      "source_title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "stored_title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2628",
+        "pmid": "42213527"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.8500000000000005,
+      "new_score": 5.4
+    },
+    {
+      "article_id": 10473,
+      "source_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+      "stored_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse Yet Structured.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0784-26.2026",
+        "pmid": "42660656"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.85,
+      "new_score": 7.55
+    },
+    {
+      "article_id": 11672,
+      "source_title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+      "stored_title": "Adaptive reorganization of local sleep and prelimbic cortical circuits predict behavioral resilience to social defeat stress.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0509-26.2026",
+        "pmid": "42705913"
+      },
+      "preserved_pub_date": "2026-09-07",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.12,
+      "new_score": 6.62
+    },
+    {
+      "article_id": 11156,
+      "source_title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "stored_title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0869-26.2026",
+        "pmid": "42674971"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 7.300000000000001
+    },
+    {
+      "article_id": 11081,
+      "source_title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+      "stored_title": "Differential cortical and thalamic engagement of cholinergic interneurons in the nucleus accumbens core.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1919-25.2026",
+        "pmid": "42680587"
+      },
+      "preserved_pub_date": "2026-09-01",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.760000000000001,
+      "new_score": 6.82
+    },
+    {
+      "article_id": 11153,
+      "source_title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+      "stored_title": "Dlg5 and Cadherins cooperate to ensure peripheral glia and septate junction integrity.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1935-25.2026",
+        "pmid": "42674974"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 7.09
+    },
+    {
+      "article_id": 11154,
+      "source_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+      "stored_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/STAT-CK2α Signaling.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0641-26.2026",
+        "pmid": "42674973"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.82,
+      "new_score": 7.3500000000000005
+    },
+    {
+      "article_id": 11155,
+      "source_title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "stored_title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0476-26.2026",
+        "pmid": "42674972"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.300000000000001,
+      "new_score": 5.59
+    },
+    {
+      "article_id": 11079,
+      "source_title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+      "stored_title": "Prioritization in working memory reduces interference via beta band-linked stimulus transformations.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0492-26.2026",
+        "pmid": "42680589"
+      },
+      "preserved_pub_date": "2026-09-01",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.46,
+      "new_score": 6.8100000000000005
+    },
+    {
+      "article_id": 10471,
+      "source_title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "stored_title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0670-26.2026",
+        "pmid": "42660658"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 6.300000000000001
+    },
+    {
+      "article_id": 10472,
+      "source_title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+      "stored_title": "Temporal progression of auditory brainstem dysfunction and behavioral phenotypes in mouse models of tauopathy.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0511-26.2026",
+        "pmid": "42660657"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.2,
+      "new_score": 7.1000000000000005
+    }
+  ],
+  "reevaluations": [
+    {
+      "article_id": 9922,
+      "source_title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+      "stored_title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.08.14.744746",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-08-21",
+      "source_date": "2026-10-01",
+      "version": "2",
+      "old_score": 7.000000000000001,
+      "new_score": 6.45
+    },
+    {
+      "article_id": 3788,
+      "source_title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "stored_title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2629",
+        "pmid": "42213524"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 5.800000000000001,
+      "new_score": 5.76
+    },
+    {
+      "article_id": 3785,
+      "source_title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "stored_title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2626",
+        "pmid": "42213535"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.5,
+      "new_score": 5.800000000000001
+    },
+    {
+      "article_id": 3784,
+      "source_title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "stored_title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2623",
+        "pmid": "42213537"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.050000000000001,
+      "new_score": 6.29
+    },
+    {
+      "article_id": 3789,
+      "source_title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "stored_title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2625",
+        "pmid": "42213518"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 5.65,
+      "new_score": 5.49
+    },
+    {
+      "article_id": 5618,
+      "source_title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "stored_title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2633",
+        "pmid": "42341285"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 8.4,
+      "new_score": 6.5
+    },
+    {
+      "article_id": 5619,
+      "source_title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "stored_title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2632",
+        "pmid": "42341284"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.73,
+      "new_score": 5.45
+    },
+    {
+      "article_id": 3790,
+      "source_title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "stored_title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2627",
+        "pmid": "42213517"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.6000000000000005,
+      "new_score": 7.83
+    },
+    {
+      "article_id": 5617,
+      "source_title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "stored_title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2630",
+        "pmid": "42341286"
+      },
+      "preserved_pub_date": "2026-06-21",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.8500000000000005,
+      "new_score": 7.2700000000000005
+    },
+    {
+      "article_id": 3786,
+      "source_title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "stored_title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2624",
+        "pmid": "42213529"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 7.09,
+      "new_score": 7.36
+    },
+    {
+      "article_id": 3787,
+      "source_title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "stored_title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1162/jocn.a.2628",
+        "pmid": "42213527"
+      },
+      "preserved_pub_date": "2026-05-27",
+      "source_date": "2026-10-01",
+      "version": null,
+      "old_score": 6.8500000000000005,
+      "new_score": 5.4
+    },
+    {
+      "article_id": 10473,
+      "source_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+      "stored_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse Yet Structured.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0784-26.2026",
+        "pmid": "42660656"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.85,
+      "new_score": 7.55
+    },
+    {
+      "article_id": 11672,
+      "source_title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+      "stored_title": "Adaptive reorganization of local sleep and prelimbic cortical circuits predict behavioral resilience to social defeat stress.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0509-26.2026",
+        "pmid": "42705913"
+      },
+      "preserved_pub_date": "2026-09-07",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.12,
+      "new_score": 6.62
+    },
+    {
+      "article_id": 11156,
+      "source_title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "stored_title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0869-26.2026",
+        "pmid": "42674971"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 7.300000000000001
+    },
+    {
+      "article_id": 11081,
+      "source_title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+      "stored_title": "Differential cortical and thalamic engagement of cholinergic interneurons in the nucleus accumbens core.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1919-25.2026",
+        "pmid": "42680587"
+      },
+      "preserved_pub_date": "2026-09-01",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.760000000000001,
+      "new_score": 6.82
+    },
+    {
+      "article_id": 11153,
+      "source_title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+      "stored_title": "Dlg5 and Cadherins cooperate to ensure peripheral glia and septate junction integrity.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1935-25.2026",
+        "pmid": "42674974"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 7.09
+    },
+    {
+      "article_id": 11154,
+      "source_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+      "stored_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/STAT-CK2α Signaling.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0641-26.2026",
+        "pmid": "42674973"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 6.82,
+      "new_score": 7.3500000000000005
+    },
+    {
+      "article_id": 11155,
+      "source_title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "stored_title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0476-26.2026",
+        "pmid": "42674972"
+      },
+      "preserved_pub_date": "2026-08-31",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.300000000000001,
+      "new_score": 5.59
+    },
+    {
+      "article_id": 11079,
+      "source_title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+      "stored_title": "Prioritization in working memory reduces interference via beta band-linked stimulus transformations.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0492-26.2026",
+        "pmid": "42680589"
+      },
+      "preserved_pub_date": "2026-09-01",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.46,
+      "new_score": 6.8100000000000005
+    },
+    {
+      "article_id": 10471,
+      "source_title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "stored_title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0670-26.2026",
+        "pmid": "42660658"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.25,
+      "new_score": 6.300000000000001
+    },
+    {
+      "article_id": 10472,
+      "source_title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+      "stored_title": "Temporal progression of auditory brainstem dysfunction and behavioral phenotypes in mouse models of tauopathy.",
+      "reason": "historical_abstract_recheck",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0511-26.2026",
+        "pmid": "42660657"
+      },
+      "preserved_pub_date": "2026-08-27",
+      "source_date": "2026-09-30",
+      "version": null,
+      "old_score": 7.2,
+      "new_score": 7.1000000000000005
+    }
+  ],
+  "historical_rechecks_reconciled": 20,
+  "title_aliases": [
+    {
+      "article_id": 10473,
+      "source_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+      "stored_title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse Yet Structured.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0784-26.2026",
+        "pmid": "42660656"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 11672,
+      "source_title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+      "stored_title": "Adaptive reorganization of local sleep and prelimbic cortical circuits predict behavioral resilience to social defeat stress.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0509-26.2026",
+        "pmid": "42705913"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 11081,
+      "source_title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+      "stored_title": "Differential cortical and thalamic engagement of cholinergic interneurons in the nucleus accumbens core.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1919-25.2026",
+        "pmid": "42680587"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 11153,
+      "source_title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+      "stored_title": "Dlg5 and Cadherins cooperate to ensure peripheral glia and septate junction integrity.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.1935-25.2026",
+        "pmid": "42674974"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 11154,
+      "source_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+      "stored_title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/STAT-CK2α Signaling.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0641-26.2026",
+        "pmid": "42674973"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 11079,
+      "source_title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+      "stored_title": "Prioritization in working memory reduces interference via beta band-linked stimulus transformations.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0492-26.2026",
+        "pmid": "42680589"
+      },
+      "reason": "historical_abstract_recheck"
+    },
+    {
+      "article_id": 10472,
+      "source_title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+      "stored_title": "Temporal progression of auditory brainstem dysfunction and behavioral phenotypes in mouse models of tauopathy.",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0511-26.2026",
+        "pmid": "42660657"
+      },
+      "reason": "historical_abstract_recheck"
+    }
+  ],
+  "reconciled_new_articles": 5172,
+  "target_reconciliation": {
+    "title_matches": 1074,
+    "score_matches": 1074
+  }
+}

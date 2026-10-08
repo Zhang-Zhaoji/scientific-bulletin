@@ -1,0 +1,16 @@
+PubMed source records: 100
+PubMed source records: 200
+PubMed source records: 300
+PubMed source records: 400
+PubMed source records: 500
+PubMed source records: 554
+{
+  "papers": 1094,
+  "authors_present": 1094,
+  "papers_with_affiliation": 960,
+  "authors_with_affiliation": 6538,
+  "abstracts_recovered": 0,
+  "missing_abstracts": 16,
+  "authors_with_metrics": 0,
+  "author_metrics_status": "not requested; source metadata only"
+}

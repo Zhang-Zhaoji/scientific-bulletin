@@ -31,7 +31,7 @@ class StatisticsVisualizer:
                 continue
             score = result.get('total_score', 0)
             for i, (low, high) in enumerate(bins):
-                if low <= score < high:
+                if low <= score < high or (high == 10 and score == 10):
                     counts[i] += 1
                     break
         

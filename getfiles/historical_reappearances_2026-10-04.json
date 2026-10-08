@@ -1,0 +1,1607 @@
+{
+  "date_range": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "target_refined": "getfiles\\all_papers_2026-10-04_enriched_ror_refined.jsonl",
+  "count": 21,
+  "exact_prior_title_count": 14,
+  "all_prior_have_meaningful_abstract": false,
+  "earlier_dates_provenance": "Previously stored source records; publisher/PubMed electronic dates should be preferred over print/index date. Prior data are reproduced exactly here.",
+  "records": [
+    {
+      "title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "doi": "10.1162/jocn.a.2629",
+      "pmid": "42213524",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213524",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1664,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3788,
+          "title": "Can Category-selective Cortex Predict Categorization Behavior?",
+          "doi": "10.1162/JOCN.a.2629",
+          "pmid": "42213524",
+          "pub_date": "2026-05-27",
+          "score": 5.800000000000001,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213524/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 235,
+          "title": "Can Category-selective Cortex Predict Categorization Behavior?",
+          "doi": "10.1162/JOCN.a.2629",
+          "pmid": "42213524",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213524/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213524&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "doi": "10.1162/jocn.a.2626",
+      "pmid": "42213535",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213535",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1751,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3785,
+          "title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+          "doi": "10.1162/JOCN.a.2626",
+          "pmid": "42213535",
+          "pub_date": "2026-05-27",
+          "score": 6.5,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213535/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 232,
+          "title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+          "doi": "10.1162/JOCN.a.2626",
+          "pmid": "42213535",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213535/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213535&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "doi": "10.1162/jocn.a.2623",
+      "pmid": "42213537",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213537",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1476,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3784,
+          "title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+          "doi": "10.1162/JOCN.a.2623",
+          "pmid": "42213537",
+          "pub_date": "2026-05-27",
+          "score": 6.050000000000001,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213537/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 231,
+          "title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+          "doi": "10.1162/JOCN.a.2623",
+          "pmid": "42213537",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213537/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213537&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "doi": "10.1162/jocn.a.2625",
+      "pmid": "42213518",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213518",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1259,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3789,
+          "title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+          "doi": "10.1162/JOCN.a.2625",
+          "pmid": "42213518",
+          "pub_date": "2026-05-27",
+          "score": 5.65,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213518/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 236,
+          "title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+          "doi": "10.1162/JOCN.a.2625",
+          "pmid": "42213518",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213518/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213518&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "doi": "10.1162/jocn.a.2633",
+      "pmid": "42341285",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42341285",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 754,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 5618,
+          "title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+          "doi": "10.1162/JOCN.a.2633",
+          "pmid": "42341285",
+          "pub_date": "2026-06-21",
+          "score": 8.4,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341285/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-06-27_enriched_ror_refined.jsonl",
+          "line": 306,
+          "title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+          "doi": "10.1162/JOCN.a.2633",
+          "pmid": "42341285",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "21 Jun 2026",
+          "parsed_date": "2026-06-21",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341285/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-06-21",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42341285&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "6",
+            "day": "24"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "doi": "10.1162/jocn.a.2632",
+      "pmid": "42341284",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42341284",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1372,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 5619,
+          "title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+          "doi": "10.1162/JOCN.a.2632",
+          "pmid": "42341284",
+          "pub_date": "2026-06-21",
+          "score": 6.73,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341284/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-06-27_enriched_ror_refined.jsonl",
+          "line": 307,
+          "title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+          "doi": "10.1162/JOCN.a.2632",
+          "pmid": "42341284",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "21 Jun 2026",
+          "parsed_date": "2026-06-21",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341284/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-06-21",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42341284&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "6",
+            "day": "24"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "doi": "10.1162/jocn.a.2627",
+      "pmid": "42213517",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213517",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1795,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3790,
+          "title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+          "doi": "10.1162/JOCN.a.2627",
+          "pmid": "42213517",
+          "pub_date": "2026-05-27",
+          "score": 6.6000000000000005,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213517/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 237,
+          "title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+          "doi": "10.1162/JOCN.a.2627",
+          "pmid": "42213517",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213517/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213517&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "doi": "10.1162/jocn.a.2630",
+      "pmid": "42341286",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42341286",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1708,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 5617,
+          "title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+          "doi": "10.1162/JOCN.a.2630",
+          "pmid": "42341286",
+          "pub_date": "2026-06-21",
+          "score": 6.8500000000000005,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341286/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-06-27_enriched_ror_refined.jsonl",
+          "line": 305,
+          "title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+          "doi": "10.1162/JOCN.a.2630",
+          "pmid": "42341286",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "21 Jun 2026",
+          "parsed_date": "2026-06-21",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42341286/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-06-21",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42341286&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "6",
+            "day": "24"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "doi": "10.1162/jocn.a.2624",
+      "pmid": "42213529",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213529",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1718,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3786,
+          "title": "Simultaneous Cortical Responses to Multiple Written Words.",
+          "doi": "10.1162/JOCN.a.2624",
+          "pmid": "42213529",
+          "pub_date": "2026-05-27",
+          "score": 7.09,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213529/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 233,
+          "title": "Simultaneous Cortical Responses to Multiple Written Words.",
+          "doi": "10.1162/JOCN.a.2624",
+          "pmid": "42213529",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213529/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213529&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "doi": "10.1162/jocn.a.2628",
+      "pmid": "42213527",
+      "source": "Journal of Cognitive Neuroscience",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-10-01",
+        "pubmed_id": "42213527",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": null,
+        "printPublicationDate": "2026-10-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1298,
+      "exact_prior_title": true,
+      "prior_database_records": [
+        {
+          "id": 3787,
+          "title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+          "doi": "10.1162/JOCN.a.2628",
+          "pmid": "42213527",
+          "pub_date": "2026-05-27",
+          "score": 6.8500000000000005,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213527/"
+        }
+      ],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-05-30_enriched_ror_refined.jsonl",
+          "line": 234,
+          "title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+          "doi": "10.1162/JOCN.a.2628",
+          "pmid": "42213527",
+          "source": "Journal of Cognitive Neuroscience",
+          "date": "27 May 2026",
+          "parsed_date": "2026-05-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42213527/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-05-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42213527&retmode=xml",
+        "dates": [
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "10"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "5",
+            "day": "29"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Oct",
+            "day": "01",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+      "doi": "10.64898/2026.08.14.744746",
+      "pmid": null,
+      "source": "bioRxiv",
+      "target_date": "2026-10-01",
+      "target_date_evidence": {
+        "field": "bioRxiv API record date",
+        "value": "2026-10-01",
+        "version": "2",
+        "interval": [
+          "2026-09-28",
+          "2026-10-04"
+        ]
+      },
+      "target_version": "2",
+      "target_abstract_characters": 1682,
+      "exact_prior_title": true,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-08-23_enriched_ror_refined.jsonl",
+          "line": 43,
+          "title": "Juvenile AAV-Mediated MEF2C Gene Replacement Ameliorates Selected Phenotypes in Mef2c-Haploinsufficient Mice",
+          "doi": "10.64898/2026.08.14.744746",
+          "pmid": null,
+          "source": "bioRxiv",
+          "date": "21 Aug 2026",
+          "parsed_date": "2026-08-21",
+          "url": "https://doi.org/10.64898/2026.08.14.744746",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": true,
+          "abstract_characters": 1684,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-21",
+      "prior_meaningful_abstract": true,
+      "new_version_signal": true,
+      "recommended_action": "exclude from new first-publication corpus under current historical-dedup policy; separately flag target bioRxiv version 2 as a revision"
+    },
+    {
+      "title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+      "doi": "10.1523/jneurosci.0784-26.2026",
+      "pmid": "42660656",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42660656",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1932,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+          "line": 55,
+          "title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse Yet Structured.",
+          "doi": "10.1523/JNEUROSCI.0784-26.2026",
+          "pmid": "42660656",
+          "source": "Journal of Neuroscience",
+          "date": "27 Aug 2026",
+          "parsed_date": "2026-08-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42660656/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42660656&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "28"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+      "doi": "10.1523/jneurosci.0509-26.2026",
+      "pmid": "42705913",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42705913",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1751,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-13_enriched_ror_refined.jsonl",
+          "line": 401,
+          "title": "Adaptive reorganization of local sleep and prelimbic cortical circuits predict behavioral resilience to social defeat stress.",
+          "doi": "10.1523/JNEUROSCI.0509-26.2026",
+          "pmid": "42705913",
+          "source": "Journal of Neuroscience",
+          "date": "07 Sep 2026",
+          "parsed_date": "2026-09-07",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42705913/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-09-07",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42705913&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "9",
+            "day": "7"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "doi": "10.1523/jneurosci.0869-26.2026",
+      "pmid": "42674971",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42674971",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1901,
+      "exact_prior_title": true,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 470,
+          "title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+          "doi": "10.1523/JNEUROSCI.0869-26.2026",
+          "pmid": "42674971",
+          "source": "Journal of Neuroscience",
+          "date": "31 Aug 2026",
+          "parsed_date": "2026-08-31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42674971/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-31",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42674971&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "31"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+      "doi": "10.1523/jneurosci.1919-25.2026",
+      "pmid": "42680587",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42680587",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 959,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 388,
+          "title": "Differential cortical and thalamic engagement of cholinergic interneurons in the nucleus accumbens core.",
+          "doi": "10.1523/JNEUROSCI.1919-25.2026",
+          "pmid": "42680587",
+          "source": "Journal of Neuroscience",
+          "date": "01 Sep 2026",
+          "parsed_date": "2026-09-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42680587/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-09-01",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42680587&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "9",
+            "day": "1"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+      "doi": "10.1523/jneurosci.1935-25.2026",
+      "pmid": "42674974",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42674974",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1546,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 467,
+          "title": "Dlg5 and Cadherins cooperate to ensure peripheral glia and septate junction integrity.",
+          "doi": "10.1523/JNEUROSCI.1935-25.2026",
+          "pmid": "42674974",
+          "source": "Journal of Neuroscience",
+          "date": "31 Aug 2026",
+          "parsed_date": "2026-08-31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42674974/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-31",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42674974&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "31"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+      "doi": "10.1523/jneurosci.0641-26.2026",
+      "pmid": "42674973",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42674973",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1609,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 468,
+          "title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/STAT-CK2α Signaling.",
+          "doi": "10.1523/JNEUROSCI.0641-26.2026",
+          "pmid": "42674973",
+          "source": "Journal of Neuroscience",
+          "date": "31 Aug 2026",
+          "parsed_date": "2026-08-31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42674973/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-31",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42674973&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "31"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "doi": "10.1523/jneurosci.0476-26.2026",
+      "pmid": "42674972",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42674972",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 2040,
+      "exact_prior_title": true,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 469,
+          "title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+          "doi": "10.1523/JNEUROSCI.0476-26.2026",
+          "pmid": "42674972",
+          "source": "Journal of Neuroscience",
+          "date": "31 Aug 2026",
+          "parsed_date": "2026-08-31",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42674972/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-31",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42674972&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "31"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+      "doi": "10.1523/jneurosci.0492-26.2026",
+      "pmid": "42680589",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42680589",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1405,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+          "line": 386,
+          "title": "Prioritization in working memory reduces interference via beta band-linked stimulus transformations.",
+          "doi": "10.1523/JNEUROSCI.0492-26.2026",
+          "pmid": "42680589",
+          "source": "Journal of Neuroscience",
+          "date": "01 Sep 2026",
+          "parsed_date": "2026-09-01",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42680589/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-09-01",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42680589&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "9",
+            "day": "1"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "doi": "10.1523/jneurosci.0670-26.2026",
+      "pmid": "42660658",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42660658",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1968,
+      "exact_prior_title": true,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+          "line": 53,
+          "title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+          "doi": "10.1523/JNEUROSCI.0670-26.2026",
+          "pmid": "42660658",
+          "source": "Journal of Neuroscience",
+          "date": "27 Aug 2026",
+          "parsed_date": "2026-08-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42660658/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42660658&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "28"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+      "doi": "10.1523/jneurosci.0511-26.2026",
+      "pmid": "42660657",
+      "source": "Journal of Neuroscience",
+      "target_date": "2026-09-30",
+      "target_date_evidence": {
+        "field": "firstPublicationDate",
+        "value": "2026-09-30",
+        "pubmed_id": "42660657",
+        "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+        "electronicPublicationDate": "2026-09-30",
+        "printPublicationDate": "2026-09-01"
+      },
+      "target_version": null,
+      "target_abstract_characters": 1910,
+      "exact_prior_title": false,
+      "prior_database_records": [],
+      "historical_records": [
+        {
+          "file": "getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+          "line": 54,
+          "title": "Temporal progression of auditory brainstem dysfunction and behavioral phenotypes in mouse models of tauopathy.",
+          "doi": "10.1523/JNEUROSCI.0511-26.2026",
+          "pmid": "42660657",
+          "source": "Journal of Neuroscience",
+          "date": "27 Aug 2026",
+          "parsed_date": "2026-08-27",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42660657/",
+          "version": null,
+          "date_evidence": null,
+          "has_meaningful_abstract": false,
+          "abstract_characters": 0,
+          "abstract_same_as_target": false
+        }
+      ],
+      "earliest_recorded_date": "2026-08-27",
+      "prior_meaningful_abstract": false,
+      "new_version_signal": false,
+      "recommended_action": "retain as historical abstract-recheck candidate under current dedup policy; preserve earlier publication date and article ID; current evaluation has newly available abstract",
+      "authoritative_date_evidence": {
+        "source": "PubMed efetch XML",
+        "cache_file": "tmps\\pipeline_20261004\\source_cache\\pubmed_5c0463bf6d34.xml",
+        "evidence_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42660657&retmode=xml",
+        "dates": [
+          {
+            "field": "ArticleDate",
+            "DateType": "Electronic",
+            "year": "2026",
+            "month": "09",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "medline",
+            "year": "2026",
+            "month": "9",
+            "day": "30"
+          },
+          {
+            "field": "PubmedData/History/PubMedPubDate",
+            "PubStatus": "pubmed",
+            "year": "2026",
+            "month": "8",
+            "day": "28"
+          },
+          {
+            "field": "JournalIssue/PubDate",
+            "year": "2026",
+            "month": "Sep",
+            "day": "30",
+            "MedlineDate": null
+          }
+        ]
+      }
+    }
+  ],
+  "previously_missing_abstract_count": 20,
+  "previously_meaningful_abstract_count": 1
+}

@@ -1,0 +1,27 @@
+{
+  "report": {
+    "article_cards": 528,
+    "cover": 1448,
+    "date_note": true,
+    "heading": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04)",
+    "iframes": [
+      "assets/charts/2026-10-04_heatmap.html",
+      "assets/charts/2026-10-04_pie.html"
+    ],
+    "overflow": false,
+    "title": "神经科学快讯·第030期 跨物种麻醉脑动力学揭示神经活动的时空隔离 (2026-10-04) | Neuroscience Bulletin"
+  },
+  "heatmap": {
+    "canvas": true,
+    "countries": 243,
+    "height": 871,
+    "map_registered": true,
+    "width": 1432
+  },
+  "mobile": {
+    "overflow": false,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "status": "passed"
+}

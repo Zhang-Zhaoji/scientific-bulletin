@@ -57,7 +57,11 @@ def enrich(input_path, output_path, cache_dir):
     records = load_pubmed(pmids, cache_dir)
     recovered = 0
     for index, paper in enumerate(papers):
-        paper['author_details'] = [{'name': name, 'source': paper.get('source', 'original')} for name in paper.get('authors', [])]
+        source_details = paper.get('author_details') or []
+        paper['author_details'] = copy.deepcopy(source_details) if source_details else [
+            {'name': name, 'source': paper.get('source', 'original')}
+            for name in paper.get('authors', [])
+        ]
         record = records.get(str(paper.get('pmid', '')))
         if record and fuzz.ratio(normalized(record['title']), normalized(paper['title'])) >= 90:
             if record['author_details']:

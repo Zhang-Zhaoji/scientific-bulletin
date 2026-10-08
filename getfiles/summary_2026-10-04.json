@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-04",
+  "date_range": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "merged_count": 1074,
+  "source_counts_after_merge": {
+    "arXiv": 118,
+    "Nature Communications": 85,
+    "Cell Systems": 2,
+    "Current Biology": 10,
+    "Nature Human Behavior": 4,
+    "PLOS": 230,
+    "PNAS": 87,
+    "Science Advances": 80,
+    "bioRxiv": 300,
+    "eLife": 20,
+    "Brain": 10,
+    "Cell": 12,
+    "Cell Reports": 16,
+    "Journal of Cognitive Neuroscience": 2,
+    "Journal of Neurophysiology": 1,
+    "Journal of Neuroscience": 11,
+    "Journal of Vision": 4,
+    "Nature Method": 2,
+    "Nature Neuroscience": 6,
+    "Neuron": 14,
+    "Science": 35,
+    "Nature": 25
+  },
+  "input_counts": {
+    "tmps\\pipeline_20261004\\arxiv.jsonl": 118,
+    "tmps\\pipeline_20261004\\supplement.jsonl": 981
+  },
+  "sources": {
+    "arXiv": {
+      "count": 118
+    },
+    "Nature Communications": {
+      "count": 85
+    },
+    "Cell Systems": {
+      "count": 2
+    },
+    "Current Biology": {
+      "count": 10
+    },
+    "Nature Human Behavior": {
+      "count": 4
+    },
+    "PLOS": {
+      "count": 230
+    },
+    "PNAS": {
+      "count": 87
+    },
+    "Science Advances": {
+      "count": 80
+    },
+    "bioRxiv": {
+      "count": 300
+    },
+    "eLife": {
+      "count": 20
+    },
+    "Brain": {
+      "count": 10
+    },
+    "Cell": {
+      "count": 12
+    },
+    "Cell Reports": {
+      "count": 16
+    },
+    "Journal of Cognitive Neuroscience": {
+      "count": 2
+    },
+    "Journal of Neurophysiology": {
+      "count": 1
+    },
+    "Journal of Neuroscience": {
+      "count": 11
+    },
+    "Journal of Vision": {
+      "count": 4
+    },
+    "Nature Method": {
+      "count": 2
+    },
+    "Nature Neuroscience": {
+      "count": 6
+    },
+    "Neuron": {
+      "count": 14
+    },
+    "Science": {
+      "count": 35
+    },
+    "Nature": {
+      "count": 25
+    }
+  },
+  "missing_abstract_count": 16,
+  "source_audit": "D:\\working\\scientific bulletin\\getfiles\\source_audit_2026-10-04.json",
+  "papers": 1074,
+  "paper_count": 1074,
+  "llm_result_count": 1074,
+  "historical_recheck_count": 20,
+  "historical_rechecks": "tmps\\pipeline_20261004\\historical_rechecks.json",
+  "initial_evaluated_count": 1094,
+  "source_counts": {
+    "arXiv": 118,
+    "Nature Communications": 85,
+    "Cell Systems": 2,
+    "Current Biology": 10,
+    "Nature Human Behavior": 4,
+    "PLOS": 230,
+    "PNAS": 87,
+    "Science Advances": 80,
+    "bioRxiv": 300,
+    "eLife": 20,
+    "Brain": 10,
+    "Cell": 12,
+    "Cell Reports": 16,
+    "Journal of Cognitive Neuroscience": 2,
+    "Journal of Neurophysiology": 1,
+    "Journal of Neuroscience": 11,
+    "Journal of Vision": 4,
+    "Nature Method": 2,
+    "Nature Neuroscience": 6,
+    "Neuron": 14,
+    "Science": 35,
+    "Nature": 25
+  },
+  "recommendation_distribution": {
+    "简要提及": 220,
+    "深度解读": 308,
+    "不推送": 546
+  },
+  "updated_at": "2026-10-08T18:02:46.628509"
+}

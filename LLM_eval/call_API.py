@@ -94,7 +94,9 @@ class LLM_process:
                 "response_format": {"type": "json_object"},
                 "max_tokens": 4096,
             }
-            if self.thinking:
+            if self.provider == "deepseek":
+                kwargs["extra_body"] = {"thinking": {"type": "enabled" if self.thinking else "disabled"}}
+            elif self.thinking:
                 kwargs["extra_body"] = {"enable_thinking": self.thinking}
             response = self.client.chat.completions.create(**kwargs)
             content = response.choices[0].message.content

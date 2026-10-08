@@ -28,7 +28,7 @@ def score_distribution(results: list[dict]) -> list[tuple[str, int]]:
             continue
         score = result.get("total_score", 0) or 0
         for idx, (low, high) in enumerate(bins):
-            if low <= score < high:
+            if low <= score < high or (high == 10 and score == 10):
                 counts[idx] += 1
                 break
 

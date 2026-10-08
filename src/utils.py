@@ -1,5 +1,6 @@
 from dateutil import parser
 from datetime import datetime, date
+import re
 
 from urllib.parse import urljoin, urlparse, urlunparse
 
@@ -31,7 +32,12 @@ def normalize_url(base_url: str, href: str) -> str:
     return normalized
 
 def ymd(d: str) -> str:
-    return parser.parse(d, dayfirst=True).strftime('%Y-%m-%d')
+    """Normalize dates without interpreting ISO month/day as day/month."""
+    value = str(d).strip()
+    if re.match(r'^\d{4}-\d{2}-\d{2}(?:[T ]|$)', value):
+        return date.fromisoformat(value[:10]).isoformat()
+    value = re.sub(r'\bSept\b', 'Sep', value, flags=re.IGNORECASE)
+    return parser.parse(value, dayfirst=True).strftime('%Y-%m-%d')
 
 def days(d1: str, d2: str) -> int:
     ''' d2 is later than d1. Both d1 and d2 should be in YYYY-MM-DD format.'''

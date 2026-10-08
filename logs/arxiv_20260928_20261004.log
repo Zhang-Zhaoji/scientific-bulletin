@@ -1,0 +1,19 @@
+
+================================================================================
+Fetching from arXiv...
+Categories: q-bio.NC, q-bio.TO, q-bio.MN, q-bio.BM, q-bio.QM
+Date range: last 11 days only (strict)
+================================================================================
+Fetching arXiv papers for category: q-bio.NC
+  Found 79 papers in last 11 days
+Fetching arXiv papers for category: q-bio.TO
+  Found 5 papers in last 11 days
+Fetching arXiv papers for category: q-bio.MN
+  Found 7 papers in last 11 days
+Fetching arXiv papers for category: q-bio.BM
+  Found 30 papers in last 11 days
+Fetching arXiv papers for category: q-bio.QM
+  Found 45 papers in last 11 days
+Total arXiv papers: 156
+[DATE] Kept 118/156 papers; unknown dates: 0
+Saved 118 arXiv papers to tmps\pipeline_20261004\arxiv.jsonl

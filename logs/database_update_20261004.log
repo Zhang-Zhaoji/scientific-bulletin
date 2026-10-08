@@ -1,0 +1,162 @@
+{
+  "through_date": "2026-10-04",
+  "before": {
+    "counts": {
+      "countries": 285,
+      "authors": 77263,
+      "institutions": 4973,
+      "articles": 8949,
+      "themes": 11,
+      "subthemes": 388,
+      "crosstags": 8518,
+      "author_institutions": 23655,
+      "article_authors": 63834,
+      "article_institutions": 9405,
+      "article_countries": 5014,
+      "article_themes": 9002,
+      "article_subthemes": 5286,
+      "article_crosstags": 16039
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-08-02"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "weeks": [
+    {
+      "date": "2026-08-09",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-09_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260809_194853.json",
+      "records": 437,
+      "missing_existing_titles": 434,
+      "new_unique_titles": 434
+    },
+    {
+      "date": "2026-08-17",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-17_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260817_011900.json",
+      "records": 503,
+      "missing_existing_titles": 496,
+      "new_unique_titles": 496
+    },
+    {
+      "date": "2026-08-23",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-23_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260823_002838.json",
+      "records": 544,
+      "missing_existing_titles": 543,
+      "new_unique_titles": 543
+    },
+    {
+      "date": "2026-08-29",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-08-29_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260829_015737.json",
+      "records": 284,
+      "missing_existing_titles": 278,
+      "new_unique_titles": 277
+    },
+    {
+      "date": "2026-09-06",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-06_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260906_011115.json",
+      "records": 591,
+      "missing_existing_titles": 579,
+      "new_unique_titles": 578
+    },
+    {
+      "date": "2026-09-13",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-13_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260913_191004.json",
+      "records": 509,
+      "missing_existing_titles": 494,
+      "new_unique_titles": 492
+    },
+    {
+      "date": "2026-09-20",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-20_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260920_114614.json",
+      "records": 583,
+      "missing_existing_titles": 583,
+      "new_unique_titles": 581
+    },
+    {
+      "date": "2026-09-27",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-09-27_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20260927.json",
+      "records": 702,
+      "missing_existing_titles": 700,
+      "new_unique_titles": 698
+    },
+    {
+      "date": "2026-10-04",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-04_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261004.json",
+      "records": 1074,
+      "missing_existing_titles": 1074,
+      "new_unique_titles": 1073
+    }
+  ],
+  "expected_new_articles": 5172,
+  "target_ready": true,
+  "warnings": [],
+  "backups_directory": "D:\\working\\scientific bulletin\\tmps\\pipeline_20261004\\database_backup",
+  "dry_run": false,
+  "rechecks_file": "getfiles\\historical_rechecks_2026-10-04.json",
+  "historical_rechecks": 20
+}
+Imported 2026-08-09: 437 reconciled records
+Imported 2026-08-17: 503 reconciled records
+Imported 2026-08-23: 544 reconciled records
+Imported 2026-08-29: 284 reconciled records
+Imported 2026-09-06: 591 reconciled records
+Imported 2026-09-13: 509 reconciled records
+Imported 2026-09-20: 583 reconciled records
+Imported 2026-09-27: 702 reconciled records
+Imported 2026-10-04: 1074 reconciled records
+复制数据库: D:\working\scientific bulletin\tmps\pipeline_20261004\literature_updated_20261008_181019_136741.db
+  原始大小: 36.47 MB
+  清空 articles.abstract（节省 11070 KB）
+  清空 articles.title_zh（节省 361 KB）
+  清空 articles.url（节省 606 KB）
+  清空 articles.doi（节省 280 KB）
+  清空 institutions.raw_affiliation（节省 900 KB）
+转换 pub_date 为 ISO 格式...
+  所有日期已是 ISO 格式，无需转换
+VACUUM 回收空间...
+精简数据库: 18.09 MB（节省 18.38 MB, 50%)
+
+验证精简数据库...
+  ✓ countries: 285 行
+  ✓ authors: 115691 行
+  ✓ institutions: 7145 行
+  ✓ articles: 14121 行
+  ✓ themes: 11 行
+  ✓ subthemes: 388 行
+  ✓ crosstags: 13022 行
+  ✓ author_institutions: 36954 行
+  ✓ article_authors: 103098 行
+  ✓ article_institutions: 14638 行
+  ✓ article_countries: 7718 行
+  ✓ article_themes: 14196 行
+  ✓ article_subthemes: 9075 行
+  ✓ article_crosstags: 29087 行
+  ✓ articles.abstract: 已全部清空
+  ✓ articles.title_zh: 已全部清空
+  ✓ articles.url: 已全部清空
+  ✓ articles.doi: 已全部清空
+  ✓ institutions.raw_affiliation: 已全部清空
+  ✓ 保留字段数据完整（抽样对比一致）
+
+  关键SQL查询测试:
+    ✓ 国家发文量: 5 条结果
+    ✓ 领域分布: 11 条结果
+    ✓ 国家×领域交叉: 5 条结果
+    ✓ 评分分布: 10 条结果
+    ✓ 期刊排名: 5 条结果
+    ✓ 机构排名: 5 条结果
+    ✓ 交叉标签: 10 条结果
+
+  ✓ 精简数据库验证通过
+Database update complete: D:\working\scientific bulletin\tmps\pipeline_20261004\database_update.json

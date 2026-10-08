@@ -1,0 +1,3482 @@
+[
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Can Category-selective Cortex Predict Categorization Behavior?",
+        "date": "2026-10-01",
+        "authors": [
+          "Timothee Maniquet",
+          "Huangxu Fang",
+          "N Apurva Ratan Murty",
+          "Hans Op de Beeck"
+        ],
+        "author_details": [
+          {
+            "name": "Timothee Maniquet",
+            "affiliation": "KU Leuven Humanities and Social Sciences Group.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Huangxu Fang",
+            "affiliation": "KU Leuven Humanities and Social Sciences Group.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "N Apurva Ratan Murty",
+            "affiliation": "Georgia Tech School of Psychology.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Hans Op de Beeck",
+            "affiliation": "KU Leuven Humanities and Social Sciences Group.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          }
+        ],
+        "abstract": "One of the distinctive features of the human visual system is the presence in occipito-temporal cortex (OTC) of regions that show preferential activation to specific categories of visual objects. To understand how this selectivity relates to categorization behavior, studies have employed a distance-to-bound (DTB) approach, where multivariate brain activity is used to estimate a decision boundary, from which behavioral performance can be predicted. Using this approach, correlations have been found between activity in OTC and behavioral performance when carrying out certain categorization tasks. However, it remains unclear what determines where in OTC this correlations can be found and with which categorization tasks they can be found. Here, we bridged this gap by relating category-selective regions of OTC to behavioral performance while participants categorized images as belonging or not to their preferred categories. We adopted a more basic approach and considered simple, univariate activity, rather than relying on decoding to build our DTB. Our results show that activation in regions selective to faces (fusiform face area and occipital face area), bodies (extrastriate body area), and scenes (parahippocampal place area) is sufficient to predict behavioral performance while categorizing images as being faces, bodies, or scenes, respectively. These results are largely consistent across RT and motor movements and generalize to animacy classification. Overall, our data add to evidence that category-selective regions in OTC can serve to guide categorization behavior and underline the validity of the DTB approach to address this relationship.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2629",
+        "doi": "10.1162/jocn.a.2629",
+        "pmid": "42213524",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213524",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Maniquet T",
+          "Fang H",
+          "Ratan Murty NA",
+          "Op de Beeck H"
+        ],
+        "affiliations": [
+          "KU Leuven Humanities and Social Sciences Group.",
+          "Georgia Tech School of Psychology."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Can Category-selective Cortex Predict Categorization Behavior?",
+      "authors": [
+        "Timothee Maniquet",
+        "Huangxu Fang",
+        "N Apurva Ratan Murty",
+        "Hans Op de Beeck"
+      ],
+      "date": "2026-10-01",
+      "abstract": "One of the distinctive features of the human visual system is the presence in occipito-temporal cortex (OTC) of regions that show preferential activation to specific categories of visual objects. To understand how this selectivity relates to categorization behavior, studies have employed a distance-to-bound (DTB) approach, where multivariate brain activity is used to estimate a decision boundary, from which behavioral performance can be predicted. Using this approach, correlations have been found between activity in OTC and behavioral performance when carrying out certain categorization tasks. However, it remains unclear what determines where in OTC this correlations can be found and with which categorization tasks they can be found. Here, we bridged this gap by relating category-selective regions of OTC to behavioral performance while participants categorized images as belonging or not to their preferred categories. We adopted a more basic approach and considered simple, univariate activity, rather than relying on decoding to build our DTB. Our results show that activation in regions selective to faces (fusiform face area and occipital face area), bodies (extrastriate body area), and scenes (parahippocampal place area) is sufficient to predict behavioral performance while categorizing images as being faces, bodies, or scenes, respectively. These results are largely consistent across RT and motor movements and generalize to animacy classification. Overall, our data add to evidence that category-selective regions in OTC can serve to guide categorization behavior and underline the validity of the DTB approach to address this relationship.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "类别选择性皮层能否预测分类行为？",
+    "paper_id": "cdd25dbda0f9",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.5,
+      "methodology": 6.0,
+      "evidence": 5.8,
+      "contribution": 5.5,
+      "accessibility": 6.5
+    },
+    "total_score": 5.76,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究探讨枕颞皮层类别选择性区域的活动与分类行为之间的关系，属于认知神经科学核心问题。",
+    "feature_angle": "用简单单变量活动证明类别选择性皮层足以预测分类行为，支持distance-to-bound模型的行为相关性。",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次系统地将多个类别选择性区域（FFA、OFA、EBA、PPA）的单变量激活与分类行为直接关联，并在RT、运动反应和animacy任务中验证了泛化性。",
+    "key_limitation": "方法学创新有限，仅采用了单变量激活而非更信息丰富的多变量解码；样本和任务范围有限，因果性证据缺失，难以排除决策后反馈的影响。",
+    "target_audience": "视觉认知神经科学、神经影像和计算神经科学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2629",
+      "pmid": "42213524"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+        "date": "2026-10-01",
+        "authors": [
+          "Alejandro Chandia-Jorquera",
+          "Sean D van Mil",
+          "Mar Estarellas",
+          "Marina Dauphin",
+          "Claudia Pascovich",
+          "Andres Canales-Johnson"
+        ],
+        "author_details": [
+          {
+            "name": "Alejandro Chandia-Jorquera",
+            "affiliation": "University of Cambridge.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Cambridge"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United Kingdom"
+            ],
+            "ror_subregion": [
+              "England"
+            ]
+          },
+          {
+            "name": "Sean D van Mil",
+            "affiliation": "University of Amsterdam.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Amsterdam"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Netherlands"
+            ],
+            "ror_subregion": [
+              "North Holland"
+            ]
+          },
+          {
+            "name": "Mar Estarellas",
+            "affiliation": "University of Cambridge.; McGill University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Cambridge",
+              "McGill University"
+            ],
+            "ror_match_score": [
+              100,
+              100
+            ],
+            "ror_country": [
+              "United Kingdom",
+              "Canada"
+            ],
+            "ror_subregion": [
+              "England",
+              "Quebec"
+            ]
+          },
+          {
+            "name": "Marina Dauphin",
+            "affiliation": "University of Cambridge.; University of Granada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Cambridge",
+              "University of Granma"
+            ],
+            "ror_match_score": [
+              100,
+              93
+            ],
+            "ror_country": [
+              "United Kingdom",
+              "Cuba"
+            ],
+            "ror_subregion": [
+              "England",
+              "Granma Province"
+            ]
+          },
+          {
+            "name": "Claudia Pascovich",
+            "affiliation": "University of Cambridge.; Universidad de la República, Montevideo, Uruguay.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Cambridge",
+              "Universidad La República"
+            ],
+            "ror_match_score": [
+              100,
+              94
+            ],
+            "ror_country": [
+              "United Kingdom",
+              "Uruguay"
+            ],
+            "ror_subregion": [
+              "England"
+            ]
+          },
+          {
+            "name": "Andres Canales-Johnson",
+            "affiliation": "University of Cambridge.; University of Helsinki.; Universidad Católica del Maule.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Cambridge",
+              "University of Helsinki",
+              "Catholic University of the Maule"
+            ],
+            "ror_match_score": [
+              100,
+              100,
+              100
+            ],
+            "ror_country": [
+              "United Kingdom",
+              "Finland",
+              "Chile"
+            ],
+            "ror_subregion": [
+              "England",
+              "Uusimaa",
+              "Maule Region"
+            ]
+          }
+        ],
+        "abstract": "Pure awareness (PA) has been proposed as a form of minimal phenomenal experience, but its neurophenomenological signatures remain poorly characterized. Transcendental meditation (TM) offers a particularly tractable empirical model of PA because its procedure is standardized, its induction is effortless, and it reliably elicits reports of awareness with minimal content. We combined electroencephalography with temporal experience tracing in 33 experienced TM practitioners and their matched controls (performing mental counting). TM practitioners reported significantly greater intensity and temporal variability of PA, independent of years of meditation practice. We then used multivariate classification of theoretically motivated electroencephalography markers spanning temporal entropy, aperiodic activity, complexity, and linear and nonlinear functional connectivity. We observed a double dissociation. When TM was contrasted with counting, temporal entropy and aperiodic dynamics were the strongest discriminators, whereas phase-coherence functional connectivity contributed least. Conversely, when TM was contrasted with its own baseline, low-frequency functional connectivity dominated, whereas temporal entropy contributed minimally. Complementary topographical analyses indicated that these differences were not reducible to a few localized univariate effects, but were better understood as distributed multivariate neural patterns. Finally, TM showed little evidence of carryover into subsequent rest, whereas counting induced more residual change. Together, these findings provide a systematic electrophysiological characterization of PA and support neurophenomenology as a tractable framework for studying minimal phenomenal experience.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2626",
+        "doi": "10.1162/jocn.a.2626",
+        "pmid": "42213535",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213535",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Chandia-Jorquera A",
+          "van Mil SD",
+          "Estarellas M",
+          "Dauphin M",
+          "Pascovich C",
+          "Canales-Johnson A"
+        ],
+        "affiliations": [
+          "University of Cambridge.",
+          "University of Amsterdam.",
+          "University of Cambridge.; McGill University.",
+          "University of Cambridge.; University of Granada.",
+          "University of Cambridge.; Universidad de la República, Montevideo, Uruguay.",
+          "University of Cambridge.; University of Helsinki.; Universidad Católica del Maule."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Distilling the Neurophenomenological Signatures of Pure Awareness during Transcendental Meditation.",
+      "authors": [
+        "Alejandro Chandia-Jorquera",
+        "Sean D van Mil",
+        "Mar Estarellas",
+        "Marina Dauphin",
+        "Claudia Pascovich",
+        "Andres Canales-Johnson"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Pure awareness (PA) has been proposed as a form of minimal phenomenal experience, but its neurophenomenological signatures remain poorly characterized. Transcendental meditation (TM) offers a particularly tractable empirical model of PA because its procedure is standardized, its induction is effortless, and it reliably elicits reports of awareness with minimal content. We combined electroencephalography with temporal experience tracing in 33 experienced TM practitioners and their matched controls (performing mental counting). TM practitioners reported significantly greater intensity and temporal variability of PA, independent of years of meditation practice. We then used multivariate classification of theoretically motivated electroencephalography markers spanning temporal entropy, aperiodic activity, complexity, and linear and nonlinear functional connectivity. We observed a double dissociation. When TM was contrasted with counting, temporal entropy and aperiodic dynamics were the strongest discriminators, whereas phase-coherence functional connectivity contributed least. Conversely, when TM was contrasted with its own baseline, low-frequency functional connectivity dominated, whereas temporal entropy contributed minimally. Complementary topographical analyses indicated that these differences were not reducible to a few localized univariate effects, but were better understood as distributed multivariate neural patterns. Finally, TM showed little evidence of carryover into subsequent rest, whereas counting induced more residual change. Together, these findings provide a systematic electrophysiological characterization of PA and support neurophenomenology as a tractable framework for studying minimal phenomenal experience.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "提炼超越冥想中纯粹觉知的神经现象学特征",
+    "paper_id": "1829bad3abc0",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.2,
+      "methodology": 6.8,
+      "evidence": 6.0,
+      "contribution": 5.5,
+      "accessibility": 5.8
+    },
+    "total_score": 5.800000000000001,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究结合EEG与现象学报告，探究纯粹觉知的神经相关物，直接属于认知神经科学关于意识与冥想的核心问题。",
+    "feature_angle": "结合脑电与时间体验追踪，系统刻画超觉冥想中‘纯粹觉知’的多变量神经现象学特征。",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次将时间体验追踪与多维度EEG标记结合，并在同一实验中揭示出冥想与计数对比和冥想与基线对比之间的双重解离，方法学设计具有创新性。",
+    "key_limitation": "样本量仅33名冥想者且缺乏纵向干预证据，‘纯粹觉知’的主观报告难以完全排除期望效应，EEG分类结果的可重复性和因果推断力有限。",
+    "target_audience": "冥想神经科学、意识研究、神经现象学及EEG方法学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2626",
+      "pmid": "42213535"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+        "date": "2026-10-01",
+        "authors": [
+          "Jasmin Stein",
+          "Clemens Kirschbaum",
+          "Franziska M Korb",
+          "Thomas Goschke",
+          "Katharina Zwosta"
+        ],
+        "author_details": [
+          {
+            "name": "Jasmin Stein",
+            "affiliation": "TU Dresden.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Technische Universität Dresden"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Germany"
+            ],
+            "ror_subregion": [
+              "Saxony"
+            ]
+          },
+          {
+            "name": "Clemens Kirschbaum",
+            "affiliation": "TU Dresden.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Technische Universität Dresden"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Germany"
+            ],
+            "ror_subregion": [
+              "Saxony"
+            ]
+          },
+          {
+            "name": "Franziska M Korb",
+            "affiliation": "TU Dresden.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Technische Universität Dresden"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Germany"
+            ],
+            "ror_subregion": [
+              "Saxony"
+            ]
+          },
+          {
+            "name": "Thomas Goschke",
+            "affiliation": "TU Dresden.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Technische Universität Dresden"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Germany"
+            ],
+            "ror_subregion": [
+              "Saxony"
+            ]
+          },
+          {
+            "name": "Katharina Zwosta",
+            "affiliation": "TU Dresden.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Technische Universität Dresden"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Germany"
+            ],
+            "ror_subregion": [
+              "Saxony"
+            ]
+          }
+        ],
+        "abstract": "Successfully exerting self-control is an important prerequisite for adaptive decision-making in daily life. The experience of acute stress might impair the ability to select actions in line with personally valued long-term goals in situations where a conflict between short-term and long-term action consequences arises. In this fMRI study, we examined the effects of experimentally induced acute stress on neural and behavioral substrates of self-controlled decision-making in a large sample (n = 175). We showed that acute stress was associated with increased modulation of activation in the ventromedial PFC by anticipated action short-term consequences, suggesting that acute stress might alter the degree to which short-term consequences are incorporated into the neural valuation process, but not with decreased modulation by long-term consequences. In addition, acute stress reduced functional connectivity between ventromedial and dorsolateral PFCs during self-control conflict possibly indicating weakened recruitment of cognitive control. However, despite group differences on the neural level, acute stress did not affect the impact of anticipated short-term or long-term action consequences on behavioral decisions or participants' self-control performance. Several factors might have contributed to the results reported here, for instance, potential compensatory mechanisms employed by stressed participants. Future work is needed to address these systematically.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2623",
+        "doi": "10.1162/jocn.a.2623",
+        "pmid": "42213537",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213537",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Stein J",
+          "Kirschbaum C",
+          "Korb FM",
+          "Goschke T",
+          "Zwosta K"
+        ],
+        "affiliations": [
+          "TU Dresden."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Investigating the Effects of Acute Stress on Neural Mechanisms of Self-controlled Decision-making.",
+      "authors": [
+        "Jasmin Stein",
+        "Clemens Kirschbaum",
+        "Franziska M Korb",
+        "Thomas Goschke",
+        "Katharina Zwosta"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Successfully exerting self-control is an important prerequisite for adaptive decision-making in daily life. The experience of acute stress might impair the ability to select actions in line with personally valued long-term goals in situations where a conflict between short-term and long-term action consequences arises. In this fMRI study, we examined the effects of experimentally induced acute stress on neural and behavioral substrates of self-controlled decision-making in a large sample (n = 175). We showed that acute stress was associated with increased modulation of activation in the ventromedial PFC by anticipated action short-term consequences, suggesting that acute stress might alter the degree to which short-term consequences are incorporated into the neural valuation process, but not with decreased modulation by long-term consequences. In addition, acute stress reduced functional connectivity between ventromedial and dorsolateral PFCs during self-control conflict possibly indicating weakened recruitment of cognitive control. However, despite group differences on the neural level, acute stress did not affect the impact of anticipated short-term or long-term action consequences on behavioral decisions or participants' self-control performance. Several factors might have contributed to the results reported here, for instance, potential compensatory mechanisms employed by stressed participants. Future work is needed to address these systematically.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "急性应激对自我控制决策神经机制的影响研究",
+    "paper_id": "1130cb7b6677",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.8,
+      "methodology": 7.2,
+      "evidence": 6.8,
+      "contribution": 5.5,
+      "accessibility": 6.5
+    },
+    "total_score": 6.29,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究使用fMRI直接探讨急性应激对自我控制决策的神经机制，属于认知神经科学核心问题。",
+    "feature_angle": "大样本fMRI揭示急性压力选择性放大vmPFC对短期后果的神经估值信号，却未改变行为决策，凸显神经-行为解耦",
+    "model_used": "deepseek-flash",
+    "key_strength": "大样本(n=175)实验性压力诱导结合fMRI，区分短期与长期后果的神经估值并检验vmPFC-dlPFC功能连接，设计严谨且假设驱动",
+    "key_limitation": "神经层面显著但行为层面无效应，削弱结论生态效度；压力操纵与任务时序细节有限，功能连接为相关性证据，未能排除补偿机制",
+    "target_audience": "认知神经科学、决策神经科学、压力与自我控制研究者及计算系统生物学家",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2623",
+      "pmid": "42213537"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+        "date": "2026-10-01",
+        "authors": [
+          "Nursena Ataseven",
+          "I Efsane Algın",
+          "Duygu Yücel",
+          "Berna Güler",
+          "Lara Todorova",
+          "Keisuke Fukuda",
+          "Eren Günseli"
+        ],
+        "author_details": [
+          {
+            "name": "Nursena Ataseven",
+            "affiliation": "Sabancı University, Istanbul, Turkey.; University of Groningen.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University",
+              "University of Groningen"
+            ],
+            "ror_match_score": [
+              91,
+              100
+            ],
+            "ror_country": [
+              "Turkey",
+              "Netherlands"
+            ],
+            "ror_subregion": [
+              "Istanbul",
+              "Groningen"
+            ]
+          },
+          {
+            "name": "I Efsane Algın",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Duygu Yücel",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Berna Güler",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Lara Todorova",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Keisuke Fukuda",
+            "affiliation": "University of Toronto.; University of Toronto Mississauga.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Toronto"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "Ontario"
+            ]
+          },
+          {
+            "name": "Eren Günseli",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          }
+        ],
+        "abstract": "Most daily tasks require frequent information exchange between working memory (WM) and long-term memory (LTM). However, the factors that modulate the reactivation of LTMs in WM remain to be explored. Here, we tested the effects of anticipated perceptual interference (in Experiment 1) and anticipated interference task (in Experiment 2) on reactivation of LTMs in WM using contralateral delay activity (CDA) in the EEG. On each trial, participants saw one or three previously studied or novel objects that were tested after a brief retention interval. In half of the blocks, the retention contained perceptual distractors (Experiment 1) or an interference task (Experiment 2). The CDA prior to the interference period was lower for studied than for novel items and was unaffected by anticipated interference, with no interaction between interference expectation and memory type. Additionally, we measured contralateral alpha power suppression as an index of spatial attention. We found that spatial attention allocated to the memorized objects' locations also was not modulated with anticipated interference. These findings indicate that anticipating interference does not influence the extent to which WM is engaged in representing information stored in LTM.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2625",
+        "doi": "10.1162/jocn.a.2625",
+        "pmid": "42213518",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213518",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Ataseven N",
+          "Algın IE",
+          "Yücel D",
+          "Güler B",
+          "Todorova L",
+          "Fukuda K",
+          "Günseli E"
+        ],
+        "affiliations": [
+          "Sabancı University, Istanbul, Turkey.; University of Groningen.",
+          "Sabancı University, Istanbul, Turkey.",
+          "University of Toronto.; University of Toronto Mississauga."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Memory Reactivation Levels Remain Unaffected by Anticipated Interference.",
+      "authors": [
+        "Nursena Ataseven",
+        "I Efsane Algın",
+        "Duygu Yücel",
+        "Berna Güler",
+        "Lara Todorova",
+        "Keisuke Fukuda",
+        "Eren Günseli"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Most daily tasks require frequent information exchange between working memory (WM) and long-term memory (LTM). However, the factors that modulate the reactivation of LTMs in WM remain to be explored. Here, we tested the effects of anticipated perceptual interference (in Experiment 1) and anticipated interference task (in Experiment 2) on reactivation of LTMs in WM using contralateral delay activity (CDA) in the EEG. On each trial, participants saw one or three previously studied or novel objects that were tested after a brief retention interval. In half of the blocks, the retention contained perceptual distractors (Experiment 1) or an interference task (Experiment 2). The CDA prior to the interference period was lower for studied than for novel items and was unaffected by anticipated interference, with no interaction between interference expectation and memory type. Additionally, we measured contralateral alpha power suppression as an index of spatial attention. We found that spatial attention allocated to the memorized objects' locations also was not modulated with anticipated interference. These findings indicate that anticipating interference does not influence the extent to which WM is engaged in representing information stored in LTM.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "记忆再激活水平不受预期干扰影响",
+    "paper_id": "1dc3c092cd66",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 4.5,
+      "methodology": 6.8,
+      "evidence": 6.2,
+      "contribution": 4.2,
+      "accessibility": 7.0
+    },
+    "total_score": 5.49,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究采用EEG对侧延迟活动(CDA)探究工作记忆与长时记忆交互及预期干扰对记忆再激活的影响，属于认知神经科学核心问题。",
+    "feature_angle": "预期干扰并不改变工作记忆中长时记忆表征的复激活强度，为WM-LTM交互的自动化观点提供了反面证据。",
+    "model_used": "deepseek-flash",
+    "key_strength": "采用CDA与对侧alpha抑制两个EEG指标，在两种预期干扰范式（知觉干扰与干扰任务）中一致发现无调制效应，实验设计具有内部一致性。",
+    "key_limitation": "仅为阴性结果，缺乏对预期干扰操纵有效性的直接验证（如主观预期评级或干扰强度操作检验），效应量可能受样本量与试次数量限制，且CDA与alpha抑制的神经解释仍存争议，理论贡献有限。",
+    "target_audience": "工作记忆、长时记忆与EEG/ERP方向的基础认知神经科学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2625",
+      "pmid": "42213518"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+        "date": "2026-10-01",
+        "authors": [
+          "Elizabeth V Goldfarb",
+          "Lila Davachi",
+          "Morgan D Barense"
+        ],
+        "author_details": [
+          {
+            "name": "Elizabeth V Goldfarb",
+            "affiliation": "Yale University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Yale University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Connecticut"
+            ]
+          },
+          {
+            "name": "Lila Davachi",
+            "affiliation": "Columbia University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Columbia University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Morgan D Barense",
+            "affiliation": "University of Toronto.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Toronto"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "Ontario"
+            ]
+          }
+        ],
+        "abstract": "Our memories for personally experienced events are essential to who we are and what we do, yet methodological constraints have limited our ability to sample these real-world memories in the real world. The pervasive use of smartphones and wearable technology provides new opportunities to capture these events in the moment and in the wild. These new opportunities also come with new considerations for the design and analysis of memory experiments. Gathering lessons across forays into smartphone-based memory capture in our three laboratories, this Perspective aims to highlight important decision points, consider pros and cons of different approaches, and provide some tips and tricks to help researchers explore the wilds of smartphone-based memory.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2633",
+        "doi": "10.1162/jocn.a.2633",
+        "pmid": "42341285",
+        "pmcid": "PMC13569478",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42341285",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Goldfarb EV",
+          "Davachi L",
+          "Barense MD"
+        ],
+        "affiliations": [
+          "Yale University.",
+          "Columbia University.",
+          "University of Toronto."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Memory in the Palm of Your Hand: Smartphone-based Methods for Measuring Memory in the Wild.",
+      "authors": [
+        "Elizabeth V Goldfarb",
+        "Lila Davachi",
+        "Morgan D Barense"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Our memories for personally experienced events are essential to who we are and what we do, yet methodological constraints have limited our ability to sample these real-world memories in the real world. The pervasive use of smartphones and wearable technology provides new opportunities to capture these events in the moment and in the wild. These new opportunities also come with new considerations for the design and analysis of memory experiments. Gathering lessons across forays into smartphone-based memory capture in our three laboratories, this Perspective aims to highlight important decision points, consider pros and cons of different approaches, and provide some tips and tricks to help researchers explore the wilds of smartphone-based memory.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "掌中记忆：基于智能手机的野外记忆测量方法",
+    "paper_id": "45c65567d2b2",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.5,
+      "methodology": 7.0,
+      "evidence": 6.5,
+      "contribution": 6.5,
+      "accessibility": 8.5
+    },
+    "total_score": 6.5,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该论文探讨使用智能手机测量现实世界中的情景记忆，直接属于认知神经科学中记忆研究的范畴，并涉及研究方法创新。",
+    "feature_angle": "三个实验室的实战经验总结，手把手指导如何用智能手机在真实世界捕捉个人记忆，并系统梳理方法学决策与权衡。",
+    "model_used": "deepseek-flash",
+    "key_strength": "直面生态效度痛点，系统提炼智能手机记忆研究的决策点、利弊与实操技巧，方法学整合性强且写作清晰可读。",
+    "key_limitation": "作为Perspective而非系统性综述，缺乏文献定量整合与实证数据；建议多基于经验而非验证，对隐私、伦理、数据标准化等关键议题着墨有限，且无配套可复用工具或代码。",
+    "target_audience": "认知神经科学研究者、记忆领域心理学家、移动健康/数字表型方法学研究者及对生态瞬时评估感兴趣的研究生",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-06-21",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2633",
+      "pmid": "42341285"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+        "date": "2026-10-01",
+        "authors": [
+          "Wenjia Zhang",
+          "Jie Dong",
+          "Zongwen Gu",
+          "Jiaqi Qin",
+          "Hao Yan"
+        ],
+        "author_details": [
+          {
+            "name": "Wenjia Zhang",
+            "affiliation": "Xi'an International Studies University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Xi'an International Studies University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Shaanxi"
+            ]
+          },
+          {
+            "name": "Jie Dong",
+            "affiliation": "Xi'an International Studies University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Xi'an International Studies University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Shaanxi"
+            ]
+          },
+          {
+            "name": "Zongwen Gu",
+            "affiliation": "Xi'an International Studies University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Xi'an International Studies University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Shaanxi"
+            ]
+          },
+          {
+            "name": "Jiaqi Qin",
+            "affiliation": "Xi'an International Studies University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Xi'an International Studies University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Shaanxi"
+            ]
+          },
+          {
+            "name": "Hao Yan",
+            "affiliation": "Xi'an International Studies University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Xi'an International Studies University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Shaanxi"
+            ]
+          }
+        ],
+        "abstract": "Relative clauses (RCs) can be used to recursively embed structures in sentences. Subject-modifying (SM) RCs have been widely used to examine whether there is asymmetry in the ease of processing subject-extracted RCs (SRCs) and object-extracted RCs (ORCs) in Chinese. However, the difference in the beginning sequence of SM-SRCs (verb-noun) and SM-ORCs (noun-verb) may have been a confound in these tests. Unlike SM-RCs, Chinese object-modifying (OM)-RCs are initiated by the same noun-verb sequence. In the current study, participants were asked to read OM clauses (OM-SRCs and OM-ORCs) in Chinese sentences while undergoing fMRI scanning. Activation and Granger causality analyses were both conducted. There were no significant differences in activation elicited by OM-SRCs and OM-ORCs. In contrast, the results of Granger causality analyses showed more ORC-specific connectivity than SRC-specific connectivity, especially from left inferior frontal gyrus to superior temporal gyrus regions, which suggests that ORC processing required more interregional interaction in the brain compared with SRC processing. Taken together, these findings indicate an SRC advantage in processing Chinese OM-RC sentences and that the advantage is more involved in functional connectivity rather than activation. The results support the structural distance hypothesis about RC processing.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2632",
+        "doi": "10.1162/jocn.a.2632",
+        "pmid": "42341284",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42341284",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Zhang W",
+          "Dong J",
+          "Gu Z",
+          "Qin J",
+          "Yan H"
+        ],
+        "affiliations": [
+          "Xi'an International Studies University."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Processing Asymmetry in Object-modifying Relative Clauses: Evidence from Functional Connectivity.",
+      "authors": [
+        "Wenjia Zhang",
+        "Jie Dong",
+        "Zongwen Gu",
+        "Jiaqi Qin",
+        "Hao Yan"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Relative clauses (RCs) can be used to recursively embed structures in sentences. Subject-modifying (SM) RCs have been widely used to examine whether there is asymmetry in the ease of processing subject-extracted RCs (SRCs) and object-extracted RCs (ORCs) in Chinese. However, the difference in the beginning sequence of SM-SRCs (verb-noun) and SM-ORCs (noun-verb) may have been a confound in these tests. Unlike SM-RCs, Chinese object-modifying (OM)-RCs are initiated by the same noun-verb sequence. In the current study, participants were asked to read OM clauses (OM-SRCs and OM-ORCs) in Chinese sentences while undergoing fMRI scanning. Activation and Granger causality analyses were both conducted. There were no significant differences in activation elicited by OM-SRCs and OM-ORCs. In contrast, the results of Granger causality analyses showed more ORC-specific connectivity than SRC-specific connectivity, especially from left inferior frontal gyrus to superior temporal gyrus regions, which suggests that ORC processing required more interregional interaction in the brain compared with SRC processing. Taken together, these findings indicate an SRC advantage in processing Chinese OM-RC sentences and that the advantage is more involved in functional connectivity rather than activation. The results support the structural distance hypothesis about RC processing.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "宾语修饰关系从句中的加工不对称性：来自功能连接的证据",
+    "paper_id": "57857f8b4397",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.5,
+      "methodology": 6.0,
+      "evidence": 5.0,
+      "contribution": 5.5,
+      "accessibility": 5.0
+    },
+    "total_score": 5.45,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究使用fMRI和Granger因果分析探讨语言加工的神经机制，属于认知神经科学的核心领域。",
+    "feature_angle": "用Granger因果连接分析揭示汉语宾语关系从句中主语提取优势的脑网络机制，弥补激活分析无差异的局限。",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用汉语宾语修饰关系从句开头序列一致的特性，有效控制了既往主语修饰从句中的词序混淆；并首次在该范式下将激活与有效连接分析结合，发现SRC优势主要体现在功能连接而非局部激活上。",
+    "key_limitation": "样本量未报告，统计功效存疑；Granger因果分析对fMRI BOLD信号的适用性仍有争议；仅凭功能连接推断结构距离假说缺乏直接因果证据，且未与行为数据关联；结果可重复性需独立验证。",
+    "target_audience": "心理语言学、语言神经科学、fMRI方法学及汉语句法加工研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-06-21",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2632",
+      "pmid": "42341284"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+        "date": "2026-10-01",
+        "authors": [
+          "Mingzhu Hou",
+          "Luke R Pezanko",
+          "Sabina Srokova",
+          "Paul F Hill",
+          "Arne D Ekstrom",
+          "Michael D Rugg"
+        ],
+        "author_details": [
+          {
+            "name": "Mingzhu Hou",
+            "affiliation": "The University of Texas at Dallas.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "The University of Texas at Dallas"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Texas"
+            ]
+          },
+          {
+            "name": "Luke R Pezanko",
+            "affiliation": "The University of Texas at Dallas.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "The University of Texas at Dallas"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Texas"
+            ]
+          },
+          {
+            "name": "Sabina Srokova",
+            "affiliation": "University of Arizona.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Paul F Hill",
+            "affiliation": "University of Arizona.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Arne D Ekstrom",
+            "affiliation": "University of Arizona.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Michael D Rugg",
+            "affiliation": "The University of Texas at Dallas.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "The University of Texas at Dallas"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Texas"
+            ]
+          }
+        ],
+        "abstract": "Eye movements are predictive of successful episodic memory encoding and retrieval, but it is unclear whether they reflect the precision of retrieved memory content. Here, we examined relationships between eye fixations, memory precision, and fMRI BOLD activity. At study, participants were presented with object images, each placed at a random location on a circle. At test, both studied and new images were presented. Participants were instructed to recall and signal the studied location of each image, guessing if necessary. They then indicated if the image had been studied. Simultaneous fMRI and eye-tracking data were acquired during the test phase. For correctly recognized images, trial-wise angular distances between the studied and reported locations were fitted to a two-component mixture model. On the basis of model-derived parameters, correctly recognized images were categorized as those associated with successful location retrieval (location hits) or guesses. Location hits were further divided into high- and low-precision trials. At retrieval, fixation location predicted both successful retrieval and the precision of the retrieved location memory. In addition, across-trial fixation patterns were more similar for location hits than for guesses and for high- than for low-precision trials. The association between retrieval success and fixation precision was evident across almost the entire recall phase, whereas memory precision effects emerged around 1-1.5 sec after image onset. Fixation precision and pattern similarity each predicted trial-wise memory precision independently of hippocampal BOLD activity, which also predicted memory precision. Taken together, the findings indicate that eye movements during retrieval track the fidelity of retrieved mnemonic content.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2627",
+        "doi": "10.1162/jocn.a.2627",
+        "pmid": "42213517",
+        "pmcid": "PMC13569477",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213517",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Hou M",
+          "Pezanko LR",
+          "Srokova S",
+          "Hill PF",
+          "Ekstrom AD",
+          "Rugg MD"
+        ],
+        "affiliations": [
+          "The University of Texas at Dallas.",
+          "University of Arizona."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Retrieval-related Eye Movements Are Predictive of Memory Precision.",
+      "authors": [
+        "Mingzhu Hou",
+        "Luke R Pezanko",
+        "Sabina Srokova",
+        "Paul F Hill",
+        "Arne D Ekstrom",
+        "Michael D Rugg"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Eye movements are predictive of successful episodic memory encoding and retrieval, but it is unclear whether they reflect the precision of retrieved memory content. Here, we examined relationships between eye fixations, memory precision, and fMRI BOLD activity. At study, participants were presented with object images, each placed at a random location on a circle. At test, both studied and new images were presented. Participants were instructed to recall and signal the studied location of each image, guessing if necessary. They then indicated if the image had been studied. Simultaneous fMRI and eye-tracking data were acquired during the test phase. For correctly recognized images, trial-wise angular distances between the studied and reported locations were fitted to a two-component mixture model. On the basis of model-derived parameters, correctly recognized images were categorized as those associated with successful location retrieval (location hits) or guesses. Location hits were further divided into high- and low-precision trials. At retrieval, fixation location predicted both successful retrieval and the precision of the retrieved location memory. In addition, across-trial fixation patterns were more similar for location hits than for guesses and for high- than for low-precision trials. The association between retrieval success and fixation precision was evident across almost the entire recall phase, whereas memory precision effects emerged around 1-1.5 sec after image onset. Fixation precision and pattern similarity each predicted trial-wise memory precision independently of hippocampal BOLD activity, which also predicted memory precision. Taken together, the findings indicate that eye movements during retrieval track the fidelity of retrieved mnemonic content.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "检索相关的眼动可预测记忆精确度",
+    "paper_id": "789a175bdc28",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [
+      "认知神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "眼动",
+      "情景记忆",
+      "记忆精度",
+      "海马",
+      "表征相似性分析"
+    ],
+    "scores": {
+      "breakthrough": 7.2,
+      "methodology": 8.5,
+      "evidence": 8.3,
+      "contribution": 7.8,
+      "accessibility": 7.5
+    },
+    "total_score": 7.83,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究创新性地将眼动行为与fMRI结合，揭示了提取期眼动模式能够预测情景记忆的精度，而不仅仅是记忆的成功与否。通过分析注视位置与回忆精度及BOLD活动的关系，研究为记忆提取的精细粒度提供了新的行为与神经标记，并建立了眼动作为记忆表征质量实时指标的方法学框架。这对理解记忆提取的机制及开发基于眼动的记忆评估工具具有重要价值。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨情景记忆检索的精确度、眼动指标及fMRI BOLD活动，属于认知神经科学核心议题。",
+    "feature_angle": "眼动轨迹可解码情景记忆的提取精度，且独立于海马BOLD信号，为无创读取记忆保真度提供新窗口",
+    "model_used": "deepseek-flash",
+    "key_strength": "创新性地将试次间眼动模式相似性与基于混合模型的记忆精度参数逐试次关联，并结合同步fMRI，多模态证据链完整，统计严谨（模型拟合、时间动态分析）。",
+    "key_limitation": "样本量适中（推测），眼动-记忆精度的因果方向未通过眼动操控实验验证；精度分类依赖计算模型假设，且海马BOLD的预测作用与眼动指标存在潜在共线性，未做充分中介分析。",
+    "target_audience": "认知神经科学、记忆研究、眼动追踪与神经影像方法学研究者",
+    "crossover_value": null,
+    "editor_note": "方法学亮点：同步眼动-fMRI，表征相似性分析；适合认知神经科学中记忆精度研究方向。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2627",
+      "pmid": "42213517"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+        "date": "2026-10-01",
+        "authors": [
+          "Anneke Slis",
+          "Benjamin Parrell"
+        ],
+        "author_details": [
+          {
+            "name": "Anneke Slis",
+            "affiliation": "Istituto di Scienze e Tecnologie della Cognizione, Padua, Italy.; University of Wisconsin-Madison.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Institute of Cognitive Sciences and Technologies"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Italy"
+            ],
+            "ror_subregion": [
+              "Lazio"
+            ]
+          },
+          {
+            "name": "Benjamin Parrell",
+            "affiliation": "University of Wisconsin-Madison.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          }
+        ],
+        "abstract": "Sensory errors, mismatches between predicted sensory outcomes of movement and reafferent sensory feedback, drive changes in the feedforward control of future motor behavior that correct for those errors. Across a wide variety of motor behaviors, individuals with cerebellar damage show impairments in these corrections, strongly suggesting a key role of the cerebellum in sensorimotor adaptation. However, the extent to which the cerebellum is involved in controlling vocal pitch is currently unknown. Crucially, vocal pitch differs in several ways from other systems that suggest it relies more on feedback than feedforward control. Adaptation itself also differs in vocal pitch: Rather than the gradual buildup/decay of learning seen in other systems, pitch adaptation and deadaptation are almost immediate. Together, this questions whether adaptation in vocal pitch relies on the same mechanism as other motor domains. Here, we test the hypothesis that the cerebellum underlies sensorimotor adaptation in vocal pitch, testing the domain generality of this neurocomputational process. In both sustained vocalization and a more natural word production task, individuals with cerebellar ataxia fail to adapt to external auditory perturbation of vocal pitch. The lack of adaptation observed, compared to the impaired but present adaptation seen in other systems, suggests that the cerebellum plays an especially critical role in maintaining accurate control of vocal pitch. Conversely, we failed to detect a previously observed increase in online compensation to vocal pitch errors in ataxia, potentially suggesting this may be an idiosyncratic change in control rather than a common trait in this population.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2630",
+        "doi": "10.1162/jocn.a.2630",
+        "pmid": "42341286",
+        "pmcid": "PMC13569481",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42341286",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Slis A",
+          "Parrell B"
+        ],
+        "affiliations": [
+          "Istituto di Scienze e Tecnologie della Cognizione, Padua, Italy.; University of Wisconsin-Madison.",
+          "University of Wisconsin-Madison."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Sensorimotor Adaptation of Vocal Pitch Is Impaired in Cerebellar Ataxia.",
+      "authors": [
+        "Anneke Slis",
+        "Benjamin Parrell"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Sensory errors, mismatches between predicted sensory outcomes of movement and reafferent sensory feedback, drive changes in the feedforward control of future motor behavior that correct for those errors. Across a wide variety of motor behaviors, individuals with cerebellar damage show impairments in these corrections, strongly suggesting a key role of the cerebellum in sensorimotor adaptation. However, the extent to which the cerebellum is involved in controlling vocal pitch is currently unknown. Crucially, vocal pitch differs in several ways from other systems that suggest it relies more on feedback than feedforward control. Adaptation itself also differs in vocal pitch: Rather than the gradual buildup/decay of learning seen in other systems, pitch adaptation and deadaptation are almost immediate. Together, this questions whether adaptation in vocal pitch relies on the same mechanism as other motor domains. Here, we test the hypothesis that the cerebellum underlies sensorimotor adaptation in vocal pitch, testing the domain generality of this neurocomputational process. In both sustained vocalization and a more natural word production task, individuals with cerebellar ataxia fail to adapt to external auditory perturbation of vocal pitch. The lack of adaptation observed, compared to the impaired but present adaptation seen in other systems, suggests that the cerebellum plays an especially critical role in maintaining accurate control of vocal pitch. Conversely, we failed to detect a previously observed increase in online compensation to vocal pitch errors in ataxia, potentially suggesting this may be an idiosyncratic change in control rather than a common trait in this population.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "小脑性共济失调患者的声调感觉运动适应受损",
+    "paper_id": "10ee31770684",
+    "domain": "核心域",
+    "primary_category": "感觉与运动神经科学",
+    "secondary_category": [
+      "感觉与运动神经科学",
+      "临床与转化神经科学"
+    ],
+    "cross_tags": [
+      "小脑",
+      "发声控制",
+      "感觉运动适应",
+      "小脑性共济失调",
+      "听觉反馈",
+      "运动学习"
+    ],
+    "scores": {
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.5,
+      "contribution": 7.0,
+      "accessibility": 6.5
+    },
+    "total_score": 7.2700000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究首次系统检验了小脑在发声音高感觉运动适应中的因果作用，发现小脑性共济失调患者利用听觉误差修正发声前馈控制的能力显著受损。这一发现将小脑的感觉运动适应功能从肢体/眼动系统扩展到发声领域，揭示了小脑对不同效应器运动学习的普遍贡献，并为理解小脑性构音障碍的病理机制提供了新视角。研究同时提示发声适应可能更多依赖前馈而非反馈机制，对言语运动控制的计算模型具有重要约束价值。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨小脑在声调感觉运动适应中的作用，属于感觉与运动神经科学的核心问题。",
+    "feature_angle": "小脑损伤导致声调感觉运动适应完全缺失，揭示小脑在发声控制中的领域特异性关键作用",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次在两种发声任务中系统验证小脑共济失调患者声调适应缺陷，区分了持续发声与自然词语产生范式，直接挑战声调适应依赖反馈而非前馈控制的传统假设",
+    "key_limitation": "样本量可能有限且未报告效应量或贝叶斯因子；在线补偿未复现使机制解释存在不确定性；缺乏神经影像或计算模型验证小脑-声调适应的因果环路",
+    "target_audience": "运动控制、小脑神经生物学、言语运动神经科学及计算神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "研究将小脑感觉运动适应的经典范式拓展至发声领域，样本量虽有限但设计严谨，适合作为运动学习跨效应器泛化性的讨论素材。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-06-21",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2630",
+      "pmid": "42341286"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Simultaneous Cortical Responses to Multiple Written Words.",
+        "date": "2026-10-01",
+        "authors": [
+          "Vassiki Chauhan",
+          "Krystal McCook",
+          "Mariam Latif",
+          "Alex White"
+        ],
+        "author_details": [
+          {
+            "name": "Vassiki Chauhan",
+            "affiliation": "Barnard College, Columbia University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Columbia University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Krystal McCook",
+            "affiliation": "Barnard College, Columbia University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Columbia University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Mariam Latif",
+            "affiliation": "Barnard College, Columbia University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Columbia University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Alex White",
+            "affiliation": "Barnard College, Columbia University.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Columbia University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          }
+        ],
+        "abstract": "We have learned much about the brain regions that support reading by measuring neuronal responses to single words, but we know little about how the brain processes multiple words simultaneously. This fMRI study fills that gap by varying the number of English words presented while holding the amount of visual stimulation constant. We adapted the \"simultaneous suppression\" paradigm, which has demonstrated that the response to multiple stimuli presented simultaneously is typically smaller than the sum of responses to the same stimuli presented sequentially. On each trial, participants viewed a rapid sequence of three frames. Each frame contained two character strings, most of which were pseudoletters with visual features matched to familiar letters. The experimental conditions differed in the number of words in the sequence: zero words, one word, two words sequentially, or two words simultaneously. Behavioral task accuracy was worse for detecting two words presented simultaneously than sequentially. BOLD responses increased linearly with the number of words presented in several reading-related regions of the left hemisphere: text-selective occipito-temporal regions, the STS, the intraparietal sulcus, and the inferior frontal sulcus. In all of those regions, responses did not differ between sequential and simultaneous presentation of two words. Nonetheless, the sensitivity of ventral temporal text-selective regions to the lexical frequencies of two words was attenuated by simultaneous presentation. To account for these patterns of activity and task performance, we suggest that the reading network can detect two strings of letters simultaneously, but there is interference during lexical access.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2624",
+        "doi": "10.1162/jocn.a.2624",
+        "pmid": "42213529",
+        "pmcid": "PMC13569480",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "research-article",
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213529",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Chauhan V",
+          "McCook K",
+          "Latif M",
+          "White A"
+        ],
+        "affiliations": [
+          "Barnard College, Columbia University."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Simultaneous Cortical Responses to Multiple Written Words.",
+      "authors": [
+        "Vassiki Chauhan",
+        "Krystal McCook",
+        "Mariam Latif",
+        "Alex White"
+      ],
+      "date": "2026-10-01",
+      "abstract": "We have learned much about the brain regions that support reading by measuring neuronal responses to single words, but we know little about how the brain processes multiple words simultaneously. This fMRI study fills that gap by varying the number of English words presented while holding the amount of visual stimulation constant. We adapted the \"simultaneous suppression\" paradigm, which has demonstrated that the response to multiple stimuli presented simultaneously is typically smaller than the sum of responses to the same stimuli presented sequentially. On each trial, participants viewed a rapid sequence of three frames. Each frame contained two character strings, most of which were pseudoletters with visual features matched to familiar letters. The experimental conditions differed in the number of words in the sequence: zero words, one word, two words sequentially, or two words simultaneously. Behavioral task accuracy was worse for detecting two words presented simultaneously than sequentially. BOLD responses increased linearly with the number of words presented in several reading-related regions of the left hemisphere: text-selective occipito-temporal regions, the STS, the intraparietal sulcus, and the inferior frontal sulcus. In all of those regions, responses did not differ between sequential and simultaneous presentation of two words. Nonetheless, the sensitivity of ventral temporal text-selective regions to the lexical frequencies of two words was attenuated by simultaneous presentation. To account for these patterns of activity and task performance, we suggest that the reading network can detect two strings of letters simultaneously, but there is interference during lexical access.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "同时呈现多个书面词语时的皮层响应",
+    "paper_id": "9e4d2a79bde2",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [
+      "认知神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "阅读",
+      "视觉词汇识别",
+      "同时抑制范式",
+      "人类",
+      "视觉皮层"
+    ],
+    "scores": {
+      "breakthrough": 6.8,
+      "methodology": 8.2,
+      "evidence": 7.5,
+      "contribution": 7.0,
+      "accessibility": 7.8
+    },
+    "total_score": 7.36,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究首次将“同时抑制”范式拓展至多词阅读，通过保持视觉刺激量恒定、仅改变词数，揭示了大脑对多个单词同时呈现时的皮层反应模式。这不仅填补了阅读神经科学中长期忽视的“多词并行加工”空白，也为理解自然阅读中词汇识别与注意资源分配提供了新视角。其方法学创新——在fMRI中控制低阶视觉输入——对研究其他高阶认知过程具有借鉴意义。",
+    "confidence": 9.5,
+    "reasoning": "该fMRI研究直接探讨大脑如何同时加工多个书面词语，属于阅读认知神经科学的核心问题。",
+    "feature_angle": "fMRI同时抑制范式首次揭示阅读网络对多个单词的并行检测与词汇通达阶段的干扰机制",
+    "model_used": "deepseek-flash",
+    "key_strength": "巧妙改编同时抑制范式并严格控制视觉刺激量，首次系统比较同时与序列呈现多词的皮层反应差异，发现腹侧颞叶文字选择区对词汇频率的敏感性在同时呈现时被削弱。",
+    "key_limitation": "样本量较小且仅限英语读者，fMRI时间分辨率难以分离词汇通达的具体时间进程，行为准确率下降与BOLD信号之间的因果联系尚不明确。",
+    "target_audience": "阅读神经科学、视觉认知神经科学、fMRI方法学及心理语言学研究者和计算神经科学家",
+    "crossover_value": null,
+    "editor_note": "范式创新明确，但样本量及效应量需进一步确认；适合作为阅读神经科学方法学进展的候选。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2624",
+      "pmid": "42213529"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+        "date": "2026-10-01",
+        "authors": [
+          "Berna Güler",
+          "Sümeyye Karahamza",
+          "Yağmur D Şentürk",
+          "Oded Bein",
+          "David Clewett",
+          "Eren Günseli"
+        ],
+        "author_details": [
+          {
+            "name": "Berna Güler",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Sümeyye Karahamza",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Yağmur D Şentürk",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          },
+          {
+            "name": "Oded Bein",
+            "affiliation": "Weill Cornell Medicine, New York, NY.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Weill Cornell Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "David Clewett",
+            "affiliation": "University of California, Los Angeles.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": []
+          },
+          {
+            "name": "Eren Günseli",
+            "affiliation": "Sabancı University, Istanbul, Turkey.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Saba University"
+            ],
+            "ror_match_score": [
+              91
+            ],
+            "ror_country": [
+              "Turkey"
+            ],
+            "ror_subregion": [
+              "Istanbul"
+            ]
+          }
+        ],
+        "abstract": "Event segmentation is the cognitive process of dividing continuous experiences into meaningful units. Although working memory (WM) is believed to play an instrumental role in event segmentation, its specific contribution remains under debate. Here, we used two electroencephalography indices of WM load, alpha-band suppression and contralateral delay activity amplitude, to test the extent to which WM representations reflect gradually accumulating information during unfolding events, boundary-triggered reactivation at event transitions, or both. Participants viewed object images paired with sounds that both remained in the same category for six consecutive items to form a stable event, followed by two items from another category, creating an event boundary. Temporal order and sequential memory were used to assess event segmentation. We found increased alpha-band suppression following event transitions, supporting the reactivation account. Evidence for the accumulation was mixed, with no evidence for increased alpha-band suppression and moderate evidence for increased contralateral delay activity during events. These results indicate that WM contributes to event segmentation primarily through boundary-triggered reactivation, with only limited evidence for within-event accumulation.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1162/jocn.a.2628",
+        "doi": "10.1162/jocn.a.2628",
+        "pmid": "42213527",
+        "pmcid": "",
+        "journal": "Journal of cognitive neuroscience",
+        "source": "Journal of Cognitive Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-10-01",
+          "pubmed_id": "42213527",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Cogn+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": null,
+          "printPublicationDate": "2026-10-01"
+        },
+        "original_authors": [
+          "Güler B",
+          "Karahamza S",
+          "Şentürk YD",
+          "Bein O",
+          "Clewett D",
+          "Günseli E"
+        ],
+        "affiliations": [
+          "Sabancı University, Istanbul, Turkey.",
+          "Weill Cornell Medicine, New York, NY.",
+          "University of California, Los Angeles."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Working Memory Facilitates Event Segmentation Via Boundary-triggered Reactivation and Partial Accumulation during Events.",
+      "authors": [
+        "Berna Güler",
+        "Sümeyye Karahamza",
+        "Yağmur D Şentürk",
+        "Oded Bein",
+        "David Clewett",
+        "Eren Günseli"
+      ],
+      "date": "2026-10-01",
+      "abstract": "Event segmentation is the cognitive process of dividing continuous experiences into meaningful units. Although working memory (WM) is believed to play an instrumental role in event segmentation, its specific contribution remains under debate. Here, we used two electroencephalography indices of WM load, alpha-band suppression and contralateral delay activity amplitude, to test the extent to which WM representations reflect gradually accumulating information during unfolding events, boundary-triggered reactivation at event transitions, or both. Participants viewed object images paired with sounds that both remained in the same category for six consecutive items to form a stable event, followed by two items from another category, creating an event boundary. Temporal order and sequential memory were used to assess event segmentation. We found increased alpha-band suppression following event transitions, supporting the reactivation account. Evidence for the accumulation was mixed, with no evidence for increased alpha-band suppression and moderate evidence for increased contralateral delay activity during events. These results indicate that WM contributes to event segmentation primarily through boundary-triggered reactivation, with only limited evidence for within-event accumulation.",
+      "journal": "Journal of Cognitive Neuroscience"
+    },
+    "title_zh": "工作记忆通过事件边界触发重激活和事件内部分累积促进事件分割",
+    "paper_id": "d07d5da66c22",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 4.5,
+      "methodology": 6.5,
+      "evidence": 5.5,
+      "contribution": 5.0,
+      "accessibility": 6.5
+    },
+    "total_score": 5.4,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究使用脑电指标探究工作记忆在事件分割中的认知神经机制，直接属于认知神经科学核心问题。",
+    "feature_angle": "工作记忆通过事件边界触发的神经重激活而非事件内累积来支持事件分割。",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次直接对比工作记忆在事件分割中的边界重激活与事件内累积两种假说，并采用alpha波抑制与对侧延迟活动两个EEG指标进行交叉验证。",
+    "key_limitation": "证据存在矛盾，alpha波抑制支持边界重激活而累积效应不显著，但对侧延迟活动仅提供中等程度的累积证据；样本与范式相对有限，结论的普适性有待验证。",
+    "target_audience": "认知神经科学、事件分割、工作记忆及EEG方法学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-05-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1162/jocn.a.2628",
+      "pmid": "42213527"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+        "date": "2026-09-30",
+        "authors": [
+          "Mohamed H Mousa",
+          "Martin Zaback",
+          "Michel A Lemay",
+          "Christopher K Thompson"
+        ],
+        "author_details": [
+          {
+            "name": "Mohamed H Mousa",
+            "affiliation": "Department of Health and Rehabilitation Sciences, College of Public Health, Temple University, Philadelphia, Pennsylvania 19122.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Temple University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Pennsylvania"
+            ]
+          },
+          {
+            "name": "Martin Zaback",
+            "affiliation": "Department of Health and Rehabilitation Sciences, College of Public Health, Temple University, Philadelphia, Pennsylvania 19122.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Temple University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Pennsylvania"
+            ]
+          },
+          {
+            "name": "Michel A Lemay",
+            "affiliation": "Department of Bioengineering, College of Engineering, Temple University, Philadelphia, Pennsylvania 19122.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Temple University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Pennsylvania"
+            ]
+          },
+          {
+            "name": "Christopher K Thompson",
+            "affiliation": "Department of Health and Rehabilitation Sciences, College of Public Health, Temple University, Philadelphia, Pennsylvania 19122 ckt@temple.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Temple University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Pennsylvania"
+            ]
+          }
+        ],
+        "abstract": "Spinal interneurons are central to sensorimotor integration. Even in the absence of overt sensory inputs or motor output, spinal interneurons remain active, yet their functional organization across spatial and temporal scales remains poorly understood. We characterized the discharge properties and functional connectivity of 2,847 lumbar spinal interneurons recorded in vivo from quiescent decerebrate cats (three males, five females) using microelectrode arrays inserted into rostral (L3-L4) and caudal (L5-L7) spinal segments at superficial (0-1,500 µm) and deep (1,500-3,000 µm) depths. Superficial neurons generally discharged at higher and less variable rates than deeper neurons, forming a consistent depth-dependent gradient at both segments. Functional connectivity was sparse yet structured, with distinct depth profiles across timescales. Short-timescale correlations (±10 ms) occurred in ∼2% of neuron pairs, which were predominantly excitatory and prominent caudally at ∼1,500 µm depth. Longer-timescale correlations (∼400 ms) were similarly rare but showed equal proportions of excitation and inhibitory and were more pronounced at deeper depths. Graph-theoretic network analysis showed that timescale-specific correlations are architecturally distinct and nonrandomly organized. Short-timescale networks exhibited depth-specific hubs near 1,500 µm and lower clustering, whereas longer-timescale networks showed more clustering. At the ensemble level, neurons shared low-frequency oscillatory drive, particularly in rostral recordings. Separately, a subset of ensembles with dense short-timescale connectivity were consistently observed near 1,500 µm in the caudal array, linking slow and fast interactions. Together, these findings show that spinal interneuron circuitry exhibits spatially and temporally structured organization even at rest, establishing a critical baseline for studies of spinal injury and disease.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0784-26.2026",
+        "doi": "10.1523/jneurosci.0784-26.2026",
+        "pmid": "42660656",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42660656",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Mousa MH",
+          "Zaback M",
+          "Lemay MA",
+          "Thompson CK"
+        ],
+        "affiliations": [
+          "Department of Health and Rehabilitation Sciences, College of Public Health, Temple University, Philadelphia, Pennsylvania 19122.",
+          "Department of Bioengineering, College of Engineering, Temple University, Philadelphia, Pennsylvania 19122.",
+          "Department of Health and Rehabilitation Sciences, College of Public Health, Temple University, Philadelphia, Pennsylvania 19122 ckt@temple.edu."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Activity and Functional Connectivity of Lumbar Spinal Interneurons at Rest: Irregular, Sparse yet Structured.",
+      "authors": [
+        "Mohamed H Mousa",
+        "Martin Zaback",
+        "Michel A Lemay",
+        "Christopher K Thompson"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Spinal interneurons are central to sensorimotor integration. Even in the absence of overt sensory inputs or motor output, spinal interneurons remain active, yet their functional organization across spatial and temporal scales remains poorly understood. We characterized the discharge properties and functional connectivity of 2,847 lumbar spinal interneurons recorded in vivo from quiescent decerebrate cats (three males, five females) using microelectrode arrays inserted into rostral (L3-L4) and caudal (L5-L7) spinal segments at superficial (0-1,500 µm) and deep (1,500-3,000 µm) depths. Superficial neurons generally discharged at higher and less variable rates than deeper neurons, forming a consistent depth-dependent gradient at both segments. Functional connectivity was sparse yet structured, with distinct depth profiles across timescales. Short-timescale correlations (±10 ms) occurred in ∼2% of neuron pairs, which were predominantly excitatory and prominent caudally at ∼1,500 µm depth. Longer-timescale correlations (∼400 ms) were similarly rare but showed equal proportions of excitation and inhibitory and were more pronounced at deeper depths. Graph-theoretic network analysis showed that timescale-specific correlations are architecturally distinct and nonrandomly organized. Short-timescale networks exhibited depth-specific hubs near 1,500 µm and lower clustering, whereas longer-timescale networks showed more clustering. At the ensemble level, neurons shared low-frequency oscillatory drive, particularly in rostral recordings. Separately, a subset of ensembles with dense short-timescale connectivity were consistently observed near 1,500 µm in the caudal array, linking slow and fast interactions. Together, these findings show that spinal interneuron circuitry exhibits spatially and temporally structured organization even at rest, establishing a critical baseline for studies of spinal injury and disease.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "静息状态下腰段脊髓中间神经元的活动与功能连接：不规则、稀疏但结构化",
+    "paper_id": "24c05439e9f7",
+    "domain": "核心域",
+    "primary_category": "系统与环路神经科学",
+    "secondary_category": [
+      "系统与环路神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "脊髓中间神经元",
+      "静息态",
+      "功能连接",
+      "多电极阵列",
+      "猫",
+      "节段梯度"
+    ],
+    "scores": {
+      "breakthrough": 7.5,
+      "methodology": 8.0,
+      "evidence": 7.5,
+      "contribution": 7.5,
+      "accessibility": 7.0
+    },
+    "total_score": 7.55,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究首次在去大脑猫上，利用高密度微电极阵列大规模记录腰段脊髓中间神经元（n=2,847），系统刻画了静息态下的放电特性与功能连接网络。揭示其活动虽不规则稀疏，却具有显著的深度、节段和空间结构化特征，为理解脊髓内在网络的自发组织原则提供了关键证据，也为脊髓损伤后神经调控策略提供了基线参考。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接解析脊髓中间神经元的放电特性和功能连接，属于系统与环路神经科学的核心问题。",
+    "feature_angle": "首次大规模清醒静息态脊髓中间神经元记录揭示其放电与功能连接沿深度和节段的时标特异性结构化组织。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在去大脑猫静息态下用微电极阵列记录2,847个腰段脊髓中间神经元，系统刻画了深度依赖的放电梯度及时标特异的稀疏网络结构。",
+    "key_limitation": "样本仅来自去大脑猫且动物数量有限（3雄5雌），缺乏与行为或感觉输入的因果操控，因此静息态组织与运动功能之间的直接联系仍属推论。",
+    "target_audience": "脊髓与运动系统神经科学家、系统神经科学及神经计算/网络建模研究者",
+    "crossover_value": null,
+    "editor_note": "样本量大、空间覆盖全面，方法学扎实，适合作为脊髓静息态网络研究的标杆。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0784-26.2026",
+      "pmid": "42660656"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+        "date": "2026-09-30",
+        "authors": [
+          "Eva-Jeneé Sebastian",
+          "Zhimei Qiao",
+          "Ashton Arocho",
+          "Brittany J Bush",
+          "Ayobami Fawole",
+          "Hadiya Johnson",
+          "Talib Saafir",
+          "Hannah C Ainsworth",
+          "Morris Benveniste",
+          "J Christopher Ehlen"
+        ],
+        "author_details": [
+          {
+            "name": "Eva-Jeneé Sebastian",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Zhimei Qiao",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Ashton Arocho",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Brittany J Bush",
+            "affiliation": "Department of Psychiatry and Behavioral Sciences, Stanford University, Stanford, California 94305.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Stanford University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "California"
+            ]
+          },
+          {
+            "name": "Ayobami Fawole",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Hadiya Johnson",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Talib Saafir",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.; Department of Anatomy, Pathology, and Medical Education, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine",
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100,
+              100
+            ],
+            "ror_country": [
+              "Georgia",
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "Hannah C Ainsworth",
+            "affiliation": "Biostatistics and Data Science, Wake Forest University School of Medicine, Winston-Salem, North Carolina 27101.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "North Carolina"
+            ]
+          },
+          {
+            "name": "Morris Benveniste",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          },
+          {
+            "name": "J Christopher Ehlen",
+            "affiliation": "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310 jehlen@msm.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Morehouse School of Medicine"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Georgia"
+            ],
+            "ror_subregion": []
+          }
+        ],
+        "abstract": "Understanding the biological mechanisms responsible for resilience to stress-the ability to overcome adverse conditions-remains a major challenge. While sleep is a known regulator of resilience, the localized cortical dynamics that facilitate this process remain unclear. We hypothesized that resilience to social stress is determined by local sleep changes within the prelimbic (PrL) cortex, a region critical for top-down control of stress-responsive circuits. To test this, we conducted longitudinal single-unit and local field potential (LFP) recordings in the PrL cortex of male mice before and after a 5 d social defeat stress paradigm. Our results demonstrate that population-wide neuronal silences, or \"OFF-periods,\" primarily occur during NREM sleep and strongly correlate with the local slow waves. Notably, resilient mice exhibit significantly higher baseline coupling between OFF-period density and the number of slow waves compared with susceptible animals. Following stress, resilient mice showed a unique reorganization of cortical silence patterns, characterized by an increase in shorter OFF-periods and a more uniform temporal distribution across NREM sleep. Furthermore, social stress was associated with a widespread, stochastic-like redistribution of cortical firing rates that was most pronounced in the resilient phenotype. These findings suggest that behavioral resilience is predicted by the capacity for flexible network redistribution and heightened synchronization during local NREM sleep. Furthermore, this study identifies preexisting, localized sleep-dependent signatures-specifically a stronger coupling between OFF-period density and slow-wave activity-that serve as potential predictors of resilience prior to stress.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0509-26.2026",
+        "doi": "10.1523/jneurosci.0509-26.2026",
+        "pmid": "42705913",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42705913",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Sebastian EJ",
+          "Qiao Z",
+          "Arocho A",
+          "Bush BJ",
+          "Fawole A",
+          "Johnson H",
+          "Saafir T",
+          "Ainsworth HC",
+          "Benveniste M",
+          "Christopher Ehlen J"
+        ],
+        "affiliations": [
+          "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+          "Department of Psychiatry and Behavioral Sciences, Stanford University, Stanford, California 94305.",
+          "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310.; Department of Anatomy, Pathology, and Medical Education, Morehouse School of Medicine, Atlanta, Georgia 30310.",
+          "Biostatistics and Data Science, Wake Forest University School of Medicine, Winston-Salem, North Carolina 27101.",
+          "Department of Neurobiology, Morehouse School of Medicine, Atlanta, Georgia 30310 jehlen@msm.edu."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Adaptive Reorganization of Local Sleep and Prelimbic Cortical Circuits Predict Behavioral Resilience to Social Defeat Stress.",
+      "authors": [
+        "Eva-Jeneé Sebastian",
+        "Zhimei Qiao",
+        "Ashton Arocho",
+        "Brittany J Bush",
+        "Ayobami Fawole",
+        "Hadiya Johnson",
+        "Talib Saafir",
+        "Hannah C Ainsworth",
+        "Morris Benveniste",
+        "J Christopher Ehlen"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Understanding the biological mechanisms responsible for resilience to stress-the ability to overcome adverse conditions-remains a major challenge. While sleep is a known regulator of resilience, the localized cortical dynamics that facilitate this process remain unclear. We hypothesized that resilience to social stress is determined by local sleep changes within the prelimbic (PrL) cortex, a region critical for top-down control of stress-responsive circuits. To test this, we conducted longitudinal single-unit and local field potential (LFP) recordings in the PrL cortex of male mice before and after a 5 d social defeat stress paradigm. Our results demonstrate that population-wide neuronal silences, or \"OFF-periods,\" primarily occur during NREM sleep and strongly correlate with the local slow waves. Notably, resilient mice exhibit significantly higher baseline coupling between OFF-period density and the number of slow waves compared with susceptible animals. Following stress, resilient mice showed a unique reorganization of cortical silence patterns, characterized by an increase in shorter OFF-periods and a more uniform temporal distribution across NREM sleep. Furthermore, social stress was associated with a widespread, stochastic-like redistribution of cortical firing rates that was most pronounced in the resilient phenotype. These findings suggest that behavioral resilience is predicted by the capacity for flexible network redistribution and heightened synchronization during local NREM sleep. Furthermore, this study identifies preexisting, localized sleep-dependent signatures-specifically a stronger coupling between OFF-period density and slow-wave activity-that serve as potential predictors of resilience prior to stress.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "局部睡眠与前额叶皮层环路的适应性重组预测对社会挫败应激的行为韧性",
+    "paper_id": "a31ef92bdb14",
+    "domain": "核心域",
+    "primary_category": "系统与环路神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 7.2,
+      "methodology": 6.8,
+      "evidence": 5.4,
+      "contribution": 6.6,
+      "accessibility": 7.0
+    },
+    "total_score": 6.62,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究直接记录前额叶皮层单单元和LFP，解析局部睡眠与环路动态对应激韧性的作用，属于系统与环路神经科学核心问题。",
+    "feature_angle": "前额叶局部睡眠OFF期与慢波耦合强度可作为社会应激行为韧性的预测标志。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在PrL皮层进行纵向单单位与LFP记录，将NREM睡眠期间局部OFF期密度与慢波耦合作为应激前韧性预测因子，概念新颖。",
+    "key_limitation": "证据受限于仅雄性小鼠、样本量小、缺少对OFF期与慢波耦合的因果操控，且行为韧性单时间点评估，结论可推广性有限。",
+    "target_audience": "睡眠神经科学、应激与韧性机制、前额叶皮层电路及系统神经科学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-09-07",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0509-26.2026",
+      "pmid": "42705913"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+        "date": "2026-09-30",
+        "authors": [
+          "Xiang Ma",
+          "Constance L Cepko"
+        ],
+        "author_details": [
+          {
+            "name": "Xiang Ma",
+            "affiliation": "Department of Genetics, Harvard Medical School, Boston, Massachusetts 02115.; Howard Hughes Medical Institute, Chevy Chase, Maryland 20815.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Howard Hughes Medical Institute"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Massachusetts",
+              "Maryland"
+            ]
+          },
+          {
+            "name": "Constance L Cepko",
+            "affiliation": "Department of Genetics, Harvard Medical School, Boston, Massachusetts 02115 cepko@genetics.med.harvard.edu.; Howard Hughes Medical Institute, Chevy Chase, Maryland 20815.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Howard Hughes Medical Institute"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Massachusetts",
+              "Maryland"
+            ]
+          }
+        ],
+        "abstract": "Defining the direct postsynaptic targets of selected neuronal populations remains a challenge for neural circuit mapping. Vesicular stomatitis virus (VSV) spreads efficiently in the anterograde direction, but replication-competent VSV undergoes multistep spread and therefore cannot distinguish direct from indirect downstream targets. Here, we developed a glycoprotein-deleted VSV (VSVdG)-based strategy for one-step anterograde tracing using AAV-mediated trans-complementation with adaptations. In this system, VSVdG was engineered to encode Cre, allowing a Cre-dependent AAV to express VSV-G only after VSVdG infected the same cells, thereby limiting VSV-G expression to a short time window. To reduce VSV-M-mediated cytotoxicity, we introduced the M33A/M51R double-mutant VSV-Md variant. Using the basal ganglia circuit as a model, we found that efficient one-step VSVdG spread required disruption of cytokine-mediated antiviral responses triggered by AAV transduction and VSV infection. This was achieved by loss of type I interferon signaling in IFNAR1 knock-out mice, together with suppression of additional antiviral responses either through AAV-mediated expression of CVS-N2c rabies virus phosphoprotein or administration of cytokine-blocking antibody cocktail. These adaptations enabled VSVdG spread from the dorsal striatum to expected downstream targets in mice of both sexes. However, downstream labeled cells included both neurons and glia, revealing an important limitation for interpreting this approach as strictly neuron-to-neuron monosynaptic anterograde spread. Overall, rather than providing a ready-to-use tracing tool, this study presents a VSVdG strategy for one-step anterograde circuit tracing and defines viral toxicity, innate immunity, and cell-type specificity constraints that must be addressed to develop an efficient and specific monosynaptic anterograde viral tracer.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0869-26.2026",
+        "doi": "10.1523/jneurosci.0869-26.2026",
+        "pmid": "42674971",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42674971",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Ma X",
+          "Cepko CL"
+        ],
+        "affiliations": [
+          "Department of Genetics, Harvard Medical School, Boston, Massachusetts 02115.; Howard Hughes Medical Institute, Chevy Chase, Maryland 20815.",
+          "Department of Genetics, Harvard Medical School, Boston, Massachusetts 02115 cepko@genetics.med.harvard.edu.; Howard Hughes Medical Institute, Chevy Chase, Maryland 20815."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Combined Disruption of Multiple Cytokine Signaling Pathways Enables One-Step Anterograde Tracing with Vesicular Stomatitis Virus.",
+      "authors": [
+        "Xiang Ma",
+        "Constance L Cepko"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Defining the direct postsynaptic targets of selected neuronal populations remains a challenge for neural circuit mapping. Vesicular stomatitis virus (VSV) spreads efficiently in the anterograde direction, but replication-competent VSV undergoes multistep spread and therefore cannot distinguish direct from indirect downstream targets. Here, we developed a glycoprotein-deleted VSV (VSVdG)-based strategy for one-step anterograde tracing using AAV-mediated trans-complementation with adaptations. In this system, VSVdG was engineered to encode Cre, allowing a Cre-dependent AAV to express VSV-G only after VSVdG infected the same cells, thereby limiting VSV-G expression to a short time window. To reduce VSV-M-mediated cytotoxicity, we introduced the M33A/M51R double-mutant VSV-Md variant. Using the basal ganglia circuit as a model, we found that efficient one-step VSVdG spread required disruption of cytokine-mediated antiviral responses triggered by AAV transduction and VSV infection. This was achieved by loss of type I interferon signaling in IFNAR1 knock-out mice, together with suppression of additional antiviral responses either through AAV-mediated expression of CVS-N2c rabies virus phosphoprotein or administration of cytokine-blocking antibody cocktail. These adaptations enabled VSVdG spread from the dorsal striatum to expected downstream targets in mice of both sexes. However, downstream labeled cells included both neurons and glia, revealing an important limitation for interpreting this approach as strictly neuron-to-neuron monosynaptic anterograde spread. Overall, rather than providing a ready-to-use tracing tool, this study presents a VSVdG strategy for one-step anterograde circuit tracing and defines viral toxicity, innate immunity, and cell-type specificity constraints that must be addressed to develop an efficient and specific monosynaptic anterograde viral tracer.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "联合破坏多个细胞因子信号通路实现水疱性口炎病毒一步顺行示踪",
+    "paper_id": "411f5a73505a",
+    "domain": "核心域",
+    "primary_category": "方法学",
+    "secondary_category": [
+      "方法学",
+      "系统与环路神经科学"
+    ],
+    "cross_tags": [
+      "VSVdG",
+      "顺行追踪",
+      "AAV",
+      "跨突触",
+      "环路图谱",
+      "小鼠"
+    ],
+    "scores": {
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.5,
+      "contribution": 7.0,
+      "accessibility": 6.8
+    },
+    "total_score": 7.300000000000001,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究开发了一种基于VSVdG的单步顺行跨突触追踪策略，通过AAV反式互补VSV-G并同时阻断多种细胞因子信号通路，有效抑制了病毒的多步扩散。这一方法能够明确区分直接与间接突触后目标，为神经环路图谱的精确解析提供了关键工具。对于系统神经科学家而言，该技术有望在单细胞分辨率下揭示复杂神经网络的信息流向，推动对感觉、运动及认知环路的结构-功能理解。",
+    "confidence": 9.5,
+    "reasoning": "该研究开发了基于VSVdG的神经回路顺行示踪新方法，直接服务于神经科学中的神经回路映射，属于方法学核心领域。",
+    "feature_angle": "通过多重细胞因子信号通路阻断实现VSVdG一步顺行环路示踪，并系统界定病毒毒性、先天免疫与细胞类型特异性的约束条件。",
+    "model_used": "deepseek-flash",
+    "key_strength": "系统性地鉴定并组合了多种适应策略（IFNAR1敲除、CVS-N2c P蛋白表达、细胞因子阻断抗体鸡尾酒）以克服VSVdG的免疫清除和毒性障碍，实现了从背侧纹状体到下游靶区的一步顺行标记，且对方法学局限性（标记胶质细胞）做了诚实披露。",
+    "key_limitation": "单步示踪仍然标记了胶质细胞，限制了其作为严格单突触神经元-神经元示踪工具的解释力；依赖IFNAR1敲除小鼠和多重免疫抑制手段，可能改变环路生理状态，且未展示全脑范围内的特异性和可重复性定量数据。",
+    "target_audience": "神经环路示踪方法学、病毒工具开发及系统神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "方法学创新明确，适用于需要高精度顺行追踪的环路研究，建议关注其在多脑区应用中的普适性与毒性评估。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-31",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0869-26.2026",
+      "pmid": "42674971"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+        "date": "2026-09-30",
+        "authors": [
+          "Emily V Jang",
+          "Nigel Dao",
+          "Lilly Cole",
+          "Adam G Carter"
+        ],
+        "author_details": [
+          {
+            "name": "Emily V Jang",
+            "affiliation": "Center for Neural Science, New York University, New York, New York 10003.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "New York University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Nigel Dao",
+            "affiliation": "Center for Neural Science, New York University, New York, New York 10003.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "New York University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Lilly Cole",
+            "affiliation": "Center for Neural Science, New York University, New York, New York 10003.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "New York University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          },
+          {
+            "name": "Adam G Carter",
+            "affiliation": "Center for Neural Science, New York University, New York, New York 10003 adam.carter@nyu.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "New York University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "New York"
+            ]
+          }
+        ],
+        "abstract": "Cholinergic interneurons (CINs) in the nucleus accumbens (NAc) play a key role in regulating motivated behaviors. Here we examine the connectivity and functional impact of cortical and thalamic inputs onto CINs in the NAc core of mice of either sex. We first use cell type-specific retrograde anatomy to identify the prefrontal cortex and thalamus as putative afferents. We then combine ex vivo slice physiology and optogenetics to characterize the properties of synapses onto CINs. We demonstrate that thalamic inputs strongly facilitate, whereas cortical inputs exhibit marked depression. We also show that a combination of AMPA and NMDA receptors contribute to both cortical and thalamic responses. Lastly, we establish how these inputs and receptors evoke action potentials and influence spontaneous firing. Our findings show how CINs in the NAc core process long-range inputs, highlighting differences from equivalent circuits in other parts of striatum.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.1919-25.2026",
+        "doi": "10.1523/jneurosci.1919-25.2026",
+        "pmid": "42680587",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42680587",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Jang EV",
+          "Dao N",
+          "Cole L",
+          "Carter AG"
+        ],
+        "affiliations": [
+          "Center for Neural Science, New York University, New York, New York 10003.",
+          "Center for Neural Science, New York University, New York, New York 10003 adam.carter@nyu.edu."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Differential Cortical and Thalamic Engagement of Cholinergic Interneurons in the Nucleus Accumbens Core.",
+      "authors": [
+        "Emily V Jang",
+        "Nigel Dao",
+        "Lilly Cole",
+        "Adam G Carter"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Cholinergic interneurons (CINs) in the nucleus accumbens (NAc) play a key role in regulating motivated behaviors. Here we examine the connectivity and functional impact of cortical and thalamic inputs onto CINs in the NAc core of mice of either sex. We first use cell type-specific retrograde anatomy to identify the prefrontal cortex and thalamus as putative afferents. We then combine ex vivo slice physiology and optogenetics to characterize the properties of synapses onto CINs. We demonstrate that thalamic inputs strongly facilitate, whereas cortical inputs exhibit marked depression. We also show that a combination of AMPA and NMDA receptors contribute to both cortical and thalamic responses. Lastly, we establish how these inputs and receptors evoke action potentials and influence spontaneous firing. Our findings show how CINs in the NAc core process long-range inputs, highlighting differences from equivalent circuits in other parts of striatum.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "伏隔核核心区胆碱能中间神经元对皮层和丘脑输入的差异性整合",
+    "paper_id": "f60e391c5b7f",
+    "domain": "核心域",
+    "primary_category": "系统与环路神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 6.5,
+      "methodology": 7.5,
+      "evidence": 6.8,
+      "contribution": 6.8,
+      "accessibility": 6.5
+    },
+    "total_score": 6.82,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究直接解析伏隔核胆碱能中间神经元的皮层与丘脑输入突触特性及功能整合，属于系统与环路神经科学核心问题。",
+    "feature_angle": "揭示伏隔核核心胆碱能中间神经元处理皮层与丘脑长程输入存在差异化突触动力学",
+    "model_used": "deepseek-flash",
+    "key_strength": "结合细胞类型特异性逆行解剖、离体电生理与光遗传学，系统刻画了皮层与丘脑输入在NAc核心CIN上的突触特性差异及其对放电的影响。",
+    "key_limitation": "结论主要基于离体切片电生理，缺乏在体行为或学习任务中的因果验证，且J Neurosci的定位使其框架性突破有限。",
+    "target_audience": "基底神经节、纹状体胆碱能系统、动机行为及突触生理学研究人员",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-09-01",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.1919-25.2026",
+      "pmid": "42680587"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+        "date": "2026-09-30",
+        "authors": [
+          "Mriga Das",
+          "Duo Cheng",
+          "Till Matzat",
+          "Rachel M Andrews",
+          "Mary Gilbert",
+          "Vanessa J Auld"
+        ],
+        "author_details": [
+          {
+            "name": "Mriga Das",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          },
+          {
+            "name": "Duo Cheng",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          },
+          {
+            "name": "Till Matzat",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          },
+          {
+            "name": "Rachel M Andrews",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          },
+          {
+            "name": "Mary Gilbert",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          },
+          {
+            "name": "Vanessa J Auld",
+            "affiliation": "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada auld@zoology.ubc.ca.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of British Columbia"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "Canada"
+            ],
+            "ror_subregion": [
+              "British Columbia"
+            ]
+          }
+        ],
+        "abstract": "The formation of the glial sheath is essential in nervous system development to insulate and protect peripheral nerves and axons, yet the regulation of adhesion junctions in nonmyelinating glia has not been clearly established. Many components of adhering junctions contain PDZ domains or are recruited by PDZ binding motifs. To identify PDZ domain proteins with roles in peripheral glia, we carried out an RNAi screen using Drosophila melanogaster to knockdown each of the 66 predicted PDZ proteins in larvae of either sex. We identified six PDZ genes with potential roles in glial morphology, and we further characterized the role of Dlg5, a scaffolding protein with no previously known function in any glia. In our investigation of Dlg5, we focused on cadherins and found both N-cadherin and E-cadherin are expressed throughout peripheral glia. Knockdown of E-cadherin (ECad) phenocopied the loss of Dlg5 leading to gaps in the subperineurial glia and septate junctions (SJs), while only simultaneous loss of both N-cadherins (NCad and CadN2) had the same effect. The loss of all three cadherins enhanced these phenotypes as did loss of Dlg5 when paired with cadherin knockdown yet Dlg5 does not colocalize with cadherins. The Hippo signaling pathway represents a common convergence point for both Dlg5 and cadherins, and we found that expression of Yorkie is able to rescue the loss of Dlg5 and ECad. This leads to a model where Dlg5 and cadherins function in the same pathway and play a role in glial membrane stabilization and SJ formation.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.1935-25.2026",
+        "doi": "10.1523/jneurosci.1935-25.2026",
+        "pmid": "42674974",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42674974",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Das M",
+          "Cheng D",
+          "Matzat T",
+          "Andrews RM",
+          "Gilbert M",
+          "Auld VJ"
+        ],
+        "affiliations": [
+          "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada.",
+          "Department of Zoology, University of British Columbia, Vancouver, British Columbia V6T 1Z3, Canada auld@zoology.ubc.ca."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Dlg5 and Cadherins Cooperate to Ensure Peripheral Glia and Septate Junction Integrity.",
+      "authors": [
+        "Mriga Das",
+        "Duo Cheng",
+        "Till Matzat",
+        "Rachel M Andrews",
+        "Mary Gilbert",
+        "Vanessa J Auld"
+      ],
+      "date": "2026-09-30",
+      "abstract": "The formation of the glial sheath is essential in nervous system development to insulate and protect peripheral nerves and axons, yet the regulation of adhesion junctions in nonmyelinating glia has not been clearly established. Many components of adhering junctions contain PDZ domains or are recruited by PDZ binding motifs. To identify PDZ domain proteins with roles in peripheral glia, we carried out an RNAi screen using Drosophila melanogaster to knockdown each of the 66 predicted PDZ proteins in larvae of either sex. We identified six PDZ genes with potential roles in glial morphology, and we further characterized the role of Dlg5, a scaffolding protein with no previously known function in any glia. In our investigation of Dlg5, we focused on cadherins and found both N-cadherin and E-cadherin are expressed throughout peripheral glia. Knockdown of E-cadherin (ECad) phenocopied the loss of Dlg5 leading to gaps in the subperineurial glia and septate junctions (SJs), while only simultaneous loss of both N-cadherins (NCad and CadN2) had the same effect. The loss of all three cadherins enhanced these phenotypes as did loss of Dlg5 when paired with cadherin knockdown yet Dlg5 does not colocalize with cadherins. The Hippo signaling pathway represents a common convergence point for both Dlg5 and cadherins, and we found that expression of Yorkie is able to rescue the loss of Dlg5 and ECad. This leads to a model where Dlg5 and cadherins function in the same pathway and play a role in glial membrane stabilization and SJ formation.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "Dlg5与钙黏蛋白协同确保周围神经胶质与隔膜连接完整性",
+    "paper_id": "12fcfe4ae7db",
+    "domain": "核心域",
+    "primary_category": "发育神经科学",
+    "secondary_category": [
+      "发育神经科学",
+      "分子与细胞神经科学"
+    ],
+    "cross_tags": [
+      "果蝇",
+      "胶质细胞",
+      "隔膜连接",
+      "RNAi筛选",
+      "细胞黏附",
+      "外周神经",
+      "PDZ蛋白"
+    ],
+    "scores": {
+      "breakthrough": 6.8,
+      "methodology": 7.6,
+      "evidence": 7.2,
+      "contribution": 6.9,
+      "accessibility": 7.1
+    },
+    "total_score": 7.09,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用果蝇RNAi筛选，系统鉴定了66个PDZ蛋白在非髓鞘化外周胶质细胞形态发生中的功能，发现Dlg5与钙黏蛋白协同调控隔膜连接完整性，从而保障胶质鞘的形成。这项工作首次揭示了PDZ支架蛋白与黏附分子在胶质鞘组装中的合作机制，为理解神经发育中胶质-轴突相互作用提供了新视角，并对周围神经病变的机制研究具有潜在启示。",
+    "confidence": 9.8,
+    "reasoning": "该研究利用果蝇RNAi筛选鉴定PDZ蛋白在周围胶质细胞形态及粘附连接中的作用，直接涉及神经系统发育中胶质鞘形成机制，属于发育神经科学核心问题。",
+    "feature_angle": "RNAi筛选揭示Dlg5通过Hippo-Yorkie通路与钙黏蛋白协同维持外周胶质鞘和隔膜连接完整性的新机制",
+    "model_used": "deepseek-flash",
+    "key_strength": "系统性RNAi筛选66个PDZ蛋白并结合多基因交互验证，首次将Dlg5与钙黏蛋白及Hippo信号通路整合进非髓鞘化胶质黏附稳定模型。",
+    "key_limitation": "果蝇模型与哺乳动物外周胶质鞘的保守性有限，且未提供Dlg5与钙黏蛋白互作的直接生化证据，结论机制仍属推测性模型。",
+    "target_audience": "果蝇遗传学、胶质细胞生物学、细胞黏附与信号转导研究者",
+    "crossover_value": null,
+    "editor_note": "果蝇遗传学筛选与胶质细胞黏附机制相结合，方法严谨，结论清晰，适合发育神经科学方向读者。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-31",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.1935-25.2026",
+      "pmid": "42674974"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+        "date": "2026-09-30",
+        "authors": [
+          "Erqian Huang",
+          "Yuhao Yuan",
+          "Su Wang",
+          "Xiangmin Xu",
+          "Menglong Rui"
+        ],
+        "author_details": [
+          {
+            "name": "Erqian Huang",
+            "affiliation": "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Southeast University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Jiangsu"
+            ]
+          },
+          {
+            "name": "Yuhao Yuan",
+            "affiliation": "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Southeast University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Jiangsu"
+            ]
+          },
+          {
+            "name": "Su Wang",
+            "affiliation": "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Southeast University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Jiangsu"
+            ]
+          },
+          {
+            "name": "Xiangmin Xu",
+            "affiliation": "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Southeast University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Jiangsu"
+            ]
+          },
+          {
+            "name": "Menglong Rui",
+            "affiliation": "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China ruimenglong@seu.edu.cn.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "Southeast University"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "China"
+            ],
+            "ror_subregion": [
+              "Jiangsu"
+            ]
+          }
+        ],
+        "abstract": "Neural pruning optimizes the structure of neural circuits by selectively eliminating redundant or weakened synaptic connections, thereby enhancing the precision and efficiency of information transmission. Dendrites of class IV dendritic arborization (C4da) sensory neurons of Drosophila undergo a large-scale pruning process during development. However, it is currently ambiguous whether peripheral glia noncell-autonomously modulate dendritic pruning in C4da neurons by transmitting signals. Here, we show that Unpaired1 (Upd1), a secreted glycoprotein, acts as a glial-originated signaling molecule to promote dendritic pruning during development in both male and female Drosophila Our further investigation reveals that downregulation of Domeless (Dome), the receptor of Upd1, in C4da neurons also triggers dendritic pruning defects. Hopscotch (Hop) kinase and transcription factor Stat92E, as downstream factors activated by Upd1 and Dome, similarly facilitate dendritic pruning. Notably, the Upd1 deficiency in glia produces a significant diminishment in JAK/STAT activity, and reactivation of this signaling in C4da neurons alleviates the dendritic pruning phenotype caused by glial Upd1 deficits. Furthermore, casein kinase II alpha (CK2α), the catalytic subunit of the serine/threonine protein kinase CK2, acts as a downstream target of the JAK/STAT and contributes to dendritic pruning. Collectively, we reveal a novel mechanism by which glia-derived Upd1 promotes dendritic pruning in C4da neurons by interacting with neuronal receptor Dome and activating the JAK/STAT signaling and downstream CK2α.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0641-26.2026",
+        "doi": "10.1523/jneurosci.0641-26.2026",
+        "pmid": "42674973",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42674973",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Huang E",
+          "Yuan Y",
+          "Wang S",
+          "Xu X",
+          "Rui M"
+        ],
+        "affiliations": [
+          "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China.",
+          "School of Life Science and Technology, Key Laboratory of Developmental Genes and Human Disease, Southeast University, Nanjing 210096, Jiangsu, China ruimenglong@seu.edu.cn."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Glia-Derived Upd1 Promotes Dendritic Remodeling via Neuronal JAK/Stat-CK2α Signaling.",
+      "authors": [
+        "Erqian Huang",
+        "Yuhao Yuan",
+        "Su Wang",
+        "Xiangmin Xu",
+        "Menglong Rui"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Neural pruning optimizes the structure of neural circuits by selectively eliminating redundant or weakened synaptic connections, thereby enhancing the precision and efficiency of information transmission. Dendrites of class IV dendritic arborization (C4da) sensory neurons of Drosophila undergo a large-scale pruning process during development. However, it is currently ambiguous whether peripheral glia noncell-autonomously modulate dendritic pruning in C4da neurons by transmitting signals. Here, we show that Unpaired1 (Upd1), a secreted glycoprotein, acts as a glial-originated signaling molecule to promote dendritic pruning during development in both male and female Drosophila Our further investigation reveals that downregulation of Domeless (Dome), the receptor of Upd1, in C4da neurons also triggers dendritic pruning defects. Hopscotch (Hop) kinase and transcription factor Stat92E, as downstream factors activated by Upd1 and Dome, similarly facilitate dendritic pruning. Notably, the Upd1 deficiency in glia produces a significant diminishment in JAK/STAT activity, and reactivation of this signaling in C4da neurons alleviates the dendritic pruning phenotype caused by glial Upd1 deficits. Furthermore, casein kinase II alpha (CK2α), the catalytic subunit of the serine/threonine protein kinase CK2, acts as a downstream target of the JAK/STAT and contributes to dendritic pruning. Collectively, we reveal a novel mechanism by which glia-derived Upd1 promotes dendritic pruning in C4da neurons by interacting with neuronal receptor Dome and activating the JAK/STAT signaling and downstream CK2α.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "胶质细胞来源的Upd1通过神经元JAK/Stat-CK2α信号通路促进树突重塑",
+    "paper_id": "60e2d759fc32",
+    "domain": "核心域",
+    "primary_category": "发育神经科学",
+    "secondary_category": [
+      "发育神经科学",
+      "分子与细胞神经科学"
+    ],
+    "cross_tags": [
+      "果蝇",
+      "胶质细胞",
+      "树突修剪",
+      "JAK/Stat",
+      "CK2α",
+      "Upd1",
+      "感觉神经元"
+    ],
+    "scores": {
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.5,
+      "contribution": 7.0,
+      "accessibility": 7.3
+    },
+    "total_score": 7.3500000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究揭示胶质细胞分泌的Upd1通过JAK/Stat-CK2α信号通路非自主调控C4da感觉神经元树突修剪，为胶质-神经元互作提供了新机制。Upd1作为胶质起源信号分子，拓展了发育修剪中细胞间通讯的理解，并首次将CK2α激酶与树突重塑联系。该发现对神经环路优化和突触修剪的分子逻辑具有普遍意义，值得发育与细胞神经科学领域关注。",
+    "confidence": 9.8,
+    "reasoning": "该研究揭示了胶质细胞通过分泌Upd1非细胞自主调控果蝇C4da感觉神经元树突修剪的机制，直接探究神经发育过程中树突重塑的关键问题，属于发育神经科学核心范畴。",
+    "feature_angle": "胶质细胞分泌的Upd1通过JAK/STAT-CK2α信号轴非细胞自主调控果蝇C4da神经元树突修剪的新机制。",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次将胶质来源Upd1与神经元接收Dome-JAK/STAT-CK2α信号连接起来，系统性地揭示了胶质-神经元信号在树突修剪中的非细胞自主作用，补全了树突修剪调控网络的关键环节。",
+    "key_limitation": "研究局限于果蝇C4da感觉神经元，未验证哺乳动物树突修剪中的保守性；CK2α作为JAK/STAT下游效应子的分子机制尚不明确，且缺乏时间分辨的活体成像数据。",
+    "target_audience": "神经发育生物学、胶质细胞生物学、JAK/STAT信号转导及果蝇遗传学研究群体",
+    "crossover_value": null,
+    "editor_note": "胶质细胞调控树突修剪的分子通路新发现，适合发育神经科学专题。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-31",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0641-26.2026",
+      "pmid": "42674973"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+        "date": "2026-09-30",
+        "authors": [
+          "Sajana Aryal",
+          "Srikanta K Mishra"
+        ],
+        "author_details": [
+          {
+            "name": "Sajana Aryal",
+            "affiliation": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712 sajana-aryal@uiowa.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "Texas"
+            ]
+          },
+          {
+            "name": "Srikanta K Mishra",
+            "affiliation": "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "Texas"
+            ]
+          }
+        ],
+        "abstract": "The cochlear amplifier, mediated by outer hair cell-driven nonlinear mechanics, enables the remarkable sensitivity and dynamic range of human hearing. Cochlear compression is a defining feature of this active process and is known to deteriorate with hearing loss. Among individuals with normal audiograms, cochlear compression is generally presumed to be invariant, an assumption that has not been systematically examined. If incipient cochlear changes precede measurable threshold shifts, variability in compressive nonlinearity may represent an early peripheral correlate of emerging dysfunction and a potential mechanistic contributor to auditory processing differences. Whether cochlear compression varies meaningfully among individuals with normal audiograms, and what such variability reveals about the earliest stages of cochlear dysfunction, remains unknown. Here, we quantified compressive nonlinearity using distortion-product otoacoustic emission (DPOAE) input/output (i/o) functions with stringent signal-to-noise criteria, applying covariate-controlled mixed-effects models within a dimensional framework that treated compression as a continuous outcome to isolate structured individual differences ( n = 144 ears; male, 46). Compression metrics demonstrated substantial interindividual variability despite normal-hearing thresholds. Subtle differences in standard-frequency thresholds were associated with variations in cochlear gain. Extended high-frequency sensitivity, an index of basal cochlear integrity, showed additional associations with DPOAE i/o function, implicating basal vulnerability in shaping cochlear nonlinearity. Age-related effects were detectable even within a restricted young-adult cohort, indicating that cochlear operating characteristics may begin to diverge early in adulthood. These findings challenge the assumption of invariant compression in normal hearing and suggest that alterations in cochlear nonlinear processing may reflect incipient cochlear dysfunction that precedes overt hearing loss.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0476-26.2026",
+        "doi": "10.1523/jneurosci.0476-26.2026",
+        "pmid": "42674972",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42674972",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Aryal S",
+          "Mishra SK"
+        ],
+        "affiliations": [
+          "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712 sajana-aryal@uiowa.edu.",
+          "Department of Speech, Language, and Hearing Sciences, University of Texas at Austin, Austin, Texas 78712."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Normal Audiogram Does Not Confirm Intact Cochlear Amplification: Compressive Nonlinearity Reveals Incipient Cochlear Changes.",
+      "authors": [
+        "Sajana Aryal",
+        "Srikanta K Mishra"
+      ],
+      "date": "2026-09-30",
+      "abstract": "The cochlear amplifier, mediated by outer hair cell-driven nonlinear mechanics, enables the remarkable sensitivity and dynamic range of human hearing. Cochlear compression is a defining feature of this active process and is known to deteriorate with hearing loss. Among individuals with normal audiograms, cochlear compression is generally presumed to be invariant, an assumption that has not been systematically examined. If incipient cochlear changes precede measurable threshold shifts, variability in compressive nonlinearity may represent an early peripheral correlate of emerging dysfunction and a potential mechanistic contributor to auditory processing differences. Whether cochlear compression varies meaningfully among individuals with normal audiograms, and what such variability reveals about the earliest stages of cochlear dysfunction, remains unknown. Here, we quantified compressive nonlinearity using distortion-product otoacoustic emission (DPOAE) input/output (i/o) functions with stringent signal-to-noise criteria, applying covariate-controlled mixed-effects models within a dimensional framework that treated compression as a continuous outcome to isolate structured individual differences ( n = 144 ears; male, 46). Compression metrics demonstrated substantial interindividual variability despite normal-hearing thresholds. Subtle differences in standard-frequency thresholds were associated with variations in cochlear gain. Extended high-frequency sensitivity, an index of basal cochlear integrity, showed additional associations with DPOAE i/o function, implicating basal vulnerability in shaping cochlear nonlinearity. Age-related effects were detectable even within a restricted young-adult cohort, indicating that cochlear operating characteristics may begin to diverge early in adulthood. These findings challenge the assumption of invariant compression in normal hearing and suggest that alterations in cochlear nonlinear processing may reflect incipient cochlear dysfunction that precedes overt hearing loss.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "正常听力图不能确认耳蜗放大完整：压缩非线性揭示早期耳蜗变化",
+    "paper_id": "d8b7c0f6fca6",
+    "domain": "核心域",
+    "primary_category": "感觉与运动神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.8,
+      "methodology": 5.2,
+      "evidence": 6.0,
+      "contribution": 5.3,
+      "accessibility": 5.5
+    },
+    "total_score": 5.59,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探究听觉外周机制—耳蜗压缩非线性，与感觉神经科学高度相关。",
+    "feature_angle": "正常听力不等于耳蜗放大完整：DPOAE压缩非线性在听力图正常人群中存在结构化个体差异，提示耳蜗亚临床改变。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在144只听力正常耳中系统量化DPOAE I/O压缩非线性，并关联扩展高频敏感性与年龄，提示耳蜗功能可在阈值改变前出现早期分化。",
+    "key_limitation": "横断面设计无法追踪“亚临床耳蜗改变”向听力损失进展的因果方向；DPOAE仅为外周间接指标，缺乏耳蜗外毛细胞功能或主观听觉行为的直接验证；样本仅限年轻成人且男性样本偏少，泛化性有限。",
+    "target_audience": "听觉神经科学、耳蜗生理学、听力损失早期标志物与转化听力学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-31",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0476-26.2026",
+      "pmid": "42674972"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+        "date": "2026-09-30",
+        "authors": [
+          "Jacqueline M Fulvio",
+          "Bradley R Postle"
+        ],
+        "author_details": [
+          {
+            "name": "Jacqueline M Fulvio",
+            "affiliation": "Department of Psychology, University of Wisconsin-Madison, Madison, Wisconsin 53705 jacqueline.fulvio@wisc.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "Wisconsin"
+            ]
+          },
+          {
+            "name": "Bradley R Postle",
+            "affiliation": "Department of Psychology, University of Wisconsin-Madison, Madison, Wisconsin 53705.; Department of Psychiatry, University of Wisconsin-Madison, Madison, Wisconsin 53719.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "Wisconsin",
+              "Wisconsin"
+            ]
+          }
+        ],
+        "abstract": "We studied the effects of prioritization in a two-step retrocuing task in which male and female humans hold two items in working memory, and the item not cued by the first cue cannot be dropped because it may be prioritized by the second cue. In Experiment 1, using a dense sampling procedure, recall performance oscillated at 15 Hz (\"low-beta\") in the prioritization task, in comparison with 20 Hz (\"higher-beta\") in a matched neutral-cue task. Furthermore, the prioritized item was shielded from bias exerted by the uncued item, as well as by items from the previous trial. In Experiment 2, we sought EEG correlates of these effects while participants performed variants of the two tasks. The prioritization cue uniquely triggered a phase reset at 15 Hz and an increase in oscillatory peaks at the \"low-beta\" frequency. Burst analysis ruled out bursting as a possible underlying factor. Self-correlation analysis of the EEG time series revealed that the prioritization cue triggered greater reorganization of the whole-topography EEG pattern than the neutral cue and for the uncued item than for the cued item. These results provide evidence that the shielding effects of prioritization may arise from the transformation of the not-prioritized item into an \"unprioritized\" state that is implemented and maintained by a mechanism that cycles in the \"low-beta\" frequency range (centered on roughly 15 Hz).",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0492-26.2026",
+        "doi": "10.1523/jneurosci.0492-26.2026",
+        "pmid": "42680589",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42680589",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Fulvio JM",
+          "Postle BR"
+        ],
+        "affiliations": [
+          "Department of Psychology, University of Wisconsin-Madison, Madison, Wisconsin 53705 jacqueline.fulvio@wisc.edu.",
+          "Department of Psychology, University of Wisconsin-Madison, Madison, Wisconsin 53705.; Department of Psychiatry, University of Wisconsin-Madison, Madison, Wisconsin 53719."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Prioritization in Working Memory Reduces Interference via Beta Band-Linked Stimulus Transformations.",
+      "authors": [
+        "Jacqueline M Fulvio",
+        "Bradley R Postle"
+      ],
+      "date": "2026-09-30",
+      "abstract": "We studied the effects of prioritization in a two-step retrocuing task in which male and female humans hold two items in working memory, and the item not cued by the first cue cannot be dropped because it may be prioritized by the second cue. In Experiment 1, using a dense sampling procedure, recall performance oscillated at 15 Hz (\"low-beta\") in the prioritization task, in comparison with 20 Hz (\"higher-beta\") in a matched neutral-cue task. Furthermore, the prioritized item was shielded from bias exerted by the uncued item, as well as by items from the previous trial. In Experiment 2, we sought EEG correlates of these effects while participants performed variants of the two tasks. The prioritization cue uniquely triggered a phase reset at 15 Hz and an increase in oscillatory peaks at the \"low-beta\" frequency. Burst analysis ruled out bursting as a possible underlying factor. Self-correlation analysis of the EEG time series revealed that the prioritization cue triggered greater reorganization of the whole-topography EEG pattern than the neutral cue and for the uncued item than for the cued item. These results provide evidence that the shielding effects of prioritization may arise from the transformation of the not-prioritized item into an \"unprioritized\" state that is implemented and maintained by a mechanism that cycles in the \"low-beta\" frequency range (centered on roughly 15 Hz).",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "工作记忆中的优先化通过β频段相关的刺激变换减少干扰",
+    "paper_id": "a7a9955a5d7f",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 6.5,
+      "methodology": 7.8,
+      "evidence": 7.0,
+      "contribution": 6.5,
+      "accessibility": 6.0
+    },
+    "total_score": 6.8100000000000005,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.8,
+    "reasoning": "该研究探讨工作记忆优先化的神经振荡机制，直接关联认知神经科学中的记忆与注意核心问题。",
+    "feature_angle": "工作记忆优先化通过低β频段（~15 Hz）的刺激转换将未优先项目“降级”，从而降低干扰并保护优先表征。",
+    "model_used": "deepseek-flash",
+    "key_strength": "结合密集采样行为振荡与EEG相位重置/爆发分析，首次将优先化的行为屏蔽效应与低β频段振荡机制直接对应，并明确排除bursting贡献。",
+    "key_limitation": "样本仅限人类两项目retrocue范式，因果机制未通过神经调控验证，低β频段功能意义及跨任务泛化性仍待检验。",
+    "target_audience": "工作记忆、注意调控、EEG振荡及计算认知神经科学研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-09-01",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0492-26.2026",
+      "pmid": "42680589"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+        "date": "2026-09-30",
+        "authors": [
+          "Brenda Siyue Qiu",
+          "Kristin M Woodard",
+          "Bridget Leonard",
+          "Scott O Murray"
+        ],
+        "author_details": [
+          {
+            "name": "Brenda Siyue Qiu",
+            "affiliation": "Department of Psychology, University of Washington, Seattle, Washington 98195 siyueq@uw.edu.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Washington"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Washington"
+            ]
+          },
+          {
+            "name": "Kristin M Woodard",
+            "affiliation": "Department of Psychology, University of Washington, Seattle, Washington 98195.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Washington"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Washington"
+            ]
+          },
+          {
+            "name": "Bridget Leonard",
+            "affiliation": "Department of Psychology, University of Washington, Seattle, Washington 98195.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Washington"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Washington"
+            ]
+          },
+          {
+            "name": "Scott O Murray",
+            "affiliation": "Department of Psychology, University of Washington, Seattle, Washington 98195.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [
+              "University of Washington"
+            ],
+            "ror_match_score": [
+              100
+            ],
+            "ror_country": [
+              "United States"
+            ],
+            "ror_subregion": [
+              "Washington"
+            ]
+          }
+        ],
+        "abstract": "Spatial attention shapes neural activity across multiple cortical regions, and recent studies have demonstrated spatially selective attentional signals in cerebellar visual regions. However, it remains unclear whether these signals extend across the broader network of cerebellar visual representations and whether they share key functional properties of attentional modulation observed in cortical visual areas. Using fMRI, we measured brain activity in 50 participants (30 females) as they performed a covert spatial attention task in which attention was directed to the left or right visual hemifield, followed by visual stimuli of varying contrast or no stimulus. We showed that distributed activity patterns in the cerebellum reliably distinguished the attended hemifield, replicating previous findings of spatially selective attentional signals in Lobules VIIb/VIIIa and extending these findings to Lobule VI and Lobules VIIIb/IX/X. These regions largely overlapped with topographically organized cerebellar visual maps, indicating that attentional modulation operates within representations of visual space. Critically, attentional modulation was observed even in the absence of postcue stimulus presentation and was invariant across stimulus contrast, consistent with additive attentional effects previously described in cortical visual areas. We further identified nonspatial, stimulus-independent cerebellar attentional signals, suggesting contributions to attentional control beyond spatial selection. Finally, comparisons with motion-evoked responses revealed systematic differences across cerebellar visual regions in the relative contribution of attentional and sensory signals. Together, these findings demonstrate that spatially selective attention is represented across multiple cerebellar visual maps and shares functional properties with attentional modulation in cortical visual areas while revealing functional heterogeneity within the cerebellum.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0670-26.2026",
+        "doi": "10.1523/jneurosci.0670-26.2026",
+        "pmid": "42660658",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42660658",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Qiu BS",
+          "Woodard KM",
+          "Leonard B",
+          "Murray SO"
+        ],
+        "affiliations": [
+          "Department of Psychology, University of Washington, Seattle, Washington 98195 siyueq@uw.edu.",
+          "Department of Psychology, University of Washington, Seattle, Washington 98195."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Stimulus-Independent Attentional Modulation in Cerebellar Visual Regions.",
+      "authors": [
+        "Brenda Siyue Qiu",
+        "Kristin M Woodard",
+        "Bridget Leonard",
+        "Scott O Murray"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Spatial attention shapes neural activity across multiple cortical regions, and recent studies have demonstrated spatially selective attentional signals in cerebellar visual regions. However, it remains unclear whether these signals extend across the broader network of cerebellar visual representations and whether they share key functional properties of attentional modulation observed in cortical visual areas. Using fMRI, we measured brain activity in 50 participants (30 females) as they performed a covert spatial attention task in which attention was directed to the left or right visual hemifield, followed by visual stimuli of varying contrast or no stimulus. We showed that distributed activity patterns in the cerebellum reliably distinguished the attended hemifield, replicating previous findings of spatially selective attentional signals in Lobules VIIb/VIIIa and extending these findings to Lobule VI and Lobules VIIIb/IX/X. These regions largely overlapped with topographically organized cerebellar visual maps, indicating that attentional modulation operates within representations of visual space. Critically, attentional modulation was observed even in the absence of postcue stimulus presentation and was invariant across stimulus contrast, consistent with additive attentional effects previously described in cortical visual areas. We further identified nonspatial, stimulus-independent cerebellar attentional signals, suggesting contributions to attentional control beyond spatial selection. Finally, comparisons with motion-evoked responses revealed systematic differences across cerebellar visual regions in the relative contribution of attentional and sensory signals. Together, these findings demonstrate that spatially selective attention is represented across multiple cerebellar visual maps and shares functional properties with attentional modulation in cortical visual areas while revealing functional heterogeneity within the cerebellum.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "小脑视觉区域中与刺激无关的注意调制",
+    "paper_id": "e9e5dfff4091",
+    "domain": "核心域",
+    "primary_category": "认知神经科学",
+    "secondary_category": [],
+    "cross_tags": [],
+    "scores": {
+      "breakthrough": 5.5,
+      "methodology": 6.5,
+      "evidence": 7.0,
+      "contribution": 6.0,
+      "accessibility": 7.5
+    },
+    "total_score": 6.300000000000001,
+    "recommendation_tier": "简要提及",
+    "recommendation_text": "",
+    "confidence": 9.2,
+    "reasoning": "该研究使用fMRI探讨小脑视觉区域的注意调制，直接涉及注意的神经机制，属于认知神经科学核心问题。",
+    "feature_angle": "小脑视觉表征中存在刺激无关、对比度不变的空间注意调制，且与皮层注意效应功能属性相似。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在50名被试的fMRI实验中系统绘制了小脑多个视觉图谱中的空间选择性注意信号，并证明其独立于视觉刺激和对比度，与皮层加法性注意效应一致。",
+    "key_limitation": "研究以复制和扩展已有发现为主，缺乏因果操控或神经记录；样本虽大但结论主要基于相关性的fMRI活动模式，对小脑注意信号的来源和功能作用机制仍不清楚。",
+    "target_audience": "注意、视觉系统、小脑功能及认知神经影像研究者",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0670-26.2026",
+      "pmid": "42660658"
+    }
+  },
+  {
+    "paper": {
+      "raw_data": {
+        "type": "Article",
+        "title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+        "date": "2026-09-30",
+        "authors": [
+          "Ann M Nguyen",
+          "Helen Lo",
+          "James Fields",
+          "Karina S Cramer",
+          "Fan-Gang Zeng",
+          "Wei Dong",
+          "Xiangmin Xu"
+        ],
+        "author_details": [
+          {
+            "name": "Ann M Nguyen",
+            "affiliation": "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California"
+            ]
+          },
+          {
+            "name": "Helen Lo",
+            "affiliation": "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California"
+            ]
+          },
+          {
+            "name": "James Fields",
+            "affiliation": "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California"
+            ]
+          },
+          {
+            "name": "Karina S Cramer",
+            "affiliation": "The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Departments of Neurobiology and Behavior, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California",
+              "California",
+              "California"
+            ]
+          },
+          {
+            "name": "Fan-Gang Zeng",
+            "affiliation": "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.; The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Otolaryngology-Head and Neck Surgery, University of California, Irvine, California 92697.; Biomedical Engineering, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California",
+              "California",
+              "California",
+              "California",
+              "California"
+            ]
+          },
+          {
+            "name": "Wei Dong",
+            "affiliation": "The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Departments of Neurobiology and Behavior, University of California, Irvine, California 92697.; Otolaryngology-Head and Neck Surgery, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California",
+              "California",
+              "California",
+              "California"
+            ]
+          },
+          {
+            "name": "Xiangmin Xu",
+            "affiliation": "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697 xiangmix@hs.uci.edu.; The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Biomedical Engineering, University of California, Irvine, California 92697.; Microbiology & Molecular Genetics, and Computer Science, University of California, Irvine, California 92697.",
+            "source": "PubMed XML",
+            "ror_normalized_affiliation": [],
+            "ror_match_score": [],
+            "ror_country": [],
+            "ror_subregion": [
+              "California",
+              "California",
+              "California",
+              "California",
+              "California"
+            ]
+          }
+        ],
+        "abstract": "Cognitive decline in Alzheimer's disease and related dementias (AD/ADRD) frequently cooccurs with motor and sensory processing impairments. While auditory abnormalities were reported in beta-amyloid-based models before cognitive decline, the effects of tau pathology on auditory circuit function remain poorly understood. The PS19 mouse model expressing the P301S tau mutation exhibits tau pathology associated with frontotemporal dementia. When combined with the humanized ApoE ɛ4 allele, these mice show accelerated tau accumulation and neurodegeneration. We investigated the temporal progression of auditory and behavioral deficits in PS19 and ApoE4/PS19 mice of either sex at 3 and 7 months. Auditory processing was assessed using auditory brainstem response (ABR) recordings, while anxiety-like and motor behaviors were evaluated using the elevated plus maze and rotarod assays. PS19 mice exhibited auditory pathway dysfunction at 3 months, characterized by reduced and delayed neural responses to acoustic stimuli. These auditory deficits occurred without detectable behavioral changes in anxiety- or motor-related measures. By 7 months, cochlear nucleus-derived ABR activity shifted from an initial reduction to elevation relative to controls, suggesting compensatory hyperexcitability. In contrast, ApoE4/PS19 mice showed reduced ABR amplitudes and shortened response latencies that persisted with age, accompanied by altered anxiety-like behavior and motor performance. Together, these results demonstrate that auditory pathway dysfunction may represent an early marker of tau pathology preceding behavioral impairment. The divergent temporal patterns of ABR alterations across genotypes suggest that genetic context, particularly ApoE4, modulates the progression of tau-driven circuit dysfunction, highlighting ABR as a potential noninvasive biomarker for early tau-related neurodegenerative disease.",
+        "abstract_source": "Europe PMC indexed journal abstract",
+        "url": "https://doi.org/10.1523/jneurosci.0511-26.2026",
+        "doi": "10.1523/jneurosci.0511-26.2026",
+        "pmid": "42660657",
+        "pmcid": "",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "Journal of Neuroscience",
+        "pub_types": [
+          "Journal Article"
+        ],
+        "retrieval_source": "Europe PMC MED core",
+        "date_evidence": {
+          "field": "firstPublicationDate",
+          "value": "2026-09-30",
+          "pubmed_id": "42660657",
+          "query_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=JOURNAL%3A%22J+Neurosci%22+AND+FIRST_PDATE%3A%5B2026-09-28+TO+2026-10-04%5D+AND+SRC%3AMED&format=json&resultType=core&pageSize=1000&cursorMark=%2A",
+          "electronicPublicationDate": "2026-09-30",
+          "printPublicationDate": "2026-09-01"
+        },
+        "original_authors": [
+          "Nguyen AM",
+          "Lo H",
+          "Fields J",
+          "Cramer KS",
+          "Zeng FG",
+          "Dong W",
+          "Xu X"
+        ],
+        "affiliations": [
+          "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.",
+          "The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Departments of Neurobiology and Behavior, University of California, Irvine, California 92697.",
+          "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697.; The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Otolaryngology-Head and Neck Surgery, University of California, Irvine, California 92697.; Biomedical Engineering, University of California, Irvine, California 92697.",
+          "The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Departments of Neurobiology and Behavior, University of California, Irvine, California 92697.; Otolaryngology-Head and Neck Surgery, University of California, Irvine, California 92697.",
+          "Department of Anatomy & Neurobiology, School of Medicine, University of California, Irvine, California 92697 xiangmix@hs.uci.edu.; The Center for Neural Circuit Mapping, University of California, Irvine, California 92697.; The Center for Hearing Research, University of California, Irvine, California 92697.; Biomedical Engineering, University of California, Irvine, California 92697.; Microbiology & Molecular Genetics, and Computer Science, University of California, Irvine, California 92697."
+        ],
+        "author_enrichment_status": "enriched",
+        "author_metrics_status": "not requested; source metadata only",
+        "senior_authors": []
+      },
+      "title": "Temporal Progression of Auditory Brainstem Dysfunction and Behavioral Phenotypes in Mouse Models of Tauopathy.",
+      "authors": [
+        "Ann M Nguyen",
+        "Helen Lo",
+        "James Fields",
+        "Karina S Cramer",
+        "Fan-Gang Zeng",
+        "Wei Dong",
+        "Xiangmin Xu"
+      ],
+      "date": "2026-09-30",
+      "abstract": "Cognitive decline in Alzheimer's disease and related dementias (AD/ADRD) frequently cooccurs with motor and sensory processing impairments. While auditory abnormalities were reported in beta-amyloid-based models before cognitive decline, the effects of tau pathology on auditory circuit function remain poorly understood. The PS19 mouse model expressing the P301S tau mutation exhibits tau pathology associated with frontotemporal dementia. When combined with the humanized ApoE ɛ4 allele, these mice show accelerated tau accumulation and neurodegeneration. We investigated the temporal progression of auditory and behavioral deficits in PS19 and ApoE4/PS19 mice of either sex at 3 and 7 months. Auditory processing was assessed using auditory brainstem response (ABR) recordings, while anxiety-like and motor behaviors were evaluated using the elevated plus maze and rotarod assays. PS19 mice exhibited auditory pathway dysfunction at 3 months, characterized by reduced and delayed neural responses to acoustic stimuli. These auditory deficits occurred without detectable behavioral changes in anxiety- or motor-related measures. By 7 months, cochlear nucleus-derived ABR activity shifted from an initial reduction to elevation relative to controls, suggesting compensatory hyperexcitability. In contrast, ApoE4/PS19 mice showed reduced ABR amplitudes and shortened response latencies that persisted with age, accompanied by altered anxiety-like behavior and motor performance. Together, these results demonstrate that auditory pathway dysfunction may represent an early marker of tau pathology preceding behavioral impairment. The divergent temporal patterns of ABR alterations across genotypes suggest that genetic context, particularly ApoE4, modulates the progression of tau-driven circuit dysfunction, highlighting ABR as a potential noninvasive biomarker for early tau-related neurodegenerative disease.",
+      "journal": "Journal of Neuroscience"
+    },
+    "title_zh": "Tau蛋白病小鼠模型中听觉脑干功能障碍与行为表型的时间进展",
+    "paper_id": "c265e03e0e17",
+    "domain": "核心域",
+    "primary_category": "感觉与运动神经科学",
+    "secondary_category": [
+      "感觉与运动神经科学",
+      "临床与转化神经科学"
+    ],
+    "cross_tags": [
+      "听觉脑干",
+      "tauopathy",
+      "PS19小鼠",
+      "APOE4",
+      "听觉诱发电位",
+      "行为表型",
+      "神经退行性变"
+    ],
+    "scores": {
+      "breakthrough": 6.8,
+      "methodology": 7.2,
+      "evidence": 7.5,
+      "contribution": 7.0,
+      "accessibility": 7.2
+    },
+    "total_score": 7.1000000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究系统刻画了tauopathy小鼠（PS19及APOE4组合）中听觉脑干功能障碍与行为表型的时间进展，填补了tau病理如何影响听觉环路功能的空白。结合听觉电生理与行为学，揭示听觉异常早于或伴随认知/运动衰退，为AD/ADRD早期感觉生物标志物提供了临床前证据。对关注神经退行性疾病的早期诊断与跨感觉模态研究的读者具有重要参考价值。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨Tau蛋白病理对听觉脑干回路功能和行为的影响，属于感觉神经科学和神经退行性疾病的核心问题。",
+    "feature_angle": "听觉脑干反应（ABR）可作为tau蛋白病早期无创生物标志物，且ApoE4基因型调控其进展轨迹。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在AD/ADRD的tau病理模型中系统刻画了听觉脑干功能障碍的时间进程，并揭示了ApoE4对tau驱动听觉回路损伤的调节作用，为早期诊断提供了潜在无创指标。",
+    "key_limitation": "仅聚焦于ABR和有限的行为学测试，缺乏对听觉通路中tau病理的直接分子/细胞机制验证，且样本量、性别差异分析未明确，导致结论的普适性受限。",
+    "target_audience": "神经退行性疾病、听觉神经科学、转化医学及生物标志物研究者",
+    "crossover_value": null,
+    "editor_note": "建议关注其时间进程与APOE4协同效应，可与β-淀粉样蛋白模型对比。",
+    "cross_domain_potential": 0.0,
+    "historical_recheck": {
+      "earlier_date": "2026-08-27",
+      "reason": "Previously indexed journal paper reappeared with a later issue date.",
+      "manifest": "tmps\\pipeline_20261004\\historical_reappearances.json",
+      "doi": "10.1523/jneurosci.0511-26.2026",
+      "pmid": "42660657"
+    }
+  }
+]

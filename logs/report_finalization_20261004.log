@@ -1,0 +1,35 @@
+{
+  "issue": 30,
+  "date": "2026-10-04",
+  "start_date": "2026-09-28",
+  "theme_lines": [
+    "跨物种麻醉脑动力学",
+    "揭示神经活动的时空隔离"
+  ],
+  "papers": 1074,
+  "selected_papers": 528,
+  "missing_abstracts": 16,
+  "papers_with_country": 866,
+  "recommendation_distribution": {
+    "简要提及": 220,
+    "深度解读": 308,
+    "不推送": 546
+  },
+  "scored_papers": 569,
+  "score_distribution": {
+    "1-2": 2,
+    "2-3": 1,
+    "3-4": 12,
+    "4-5": 19,
+    "5-6": 49,
+    "6-7": 115,
+    "7-8": 244,
+    "8-9": 126,
+    "9-10": 1
+  },
+  "report": "D:\\working\\scientific bulletin\\LLM_Results\\report_20261004.md",
+  "histogram": "D:\\working\\scientific bulletin\\Imgs\\visulize_img\\statistics\\2026-10-04_score_histogram.png",
+  "result": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261004.json",
+  "refined": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-04_enriched_ror_refined.jsonl",
+  "completed_at": "2026-10-08T18:05:31.970397"
+}
