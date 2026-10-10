@@ -1,0 +1,14 @@
+{
+  "method": "SQLite backup into existing paths; staged outputs validated before transfer",
+  "rechecks": 16,
+  "databases": {
+    "D:\\working\\scientific bulletin\\data\\literature.db": {
+      "integrity_check": "ok",
+      "article_count": 14987
+    },
+    "D:\\working\\scientific bulletin\\docs\\assets\\data\\literature_slim.db": {
+      "integrity_check": "ok",
+      "article_count": 14987
+    }
+  }
+}

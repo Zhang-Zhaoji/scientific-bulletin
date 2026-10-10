@@ -1,0 +1,108 @@
+{
+  "selected_before": 484,
+  "selected_missing_before": 20,
+  "recovered_abstracts": 16,
+  "reevaluated": 16,
+  "selected_after": 481,
+  "selected_missing_after": 4,
+  "remaining": [
+    {
+      "title": "Exercise Engages AMPK-Mediated Muscle-Neuron Cross Talk to Promote Axon Repair.",
+      "doi": "10.1523/JNEUROSCI.0987-26.2026"
+    },
+    {
+      "title": "Is the high beta response network orthogonal to subthalamic topography?",
+      "doi": "10.1093/brain/awag344"
+    },
+    {
+      "title": "Structural considerations on xeGlyT2 substrate and inhibitor recognition.",
+      "doi": "10.1073/pnas.2612775123"
+    },
+    {
+      "title": "Reply: Is the entorhinal signal a tau origin or a treatment-relevant vulnerability map?",
+      "doi": "10.1093/brain/awag331"
+    }
+  ],
+  "tier_changes": [
+    {
+      "title": "Mesoscale structures in signed networks",
+      "before": "简要提及",
+      "after": "简要提及"
+    },
+    {
+      "title": "HPSC-derived mesenchymal stromal cells ameliorate murine autistic-like phenotypes through activating oxytocinergic neurons",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "A neuronal GPCR modifies neuropeptide signaling to suppress proteostasis in distal tissues",
+      "before": "深度解读",
+      "after": "简要提及"
+    },
+    {
+      "title": "Insights into temporal and spatial dynamics of short association fiber formation in the human fetal brain",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "Enhancer binding kinetics explain transcription factor hub formation",
+      "before": "简要提及",
+      "after": "不推送"
+    },
+    {
+      "title": "SMCHD1 is a target for gene activation therapy to treat Prader-Willi syndrome",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "Mapping brain imaging heterogeneity in multiple sclerosis.",
+      "before": "简要提及",
+      "after": "简要提及"
+    },
+    {
+      "title": "Dopamine release-associated striatal blood oxygenation and whole-brain dynamics during associative learning",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "Specific expertise from diffuse feedback: A feedforward-gated mechanism",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "MIMAS: An open-source microlens-array miniature microscope for accessible large-field cortical imaging in freely behaving mice",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "3D DNA origami-enabled molecularly addressable optical nanocircuit",
+      "before": "简要提及",
+      "after": "不推送"
+    },
+    {
+      "title": "A biohybrid mesh harvester for distributed energy harvesting in living tissues",
+      "before": "简要提及",
+      "after": "简要提及"
+    },
+    {
+      "title": "Rod photoreceptors have a dual dependency on both aerobic glycolysis and OXPHOS and diverge metabolically from other retinal neurons",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "Herpes simplex virus pUL56 abolishes neuronal activity by removing voltage-gated ion channels from the plasma membrane",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "Sensory receptor expansion and neural accommodation in butterfly color vision",
+      "before": "深度解读",
+      "after": "深度解读"
+    },
+    {
+      "title": "DNA nanodevice-engineered macrophages as living sensors for dual-mode in vivo monitoring of tumor-associated macrophage polarization",
+      "before": "简要提及",
+      "after": "不推送"
+    }
+  ]
+}

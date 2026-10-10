@@ -1,0 +1,520 @@
+{
+  "remaining_audit.json": {
+    "science": {
+      "status": "returned",
+      "count": 0
+    },
+    "jneurosci": {
+      "status": "returned",
+      "count": 21
+    },
+    "jneurophys": {
+      "status": "returned",
+      "count": 1
+    },
+    "jcogn": {
+      "status": "returned",
+      "count": 3
+    },
+    "jvis": {
+      "status": "returned",
+      "count": 0
+    },
+    "brain": {
+      "status": "returned",
+      "count": 46
+    },
+    "pnas": {
+      "status": "returned",
+      "count": 95
+    },
+    "elife": {
+      "status": "returned",
+      "count": 16
+    },
+    "cell": {
+      "status": "returned",
+      "count": 34
+    },
+    "plos": {
+      "status": "returned",
+      "count": 88
+    }
+  },
+  "biorxiv_supplement_audit.json": {
+    "date_range": [
+      "2026-10-05",
+      "2026-10-10"
+    ],
+    "category": "neuroscience",
+    "status": "complete",
+    "pages": [
+      {
+        "cursor": 0,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 60,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/60?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 150,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/150?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/180?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 210,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/240?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "count": 30,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 300,
+        "count": 8,
+        "declared_total": 308,
+        "count_new_papers": "190",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-05/2026-10-10/300?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retries": [],
+    "retrieved_records": 308,
+    "date_semantics": "bioRxiv API record date is the posted version date; revisions may be included.",
+    "declared_total": 308,
+    "complete_pagination": true,
+    "unique_papers": 300,
+    "deduplicated_version_records": 8,
+    "rejected": {},
+    "missing_abstract_count": 0,
+    "finished_at": "2026-10-10T15:07:08.246864+00:00"
+  },
+  "excluded_nonresearch.json": [
+    {
+      "title": "Shifting the equilibrium on lupin alkaloids.",
+      "pmid": "42848905",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Before the immunological Big Bang.",
+      "pmid": "42848904",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "AI for research mathematics has arrived.",
+      "pmid": "42848903",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "In Science Journals.",
+      "pmid": "42848901",
+      "publication_types": [
+        "Journal Article"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "In Other Journals.",
+      "pmid": "42848895",
+      "publication_types": [
+        "Journal Article"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "An AI agent emailed hundreds of researchers for help. It told us why.",
+      "pmid": "42848883",
+      "publication_types": [
+        "Interview",
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "'Complete devastation': How NSF gutted its social sciences directorate.",
+      "pmid": "42848879",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "The Phobos heist.",
+      "pmid": "42848878",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Wooden tool trove reveals Neanderthal domestic life.",
+      "pmid": "42848876",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't.",
+      "pmid": "42848875",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "New studies probe how menopause puts brain at risk.",
+      "pmid": "42848874",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Nazi Germany had no hope of making an atomic bomb, uranium cubes reveal.",
+      "pmid": "42848872",
+      "publication_types": [
+        "News"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Team science: Progress, barriers, and pathways forward.",
+      "pmid": "42842412",
+      "publication_types": [
+        "Editorial"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Better antibodies, better science.",
+      "pmid": "42842540",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Navigation: Theta sweeps toward goals and targets.",
+      "pmid": "42833199",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Plant communication: More than one road to a plant's nose.",
+      "pmid": "42833198",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Cytokinesis: The proteasome is a cutting-edge abscission timer.",
+      "pmid": "42833197",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Microbiology: The burden of a bacterial weapon at times of peace.",
+      "pmid": "42833194",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Pelvis shows Neanderthals differed from humans in locomotion but not in birth.",
+      "pmid": "42832680",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "An evil much exaggerated? The consequences of cousin marriage.",
+      "pmid": "42832679",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Untangling microbial diversification in Antarctic soils-One strain at a time.",
+      "pmid": "42832675",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Nocturnal neurons shape daytime visual receptive fields in the retina.",
+      "pmid": "42832674",
+      "publication_types": [
+        "Journal Article",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Cervical lymph node biomarkers in neurodegeneration.",
+      "pmid": "42402921",
+      "publication_types": [
+        "Editorial",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    },
+    {
+      "title": "Reply: Genetically proxied GLP1R expression does not predict exenatide response in the Exenatide-PD3 trial.",
+      "pmid": "42217255",
+      "publication_types": [
+        "Editorial",
+        "Comment"
+      ],
+      "reason": "nonresearch publication type or recurring digest"
+    }
+  ],
+  "excluded_historical.json": [
+    {
+      "title": "Two Words Are Faster Than One: Neural Dynamics of Accelerated Meaning in Phrases.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1523/jneurosci.0581-26.2026",
+        "pmid": "42697720"
+      }
+    },
+    {
+      "title": "When disease illuminates physiology: mapping hidden fluid pathways in the human brain.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag315",
+        "pmid": "42779410"
+      }
+    },
+    {
+      "title": "When, how fast and which way: from phenoconversion to personalized progression in synucleinopathy.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag306",
+        "pmid": "42720072"
+      }
+    },
+    {
+      "title": "White matter lesions disrupt cholinergic transmission to impact cognition in Parkinson's disease.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag295",
+        "pmid": "42677898"
+      }
+    },
+    {
+      "title": "'Only in England': the origins of the British Migraine Association and Migraine Trust, 1954-66.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag250",
+        "pmid": "42496137"
+      }
+    },
+    {
+      "title": "Bilateral gamma knife radiosurgery in severe essential tremor: a prospective trial.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag231",
+        "pmid": "42489131"
+      }
+    },
+    {
+      "title": "Rethinking cortical hypertrophy in temporal lobe epilepsy.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag214",
+        "pmid": "42329679"
+      }
+    },
+    {
+      "title": "The entropic brain today.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag206",
+        "pmid": "42266156"
+      }
+    },
+    {
+      "title": "Mapping human glymphatic compartments and putative meningeal border pathways in diseased models.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag203",
+        "pmid": "42263190"
+      }
+    },
+    {
+      "title": "A novel mouse model of cerebral microbleeds by targeted Col4a1 editing in adult brain microvessels.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag048",
+        "pmid": "42225261"
+      }
+    },
+    {
+      "title": "Clinical markers of disease progression in the prodromal to overt alpha-synucleinopathy continuum.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag193",
+        "pmid": "42213896"
+      }
+    },
+    {
+      "title": "White matter lesions disrupt cholinergic pathways important for cognition in Parkinson's disease.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag172",
+        "pmid": "42117428"
+      }
+    },
+    {
+      "title": "Beyond human-initiated screening: the imperative for fully autonomous brain health surveillance.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag167",
+        "pmid": "42100828"
+      }
+    },
+    {
+      "title": "Dynamic metabolic programming of monocyte-derived cells defines immunity in CNS disease.",
+      "reason": "already included in historical corpus; not a posted preprint revision",
+      "identity": {
+        "matched_on": [
+          "doi",
+          "pmid"
+        ],
+        "doi": "10.1093/brain/awag149",
+        "pmid": "42052880"
+      }
+    }
+  ]
+}

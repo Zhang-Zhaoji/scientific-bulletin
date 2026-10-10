@@ -1,0 +1,41 @@
+{
+  "date_range": [
+    "2026-10-05",
+    "2026-10-10"
+  ],
+  "papers": 876,
+  "llm_result_count": 876,
+  "source_counts": {
+    "bioRxiv": 290,
+    "Brain": 27,
+    "Nature BME": 7,
+    "Nature Communications": 102,
+    "Neuron": 7,
+    "Current Biology": 22,
+    "Journal of Neuroscience": 20,
+    "PNAS": 89,
+    "Science Advances": 91,
+    "eLife": 16,
+    "PLOS": 86,
+    "arXiv": 52,
+    "Nature Human Behavior": 4,
+    "Nature Method": 3,
+    "Nature Neuroscience": 4,
+    "Science": 25,
+    "Nature": 26,
+    "Trends in Neurosciences": 1,
+    "Journal of Neurophysiology": 1,
+    "Journal of Cognitive Neuroscience": 3
+  },
+  "missing_abstracts": 92,
+  "papers_with_affiliation": 727,
+  "papers_with_ror": 674,
+  "author_metrics_status": "not requested; source metadata only",
+  "model_requested": "deepseek-flash",
+  "recommendation_distribution": {
+    "深度解读": 267,
+    "简要提及": 210,
+    "不推送": 395,
+    "头条推荐": 4
+  }
+}

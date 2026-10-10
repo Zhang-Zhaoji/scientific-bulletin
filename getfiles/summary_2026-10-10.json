@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-10",
+  "date_range": [
+    "2026-10-05",
+    "2026-10-10"
+  ],
+  "merged_count": 876,
+  "source_counts_after_merge": {
+    "bioRxiv": 290,
+    "Brain": 27,
+    "Nature BME": 7,
+    "Nature Communications": 102,
+    "Neuron": 7,
+    "Current Biology": 22,
+    "Journal of Neuroscience": 20,
+    "PNAS": 89,
+    "Science Advances": 91,
+    "eLife": 16,
+    "PLOS": 86,
+    "arXiv": 52,
+    "Nature Human Behavior": 4,
+    "Nature Method": 3,
+    "Nature Neuroscience": 4,
+    "Science": 25,
+    "Nature": 26,
+    "Trends in Neurosciences": 1,
+    "Journal of Neurophysiology": 1,
+    "Journal of Cognitive Neuroscience": 3
+  },
+  "input_counts": {
+    "tmps\\pipeline_20261010\\arxiv.jsonl": 53,
+    "tmps\\pipeline_20261010\\biorxiv_supplement.jsonl": 300,
+    "tmps\\pipeline_20261010\\supplement.jsonl": 147,
+    "tmps\\pipeline_20261010\\science.jsonl": 37,
+    "tmps\\pipeline_20261010\\cell.jsonl": 34,
+    "tmps\\pipeline_20261010\\jneurophys.jsonl": 1,
+    "tmps\\pipeline_20261010\\jneurosci.jsonl": 21,
+    "tmps\\pipeline_20261010\\jcogn.jsonl": 3,
+    "tmps\\pipeline_20261010\\jvis.jsonl": 0,
+    "tmps\\pipeline_20261010\\pnas.jsonl": 95,
+    "tmps\\pipeline_20261010\\brain.jsonl": 46,
+    "tmps\\pipeline_20261010\\sciadv.jsonl": 91,
+    "tmps\\pipeline_20261010\\elife.jsonl": 16,
+    "tmps\\pipeline_20261010\\plos.jsonl": 88
+  },
+  "sources": {
+    "bioRxiv": {
+      "count": 290
+    },
+    "Brain": {
+      "count": 42
+    },
+    "Nature BME": {
+      "count": 7
+    },
+    "Nature Communications": {
+      "count": 102
+    },
+    "Neuron": {
+      "count": 7
+    },
+    "Current Biology": {
+      "count": 26
+    },
+    "Journal of Neuroscience": {
+      "count": 21
+    },
+    "PNAS": {
+      "count": 94
+    },
+    "Science Advances": {
+      "count": 91
+    },
+    "eLife": {
+      "count": 16
+    },
+    "PLOS": {
+      "count": 87
+    },
+    "arXiv": {
+      "count": 52
+    },
+    "Nature Human Behavior": {
+      "count": 4
+    },
+    "Nature Method": {
+      "count": 3
+    },
+    "Nature Neuroscience": {
+      "count": 4
+    },
+    "Science": {
+      "count": 37
+    },
+    "Nature": {
+      "count": 26
+    },
+    "Trends in Neurosciences": {
+      "count": 1
+    },
+    "Journal of Neurophysiology": {
+      "count": 1
+    },
+    "Journal of Cognitive Neuroscience": {
+      "count": 3
+    }
+  },
+  "missing_abstract_count": 190,
+  "source_audit": "D:\\working\\scientific bulletin\\getfiles\\source_audit_2026-10-10.json"
+}

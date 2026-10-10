@@ -1,0 +1,68 @@
+{
+  "page_size": 16384,
+  "bytes": 104464384,
+  "integrity_check": "ok",
+  "foreign_key_errors": 0,
+  "table_rows_and_hashes": {
+    "article_author_institutions": [
+      161516,
+      "25d5f7f8f231a19c76fd9b3c1a05c047483e868c2f29d083caf1fe333221905f"
+    ],
+    "article_authors": [
+      139480,
+      "f619fc7647fe8b69e6e7b6e61e0c19a6ff6b20bc75c5f347127408676bff8858"
+    ],
+    "article_countries": [
+      22426,
+      "d602ec1235862ca05e69ed7abdbd3aea00584e5536d1531ef937dc682dc3bda3"
+    ],
+    "article_crosstags": [
+      31359,
+      "ee0c9b68ae14bbf1155360482684fddb036a70cdeded2cebf16a5701ffbc6780"
+    ],
+    "article_institutions": [
+      51988,
+      "e874775ef563af40ce09c8f5cd9554789246de0b2daf296271abb3abdd3ed03c"
+    ],
+    "article_subthemes": [
+      9730,
+      "aae056b8e5491ee0259956fa761f92e909b2568e2e5ec55582c779161a2cf2ab"
+    ],
+    "article_themes": [
+      15067,
+      "d510e447c065dbbc6b3a8ba4bb48bf12e9c55bcb59621ea806d6760d37b49875"
+    ],
+    "articles": [
+      14987,
+      "1f381638787006fa5ef65cf6cf014382128584240bddb6dfb0ea9483c6ab5fd0"
+    ],
+    "author_institutions": [
+      153277,
+      "e5c0f5c4609b67dd5313620fa4292b58eb1fb526df92229b1455d7a6d8ff5597"
+    ],
+    "authors": [
+      153424,
+      "8117f0849cd29ed2a11a51b344a7e36a06dadaa2db361c5316d981e825cb0693"
+    ],
+    "countries": [
+      288,
+      "613b349cddbde441c926a6bed3af794fedf17aa1e4aefe6ab9966fc2520e46dc"
+    ],
+    "crosstags": [
+      13718,
+      "461b0acaa164c3c0bcf91667bc6d03ecb68c83feec4588acb01b47be0cca5e2d"
+    ],
+    "institutions": [
+      12657,
+      "7bd111a66886ece6d1312403bea65914613d0fa581a6e305c77ce6144b6f6a39"
+    ],
+    "subthemes": [
+      389,
+      "7d12e05c3da9b8b94c5621f2bf4cad60bcac1009206a5d960fca0fb4a5e47a2f"
+    ],
+    "themes": [
+      11,
+      "3667b16346d5a3c285eded4506231e6a929076511f3efb8b571bbe6d4f04fced"
+    ]
+  }
+}

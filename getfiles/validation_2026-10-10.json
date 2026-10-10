@@ -1,0 +1,13 @@
+{
+  "papers": 876,
+  "results": 876,
+  "missing_local_images": [],
+  "cover_dimensions": [
+    1448,
+    1086
+  ],
+  "database_checks": {
+    "data/literature.db": "ok",
+    "docs/assets/data/literature_slim.db": "ok"
+  }
+}
