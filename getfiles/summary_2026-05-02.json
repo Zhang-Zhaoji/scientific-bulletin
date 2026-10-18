@@ -60,5 +60,15 @@
       "count": 0,
       "date_range": null
     }
-  }
+  },
+  "abstract_history_revision": "2026-10-18",
+  "missing_abstracts": 19,
+  "selected_missing_abstracts": 6,
+  "recommendation_distribution": {
+    "深度解读": 78,
+    "不推送": 245,
+    "简要提及": 82,
+    "头条推荐": 2
+  },
+  "missing_abstract_count_after_enrichment": 19
 }

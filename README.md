@@ -23,6 +23,8 @@ This repository contains the code and data of the Neuroscience Bulletin project.
 
 ### Prerequisites
 
+The full database, `data/literature.db`, is stored with Git LFS. Install Git LFS and run `git lfs install` before cloning; run `git lfs pull` in an existing clone to retrieve the database. The slim database used by the website remains stored directly in Git.
+
 ```bash
 # Recommended
 pip install -r requirements.txt

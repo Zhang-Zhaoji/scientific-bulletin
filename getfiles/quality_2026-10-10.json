@@ -27,15 +27,18 @@
     "Journal of Neurophysiology": 1,
     "Journal of Cognitive Neuroscience": 3
   },
-  "missing_abstracts": 92,
+  "missing_abstracts": 22,
   "papers_with_affiliation": 727,
   "papers_with_ror": 674,
   "author_metrics_status": "not requested; source metadata only",
   "model_requested": "deepseek-flash",
   "recommendation_distribution": {
     "深度解读": 267,
-    "简要提及": 210,
-    "不推送": 395,
+    "简要提及": 216,
+    "不推送": 389,
     "头条推荐": 4
-  }
+  },
+  "abstract_history_revision": "2026-10-18",
+  "selected_missing_abstracts": 5,
+  "missing_abstract_count_after_enrichment": 22
 }

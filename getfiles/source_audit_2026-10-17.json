@@ -1,0 +1,801 @@
+{
+  "date_range": [
+    "2026-10-11",
+    "2026-10-17"
+  ],
+  "publisher_and_index": {
+    "date_range": [
+      "2026-10-11",
+      "2026-10-17"
+    ],
+    "created_at": "2026-10-18T08:55:20.412461+00:00",
+    "count": 193,
+    "counts": {
+      "Nature Communications": 144,
+      "Nature": 32,
+      "Nature Human Behavior": 1,
+      "Nature Neuroscience": 8,
+      "Nature BME": 3,
+      "Nature Method": 5
+    },
+    "missing_abstract_count": 0,
+    "publisher_date_mismatches": [],
+    "index_print_date_differences": [],
+    "author_affiliation_record_count": 2891,
+    "requests": [
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-06",
+            "max_date": "2026-10-14",
+            "url": "https://www.nature.com/nature/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 6,
+          "type:News & Views": 13,
+          "outside_window": 1
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-06-29",
+            "max_date": "2026-10-05",
+            "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "outside_window": 5,
+          "type:Research Briefing": 5,
+          "type:Perspective": 4,
+          "type:News & Views": 6
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-08-25",
+            "max_date": "2026-10-14",
+            "url": "https://www.nature.com/natbiomedeng/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 3,
+        "rejected": {
+          "outside_window": 17
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-08",
+            "max_date": "2026-10-16",
+            "url": "https://www.nature.com/nmeth/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 4,
+        "rejected": {
+          "outside_window": 16
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-06-22",
+            "max_date": "2026-10-16",
+            "url": "https://www.nature.com/nmeth/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "type:Research Briefing": 11,
+          "type:Perspective": 5,
+          "type:News & Views": 3
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-14",
+            "max_date": "2026-10-15",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 20,
+            "min_date": "2026-10-07",
+            "max_date": "2026-10-14",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=2"
+          }
+        ],
+        "accepted": 32,
+        "rejected": {
+          "outside_window": 8
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-21",
+            "max_date": "2026-10-15",
+            "url": "https://www.nature.com/neuro/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 8,
+        "rejected": {
+          "outside_window": 12
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-06-15",
+            "max_date": "2026-10-14",
+            "url": "https://www.nature.com/neuro/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:News & Views": 11,
+          "type:Perspective": 3,
+          "type:Research Briefing": 3,
+          "outside_window": 3
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-02",
+            "max_date": "2026-10-12",
+            "url": "https://www.nature.com/nathumbehav/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "outside_window": 19
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-07-15",
+            "max_date": "2026-10-14",
+            "url": "https://www.nature.com/nathumbehav/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 9,
+          "type:News & Views": 4,
+          "type:Perspective": 7
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Cell",
+        "query": "JOURNAL:\"Cell\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Science",
+        "query": "JOURNAL:\"Science\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/health-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-10-10",
+            "max_date": "2026-10-17",
+            "url": "https://www.nature.com/subjects/health-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 47,
+        "rejected": {
+          "type:Perspective": 2,
+          "outside_window": 1
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Neuron",
+        "query": "JOURNAL:\"Neuron\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Trends in Neurosciences",
+        "query": "JOURNAL:\"Trends in Neurosciences\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Current Biology",
+        "query": "JOURNAL:\"Current Biology\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Reports",
+        "query": "JOURNAL:\"Cell Reports\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "iScience",
+        "query": "JOURNAL:\"iScience\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Systems",
+        "query": "JOURNAL:\"Cell Systems\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/biological-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-10-15",
+            "max_date": "2026-10-18",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 50,
+            "min_date": "2026-10-13",
+            "max_date": "2026-10-15",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=2"
+          },
+          {
+            "page": 3,
+            "article_cards": 50,
+            "min_date": "2026-10-09",
+            "max_date": "2026-10-13",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=3"
+          }
+        ],
+        "accepted": 130,
+        "rejected": {
+          "outside_window": 18,
+          "type:Perspective": 1,
+          "type:Comment": 1
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Journal of Neuroscience",
+        "query": "JOURNAL:\"J Neurosci\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Cognitive Neuroscience",
+        "query": "JOURNAL:\"J Cogn Neurosci\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Neurophysiology",
+        "query": "JOURNAL:\"J Neurophysiol\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Vision",
+        "query": "JOURNAL:\"J Vis\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Brain",
+        "query": "JOURNAL:\"Brain\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Science Advances",
+        "query": "JOURNAL:\"Science Advances\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PNAS",
+        "query": "JOURNAL:\"Proc Natl Acad Sci U S A\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "eLife",
+        "query": "JOURNAL:\"Elife\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Biol\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Comput Biol\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS One\" AND FIRST_PDATE:[2026-10-11 TO 2026-10-17] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      }
+    ],
+    "date_parser_diagnosis": "ISO YYYY-MM-DD must bypass dateutil dayfirst=True.",
+    "limitations": [
+      "Nature Communications limited to original biological/health subject pages.",
+      "Europe PMC firstPublicationDate is an indexed first publication date; index completeness is not guaranteed."
+    ]
+  },
+  "biorxiv": {
+    "date_range": [
+      "2026-10-11",
+      "2026-10-17"
+    ],
+    "category": "neuroscience",
+    "status": "complete",
+    "pages": [
+      {
+        "cursor": 0,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 60,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/60?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 150,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/150?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/180?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 210,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/240?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 300,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/300?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 330,
+        "count": 30,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/330?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 360,
+        "count": 19,
+        "declared_total": 379,
+        "count_new_papers": "297",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-11/2026-10-17/360?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retries": [],
+    "retrieved_records": 379,
+    "date_semantics": "bioRxiv API record date is the posted version date; revisions may be included.",
+    "declared_total": 379,
+    "complete_pagination": true,
+    "unique_papers": 369,
+    "deduplicated_version_records": 10,
+    "rejected": {},
+    "missing_abstract_count": 0,
+    "finished_at": "2026-10-18T08:52:21.726598+00:00"
+  },
+  "arxiv_retry": [
+    {
+      "category": "q-bio.NC",
+      "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.NC&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+      "http_status": 200,
+      "status": "ok",
+      "count": 23,
+      "earliest_retrieved": "01 Oct 2026"
+    },
+    {
+      "category": "q-bio.TO",
+      "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.TO&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+      "http_status": 200,
+      "status": "ok",
+      "count": 6,
+      "earliest_retrieved": "01 Aug 2025"
+    }
+  ],
+  "native_crawlers": {
+    "jneurosci": {
+      "status": "returned",
+      "raw_count": 0,
+      "count": 0,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "jcogn": {
+      "status": "returned",
+      "raw_count": 0,
+      "count": 0,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "science": {
+      "status": "returned",
+      "raw_count": 34,
+      "count": 34,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "jvis": {
+      "status": "returned",
+      "raw_count": 0,
+      "count": 0,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "jneurophys": {
+      "status": "returned",
+      "raw_count": 0,
+      "count": 0,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "brain": {
+      "status": "returned",
+      "raw_count": 8,
+      "count": 8,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "pnas": {
+      "status": "returned",
+      "raw_count": 101,
+      "count": 101,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "elife": {
+      "status": "returned",
+      "raw_count": 24,
+      "count": 24,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "cell": {
+      "status": "returned",
+      "raw_count": 40,
+      "count": 40,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "sciadv": {
+      "status": "returned",
+      "raw_count": 0,
+      "count": 0,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    },
+    "plos": {
+      "status": "returned",
+      "raw_count": 86,
+      "count": 86,
+      "limitation": "Inspect crawler log for internally handled request failures."
+    }
+  },
+  "pubmed_retries": [
+    {
+      "source": "Science Advances",
+      "query": "Sci Adv[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 89,
+      "retrieved_ids": 89,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Sci+Adv%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 89
+    },
+    {
+      "source": "Journal of Neuroscience",
+      "query": "J Neurosci[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 20,
+      "retrieved_ids": 20,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurosci%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 20
+    },
+    {
+      "source": "Journal of Cognitive Neuroscience",
+      "query": "J Cogn Neurosci[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Cogn+Neurosci%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "Journal of Neurophysiology",
+      "query": "J Neurophysiol[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurophysiol%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "Journal of Vision",
+      "query": "J Vis[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Vis%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Biol[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 15,
+      "retrieved_ids": 15,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Biol%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 15
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Comput Biol[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 21,
+      "retrieved_ids": 21,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Comput+Biol%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 21
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS One[journal] AND 2026/10/11:2026/10/17[PDAT]",
+      "count": 269,
+      "retrieved_ids": 269,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+One%5Bjournal%5D+AND+2026%2F10%2F11%3A2026%2F10%2F17%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 269
+    }
+  ],
+  "limitations": [
+    "Europe PMC returned zero records across the requested journal/date queries; publisher and PubMed checkpoints used independently.",
+    "Native Science Advances scraper returned no article cards; recovered through PubMed.",
+    "Source access and indexing do not guarantee exhaustive journal coverage."
+  ]
+}

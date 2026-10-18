@@ -23,6 +23,8 @@
 
 ### 环境依赖
 
+完整数据库 `data/literature.db` 使用 Git LFS 保存。克隆前安装 Git LFS，并运行 `git lfs install`；已有克隆运行 `git lfs pull` 获取数据库。网页使用的精简数据库仍直接保存在仓库中。
+
 ```bash
 # 推荐方式
 pip install -r requirements.txt

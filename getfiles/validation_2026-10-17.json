@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "issue": "032",
+  "date_range": [
+    "2026-10-11",
+    "2026-10-17"
+  ],
+  "papers": 1167,
+  "llm_results": 1167,
+  "selected": 555,
+  "selected_missing_abstracts": 5,
+  "tiers": {
+    "简要提及": 279,
+    "深度解读": 276,
+    "不推送": 612
+  },
+  "missing_selected": [
+    {
+      "title": "A novel TARGET for anti-CD20 antibody therapy in multiple sclerosis.",
+      "tier": "简要提及",
+      "doi": "10.1093/brain/awag360"
+    },
+    {
+      "title": "Disentangling biases in responding from substantive effects in computational psychiatry.",
+      "tier": "深度解读",
+      "doi": "10.1073/pnas.2624329123"
+    },
+    {
+      "title": "Reply to Gillan et al.: What should be the null hypothesis in computational psychiatry?",
+      "tier": "简要提及",
+      "doi": "10.1073/pnas.2628596123"
+    },
+    {
+      "title": "Progress divides the room: patients, biology and the 2024 McDonald criteria.",
+      "tier": "简要提及",
+      "doi": "10.1093/brain/awag346"
+    },
+    {
+      "title": "Mapping therapeutic neural circuits from bed nucleus of stria terminalis biomarkers.",
+      "tier": "简要提及",
+      "doi": "10.1093/brain/awag354"
+    }
+  ],
+  "cover_size": [
+    1448,
+    1086
+  ],
+  "broken_local_html_assets": [],
+  "databases": {
+    "data/literature.db": {
+      "integrity": "ok",
+      "foreign_keys": "ok",
+      "week_scores_verified": 1167,
+      "articles": 16154
+    },
+    "docs/assets/data/literature_slim.db": {
+      "integrity": "ok",
+      "foreign_keys": "ok",
+      "week_scores_verified": 1167,
+      "articles": 16154
+    }
+  },
+  "verified_at": "2026-10-18T17:07:13.012013"
+}

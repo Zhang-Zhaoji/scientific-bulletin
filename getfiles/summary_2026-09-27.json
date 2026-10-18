@@ -134,5 +134,14 @@
   },
   "missing_abstract_count": 201,
   "final_quality_report": "getfiles/quality_2026-09-27.json",
-  "final_report": "LLM_Results/report_20260927.md"
+  "final_report": "LLM_Results/report_20260927.md",
+  "abstract_history_revision": "2026-10-18",
+  "missing_abstracts": 16,
+  "selected_missing_abstracts": 7,
+  "recommendation_distribution": {
+    "简要提及": 256,
+    "深度解读": 243,
+    "不推送": 203
+  },
+  "missing_abstract_count_after_enrichment": 16
 }

@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-17",
+  "date_range": [
+    "2026-10-11",
+    "2026-10-17"
+  ],
+  "merged_count": 1167,
+  "source_counts_after_merge": {
+    "bioRxiv": 351,
+    "Nature Communications": 144,
+    "Brain": 7,
+    "Nature Method": 5,
+    "Neuron": 9,
+    "Current Biology": 9,
+    "PNAS": 96,
+    "eLife": 22,
+    "PLOS": 293,
+    "Science Advances": 87,
+    "Nature": 32,
+    "Nature Neuroscience": 8,
+    "Science": 19,
+    "Cell": 17,
+    "Journal of Neuroscience": 8,
+    "arXiv": 54,
+    "Nature BME": 3,
+    "Trends in Neurosciences": 2,
+    "Nature Human Behavior": 1
+  },
+  "input_counts": {
+    "tmps\\pipeline_20261017\\biorxiv_supplement.jsonl": 369,
+    "tmps\\pipeline_20261017\\supplement.jsonl": 193,
+    "tmps\\pipeline_20261017\\remaining.jsonl": 293,
+    "tmps\\pipeline_20261017\\pubmed_retry.jsonl": 414,
+    "tmps\\pipeline_20261017\\arxiv.jsonl": 27,
+    "tmps\\pipeline_20261017\\arxiv_retry.jsonl": 29
+  },
+  "sources": {
+    "bioRxiv": {
+      "count": 351
+    },
+    "Nature Communications": {
+      "count": 144
+    },
+    "Brain": {
+      "count": 7
+    },
+    "Nature Method": {
+      "count": 5
+    },
+    "Neuron": {
+      "count": 9
+    },
+    "Current Biology": {
+      "count": 9
+    },
+    "PNAS": {
+      "count": 96
+    },
+    "eLife": {
+      "count": 22
+    },
+    "PLOS": {
+      "count": 293
+    },
+    "Science Advances": {
+      "count": 87
+    },
+    "Nature": {
+      "count": 32
+    },
+    "Nature Neuroscience": {
+      "count": 8
+    },
+    "Science": {
+      "count": 19
+    },
+    "Cell": {
+      "count": 17
+    },
+    "Journal of Neuroscience": {
+      "count": 8
+    },
+    "arXiv": {
+      "count": 54
+    },
+    "Nature BME": {
+      "count": 3
+    },
+    "Trends in Neurosciences": {
+      "count": 2
+    },
+    "Nature Human Behavior": {
+      "count": 1
+    }
+  },
+  "missing_abstract_count": 367,
+  "source_audit": "D:\\working\\scientific bulletin\\getfiles\\source_audit_2026-10-17.json",
+  "missing_abstract_count_after_enrichment": 11,
+  "exclusion_audit": "getfiles/exclusion_audit_2026-10-17.json",
+  "abstract_recovery_audit": "getfiles/abstract_recovery_2026-10-17.json"
+}

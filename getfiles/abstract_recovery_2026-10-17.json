@@ -1,0 +1,342 @@
+{
+  "attempted": 11,
+  "recovered_scientific_abstracts": 0,
+  "selected": 555,
+  "selected_missing_abstracts": 5,
+  "missing_by_tier": {
+    "简要提及": 4,
+    "深度解读": 1
+  },
+  "remaining": [
+    {
+      "title": "A novel TARGET for anti-CD20 antibody therapy in multiple sclerosis.",
+      "doi": "10.1093/brain/awag360",
+      "tier": "简要提及"
+    },
+    {
+      "title": "Disentangling biases in responding from substantive effects in computational psychiatry.",
+      "doi": "10.1073/pnas.2624329123",
+      "tier": "深度解读"
+    },
+    {
+      "title": "Reply to Gillan et al.: What should be the null hypothesis in computational psychiatry?",
+      "doi": "10.1073/pnas.2628596123",
+      "tier": "简要提及"
+    },
+    {
+      "title": "Progress divides the room: patients, biology and the 2024 McDonald criteria.",
+      "doi": "10.1093/brain/awag346",
+      "tier": "简要提及"
+    },
+    {
+      "title": "Mapping therapeutic neural circuits from bed nucleus of stria terminalis biomarkers.",
+      "doi": "10.1093/brain/awag354",
+      "tier": "简要提及"
+    }
+  ],
+  "attempts": [
+    {
+      "title": "A novel TARGET for anti-CD20 antibody therapy in multiple sclerosis.",
+      "doi": "10.1093/brain/awag360",
+      "pmid": "42888166",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbrain%2Fawag360%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1093/brain/awag360",
+          "http_status": 200
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "insufficient_commentary_pointer",
+      "abstract": "This scientific commentary refers to ‘Multimodal discovery of a pathogenic B cell-dependent T cell state in multiple sclerosis’ by Farooq et al. (https://doi.org/10.1093/brain/awag303).",
+      "abstract_source": "Crossref DOI-verified",
+      "abstract_source_url": "https://api.crossref.org/works/10.1093/brain/awag360",
+      "reason": "Crossref text only identifies another article; it is not a scientific abstract and was not applied."
+    },
+    {
+      "title": "Compensate peer reviewers; do not conscript them.",
+      "doi": "10.1073/pnas.2619714123",
+      "pmid": "42886757",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2619714123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2619714123",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2619714123",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2619714123"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Reply to Gorelick and Kunst: Paying reviewers will increase publication costs and could exacerbate inequities.",
+      "doi": "10.1073/pnas.2628160123",
+      "pmid": "42886755",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2628160123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2628160123",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2628160123",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2628160123"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Disentangling biases in responding from substantive effects in computational psychiatry.",
+      "doi": "10.1073/pnas.2624329123",
+      "pmid": "42886754",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2624329123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2624329123",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2624329123",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2624329123"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Reply to Gillan et al.: What should be the null hypothesis in computational psychiatry?",
+      "doi": "10.1073/pnas.2628596123",
+      "pmid": "42886753",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2628596123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2628596123",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2628596123",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2628596123"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Prioritize contaminants of emerging concern in the High Seas Treaty.",
+      "doi": "10.1126/science.aem0511",
+      "pmid": "42879546",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aem0511%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.aem0511",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.aem0511",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.aem0511"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Speaking with authority.",
+      "doi": "10.1126/science.aen1238",
+      "pmid": "42879543",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aen1238%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.aen1238",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.aen1238",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.aen1238"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "China's pollination policy must look beyond managed honey bees.",
+      "doi": "10.1126/science.ael5505",
+      "pmid": "42879542",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.ael5505%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.ael5505",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.ael5505",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.ael5505"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Make plastics an explicit consideration in the High Seas Treaty.",
+      "doi": "10.1126/science.ael5669",
+      "pmid": "42879540",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.ael5669%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.ael5669",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.ael5669",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.ael5669"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Progress divides the room: patients, biology and the 2024 McDonald criteria.",
+      "doi": "10.1093/brain/awag346",
+      "pmid": "42861711",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbrain%2Fawag346%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1093/brain/awag346",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag346/8910322",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag346/8910322"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    },
+    {
+      "title": "Mapping therapeutic neural circuits from bed nucleus of stria terminalis biomarkers.",
+      "doi": "10.1093/brain/awag354",
+      "pmid": "42861705",
+      "attempts": [
+        {
+          "method": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbrain%2Fawag354%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "method": "Crossref",
+          "url": "https://api.crossref.org/works/10.1093/brain/awag354",
+          "http_status": 200
+        },
+        {
+          "method": "publisher",
+          "url": "https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag354/8910305",
+          "http_status": 403
+        },
+        {
+          "method": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag354/8910305"
+        }
+      ],
+      "initial_source": "PubMed XML source cache contains no sufficient abstract",
+      "status": "not_recovered"
+    }
+  ]
+}

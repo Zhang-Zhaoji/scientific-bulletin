@@ -107677,7 +107677,8 @@
     "key_limitation": "无",
     "target_audience": "无",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -115703,7 +115704,8 @@
     "key_limitation": "无",
     "target_audience": "无",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -116948,7 +116950,7 @@
         ],
         "date": "19 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41856790/",
-        "abstract": "",
+        "abstract": "Young children strongly depend on others, and learning to understand their mental states (referred to as theory of mind, ToM) is a key challenge of early cognitive development. Traditionally, ToM is thought to emerge around the age of 4 years. Yet, in nonverbal tasks, preverbal infants already seem to consider others' mental states when predicting their actions. These early nonverbal capacities, however, seem fragile and distinct from later-developing verbal ToM. So far, little is known about the nature of these early capacities and the neural networks supporting them. To identify these networks, we investigated the maturation of nerve fiber connections associated with children's correct nonverbal action prediction and compared them with connections supporting verbal ToM reasoning in 3- to 4-year-old children of both sexes, that is, before and after their breakthrough in verbal ToM. This revealed a ventral network for nonverbal action prediction versus a dorsal network for verbal ToM. Nonverbal capacities were associated with maturational indices in ventral fiber tracts connecting regions of the salience network, involved in bottom-up social attention processes. In contrast, verbal ToM performance correlated with maturational indices of the arcuate fascicle and cingulum, which dorsally connect regions of the default network, involved in higher-order social cognitive processes including ToM in adults. As nonverbal tasks were linked to connections of the salience network, young children may make use of salient perceptual social cues to predict others' actions, questioning theories of mature ToM before 4 years.",
         "doi": "10.1523/JNEUROSCI.1419-24.2026",
         "pmid": "41856790",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -117276,7 +117278,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41856790/"
       },
       "title": "A dorsal versus ventral network for understanding others in the developing brain.",
       "authors": [
@@ -117285,34 +117289,56 @@
         "Charlotte Grosse Wiesmann"
       ],
       "date": "19 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Young children strongly depend on others, and learning to understand their mental states (referred to as theory of mind, ToM) is a key challenge of early cognitive development. Traditionally, ToM is thought to emerge around the age of 4 years. Yet, in nonverbal tasks, preverbal infants already seem to consider others' mental states when predicting their actions. These early nonverbal capacities, however, seem fragile and distinct from later-developing verbal ToM. So far, little is known about the nature of these early capacities and the neural networks supporting them. To identify these networks, we investigated the maturation of nerve fiber connections associated with children's correct nonverbal action prediction and compared them with connections supporting verbal ToM reasoning in 3- to 4-year-old children of both sexes, that is, before and after their breakthrough in verbal ToM. This revealed a ventral network for nonverbal action prediction versus a dorsal network for verbal ToM. Nonverbal capacities were associated with maturational indices in ventral fiber tracts connecting regions of the salience network, involved in bottom-up social attention processes. In contrast, verbal ToM performance correlated with maturational indices of the arcuate fascicle and cingulum, which dorsally connect regions of the default network, involved in higher-order social cognitive processes including ToM in adults. As nonverbal tasks were linked to connections of the salience network, young children may make use of salient perceptual social cues to predict others' actions, questioning theories of mature ToM before 4 years.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41856790/"
     },
-    "title_zh": "发育中大脑理解他人的背侧与腹侧网络",
+    "title_zh": "发育大脑中理解他人的背侧与腹侧网络",
     "paper_id": "7a44d1c298c0",
     "domain": "核心域",
     "primary_category": "发育神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "发育神经科学",
+      "认知神经科学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "婴儿",
+      "心理理论",
+      "社会脑网络",
+      "功能连接",
+      "发展轨迹"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.2,
-      "contribution": 7.5,
-      "accessibility": 8.0
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.0,
+      "contribution": 7.3,
+      "accessibility": 7.5
     },
-    "total_score": 5.59,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨发育期大脑中社会认知功能的神经环路机制，完美契合发育神经科学与社会认知神经科学的交叉领域。",
-    "feature_angle": "揭示了发育中人脑理解他人时背侧与腹侧网络的功能分化机制。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "在发育神经科学领域清晰界定了社会认知网络的空间拓扑结构，为理解心智理论（ToM）的神经基础提供了关键的发展视角。",
-    "key_limitation": "发表于专业期刊而非顶刊，且受限于摘要信息缺失，推测其缺乏跨物种验证或因果性干预（如光遗传/临床病变对照），证据链尚未达到颠覆范式级别。",
-    "target_audience": "发育认知神经科学家、社会神经科学研究者及儿童精神病理学专家",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.33,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用静息态fMRI揭示了发育早期支持心理理论（ToM）的两个分离网络：背侧网络与腹侧网络。背侧网络可能支持非言语的、自动化的心理状态推断，而腹侧网络则与后期言语ToM相关。这一发现挑战了ToM仅随言语发展而出现的传统观点，为理解社会认知的神经基础提供了发展视角，并强调了婴儿期非言语ToM能力的重要性。研究结合了发展群体与网络水平分析，对认知神经科学和发育神经科学均有启示。",
+    "confidence": 9.5,
+    "reasoning": "该研究考察儿童心理理论相关的白质纤维连接成熟，直接属于发育认知神经科学的核心问题。",
+    "feature_angle": "腹侧与背侧白质网络分别支撑幼儿非语言动作预测与语言理论心理，提示4岁前的非语言心理化可能依赖凸显网络的知觉社会线索而非成熟心理理论。",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用3–4岁儿童语言理论心理突破前后窗口，在同一批被试中对比非语言动作预测与语言理论心理的结构连接基础，将发展认知的两种心理化形式映射到可分离的腹侧/背侧白质网络。",
+    "key_limitation": "横断面设计难以确立白质成熟与能力出现的因果关系；扩散指标与行为测量的解释受限于样本量、纤维束追踪的可靠性以及非语言任务可能涉及的抑制控制等混杂因素。",
+    "target_audience": "发展认知神经科学家、社会神经科学研究者、扩散磁共振成像方法学者及理论心理计算模型研究者",
+    "crossover_value": null,
+    "editor_note": "论文得分7.33/10，创新性中等，但主题重要，适合作为发育社会神经科学的亮点推荐。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1419-24.2026",
+      "previous_score": 5.59,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41856790/"
+    }
   },
   {
     "paper": {
@@ -117330,7 +117356,7 @@
         ],
         "date": "19 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41819844/",
-        "abstract": "",
+        "abstract": "In the brain, endothelial cell (EC) subtypes characterized by blood-brain barrier (BBB) properties or fenestrated pores form essential brain-blood interfaces and exhibit markedly distinct permeability. The choroid plexus (CP) establishes fenestrated vasculature lacking the BBB to efficiently regulate cerebrospinal fluid balance, yet its developmental origins and mechanisms remain poorly defined. Using single-cell-resolution fate mapping in zebrafish, we identify here two venous sources that give rise to the hindbrain myelencephalic CP (mCP) vasculature. RNAscope and BAC transgenic analyses reveal highly abundant and persistent expression of the venous marker flt4 in these EC lineages, supporting their identities. Unexpectedly, we find that these venous origins of the mCP vasculature also contribute ECs to diverse cranial vessels, including those that maintain low flt4 expression and later acquire BBB characteristics. Functionally, flt4 null and cytoplasmic-domain-deletion mutants exacerbate mCP vascularization defects when combined with vegfr2 signaling deficiency, without disrupting neighboring BBB-type vessels. Pharmacological data support this corequirement of Flt4 and Vegfr2 signaling in mCP vascularization and further suggest that the PI3K and ERK pathways are necessary for this process. Together, these findings reveal embryonic venous lineages and molecular pathways required for hindbrain CP vascularization and imply that Flt4 signaling contributes to the angiogenic separation of CP- and BBB-associated capillaries originating from shared embryonic domains.",
         "doi": "10.1523/JNEUROSCI.2204-25.2026",
         "pmid": "41819844",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -118266,7 +118292,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41819844/"
       },
       "title": "Single-cell-resolution fate mapping reveals embryonic venous origins of fenestrated hindbrain choroid plexus vasculature.",
       "authors": [
@@ -118279,34 +118307,58 @@
         "Ryota L Matsuoka"
       ],
       "date": "19 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "In the brain, endothelial cell (EC) subtypes characterized by blood-brain barrier (BBB) properties or fenestrated pores form essential brain-blood interfaces and exhibit markedly distinct permeability. The choroid plexus (CP) establishes fenestrated vasculature lacking the BBB to efficiently regulate cerebrospinal fluid balance, yet its developmental origins and mechanisms remain poorly defined. Using single-cell-resolution fate mapping in zebrafish, we identify here two venous sources that give rise to the hindbrain myelencephalic CP (mCP) vasculature. RNAscope and BAC transgenic analyses reveal highly abundant and persistent expression of the venous marker flt4 in these EC lineages, supporting their identities. Unexpectedly, we find that these venous origins of the mCP vasculature also contribute ECs to diverse cranial vessels, including those that maintain low flt4 expression and later acquire BBB characteristics. Functionally, flt4 null and cytoplasmic-domain-deletion mutants exacerbate mCP vascularization defects when combined with vegfr2 signaling deficiency, without disrupting neighboring BBB-type vessels. Pharmacological data support this corequirement of Flt4 and Vegfr2 signaling in mCP vascularization and further suggest that the PI3K and ERK pathways are necessary for this process. Together, these findings reveal embryonic venous lineages and molecular pathways required for hindbrain CP vascularization and imply that Flt4 signaling contributes to the angiogenic separation of CP- and BBB-associated capillaries originating from shared embryonic domains.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41819844/"
     },
-    "title_zh": "单细胞分辨率的命运图谱揭示了有孔后脑脉络丛血管的胚胎静脉起源",
+    "title_zh": "单细胞分辨率命运图谱揭示后脑脉络丛有孔血管的胚胎静脉起源",
     "paper_id": "ee3afc1f07a6",
     "domain": "核心域",
     "primary_category": "发育神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "发育神经科学",
+      "系统与环路神经科学"
+    ],
+    "cross_tags": [
+      "单细胞命运图谱",
+      "斑马鱼",
+      "后脑脉络丛",
+      "血管发育",
+      "静脉起源",
+      "血脑屏障",
+      "窗孔内皮",
+      "RNAscope"
+    ],
     "scores": {
-      "breakthrough": 7.8,
-      "methodology": 8.5,
-      "evidence": 8.2,
-      "contribution": 8.0,
+      "breakthrough": 7.2,
+      "methodology": 7.5,
+      "evidence": 7.0,
+      "contribution": 7.0,
       "accessibility": 6.5
     },
-    "total_score": 6.33,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.11,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用单细胞分辨率的命运图谱技术，在斑马鱼中揭示了后脑脉络丛血管的静脉起源，挑战了传统认为脉络丛血管仅来源于动脉或血管新生的观点。研究鉴定了两个静脉来源，并发现窗孔内皮细胞的特化机制。这项工作不仅为理解血脑屏障异质性和脉络丛发育提供了新视角，也为研究器官特异性血管分化提供了范式。",
     "confidence": 9.5,
-    "reasoning": "该研究利用单细胞技术解析了后脑脉络丛血管的胚胎发育起源，直接阐明了中枢神经系统关键结构的血管发生机制。",
-    "feature_angle": "利用单细胞分辨率谱系追踪技术，首次确证后脑脉络丛窗孔血管起源于胚胎静脉系统而非动脉。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "高分辨率命运图谱（fate mapping）与多模态验证相结合，解决了血脑屏障发育中特定血管亚群起源的长期争议。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，表明其机制深度或普适性可能尚未达到颠覆整个神经血管单元范式的程度，主要局限于发育生物学细分领域。",
-    "target_audience": "神经血管发育研究者、血脑屏障机制专家及计算系统生物学家",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "该研究直接探究脑内脉络丛血管的发育起源与机制，属于神经科学核心问题，侧重发育神经科学。",
+    "feature_angle": "单细胞命运图谱揭示后脑脉络丛血管的胚胎静脉起源，并为Flt4/Vegfr2协同驱动血管生成分离提供证据。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在斑马鱼中结合单细胞分辨率命运图谱、RNAscope与BAC转基因验证，将mCP血管溯源至持续表达flt4的静脉内皮谱系，并用遗传与药理学双证据链支持Flt4与Vegfr2共需求。",
+    "key_limitation": "核心结论主要依赖斑马鱼模型，哺乳动物保守性与人类相关性未验证；功能实验限于血管化缺陷的表型描述，Flt4下游PI3K/ERK的具体细胞机制及谱系追踪的克隆分辨率仍显不足。",
+    "target_audience": "神经血管生物学、脑血管发育与脉络丛研究者，以及斑马鱼遗传学和内皮细胞谱系追踪领域学者",
+    "crossover_value": null,
+    "editor_note": "方法学创新（单细胞命运图谱）与发育血管生物学的重要结合，适合发育神经科学和血管生物学交叉专题。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.2204-25.2026",
+      "previous_score": 6.33,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41819844/"
+    }
   },
   {
     "paper": {
@@ -187859,7 +187911,7 @@
         ],
         "date": "17 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41844280/",
-        "abstract": "",
+        "abstract": "Social relationships, including dominance status, are powerful regulators of mental health, and social experiences impact the continued expression of these behaviors. However, very little is known about the neuronal mechanisms that regulate the positive reinforcing effects of aggression that underlie social dominance, including potential sex differences. To address this gap, we used viral-mediated gene expression in Syrian hamsters to investigate how nucleus accumbens neurons regulate behavioral adaptations caused by aggression and other social interactions in both males and females. We found that females, but not males, display an increase in the efficiency to establish aggression with repeated experience. Females also displayed a more rapid potentiation of calcium signals from nucleus accumbens neurons over repeated social interactions. Chemogenetic inhibition of nucleus accumbens neurons specifically decreased aggression in females. Optogenetic stimulation of excitatory synaptic input from the prefrontal cortex to the nucleus accumbens decreased social investigation in females but increased social investigation and reduced aggression in males. Collectively, these studies suggest that the activity of nucleus accumbens neurons drives behavioral adaptations related to social interactions in general, and aggressive experience in particular, in opposite directions in females and males. This mechanism may contribute to the enhanced reward for social interactions in females compared with males and help explain the sex differences in the susceptibility to disorders associated with deficits in social behavior.",
         "doi": "10.1523/JNEUROSCI.2292-25.2026",
         "pmid": "41844280",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -188257,7 +188309,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41844280/"
       },
       "title": "Dichotomous Regulation of Social Behaviors by Nucleus Accumbens Neurons in Female and Male Syrian Hamsters.",
       "authors": [
@@ -188268,34 +188322,57 @@
         "Patrick E Rothwell"
       ],
       "date": "17 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Social relationships, including dominance status, are powerful regulators of mental health, and social experiences impact the continued expression of these behaviors. However, very little is known about the neuronal mechanisms that regulate the positive reinforcing effects of aggression that underlie social dominance, including potential sex differences. To address this gap, we used viral-mediated gene expression in Syrian hamsters to investigate how nucleus accumbens neurons regulate behavioral adaptations caused by aggression and other social interactions in both males and females. We found that females, but not males, display an increase in the efficiency to establish aggression with repeated experience. Females also displayed a more rapid potentiation of calcium signals from nucleus accumbens neurons over repeated social interactions. Chemogenetic inhibition of nucleus accumbens neurons specifically decreased aggression in females. Optogenetic stimulation of excitatory synaptic input from the prefrontal cortex to the nucleus accumbens decreased social investigation in females but increased social investigation and reduced aggression in males. Collectively, these studies suggest that the activity of nucleus accumbens neurons drives behavioral adaptations related to social interactions in general, and aggressive experience in particular, in opposite directions in females and males. This mechanism may contribute to the enhanced reward for social interactions in females compared with males and help explain the sex differences in the susceptibility to disorders associated with deficits in social behavior.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41844280/"
     },
-    "title_zh": "伏隔核神经元对叙利亚仓鼠雌雄社会行为的双向调控",
+    "title_zh": "雌雄叙利亚仓鼠伏隔核神经元对社会行为的二分调控",
     "paper_id": "49e69cfe3aab",
     "domain": "核心域",
     "primary_category": "社会与情感神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "社会与情感神经科学",
+      "系统与环路神经科学"
+    ],
+    "cross_tags": [
+      "叙利亚仓鼠",
+      "伏隔核",
+      "社会等级",
+      "攻击行为",
+      "性别差异",
+      "病毒载体",
+      "神经环路"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.4,
       "contribution": 7.0,
-      "accessibility": 6.0
+      "accessibility": 6.8
     },
-    "total_score": 5.449999999999999,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接解析特定脑区（伏隔核）神经元回路对社会行为的性别二态性调控机制，属于典型的社会与情感神经科学范畴。",
-    "feature_angle": "揭示了伏隔核神经元在叙利亚仓鼠中对社会行为存在显著的性别二态性调控机制。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "聚焦于长期被忽视的雌性模型，明确解析了奖赏回路中社会行为的性别特异性神经基础。",
-    "key_limitation": "作为特定物种（仓鼠）的行为学研究，其分子机制的深度和多脑区环路的全景映射可能未达到顶刊要求的普适性或技术颠覆性。",
-    "target_audience": "社会神经科学家、性别差异研究者及行为神经生物学专家",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.28,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用病毒介导的基因表达技术，在雌雄叙利亚仓鼠中揭示了伏隔核神经元对社会行为（尤其是攻击引发的社会等级）的差异性调控。发现伏隔核神经元对攻击的正强化效应具有性别二态性调控模式，为理解社会等级形成的神经机制及性别差异提供了重要证据。研究结合行为学与环路特异性操作，推动了社会情感神经科学领域对攻击行为强化机制的细胞水平理解。",
+    "confidence": 9.5,
+    "reasoning": "研究伏隔核神经元对攻击和社会支配行为的性别差异性调控，直接属于社会与情感神经科学的核心问题。",
+    "feature_angle": "伏隔核神经元对社会行为的调控在雌雄叙利亚仓鼠中呈相反方向，揭示了攻击行为的性别差异神经基础",
+    "model_used": "deepseek-flash",
+    "key_strength": "结合病毒介导基因表达、钙成像、化学遗传学和光遗传学多技术手段，在同一物种中系统比较雌雄两性的伏隔核调控机制，发现性别双相调控现象。",
+    "key_limitation": "研究仅基于叙利亚仓鼠单一物种，行为范式局限于攻击和社会探究，前额叶-伏隔核环路的具体分子身份未明确，样本量及统计效力未在摘要中充分体现。",
+    "target_audience": "社会神经科学、行为神经内分泌学、性别差异神经机制及精神疾病模型研究者",
+    "crossover_value": null,
+    "editor_note": "性别差异与伏隔核环路调控社会行为的创新结合，建议关注其方法学细节与行为范式。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.2292-25.2026",
+      "previous_score": 5.449999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41844280/"
+    }
   },
   {
     "paper": {
@@ -188317,7 +188394,7 @@
         ],
         "date": "17 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41844279/",
-        "abstract": "",
+        "abstract": "The overconsumption of sodium contributes to a wide range of detrimental health conditions. Thus, it is imperative to gain a better understanding of the neural mechanisms driving sodium appetite. Here, we combined neuroanatomic, transgenic, behavioral, and chemogenetic approaches to investigate the role of bed nucleus of stria terminalis (BNST) enkephalin neurons (BNSTENK) in sodium appetite in male and female pENK-Cre mice. Our results demonstrate that Gi-mediated signaling onto BNSTENK neurons regulates salt consumption following sodium depletion but does not impact upon taste preference when replete. Further, Gi-mediated signaling onto BNSTENK neurons had no effect on deprivation-induced food or water intake or anxiety-like behavior. Using Cre-dependent retrograde trans-synaptic tracing and anterograde AAV tracing, we show connectivity between BNSTENK neurons with the extended amygdala, thalamus, and hypothalamus. In summary, we have identified that BNSTENK neurons are integral to a needs-based salt appetite and demonstrate the broader connectivity of these neurons providing a roadmap for future circuit interventions.",
         "doi": "10.1523/JNEUROSCI.2290-25.2026",
         "pmid": "41844279",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -189446,7 +189523,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41844279/"
       },
       "title": "Bed nucleus of stria terminalis enkephalin neurons contribute to depletion-induced salt appetite.",
       "authors": [
@@ -189463,34 +189542,46 @@
         "Andrew J Lawrence"
       ],
       "date": "17 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "The overconsumption of sodium contributes to a wide range of detrimental health conditions. Thus, it is imperative to gain a better understanding of the neural mechanisms driving sodium appetite. Here, we combined neuroanatomic, transgenic, behavioral, and chemogenetic approaches to investigate the role of bed nucleus of stria terminalis (BNST) enkephalin neurons (BNSTENK) in sodium appetite in male and female pENK-Cre mice. Our results demonstrate that Gi-mediated signaling onto BNSTENK neurons regulates salt consumption following sodium depletion but does not impact upon taste preference when replete. Further, Gi-mediated signaling onto BNSTENK neurons had no effect on deprivation-induced food or water intake or anxiety-like behavior. Using Cre-dependent retrograde trans-synaptic tracing and anterograde AAV tracing, we show connectivity between BNSTENK neurons with the extended amygdala, thalamus, and hypothalamus. In summary, we have identified that BNSTENK neurons are integral to a needs-based salt appetite and demonstrate the broader connectivity of these neurons providing a roadmap for future circuit interventions.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41844279/"
     },
-    "title_zh": "终纹床核脑啡肽神经元有助于耗竭诱导的盐食欲",
+    "title_zh": "终纹床核脑啡肽神经元参与钠剥夺诱导的盐食欲",
     "paper_id": "b6a956f770a1",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.5,
-      "evidence": 7.0,
-      "contribution": 7.5,
-      "accessibility": 6.0
+      "breakthrough": 6.2,
+      "methodology": 7.4,
+      "evidence": 6.6,
+      "contribution": 6.0,
+      "accessibility": 7.0
     },
-    "total_score": 5.450000000000001,
+    "total_score": 6.5600000000000005,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接解析了特定脑区（终纹床核）中特定神经元类型（脑啡肽神经元）在驱动本能行为（盐食欲）中的环路机制，属于典型的系统神经科学范畴。",
-    "feature_angle": "揭示了终纹床核（BNST）脑啡肽神经元在稳态失衡驱动下的特异性摄盐行为中的关键调控作用。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "将特定的神经肽能神经元亚群与具体的稳态需求（钠缺乏）精确关联，细化了对下丘脑外食欲调控回路的理解。",
-    "key_limitation": "作为机制性研究，其发现属于对现有食欲调控网络的补充而非范式颠覆，且发表于专业期刊而非综合性顶刊，显示其普适性和概念突破度尚未达到里程碑级别。",
-    "target_audience": "专注摄食行为、稳态调控及边缘系统环路功能的系统神经科学家和计算生物学家。",
+    "confidence": 9.6,
+    "reasoning": "该研究结合神经解剖、转基因、行为与化学遗传学手段，解析BNST脑啡肽神经元环路对钠剥夺后盐摄入的特异性调控，属于系统与环路神经科学核心问题。",
+    "feature_angle": "BNST脑啡肽神经元通过Gi信号通路特异性调控钠缺乏驱动的盐食欲，而不影响味觉偏好或焦虑行为",
+    "model_used": "deepseek-flash",
+    "key_strength": "结合神经解剖、转基因、行为与化学遗传学多模态方法，在雄雌两性小鼠中明确BNSTENK神经元对需求驱动盐摄入的选择性作用，并提供扩展杏仁核-丘脑-下丘脑连接图谱",
+    "key_limitation": "证据主要依赖化学遗传学抑制的因果推断，缺乏电生理、在体钙成像或环路特异性操控的直接验证；行为学效应量有限，且未区分钠缺乏不同阶段或性别差异的神经机制",
+    "target_audience": "摄食行为、内感受与稳态调控领域的系统神经科学家及神经内分泌研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.2290-25.2026",
+      "previous_score": 5.450000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41844279/"
+    }
   },
   {
     "paper": {
@@ -198749,7 +198840,7 @@
         ],
         "date": "16 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41839574/",
-        "abstract": "",
+        "abstract": "Prenatal alcohol exposure (PAE) induces neurodevelopmental damage leading to fetal alcohol spectrum disorders (FASD) by altering both brain and ocular development. Recent data showed that PAE impairs brain cortical and retinal vasculature leading to defective positioning of interneurons. In the retina, PAE disturbs vascular development and the association of calretinin neurons with vessels. The NMDA receptor (NMDAR) is a major target of alcohol in the brain, and both ligand binding to NMDARs and the expression of NMDAR subunits are altered in FASD. Given that NMDAR is also expressed in endothelial cells and that glutamate stimulation of endothelial NMDAR (eNMDAR) regulates cortical interneuron positioning along blood vessels, we hypothesize that eNMDAR is critical for retinal vascular development and mediates PAE-induced defects. Using an in vivo model of FASD and transgenic mice lacking the endothelial GluN1 subunit of the NMDAR, this study aimed to characterize the neurovascular phenotype of the developing retina in mice of either sex. Our findings show that deletion of the eNMDAR reproduces key PAE-like alterations, including impaired progression of the superficial vascular plexus and changes in neuronal density, particularly in cells located closest to the retinal vasculature. Conversely, in eNMDAR knock-out mice, some of the retinal defects typically induced by PAE are prevented. Moreover, eNMDAR deletion led to an increased number of calretinin-positive interneurons contacting vessels and prevented the PAE-induced decrease. Together, these findings demonstrate that eNMDARs contribute to normal retinal neurovascular development and mediate, at least in part, the adverse effects of ethanol exposure in FASD.",
         "doi": "10.1523/JNEUROSCI.1419-25.2026",
         "pmid": "41839574",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -199454,7 +199545,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839574/"
       },
       "title": "Endothelial NMDA receptor involvement in retinal neurovascular damage following prenatal alcohol exposure in mouse model.",
       "authors": [
@@ -199472,34 +199565,58 @@
         "Carole Brasse-Lagnel"
       ],
       "date": "16 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Prenatal alcohol exposure (PAE) induces neurodevelopmental damage leading to fetal alcohol spectrum disorders (FASD) by altering both brain and ocular development. Recent data showed that PAE impairs brain cortical and retinal vasculature leading to defective positioning of interneurons. In the retina, PAE disturbs vascular development and the association of calretinin neurons with vessels. The NMDA receptor (NMDAR) is a major target of alcohol in the brain, and both ligand binding to NMDARs and the expression of NMDAR subunits are altered in FASD. Given that NMDAR is also expressed in endothelial cells and that glutamate stimulation of endothelial NMDAR (eNMDAR) regulates cortical interneuron positioning along blood vessels, we hypothesize that eNMDAR is critical for retinal vascular development and mediates PAE-induced defects. Using an in vivo model of FASD and transgenic mice lacking the endothelial GluN1 subunit of the NMDAR, this study aimed to characterize the neurovascular phenotype of the developing retina in mice of either sex. Our findings show that deletion of the eNMDAR reproduces key PAE-like alterations, including impaired progression of the superficial vascular plexus and changes in neuronal density, particularly in cells located closest to the retinal vasculature. Conversely, in eNMDAR knock-out mice, some of the retinal defects typically induced by PAE are prevented. Moreover, eNMDAR deletion led to an increased number of calretinin-positive interneurons contacting vessels and prevented the PAE-induced decrease. Together, these findings demonstrate that eNMDARs contribute to normal retinal neurovascular development and mediate, at least in part, the adverse effects of ethanol exposure in FASD.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839574/"
     },
-    "title_zh": "内皮细胞 NMDA 受体在产前酒精暴露小鼠模型视网膜神经血管损伤中的作用",
+    "title_zh": "小鼠模型中产前酒精暴露后视网膜神经血管损伤涉及内皮NMDA受体",
     "paper_id": "f7fb52b0229b",
     "domain": "核心域",
     "primary_category": "发育神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "发育神经科学",
+      "临床与转化神经科学"
+    ],
+    "cross_tags": [
+      "小鼠",
+      "视网膜",
+      "NMDA受体",
+      "内皮细胞",
+      "产前酒精暴露",
+      "血管发育",
+      "神经血管耦合",
+      "FASD"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 6.0
+      "breakthrough": 6.8,
+      "methodology": 7.6,
+      "evidence": 7.2,
+      "contribution": 6.9,
+      "accessibility": 7.0
     },
-    "total_score": 5.449999999999999,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.08,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究揭示了内皮细胞NMDA受体在产前酒精暴露导致视网膜神经血管损伤中的关键作用。通过小鼠模型，作者将PAE的血管发育缺陷与NMDAR功能异常直接联系，为FASD的神经血管病理机制提供了新视角。研究不仅深化了对酒精发育毒性的理解，也为靶向内皮NMDAR改善神经血管耦合提供了转化线索。",
     "confidence": 9.2,
-    "reasoning": "该研究利用小鼠模型探讨产前酒精暴露导致的神经血管发育损伤机制，直接涉及神经发育病理与神经血管单元相互作用。",
-    "feature_angle": "揭示内皮细胞 NMDA 受体在产前酒精暴露诱导的视网膜神经血管损伤中的关键致病机制。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "将神经血管单元的研究焦点从神经元扩展至内皮细胞特异性信号通路，为胎儿酒精谱系障碍提供了新的潜在治疗靶点。",
-    "key_limitation": "研究局限于小鼠模型及视网膜这一特定中枢神经系统区域，缺乏跨脑区验证及人类临床样本数据，机制普适性尚待确认。",
-    "target_audience": "神经血管生物学研究者、发育神经毒理学家及胎儿酒精谱系障碍领域的转化医学专家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "该研究探讨产前酒精暴露通过内皮NMDA受体影响视网膜神经血管发育，直接涉及神经发育与神经血管相互作用，属于发育神经科学核心问题。",
+    "feature_angle": "内皮细胞NMDA受体是连接产前酒精暴露与视网膜神经血管发育缺陷的关键分子节点",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用内皮特异性GluN1敲除小鼠，将PAE的表型与内皮NMDAR功能直接因果关联，并证明敲除可部分挽救PAE诱导的视网膜血管与神经元定位缺陷。",
+    "key_limitation": "机制仍停留在表型关联层面，缺乏下游信号通路解析；仅限小鼠视网膜模型，向大脑皮层及人类FASD的转化外推有限。",
+    "target_audience": "神经血管生物学、发育神经科学、FASD机制研究及视网膜血管疾病领域的研究者",
+    "crossover_value": null,
+    "editor_note": "聚焦内皮NMDAR在发育性神经血管损伤中的新机制，适合发育与血管生物学交叉读者。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1419-25.2026",
+      "previous_score": 5.449999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41839574/"
+    }
   },
   {
     "paper": {
@@ -199512,7 +199629,7 @@
         ],
         "date": "16 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41839573/",
-        "abstract": "",
+        "abstract": "Hedonic hotspots are localized brain sites where appropriate stimulations can amplify the hedonic impact of palatable tastes, measured as increases in affective orofacial \"liking\" reactions to sweetness in rodents. Previously, two cortical hedonic hotspots in the orbitofrontal cortex and insula were identified using opioid or orexin microinjections as neurochemical manipulations. Here we used optogenetic stimulation in male and female rats to independently confirm the sites and boundaries of two cortical hedonic hotspots, as well as their special hedonic enhancement functions. We report that channelrhodopsin stimulations within the two hedonic hotspots of rostral orbitofrontal and caudal insula each doubled the number of hedonic \"liking\" reactions elicited by sucrose taste. Additionally, we confirmed that an intervening suppressive hedonic coldstrip stretches between them, where stimulation reduced \"liking\" reactions. In contrast to the localization of hedonic hotspots for \"liking\" enhancement, motivational \"wanting\" for reward, measured as laser self-stimulation, was mediated by more widely distributed cortical sites in both hotspots and coldstrip.",
         "doi": "10.1523/JNEUROSCI.0865-25.2026",
         "pmid": "41839573",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -199677,7 +199794,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839573/"
       },
       "title": "Optogenetic hedonic hotspots in orbitofrontal cortex and insula: causing enhancement of sweetness 'liking'.",
       "authors": [
@@ -199685,34 +199804,46 @@
         "Kent C Berridge"
       ],
       "date": "16 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Hedonic hotspots are localized brain sites where appropriate stimulations can amplify the hedonic impact of palatable tastes, measured as increases in affective orofacial \"liking\" reactions to sweetness in rodents. Previously, two cortical hedonic hotspots in the orbitofrontal cortex and insula were identified using opioid or orexin microinjections as neurochemical manipulations. Here we used optogenetic stimulation in male and female rats to independently confirm the sites and boundaries of two cortical hedonic hotspots, as well as their special hedonic enhancement functions. We report that channelrhodopsin stimulations within the two hedonic hotspots of rostral orbitofrontal and caudal insula each doubled the number of hedonic \"liking\" reactions elicited by sucrose taste. Additionally, we confirmed that an intervening suppressive hedonic coldstrip stretches between them, where stimulation reduced \"liking\" reactions. In contrast to the localization of hedonic hotspots for \"liking\" enhancement, motivational \"wanting\" for reward, measured as laser self-stimulation, was mediated by more widely distributed cortical sites in both hotspots and coldstrip.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839573/"
     },
-    "title_zh": "眶额叶皮层与岛叶的光遗传学享乐热点：引发对甜味'喜爱'的增强",
+    "title_zh": "眶额皮层和岛叶中的光遗传学享乐热点：引起甜味‘喜爱’增强",
     "paper_id": "f88731b2a613",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
-      "evidence": 8.5,
-      "contribution": 8.0,
-      "accessibility": 9.0
+      "breakthrough": 6.8,
+      "methodology": 7.2,
+      "evidence": 6.5,
+      "contribution": 6.5,
+      "accessibility": 7.5
     },
-    "total_score": 6.450000000000001,
+    "total_score": 6.83,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究利用光遗传学技术精确解析了特定脑区（眶额叶和岛叶）神经环路在编码味觉奖赏（享乐价值）中的因果作用，是典型的系统神经科学研究。",
-    "feature_angle": "首次在眶额皮层和岛叶通过光遗传学精准定位并激活‘享乐热点’，直接因果性地增强了对甜味的‘喜欢’程度而非单纯的‘想要’。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "明确区分了奖赏处理中'liking'（享乐）与'wanting'（动机）的神经基质，提供了强有力的因果证据，修正了传统对前脑奖赏回路的理解。",
-    "key_limitation": "作为特定领域的机制深化研究，其范式颠覆性略逊于首次发现伏隔核享乐热点的里程碑工作，且主要局限于味觉奖赏模态，普适性需进一步验证。",
-    "target_audience": "专注奖赏回路、成瘾机制及情感神经科学的系统生物学家与计算神经科学家。",
+    "confidence": 9.5,
+    "reasoning": "该研究利用光遗传学操纵特定脑区以调控享乐反应，属于系统与环路神经科学的核心问题。",
+    "feature_angle": "光遗传学独立验证眶额皮层与岛叶存在两个享乐热点及其间隔的抑制性冷带，并揭示'喜欢'与'想要'的脑区定位分离",
+    "model_used": "deepseek-flash",
+    "key_strength": "用光遗传学操作独立复现并界定此前仅由阿片/食欲素微注射定义的皮层享乐热点边界，且在同一研究中对比'喜欢'增强与'想要'的自我刺激分布，概念分离清晰。",
+    "key_limitation": "仅限于雄性/雌性大鼠的单一行为范式（味觉诱发的口面部反应与激光自我刺激），缺乏对下游回路、细胞类型特异性及因果环路机制的解析，样本与统计细节未在摘要中体现。",
+    "target_audience": "行为神经科学、摄食与奖赏回路、光遗传学方法学及系统神经科学研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0865-25.2026",
+      "previous_score": 6.450000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41839573/"
+    }
   },
   {
     "paper": {
@@ -199729,7 +199860,7 @@
         ],
         "date": "16 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41839572/",
-        "abstract": "",
+        "abstract": "Rapid and efficient fear processing is essential for survival. In vision, this function is supported by a well-characterized subcortical pathway consisting of direct projections from the pulvinar of the thalamus to the amygdala in the human brain. In contrast, the existence of an analogous shortcut for fear in audition has been demonstrated in nonhuman animals but remains unconfirmed in humans. To address this question, we used probabilistic streamline tractography and fixel-based analysis on diffusion-weighted images from Human Connectome Project participants of either sex to reconstruct candidate auditory subcortical pathways and examine their associations with affective and auditory behavioral measures. Our findings revealed a robust white matter tract connecting the inferior colliculus to basolateral amygdala via the medial geniculate body (MGB) of the thalamus. Remarkably, higher fiber density in this tract was associated with better hearing ability in noise and increased self-reported fearfulness, supporting its role in auditory and affective function. Conversely, a control analysis of the core thalamocortical pathway from ventral MGB to primary auditory cortex, representing the main route for auditory processing, was associated with auditory ability but not with affective measures. These findings provide previously unreported evidence for an auditory colliculo-geniculo-amygdala \"low road\" in humans, aligning with evolutionarily conserved pathways for fear described in nonhuman species.",
         "doi": "10.1523/JNEUROSCI.1431-25.2026",
         "pmid": "41839572",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -200469,7 +200600,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839572/"
       },
       "title": "A direct auditory subcortical route to the amygdala associated with fear in humans.",
       "authors": [
@@ -200481,34 +200614,46 @@
         "Judith Domínguez-Borràs"
       ],
       "date": "16 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Rapid and efficient fear processing is essential for survival. In vision, this function is supported by a well-characterized subcortical pathway consisting of direct projections from the pulvinar of the thalamus to the amygdala in the human brain. In contrast, the existence of an analogous shortcut for fear in audition has been demonstrated in nonhuman animals but remains unconfirmed in humans. To address this question, we used probabilistic streamline tractography and fixel-based analysis on diffusion-weighted images from Human Connectome Project participants of either sex to reconstruct candidate auditory subcortical pathways and examine their associations with affective and auditory behavioral measures. Our findings revealed a robust white matter tract connecting the inferior colliculus to basolateral amygdala via the medial geniculate body (MGB) of the thalamus. Remarkably, higher fiber density in this tract was associated with better hearing ability in noise and increased self-reported fearfulness, supporting its role in auditory and affective function. Conversely, a control analysis of the core thalamocortical pathway from ventral MGB to primary auditory cortex, representing the main route for auditory processing, was associated with auditory ability but not with affective measures. These findings provide previously unreported evidence for an auditory colliculo-geniculo-amygdala \"low road\" in humans, aligning with evolutionarily conserved pathways for fear described in nonhuman species.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839572/"
     },
-    "title_zh": "人类中与恐惧相关的直接听觉皮层下杏仁核通路",
+    "title_zh": "人类中与恐惧相关的从听觉皮层下通路到杏仁核的直接路径",
     "paper_id": "333793f50ddb",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 8.5,
-      "methodology": 9.0,
-      "evidence": 8.0,
-      "contribution": 8.5,
+      "breakthrough": 7.2,
+      "methodology": 6.8,
+      "evidence": 6.2,
+      "contribution": 7.0,
       "accessibility": 7.5
     },
-    "total_score": 6.699999999999999,
+    "total_score": 6.91,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接阐明了人类听觉信息绕过皮层直达杏仁核的特定神经环路及其在恐惧情绪处理中的功能，完美契合系统环路与情感神经科学的核心范畴。",
-    "feature_angle": "首次在活体人类中通过高精度解剖追踪与功能成像结合，确证了绕过听觉皮层的皮下听觉 - 杏仁核恐惧通路。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "利用死后人脑高分辨率纤维示踪与术中/无创功能验证的多模态证据链，解决了长期存在于动物模型与人类推论间的解剖学争议。",
-    "key_limitation": "作为横断面解剖与相关性功能研究，缺乏对该通路进行因果性干预（如特异性阻断）的直接实验证据，且样本量受限于人脑标本获取难度。",
-    "target_audience": "系统神经科学家、恐惧记忆研究者、临床神经外科医生及计算神经建模专家",
+    "confidence": 9.5,
+    "reasoning": "该研究利用弥散磁共振成像重建人类听觉皮层下通路并探讨其与恐惧行为的关联，属于系统与环路神经科学的核心问题。",
+    "feature_angle": "人类听觉系统可能存在一条下丘—内侧膝状体—杏仁核的“恐惧捷径”，将纤维密度与噪音下听力及恐惧相关行为联系起来。",
+    "model_used": "deepseek-flash",
+    "key_strength": "首次针对人类听觉丘脑-杏仁核亚皮层通路进行概率 tractography 和 fixel-based 分析，并通过核心听觉通路（腹侧 MGB 至初级听觉皮层）的对照分析强化了功能双重分离逻辑。",
+    "key_limitation": "基于扩散 MRI 的 probabilistic tractography 本身无法证明突触连接或方向性，“纤维密度与恐惧量表相关”仅属横断面关联，且缺乏电生理、病变或因果干预验证；HCP 数据中该细小通路的可重复性和解剖特异性仍存疑。",
+    "target_audience": "听觉与恐惧神经科学研究者、弥散MRI方法学专家、系统神经科学家",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1431-25.2026",
+      "previous_score": 6.699999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41839572/"
+    }
   },
   {
     "paper": {
@@ -200524,7 +200669,7 @@
         ],
         "date": "16 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41839571/",
-        "abstract": "",
+        "abstract": "The serotonergic system regulates diverse social and emotional processes, including formation of social networks that continue to mature throughout adolescence. In adolescent intermittent ethanol (AIE)-exposed male and female rats and postmortem human dorsal raphe nucleus (DRN) tissue from adolescent-onset alcohol use disorder (AUD) cases, we observed persistent reductions of serotonergic markers (TPH2+, 5HT+) within the DRN and its projections, accompanied by robust neuroimmune activation (HMGB1, TLR4, pNFκBp65). Reduced DRN prodynorphin and selective reductions of medial DRN serotonergic neurons (TPH2+, 5HT+) suggest that specific serotonergic subpopulations are suppressed by AIE. We further found increased repressive histone markers (H3K9me2) and decreased activating markers (H3K4me3Q5ser) at the Tph2 gene promoter in the DRN, consistent with epigenetic repression of the serotonergic neuron phenotype. Post-AIE treatment with glycyrrhizic acid-an HMGB1 antagonist-or post-AIE exercise restored serotonergic neuron populations and their projections, reversed induction of neuroimmune signaling molecules, and normalized Tph2 promoter chromatin states, indicating reversible neuroimmune-mediated suppression of serotonergic phenotype rather than neuronal loss. Parallel changes in human AUD DRN tissue support a conserved mechanism. Behaviorally, AIE induced social deficits in rats that mirrors social withdrawal in AUD, an effect that was rescued by post-AIE glycyrrhizic acid treatment. In humans, early-onset problematic alcohol use is associated with social dysfunction, which is mitigated in individuals with high physical activity or anti-inflammatory interventions. Together, these findings implicate epigenetic regulation of serotonergic neuron phenotype as a key mechanism linking adolescent alcohol exposure to social pathology and identify potential targets for therapeutic interventions in individuals with adolescent-onset AUD.",
         "doi": "10.1523/JNEUROSCI.2004-25.2026",
         "pmid": "41839571",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -200939,7 +201084,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839571/"
       },
       "title": "Epigenetic repression of the serotonergic neuron phenotype following adolescent binge drinking is restored through inhibition of proinflammatory signaling by exercise and glycyrrhizic acid.",
       "authors": [
@@ -200950,34 +201097,59 @@
         "Ryan P Vetreno"
       ],
       "date": "16 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "The serotonergic system regulates diverse social and emotional processes, including formation of social networks that continue to mature throughout adolescence. In adolescent intermittent ethanol (AIE)-exposed male and female rats and postmortem human dorsal raphe nucleus (DRN) tissue from adolescent-onset alcohol use disorder (AUD) cases, we observed persistent reductions of serotonergic markers (TPH2+, 5HT+) within the DRN and its projections, accompanied by robust neuroimmune activation (HMGB1, TLR4, pNFκBp65). Reduced DRN prodynorphin and selective reductions of medial DRN serotonergic neurons (TPH2+, 5HT+) suggest that specific serotonergic subpopulations are suppressed by AIE. We further found increased repressive histone markers (H3K9me2) and decreased activating markers (H3K4me3Q5ser) at the Tph2 gene promoter in the DRN, consistent with epigenetic repression of the serotonergic neuron phenotype. Post-AIE treatment with glycyrrhizic acid-an HMGB1 antagonist-or post-AIE exercise restored serotonergic neuron populations and their projections, reversed induction of neuroimmune signaling molecules, and normalized Tph2 promoter chromatin states, indicating reversible neuroimmune-mediated suppression of serotonergic phenotype rather than neuronal loss. Parallel changes in human AUD DRN tissue support a conserved mechanism. Behaviorally, AIE induced social deficits in rats that mirrors social withdrawal in AUD, an effect that was rescued by post-AIE glycyrrhizic acid treatment. In humans, early-onset problematic alcohol use is associated with social dysfunction, which is mitigated in individuals with high physical activity or anti-inflammatory interventions. Together, these findings implicate epigenetic regulation of serotonergic neuron phenotype as a key mechanism linking adolescent alcohol exposure to social pathology and identify potential targets for therapeutic interventions in individuals with adolescent-onset AUD.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839571/"
     },
-    "title_zh": "青少年暴饮通过抑制促炎信号通路被运动和甘草酸逆转了对 5-羟色胺能神经元表型的表观遗传抑制",
+    "title_zh": "青少年暴饮后5-羟色胺能神经元表型的表观遗传抑制可通过运动和甘草酸抑制促炎信号得以恢复",
     "paper_id": "def6e766e9d5",
     "domain": "核心域",
     "primary_category": "分子与细胞神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "分子与细胞神经科学",
+      "临床与转化神经科学"
+    ],
+    "cross_tags": [
+      "青春期饮酒",
+      "五羟色胺",
+      "神经免疫",
+      "表观遗传",
+      "运动",
+      "甘草酸",
+      "背侧中缝核",
+      "大鼠",
+      "人类尸检"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
+      "breakthrough": 7.8,
+      "methodology": 8.1,
+      "evidence": 8.4,
       "contribution": 8.0,
-      "accessibility": 8.5
+      "accessibility": 7.3
     },
-    "total_score": 5.699999999999999,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究深入探讨了酒精暴露对特定神经元亚型（5-羟色胺能神经元）的表观遗传调控机制及干预手段，完全符合神经科学核心范畴。",
-    "feature_angle": "揭示运动与甘草酸通过抑制神经炎症逆转青少年酗酒诱导的表观遗传沉默，为酒精相关神经损伤提供非药物干预新策略。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "成功构建了从行为干预（运动）到分子机制（表观遗传/炎症）的完整因果链条，具有明确的转化医学潜力。",
-    "key_limitation": "缺乏单细胞分辨率的空间多组学验证，且甘草酸的血脑屏障穿透性及特异性靶点机制在顶刊标准下尚显单薄，未达范式颠覆级别。",
-    "target_audience": "成瘾神经生物学研究者、表观遗传学专家及神经免疫调控领域的系统生物学家",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.970000000000001,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究揭示青春期间歇性酒精暴露通过神经免疫激活（HMGB1-TLR4-pNFκB通路）表观遗传抑制中缝背核五羟色胺能表型，并在人类酒精使用障碍尸检脑组织中验证。创新性发现运动与甘草酸通过抑制促炎信号恢复五羟色胺标记，为酒精相关情绪社交障碍提供了可转化的非药物干预策略，连接了分子表观遗传、神经免疫与临床转化。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨酒精暴露对中缝背核5-羟色胺能神经元的表观遗传调控和神经免疫机制，属于分子与细胞神经科学核心问题。",
+    "feature_angle": "青春期暴饮导致的血清素能神经元表观遗传抑制是可逆的神经免疫机制，运动或甘草酸可恢复表型并挽救社交缺陷。",
+    "model_used": "deepseek-flash",
+    "key_strength": "跨物种多模态证据链完整：大鼠AIE模型与人类AUD死后DRN组织相互印证，结合表观遗传、神经免疫、行为学及两种独立干预（运动、HMGB1拮抗剂），有力支持可逆性机制而非神经元丢失。",
+    "key_limitation": "机制链条仍以相关性为主，缺少Tph2启动子表观遗传修饰与血清素能表型恢复之间的直接因果操控（如CRISPR表观编辑或条件性敲除）；运动干预的多靶点效应难以归因于单一通路；人类数据为相关性且样本细节未在摘要中体现。",
+    "target_audience": "成瘾神经生物学、神经免疫、表观遗传学、血清素系统及转化精神病学研究者和临床科学家",
+    "crossover_value": null,
+    "editor_note": "机制清晰，跨物种验证，干预手段新颖，适合神经免疫与成瘾交叉专题。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.2004-25.2026",
+      "previous_score": 5.699999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41839571/"
+    }
   },
   {
     "paper": {
@@ -200997,7 +201169,7 @@
         ],
         "date": "16 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41839570/",
-        "abstract": "",
+        "abstract": "Attention-deficit/hyperactivity disorder (ADHD) is characterized by behavioral variability and heightened inattention associated with increased mind wandering (MW) and mind blanking (MB). Individuals with ADHD frequently experience sleep disorders and excessive daytime sleepiness, suggesting interactions between attention and arousal systems. Research examining brain activity using electroencephalography (EEG) has demonstrated that sleep-like slow waves (SWs) during wakefulness are linked to inattention in neurotypical individuals following sleep deprivation, yet their role in ADHD remains unclear. This study investigated whether individuals with ADHD present with altered waking SW distribution compared with neurotypical controls and whether SWs explain attentional difficulties in ADHD. Adults with (n = 32) and without ADHD (n = 31) completed a sustained attention task while EEG recorded brain activity. Mental state probes (on-task, MW, MB) were embedded within the task. Sleep-like SWs reflect cortical slowing and were detected from EEG activity. Omission/commission errors, reaction time (RT), RT variability, mental state reports, and subjective sleepiness were analyzed. Mediation analysis examined whether SW density explained ADHD-related performance differences. Individuals with ADHD exhibited more commission errors, MW and MB, more theta oscillations over frontotemporal electrodes, and higher SW density (SW/minute) over parietotemporal electrodes. Increased SW density correlated with higher omission errors, slower RTs, greater RT variability, and elevated sleepiness ratings. On-task reports were negatively correlated with SW density. Mediation analysis revealed that SW density significantly accounted for ADHD-related attentional difficulties. Wake SW may explain attentional difficulties in ADHD, providing a potential mechanistic link between sleep disturbances and attentional fluctuations.",
         "doi": "10.1523/JNEUROSCI.1694-25.2025",
         "pmid": "41839570",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -202090,7 +202262,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839570/"
       },
       "title": "Sleep-like Slow Waves During Wakefulness Mediate Attention and Vigilance Difficulties in Adult Attention-Deficit/Hyperactivity Disorder.",
       "authors": [
@@ -202105,34 +202279,46 @@
         "Thomas Andrillon"
       ],
       "date": "16 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Attention-deficit/hyperactivity disorder (ADHD) is characterized by behavioral variability and heightened inattention associated with increased mind wandering (MW) and mind blanking (MB). Individuals with ADHD frequently experience sleep disorders and excessive daytime sleepiness, suggesting interactions between attention and arousal systems. Research examining brain activity using electroencephalography (EEG) has demonstrated that sleep-like slow waves (SWs) during wakefulness are linked to inattention in neurotypical individuals following sleep deprivation, yet their role in ADHD remains unclear. This study investigated whether individuals with ADHD present with altered waking SW distribution compared with neurotypical controls and whether SWs explain attentional difficulties in ADHD. Adults with (n = 32) and without ADHD (n = 31) completed a sustained attention task while EEG recorded brain activity. Mental state probes (on-task, MW, MB) were embedded within the task. Sleep-like SWs reflect cortical slowing and were detected from EEG activity. Omission/commission errors, reaction time (RT), RT variability, mental state reports, and subjective sleepiness were analyzed. Mediation analysis examined whether SW density explained ADHD-related performance differences. Individuals with ADHD exhibited more commission errors, MW and MB, more theta oscillations over frontotemporal electrodes, and higher SW density (SW/minute) over parietotemporal electrodes. Increased SW density correlated with higher omission errors, slower RTs, greater RT variability, and elevated sleepiness ratings. On-task reports were negatively correlated with SW density. Mediation analysis revealed that SW density significantly accounted for ADHD-related attentional difficulties. Wake SW may explain attentional difficulties in ADHD, providing a potential mechanistic link between sleep disturbances and attentional fluctuations.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41839570/"
     },
-    "title_zh": "清醒状态下的类睡眠慢波介导成人注意缺陷/多动障碍的注意力与警觉性困难",
+    "title_zh": "成人注意缺陷多动障碍中清醒期类睡眠慢波介导注意力与警觉困难",
     "paper_id": "4852dd37a450",
     "domain": "核心域",
     "primary_category": "临床与转化神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 8.2,
-      "methodology": 7.8,
-      "evidence": 8.5,
-      "contribution": 8.8,
-      "accessibility": 9.0
+      "breakthrough": 6.8,
+      "methodology": 7.2,
+      "evidence": 6.8,
+      "contribution": 6.5,
+      "accessibility": 7.6
     },
-    "total_score": 6.62,
+    "total_score": 6.9,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接揭示了成人 ADHD 患者清醒期间出现的异常神经振荡（类睡眠慢波）与其认知功能缺陷之间的因果机制，属于典型的神经病理与认知功能障碍研究。",
-    "feature_angle": "揭示清醒状态下局部慢波活动是成人 ADHD 注意力缺陷的神经生理核心机制，挑战了传统的状态二分法。",
-    "model_used": "qwen3.5-plus",
-    "key_strength": "将睡眠特征（慢波）与清醒认知障碍直接关联，为理解意识状态边界和神经发育障碍提供了统一的理论框架。",
-    "key_limitation": "作为观察性研究，难以完全确立慢波活动与注意力波动之间的因果链条，且缺乏针对该机制的特异性干预验证。",
-    "target_audience": "临床神经科学家、睡眠研究人员及计算精神病学建模者",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨ADHD患者清醒期脑电慢波与注意力/警觉缺陷的神经机制，属于临床与认知神经科学交叉的核心问题。",
+    "feature_angle": "清醒期睡眠样慢波成为连接ADHD注意缺陷与睡眠-觉醒系统失调的候选电生理机制",
+    "model_used": "deepseek-flash",
+    "key_strength": "将清醒期睡眠样慢波这一睡眠剥夺研究中已知现象引入ADHD，并用贯序中介分析把慢波密度与行为波动、心智游移/空白及主观困倦串联起来，概念桥梁清晰。",
+    "key_limitation": "样本量中等（ADHD 32例/对照31例），横断设计无法确立慢波与注意缺陷的因果方向；慢波检测与心理状态探针的方法学细节及混杂因素（如用药、共病、睡眠史）控制程度尚不足以支撑机制性结论。",
+    "target_audience": "注意与觉醒调控、ADHD神经生理学、睡眠-清醒电生理及转化精神病学研究者和临床神经科学家",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1694-25.2025",
+      "previous_score": 6.62,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41839570/"
+    }
   },
   {
     "paper": {

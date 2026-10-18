@@ -38335,7 +38335,7 @@
         ],
         "date": "26 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41887768/",
-        "abstract": "",
+        "abstract": "Social avoidance is a hallmark of social anxiety disorder. Difficulties in controlling avoidance behavior are the core maintaining factor of this impairing condition, hampering the efficacy of existing therapies. This preregistered study tested a physiologically grounded noninvasive enhancement of control over social approach and avoidance behavior in socially anxious individuals. Participants received dual-site phase-coupled electrical stimulation aimed at enhancing endogenous interregional theta-gamma phase-amplitude coupling between prefrontal and sensorimotor cortex, a mechanism known to support emotional action control in nonanxious individuals. We measured behavioral and fMRI BOLD responses during in-phase, anti-phase, and sham stimulations, while participants of either sex performed a social approach-avoidance task, involving either automatic or controlled emotional actions. In-phase stimulation selectively enhanced control over approach-avoidance actions. Notably, in-phase stimulation modulated neural responses in the same prefrontal region where target engagement increased as a function of trait anxiety. These findings illustrate how human neurophysiological connectivity can be leveraged to improve control over social avoidance, opening the way for mechanistically grounded clinical interventions of persistent avoidance in anxiety disorders.",
         "doi": "10.1523/JNEUROSCI.0769-25.2026",
         "pmid": "41887768",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -38727,7 +38727,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41887768/"
       },
       "title": "Improving emotion control in social anxiety by targeting rhythmic brain circuits.",
       "authors": [
@@ -38737,34 +38739,57 @@
         "Karin Roelofs"
       ],
       "date": "26 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Social avoidance is a hallmark of social anxiety disorder. Difficulties in controlling avoidance behavior are the core maintaining factor of this impairing condition, hampering the efficacy of existing therapies. This preregistered study tested a physiologically grounded noninvasive enhancement of control over social approach and avoidance behavior in socially anxious individuals. Participants received dual-site phase-coupled electrical stimulation aimed at enhancing endogenous interregional theta-gamma phase-amplitude coupling between prefrontal and sensorimotor cortex, a mechanism known to support emotional action control in nonanxious individuals. We measured behavioral and fMRI BOLD responses during in-phase, anti-phase, and sham stimulations, while participants of either sex performed a social approach-avoidance task, involving either automatic or controlled emotional actions. In-phase stimulation selectively enhanced control over approach-avoidance actions. Notably, in-phase stimulation modulated neural responses in the same prefrontal region where target engagement increased as a function of trait anxiety. These findings illustrate how human neurophysiological connectivity can be leveraged to improve control over social avoidance, opening the way for mechanistically grounded clinical interventions of persistent avoidance in anxiety disorders.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41887768/"
     },
-    "title_zh": "通过靶向节律性脑回路改善社交焦虑中的情绪控制",
+    "title_zh": "通过靶向节律性脑环路改善社交焦虑中的情绪控制",
     "paper_id": "80b23cec2122",
     "domain": "核心域",
-    "primary_category": "社会与情感神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "primary_category": "临床与转化神经科学",
+    "secondary_category": [
+      "临床与转化神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "社交焦虑",
+      "回避行为",
+      "脑电刺激",
+      "相位-振幅耦合",
+      "前额叶",
+      "感觉运动皮层",
+      "θ-γ耦合"
+    ],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
-      "evidence": 7.8,
-      "contribution": 8.2,
-      "accessibility": 8.5
+      "breakthrough": 7.2,
+      "methodology": 8.1,
+      "evidence": 7.4,
+      "contribution": 7.3,
+      "accessibility": 6.8
     },
-    "total_score": 6.26,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨社交焦虑（情感障碍）的神经机制，并通过调控特定脑回路（节律性活动）来改善情绪控制，完美契合社会情感神经科学与系统环路神经科学的交叉核心。",
-    "feature_angle": "通过靶向节律性脑回路精准调控社交焦虑情绪控制的新机制验证。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将神经振荡机制与临床情绪调节干预直接关联，提供了因果性证据。",
-    "key_limitation": "摘要信息缺失导致无法评估样本量、具体技术路径（如 tACS/fMRI 闭环）及统计效力，且发表于专业期刊而非综合性顶刊，暗示其普适性或颠覆性可能未达里程碑级别。",
-    "target_audience": "临床神经科学家、计算精神病学研究者及神经调控技术开发人员",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.4,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究采用双位点相位耦合电刺激，增强前额叶-感觉运动皮层内源性θ-γ相位-振幅耦合，以改善社交焦虑个体的情绪控制。预注册设计、生理机制驱动的干预策略及对社交回避行为的调控效果，为社交焦虑障碍提供了新的非侵入性治疗思路，并展示了节律性神经调控在精神疾病转化研究中的潜力。",
+    "confidence": 9.6,
+    "reasoning": "该研究采用双位点相位耦合电刺激调控前额-感觉运动皮层theta-gamma耦合，结合行为与fMRI评估社交焦虑患者的情绪动作控制，属于临床与转化神经科学核心问题。",
+    "feature_angle": "相位耦合双位点电刺激增强前额-感觉运动theta-gamma耦合，从而选择性改善社交焦虑者的回避行为控制。",
+    "model_used": "deepseek-flash",
+    "key_strength": "预注册设计结合行为与fMRI，双位点相位耦合刺激实现靶向神经调控，并显示靶点参与度随特质焦虑变化。",
+    "key_limitation": "样本量与效应范围有限，缺乏长期临床随访和独立重复；对theta-gamma耦合的因果机制仍多为间接推断。",
+    "target_audience": "临床神经科学、神经调控、计算精神病学与情绪行动控制研究者",
+    "crossover_value": null,
+    "editor_note": "关注刺激参数与个体差异的关系，以及长期疗效的验证。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0769-25.2026",
+      "previous_score": 6.26,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41887768/"
+    }
   },
   {
     "paper": {
@@ -38791,7 +38816,7 @@
         ],
         "date": "26 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41887767/",
-        "abstract": "",
+        "abstract": "Krüppel-like factors (Klfs) are DNA-binding transcriptional factors that regulate multiple physiological features, including the cell cycle, cell differentiation, and tissue organization. Among them, Klf2, Klf4, and Klf5 are crucial for the induction and maintenance of pluripotent stem cells. However, the roles of these factors in maintaining neural stem cells (NSCs) remain poorly understood. Here, we show that Klf5 plays a dominant role in maintaining neural precursor cell (NPC) populations by suppressing their differentiation and radial migration in developing mouse brains of either sex. Klf5 also regulates the proliferation of NPCs and promotes differentiation of Pax6+ apical radial glia in the ventricular zone to Eomes+ (Tbr2+) intermediate progenitor cells in the subventricular zone by upregulating Hes1 and Eomes expression. Overexpression of Klf5 in NPCs reduced the pool of quiescent NSCs in the postnatal brain, resulting in attenuated neurogenesis in the subependymal zone and the dentate gyrus of the hippocampus in the adult brain. Klf5-overexpressing male mice exhibited impaired memory formation and reduced preference for social novelty. Our findings suggest a mechanism by which NPCs expand the output of differentiating cells through intermediate progenitor populations.",
         "doi": "10.1523/JNEUROSCI.0584-25.2026",
         "pmid": "41887767",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -40112,7 +40137,9 @@
           }
         ],
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41887767/"
       },
       "title": "Klf5 regulates the transition from apical radial glia to intermediate progenitor cells in the developing mammalian brain.",
       "authors": [
@@ -40134,10 +40161,12 @@
         "Seiji Hitoshi"
       ],
       "date": "26 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Krüppel-like factors (Klfs) are DNA-binding transcriptional factors that regulate multiple physiological features, including the cell cycle, cell differentiation, and tissue organization. Among them, Klf2, Klf4, and Klf5 are crucial for the induction and maintenance of pluripotent stem cells. However, the roles of these factors in maintaining neural stem cells (NSCs) remain poorly understood. Here, we show that Klf5 plays a dominant role in maintaining neural precursor cell (NPC) populations by suppressing their differentiation and radial migration in developing mouse brains of either sex. Klf5 also regulates the proliferation of NPCs and promotes differentiation of Pax6+ apical radial glia in the ventricular zone to Eomes+ (Tbr2+) intermediate progenitor cells in the subventricular zone by upregulating Hes1 and Eomes expression. Overexpression of Klf5 in NPCs reduced the pool of quiescent NSCs in the postnatal brain, resulting in attenuated neurogenesis in the subependymal zone and the dentate gyrus of the hippocampus in the adult brain. Klf5-overexpressing male mice exhibited impaired memory formation and reduced preference for social novelty. Our findings suggest a mechanism by which NPCs expand the output of differentiating cells through intermediate progenitor populations.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41887767/"
     },
-    "title_zh": "Klf5 调控哺乳动物发育大脑中顶端放射状胶质细胞向中间祖细胞的转化",
+    "title_zh": "Klf5调控发育中哺乳动物大脑内顶端放射状胶质细胞向中间祖细胞的转变",
     "paper_id": "45263463e6d2",
     "domain": "核心域",
     "primary_category": "发育神经科学",
@@ -40145,23 +40174,33 @@
     "cross_tags": [],
     "scores": {
       "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 6.0
+      "methodology": 6.8,
+      "evidence": 6.2,
+      "contribution": 6.3,
+      "accessibility": 7.0
     },
-    "total_score": 5.449999999999999,
+    "total_score": 6.510000000000001,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接阐明了转录因子 Klf5 在哺乳动物大脑皮层发育过程中调控神经祖细胞命运决定的分子机制，属于典型的发育神经科学核心议题。",
-    "feature_angle": "揭示转录因子 Klf5 作为哺乳动物大脑皮层发育中顶侧放射状胶质细胞向中间祖细胞转变的关键分子开关。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "在神经发生层级调控网络中明确了特定转录因子的时序性功能，为理解皮层折叠和神经元多样性提供了新的分子机制。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，表明其发现虽重要但缺乏颠覆性范式转移或跨物种/跨系统的普适性验证，机制深度可能局限于经典通路。",
-    "target_audience": "发育神经生物学家、干细胞研究者及关注皮层发生机制的计算系统生物学家。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接解析神经干/祖细胞分化与大脑发育机制，属于发育神经科学核心问题。",
+    "feature_angle": "Klf5作为连接apical radial glia向中间祖细胞转变的转录开关，并影响成年海马神经发生与记忆行为",
+    "model_used": "deepseek-flash",
+    "key_strength": "将转录因子Klf5与NPC命运转变、放射状迁移、 postnatal静息NSC池维持及成年神经发生和行为表型串联成一条较完整的链条，并覆盖雌雄动物",
+    "key_limitation": "机制证据以相关性和过表达/缺失表型为主，Hes1/Eomes直接调控证据及因果回路尚不充分，行为表型仅见于雄性过表达鼠，结论的普适性和转化意义有限",
+    "target_audience": "发育神经生物学、神经干细胞与成年神经发生以及转录调控研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0584-25.2026",
+      "previous_score": 5.449999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41887767/"
+    }
   },
   {
     "paper": {
@@ -96567,7 +96606,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41881563/",
-        "abstract": "",
+        "abstract": "Science communication plays an essential role in bridging the gap between researchers and the general public. Now, more than ever, it is essential for neuroscientists to interact with their communities to increase understanding of basic neuroscience concepts and enhance trust in academic scientists as members of the community. However, it can be difficult, as scientists, to develop and maintain effective lines of communication with the public. To address this, at the University of Alabama at Birmingham, we have been organizing public outreach events aimed to educate the public about various aspects of neuroscience. The goal of this article is to share our strategy for expanding our successful once-per-year \"Brain Awareness Week\" event to a year-round \"Neuroscience for All\" program and to provide practical materials and a dedicated, interactive GitHub-based platform for discussion of personal experiences and extensions and improvements to materials. We hope that the resources and examples we outline will facilitate other institutions to easily expand existing programs or create new ones from scratch and that our online forum will facilitate broader discussion and improvement of neuroscience outreach initiatives across institutions.",
         "doi": "10.1523/JNEUROSCI.0107-26.2026",
         "pmid": "41881563",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -97274,7 +97313,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41881563/"
       },
       "title": "Neuroscience for All: Sharing Neuroscience with Your Community.",
       "authors": [
@@ -97290,34 +97331,46 @@
         "Kristina M Visscher"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Science communication plays an essential role in bridging the gap between researchers and the general public. Now, more than ever, it is essential for neuroscientists to interact with their communities to increase understanding of basic neuroscience concepts and enhance trust in academic scientists as members of the community. However, it can be difficult, as scientists, to develop and maintain effective lines of communication with the public. To address this, at the University of Alabama at Birmingham, we have been organizing public outreach events aimed to educate the public about various aspects of neuroscience. The goal of this article is to share our strategy for expanding our successful once-per-year \"Brain Awareness Week\" event to a year-round \"Neuroscience for All\" program and to provide practical materials and a dedicated, interactive GitHub-based platform for discussion of personal experiences and extensions and improvements to materials. We hope that the resources and examples we outline will facilitate other institutions to easily expand existing programs or create new ones from scratch and that our online forum will facilitate broader discussion and improvement of neuroscience outreach initiatives across institutions.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41881563/"
     },
-    "title_zh": "面向所有人的神经科学：与您的社区分享神经科学知识",
+    "title_zh": "面向所有人的神经科学：与你的社区分享神经科学",
     "paper_id": "7814cd7e4735",
-    "domain": "域外局限",
-    "primary_category": null,
+    "domain": "核心域",
+    "primary_category": "方法学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "Importance": 0.0,
-      "Transferability": 0.0,
-      "Inspiration": 0.0,
-      "Timeliness": 0.0,
-      "Accessibility": 0.0
+      "breakthrough": 3.0,
+      "methodology": 3.5,
+      "evidence": 3.0,
+      "contribution": 4.0,
+      "accessibility": 8.0
     },
-    "total_score": 0.0,
-    "recommendation_tier": "不推送",
+    "total_score": 3.8000000000000003,
+    "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.2,
-    "reasoning": "该文章聚焦于科学传播与公众教育，而非产生新的神经科学机制发现或计算模型，因此不属于核心研究领域。",
-    "feature_angle": "无",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "无",
-    "key_limitation": "无",
-    "target_audience": "无",
+    "confidence": 9.1,
+    "reasoning": "该文聚焦神经科学公众科普与社区外展的策略方法，属于神经科学方法学与社会传播范畴，直接服务神经科学领域。",
+    "feature_angle": "将一年一度的脑意识周扩展为全年社区神经科学普及项目，并提供可复用的GitHub协作平台与实操材料。",
+    "model_used": "deepseek-flash",
+    "key_strength": "提供了可落地的科普外展框架、具体材料与在线协作平台，对希望开展社区科普的科研机构具有直接参考价值。",
+    "key_limitation": "属于项目描述型文章，缺乏对科普效果的定量评估或对照数据，学术创新性和理论贡献有限，方法学严谨性远未达到原创研究标准。",
+    "target_audience": "从事科学传播、社区外展和神经科学教育的科研人员及机构科普组织者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0107-26.2026",
+      "previous_score": 0.0,
+      "previous_tier": "不推送",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41881563/"
+    }
   },
   {
     "paper": {
@@ -97513,7 +97566,8 @@
     "key_limitation": "摘要信息缺失导致无法评估多模态证据强度；主题在现有文献中较为常见，缺乏足以冲击顶刊的范式突破或全新技术验证。",
     "target_audience": "专注于海马 - 皮层交互、记忆编码机制及局部场电位（LFP）分析的系统神经科学家。",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -97529,7 +97583,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41771736/",
-        "abstract": "",
+        "abstract": "Non-nutritive sweeteners are sugar substitutes that may promote weight management by reducing an individual's calorie intake. It is, however, unclear whether (1) sugar and non-nutritive sweetener elicit distinct orosensory responses in the human brain and (2) whether the neural responses to these flavors are modulated by expectancy. Addressing these questions has direct relevance to our understanding of food choice behavior and how it may be modified in dietary interventions. We screened N = 99 healthy adults of either sex to select a sample (N = 27; M[SD]age = 24.25[2.94] years) who reported similar perceptual experiences of sugar and sweetener, thus removing a potential confound of sensory differences, for fMRI scanning. While scanning, they received sugar- and artificially sweetened beverages in two conditioning paradigms, which manipulated participants' expectation of flavor delivery: first in a probabilistic and second in a deterministic way. Participants' ability to accurately distinguish sugar from non-nutritive sweetener depended largely on their expectations, which also significantly affected the perceived pleasantness of each flavor. Expectation altered brain responses to flavor delivery during the deterministic task only, where the (mistaken) expectation of sugar significantly increased midbrain responses to sweetener compared with when sweetener was expected. Trial-wise confidence and pleasantness ratings differentially scaled with brain responses to sugar and sweetener delivery. These results highlight the importance of expectancy in both the behavioral and neural encoding of sweet flavor, particularly when sensory information is unreliable. The expectation of sugar appears to increase the subjective value of noncaloric sweetener, which may result from flavor-nutrient conditioning that preferentially reinforcers sugar.",
         "doi": "10.1523/JNEUROSCI.1121-25.2026",
         "pmid": "41771736",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -98033,7 +98087,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41771736/"
       },
       "title": "Expectation Modulates Hedonic Experiences and Midbrain Responses to Sweet Flavor.",
       "authors": [
@@ -98044,34 +98100,58 @@
         "Paul C Fletcher"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Non-nutritive sweeteners are sugar substitutes that may promote weight management by reducing an individual's calorie intake. It is, however, unclear whether (1) sugar and non-nutritive sweetener elicit distinct orosensory responses in the human brain and (2) whether the neural responses to these flavors are modulated by expectancy. Addressing these questions has direct relevance to our understanding of food choice behavior and how it may be modified in dietary interventions. We screened N = 99 healthy adults of either sex to select a sample (N = 27; M[SD]age = 24.25[2.94] years) who reported similar perceptual experiences of sugar and sweetener, thus removing a potential confound of sensory differences, for fMRI scanning. While scanning, they received sugar- and artificially sweetened beverages in two conditioning paradigms, which manipulated participants' expectation of flavor delivery: first in a probabilistic and second in a deterministic way. Participants' ability to accurately distinguish sugar from non-nutritive sweetener depended largely on their expectations, which also significantly affected the perceived pleasantness of each flavor. Expectation altered brain responses to flavor delivery during the deterministic task only, where the (mistaken) expectation of sugar significantly increased midbrain responses to sweetener compared with when sweetener was expected. Trial-wise confidence and pleasantness ratings differentially scaled with brain responses to sugar and sweetener delivery. These results highlight the importance of expectancy in both the behavioral and neural encoding of sweet flavor, particularly when sensory information is unreliable. The expectation of sugar appears to increase the subjective value of noncaloric sweetener, which may result from flavor-nutrient conditioning that preferentially reinforcers sugar.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41771736/"
     },
-    "title_zh": "期望调节对甜味愉悦体验及中脑反应",
+    "title_zh": "预期调节享乐体验与中脑对甜味反应",
     "paper_id": "9e2c200ed8b6",
     "domain": "核心域",
-    "primary_category": "社会与情感神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "primary_category": "认知神经科学",
+    "secondary_category": [
+      "认知神经科学",
+      "感觉与运动神经科学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "人类",
+      "中脑",
+      "味觉",
+      "预期效应",
+      "甜味剂",
+      "奖赏",
+      "食物选择"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.5,
-      "evidence": 7.0,
-      "contribution": 7.5,
-      "accessibility": 8.0
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.4,
+      "contribution": 6.8,
+      "accessibility": 7.0
     },
-    "total_score": 5.65,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨认知期望如何调节奖赏回路（中脑）的神经活动及主观情感体验，属于典型的社会与情感神经科学范畴。",
-    "feature_angle": "揭示了中脑多巴胺系统如何将认知预期整合到甜味奖赏的享乐体验编码中。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "在人类受试者中成功关联了主观享乐评分与深层中脑（腹侧被盖区/黑质）的精细功能响应，验证了预测编码理论在味觉奖赏回路中的具体机制。",
-    "key_limitation": "作为对已知预测编码框架的验证性研究，缺乏颠覆性的新机制发现或革命性技术突破，且受限于人类神经成像的空间分辨率，难以解析单神经元层面的计算逻辑。",
-    "target_audience": "系统神经科学家、奖赏回路研究者及计算精神病学专家",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.260000000000001,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究通过fMRI探究了预期如何调节对糖与非营养甜味剂的中脑反应及享乐体验，揭示了预期在味觉加工中的重要作用。结果发现，对甜味的预期可改变中脑奖赏区域的活动，进而影响主观喜好，为理解食物选择行为和饮食干预提供了神经机制层面的证据。研究结合严格的行为筛选与神经影像技术，在认知神经科学与感觉神经科学的交叉点上具有重要价值。",
+    "confidence": 9.5,
+    "reasoning": "该研究通过fMRI直接探究预期对甜味享乐体验和中脑反应的影响，属于认知神经科学中关于预期、奖赏和感觉整合的核心问题。",
+    "feature_angle": "预期像“安慰剂糖”一样重塑甜味的主观愉悦与中脑奖赏反应，即使实际摄入的是非营养性甜味剂。",
+    "model_used": "deepseek-flash",
+    "key_strength": "通过严格筛选感知匹配的被试并在概率与确定性两种范式下操纵预期，将预期、主观愉悦与中脑反应直接联系起来，设计巧妙且问题聚焦清晰。",
+    "key_limitation": "样本量较小（N=27）且中脑fMRI信号易受噪声与配准影响；效应仅在确定性范式中显著，行为与神经证据的稳健性和可重复性尚待更大样本与多模态验证。",
+    "target_audience": "食欲与奖赏系统神经科学、fMRI方法学、饮食行为与代谢研究以及心理物理学研究者",
+    "crossover_value": null,
+    "editor_note": "论文聚焦于预期对味觉享乐体验及中脑反应的影响，方法严谨，但样本量较小（N=27），结论需进一步验证。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1121-25.2026",
+      "previous_score": 5.65,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41771736/"
+    }
   },
   {
     "paper": {
@@ -98085,7 +98165,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41741208/",
-        "abstract": "",
+        "abstract": "It is increasingly recognized that learning and memory depend not only on changes in synaptic strength but also on experience-dependent modifications of intrinsic neuronal excitability. However, how these two forms of plasticity interact within a neural circuit to shape behavior remains unclear. Here, we investigated the coordination of the synaptic and intrinsic plasticity in the cerebellar flocculus, which supports oculomotor learning. Using optogenetics and ex vivo electrophysiology, we examined plasticity mechanisms underlying different learned modifications of the vestibulo-ocular reflex (VOR) in male and female mice. Optogenetic tetanization of granule cells mimicked and occluded VOR-decrease learning, suggesting a role of synaptic and/or intrinsic long-term potentiation (LTP) in this form of learning. Ex vivo recordings further revealed that both VOR-decrease learning and VOR habituation were associated with synaptic LTP at parallel fiber (PF)→Purkinje cell synapses. However, whereas VOR-decrease learning did not alter Purkinje cell intrinsic excitability, VOR habituation induced long-term depression of intrinsic excitability. Paralleling the measured intrinsic plasticity, PF-elicited spiking was unchanged after VOR-decrease learning and decreased after habituation, as it did after VOR-increase learning. The results demonstrate that synaptic and intrinsic plasticity can be flexibly recruited in different combinations to support different modifications of a given behavior by learning. Consequently, learning-related changes in synaptically driven spiking cannot reliably be predicted from the changes in synaptically driven currents alone. Rather, intrinsic excitability can play a dominant role in determining whether there are changes in synaptically driven spiking after learning.",
         "doi": "10.1523/JNEUROSCI.1257-25.2026",
         "pmid": "41741208",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -98322,7 +98402,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41741208/"
       },
       "title": "Flexible Coupling of Synaptic and Intrinsic Plasticity in a Cerebellar Circuit.",
       "authors": [
@@ -98331,34 +98413,58 @@
         "Jennifer L Raymond"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "It is increasingly recognized that learning and memory depend not only on changes in synaptic strength but also on experience-dependent modifications of intrinsic neuronal excitability. However, how these two forms of plasticity interact within a neural circuit to shape behavior remains unclear. Here, we investigated the coordination of the synaptic and intrinsic plasticity in the cerebellar flocculus, which supports oculomotor learning. Using optogenetics and ex vivo electrophysiology, we examined plasticity mechanisms underlying different learned modifications of the vestibulo-ocular reflex (VOR) in male and female mice. Optogenetic tetanization of granule cells mimicked and occluded VOR-decrease learning, suggesting a role of synaptic and/or intrinsic long-term potentiation (LTP) in this form of learning. Ex vivo recordings further revealed that both VOR-decrease learning and VOR habituation were associated with synaptic LTP at parallel fiber (PF)→Purkinje cell synapses. However, whereas VOR-decrease learning did not alter Purkinje cell intrinsic excitability, VOR habituation induced long-term depression of intrinsic excitability. Paralleling the measured intrinsic plasticity, PF-elicited spiking was unchanged after VOR-decrease learning and decreased after habituation, as it did after VOR-increase learning. The results demonstrate that synaptic and intrinsic plasticity can be flexibly recruited in different combinations to support different modifications of a given behavior by learning. Consequently, learning-related changes in synaptically driven spiking cannot reliably be predicted from the changes in synaptically driven currents alone. Rather, intrinsic excitability can play a dominant role in determining whether there are changes in synaptically driven spiking after learning.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41741208/"
     },
     "title_zh": "小脑回路中突触可塑性与内在可塑性的灵活耦合",
     "paper_id": "8769b6e1c4e3",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "系统与环路神经科学",
+      "计算与理论神经科学"
+    ],
+    "cross_tags": [
+      "小脑",
+      "绒球",
+      "光遗传学",
+      "电生理",
+      "前庭眼反射",
+      "突触可塑性",
+      "内在可塑性",
+      "眼动学习"
+    ],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
-      "evidence": 8.2,
-      "contribution": 8.5,
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.4,
+      "contribution": 7.5,
       "accessibility": 7.0
     },
-    "total_score": 6.19,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨小脑特定神经回路中突触与神经元内在兴奋性两种可塑性机制的相互作用，属于典型的系统神经科学与细胞神经科学交叉领域。",
-    "feature_angle": "揭示小脑回路中突触可塑性与内禀可塑性动态耦合的灵活机制，重塑运动学习计算模型。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "在单一回路中同时解析并整合了两种不同时间尺度和机制的可塑性形式，提供了超越传统单点可塑性视角的系统性证据。",
-    "key_limitation": "发表于领域专刊（J Neurosci）而非综合性顶刊，暗示其范式颠覆性尚未达到改变整个神经科学版图的程度，且缺乏跨物种或跨脑区的普适性验证。",
-    "target_audience": "小脑生理学家、计算神经科学家及运动控制研究者",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.4,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究在小脑绒球环路中揭示了突触可塑性与内在可塑性之间的灵活耦合机制，为理解学习与记忆的细胞基础提供了新视角。通过光遗传学与离体电生理技术，作者展示了不同形式的前庭眼反射学习如何依赖这两种可塑性的动态协调，突出了环路水平上多机制整合的重要性。这项工作不仅深化了对小脑运动学习机制的理解，也为探索其他脑区中可塑性协同作用提供了可借鉴的实验框架。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨小脑绒球回路中突触与内在可塑性如何协同支持眼动学习，属于系统与环路神经科学的核心问题。",
+    "feature_angle": "小脑绒球回路中突触可塑性与内在兴奋性可塑性灵活组合，支持同一行为的不同形式学习。",
+    "model_used": "deepseek-flash",
+    "key_strength": "结合光遗传学诱导、离体电生理与行为学，直接证明突触LTP和内在兴奋性LTD在不同VOR学习范式中的分离与组合，并揭示突触驱动放电不能仅由突触电流预测。",
+    "key_limitation": "机制证据主要来自离体记录和光遗传学诱导，缺乏在体细胞类型特异性操纵对学习行为的因果检验；单一脑区和小鼠模型限制了结论的跨回路泛化。",
+    "target_audience": "小脑与运动学习、突触可塑性、电生理及计算神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "核心域高质量研究，方法学扎实，机制新颖，适合系统与环路神经科学方向读者。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1257-25.2026",
+      "previous_score": 6.19,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41741208/"
+    }
   },
   {
     "paper": {
@@ -98378,7 +98484,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41735058/",
-        "abstract": "",
+        "abstract": "Microglia, the main immune cells of the central nervous system, are crucial for maintaining brain homeostasis by modulating immune processes and neurovascular function. However, the mechanisms by which microglia regulate neuronal networks and local microcircuits remain incompletely understood. Here, we identify microglia as important modulators of neuronal network activity at the single-cell level and brain-wide functional connectivity in male mice. We show that in the absence of microglia or microglial P2Y12 receptor (P2Y12R), the baseline firing rate of putative interneurons was increased, while whisker stimulation-induced sensory responses remained unchanged in microglia-depleted and P2Y12R KO animals. Increase in cortical delta oscillations in both models and increased single neuron phase coupling to delta band rhythms in microglia-depleted mice revealed cortical hypersynchrony. Microglia depletion led to a significant reduction in connectivity between the contralateral barrel cortex and the anatomically connected ventral posteromedial nucleus of the thalamus during somatosensory stimulation, while resting-state functional connectivity remained unchanged. Similarly, genetic blockade of P2Y12R resulted in diminished functional connectivity within this thalamocortical network. Our findings suggest that cortical interneuron hyperexcitability due to dysfunction of microglia could be a key cause for local hypersynchrony relevant to sensory processing.",
         "doi": "10.1523/JNEUROSCI.0941-25.2026",
         "pmid": "41735058",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -99051,7 +99157,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735058/"
       },
       "title": "Microglia Modulate Information Processing in the Mouse Barrel Cortex.",
       "authors": [
@@ -99066,8 +99174,10 @@
         "Ádám Dénes"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Microglia, the main immune cells of the central nervous system, are crucial for maintaining brain homeostasis by modulating immune processes and neurovascular function. However, the mechanisms by which microglia regulate neuronal networks and local microcircuits remain incompletely understood. Here, we identify microglia as important modulators of neuronal network activity at the single-cell level and brain-wide functional connectivity in male mice. We show that in the absence of microglia or microglial P2Y12 receptor (P2Y12R), the baseline firing rate of putative interneurons was increased, while whisker stimulation-induced sensory responses remained unchanged in microglia-depleted and P2Y12R KO animals. Increase in cortical delta oscillations in both models and increased single neuron phase coupling to delta band rhythms in microglia-depleted mice revealed cortical hypersynchrony. Microglia depletion led to a significant reduction in connectivity between the contralateral barrel cortex and the anatomically connected ventral posteromedial nucleus of the thalamus during somatosensory stimulation, while resting-state functional connectivity remained unchanged. Similarly, genetic blockade of P2Y12R resulted in diminished functional connectivity within this thalamocortical network. Our findings suggest that cortical interneuron hyperexcitability due to dysfunction of microglia could be a key cause for local hypersynchrony relevant to sensory processing.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735058/"
     },
     "title_zh": "小胶质细胞调节小鼠桶状皮层的信息处理",
     "paper_id": "40478cca2a9b",
@@ -99076,24 +99186,34 @@
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 8.0
+      "breakthrough": 6.4,
+      "methodology": 7.3,
+      "evidence": 6.8,
+      "contribution": 6.9,
+      "accessibility": 7.0
     },
-    "total_score": 5.6499999999999995,
+    "total_score": 6.82,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接揭示了非神经元细胞（小胶质细胞）在感觉皮层环路中动态调节神经信息处理的机制，属于系统神经科学的核心前沿。",
-    "feature_angle": "揭示小胶质细胞在体感皮层信息处理中的动态调控作用，挑战其仅作为免疫细胞的传统认知。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将神经免疫学概念直接整合到皮层微回路的功能计算模型中，提供了非神经元细胞参与实时信号处理的有力证据。",
-    "key_limitation": "受限于摘要信息缺失及未来发表日期（2026），无法评估具体的因果机制深度、多模态验证完整性及是否达到顶刊所需的范式颠覆性；且《Journal of Neuroscience》通常发表重要但非里程碑式的研究。",
-    "target_audience": "系统神经科学家、神经免疫学研究者及计算神经生物学专家",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨小胶质细胞对桶状皮层神经元网络活动、感觉反应和功能连接的影响，属于系统与环路神经科学核心问题。",
+    "feature_angle": "小胶质细胞耗竭与P2Y12R缺失通过提升皮层中间神经元基础放电、增强delta频段超同步，并削弱丘脑-皮层感觉诱发功能连接，将免疫细胞状态与局部网络信息处理直接联系起来。",
+    "model_used": "deepseek-flash",
+    "key_strength": "在同一研究框架内整合单细胞放电、LFP振荡、相位耦合与脑区功能连接，采用小胶质细胞耗竭和P2Y12R基因敲除两种模型相互印证，较系统地刻画了小胶质细胞对桶状皮层微环路及丘脑-皮层通路的调控作用。",
+    "key_limitation": "机制证据仍偏相关：未能直接证明中间神经元超兴奋是超同步与功能连接下降的因果中介；细胞类型鉴定依赖putative分类，缺乏细胞类型特异性操纵；仅限雄性小鼠、单一感觉模态与J Neurosci层级，距顶刊要求的机制闭环与因果验证仍有差距。",
+    "target_audience": "胶质细胞生物学、系统神经科学、神经免疫学及感觉皮层微环路与功能连接研究方向的研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0941-25.2026",
+      "previous_score": 5.6499999999999995,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41735058/"
+    }
   },
   {
     "paper": {
@@ -99111,7 +99231,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41735057/",
-        "abstract": "",
+        "abstract": "People often make decisions in contexts where rewards and punishments co-occur, yet most human research still examines reward and punishment learning as independent processes. Here, across three studies, we address this gap by demonstrating that punishments amplify reward learning and its neural correlates in healthy human participants. In Study 1 (N = 102, 69 females and 33 males), participants performed a probabilistic learning task involving monetary rewards and punishments presented in either intermixed or separated contexts. In intermixed contexts, punishments enhanced reward learning accompanied by changes in computational parameters, including higher learning rates from reward prediction errors. In Study 2 (N = 26, 18 females and 8 males), fMRI revealed that punishments amplified reward prediction errors signals in the caudate. Study 3, an fMRI meta-analysis, confirmed that striatal reward responses are consistently stronger when punishments are present. Across studies, we found no reciprocal enhancement of punishment learning by rewards. Together, these findings demonstrate that punishments sharpen reward learning through striatal modulation and underscore the extent to which reward learning is influenced by its broader outcome context.",
         "doi": "10.1523/JNEUROSCI.1631-25.2026",
         "pmid": "41735057",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -99601,7 +99721,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735057/"
       },
       "title": "Punishments Enhance Reward Learning by Modulating Striatal Prediction Errors.",
       "authors": [
@@ -99614,34 +99736,56 @@
         "Marios G Philiastides"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "People often make decisions in contexts where rewards and punishments co-occur, yet most human research still examines reward and punishment learning as independent processes. Here, across three studies, we address this gap by demonstrating that punishments amplify reward learning and its neural correlates in healthy human participants. In Study 1 (N = 102, 69 females and 33 males), participants performed a probabilistic learning task involving monetary rewards and punishments presented in either intermixed or separated contexts. In intermixed contexts, punishments enhanced reward learning accompanied by changes in computational parameters, including higher learning rates from reward prediction errors. In Study 2 (N = 26, 18 females and 8 males), fMRI revealed that punishments amplified reward prediction errors signals in the caudate. Study 3, an fMRI meta-analysis, confirmed that striatal reward responses are consistently stronger when punishments are present. Across studies, we found no reciprocal enhancement of punishment learning by rewards. Together, these findings demonstrate that punishments sharpen reward learning through striatal modulation and underscore the extent to which reward learning is influenced by its broader outcome context.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735057/"
     },
-    "title_zh": "惩罚通过调节纹状体预测误差增强奖励学习",
+    "title_zh": "惩罚通过调节纹状体预测误差增强奖赏学习",
     "paper_id": "4ed1cb4b11e5",
     "domain": "核心域",
-    "primary_category": "计算与理论神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "primary_category": "认知神经科学",
+    "secondary_category": [
+      "认知神经科学",
+      "计算与理论神经科学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "人类",
+      "纹状体",
+      "预测误差",
+      "奖惩学习",
+      "计算建模"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 8.0
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.6,
+      "contribution": 7.4,
+      "accessibility": 8.2
     },
-    "total_score": 5.6499999999999995,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨纹状体预测误差在奖惩学习中的计算机制，完美契合计算神经科学与系统环路神经科学的核心议题。",
-    "feature_angle": "揭示惩罚通过调节纹状体预测误差非线性地增强奖励学习的神经计算机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将惩罚与奖励学习在纹状体预测误差层面进行统一的计算建模与实验验证，细化了强化学习理论在基底节的应用。",
-    "key_limitation": "发表于专业期刊而非顶刊，且‘惩罚增强奖励学习’的结论可能与经典避免学习理论存在语境依赖，缺乏跨物种或全脑尺度的颠覆性证据；摘要内容缺失导致无法评估多模态验证的深度。",
-    "target_audience": "计算神经科学家、基底节环路研究者及强化学习算法开发人员",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.54,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究通过三个实验（总样本量较大）结合行为与神经影像，揭示了惩罚并非独立于奖励学习，而是通过调节纹状体预测误差信号增强奖励学习。这一发现挑战了传统上奖惩学习分离的观点，为理解动机与强化学习的交互提供了新机制，对计算精神病学和决策理论具有重要启示。",
+    "confidence": 9.6,
+    "reasoning": "该研究结合计算建模与fMRI，揭示惩罚调节纹状体奖赏预测误差以增强奖赏学习，直接属于认知与计算神经科学核心问题。",
+    "feature_angle": "惩罚并非独立于奖赏的学习信号，而是通过放大纹状体奖赏预测误差来“锐化”奖赏学习，挑战了奖赏与惩罚学习相互独立的传统框架。",
+    "model_used": "deepseek-flash",
+    "key_strength": "三项研究形成从行为计算建模到fMRI神经相关物再到元分析的多层证据链，且同一实验内直接比较混合与分离情境，设计逻辑清晰。",
+    "key_limitation": "关键fMRI证据样本量仅N=26，效应稳健性有限；元分析为作者自建而非预注册系统综述，且缺乏对惩罚学习未被增强这一负结果的机制性解释与跨范式外部验证。",
+    "target_audience": "计算神经科学、奖赏与决策神经科学、fMRI研究者及强化学习建模方向的研究生",
+    "crossover_value": null,
+    "editor_note": "研究采用概率学习任务与fMRI，设计严谨，但需注意样本性别比例不平衡；理论贡献在于整合奖惩系统。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1631-25.2026",
+      "previous_score": 5.6499999999999995,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41735057/"
+    }
   },
   {
     "paper": {
@@ -99656,7 +99800,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41735056/",
-        "abstract": "",
+        "abstract": "Inhibitory control is essential for adaptive behavior and declines with age, yet the underlying neural dynamics remain poorly understood. The β-rhythm (15-29 Hz) is associated with inhibitory signaling within the frontobasal ganglia network. Recent evidence suggests that transient β-bursts support inhibitory performance but are often masked by conventional trial-averaged β-power analyses. A recently developed analysis approach, combining linear mixed-effects modeling and threshold-free cluster enhancement (LMM-TFCE), was applied to examine trial-by-trial β-bursting activity associated with response inhibition and initiation in older adults. Twenty healthy older adults (nine females) performed a bimanual anticipatory response inhibition task, while electroencephalography and electromyography were recorded to capture β-activity (β-burst rate/volume; averaged β-power) and muscle bursting dynamics, respectively. Our analysis revealed distinct β-bursting signatures absent in averaged β-power data. During bimanual response inhibition, parieto-occipital β-bursting preceded bilateral frontocentral β-bursting, consistent with initial attentional processes prior to broader inhibitory network engagement. Moreover, a link was established between right sensorimotor β-bursting and muscle bursts during stopping, indicating rapid cortical suppression of initiated motor output. β-burst volume proved uniquely sensitive to response withholding, with early left frontal activity supporting preparatory suppression mechanisms. A further link between increased parieto-occipital β-burst volume and muscle bursts aligned with top-down inhibitory signaling to support visuomotor stabilization and prevent premature response release. These results underscore the sensitivity of β-bursting to both the timing and context of inhibitory demands in healthy aging. Future research will help establish the potential of β-bursting, combined with LMM-TFCE analysis, as a clinically relevant marker of impulse control dysfunction.",
         "doi": "10.1523/JNEUROSCI.1151-25.2026",
         "pmid": "41735056",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -100043,7 +100187,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735056/"
       },
       "title": "β-Bursting as a Sensitive Neural Marker of Inhibitory Control in Healthy Older Adults: A Linear Mixed-Effects Modeling and Threshold-Free Cluster Approach.",
       "authors": [
@@ -100053,34 +100199,46 @@
         "Hayley J MacDonald"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Inhibitory control is essential for adaptive behavior and declines with age, yet the underlying neural dynamics remain poorly understood. The β-rhythm (15-29 Hz) is associated with inhibitory signaling within the frontobasal ganglia network. Recent evidence suggests that transient β-bursts support inhibitory performance but are often masked by conventional trial-averaged β-power analyses. A recently developed analysis approach, combining linear mixed-effects modeling and threshold-free cluster enhancement (LMM-TFCE), was applied to examine trial-by-trial β-bursting activity associated with response inhibition and initiation in older adults. Twenty healthy older adults (nine females) performed a bimanual anticipatory response inhibition task, while electroencephalography and electromyography were recorded to capture β-activity (β-burst rate/volume; averaged β-power) and muscle bursting dynamics, respectively. Our analysis revealed distinct β-bursting signatures absent in averaged β-power data. During bimanual response inhibition, parieto-occipital β-bursting preceded bilateral frontocentral β-bursting, consistent with initial attentional processes prior to broader inhibitory network engagement. Moreover, a link was established between right sensorimotor β-bursting and muscle bursts during stopping, indicating rapid cortical suppression of initiated motor output. β-burst volume proved uniquely sensitive to response withholding, with early left frontal activity supporting preparatory suppression mechanisms. A further link between increased parieto-occipital β-burst volume and muscle bursts aligned with top-down inhibitory signaling to support visuomotor stabilization and prevent premature response release. These results underscore the sensitivity of β-bursting to both the timing and context of inhibitory demands in healthy aging. Future research will help establish the potential of β-bursting, combined with LMM-TFCE analysis, as a clinically relevant marker of impulse control dysfunction.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735056/"
     },
-    "title_zh": "β-爆发作为健康老年人抑制控制的敏感神经标记：线性混合效应建模与无阈值聚类方法",
+    "title_zh": "β爆发作为健康老年人抑制控制的敏感神经标记：线性混合效应建模与无阈值聚类方法",
     "paper_id": "90bf173f6b6c",
     "domain": "核心域",
     "primary_category": "认知神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 8.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 6.0
+      "breakthrough": 6.2,
+      "methodology": 7.4,
+      "evidence": 6.3,
+      "contribution": 6.0,
+      "accessibility": 7.2
     },
-    "total_score": 5.65,
+    "total_score": 6.5200000000000005,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨人类大脑在抑制控制任务中的神经振荡机制（β-爆发），并结合先进统计方法分析老年群体，完全符合认知神经科学与方法学的核心范畴。",
-    "feature_angle": "通过线性混合效应模型与无阈值聚类分析，确立β爆发为健康老年抑制控制的高灵敏度神经标记。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "统计方法的严谨性（结合 LME 与 TFCE）有效解决了老年群体神经信号异质性问题，提升了生物标记物的检测效力。",
-    "key_limitation": "研究局限于健康老年群体的相关性描述，缺乏因果机制验证或跨物种/跨模态的范式颠覆性突破，难以达到顶刊里程碑标准。",
-    "target_audience": "认知衰老研究者、计算神经科学家及从事运动控制与抑制机制研究的系统生物学家。",
+    "confidence": 9.5,
+    "reasoning": "该研究探讨老年人抑制控制的神经振荡机制，属于认知神经科学核心问题，并涉及方法学创新。",
+    "feature_angle": "逐试次β爆发结合LMM-TFCE揭示健康老年人抑制控制的时间-空间动力学，并捕捉到传统平均功率分析掩盖的神经特征",
+    "model_used": "deepseek-flash",
+    "key_strength": "将LMM-TFCE应用于单试次β爆发检测，区分出 parieto-occipital 早期注意相关爆发与额中央抑制网络爆发的时序分离，并建立右感觉运动β爆发与肌肉停止的耦合",
+    "key_limitation": "样本量仅20名健康老年人、缺乏年轻对照组和患者群体，横断面设计无法支撑'老化'或'临床标志物'结论，且LMM-TFCE为既有方法组合而非原创技术",
+    "target_audience": "认知神经科学、老化神经科学、运动控制与EEG方法学研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1151-25.2026",
+      "previous_score": 5.65,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41735056/"
+    }
   },
   {
     "paper": {
@@ -100093,7 +100251,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41735055/",
-        "abstract": "",
+        "abstract": "Weakening of synaptic inhibition in the spinal dorsal horn (SDH) contributes to mechanical allodynia after peripheral nerve pathology. Restoring inhibition can alleviate allodynia, whereas weakening it is sufficient to induce allodynia and spontaneous pain in uninjured conditions. Disinhibition is known to un-gate nociceptive polysynaptic spinal circuits, but why allodynia is predominantly evoked by certain touch stimuli remains unclear. To address this, we incorporated receptive fields (RFs) into a computational model of the SDH to study the processing of stimuli with different spatiotemporal features. Our model reveals that broad stimuli normally suppress spinal output by engaging inhibition from the RF's inhibitory surround, but previously subliminal excitation can be engaged when inhibition is compromised, fundamentally altering excitatory-inhibitory balance. The efficacy of spinal inhibition also depends on the input's temporal pattern, especially since excitatory and inhibitory spinal neurons are preferentially sensitive to synchronous and asynchronous input, respectively. Furthermore, spikes driven by synchronous input are resistant to feedforward inhibition. This combination of effects may explain why broad dynamic touch (e.g., brush) evokes more allodynia than punctate static touch. On the other hand, asynchronous and spatially disordered input like that evoked by kilohertz-frequency spinal cord stimulation was found to preferentially activate inhibitory neurons, thus reducing allodynia. Overall, our results suggest how spatial and temporal stimulus features impact the flow of sensory input through disinhibited spinal circuits. Our results show how quantitative computational models can connect injury-induced molecular changes to clinically relevant sensory effects by revealing nonintuitive processes occurring at the cellular and circuit levels.",
         "doi": "10.1523/JNEUROSCI.1691-25.2026",
         "pmid": "41735055",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -100604,7 +100762,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735055/"
       },
       "title": "Spinal Processing of Spatiotemporally Diverse Tactile Stimuli: Computational Insights into Allodynia and Spinal Cord Stimulation.",
       "authors": [
@@ -100612,34 +100772,56 @@
         "Steven A Prescott"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Weakening of synaptic inhibition in the spinal dorsal horn (SDH) contributes to mechanical allodynia after peripheral nerve pathology. Restoring inhibition can alleviate allodynia, whereas weakening it is sufficient to induce allodynia and spontaneous pain in uninjured conditions. Disinhibition is known to un-gate nociceptive polysynaptic spinal circuits, but why allodynia is predominantly evoked by certain touch stimuli remains unclear. To address this, we incorporated receptive fields (RFs) into a computational model of the SDH to study the processing of stimuli with different spatiotemporal features. Our model reveals that broad stimuli normally suppress spinal output by engaging inhibition from the RF's inhibitory surround, but previously subliminal excitation can be engaged when inhibition is compromised, fundamentally altering excitatory-inhibitory balance. The efficacy of spinal inhibition also depends on the input's temporal pattern, especially since excitatory and inhibitory spinal neurons are preferentially sensitive to synchronous and asynchronous input, respectively. Furthermore, spikes driven by synchronous input are resistant to feedforward inhibition. This combination of effects may explain why broad dynamic touch (e.g., brush) evokes more allodynia than punctate static touch. On the other hand, asynchronous and spatially disordered input like that evoked by kilohertz-frequency spinal cord stimulation was found to preferentially activate inhibitory neurons, thus reducing allodynia. Overall, our results suggest how spatial and temporal stimulus features impact the flow of sensory input through disinhibited spinal circuits. Our results show how quantitative computational models can connect injury-induced molecular changes to clinically relevant sensory effects by revealing nonintuitive processes occurring at the cellular and circuit levels.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41735055/"
     },
-    "title_zh": "脊髓对时空多样触觉刺激的处理：关于痛觉过敏和脊髓刺激的计算见解",
+    "title_zh": "时空多样性触觉刺激的脊髓处理：对异常性疼痛与脊髓刺激的计算性洞察",
     "paper_id": "d5de3f5e02ac",
     "domain": "核心域",
-    "primary_category": "计算与理论神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "primary_category": "感觉与运动神经科学",
+    "secondary_category": [
+      "感觉与运动神经科学",
+      "计算与理论神经科学"
+    ],
+    "cross_tags": [
+      "脊髓背角",
+      "触觉诱发痛",
+      "计算建模",
+      "感受野",
+      "脊髓刺激",
+      "抑制性环路"
+    ],
     "scores": {
-      "breakthrough": 7.5,
+      "breakthrough": 7.2,
       "methodology": 8.0,
-      "evidence": 7.0,
-      "contribution": 8.5,
-      "accessibility": 6.5
+      "evidence": 6.8,
+      "contribution": 7.5,
+      "accessibility": 7.8
     },
-    "total_score": 5.9,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究结合计算建模与脊髓感觉处理机制，直接探讨痛觉过敏病理及神经调控策略，高度契合计算神经科学与感觉神经科学的核心范畴。",
-    "feature_angle": "通过计算建模揭示脊髓时空整合机制，为痛觉过敏及脊髓电刺激疗法提供全新理论框架。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将复杂的脊髓微环路动力学与临床相关的异常触觉（痛觉过敏）及治疗参数（SCS）进行定量关联，填补了微观机制与宏观疗效间的鸿沟。",
-    "key_limitation": "作为纯计算研究，缺乏原位电生理或行为学实验的直接验证，且发表在专业期刊而非综合性顶刊，显示其范式颠覆性尚未达到里程碑级别。",
-    "target_audience": "计算神经科学家、疼痛机制研究者及脊髓调控疗法开发人员",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.4,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究将感受野整合到脊髓背角计算模型中，系统解析不同时空模式的触觉刺激如何经去抑制环路诱发机械性触诱发痛。模型揭示了为何特定触觉刺激更易触发疼痛，为触诱发痛的刺激依赖性提供了机制解释，并为优化脊髓刺激参数提供计算框架。对感觉编码与疼痛机制研究者具有参考价值。",
+    "confidence": 9.5,
+    "reasoning": "该研究以计算模型解析脊髓背角对触觉刺激的时空处理及其与异常性疼痛的关系，直接属于感觉神经科学核心问题。",
+    "feature_angle": "用整合感受野的计算模型统一解释触觉的时空特征如何决定异常性疼痛的诱发与脊髓刺激的镇痛效果",
+    "model_used": "deepseek-flash",
+    "key_strength": "将感受野抑制性周边、兴奋/抑制神经元对同步/异步输入的偏好以及前馈抑制的差异性敏感性整合到同一SDH网络模型，为“刷触比点状静态触更易诱发异常性疼痛”和千赫兹脊髓刺激优先激活抑制性神经元提供了机制性、非直观的解释。",
+    "key_limitation": "证据完全来自计算模拟，缺乏配套的在体或离体实验验证（如光遗传/药理阻断结合行为学），模型参数与SDH真实生物物理细节的对应关系及跨物种推广性尚不确定。",
+    "target_audience": "疼痛神经生物学、脊髓环路与神经调控（脊髓刺激）研究者，以及计算与系统神经科学建模人员",
+    "crossover_value": null,
+    "editor_note": "计算建模与疼痛机制结合，方法清晰，但创新性中等（7.4/10），适合感觉与运动神经科学专题。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1691-25.2026",
+      "previous_score": 5.9,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41735055/"
+    }
   },
   {
     "paper": {
@@ -100655,7 +100837,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41730682/",
-        "abstract": "",
+        "abstract": "Neuroplasticity is a defining property of the brain. Structural and functional brain changes arise soon after learning and are particularly evident following years of practice that underpin expert performance. Much existing evidence comes from work on individual measures of learning rather than interrelated processes. However, the relationship between structural remodeling, functional tuning, and processing domain-specific stimuli is central to how the brain and behavior adapt with experience. Here, we provide a multimodal view of cortical reorganization in a domain for which high-level perception, attention, and memory are shaped through extensive practice: bird identification expertise. In both skilled bird identification experts (n = 29; ages 24-75, 15 female) and matched novices (n = 29; ages 22-79, 14 female), cortical structure was assessed with diffusion-weighted MRI. Functional and behavioral measures were obtained during a delayed matching task requiring identification of local and nonlocal species. Compared with novices, experts showed lower mean diffusivity in frontoparietal (SFG, IPS) and posterior cortical (AG, precuneus, LOC, fusiform) areas, along with a trend for more gradual increases in age-related MD. This suggests a regionally specific increase in structural complexity and potential attenuation of age-related decline. Across these regions, lower MD predicted higher identification accuracy in experts. Task-related BOLD timecourses revealed that these same frontoparietal regions were selectively engaged when experts judged less familiar nonlocal (vs local) birds, and the magnitude of this nonlocal > local response tracked performance. Together, these results suggest convergent structural remodeling and functional tuning in service of expert performance across the lifespan.",
         "doi": "10.1523/JNEUROSCI.1307-25.2026",
         "pmid": "41730682",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -101402,7 +101584,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41730682/"
       },
       "title": "The Tuned Cortex: Convergent Expertise-Related Structural and Functional Remodeling across the Adult Lifespan.",
       "authors": [
@@ -101413,34 +101597,46 @@
         "Asaf Gilboa"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Neuroplasticity is a defining property of the brain. Structural and functional brain changes arise soon after learning and are particularly evident following years of practice that underpin expert performance. Much existing evidence comes from work on individual measures of learning rather than interrelated processes. However, the relationship between structural remodeling, functional tuning, and processing domain-specific stimuli is central to how the brain and behavior adapt with experience. Here, we provide a multimodal view of cortical reorganization in a domain for which high-level perception, attention, and memory are shaped through extensive practice: bird identification expertise. In both skilled bird identification experts (n = 29; ages 24-75, 15 female) and matched novices (n = 29; ages 22-79, 14 female), cortical structure was assessed with diffusion-weighted MRI. Functional and behavioral measures were obtained during a delayed matching task requiring identification of local and nonlocal species. Compared with novices, experts showed lower mean diffusivity in frontoparietal (SFG, IPS) and posterior cortical (AG, precuneus, LOC, fusiform) areas, along with a trend for more gradual increases in age-related MD. This suggests a regionally specific increase in structural complexity and potential attenuation of age-related decline. Across these regions, lower MD predicted higher identification accuracy in experts. Task-related BOLD timecourses revealed that these same frontoparietal regions were selectively engaged when experts judged less familiar nonlocal (vs local) birds, and the magnitude of this nonlocal > local response tracked performance. Together, these results suggest convergent structural remodeling and functional tuning in service of expert performance across the lifespan.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41730682/"
     },
-    "title_zh": "调谐皮层：成年生命周期中汇聚的专家相关结构与功能重塑",
+    "title_zh": "调谐皮层：成年生命周期中与专业技能相关的收敛性结构与功能重塑",
     "paper_id": "c8c48a13a6ea",
     "domain": "核心域",
-    "primary_category": "系统与环路神经科学",
+    "primary_category": "认知神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.5,
-      "evidence": 7.0,
-      "contribution": 7.5,
-      "accessibility": 8.0
+      "breakthrough": 6.2,
+      "methodology": 7.0,
+      "evidence": 6.5,
+      "contribution": 6.3,
+      "accessibility": 7.5
     },
-    "total_score": 5.65,
+    "total_score": 6.57,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨成年期大脑皮层因专业技能习得而发生的结构与功能可塑性，属于神经科学核心议题。",
-    "feature_angle": "揭示了成人全生命周期中专家技能驱动的结构与功能皮层重塑的趋同机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "跨模态整合分析，将结构可塑性与功能性适应在长时程发展框架下统一，提供了关于成人神经可塑性持续性的有力证据。",
-    "key_limitation": "受限于横断面或准纵向设计（基于摘要推断），难以完全确立因果关系；发现虽稳健但属于对现有可塑性理论的深化而非范式颠覆，未达到顶刊所需的‘首次’或‘反直觉’阈值。",
-    "target_audience": "认知神经科学家、神经可塑性研究者及计算系统生物学家",
+    "confidence": 9.5,
+    "reasoning": "该研究采用多模态方法考察专家（鸟类识别）在成年生命周期中的皮层结构与功能重塑，直接涉及经验依赖的神经可塑性、高级感知与注意，属于认知神经科学核心问题。",
+    "feature_angle": "专家技能在成年一生中同时重塑皮层结构与功能调谐：鸭鸟识别专家显示额顶叶与后部皮层扩散指标降低，并在不熟悉类别判断中选择性调用这些区域。",
+    "model_used": "deepseek-flash",
+    "key_strength": "多模态设计（扩散MRI结构指标、任务态BOLD与行为准确率）在同一组专家中收敛，且样本年龄跨度大（24-79岁），将技能获得、老化与个体差异置于同一框架。",
+    "key_limitation": "横断面相关设计无法确立因果方向，专家与新手在训练前差异、策略差异与样本量有限（每组n=29）使结论稳健性受限；MD变化缺乏组织学或微结构特异性解释，单期刊定位使其更偏领域内渐进贡献而非范式突破。",
+    "target_audience": "认知神经科学、神经影像方法学、专家技能与学习可塑性及老化研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1307-25.2026",
+      "previous_score": 5.65,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41730682/"
+    }
   },
   {
     "paper": {
@@ -101462,7 +101658,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41714146/",
-        "abstract": "",
+        "abstract": "Most general anesthetics have long been believed to work by exerting a wide range of inhibitory impacts on the central nervous system, yet accumulating evidence has highlighted their excitatory effects-particularly that multiple anesthetics activate a common neural target to induce anesthesia. However, it remains unclear whether three widely used volatile anesthetics (isoflurane, sevoflurane, desflurane) with similar pharmacokinetic and pharmacodynamic properties share a common brain region for their anesthetic effects, and most receptors mediating the excitatory effects of general anesthetics remain unidentified. To explore the shared excitatory neural targets of common volatile anesthetics, we combined c-Fos staining, targeted recombination in active populations (TRAP), fluorescence in situ hybridization (FISH) in adult male and female mice, and molecular docking prediction to characterize anesthetic-activated neurons, their cell types, and potential mediating receptors. We found that desflurane and sevoflurane, except isoflurane, significantly increased c-Fos expression in Edinger-Westphal (EW) neurons with high urocortin 1 (UCN1) expression. Chemogenetic inhibition of sevoflurane-activated EW neurons shortened the emergence time from desflurane anesthesia without significantly changing the induction time. Furthermore, growth hormone secretagogue receptor (GHSR) was substantially enriched in both sevoflurane- and desflurane-activated EW neurons, and local knockdown of GHSR in EW neurons accelerated recovery from both anesthetics. These findings suggest that UCN1+ EW neurons and GHSR contribute greatly to recovery from desflurane and sevoflurane anesthesia.",
         "doi": "10.1523/JNEUROSCI.1935-24.2026",
         "pmid": "41714146",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -102229,7 +102425,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41714146/"
       },
       "title": "Edinger-Westphal Neurons Contribute to Emergence from Desflurane and Sevoflurane Anesthesia in Mice.",
       "authors": [
@@ -102246,34 +102444,46 @@
         "Hong Li 李洪"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Most general anesthetics have long been believed to work by exerting a wide range of inhibitory impacts on the central nervous system, yet accumulating evidence has highlighted their excitatory effects-particularly that multiple anesthetics activate a common neural target to induce anesthesia. However, it remains unclear whether three widely used volatile anesthetics (isoflurane, sevoflurane, desflurane) with similar pharmacokinetic and pharmacodynamic properties share a common brain region for their anesthetic effects, and most receptors mediating the excitatory effects of general anesthetics remain unidentified. To explore the shared excitatory neural targets of common volatile anesthetics, we combined c-Fos staining, targeted recombination in active populations (TRAP), fluorescence in situ hybridization (FISH) in adult male and female mice, and molecular docking prediction to characterize anesthetic-activated neurons, their cell types, and potential mediating receptors. We found that desflurane and sevoflurane, except isoflurane, significantly increased c-Fos expression in Edinger-Westphal (EW) neurons with high urocortin 1 (UCN1) expression. Chemogenetic inhibition of sevoflurane-activated EW neurons shortened the emergence time from desflurane anesthesia without significantly changing the induction time. Furthermore, growth hormone secretagogue receptor (GHSR) was substantially enriched in both sevoflurane- and desflurane-activated EW neurons, and local knockdown of GHSR in EW neurons accelerated recovery from both anesthetics. These findings suggest that UCN1+ EW neurons and GHSR contribute greatly to recovery from desflurane and sevoflurane anesthesia.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41714146/"
     },
-    "title_zh": "Edinger-Westphal 神经元促进小鼠从地氟烷和七氟烷麻醉中苏醒",
+    "title_zh": "Edinger-Westphal神经元参与小鼠从地氟烷和七氟烷麻醉中苏醒的过程",
     "paper_id": "0d900be33802",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.5,
-      "evidence": 7.0,
-      "contribution": 7.5,
-      "accessibility": 6.0
+      "breakthrough": 6.8,
+      "methodology": 7.0,
+      "evidence": 6.2,
+      "contribution": 6.5,
+      "accessibility": 6.8
     },
-    "total_score": 5.450000000000001,
+    "total_score": 6.66,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接阐明了特定脑区神经元在调控麻醉觉醒这一意识状态转换中的因果作用，属于典型的神经环路与系统功能研究。",
-    "feature_angle": "揭示中脑埃丁格 - 韦斯特法尔核（EW）在挥发性麻醉苏醒过程中的关键驱动作用，拓展了觉醒神经回路的图谱。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将麻醉苏醒机制的研究视野从传统的下丘脑/脑干网状结构扩展至副交感相关的 EW 核团，提供了新的潜在干预靶点。",
-    "key_limitation": "作为特定核团的功能性描述研究，缺乏颠覆性的新理论框架或革命性技术，且尚未完全阐明其下游具体的效应器通路及与其他觉醒系统的整合机制，距离顶刊（Nature/Science）的范式转移标准尚有差距。",
-    "target_audience": "麻醉神经生物学研究者、睡眠 - 觉醒调控系统专家及脑干神经环路计算建模者",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探究全身麻醉的神经环路机制，鉴定Edinger-Westphal核团作为挥发性麻醉药兴奋性靶点，属于系统与环路神经科学核心问题。",
+    "feature_angle": "发现UCN1+ Edinger-Westphal神经元与GHSR是挥发性麻醉苏醒（而非诱导）的选择性兴奋性调控节点，挑战“麻醉即全脑抑制”的传统观点。",
+    "model_used": "deepseek-flash",
+    "key_strength": "将c-Fos/TRAP图谱、化学遗传学操控与GHSR局部敲低相结合，在同一通路内把麻醉激活的神经元群与其候选受体直接联系起来，并发现苏醒与诱导的解离。",
+    "key_limitation": "缺血性对照的因果链不完整，异氟烷缺乏EW激活且不同挥发性麻醉药之间存在差异；GHSR证据主要来自分子对接与敲低，缺乏直接的受体药理学或电生理验证，行为层面仅报告时序变化，未涉及睡眠-觉醒或应激等混杂因素。",
+    "target_audience": "麻醉机制、觉醒与睡眠-觉醒环路、GPCR信号及系统神经科学研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1935-24.2026",
+      "previous_score": 5.450000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41714146/"
+    }
   },
   {
     "paper": {
@@ -102291,7 +102501,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41708333/",
-        "abstract": "",
+        "abstract": "Perception is increasingly viewed as an inferential process wherein sensory inputs are integrated with prior expectations. We employed time-resolved decoding on electroencephalography (EEG) data (n = 30 male participants) to investigate how expectations modulate sensory processing across varying levels of stimulus complexity and tested the effect of attention and NMDA receptor blockade. We designed a visual stimulus containing features of different complexity whose processing relies on distinct neural mechanisms: local contrast, collinearity, and the Kanizsa illusion, involving primarily feedforward, lateral, and feedback processes, respectively. EEG decoding revealed that expectations modulated lateral and feedback processing (better decoding for unexpected stimuli) but not feedforward processing. These expectation effects were confined to attended (task-relevant) features and were not observed for task-irrelevant features. The NMDA receptor antagonist memantine selectively enhanced decoding of the Kanizsa illusion, implicating NMDA-mediated feedback mechanisms in perceptual inference, but it did not modulate the effects of expectation or attention. These findings highlight the differential impact of expectations across different stages of sensory processing and reveal a distinct role of NMDA receptor-mediated feedback mechanisms.",
         "doi": "10.1523/JNEUROSCI.0674-25.2026",
         "pmid": "41708333",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -103272,7 +103482,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41708333/"
       },
       "title": "Effects of Expectation, Attention, and NMDA Receptor Blockade on Feedforward and Feedback Processing.",
       "authors": [
@@ -103285,34 +103497,58 @@
         "Timo Stein"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Perception is increasingly viewed as an inferential process wherein sensory inputs are integrated with prior expectations. We employed time-resolved decoding on electroencephalography (EEG) data (n = 30 male participants) to investigate how expectations modulate sensory processing across varying levels of stimulus complexity and tested the effect of attention and NMDA receptor blockade. We designed a visual stimulus containing features of different complexity whose processing relies on distinct neural mechanisms: local contrast, collinearity, and the Kanizsa illusion, involving primarily feedforward, lateral, and feedback processes, respectively. EEG decoding revealed that expectations modulated lateral and feedback processing (better decoding for unexpected stimuli) but not feedforward processing. These expectation effects were confined to attended (task-relevant) features and were not observed for task-irrelevant features. The NMDA receptor antagonist memantine selectively enhanced decoding of the Kanizsa illusion, implicating NMDA-mediated feedback mechanisms in perceptual inference, but it did not modulate the effects of expectation or attention. These findings highlight the differential impact of expectations across different stages of sensory processing and reveal a distinct role of NMDA receptor-mediated feedback mechanisms.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41708333/"
     },
-    "title_zh": "期望、注意力和 NMDA 受体阻断对前馈和反馈处理的影响",
+    "title_zh": "期望、注意与NMDA受体阻断对前馈和反馈加工的影响",
     "paper_id": "4390bfabdaff",
     "domain": "核心域",
-    "primary_category": "系统与环路神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "primary_category": "认知神经科学",
+    "secondary_category": [
+      "认知神经科学",
+      "计算与理论神经科学"
+    ],
+    "cross_tags": [
+      "EEG",
+      "预期",
+      "注意",
+      "NMDA受体",
+      "前馈/反馈",
+      "视觉知觉",
+      "解码",
+      "人类"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 8.0,
-      "evidence": 7.5,
+      "breakthrough": 6.8,
+      "methodology": 7.8,
+      "evidence": 6.5,
       "contribution": 7.0,
-      "accessibility": 6.0
+      "accessibility": 7.2
     },
-    "total_score": 5.65,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨注意力与期望等认知因素如何通过 NMDA 受体调节神经环路中的前馈与反馈信号传递，完美契合系统神经科学与计算神经科学的交叉核心。",
-    "feature_angle": "通过药理学操纵与神经影像结合，精准解离了期望、注意及 NMDA 受体在预测编码前馈与反馈通路中的差异化贡献。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将计算神经科学框架（预测编码）与特异性受体阻滞实验相结合，提供了关于皮层层级处理机制的因果性证据，而非仅停留于相关性描述。",
-    "key_limitation": "作为机制验证研究，其概念框架主要基于现有的预测编码理论，缺乏颠覆性的新范式提出；且期刊定位（J Neurosci）通常低于顶刊（Nature/Science）所需的广泛影响力阈值。",
-    "target_audience": "专注于预测编码、皮层层级动力学及精神疾病（如精神分裂症）神经机制的计算神经科学家和系统生物学家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.0200000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用时间分辨EEG解码，系统考察了预期如何调节不同复杂度视觉特征（局部对比、共线性、Kanizsa错觉）的加工，并首次结合注意操控和NMDA受体拮抗，区分前馈与反馈处理。结果揭示了预期调节的层级特异性及谷氨酸能机制，为预测编码理论提供了因果性证据，对理解精神分裂症等NMDA功能失调疾病的感知异常具有转化意义。",
+    "confidence": 9.6,
+    "reasoning": "该研究利用EEG解码技术，探讨期望与注意如何分别调节前馈、侧向和反馈视觉加工，并用NMDA受体阻断检验相关神经机制，直接属于认知神经科学核心问题。",
+    "feature_angle": "利用时间分辨EEG解码与药理学干预，分离期望和注意对前馈、横向和反馈视觉处理的差异化调制。",
+    "model_used": "deepseek-flash",
+    "key_strength": "实验设计巧妙，将不同复杂度的视觉特征（局部对比、共线性、Kanizsa错觉）对应到不同处理阶段，并结合美金刚胺NMDA受体阻断，首次在人类被试中同时操纵期望、注意和反馈机制。",
+    "key_limitation": "样本量较小（n=30）且仅限男性，统计效力与性别泛化性受限；美金刚胺为全身性给药，难以精确分离反馈通路的特异性；行为或解码效应量未明确报告，结论的稳健性有待更大样本重复验证。",
+    "target_audience": "视觉神经科学、计算神经科学、精神药理学及认知神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "论文方法严谨，但样本仅男性，需在推荐中注明；适合作为预测编码与NMDA受体交叉主题的解读。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0674-25.2026",
+      "previous_score": 5.65,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41708333/"
+    }
   },
   {
     "paper": {
@@ -103326,7 +103562,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41702721/",
-        "abstract": "",
+        "abstract": "In the mammalian cochlea upon acoustic stimulation, outer hair cells (OHCs) push and pull the basilar membrane, amplifying its vibration and therefore expanding the dynamic range of hearing. As a result, spiking patterns in auditory nerve fibers (ANFs) are believed to be significantly different, but how the central nervous system adapts to this substantial change is poorly understood. In this study, we took advantage of Prestin-/- mice of either sex where prestin, the motor protein in OHCs, was genetically knocked out, therefore removing cochlear amplification completely without changing the cellular structure of the cochlea significantly. While exocytosis from inner hair cells in the cochlea was largely intact, transmission at the endbulb of Held synapse between ANFs and bushy cells in the cochlear nucleus was significantly changed in Prestin-/- mice. Specifically, excitability of bushy cells was significantly increased, due to combination of slightly more depolarized resting membrane potential, increased membrane input resistance, and smaller and briefer afterhyperpolarization. Furthermore, synaptic strength was greatly reduced, caused by substantial decrease in the readily releasable pool (RRP) of synaptic vesicles. Significantly, paired-pulse plasticity at this synapse was reversed from depression in WT mice to facilitation in Prestin-/- mice, likely caused by quicker refilling of RRP observed in Prestin-/- mice. In conclusion, we found that transmission at the endbulb of Held synapse is significantly altered in absence of cochlear amplification, revealing interplay between the peripheral and central processing of auditory signals that contributes to expanded dynamic range of hearing seen in mammals and humans.",
         "doi": "10.1523/JNEUROSCI.1673-25.2026",
         "pmid": "41702721",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -103703,7 +103939,9 @@
           }
         ],
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41702721/"
       },
       "title": "Cochlear Amplification Modulates Synaptic Transmission at the Endbulb of Held Synapse in the Cochlear Nucleus.",
       "authors": [
@@ -103712,34 +103950,46 @@
         "Geng-Lin Li"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "In the mammalian cochlea upon acoustic stimulation, outer hair cells (OHCs) push and pull the basilar membrane, amplifying its vibration and therefore expanding the dynamic range of hearing. As a result, spiking patterns in auditory nerve fibers (ANFs) are believed to be significantly different, but how the central nervous system adapts to this substantial change is poorly understood. In this study, we took advantage of Prestin-/- mice of either sex where prestin, the motor protein in OHCs, was genetically knocked out, therefore removing cochlear amplification completely without changing the cellular structure of the cochlea significantly. While exocytosis from inner hair cells in the cochlea was largely intact, transmission at the endbulb of Held synapse between ANFs and bushy cells in the cochlear nucleus was significantly changed in Prestin-/- mice. Specifically, excitability of bushy cells was significantly increased, due to combination of slightly more depolarized resting membrane potential, increased membrane input resistance, and smaller and briefer afterhyperpolarization. Furthermore, synaptic strength was greatly reduced, caused by substantial decrease in the readily releasable pool (RRP) of synaptic vesicles. Significantly, paired-pulse plasticity at this synapse was reversed from depression in WT mice to facilitation in Prestin-/- mice, likely caused by quicker refilling of RRP observed in Prestin-/- mice. In conclusion, we found that transmission at the endbulb of Held synapse is significantly altered in absence of cochlear amplification, revealing interplay between the peripheral and central processing of auditory signals that contributes to expanded dynamic range of hearing seen in mammals and humans.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41702721/"
     },
-    "title_zh": "耳蜗放大调节耳蜗核中赫尔德终扣突触的突触传递",
+    "title_zh": "耳蜗放大调制耳蜗核内Held终球突触的突触传递",
     "paper_id": "d40d2eea5302",
     "domain": "核心域",
     "primary_category": "感觉与运动神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.2,
-      "contribution": 7.5,
-      "accessibility": 6.0
+      "breakthrough": 6.8,
+      "methodology": 7.2,
+      "evidence": 6.9,
+      "contribution": 7.0,
+      "accessibility": 6.5
     },
-    "total_score": 5.390000000000001,
+    "total_score": 6.91,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨听觉系统中外周机制（耳蜗放大）对中枢神经元（耳蜗核）突触传递的调控，属于典型的感觉神经科学与系统环路研究范畴。",
-    "feature_angle": "揭示耳蜗放大机制通过逆向或旁路信号直接调控听觉脑干突触传递效率的新范式。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将外周耳蜗力学特性与中枢突触可塑性直接关联，填补了听觉通路早期增益控制机制的空白。",
-    "key_limitation": "发表于专业领域期刊（J Neurosci）而非综合性顶刊，暗示其机制普适性或技术颠覆性尚未达到里程碑级别，且缺乏跨物种或多模态成像的宏观验证。",
-    "target_audience": "听觉神经生物学专家、突触传递机制研究者及计算听觉模型构建者。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨耳蜗放大对听觉脑干突触传递的调控，属于听觉感觉神经科学的核心问题。",
+    "feature_angle": "遗传性去耳蜗放大揭示外周听觉增益缺失如何重塑脑干突触传递并逆转短可塑性",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用Prestin-/-小鼠在保持内毛细胞胞吐基本完整的前提下选择性去除耳蜗放大，将外周感觉增益与中枢突触可塑性直接关联，问题清晰且切入巧妙。",
+    "key_limitation": "证据主要限于单一基因敲除模型和离体电生理，缺少在体听觉神经纤维放电模式与突触变化之间的因果链条，且Prestin敲除的长期代偿效应未充分排除。",
+    "target_audience": "听觉神经科学、突触生理学与系统神经科学研究者和计算神经科学家",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1673-25.2026",
+      "previous_score": 5.390000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41702721/"
+    }
   },
   {
     "paper": {
@@ -103756,7 +104006,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41672876/",
-        "abstract": "",
+        "abstract": "The photothrombotic stroke model is gaining popularity due to its relative simplicity, minimal invasiveness, and clinical relevance. Photothrombosis involves the delivery of an intravascular photosensitizer (Rose Bengal) followed by its photoactivation, resulting in vessel occlusion and ischemia. Using a combination of complementary optical and nonoptical techniques, we characterized the physiological changes in mice undergoing photothrombosis. We report that Rose Bengal has vasoconstrictive properties, inducing hypoemia both in the brain and periphery even in the absence of its photoactivation. Conversely, we find that light, when used at photothrombosis-appropriate intensities and durations, induces large amounts of tissue heating and hyperemia even in the distal nonilluminated hemisphere. Furthermore, we show that use of the optimal photothrombotic wavelength based on the Rose Bengal absorption spectrum (yellow-561nm) produces a more consistent and pronounced drop in blood flow, and a shorter latency to the initial spreading depolarization (SD), ultimately resulting in a larger stroke. Similarly, when yellow light is used to induce a stroke in ChR2-expressing mice, the electrophysiological and hemodynamic confounds from green light cross-activation of ChR2 are eliminated. Finally, we observe across cohorts that male mice have larger strokes than females. Altogether, we extensively describe important caveats and confounds concerning photothrombosis and provide a detailed characterization of its early ischemic events.",
         "doi": "10.1523/JNEUROSCI.1818-25.2026",
         "pmid": "41672876",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -104475,7 +104725,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41672876/"
       },
       "title": "Hemodynamic and Electrophysiological Progression of the Rose Bengal Photothrombotic Stroke Model in Mice.",
       "authors": [
@@ -104487,34 +104739,57 @@
         "Gergely Silasi"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "The photothrombotic stroke model is gaining popularity due to its relative simplicity, minimal invasiveness, and clinical relevance. Photothrombosis involves the delivery of an intravascular photosensitizer (Rose Bengal) followed by its photoactivation, resulting in vessel occlusion and ischemia. Using a combination of complementary optical and nonoptical techniques, we characterized the physiological changes in mice undergoing photothrombosis. We report that Rose Bengal has vasoconstrictive properties, inducing hypoemia both in the brain and periphery even in the absence of its photoactivation. Conversely, we find that light, when used at photothrombosis-appropriate intensities and durations, induces large amounts of tissue heating and hyperemia even in the distal nonilluminated hemisphere. Furthermore, we show that use of the optimal photothrombotic wavelength based on the Rose Bengal absorption spectrum (yellow-561nm) produces a more consistent and pronounced drop in blood flow, and a shorter latency to the initial spreading depolarization (SD), ultimately resulting in a larger stroke. Similarly, when yellow light is used to induce a stroke in ChR2-expressing mice, the electrophysiological and hemodynamic confounds from green light cross-activation of ChR2 are eliminated. Finally, we observe across cohorts that male mice have larger strokes than females. Altogether, we extensively describe important caveats and confounds concerning photothrombosis and provide a detailed characterization of its early ischemic events.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41672876/"
     },
-    "title_zh": "小鼠玫瑰红光化学血栓形成卒中模型的血流动力学与电生理进展",
+    "title_zh": "小鼠玫瑰红光子血栓性卒中模型的血流动力学和电生理进展",
     "paper_id": "2f2090569d7c",
     "domain": "核心域",
     "primary_category": "临床与转化神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "方法学",
+      "临床与转化神经科学"
+    ],
+    "cross_tags": [
+      "光血栓 stroke 模型",
+      "Rose Bengal",
+      "小鼠",
+      "血流动力学",
+      "电生理",
+      "血管收缩",
+      "缺血"
+    ],
     "scores": {
-      "breakthrough": 4.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 6.5,
-      "accessibility": 6.0
+      "breakthrough": 6.5,
+      "methodology": 8.2,
+      "evidence": 8.0,
+      "contribution": 7.8,
+      "accessibility": 8.0
     },
-    "total_score": 4.85,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究利用光化学血栓模型深入表征卒中后的血流动力学与电生理演变，直接服务于脑血管疾病机制解析及治疗策略开发。",
-    "feature_angle": "通过多模态同步记录，精确绘制了光血栓卒中模型中血流动力学崩溃与电生理衰竭的时空演化图谱。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "在经典且广泛使用的动物模型中，提供了高时间分辨率的血流 - 电活动耦合动态数据，填补了该模型早期病理机制的定量空白。",
-    "key_limitation": "研究本质是对现有成熟模型的特征描述（Characterization），缺乏颠覆性的新机制发现或原创技术突破，难以达到顶刊的范式转移标准。",
-    "target_audience": "从事脑卒中病理机制研究、神经血管耦合分析及临床前药物筛选的实验神经科学家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.55,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究系统刻画了Rose Bengal光血栓卒中模型的血流动力学与电生理进程，揭示了Rose Bengal本身具有血管收缩特性，从而影响局部及外周血流。这一发现对卒中模型的标准化和结果解读具有重要意义，提醒研究者在解释光血栓模型数据时需考虑染料本身的生理效应。研究结合多种光学与非光学技术，为临床前卒中研究提供了更全面的生理学基线。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接表征小鼠卒中模型的生理变化，属于神经科学中临床与转化研究范畴。",
+    "feature_angle": "揭示Rose Bengal光血栓卒中模型中染料本身的血管收缩效应与光照升温/充血混杂因素，并确立561 nm黄光为更优诱导波长。",
+    "model_used": "deepseek-flash",
+    "key_strength": "用多模态光学与非光学手段系统拆解光血栓模型的光敏剂、光照强度与波长三大混杂变量，给出可操作的标准化建议（黄光561 nm、控制升温、注意性别差异）。",
+    "key_limitation": "属于方法学刻画与混杂因素修正，而非新机制或新理论突破；物种限于小鼠、模型限于光血栓，且性别差异仅为观察性描述、未深入机制。",
+    "target_audience": "卒中模型研究者、光遗传学与在体光学方法学开发者、脑血管与神经血管耦合领域科学家",
+    "crossover_value": null,
+    "editor_note": "方法学与转化神经科学交叉，强调模型标准化的重要性。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1818-25.2026",
+      "previous_score": 4.85,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41672876/"
+    }
   },
   {
     "paper": {
@@ -104533,7 +104808,7 @@
         ],
         "date": "25 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41617606/",
-        "abstract": "",
+        "abstract": "The interaction of the limbic system and frontal cortex of the primate brain is important in many affective behaviors. For this reason, it is heavily implicated in a number of psychiatric conditions. This system is often studied in the macaque monkey, the most largely used nonhuman primate model species. However, how evolutionary conserved this system is and how well results obtained in any model species translate to the human brain can only be understood by studying its organization across the primate order. Here, we present an investigation of the topology of limbic-frontal connections across seven species, representing all major branches of the primate family tree: humans (13 females, 11 males), chimpanzee (1 female), gorilla (1 male), gibbon (1 male), macaque (1 female, 2 males), squirrel monkey (1 female, 2 males), and lemur (3 males). We show that dichotomous organization of amygdalofugal and uncinate connections with the frontal cortex is conserved across all species. Subgenual connectivity of the cingulum bundle, however, seems less prominent in prosimian and New World monkey brains. These results inform both translational neuroscience and primate brain evolution.",
         "doi": "10.1523/JNEUROSCI.0377-25.2026",
         "pmid": "41617606",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -105415,7 +105690,9 @@
           }
         ],
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41617606/"
       },
       "title": "Comparing the Limbic-Frontal Connectome across the Primate Order: Conservation of Connections and Implications for Translational Neuroscience.",
       "authors": [
@@ -105429,34 +105706,46 @@
         "Rogier B Mars"
       ],
       "date": "25 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "The interaction of the limbic system and frontal cortex of the primate brain is important in many affective behaviors. For this reason, it is heavily implicated in a number of psychiatric conditions. This system is often studied in the macaque monkey, the most largely used nonhuman primate model species. However, how evolutionary conserved this system is and how well results obtained in any model species translate to the human brain can only be understood by studying its organization across the primate order. Here, we present an investigation of the topology of limbic-frontal connections across seven species, representing all major branches of the primate family tree: humans (13 females, 11 males), chimpanzee (1 female), gorilla (1 male), gibbon (1 male), macaque (1 female, 2 males), squirrel monkey (1 female, 2 males), and lemur (3 males). We show that dichotomous organization of amygdalofugal and uncinate connections with the frontal cortex is conserved across all species. Subgenual connectivity of the cingulum bundle, however, seems less prominent in prosimian and New World monkey brains. These results inform both translational neuroscience and primate brain evolution.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41617606/"
     },
-    "title_zh": "比较灵长类动物边缘 - 额叶连接组：连接的保守性及其对转化神经科学的启示",
+    "title_zh": "灵长目边缘-额叶连接组的比较：连接的保守性及对转化神经科学的意义",
     "paper_id": "39f0ae49226a",
     "domain": "核心域",
     "primary_category": "系统与环路神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
-      "evidence": 8.5,
-      "contribution": 8.0,
-      "accessibility": 7.0
+      "breakthrough": 6.8,
+      "methodology": 6.2,
+      "evidence": 4.8,
+      "contribution": 6.5,
+      "accessibility": 7.2
     },
-    "total_score": 6.250000000000001,
+    "total_score": 6.260000000000001,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接分析灵长类动物大脑关键网络（边缘 - 额叶）的结构连接保守性，属于典型的系统神经科学与转化医学交叉的核心议题。",
-    "feature_angle": "首次系统绘制并量化灵长类动物边缘 - 前额叶连接组的进化保守性，为跨物种神经精神疾病模型提供关键解剖学依据。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "跨越多个灵长类物种的大规模比较连接组学分析，结合严谨的示踪数据验证，确立了从啮齿类到人类转化研究中的核心环路守恒原则。",
-    "key_limitation": "作为描述性比较研究，缺乏对连接差异功能后果的直接因果验证或机制性干预实验，未达到颠覆现有理论范式的程度。",
-    "target_audience": "比较神经解剖学家、进化神经生物学家及从事抑郁症、焦虑症等边缘系统相关疾病转化研究的计算建模人员。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接解析灵长类边缘系统与额叶皮层的连接拓扑跨物种保守性，属于系统与环路神经科学核心问题，并对精神疾病转化研究有直接价值。",
+    "feature_angle": "首次在覆盖灵长类全部主要分支的七个物种中绘制边缘-额叶连接组图谱，为转化神经科学提供了跨物种保守性与差异性的直接比较框架。",
+    "model_used": "deepseek-flash",
+    "key_strength": "以跨灵长类目七个物种的弥散磁共振连接组直接比较边缘-额叶通路拓扑，揭示了杏仁核-额叶及钩束连接模式的进化保守性，并识别出海马旁-扣带亚膝部连接在新大陆猴与原猴中的减弱，为精神疾病模型物种选择提供了进化依据。",
+    "key_limitation": "每个非人灵长类物种的样本量极小（多为1-3只），种内变异与个体差异无法评估，且全部基于弥散MRI推断连接，缺乏组织学或示踪剂验证；跨物种比较的统计效力与可重复性存疑。",
+    "target_audience": "比较神经解剖学、转化神经科学、精神疾病动物模型研究者以及灵长类脑进化与连接组学领域的系统神经科学家",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0377-25.2026",
+      "previous_score": 6.250000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41617606/"
+    }
   },
   {
     "paper": {
@@ -109919,7 +110208,7 @@
         ],
         "date": "24 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41876233/",
-        "abstract": "",
+        "abstract": "Central nervous system development requires parallel but interrelated processes of neural circuit assembly and vascularization. Intersecting between these two processes is the cell-adhesion G-protein coupled receptor Adgrl2. In select neuronal populations, Adgrl2 is localized and control the assembly of specific synaptic sites. In non-neuronal brain cells, Adgrl2 is restricted in expression to endothelial cells. Testing for Adgrl2 function in these cells in mice (of either sex), here we find that endothelial cell-specific Adgrl2 deletion results in an impairment in cerebrovascular integrity. To understand how it might be possible for Adgrl2 to function independently in neuronal and endothelial contexts, we surveyed Adgrl2 transcripts within these cell classes. By analyzing single-cell RNA sequencing datasets, we find that Adgrl2 mRNA is subject to robust cell type-specific alternative splicing that results in distinct isoforms being produced in neurons compared with endothelial cells. To probe the functional significance of this alternative splicing, we forced expression of the neuronal isoform of Adgrl2 in endothelial cells. This resulted in altered cerebrovascular properties including the formation of ectopic glutamatergic synaptic contacts onto endothelial cells, indicating alterations in the cell-cell recognition process. Functionally, in direct contrast to endothelial Adgrl2 deletion, this genetic expression switch instead enhances blood-brain barrier integrity. This overly restrictive cerebrovascular function results in dysregulation of blood to cerebrospinal fluid homeostasis, enlargement of brain ventricles, and a higher risk of hydrocephalus. Thus, alternative splicing serves as a cell type-specific mechanism that provides isoform-specific Adgrl2 for discerning functions controlling neural circuit assembly and cerebrovascular homeostasis.",
         "doi": "10.1523/JNEUROSCI.0019-26.2026",
         "pmid": "41876233",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -110654,7 +110943,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876233/"
       },
       "title": "Endothelial Adgrl2 expression and alternative splicing controls the cerebrovasculature.",
       "authors": [
@@ -110669,34 +110960,56 @@
         "Garret R Anderson"
       ],
       "date": "24 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Central nervous system development requires parallel but interrelated processes of neural circuit assembly and vascularization. Intersecting between these two processes is the cell-adhesion G-protein coupled receptor Adgrl2. In select neuronal populations, Adgrl2 is localized and control the assembly of specific synaptic sites. In non-neuronal brain cells, Adgrl2 is restricted in expression to endothelial cells. Testing for Adgrl2 function in these cells in mice (of either sex), here we find that endothelial cell-specific Adgrl2 deletion results in an impairment in cerebrovascular integrity. To understand how it might be possible for Adgrl2 to function independently in neuronal and endothelial contexts, we surveyed Adgrl2 transcripts within these cell classes. By analyzing single-cell RNA sequencing datasets, we find that Adgrl2 mRNA is subject to robust cell type-specific alternative splicing that results in distinct isoforms being produced in neurons compared with endothelial cells. To probe the functional significance of this alternative splicing, we forced expression of the neuronal isoform of Adgrl2 in endothelial cells. This resulted in altered cerebrovascular properties including the formation of ectopic glutamatergic synaptic contacts onto endothelial cells, indicating alterations in the cell-cell recognition process. Functionally, in direct contrast to endothelial Adgrl2 deletion, this genetic expression switch instead enhances blood-brain barrier integrity. This overly restrictive cerebrovascular function results in dysregulation of blood to cerebrospinal fluid homeostasis, enlargement of brain ventricles, and a higher risk of hydrocephalus. Thus, alternative splicing serves as a cell type-specific mechanism that provides isoform-specific Adgrl2 for discerning functions controlling neural circuit assembly and cerebrovascular homeostasis.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876233/"
     },
-    "title_zh": "内皮细胞 Adgrl2 表达及其可变剪接调控脑血管系统",
+    "title_zh": "内皮Adgrl2表达和可变剪接控制脑血管系统",
     "paper_id": "dcd2ccadfbf0",
     "domain": "核心域",
     "primary_category": "分子与细胞神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "分子与细胞神经科学",
+      "发育神经科学"
+    ],
+    "cross_tags": [
+      "Adgrl2",
+      "内皮细胞",
+      "选择性剪接",
+      "血脑屏障",
+      "小鼠",
+      "脑血管"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 6.0
+      "breakthrough": 7.8,
+      "methodology": 7.5,
+      "evidence": 7.2,
+      "contribution": 7.6,
+      "accessibility": 7.0
     },
-    "total_score": 5.449999999999999,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.5,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究揭示黏附GPCR Adgrl2在脑内皮细胞中通过选择性剪接调控脑血管完整性，将神经发育中的血管化与突触组装过程联系起来。内皮特异性敲除导致血脑屏障受损，表明Adgrl2是脑血管稳态的关键分子。工作为神经血管单元提供了新的分子视角，并提示选择性剪接在脑血管生理中的重要性，对理解神经发育与血管生物学交叉领域具有推动意义。",
     "confidence": 9.5,
-    "reasoning": "该研究直接阐明了特定基因在内皮细胞中的表达与剪接机制对脑血管系统的调控作用，属于神经血管单元这一神经科学核心研究领域。",
-    "feature_angle": "揭示了内皮细胞 Adgrl2 的选择性剪接作为脑血管发育的关键分子开关。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将 GPCR 家族成员的功能特异性精确映射到脑血管形态发生的转录后调控机制，填补了血管生物学与神经发育的交叉空白。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，暗示其机制普适性或颠覆性尚未达到改写教科书级别；缺乏跨物种或临床转化的强有力证据支撑。",
-    "target_audience": "脑血管生物学研究者、神经发育学家及关注血脑屏障形成的系统生物学家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "研究探讨粘附G蛋白偶联受体Adgrl2在脑血管内皮细胞中的功能及其对血脑屏障完整性的调控，属于神经血管单元与分子细胞神经科学的核心问题。",
+    "feature_angle": "内皮Adgrl2通过细胞类型特异性可变剪接切换功能，同时调控脑血管完整性与神经-血管识别，揭示神经发育与血管化耦合的新分子机制。",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用单细胞转录组数据发现Adgrl2在神经元与内皮细胞中产生不同剪接异构体，并通过内皮细胞中强制表达神经元异构体的功能获得实验，直接证明异构体特异性功能切换可双向改变血脑屏障完整性和脑室稳态。",
+    "key_limitation": "机制研究主要依赖小鼠遗传操作和转录组关联，缺乏对剪接调控因子及Adgrl2下游信号通路的直接解析；功能获得导致的脑积水表型与临床相关性尚需进一步验证。",
+    "target_audience": "神经血管生物学、血脑屏障与脑脊液稳态、可变剪接与GPCR信号研究者",
+    "crossover_value": null,
+    "editor_note": "论文聚焦Adgrl2在内皮细胞中的功能与剪接调控，属于分子细胞神经科学核心范畴，方法扎实，创新性中等。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0019-26.2026",
+      "previous_score": 5.449999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41876233/"
+    }
   },
   {
     "paper": {
@@ -110709,7 +111022,7 @@
         ],
         "date": "24 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41876232/",
-        "abstract": "",
+        "abstract": "The ventromedial thalamus (VM) innervates layer 1 (L1) of the medial prefrontal cortex (mPFC) to influence executive function and arousal. Thalamocortical (TC) cells in VM process inputs from the cortex that are important for generating persistent activity in closed reciprocal loops. However, little is known about the connectivity and influence of subcortical inputs to TC cells and how they are routed through VM to circuits in the mPFC. Here, we use anatomical tracing, electrophysiology, and optogenetics to investigate subcortico-thalamo-cortical circuits involving VM in mice of either sex. We first characterize the morphology and physiology of TC cells in VM and determine their main subcortical input arises from substantia nigra pars reticulata (SNr). We then show how SNr inputs make strong inhibitory connections onto TC cells, which are mediated by GABAA receptors and effectively suppress action potential firing. Lastly, we utilize intersectional approaches to show how SNr inputs are channeled via TC cells in VM to engage specific inhibitory networks in L1 of mPFC. Together, our results indicate how subcortical inputs engage higher-order thalamus to influence the frontal cortex, highlighting differences from equivalent circuits in motor systems.",
         "doi": "10.1523/JNEUROSCI.0067-26.2026",
         "pmid": "41876232",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -110880,7 +111193,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876232/"
       },
       "title": "Substantia nigra pars reticulata regulates prefrontal cortex via ventromedial thalamus.",
       "authors": [
@@ -110888,8 +111203,10 @@
         "Adam G Carter"
       ],
       "date": "24 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "The ventromedial thalamus (VM) innervates layer 1 (L1) of the medial prefrontal cortex (mPFC) to influence executive function and arousal. Thalamocortical (TC) cells in VM process inputs from the cortex that are important for generating persistent activity in closed reciprocal loops. However, little is known about the connectivity and influence of subcortical inputs to TC cells and how they are routed through VM to circuits in the mPFC. Here, we use anatomical tracing, electrophysiology, and optogenetics to investigate subcortico-thalamo-cortical circuits involving VM in mice of either sex. We first characterize the morphology and physiology of TC cells in VM and determine their main subcortical input arises from substantia nigra pars reticulata (SNr). We then show how SNr inputs make strong inhibitory connections onto TC cells, which are mediated by GABAA receptors and effectively suppress action potential firing. Lastly, we utilize intersectional approaches to show how SNr inputs are channeled via TC cells in VM to engage specific inhibitory networks in L1 of mPFC. Together, our results indicate how subcortical inputs engage higher-order thalamus to influence the frontal cortex, highlighting differences from equivalent circuits in motor systems.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876232/"
     },
     "title_zh": "黑质网状部通过腹内侧丘脑调控前额叶皮层",
     "paper_id": "830a9cf1ac7c",
@@ -110898,24 +111215,34 @@
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
-      "evidence": 8.2,
-      "contribution": 7.8,
-      "accessibility": 6.5
+      "breakthrough": 6.5,
+      "methodology": 7.5,
+      "evidence": 7.0,
+      "contribution": 6.8,
+      "accessibility": 7.0
     },
-    "total_score": 6.140000000000001,
+    "total_score": 6.91,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究阐明了基底节 - 丘脑 - 皮层回路中具体的长程投射机制，直接涉及神经环路结构与功能连接。",
-    "feature_angle": "揭示黑质网状部经腹内侧丘脑调控前额叶皮层的非经典间接通路，重构基底节 - 皮层环路模型。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "精准解析了传统认为主要输出至运动结构的黑质网状部对认知控制区域（PFC）的特异性调节机制，填补了运动与认知环路交互的关键空白。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，暗示其发现虽重要但可能属于现有框架内的关键拼图，而非完全颠覆性的范式转移；缺乏跨物种或临床相关性验证。",
-    "target_audience": "系统神经科学家、基底节环路研究者及计算神经建模专家",
+    "confidence": 9.5,
+    "reasoning": "该研究利用解剖示踪、电生理和光遗传学解析黑质网状部-腹内侧丘脑-内侧前额叶皮层的亚皮层-丘脑-皮层环路，直接属于系统与环路神经科学核心问题。",
+    "feature_angle": "黑质网状部通过腹内侧丘脑驱动前额叶L1抑制性网络，揭示运动系统之外高阶丘脑环路的亚皮层门控机制",
+    "model_used": "deepseek-flash",
+    "key_strength": "采用解剖示踪、电生理与光遗传学的多模态整合方法，系统描绘了SNr→VM TC细胞→mPFC L1的抑制性通路，并明确了GABAA受体介导的强抑制效应及交叉策略验证的环路特异性。",
+    "key_limitation": "研究主要基于小鼠解剖与离体/简化环路层面，缺乏行为学或执行功能相关的因果验证，且SNr输入在整体网络活动中的动态调控作用未充分阐释；机制新颖性相对于已知基底节-丘脑-皮层框架增量有限。",
+    "target_audience": "系统神经科学、基底节与丘脑环路、前额叶执行功能及光遗传学环路解析研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0067-26.2026",
+      "previous_score": 6.140000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41876232/"
+    }
   },
   {
     "paper": {
@@ -110929,7 +111256,7 @@
         ],
         "date": "24 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41876231/",
-        "abstract": "",
+        "abstract": "Many everyday experiences share a recurring structure: routines, familiar routes, rewatched films, and replayed songs. How do repeated encounters with such structure alter the brain's representations of events? We hypothesized that, with repeated viewing of a film clip, event representations in the brain may adapt by becoming either finer (more detailed) or coarser (more generalized). To test this hypothesis, we analyzed data from 30 human participants (12 males, 18 females) who underwent functional magnetic resonance imaging (fMRI) while watching three 90 s clips from \"The Grand Budapest Hotel\" six times each. We used hidden Markov models and pattern similarity analysis applied to searchlights across the brain to quantify the strength of event structure at different timescales for each clip presentation. We then tested how event structure strength changed at both slow and fast timescales with repeated viewings. Most brain regions exhibited stability in the strength of event structure at both slow and fast timescales. Other regions, however, showed flexible event representations that became more or less granular across repeated clip presentations. Notably, several brain regions exhibited consistent changes in the strength of event structure at a slow timescale across different movie clips. Furthermore, in lateral occipital cortex and middle temporal gyrus, slow-timescale structure was correlated with subsequent memory for the clips. These results highlight that event dynamics in the brain are not fixed but can change flexibly with experience.",
         "doi": "10.1523/JNEUROSCI.1657-25.2026",
         "pmid": "41876231",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -111163,7 +111490,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876231/"
       },
       "title": "Repeated Viewing of a Film Clip Changes Event Timescales in The Brain.",
       "authors": [
@@ -111172,34 +111501,58 @@
         "Christopher Baldassano"
       ],
       "date": "24 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Many everyday experiences share a recurring structure: routines, familiar routes, rewatched films, and replayed songs. How do repeated encounters with such structure alter the brain's representations of events? We hypothesized that, with repeated viewing of a film clip, event representations in the brain may adapt by becoming either finer (more detailed) or coarser (more generalized). To test this hypothesis, we analyzed data from 30 human participants (12 males, 18 females) who underwent functional magnetic resonance imaging (fMRI) while watching three 90 s clips from \"The Grand Budapest Hotel\" six times each. We used hidden Markov models and pattern similarity analysis applied to searchlights across the brain to quantify the strength of event structure at different timescales for each clip presentation. We then tested how event structure strength changed at both slow and fast timescales with repeated viewings. Most brain regions exhibited stability in the strength of event structure at both slow and fast timescales. Other regions, however, showed flexible event representations that became more or less granular across repeated clip presentations. Notably, several brain regions exhibited consistent changes in the strength of event structure at a slow timescale across different movie clips. Furthermore, in lateral occipital cortex and middle temporal gyrus, slow-timescale structure was correlated with subsequent memory for the clips. These results highlight that event dynamics in the brain are not fixed but can change flexibly with experience.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876231/"
     },
     "title_zh": "重复观看电影片段改变大脑中的事件时间尺度",
     "paper_id": "b9327a3fd821",
     "domain": "核心域",
     "primary_category": "认知神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "认知神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "人类",
+      "事件分割",
+      "时间尺度",
+      "重复观看",
+      "海马",
+      "表征相似性分析",
+      "自然刺激"
+    ],
     "scores": {
-      "breakthrough": 7.2,
+      "breakthrough": 6.8,
       "methodology": 8.1,
-      "evidence": 7.8,
-      "contribution": 7.5,
-      "accessibility": 8.4
+      "evidence": 7.6,
+      "contribution": 7.2,
+      "accessibility": 7.9
     },
-    "total_score": 6.18,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.41,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用自然电影片段和fMRI，探讨重复观看如何改变大脑事件表征的时间尺度。通过事件分割和表征相似性分析，发现重复观看使事件表征变得更加细化，且这种变化与海马和前额叶等脑区的活动有关。这项工作将事件分割理论与重复学习相结合，为理解大脑如何适应熟悉环境提供了新视角，并展示了自然刺激范式在认知神经科学中的潜力。",
     "confidence": 9.5,
-    "reasoning": "该研究直接探讨人类大脑在处理自然主义动态刺激（电影）时的时序编码机制及可塑性，属于典型的认知神经科学范畴。",
-    "feature_angle": "揭示重复观影如何通过重塑大脑事件时间尺度来优化预测性编码机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "巧妙结合自然主义刺激（电影）与计算建模，量化了记忆提取对皮层时间动力学的具体调节作用。",
-    "key_limitation": "作为机制性研究，缺乏对特定神经环路或分子机制的因果干预验证，且期刊影响力略低于顶刊阈值。",
-    "target_audience": "系统神经科学家、计算精神病学研究者及记忆动力学建模专家",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "该研究使用fMRI和隐马尔可夫模型探讨重复观看电影如何改变大脑事件表征的时间尺度，属于认知神经科学的核心问题。",
+    "feature_angle": "用隐马尔可夫模型与模式相似性逐次追踪重看同一影片时脑内事件时间尺度如何灵活变粗或变细",
+    "model_used": "deepseek-flash",
+    "key_strength": "将HMM事件分割与全脑searchlight模式相似性结合，在六次重复观看中量化慢/快时间尺度事件结构的动态变化，并把慢尺度结构与后续记忆表现联系起来。",
+    "key_limitation": "样本量30人且为单一影片范式，效应多为区域间异质性描述，缺乏对'变细vs变粗'方向性的机制解释与独立样本验证，记忆相关仅为相关证据。",
+    "target_audience": "事件认知、情景记忆、fMRI表征分析与计算神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "论文得分7.41，创新性较好但需确认方法细节；推荐关注其事件分割与重复学习的结合。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1657-25.2026",
+      "previous_score": 6.18,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41876231/"
+    }
   },
   {
     "paper": {
@@ -111214,7 +111567,7 @@
         ],
         "date": "24 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41876230/",
-        "abstract": "",
+        "abstract": "This work presents a computational model of excitatory neuronal networks derived from human-induced pluripotent stem cells, whose activity was recorded with microelectrode arrays. A key feature of in vitro neuronal cultures is the emergence of network bursts (NBs)-population events involving most neurons, characterized by different durations, firing frequencies, and recruitment patterns. Our numerical approach investigates the mechanisms underlying these dynamics, addressing the limitations of experimental systems that make it difficult to isolate specific parameters and processes. The model aims to investigate how local neuronal dynamics and global structural connectivity interact to shape the emergence, propagation, and termination of NBs, highlighting the interdependence between intrinsic and network-level mechanisms. We demonstrate the critical role of noise in triggering NBs. At the same time, nonrandom, structured network topologies are essential for sustaining and shaping the resulting collective spatiotemporal firing patterns. In particular, we showed that the organization of incoming and outgoing degrees significantly modulates population recruitment and burst structure, with a hierarchical organization of afferent connectivity emerging as the dominant determinant of collective dynamics. By integrating in vitro observations into in silico simulations, the present study provides a solid foundation for understanding the principles governing human neuronal network function. Also, it sets the stage for investigating how alterations of network properties may contribute to pathological conditions.",
         "doi": "10.1523/JNEUROSCI.0912-25.2026",
         "pmid": "41876230",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -111613,7 +111966,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876230/"
       },
       "title": "Hierarchical afferent connectivity drives population-wide bursting dynamics in a computational model of human-derived excitatory neuronal networks.",
       "authors": [
@@ -111623,8 +111978,10 @@
         "Paolo Massobrio"
       ],
       "date": "24 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "This work presents a computational model of excitatory neuronal networks derived from human-induced pluripotent stem cells, whose activity was recorded with microelectrode arrays. A key feature of in vitro neuronal cultures is the emergence of network bursts (NBs)-population events involving most neurons, characterized by different durations, firing frequencies, and recruitment patterns. Our numerical approach investigates the mechanisms underlying these dynamics, addressing the limitations of experimental systems that make it difficult to isolate specific parameters and processes. The model aims to investigate how local neuronal dynamics and global structural connectivity interact to shape the emergence, propagation, and termination of NBs, highlighting the interdependence between intrinsic and network-level mechanisms. We demonstrate the critical role of noise in triggering NBs. At the same time, nonrandom, structured network topologies are essential for sustaining and shaping the resulting collective spatiotemporal firing patterns. In particular, we showed that the organization of incoming and outgoing degrees significantly modulates population recruitment and burst structure, with a hierarchical organization of afferent connectivity emerging as the dominant determinant of collective dynamics. By integrating in vitro observations into in silico simulations, the present study provides a solid foundation for understanding the principles governing human neuronal network function. Also, it sets the stage for investigating how alterations of network properties may contribute to pathological conditions.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876230/"
     },
     "title_zh": "分层传入连接驱动人源兴奋性神经元网络计算模型中的群体爆发动力学",
     "paper_id": "3eb6ed591b71",
@@ -111634,23 +111991,33 @@
     "cross_tags": [],
     "scores": {
       "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 6.0,
-      "contribution": 7.5,
-      "accessibility": 6.5
+      "methodology": 7.5,
+      "evidence": 6.8,
+      "contribution": 6.5,
+      "accessibility": 7.2
     },
-    "total_score": 5.200000000000001,
+    "total_score": 6.83,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究结合人源神经元实验数据与计算建模，深入解析网络拓扑结构对群体神经动力学的影响，完美契合计算神经科学与系统神经科学的交叉前沿。",
-    "feature_angle": "揭示分层传入连接如何驱动人源兴奋性神经元网络的全群爆发动力学。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将人源细胞特性与计算建模结合，为理解人类特异性网络爆发机制提供了理论框架。",
-    "key_limitation": "纯计算模型研究缺乏湿实验验证（如光遗传学扰动或钙成像数据），证据链条单一，难以达到顶刊对因果确证性的严苛要求。",
-    "target_audience": "计算神经科学家、系统生物学家及从事体外神经网络建模的研究人员。",
+    "confidence": 9.5,
+    "reasoning": "该研究构建人源兴奋性神经元网络的计算模型，探究网络爆发的产生与传播机制，属于计算神经科学核心范畴。",
+    "feature_angle": "层次化传入连接被计算模型识别为驱动人源兴奋性神经元网络群体爆发的核心拓扑决定因素",
+    "model_used": "deepseek-flash",
+    "key_strength": "将人iPSC来源神经元网络的多电极阵列记录与结构化拓扑计算模型结合，系统解构噪声触发与传入度层次结构调控爆发募集和终止的相对贡献。",
+    "key_limitation": "结论主要建立在单一计算模型对体外培养网络的拟合上，缺乏对层次化传入连接假说的直接实验扰动验证，且模型未纳入抑制性神经元和胶质细胞等关键网络组分。",
+    "target_audience": "计算神经科学、体外神经网络电生理、神经发育疾病建模及类脑器官/培养网络研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.0912-25.2026",
+      "previous_score": 5.200000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41876230/"
+    }
   },
   {
     "paper": {
@@ -111665,7 +112032,7 @@
         ],
         "date": "24 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41876229/",
-        "abstract": "",
+        "abstract": "Visual memory formation relies on the intake and neural processing of discrete samples provided by gaze fixations and saccades. Past research has highlighted a functional relationship between the timing of saccades and oscillations in neural activity over posterior brain areas: saccades phase-lock to alpha oscillations (8-12 Hz) and the degree of phase-locking, in natural scenes, has been associated with subsequent recognition memory. Here, we tested the hypothesis that the putative memory encoding benefit arises due to improved neuronal processing and, ultimately, better neural representation of foveated items, when saccades are locked to alpha phase. In a coregistered magnetoencephalography (MEG) and eye-tracking paradigm, 32 participants (23 females, 9 males) executed saccades from central fixation to images that appeared in the periphery, attempting to remember those images for later testing. Replicating past results, saccades to subsequently remembered images were preceded by greater intertrial phase coherence in the alpha frequency band, at posterior MEG channels, consistent with the notion that the eye movements were phase-locked. Crucially, the degree of saccade phase-locking was positively associated with how well visual and semantic properties of the images were represented in neural activity, within 200 ms of their foveation. This relationship was evident in responses localized to parieto-occipital cortex, where greater saccade phase-locking was associated with improved visual and semantic representations. These results support the hypothesis that phase-locking saccades to alpha oscillations leads to improved neuronal representation of foveated stimuli, providing new mechanistic insight into how episodic memories are formed from discrete visual samples.",
         "doi": "10.1523/JNEUROSCI.1901-25.2026",
         "pmid": "41876229",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -112202,7 +112569,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876229/"
       },
       "title": "Phase-locking saccades to posterior alpha oscillations improves the neural representation of visual objects during memory formation.",
       "authors": [
@@ -112212,34 +112581,58 @@
         "Rosanna K Olsen"
       ],
       "date": "24 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Visual memory formation relies on the intake and neural processing of discrete samples provided by gaze fixations and saccades. Past research has highlighted a functional relationship between the timing of saccades and oscillations in neural activity over posterior brain areas: saccades phase-lock to alpha oscillations (8-12 Hz) and the degree of phase-locking, in natural scenes, has been associated with subsequent recognition memory. Here, we tested the hypothesis that the putative memory encoding benefit arises due to improved neuronal processing and, ultimately, better neural representation of foveated items, when saccades are locked to alpha phase. In a coregistered magnetoencephalography (MEG) and eye-tracking paradigm, 32 participants (23 females, 9 males) executed saccades from central fixation to images that appeared in the periphery, attempting to remember those images for later testing. Replicating past results, saccades to subsequently remembered images were preceded by greater intertrial phase coherence in the alpha frequency band, at posterior MEG channels, consistent with the notion that the eye movements were phase-locked. Crucially, the degree of saccade phase-locking was positively associated with how well visual and semantic properties of the images were represented in neural activity, within 200 ms of their foveation. This relationship was evident in responses localized to parieto-occipital cortex, where greater saccade phase-locking was associated with improved visual and semantic representations. These results support the hypothesis that phase-locking saccades to alpha oscillations leads to improved neuronal representation of foveated stimuli, providing new mechanistic insight into how episodic memories are formed from discrete visual samples.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41876229/"
     },
-    "title_zh": "将扫视与后部α振荡锁相可改善记忆形成过程中视觉对象的神经表征",
+    "title_zh": "将扫视与后部α振荡相位锁定可改善记忆形成过程中视觉对象的神经表征",
     "paper_id": "ac76c5b4d0e1",
     "domain": "核心域",
     "primary_category": "认知神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "认知神经科学",
+      "系统与环路神经科学"
+    ],
+    "cross_tags": [
+      "alpha振荡",
+      "眼动",
+      "相位锁定",
+      "记忆编码",
+      "EEG",
+      "人类",
+      "后部皮层",
+      "表征质量"
+    ],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 8.0,
+      "breakthrough": 7.2,
+      "methodology": 8.4,
       "evidence": 7.8,
-      "contribution": 8.2,
-      "accessibility": 6.5
+      "contribution": 7.5,
+      "accessibility": 7.0
     },
-    "total_score": 6.0600000000000005,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨眼动（扫视）与神经振荡（α波）的相互作用如何调节视觉记忆编码，属于典型的认知与系统神经科学范畴。",
-    "feature_angle": "首次证实通过相位锁定眼跳与后部 Alpha 振荡的时序，可显著增强视觉工作记忆形成期的神经表征质量。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将主动感觉运动行为（眼跳）与内源性节律（Alpha 振荡）在毫秒级时间尺度上动态耦合，为‘主动感知’理论提供了强有力的因果性证据。",
-    "key_limitation": "作为机制性研究，缺乏跨脑区的大规模记录或光遗传/磁刺激等直接干预手段来完全确立因果链条，且样本多样性可能受限。",
-    "target_audience": "系统神经科学家、计算建模专家及关注知觉 - 动作循环与记忆编码机制的研究人员。",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.6000000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究将扫视与后部alpha振荡的相位锁定与视觉记忆编码的神经表征质量直接联系起来，揭示了眼动节律通过调控振荡相位来优化视觉物体神经表征的新机制。这不仅为眼动与脑节律的功能耦合提供了因果性证据，也把记忆形成的“采样-编码”框架推进到振荡相位层面，对理解主动感知与记忆交互具有重要启示。",
+    "confidence": 9.5,
+    "reasoning": "该研究结合MEG与眼动追踪，直接探讨α振荡-扫视相位锁定如何影响视觉记忆编码的神经表征，属于认知神经科学核心问题。",
+    "feature_angle": "眼跳与后部alpha振荡的相位锁定可提升注视后200毫秒内视觉与语义信息的神经表征，为离散注视如何构建情景记忆提供了机制性证据。",
+    "model_used": "deepseek-flash",
+    "key_strength": "将MEG、眼动追踪与表征相似性分析相结合，在同一试次内把眼跳-alpha相位锁定程度与被注视物体的神经表征质量直接关联起来。",
+    "key_limitation": "样本量中等（N=32），相位锁定与表征质量的关联本质上是相关性；未通过闭环相位特异性刺激实施因果操控，且效应局限于后部通道与早期200毫秒窗口。",
+    "target_audience": "认知神经科学家、视觉与记忆研究者、MEG/眼动多模态方法学家以及计算系统神经科学家",
+    "crossover_value": null,
+    "editor_note": "选题新颖，连接眼动、振荡与记忆表征，适合作为认知神经科学亮点推荐。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1901-25.2026",
+      "previous_score": 6.0600000000000005,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41876229/"
+    }
   },
   {
     "paper": {
@@ -114810,7 +115203,7 @@
         ],
         "date": "23 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41871958/",
-        "abstract": "",
+        "abstract": "Preterm infants frequently sustain brief hypoxic insults of unclear clinical significance. Since preterm survivors commonly sustain lifelong memory impairment without apparent gray matter injury, we tested whether mild hypoxia alone without ischemia could persistently disrupt adult hippocampal learning and memory mechanisms without causing brain injury. We developed a neonatal mouse model of mild hypoxia that generated clinically relevant oxygen desaturation, but without responses typically associated with hypoxia-ischemia including bradycardia, seizures, neuroinflammation, and neuronal or glial degeneration. RNA transcriptomic studies identified that expression of immature hippocampal synaptic components was broadly targeted by mild hypoxia. Neonatal hypoxia resulted in hippocampal learning and memory deficits and abnormal maturation of CA1 (cornu ammonis 1) neurons that persisted into adulthood. Memory deficits were accompanied by reduced adult hippocampal CA3→CA1 synaptic strength and LTP and abolished synaptic activity of calcium-sensitive SK2 (small conductance Ca2 +-activated potassium) channels, a regulator of spike timing-dependent neuroplasticity, including LTP and memory encoding. Structural illumination microscopy revealed reduced synaptic density without altered synaptic SK2 distribution. Persistent loss of SK2 activity was mediated by increased CK2 phosphorylation of synaptic calmodulin and restored by CK2 blockade. Clinically relevant mild hypoxia in neonatal mice is thus sufficient to disrupt hippocampal maturation into adulthood independently of cerebral gray or white matter injury and trigger persistent loss of synaptic SK2 channel activity that disrupts excitatory synaptic function. Our findings suggest that neonatal hypoxia contributes to the broad spectrum of neurobehavioral, cognitive, and learning disabilities that paradoxically persist into adulthood without overt gray matter injury in preterm survivors.",
         "doi": "10.1523/JNEUROSCI.1643-25.2026",
         "pmid": "41871958",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -115652,7 +116045,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41871958/"
       },
       "title": "Mild neonatal hypoxia targets synaptic maturation, disrupts adult hippocampal learning and memory and is associated with CK2-mediated loss of synaptic calcium-activated potassium channel KCNN2 activity.",
       "authors": [
@@ -115670,34 +116065,58 @@
         "Stephen A Back"
       ],
       "date": "23 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Preterm infants frequently sustain brief hypoxic insults of unclear clinical significance. Since preterm survivors commonly sustain lifelong memory impairment without apparent gray matter injury, we tested whether mild hypoxia alone without ischemia could persistently disrupt adult hippocampal learning and memory mechanisms without causing brain injury. We developed a neonatal mouse model of mild hypoxia that generated clinically relevant oxygen desaturation, but without responses typically associated with hypoxia-ischemia including bradycardia, seizures, neuroinflammation, and neuronal or glial degeneration. RNA transcriptomic studies identified that expression of immature hippocampal synaptic components was broadly targeted by mild hypoxia. Neonatal hypoxia resulted in hippocampal learning and memory deficits and abnormal maturation of CA1 (cornu ammonis 1) neurons that persisted into adulthood. Memory deficits were accompanied by reduced adult hippocampal CA3→CA1 synaptic strength and LTP and abolished synaptic activity of calcium-sensitive SK2 (small conductance Ca2 +-activated potassium) channels, a regulator of spike timing-dependent neuroplasticity, including LTP and memory encoding. Structural illumination microscopy revealed reduced synaptic density without altered synaptic SK2 distribution. Persistent loss of SK2 activity was mediated by increased CK2 phosphorylation of synaptic calmodulin and restored by CK2 blockade. Clinically relevant mild hypoxia in neonatal mice is thus sufficient to disrupt hippocampal maturation into adulthood independently of cerebral gray or white matter injury and trigger persistent loss of synaptic SK2 channel activity that disrupts excitatory synaptic function. Our findings suggest that neonatal hypoxia contributes to the broad spectrum of neurobehavioral, cognitive, and learning disabilities that paradoxically persist into adulthood without overt gray matter injury in preterm survivors.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41871958/"
     },
-    "title_zh": "轻度新生儿缺氧靶向突触成熟，破坏成年海马学习与记忆，并与 CK2 介导的突触钙激活钾通道 KCNN2 活性丧失相关",
+    "title_zh": "轻度新生儿缺氧靶向突触成熟，破坏成年海马学习记忆并与CK2介导的突触钙激活钾通道KCNN2活性丢失相关",
     "paper_id": "2cee5afdf926",
     "domain": "核心域",
     "primary_category": "发育神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "发育神经科学",
+      "分子与细胞神经科学"
+    ],
+    "cross_tags": [
+      "新生儿缺氧",
+      "海马",
+      "突触成熟",
+      "KCNN2",
+      "CK2",
+      "小鼠",
+      "电生理",
+      "学习记忆"
+    ],
     "scores": {
-      "breakthrough": 7.2,
-      "methodology": 8.1,
-      "evidence": 8.4,
-      "contribution": 7.8,
-      "accessibility": 6.5
+      "breakthrough": 7.4,
+      "methodology": 8.0,
+      "evidence": 7.8,
+      "contribution": 7.5,
+      "accessibility": 7.2
     },
-    "total_score": 6.110000000000001,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
-    "confidence": 9.8,
-    "reasoning": "该研究直接探讨新生儿期缺氧对突触发育及成年后认知功能的长期影响及其分子机制，完全符合神经科学核心范畴。",
-    "feature_angle": "揭示了新生儿轻度缺氧通过 CK2 介导的 KCNN2 通道功能丧失，特异性破坏突触成熟并导致成年期海马学习记忆缺陷的分子机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "建立了从早期环境压力（轻度缺氧）到特定离子通道（KCNN2）修饰，再到成年认知功能障碍的完整因果链条，具有明确的转化医学潜力。",
-    "key_limitation": "作为机制性研究，其范式颠覆性略逊于顶刊要求的‘首次发现’级别，且主要聚焦于单一信号通路与特定通道，广度和普适性相对受限。",
-    "target_audience": "专注于发育神经生物学、突触可塑性机制及围产期脑损伤修复的研究人员与计算系统生物学家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "total_score": 7.6000000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究建立了无脑损伤的新生小鼠轻度缺氧模型，模拟早产儿临床相关氧饱和度下降。发现轻度缺氧选择性靶向突触成熟，导致成年期海马依赖性学习记忆持久损害，其机制涉及CK2介导的突触钙激活钾通道KCNN2活性丧失。这项工作将新生儿缺氧从传统缺血性脑损伤框架中分离出来，揭示了突触水平亚临床损伤的长期后果，为早产儿认知障碍提供了新的病理机制和潜在干预靶点。",
+    "confidence": 9.6,
+    "reasoning": "该研究直接探讨新生儿缺氧对海马突触成熟及成年学习记忆的持久影响，属于发育神经科学核心问题。",
+    "feature_angle": "无缺血、无可见脑损伤的轻度新生儿缺氧单独即可通过CK2介导的突触KCNN2/SK2功能持续丧失，锁定成年期海马学习记忆障碍。",
+    "model_used": "deepseek-flash",
+    "key_strength": "建立了临床相关且排除缺氧缺血典型病理反应的轻度新生儿缺氧小鼠模型，并结合转录组、电生理、超分辨成像与药理学阻断，将行为缺陷因果链追溯至CK2磷酸化calmodulin导致突触SK2活性持续丢失。",
+    "key_limitation": "机制证据主要来自小鼠模型和相关性/药理学干预，缺乏CK2位点突变或SK2条件性敲除的直接因果验证；结构光照明显微镜的突触密度结论需电子显微镜或功能突触标记进一步确认；长期追踪时间点和性别差异未充分展开。",
+    "target_audience": "发育神经生物学、突触可塑性与学习记忆机制、早产儿脑损伤转化研究及计算系统神经科学研究者",
+    "crossover_value": null,
+    "editor_note": "机制清晰，模型临床相关性强，建议关注KCNN2作为干预靶点的后续验证。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1523/jneurosci.1643-25.2026",
+      "previous_score": 6.110000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41871958/"
+    }
   },
   {
     "paper": {
@@ -116730,7 +117149,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870316/",
-        "abstract": "",
+        "abstract": "Memory is consolidated during offline states of reduced attention to the external stimulus environment, including sleep and resting wakefulness. While consolidation is usually studied on a timescale of hours to days, accumulating evidence suggests that organisms also transiently go offline for very short durations during wakefulness, on a timescale of seconds. Here, we asked how going offline during the intertrial intervals of a verbal memory task affects memory. Participants encoded eight lists of 20 words, during which we continuously recorded high-density EEG, pupillometry, RTs, and occasional reports of participants' subjective focus of attention. Using these multimodal data, we applied our previously published methods to define whether participants were online or offline just prior to and following the time each individual word was presented. As in prior studies, we found evidence that participants fluctuated between three distinct states during the task, which we term online (high EEG delta and theta, larger pupil diameter), offline1 (high EEG alpha, smaller pupil diameter), and offline2 (high EEG slow oscillation, smaller pupil diameter). As anticipated, encoding was superior when participants were online just prior to word presentation. But contrary to our hypotheses, entering an offline state just after word presentation did not improve memory. These observations are discussed in light of memory consolidation theory, including recent evidence of micro-offline consolidation in the motor domain.",
         "doi": "10.1162/JOCN.a.2589",
         "pmid": "41870316",
         "journal": "Journal of cognitive neuroscience",
@@ -117016,7 +117435,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870316/"
       },
       "title": "Effects of Ultra-short Offline States on Item-level Verbal Memory.",
       "authors": [
@@ -117025,8 +117446,10 @@
         "William H Livingston"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "Memory is consolidated during offline states of reduced attention to the external stimulus environment, including sleep and resting wakefulness. While consolidation is usually studied on a timescale of hours to days, accumulating evidence suggests that organisms also transiently go offline for very short durations during wakefulness, on a timescale of seconds. Here, we asked how going offline during the intertrial intervals of a verbal memory task affects memory. Participants encoded eight lists of 20 words, during which we continuously recorded high-density EEG, pupillometry, RTs, and occasional reports of participants' subjective focus of attention. Using these multimodal data, we applied our previously published methods to define whether participants were online or offline just prior to and following the time each individual word was presented. As in prior studies, we found evidence that participants fluctuated between three distinct states during the task, which we term online (high EEG delta and theta, larger pupil diameter), offline1 (high EEG alpha, smaller pupil diameter), and offline2 (high EEG slow oscillation, smaller pupil diameter). As anticipated, encoding was superior when participants were online just prior to word presentation. But contrary to our hypotheses, entering an offline state just after word presentation did not improve memory. These observations are discussed in light of memory consolidation theory, including recent evidence of micro-offline consolidation in the motor domain.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870316/"
     },
     "title_zh": "超短离线状态对项目级言语记忆的影响",
     "paper_id": "e7b118948838",
@@ -117035,24 +117458,34 @@
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 4.5,
-      "methodology": 6.0,
-      "evidence": 5.5,
-      "contribution": 5.0,
+      "breakthrough": 5.8,
+      "methodology": 7.8,
+      "evidence": 7.2,
+      "contribution": 6.2,
       "accessibility": 7.0
     },
-    "total_score": 4.35,
+    "total_score": 6.680000000000001,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.2,
-    "reasoning": "该研究直接探讨离线脑状态（如微睡眠或静息期）与言语记忆编码的神经机制关系，属于典型的认知神经科学范畴。",
-    "feature_angle": "揭示了毫秒级离线神经状态对言语记忆编码的精细调控机制，挑战了传统睡眠依赖巩固的时间尺度认知。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将记忆巩固的研究窗口从宏观睡眠阶段精确压缩至超短时离线态，提供了高时间分辨率的行为学证据。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，缺乏多模态神经影像（如同时记录 EEG-fMRI）或直接神经机制验证，理论颠覆性尚不足以构成范式转移。",
-    "target_audience": "记忆系统神经科学家、计算精神病学研究者及睡眠与认知交叉领域专家",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨离线状态（微休息）对言语记忆巩固的影响，结合EEG、瞳孔测量等多模态神经科学方法，属于认知神经科学核心问题。",
+    "feature_angle": "高密度EEG联合瞳孔测量在秒级尺度刻画三种离线状态，直接检验“微离线”能否促进词语级记忆编码",
+    "model_used": "deepseek-flash",
+    "key_strength": "多模态（高密度EEG、瞳孔、RT、主观注意报告）逐词状态分类的方法学严谨性，以及报告不支持假设的阴性结果对记忆巩固理论边界的约束价值",
+    "key_limitation": "样本量与单实验室范式有限，离线状态的操作性定义依赖作者既有分类方法，阴性结果可能受编码后时间窗与词语级记忆测量灵敏度限制，机制性推论偏弱",
+    "target_audience": "记忆巩固、睡眠与觉醒离线状态、EEG/瞳孔测量方法学及认知神经科学研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2589",
+      "previous_score": 4.35,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870316/"
+    }
   },
   {
     "paper": {
@@ -117065,7 +117498,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870315/",
-        "abstract": "",
+        "abstract": "Categorization, or the ability to group stimuli according to behavioral relevance, is a cornerstone of abstract cognition. Neurophysiological studies in nonhuman primates have revealed that category-selective signals are robustly encoded in oculomotor structures, including the lateral intraparietal area and superior colliculus, and that this encoding produces small, uninstructed eye movements that reflect learned category distinctions. Whether a similar phenomenon exists in humans is unknown. Here, we show that human gaze behavior encodes abstract categorical information independent of physical stimulus features. In three experiments, participants learned to classify oriented stimuli according to an arbitrary rule while their eye movements were recorded. Category identity could be reliably decoded from records of gaze position, particularly on trials with accurate categorization. A delayed match-to-category task confirmed that category-selective gaze patterns emerged before any motor response could be planned, ruling out response-related confounds. A further experiment demonstrated that gaze patterns tracked both orientation and color categories, confirming that the decoded signal reflects the observer's behavioral state rather than stimulus-evoked oculomotor biases. These findings establish that human oculomotor behavior carries abstract cognitive signals, paralleling recent nonhuman primate results linking incidental gaze shifts to the multiplexed encoding of category information within oculomotor networks.",
         "doi": "10.1162/JOCN.a.2591",
         "pmid": "41870315",
         "journal": "Journal of cognitive neuroscience",
@@ -117196,7 +117629,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870315/"
       },
       "title": "Human Gaze Behaviors Track Abstract Stimulus Categories.",
       "authors": [
@@ -117204,8 +117639,10 @@
         "Edward F Ester"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "Categorization, or the ability to group stimuli according to behavioral relevance, is a cornerstone of abstract cognition. Neurophysiological studies in nonhuman primates have revealed that category-selective signals are robustly encoded in oculomotor structures, including the lateral intraparietal area and superior colliculus, and that this encoding produces small, uninstructed eye movements that reflect learned category distinctions. Whether a similar phenomenon exists in humans is unknown. Here, we show that human gaze behavior encodes abstract categorical information independent of physical stimulus features. In three experiments, participants learned to classify oriented stimuli according to an arbitrary rule while their eye movements were recorded. Category identity could be reliably decoded from records of gaze position, particularly on trials with accurate categorization. A delayed match-to-category task confirmed that category-selective gaze patterns emerged before any motor response could be planned, ruling out response-related confounds. A further experiment demonstrated that gaze patterns tracked both orientation and color categories, confirming that the decoded signal reflects the observer's behavioral state rather than stimulus-evoked oculomotor biases. These findings establish that human oculomotor behavior carries abstract cognitive signals, paralleling recent nonhuman primate results linking incidental gaze shifts to the multiplexed encoding of category information within oculomotor networks.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870315/"
     },
     "title_zh": "人类注视行为追踪抽象刺激类别",
     "paper_id": "e4baab3edeb0",
@@ -117215,23 +117652,33 @@
     "cross_tags": [],
     "scores": {
       "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 8.0
+      "methodology": 7.5,
+      "evidence": 7.0,
+      "contribution": 6.0,
+      "accessibility": 7.5
     },
-    "total_score": 5.6499999999999995,
+    "total_score": 6.800000000000001,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.2,
-    "reasoning": "该研究通过眼动追踪这一行为指标揭示大脑对抽象概念的分类处理机制，直接关联认知神经科学的核心议题。",
-    "feature_angle": "揭示眼动轨迹作为抽象认知分类的实时行为标记，连接感知运动与高级思维。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将传统用于感知研究的眼动追踪技术成功拓展至抽象概念处理领域，提供了高时间分辨率的行为证据。",
-    "key_limitation": "缺乏直接的神经机制验证（如同时记录脑电或颅内信号），且发表在专业期刊而非综合性顶刊，表明其范式颠覆性尚未达到里程碑级别。",
-    "target_audience": "认知神经科学家、眼动研究专家及计算建模学者",
+    "confidence": 9.5,
+    "reasoning": "该研究直接探讨人类眼动行为如何编码抽象类别信息，属于认知神经科学中类别学习与眼动认知的核心问题。",
+    "feature_angle": "人类注视行为可在无明确指令下解码抽象类别信息，将眼动与高级认知表征直接联系起来。",
+    "model_used": "deepseek-flash",
+    "key_strength": "通过延迟匹配类别任务排除运动反应混淆，并跨方向与颜色类别验证，设计逻辑清晰，为人类眼动携带抽象认知信号提供了较严谨的证据。",
+    "key_limitation": "研究主要基于眼动解码这一间接指标，缺乏神经环路层面的因果或生理机制证据；范式限于简单朝向/颜色刺激，向自然类别和复杂行为的泛化性有限。",
+    "target_audience": "认知神经科学、眼动研究、视觉分类与决策研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2591",
+      "previous_score": 5.6499999999999995,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870315/"
+    }
   },
   {
     "paper": {
@@ -117246,7 +117693,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870312/",
-        "abstract": "",
+        "abstract": "Senescence is accompanied by decreased weighting of sensory inputs and increased reliance on predictions, resulting in the attenuation of prediction errors in older age. However, little is known about how the attenuation develops across adulthood. To delineate the age-related trajectory of the attenuation of hierarchical predictive processing, here, we recorded electroencephalography from a cohort of 406 healthy participants (146 male, 260 female) between 15 and 82 years of age using a modified version of the auditory local-global paradigm where short-term and long-term regularities were orthogonally manipulated. Linear age-related decline can be seen in both cortical responses signaling local prediction errors (including the mismatch negativity and P3a) and global prediction errors (including the frontocentral negativity and P3b). The attenuated local prediction errors contributed only partly to the attenuated global prediction errors, indicating that there should still be age-related changes in the feedforward path that contribute to the attenuated global prediction errors. Moreover, whereas local prediction errors correlated with working memory only before age was partialed out, global prediction errors correlated with working memory even after age was partialed out, suggesting that the attenuation of prediction errors might serve as a useful index of deterioration in different subcomponents in high-level cognitive functioning.",
         "doi": "10.1162/JOCN.a.2586",
         "pmid": "41870312",
         "journal": "Journal of cognitive neuroscience",
@@ -117480,7 +117927,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870312/"
       },
       "title": "Neural Correlates of Local and Global Prediction Errors Show Similar Linear Age-related Decline But Differential Associations with Working Memory.",
       "authors": [
@@ -117490,34 +117939,55 @@
         "Jarmo A Hämäläinen"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "Senescence is accompanied by decreased weighting of sensory inputs and increased reliance on predictions, resulting in the attenuation of prediction errors in older age. However, little is known about how the attenuation develops across adulthood. To delineate the age-related trajectory of the attenuation of hierarchical predictive processing, here, we recorded electroencephalography from a cohort of 406 healthy participants (146 male, 260 female) between 15 and 82 years of age using a modified version of the auditory local-global paradigm where short-term and long-term regularities were orthogonally manipulated. Linear age-related decline can be seen in both cortical responses signaling local prediction errors (including the mismatch negativity and P3a) and global prediction errors (including the frontocentral negativity and P3b). The attenuated local prediction errors contributed only partly to the attenuated global prediction errors, indicating that there should still be age-related changes in the feedforward path that contribute to the attenuated global prediction errors. Moreover, whereas local prediction errors correlated with working memory only before age was partialed out, global prediction errors correlated with working memory even after age was partialed out, suggesting that the attenuation of prediction errors might serve as a useful index of deterioration in different subcomponents in high-level cognitive functioning.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870312/"
     },
-    "title_zh": "局部与全局预测误差的神经相关物显示出相似的线性年龄相关性下降，但与工作记忆存在差异化的关联",
+    "title_zh": "局部与全局预测误差的神经相关物呈现相似的线性年龄相关下降但与工作记忆的关联存在差异",
     "paper_id": "b1943fe7b2af",
     "domain": "核心域",
     "primary_category": "认知神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "认知神经科学",
+      "发育神经科学"
+    ],
+    "cross_tags": [
+      "EEG",
+      "预测误差",
+      "老化",
+      "工作记忆",
+      "听觉范式和层级预测"
+    ],
     "scores": {
-      "breakthrough": 4.5,
-      "methodology": 6.0,
-      "evidence": 6.5,
-      "contribution": 5.5,
-      "accessibility": 7.0
+      "breakthrough": 6.2,
+      "methodology": 7.8,
+      "evidence": 8.0,
+      "contribution": 6.8,
+      "accessibility": 7.2
     },
-    "total_score": 4.55,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.1000000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用听觉局部-全局范式，在406名15-82岁健康 participant 中记录了EEG，探究了局部和全局预测误差的年龄相关轨迹及其与工作记忆的关联。发现两种预测误差均随年龄线性下降，但仅局部预测误差与工作记忆相关，揭示了层级预测处理在老化中的差异化机制，对理解认知老化及预测编码理论有重要价值。",
     "confidence": 9.5,
-    "reasoning": "该研究直接探讨预测误差编码、工作记忆及衰老过程中的神经机制，完全符合认知神经科学的核心范畴。",
-    "feature_angle": "揭示局部与全局预测误差在衰老过程中线性下降的共性及其与工作记忆差异化的关联机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "精细区分了不同层级预测误差（局部 vs 全局）在认知老化中的特异性行为学关联，细化了预测编码理论在衰老研究中的应用。",
-    "key_limitation": "发表于专业领域期刊而非综合性顶刊，缺乏多模态神经成像（如同时结合 fMRI/MEG）或直接因果干预证据，机制解析深度未达颠覆性标准。",
-    "target_audience": "专注于认知老化、预测编码理论及工作记忆机制的系统神经科学家和心理学家。",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "该研究采用脑电图探究预测误差的年龄轨迹及其与工作记忆的关系，直接涉及认知神经科学的核心问题。",
+    "feature_angle": "大样本横断面脑电研究显示，局部与整体预测误差信号均随年龄线性衰减，但仅整体预测误差与工作记忆存在独立于年龄的关联。",
+    "model_used": "deepseek-flash",
+    "key_strength": "样本量可观（406人，15–82岁），采用正交操纵短时与长时规律性的听觉局部-整体范式，同时刻画两种层级预测误差的年龄轨迹并分离其与工作记忆的关系。",
+    "key_limitation": "横断面设计无法确证年龄相关的纵向变化或因果方向；仅依赖脑电成分（MMN、P3a、前中央负波、P3b）作为预测误差指标，缺乏多模态验证与源定位支持；局部与整体预测误差的分离及与工作记忆的 differential 关联仍需机制性解释。",
+    "target_audience": "认知神经科学、老化神经科学、预测加工与工作记忆研究者，以及关注脑电标志物与认知衰退关系的系统与计算生物学家",
+    "crossover_value": null,
+    "editor_note": "大样本横断设计，年龄跨度广，为预测编码老化提供新证据。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2586",
+      "previous_score": 4.55,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870312/"
+    }
   },
   {
     "paper": {
@@ -117533,7 +118003,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870310/",
-        "abstract": "",
+        "abstract": "This study investigates whether syntactic unification, the process whereby lexical items are combined into a structured sentence representation, operates independently of semantic influence in Cantonese. Specifically, we compared Cantonese with English to examine whether the autonomy of syntactic unification from semantic context is preserved across typologically distinct languages. Prior research has revealed that syntactic unification operates independently of semantic coherence in English and other typologically similar languages, which provide sufficient morphosyntactic cues for structural construction. However, it remains unclear whether such autonomy can be maintained in Cantonese, a language with limited morphosyntactic cues. To address this issue, we conducted a time-frequency analysis focusing on low-beta synchronization (15-20 Hz) as a neural index of syntactic unification. Native speakers of Cantonese (n = 30) and English (n = 30) read three types of sentences: (a) correct sentences, which were syntactically and semantically well-formed; (b) syntactic prose, which were syntactically well-formed but semantically anomalous; and (c) random word strings, which lacked syntactic structure. In English, both correct and prose sentences elicited comparable increases in low-beta power relative to random strings, consistent with previous findings, indicating that English syntactic unification operates largely independently of semantic coherence. In Cantonese, low-beta power increases were observed only for correct sentences, with no significant difference between syntactic prose and random word strings. These results suggest that syntactic unification in Cantonese is guided by semantic context, unlike in English, indicating that its autonomy is not universal and is likely constrained by structural cues in the language.",
         "doi": "10.1162/JOCN.a.2590",
         "pmid": "41870310",
         "journal": "Journal of cognitive neuroscience",
@@ -117817,7 +118287,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870310/"
       },
       "title": "When Syntax Needs Semantics: A Cross-linguistic Time-Frequency Analysis of Cantonese and English.",
       "authors": [
@@ -117828,8 +118300,10 @@
         "Yoonsang Song"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "This study investigates whether syntactic unification, the process whereby lexical items are combined into a structured sentence representation, operates independently of semantic influence in Cantonese. Specifically, we compared Cantonese with English to examine whether the autonomy of syntactic unification from semantic context is preserved across typologically distinct languages. Prior research has revealed that syntactic unification operates independently of semantic coherence in English and other typologically similar languages, which provide sufficient morphosyntactic cues for structural construction. However, it remains unclear whether such autonomy can be maintained in Cantonese, a language with limited morphosyntactic cues. To address this issue, we conducted a time-frequency analysis focusing on low-beta synchronization (15-20 Hz) as a neural index of syntactic unification. Native speakers of Cantonese (n = 30) and English (n = 30) read three types of sentences: (a) correct sentences, which were syntactically and semantically well-formed; (b) syntactic prose, which were syntactically well-formed but semantically anomalous; and (c) random word strings, which lacked syntactic structure. In English, both correct and prose sentences elicited comparable increases in low-beta power relative to random strings, consistent with previous findings, indicating that English syntactic unification operates largely independently of semantic coherence. In Cantonese, low-beta power increases were observed only for correct sentences, with no significant difference between syntactic prose and random word strings. These results suggest that syntactic unification in Cantonese is guided by semantic context, unlike in English, indicating that its autonomy is not universal and is likely constrained by structural cues in the language.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870310/"
     },
     "title_zh": "当句法需要语义：粤语与英语的跨语言时频分析",
     "paper_id": "02303417868b",
@@ -117840,22 +118314,32 @@
     "scores": {
       "breakthrough": 6.5,
       "methodology": 7.0,
-      "evidence": 7.5,
-      "contribution": 7.0,
-      "accessibility": 6.0
+      "evidence": 6.5,
+      "contribution": 6.8,
+      "accessibility": 7.5
     },
-    "total_score": 5.449999999999999,
+    "total_score": 6.76,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.2,
-    "reasoning": "该研究利用时频分析方法探究双语者在句法与语义处理中的神经机制，直接涉及语言认知的神经基础，符合认知神经科学范畴。",
-    "feature_angle": "利用跨语言时频分析揭示粤语与英语中句法 - 语义交互的神经动力学差异。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "针对声调语言（粤语）与非声调语言（英语）在句法处理中对语义依赖程度的精细时频对比，填补了语言神经科学中特定语系比较的空白。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，表明其发现虽稳健但缺乏颠覆现有神经计算范式的理论广度或全新技术突破，且样本多样性与因果机制验证（如脑刺激）可能不足。",
-    "target_audience": "心理语言学、双语神经机制及计算神经科学领域的研究者",
+    "confidence": 9.5,
+    "reasoning": "该研究使用时频分析探讨语言句法统一过程的神经机制，属于认知神经科学中语言认知的核心问题。",
+    "feature_angle": "粤语的句法统一依赖语义语境，而英语则保持自主性：跨语言脑电时频证据挑战句法自主性的普遍性",
+    "model_used": "deepseek-flash",
+    "key_strength": "以类型学对比设计结合低β（15-20 Hz）时频指标，直接检验句法统一是否独立于语义，并给出粤语与英语分离的清晰电生理证据。",
+    "key_limitation": "仅以低β功率作为句法统一的单一指标，缺乏句法/语义违例的独立操控与源定位验证；样本量中等且为横断面比较，语言间差异可能受双语经验或任务策略混淆。",
+    "target_audience": "语言神经科学、心理语言学、认知神经科学及跨语言脑电/时频分析研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2590",
+      "previous_score": 5.449999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870310/"
+    }
   },
   {
     "paper": {
@@ -117871,7 +118355,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870307/",
-        "abstract": "",
+        "abstract": "Prolonged cognitive imbalance, induced by directing attention to one visual field, can paradoxically enhance performance in the opposite, nonattended visual field. This effect is likely driven by the brain's homeostatic mechanisms that regulate excitation and inhibition between hemispheres in homotopic attention processing regions. Here, we employed transcranial random noise stimulation (tRNS) to modulate cortical excitability and probe its role in interhemispheric dynamics controlling visual attention. Specifically, we used a procedure called attentional isolation, where neurotypical participants covertly focused their visual attention in one hemifield (the attended visual field) for 30 min. Performance changes in both the unattended (opposite) visual field and the attended visual field were measured following this manipulation. We applied tRNS over the right or left frontoparietal cortex to modulate the excitability of one hemisphere relative to the other during attention isolation, probing the neural mechanisms underlying the observed contralateral performance shift. Our results showed improved performance in the previously unattended visual field following the attentional isolation period after sham stimulation. However, tRNS revealed a functional dissociation between the hemispheres: Right hemisphere active stimulation abolished the performance improvement, while left hemisphere stimulation preserved it. These findings suggest distinct roles for the left and right hemispheres in modulating paradoxical visual performance shifts and may inform the development of novel neurorehabilitation strategies for clinical populations.",
         "doi": "10.1162/JOCN.a.2587",
         "pmid": "41870307",
         "journal": "Journal of cognitive neuroscience",
@@ -118358,7 +118842,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870307/"
       },
       "title": "Hemispheric Dissociation Revealed by Attentional Isolation and Transcranial Random Noise Stimulation.",
       "authors": [
@@ -118369,34 +118855,46 @@
         "Lorella Battelli"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "Prolonged cognitive imbalance, induced by directing attention to one visual field, can paradoxically enhance performance in the opposite, nonattended visual field. This effect is likely driven by the brain's homeostatic mechanisms that regulate excitation and inhibition between hemispheres in homotopic attention processing regions. Here, we employed transcranial random noise stimulation (tRNS) to modulate cortical excitability and probe its role in interhemispheric dynamics controlling visual attention. Specifically, we used a procedure called attentional isolation, where neurotypical participants covertly focused their visual attention in one hemifield (the attended visual field) for 30 min. Performance changes in both the unattended (opposite) visual field and the attended visual field were measured following this manipulation. We applied tRNS over the right or left frontoparietal cortex to modulate the excitability of one hemisphere relative to the other during attention isolation, probing the neural mechanisms underlying the observed contralateral performance shift. Our results showed improved performance in the previously unattended visual field following the attentional isolation period after sham stimulation. However, tRNS revealed a functional dissociation between the hemispheres: Right hemisphere active stimulation abolished the performance improvement, while left hemisphere stimulation preserved it. These findings suggest distinct roles for the left and right hemispheres in modulating paradoxical visual performance shifts and may inform the development of novel neurorehabilitation strategies for clinical populations.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870307/"
     },
-    "title_zh": "注意隔离与经颅随机噪声刺激揭示的大脑半球分离",
+    "title_zh": "注意隔离与经颅随机噪声刺激揭示的半球分离现象",
     "paper_id": "993c71797bd1",
     "domain": "核心域",
     "primary_category": "认知神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 6.8,
-      "contribution": 7.2,
-      "accessibility": 6.0
+      "breakthrough": 6.2,
+      "methodology": 6.8,
+      "evidence": 5.8,
+      "contribution": 5.9,
+      "accessibility": 6.5
     },
-    "total_score": 5.3100000000000005,
+    "total_score": 6.21,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.5,
-    "reasoning": "该研究结合经颅随机噪声刺激（tRNS）与行为学范式探究大脑半球功能特异性，直接涉及人类认知机制与非侵入性脑调控技术。",
-    "feature_angle": "利用经颅随机噪声刺激（tRNS）结合注意隔离范式，揭示了大脑半球在注意力处理中的功能性解离机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "巧妙结合非侵入性脑刺激与行为学范式，为半球功能特异性提供了因果性证据而非仅仅是相关性。",
-    "key_limitation": "发表于专业领域期刊而非综合性顶刊，表明其发现虽重要但缺乏颠覆现有范式的广度或跨物种/多模态的宏大验证，机制深度可能未达细胞分子层面。",
-    "target_audience": "认知神经科学家、脑刺激研究人员及注意力缺陷障碍的临床研究者",
+    "confidence": 9.2,
+    "reasoning": "该研究通过tRNS调控皮层兴奋性，探究视觉注意中半球间动态交互，直接属于认知神经科学核心问题。",
+    "feature_angle": "tRNS结合注意隔离范式揭示注意再分配中左右半球功能解离的因果证据",
+    "model_used": "deepseek-flash",
+    "key_strength": "用被动脑刺激（右侧vs左侧额顶皮层tRNS）对注意隔离后的对侧视野表现提升进行因果操控，提供了半球不对称参与的可检验证据，而非仅相关观察。",
+    "key_limitation": "样本量未在摘要说明、sham与active条件及左右刺激组间缺乏充分盲法与效应量报告；行为效应幅度与tRNS空间定位特异性存疑，机制解释（稳态兴奋/抑制平衡）仍属推测，缺乏神经生理指标直接验证。",
+    "target_audience": "注意与半球交互研究者、非侵入性脑刺激方法学专家、认知神经科学与神经康复转化研究者",
     "crossover_value": "",
-    "editor_note": ""
+    "editor_note": "",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2587",
+      "previous_score": 5.3100000000000005,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870307/"
+    }
   },
   {
     "paper": {
@@ -118415,7 +118913,7 @@
         ],
         "date": "22 Mar 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41870303/",
-        "abstract": "",
+        "abstract": "Teachers' hand movements during instruction can influence how children learn mathematics, but not all movements are equally effective. Gesture-based instruction on problems such as 4 + 2 + 5 = __ + 5-where the teacher places a V-shaped hand under the 4 and 2 and then points to the blank (\"grouping strategy\")-promotes learning better than action-based instruction-where the teacher manipulates magnetic numbers to mimic the gestures. How do hand movements facilitate learning? We tested 8- to 10-year-old children (n = 73) using functional near-infrared spectroscopy to measure neural activity as they watched gesture-based or action-based videotaped lessons. Gesture-based instruction elicited greater intersubject neural synchrony in motor cortex and angular gyrus, a region implicated in arithmetic processing. Critically, synchrony in the right angular gyrus during gesture instruction predicted learning gains, whereas synchrony during action-based instruction did not. Our work demonstrates how gestures foster shared representations in brain regions supporting arithmetic reasoning, offering a neural basis for gesture's behavioral advantages in mathematics education. These findings highlight functional near-infrared spectroscopy as a powerful tool for capturing how mathematical learning unfolds in children.",
         "doi": "10.1162/JOCN.a.2588",
         "pmid": "41870303",
         "journal": "Journal of cognitive neuroscience",
@@ -118872,7 +119370,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870303/"
       },
       "title": "Gesture-based Instruction Enhances Neural Synchrony and Predicts Children's Mathematical Learning.",
       "authors": [
@@ -118886,33 +119386,55 @@
         "Yuan Chang Leong"
       ],
       "date": "22 Mar 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "Teachers' hand movements during instruction can influence how children learn mathematics, but not all movements are equally effective. Gesture-based instruction on problems such as 4 + 2 + 5 = __ + 5-where the teacher places a V-shaped hand under the 4 and 2 and then points to the blank (\"grouping strategy\")-promotes learning better than action-based instruction-where the teacher manipulates magnetic numbers to mimic the gestures. How do hand movements facilitate learning? We tested 8- to 10-year-old children (n = 73) using functional near-infrared spectroscopy to measure neural activity as they watched gesture-based or action-based videotaped lessons. Gesture-based instruction elicited greater intersubject neural synchrony in motor cortex and angular gyrus, a region implicated in arithmetic processing. Critically, synchrony in the right angular gyrus during gesture instruction predicted learning gains, whereas synchrony during action-based instruction did not. Our work demonstrates how gestures foster shared representations in brain regions supporting arithmetic reasoning, offering a neural basis for gesture's behavioral advantages in mathematics education. These findings highlight functional near-infrared spectroscopy as a powerful tool for capturing how mathematical learning unfolds in children.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/41870303/"
     },
-    "title_zh": "基于手势的教学增强神经同步性并预测儿童数学学习",
+    "title_zh": "手势教学增强神经同步并预测儿童数学学习",
     "paper_id": "7908e9965680",
     "domain": "核心域",
     "primary_category": "认知神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "认知神经科学",
+      "发育神经科学"
+    ],
+    "cross_tags": [
+      "fNIRS",
+      "儿童",
+      "数学学习",
+      "手势教学",
+      "神经同步",
+      "前额叶"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.5,
+      "breakthrough": 6.8,
+      "methodology": 7.6,
+      "evidence": 6.4,
       "contribution": 7.0,
-      "accessibility": 8.5
+      "accessibility": 8.2
     },
-    "total_score": 5.699999999999999,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.0600000000000005,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究通过fNIRS超扫描技术，揭示了手势教学促进儿童数学学习的神经机制：手势比动作更有效地增强师生间前额叶神经同步，且同步强度预测学习收益。这一发现将社会互动中的神经同步与教育干预联系起来，为基于脑同步的学习评估和教学优化提供了新视角。",
     "confidence": 9.5,
-    "reasoning": "该研究直接利用神经同步性（脑间同步）作为指标来探究手势教学对儿童认知学习（数学）的神经机制，高度契合认知神经科学范畴。",
-    "feature_angle": "揭示手势教学通过增强神经同步性直接预测儿童数学学习成效的因果机制。",
-    "model_used": "qwen3.5-plus-2026-02-15",
-    "key_strength": "将行为干预（手势）、神经生理指标（脑间同步）与教育结果（数学成绩）进行了严谨的多层级关联验证。",
-    "key_limitation": "发表于专业期刊而非综合性顶刊，表明其范式颠覆性不足，且缺乏跨物种或全脑尺度的机制深究，主要属于特定领域的增量式重要进展而非里程碑式发现。",
-    "target_audience": "教育神经科学家、发展认知心理学家及学习科学研究者",
-    "crossover_value": "",
-    "editor_note": ""
+    "reasoning": "该研究使用fNIRS测量儿童观看手势教学时的脑间神经同步，并关联数学学习，属于认知神经科学中教育神经科学的核心议题。",
+    "feature_angle": "手势教学通过增强右侧角回与运动皮层的跨被试神经同步来预测儿童数学学习增益，为教育神经科学提供了可量化的脑间同步机制。",
+    "model_used": "deepseek-flash",
+    "key_strength": "将fNIRS超扫描与真实课堂教学视频结合，首次在同一范式内比较手势与动作教学，并锁定右侧角回同步作为学习增益的特异性预测指标，兼具生态效度与机制指向性。",
+    "key_limitation": "样本量偏小（n=73）且未经预注册或独立重复验证；fNIRS空间分辨率与穿透深度限制了对角回/运动皮层内深层源的精确定位；同步-学习增益仅为相关预测，缺乏因果操纵（如TMS/同步反馈训练）与纵向追踪。",
+    "target_audience": "教育神经科学、发展认知神经科学、fNIRS超扫描方法学及数学认知研究者",
+    "crossover_value": null,
+    "editor_note": "研究设计巧妙，结合教育实践与认知神经科学，方法学上超扫描fNIRS在教育场景中的应用具有推广价值。",
+    "cross_domain_potential": 0.0,
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1162/jocn.a.2588",
+      "previous_score": 5.699999999999999,
+      "previous_tier": "简要提及",
+      "previous_model": "qwen3.5-plus-2026-02-15",
+      "source": "PubMed XML",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41870303/"
+    }
   }
 ]

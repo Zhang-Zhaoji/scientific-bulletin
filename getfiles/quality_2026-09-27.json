@@ -4,7 +4,7 @@
   "papers_with_affiliation": 569,
   "authors_with_affiliation": 2586,
   "abstracts_recovered": 184,
-  "missing_abstracts": 17,
+  "missing_abstracts": 16,
   "authors_with_metrics": 0,
   "author_metrics_status": "not requested; source metadata only",
   "reevaluated_count": 184,
@@ -20,5 +20,8 @@
     "不推送": 210
   },
   "tier_changed_count": 38,
-  "authors_with_ror_match": 1947
+  "authors_with_ror_match": 1947,
+  "abstract_history_revision": "2026-10-18",
+  "selected_missing_abstracts": 7,
+  "missing_abstract_count_after_enrichment": 16
 }

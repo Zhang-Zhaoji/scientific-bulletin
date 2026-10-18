@@ -1,10 +1,10 @@
 {
-  "source": "tmps\\affiliation_history_20261008\\geography\\2026-03-28.jsonl",
-  "total": 69,
-  "located": 57,
+  "source": "getfiles\\all_papers_2026-03-28_enriched_ror_refined.jsonl (excluding 域外局限)",
+  "total": 70,
+  "located": 58,
   "counting_unit": "one paper per country; countries can overlap",
   "counts": {
-    "United States": 31,
+    "United States": 32,
     "United Kingdom": 8,
     "Canada": 8,
     "China": 7,

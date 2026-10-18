@@ -100,5 +100,14 @@
         "max": "16 Jul 2026"
       }
     }
-  }
+  },
+  "abstract_history_revision": "2026-10-18",
+  "missing_abstracts": 21,
+  "selected_missing_abstracts": 7,
+  "recommendation_distribution": {
+    "简要提及": 83,
+    "不推送": 283,
+    "深度解读": 141
+  },
+  "missing_abstract_count_after_enrichment": 21
 }

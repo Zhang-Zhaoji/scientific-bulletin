@@ -1,0 +1,529 @@
+{
+  "before": 1230,
+  "after": 1167,
+  "excluded": [
+    {
+      "title": "Tetradic Dynamics of Dyadic Sensorimotor Coordination: A Multiscale EEG Hyperscanning Study",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "Tetradic Dynamics of Dyadic Sensorimotor Coordination: A Multiscale EEG Hyperscanning Study",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "title": "Representational geometry as a fidelity metric for connectome-constrained networks: evidence from the Drosophila visual system",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-06-20_enriched_ror_refined.jsonl",
+        "title": "Connectome wiring shapes population-level neural geometry in the Drosophila visual system",
+        "date": "12 Jun 2026"
+      }
+    },
+    {
+      "title": "A cholinergic eligibility trace facilitates amygdala plasticity in flavour avoidance learning",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-07-11_enriched_ror_refined.jsonl",
+        "title": "A cholinergic eligibility trace facilitates amygdala plasticity in flavour avoidance learning",
+        "date": "03 Jul 2026"
+      }
+    },
+    {
+      "title": "Abstract Representations of Sensorimotor Transformations in Human Premotor Cortex",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Abstract Representations of Sensorimotor Transformations in Human Premotor Cortex",
+        "date": "27 Sep 2026"
+      }
+    },
+    {
+      "title": "Neocortical Feedback Biases Hippocampal Reactivation Toward Unconsolidated Memories in a Predictive-Coding Model of Systems Consolidation",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "Selective Hippocampal Reactivation Driven by Neocortical Feedback Supports Memory Transfer in Predictive-Coding Networks",
+        "date": "2026-10-01"
+      }
+    },
+    {
+      "title": "Erratum for the Research Article \"FOXA1 O-GlcNAcylation-mediated transcriptional switch governs metastasis capacity in breast cancer\".",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"The design and reconstructible history of the Mayan eclipse table of the Dresden Codex\".",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Comparative study of thoracolumbar fascia changes in weightlifters with and without low back pain.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Assessment of disability of leprosy in Bangladesh: A hospital-based study.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Midbrain somatostatin-expressing cells control pain-suppression during defensive states",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-07-04_enriched_ror_refined.jsonl",
+        "title": "Midbrain somatostatin-expressing cells control pain-suppression during defensive states",
+        "date": "26 Jun 2026"
+      }
+    },
+    {
+      "title": "A Thermodynamic Theory of Axon Guidance: Navigation Through High-Entropy Signaling States",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "A Thermodynamic Theory of Axon Guidance: Navigation Through High-Entropy Signaling States",
+        "date": "2026-09-28"
+      }
+    },
+    {
+      "title": "Writing electronic phases into atomic layers.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Winds make bird flights cheaper.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Keeping time in the crypt.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "How plants decode immunogenic glycans.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "NIH revives network to study emerging diseases-but its new restrictions baffle scientists.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "New tools may help decide who needs antidepressants.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Redating the Inca empire.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "OpenAI just changed math forever. Exactly how, no one yet knows.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "'Super' El Niño spurs research on ecosystem impacts.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "November elections may bring little relief for scientists beleaguered by Trump.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "AI takes a bite out of math's hardest problem.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "News"
+      ]
+    },
+    {
+      "title": "In Other Journals.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "title": "In Other Journals.",
+        "date": "30 Apr 2026"
+      }
+    },
+    {
+      "title": "In Science Journals.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "title": "In Science Journals.",
+        "date": "30 Apr 2026"
+      }
+    },
+    {
+      "title": "In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia.",
+        "date": "10 Sep 2026"
+      }
+    },
+    {
+      "title": "Glycan recognition by a plant damage-sensing immune receptor.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Glycan recognition by a plant damage-sensing immune receptor.",
+        "date": "10 Sep 2026"
+      }
+    },
+    {
+      "title": "Milking the niche: Microbial control of neonatal hematopoiesis.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "The cow udder as an influenza mixing ground.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Promoting agricultural entrepreneurship through practical education in Chinese universities.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Cerebral microthrombi promote focal Cav-1-dependent blood-brain barrier impairment, triggering neuroinflammation and neuronal damage after traumatic brain injury",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "Cerebral microthrombi promote focal Cav-1-dependent blood-brain barrier impairment, triggering neuroinflammation and neuronal damage after traumatic brain injury",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "title": "Sensing endoplasmic reticulum redox state by ethylene receptors.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-06-13_enriched_ror_refined.jsonl",
+        "title": "Sensing endoplasmic reticulum redox state by ethylene receptors",
+        "date": "12 Jun 2026"
+      }
+    },
+    {
+      "title": "Time(2): A Framework for the Neural Dynamics of Visual Perception.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-08-09_enriched_ror_refined.jsonl",
+        "title": "Time^2: A framework for the neural dynamics of visual perception",
+        "date": "04 Aug 2026"
+      }
+    },
+    {
+      "title": "Corticotropin-Releasing Hormone Differentially Modulates GABA and Non-GABA Nucleus Tractus Solitarii Neurons.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Corticotropin-Releasing Hormone differentially modulates GABA and non-GABA nucleus Tractus Solitarii neurons.",
+        "date": "23 Sep 2026"
+      }
+    },
+    {
+      "title": "Regional Brain Structural Changes During the Transition from Acute to Chronic Neuropathic Pain: A Longitudinal Study in a Rat Model of Orofacial Pain.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Regional brain structural changes during the transition from acute to chronic neuropathic pain: a longitudinal study in a rat model of orofacial pain.",
+        "date": "23 Sep 2026"
+      }
+    },
+    {
+      "title": "Uncovering Latent Cognitive, Metacognitive, and Neural Bases of Problem-Solving Deficits in Children with Developmental Dyscalculia.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Uncovering latent cognitive, metacognitive, and neural bases of problem-solving deficits in children with developmental dyscalculia.",
+        "date": "21 Sep 2026"
+      }
+    },
+    {
+      "title": "Distinct Mechanisms Mediate Dopamine-Octopamine Opponency in an Insect Model of Olfaction.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "Distinct mechanisms mediate dopamine-octopamine opponency in an insect model of olfaction.",
+        "date": "14 Sep 2026"
+      }
+    },
+    {
+      "title": "A Parietal Grid-Like Code Rotates with Cognitive Maps But Lags Rapid Behavioral Transfer.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "A parietal grid-like code rotates with cognitive maps but lags rapid behavioral transfer.",
+        "date": "14 Sep 2026"
+      }
+    },
+    {
+      "title": "Individualized Network Topography in Pre-adolescent Children and Adults Using Naturalistic Precision fMRI.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Individualized network topography in pre-adolescent children and adults using naturalistic precision fMRI.",
+        "date": "11 Sep 2026"
+      }
+    },
+    {
+      "title": "Context-Dependent Functional Diversity of Dorsomedial Posterior Parietal Neurons Revealed by Single-Unit FMRI Mapping during Naturalistic Viewing.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Context-dependent functional diversity of dorsomedial posterior parietal neurons revealed by single-unit fMRI mapping during naturalistic viewing.",
+        "date": "08 Sep 2026"
+      }
+    },
+    {
+      "title": "Dynamic Reduction of Neural Uncertainty Shapes Perceptual Decisions in a Bayes-Optimal Manner.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Dynamic reduction of neural uncertainty shapes perceptual decisions in a Bayes-optimal manner.",
+        "date": "08 Sep 2026"
+      }
+    },
+    {
+      "title": "Late Cross-Modal Biases in Neural Spatial Representations Revealed by EEG Decoding.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "title": "Late cross-modal biases in neural spatial representations revealed by EEG decoding.",
+        "date": "04 Sep 2026"
+      }
+    },
+    {
+      "title": "Midbrain Glutamatergic Neurons Modulate the Acoustic Startle Reflex and Prepulse Inhibition in Mice.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "title": "Midbrain Glutamatergic Neurons Modulate the Acoustic Startle Reflex and Prepulse Inhibition in Mice.",
+        "date": "01 Sep 2026"
+      }
+    },
+    {
+      "title": "Beta Oscillations and Pupil-Linked Arousal Regulate the Updating of Cognitive Models.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-08-29_enriched_ror_refined.jsonl",
+        "title": "Beta oscillations and pupil-linked arousal regulate the updating of cognitive models.",
+        "date": "24 Aug 2026"
+      }
+    },
+    {
+      "title": "Selective Auditory Attention Decoding with a Two-Node Wireless EEG Sensor Network",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-06-20_enriched_ror_refined.jsonl",
+        "title": "Selective Auditory Attention Decoding with a Two-Node Wireless EEG Sensor Network",
+        "date": "12 Jun 2026"
+      }
+    },
+    {
+      "title": "State dependent modulation of optic flow-processing lobula plate cells in butterflies",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "State dependant modulation of optic flow-processing lobula plate cells in butterflies",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "title": "Auricular vagus nerve stimulation facilitates contextual fear extinction via insular-mPFC pathway without affecting reconsolidation",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "Auricular vagus nerve stimulation facilitates contextual fear extinction via insular-mPFC pathway without affecting reconsolidation",
+        "date": "2026-09-29"
+      }
+    },
+    {
+      "title": "Hypoxia Disrupts Multiple Processes Supporting Spatial Navigation",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "Hypoxia Disrupts Multiple Processes Supporting Spatial Navigation",
+        "date": "2026-09-30"
+      }
+    },
+    {
+      "title": "Individual identification of brown bears using pose-aware metric learning.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Designing optimal perturbation inputs for system identification in neuroscience.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-06-20_enriched_ror_refined.jsonl",
+        "title": "Designing optimal perturbation inputs for system identification in neuroscience",
+        "date": "12 Jun 2026"
+      }
+    },
+    {
+      "title": "Correction: Multi-year evaluation and release of improved soybean lines for resistance to Phomopsis seed decay.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Refinement of the motorised laminectomy-assisted rat spinal cord injury model by analgesic treatment.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Taylor's law beyond finite moments: A route to dynamic financial risk.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "A moveable feast: Neurons become less picky eaters after hibernation.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Invariances in an ever-variant environment.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Domino-like propagation of localized deformation in origami structures.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Understanding cell fate decisions with temporal attention.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-03-21_enriched_ror_refined.jsonl",
+        "title": "Understanding Cell Fate Decisions with Temporal Attention",
+        "date": "17 Mar 2026"
+      }
+    },
+    {
+      "title": "Sparse neuronal C4 elevation induces network-wide transcriptomic and lipid-droplet remodeling in the cortical microenvironment.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "title": "Sparse Neuronal C4 Elevation Induces Network-Wide Transcriptomic and Lipid-Droplet Remodeling in the Cortical Microenvironment",
+        "date": "28 Aug 2026"
+      }
+    },
+    {
+      "title": "Editorial Note: Enterprise digitization and marine economic performance: An empirical study of listed enterprises in China's maritime economy.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Retraction: Underwater image enhancement using multi-task fusion.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: Phosphorylation of the actin binding protein drebrin at S647 is regulated by neuronal activity and PTEN.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: A novel MCGDM technique based on correlation coefficients under probabilistic hesitant fuzzy environment and its application in clinical comprehensive evaluation of orphan drugs.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Retraction: Biogenic synthesis of ZnO and Al2O3 nanoparticles using Camellia sinensis and Origanum vulgare L. leaves extract for spectroscopic estimation of ofloxacin and ciprofloxacin in commercial formulations.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Activity-dependent structural plasticity of myelinated axons tunes their excitability",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "title": "Activity-dependent structural plasticity of myelinated axons tunes their excitability",
+        "date": "28 Aug 2026"
+      }
+    }
+  ]
+}

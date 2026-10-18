@@ -1,0 +1,128 @@
+{
+  "through_date": "2026-10-17",
+  "before": {
+    "counts": {
+      "countries": 288,
+      "authors": 153424,
+      "institutions": 12657,
+      "articles": 14987,
+      "themes": 11,
+      "subthemes": 389,
+      "crosstags": 13718,
+      "author_institutions": 153277,
+      "article_authors": 139480,
+      "article_institutions": 51988,
+      "article_countries": 22426,
+      "article_themes": 15067,
+      "article_subthemes": 9730,
+      "article_crosstags": 31359,
+      "article_author_institutions": 161516
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-10"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "weeks": [
+    {
+      "date": "2026-10-17",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-17_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261017.json",
+      "records": 1167,
+      "missing_existing_titles": 1167,
+      "new_unique_titles": 1167
+    }
+  ],
+  "expected_new_articles": 1167,
+  "target_ready": true,
+  "warnings": [],
+  "backups_directory": "D:\\working\\scientific bulletin\\tmps\\pipeline_20261017\\database_backup",
+  "dry_run": false,
+  "rechecks_file": null,
+  "historical_rechecks": 0,
+  "status": "complete",
+  "after": {
+    "counts": {
+      "countries": 288,
+      "authors": 163903,
+      "institutions": 13037,
+      "articles": 16154,
+      "themes": 11,
+      "subthemes": 389,
+      "crosstags": 14434,
+      "author_institutions": 163218,
+      "article_authors": 150691,
+      "article_institutions": 55745,
+      "article_countries": 24264,
+      "article_themes": 16234,
+      "article_subthemes": 10409,
+      "article_crosstags": 33765,
+      "article_author_institutions": 172344
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-17"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "slim_after": {
+    "counts": {
+      "countries": 288,
+      "authors": 163903,
+      "institutions": 13037,
+      "articles": 16154,
+      "themes": 11,
+      "subthemes": 389,
+      "crosstags": 14434,
+      "author_institutions": 163218,
+      "article_authors": 150691,
+      "article_institutions": 55745,
+      "article_countries": 24264,
+      "article_themes": 16234,
+      "article_subthemes": 10409,
+      "article_crosstags": 33765,
+      "article_author_institutions": 172344
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-17"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "import_counts": {
+    "articles_inserted": 1167,
+    "countries_reused": 13981,
+    "article_countries_inserted": 1838,
+    "authors_inserted": 10479,
+    "article_authors_inserted": 11211,
+    "institutions_reused": 11763,
+    "article_institutions_inserted": 3757,
+    "authors_reused": 740,
+    "author_institutions_inserted": 9941,
+    "themes_reused": 1167,
+    "article_themes_inserted": 1167,
+    "subthemes_reused": 679,
+    "article_subthemes_inserted": 679,
+    "crosstags_reused": 1690,
+    "article_crosstags_inserted": 2406,
+    "crosstags_inserted": 716,
+    "institutions_inserted": 380
+  },
+  "backups": [
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261017\\database_backup\\literature_20261018_170133_852582.db",
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261017\\database_backup\\literature_slim_20261018_170133_852582.db"
+  ],
+  "score_updates": [],
+  "reevaluations": [],
+  "historical_rechecks_reconciled": 0,
+  "title_aliases": [],
+  "reconciled_new_articles": 1167,
+  "target_reconciliation": {
+    "title_matches": 1167,
+    "score_matches": 1167
+  }
+}

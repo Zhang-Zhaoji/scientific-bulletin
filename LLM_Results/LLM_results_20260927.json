@@ -57790,7 +57790,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -69525,7 +69525,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 1.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -93509,7 +93509,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -97984,7 +97984,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -98097,7 +98097,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 2.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -126392,7 +126392,7 @@
         ],
         "date": "24 Sep 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42781781/",
-        "abstract": "",
+        "abstract": "Wang et al. propose that post-stroke inflammation is driven not only by disruption of the blood–brain barrier, but also by immune signalling between the skull, meninges and brain. They conclude that targeting dural mast cells may help limit early inflammatory injury after stroke.",
         "doi": "10.1093/brain/awag328",
         "pmid": "42781781",
         "journal": "Brain : a journal of neurology",
@@ -126697,7 +126697,9 @@
         "countries": [
           "China",
           "Germany"
-        ]
+        ],
+        "abstract_source": "Crossref DOI/title-verified",
+        "abstract_source_url": "https://api.crossref.org/works/10.1093/brain/awag328"
       },
       "title": "A mast cell gatekeeper for skull-dura-brain inflammation after stroke.",
       "authors": [
@@ -126706,36 +126708,46 @@
         "Shumao Xu"
       ],
       "date": "24 Sep 2026",
-      "abstract": "",
-      "journal": "Brain"
+      "abstract": "Wang et al. propose that post-stroke inflammation is driven not only by disruption of the blood–brain barrier, but also by immune signalling between the skull, meninges and brain. They conclude that targeting dural mast cells may help limit early inflammatory injury after stroke.",
+      "journal": "Brain",
+      "abstract_source": "Crossref DOI/title-verified",
+      "abstract_source_url": "https://api.crossref.org/works/10.1093/brain/awag328"
     },
-    "title_zh": "卒中后颅骨-硬脑膜-脑炎症的肥大细胞门控者",
+    "title_zh": "脑膜肥大细胞作为卒中后颅骨-硬脑膜-脑炎症的守门人",
     "paper_id": "551dcf1cd543",
     "domain": "核心域",
     "primary_category": "临床与转化神经科学",
     "secondary_category": [],
     "cross_tags": [],
     "scores": {
-      "breakthrough": 5.5,
-      "methodology": 6.5,
-      "evidence": 8.0,
-      "contribution": 6.0,
-      "accessibility": 7.0
+      "breakthrough": 7.4,
+      "methodology": 6.8,
+      "evidence": 5.9,
+      "contribution": 7.0,
+      "accessibility": 7.8
     },
-    "total_score": 6.45,
+    "total_score": 6.94,
     "recommendation_tier": "简要提及",
     "recommendation_text": "",
-    "confidence": 9.3,
-    "reasoning": "该研究直接解析卒中后颅骨-硬脑膜-脑炎症中的肥大细胞门控机制，属于神经免疫与转化神经科学核心问题。",
-    "feature_angle": "聚焦卒中后颅骨-硬脑膜-脑炎症轴中肥大细胞的门控作用，及时解读脑膜免疫与神经炎症交互的新兴机制。",
-    "model_used": "deepseek-v4-flash",
-    "key_strength": "选题前沿，将肥大细胞置于颅骨-硬脑膜-脑轴炎症调控的核心位置，时效性和概念整合潜力较强。",
-    "key_limitation": "仅凭标题判断为评论/观点类文章，且未提供摘要与全文，无法评估其覆盖全面性、批判深度、论证细节及指导性；内容可能局限于单一研究解读。",
-    "target_audience": "卒中免疫、脑膜免疫、颅骨骨髓轴、肥大细胞生物学及神经炎症研究者",
+    "confidence": 9.2,
+    "reasoning": "该研究探讨卒中后硬脑膜肥大细胞介导的神经免疫炎症机制，直接关联脑病理生理与转化治疗靶点，属于神经科学核心问题。",
+    "feature_angle": "颅骨-硬脑膜-脑轴的肥大细胞被定位为卒中后早期炎症的守门人，提示外周免疫界面可作为治疗靶点。",
+    "model_used": "deepseek-flash",
+    "key_strength": "提出颅骨与硬脑膜免疫界面（而非仅血脑屏障）驱动卒中后炎症的概念框架，具有较强的转化吸引力和清晰的叙事逻辑。",
+    "key_limitation": "目前仅为摘要/观点层面的信息，缺乏可评估的原始数据、样本量、对照设置与多模态验证细节，证据强度难以确认，且源自单一团队、尚未见独立重复。",
+    "target_audience": "卒中与神经免疫研究者、脑膜淋巴与颅骨骨髓界面研究者、转化神经病学与药物靶点开发人员",
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "abstract_recovery": {
+      "run_date": "2026-10-18",
+      "key": "doi:10.1093/brain/awag328",
+      "previous_score": 6.45,
+      "previous_tier": "简要提及",
+      "previous_model": "deepseek-v4-flash",
+      "source": "Crossref DOI/title-verified",
+      "source_url": "https://api.crossref.org/works/10.1093/brain/awag328"
+    }
   },
   {
     "paper": {
@@ -127338,7 +127350,7 @@
     "crossover_value": null,
     "editor_note": "适合作为脑清除系统与临床转化交叉专题的候选。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -165649,7 +165661,7 @@
     "crossover_value": null,
     "editor_note": "标题为设问式综述/观点文章，重点在TREM2介导的小胶质细胞功能异质性；若原文含实验数据可上调评分。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -185712,7 +185724,7 @@
     "crossover_value": null,
     "editor_note": "可归入AI与行为研究方法学反思专题，适合与LLM模拟被试的实证研究对照阅读。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -283463,7 +283475,7 @@
     "crossover_value": null,
     "editor_note": "适合作为感觉与运动神经科学中“侧化与运动灵活性”专题候选；关注跨物种比较价值。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -283673,7 +283685,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 7.5,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -283818,7 +283830,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -289550,7 +289562,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -291510,7 +291522,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -291719,7 +291731,7 @@
     "crossover_value": null,
     "editor_note": "社会神经科学与超扫描方法交叉主题；关注行为相似性指标与因果推断的边界。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -293200,7 +293212,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
@@ -298300,7 +298312,7 @@
     "crossover_value": "",
     "editor_note": "",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable; assessment based on limited metadata."
+    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
   },
   {
     "paper": {
