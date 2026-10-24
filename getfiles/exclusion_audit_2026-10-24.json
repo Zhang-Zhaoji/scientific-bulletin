@@ -1,0 +1,480 @@
+{
+  "before": 1091,
+  "after": 1033,
+  "excluded": [
+    {
+      "title": "Mapping the topographic organization of the human zona incerta using diffusion MRI.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-07-18_enriched_ror_refined.jsonl",
+        "title": "Mapping the topographic organization of the human zona incerta using diffusion MRI",
+        "date": "10 Jul 2026"
+      }
+    },
+    {
+      "title": "Dynamism under the hood: Coevolutionary maintenance of variation in hosts and parasites.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Comment",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Correction: Health system costs and systemic treatment patterns by disease stage for 8577 people diagnosed with melanoma in New South Wales, Australia 2006-2019.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Ultrasound-guided microwave ablation versus conventional surgery for Granulomatous Lobular Mastitis: A two-center retrospective comparative stud.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: A scoping review of photovoice studies concerning greenspaces and their impacts on health: Protocol.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: The parental intestinal microbiome modulates systemic and local glucocorticoid levels in neonatal mice.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Clinical efficacy of empiric antibiotic therapy in Chinese patients with cirrhosis and bacterial infections: A multicenter study.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: The triglyceride-glucose index and neutrophil-to-lymphocyte ratio jointly predict the no-reflow phenomenon in T2DM patients with STEMI after primary PCI.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Across fields, AI finds solutions hiding in plain sight.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "Deep-sea life is still reeling from the BP oil spill.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "Eyes on the ball.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "Fired biologist wins $6 million in defamation lawsuit.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "Journal Article",
+        "News"
+      ]
+    },
+    {
+      "title": "How the domestication of a killer bacterium led to Botox.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Historical Article",
+        "IM",
+        "Journal Article",
+        "News"
+      ]
+    },
+    {
+      "title": "In Other Journals.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "title": "In Other Journals.",
+        "date": "30 Apr 2026"
+      }
+    },
+    {
+      "title": "In Science Journals.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "title": "In Science Journals.",
+        "date": "30 Apr 2026"
+      }
+    },
+    {
+      "title": "Iron at Earth's heart may take a surprising form.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "Microwave observatory peers into the infant universe.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "The Virtual Biotech: A multi-agent AI framework for therapeutic discovery and development.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "The Virtual Biotech: A multi-agent AI framework for therapeutic discovery and development.",
+        "date": "17 Sep 2026"
+      }
+    },
+    {
+      "title": "The instigator.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "News"
+      ]
+    },
+    {
+      "title": "Vaccine trial is a ray of hope in Congo's Ebola epidemic.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "IM",
+        "Journal Article",
+        "News"
+      ]
+    },
+    {
+      "title": "Erratum: Wen et al., \"Single-Trial fMRI Decoding of 3D Motion with Stereoscopic and Perspective Cues\".",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Nonlinear dose-response of mind-body exercise in older adults with mild cognitive impairment: A systematic review and meta-analysis.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: The allometric growth relationship between electricity consumption and economics in China.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Decoupling agriculture pollution and carbon reduction from economic growth in the Yangtze River Delta, China.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: In quest of China sports lottery development path to common prosperity in 2035.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: The agricultural carbon reduction effect of digital rural construction under the dual carbon target.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "A hormonal message for a longer life.",
+      "reason": "nonresearch record",
+      "publication_types": []
+    },
+    {
+      "title": "ASCL1 and OLIG2 Expression Dynamics Control Glial Cell Fate and Regional Diversity in the Dorsal Forebrain.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "ASCL1 and OLIG2 Expression Dynamics Control Glial Cell Fate and Regional Diversity in the Dorsal Forebrain.",
+        "date": "24 Sep 2026"
+      }
+    },
+    {
+      "title": "Calcium-Binding Protein Expression Cannot Serve as a General Classifier for GABAergic Neurons in the Macaque Cortex.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "Calcium-binding protein expression cannot serve as a general classifier for GABAergic neurons in macaque cortex.",
+        "date": "14 Sep 2026"
+      }
+    },
+    {
+      "title": "Conflict-Dependent Gain Control in Area VIP during Visual-Vestibular Self-Motion Processing.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "Conflict-dependent gain control in area VIP during visual-vestibular self-motion processing.",
+        "date": "14 Sep 2026"
+      }
+    },
+    {
+      "title": "Dopamine Modulates Striatal Activity When Controlling the Output of Working Memory.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Dopamine modulates striatal activity when controlling the output of working memory.",
+        "date": "11 Sep 2026"
+      }
+    },
+    {
+      "title": "Encoding of Natural Variability in a Dexterous Motor Skill over Multiple Days in the Cortex of Freely Behaving Mice.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "Encoding of natural variability in a dexterous motor skill over multiple days in the cortex of freely behaving mice.",
+        "date": "17 Sep 2026"
+      }
+    },
+    {
+      "title": "Hippocampal-Dependent Navigation without Outcome-Sensitive Control.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Hippocampal-dependent navigation without outcome-sensitive control.",
+        "date": "23 Sep 2026"
+      }
+    },
+    {
+      "title": "Molecular Disambiguation of Heart Rate Control by the Nucleus Ambiguus.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "Molecular Disambiguation of Heart Rate Control by the Nucleus Ambiguus.",
+        "date": "14 Sep 2026"
+      }
+    },
+    {
+      "title": "Motor Learning Driven by Sensory Prediction Errors Is Insensitive to Task Performance Feedback.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "title": "Motor learning driven by sensory prediction errors is insensitive to task performance feedback.",
+        "date": "01 Sep 2026"
+      }
+    },
+    {
+      "title": "Phosphorylation of α-Synuclein Directs Trafficking of the v-SNARE Synaptobrevin-2.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Phosphorylation of α-synuclein directs trafficking of the v-SNARE synaptobrevin-2.",
+        "date": "08 Sep 2026"
+      }
+    },
+    {
+      "title": "Regulation of Protein Kinase Pathways in Primary Neuron Model of Anti-NMDA Receptor Encephalitis.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "title": "Regulation of protein kinase pathways in primary neuron model of anti-NMDA receptor encephalitis.",
+        "date": "24 Sep 2026"
+      }
+    },
+    {
+      "title": "The Amygdalostriatal Transition Area Exhibits Lateral Amygdala-Like Spiking Activity and Tone-Shock Pairing-Induced Plasticity.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "title": "The Amygdalostriatal Transition Area Exhibits Lateral Amygdala-Like Spiking Activity and Tone-Shock Pairing-Induced Plasticity.",
+        "date": "17 Sep 2026"
+      }
+    },
+    {
+      "title": "The Influence of Contralesional Brain Age Gradients on Chronic Stroke Aphasia Severity and Treatment Response.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "The influence of contralesional brain age gradients on chronic stroke aphasia severity and treatment response.",
+        "date": "2026-09-28"
+      }
+    },
+    {
+      "title": "Retraction: Performance and emission optimization of a CRDI engine in RCCI mode using hydrogen enriched biodiesel through grey relational analysis approach.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Digital economy, innovation factor allocation and industrial structure transformation-A case study of the Yangtze River Delta city cluster in China.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Correction: Gut microbiome is associated with stereotypic behavior of the giant panda (Ailuropoda melanoleuca).",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: How to optimize dust pollution control in opencast coal mines: Analysis of a joint social regulation model based on evolutionary game theory.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Visual edge feature enhancement of product appearance design images based on improved retinex algorithm.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Retraction: Transcription Regulation of HYPK by Heat Shock Factor 1.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: Anti-neuroinflammatory and neuroprotective potential of Cissus tuberosa ethanol extract in Parkinson's disease model through the modulation of neuroinflammatory markers.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: Biochemical properties and biological potential of Syzygium heyneanum with antiparkinson's activity in paraquat induced rodent model.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: An epigenetic change in a moth is generated by temperature and transmitted to many subsequent generations mediated by RNA.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: A comprehensive survey on the beliefs, perceptions, and clinical manifestations of pre and post Covid-19 vaccinations among physiotherapy students in the United Arab Emirates.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: Multi-source harmonic estimation method for distribution networks based on variational modal decomposition.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Structural basis of a SWI/SNF-associated transcription pre-initiation complex.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "title": "Structural basis of a SWI/SNF-associated transcription pre-initiation complex.",
+        "date": "08 Sep 2026"
+      }
+    },
+    {
+      "title": "A pathogenic AMPAR mutation disrupts hippocampal synapse maturation and homeostasis.",
+      "reason": "historical reappearance",
+      "previous": {
+        "file": "all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "title": "A pathogenic AMPAR mutation disrupts hippocampal synapse maturation and homeostasis",
+        "date": "2026-09-30"
+      }
+    },
+    {
+      "title": "Expression of Concern: Decision analysis of PPP project's parties based on deep consumer participation.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Evaluation of China's provincial digital economy development level and its coupling coordination relationship.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Spatial pattern of China's rural digital economy based on subjective-Objective evaluation: Evidence from 2085 counties.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Retraction: Pyrroloquinoline Quinine Inhibits RANKL-Mediated Expression of NFATc1 in Part via Suppression of c-Fos in Mouse Bone Marrow Cells and Inhibits Wear Particle-Induced Osteolysis in Mice.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: Reduced SOD2 expression does not influence prion disease course or pathology in mice.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Electromyographic activity of pelvic floor muscles in different positions during the use an innovative vaginal educator: Cross-sectional study.",
+      "reason": "nonresearch record",
+      "publication_types": [
+        "Expression of Concern",
+        "Journal Article"
+      ]
+    }
+  ]
+}

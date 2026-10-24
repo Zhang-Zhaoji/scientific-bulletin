@@ -1,0 +1,162 @@
+{
+  "reason": "Historical normalized-title match to arXiv 2603.16288v1; bioRxiv DOI is distinct. Retained separately for version review without merging or changing the historical article.",
+  "records": [
+    {
+      "paper": {
+        "raw_data": {
+          "type": "Article",
+          "title": "Hippocampus mediates conceptual generalization of pain modulation",
+          "authors": [
+            "Sutterlin-Guindon, D.",
+            "Wager, T. D.",
+            "Koban, L."
+          ],
+          "date": "2026-10-21",
+          "url": "https://doi.org/10.64898/2026.10.16.759532",
+          "abstract": "Pain is strongly influenced by expectations and learning from previous experience, such as in classical conditioning. Conditioned responses and expectations can generalize to perceptually and conceptually related cues, but how generalization influences pain experience and the neurobiological processing of pain remains unclear. We used fMRI and multilevel mediation analyses to address this question. Thirty-six human participants first learned to associate two visual cues from distinct conceptual categories (e.g., animals vs. vehicles) with high or low levels of heat pain. In a subsequent phase, they were presented with novel cues (images, drawings, or words) not previously paired with pain, but which shared the conceptual category of the initial pain-predictive cues. Participants who developed explicit expectations during learning reported greater pain in response to stimuli conceptually related to high- vs. low-pain cues (generalization stimuli), demonstrating generalization of cue influences on pain. This effect was mediated by increased pain-related activity to generalization stimuli in the hippocampus, which correlated with individual differences in cue-evoked expectations. A broader network, including areas of the default mode network and striatum, also contributed to conceptual generalization of pain modulation, while threat-related regions such as the amygdala responded to generalization stimuli but did not mediate effects on pain ratings. These findings extend our understanding of expectancy-driven pain modulation by showing how conceptual processes can influence pain and its neurobiological substrates, offering new insight into placebo effects and maladaptive learning in chronic pain.",
+          "doi": "10.64898/2026.10.16.759532",
+          "biorxiv_category": "neuroscience",
+          "pdf_url": "",
+          "author_corresponding": "Leonie Koban",
+          "author_corresponding_institution": "CNRS",
+          "version_date": "",
+          "source": "bioRxiv",
+          "jatsxml": "https://www.biorxiv.org/content/early/2026/10/21/2026.10.16.759532.source.xml",
+          "version": "1",
+          "date_evidence": {
+            "field": "bioRxiv API record date",
+            "value": "2026-10-21",
+            "version": "1",
+            "interval": [
+              "2026-10-18",
+              "2026-10-24"
+            ]
+          },
+          "abstract_source": "bioRxiv details API",
+          "retrieval_source": "bioRxiv complete date-bounded details API",
+          "author_details": [
+            {
+              "name": "Sutterlin-Guindon, D.",
+              "source": "bioRxiv",
+              "ror_normalized_affiliation": [],
+              "ror_match_score": [],
+              "ror_country": [],
+              "ror_subregion": [],
+              "affiliation_resolution": []
+            },
+            {
+              "name": "Wager, T. D.",
+              "source": "bioRxiv",
+              "ror_normalized_affiliation": [],
+              "ror_match_score": [],
+              "ror_country": [],
+              "ror_subregion": [],
+              "affiliation_resolution": []
+            },
+            {
+              "name": "Koban, L.",
+              "source": "bioRxiv corresponding author metadata",
+              "affiliation": "CNRS",
+              "ror_normalized_affiliation": [],
+              "ror_match_score": [],
+              "ror_country": [],
+              "ror_subregion": [],
+              "affiliation_resolution": [
+                {
+                  "input": "CNRS",
+                  "institutions": [],
+                  "countries": [],
+                  "subregions": [],
+                  "ambiguous": [
+                    {
+                      "text": "cnrs",
+                      "candidates": [
+                        "Canadian Nautical Research Society",
+                        "Centre National de la Recherche Scientifique",
+                        "National Council for Scientific Research"
+                      ]
+                    },
+                    {
+                      "text": "cnrs",
+                      "candidates": [
+                        "Canadian Nautical Research Society",
+                        "Centre National de la Recherche Scientifique",
+                        "National Council for Scientific Research"
+                      ]
+                    },
+                    {
+                      "text": "cnrs",
+                      "candidates": [
+                        "Canadian Nautical Research Society",
+                        "Centre National de la Recherche Scientifique",
+                        "National Council for Scientific Research"
+                      ]
+                    }
+                  ],
+                  "cities": [],
+                  "city_ambiguities": [],
+                  "geography_warnings": [],
+                  "city_status": "unresolved",
+                  "status": "ambiguous",
+                  "geography_source": "unavailable"
+                }
+              ]
+            }
+          ],
+          "affiliations": [
+            "CNRS"
+          ],
+          "author_enrichment_status": "enriched",
+          "author_metrics_status": "not requested; source metadata only",
+          "senior_authors": [],
+          "countries": []
+        },
+        "title": "Hippocampus mediates conceptual generalization of pain modulation",
+        "authors": [
+          "Sutterlin-Guindon, D.",
+          "Wager, T. D.",
+          "Koban, L."
+        ],
+        "date": "2026-10-21",
+        "abstract": "Pain is strongly influenced by expectations and learning from previous experience, such as in classical conditioning. Conditioned responses and expectations can generalize to perceptually and conceptually related cues, but how generalization influences pain experience and the neurobiological processing of pain remains unclear. We used fMRI and multilevel mediation analyses to address this question. Thirty-six human participants first learned to associate two visual cues from distinct conceptual categories (e.g., animals vs. vehicles) with high or low levels of heat pain. In a subsequent phase, they were presented with novel cues (images, drawings, or words) not previously paired with pain, but which shared the conceptual category of the initial pain-predictive cues. Participants who developed explicit expectations during learning reported greater pain in response to stimuli conceptually related to high- vs. low-pain cues (generalization stimuli), demonstrating generalization of cue influences on pain. This effect was mediated by increased pain-related activity to generalization stimuli in the hippocampus, which correlated with individual differences in cue-evoked expectations. A broader network, including areas of the default mode network and striatum, also contributed to conceptual generalization of pain modulation, while threat-related regions such as the amygdala responded to generalization stimuli but did not mediate effects on pain ratings. These findings extend our understanding of expectancy-driven pain modulation by showing how conceptual processes can influence pain and its neurobiological substrates, offering new insight into placebo effects and maladaptive learning in chronic pain.",
+        "journal": "bioRxiv"
+      },
+      "title_zh": "海马体介导疼痛调节的概念泛化",
+      "paper_id": "3514c593199a",
+      "domain": "核心域",
+      "primary_category": "认知神经科学",
+      "secondary_category": [
+        "认知神经科学",
+        "系统与环路神经科学"
+      ],
+      "cross_tags": [
+        "fMRI",
+        "人类",
+        "海马",
+        "疼痛",
+        "概念泛化",
+        "多水平中介分析"
+      ],
+      "scores": {
+        "breakthrough": 6.8,
+        "methodology": 7.7,
+        "evidence": 6.9,
+        "contribution": 7.0,
+        "accessibility": 7.2
+      },
+      "total_score": 7.08,
+      "recommendation_tier": "深度解读",
+      "recommendation_text": "该研究结合fMRI与多水平中介分析，揭示了海马在疼痛调制概念泛化中的关键作用。通过经典条件反射范式，作者证明习得的疼痛预期可泛化至概念相关线索，并影响疼痛体验及其神经表征。这一发现不仅将海马功能从记忆领域拓展至疼痛预期泛化，也为理解认知因素如何塑造疼痛体验提供了环路层面的证据，对慢性疼痛的认知干预具有潜在转化意义。",
+      "confidence": 9.5,
+      "reasoning": "该研究使用fMRI和中介分析探讨疼痛调节的概念泛化，直接涉及海马体在认知与疼痛交互中的作用，属于认知神经科学核心问题。",
+      "feature_angle": "海马将疼痛预期从具体线索推广到概念相关的新刺激，为预期驱动的疼痛调制提供了概念泛化的神经环路证据。",
+      "model_used": "deepseek-flash",
+      "key_strength": "用fMRI结合多层中介分析，把概念泛化刺激诱发的海马活动与个体预期差异及疼痛评分直接联系起来，并区分了海马—默认网络—纹状体介导通路与杏仁核非介导反应。",
+      "key_limitation": "样本量仅36人且为预印本，概念泛化范式和中介分析均为相关性证据，无法确立因果；疼痛评分依赖主观报告，泛化效应量及可重复性有待更大样本与预注册验证。",
+      "target_audience": "疼痛神经科学、预期与安慰剂效应、学习与记忆泛化以及fMRI方法学研究者",
+      "crossover_value": null,
+      "editor_note": "研究设计严谨，统计方法先进，适合作为认知神经科学与疼痛研究交叉的亮点推荐。",
+      "cross_domain_potential": 0.0
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "through_date": "2026-10-24",
+  "before": {
+    "counts": {
+      "countries": 288,
+      "authors": 163903,
+      "institutions": 13037,
+      "articles": 16154,
+      "themes": 11,
+      "subthemes": 390,
+      "crosstags": 17037,
+      "author_institutions": 163218,
+      "article_authors": 150691,
+      "article_institutions": 55745,
+      "article_countries": 24264,
+      "article_themes": 16219,
+      "article_subthemes": 10879,
+      "article_crosstags": 36182,
+      "article_author_institutions": 172344
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-17"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "weeks": [
+    {
+      "date": "2026-10-24",
+      "input": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-24_enriched_ror_refined.jsonl",
+      "results": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261024.json",
+      "records": 1028,
+      "missing_existing_titles": 1012,
+      "new_unique_titles": 1012
+    }
+  ],
+  "expected_new_articles": 1012,
+  "target_ready": true,
+  "warnings": [],
+  "backups_directory": "D:\\working\\scientific bulletin\\tmps\\pipeline_20261024\\database_backup",
+  "dry_run": false,
+  "rechecks_file": null,
+  "historical_rechecks": 0,
+  "status": "complete",
+  "after": {
+    "counts": {
+      "countries": 288,
+      "authors": 172272,
+      "institutions": 13262,
+      "articles": 17163,
+      "themes": 11,
+      "subthemes": 390,
+      "crosstags": 17603,
+      "author_institutions": 171009,
+      "article_authors": 159602,
+      "article_institutions": 58578,
+      "article_countries": 25718,
+      "article_themes": 17231,
+      "article_subthemes": 11481,
+      "article_crosstags": 38313,
+      "article_author_institutions": 180828
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-24"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "slim_after": {
+    "counts": {
+      "countries": 288,
+      "authors": 172272,
+      "institutions": 13262,
+      "articles": 17163,
+      "themes": 11,
+      "subthemes": 390,
+      "crosstags": 17603,
+      "author_institutions": 171009,
+      "article_authors": 159602,
+      "article_institutions": 58578,
+      "article_countries": 25718,
+      "article_themes": 17231,
+      "article_subthemes": 11481,
+      "article_crosstags": 38313,
+      "article_author_institutions": 180828
+    },
+    "date_range": [
+      "2026-02-04",
+      "2026-10-24"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0
+  },
+  "import_counts": {
+    "articles_inserted": 1009,
+    "countries_reused": 11202,
+    "article_countries_inserted": 1454,
+    "authors_inserted": 8369,
+    "article_authors_inserted": 8911,
+    "institutions_reused": 9508,
+    "article_institutions_inserted": 2833,
+    "author_institutions_inserted": 7791,
+    "themes_reused": 1028,
+    "article_themes_inserted": 1012,
+    "subthemes_reused": 616,
+    "article_subthemes_inserted": 602,
+    "crosstags_reused": 1601,
+    "article_crosstags_inserted": 2131,
+    "crosstags_inserted": 566,
+    "authors_reused": 661,
+    "institutions_inserted": 225,
+    "articles_reused": 19,
+    "article_scores_updated": 19
+  },
+  "backups": [
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261024\\database_backup\\literature_20261025_012548_577945.db",
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261024\\database_backup\\literature_slim_20261025_012548_577945.db"
+  ],
+  "score_updates": [
+    {
+      "article_id": 11711,
+      "source_title": "Assessing nonlinear associations between body mass index and brain microstructure across adolescence in the ABCD Study",
+      "stored_title": "Assessing nonlinear associations between body mass index and brain microstructure across adolescence in the ABCD Study",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.04.02.716201",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-04",
+      "source_date": "2026-10-23",
+      "version": "3",
+      "old_score": 7.0200000000000005,
+      "new_score": 6.9
+    },
+    {
+      "article_id": 14149,
+      "source_title": "Sex Differences in Human Subcortical Anatomy are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned with Sex Chromosomal and Gonadal Influences",
+      "stored_title": "Sex Differences in Human Subcortical Anatomy are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned with Sex Chromosomal and Gonadal Influences",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.05.756728",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-09",
+      "source_date": "2026-10-23",
+      "version": "2",
+      "old_score": 8.17,
+      "new_score": 8.09
+    },
+    {
+      "article_id": 12565,
+      "source_title": "Instrumental-Motor Transfer: The Relative Value of Competing Movement Goals Modulates Implicit Motor Learning",
+      "stored_title": "Instrumental-Motor Transfer: The Relative Value of Competing Movement Goals Modulates Implicit Motor Learning",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.06.22.733849",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-24",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 7.86,
+      "new_score": 7.96
+    },
+    {
+      "article_id": 12482,
+      "source_title": "Mouse Neural Organoids Model the Mature In Vivo Synaptic Proteome",
+      "stored_title": "Mouse Neural Organoids Model the Mature In Vivo Synaptic Proteome",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.24.753785",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-25",
+      "source_date": "2026-10-22",
+      "version": "2",
+      "old_score": 7.260000000000001,
+      "new_score": 6.96
+    },
+    {
+      "article_id": 13420,
+      "source_title": "Neocortical Feedback Biases Hippocampal Reactivation Toward Unconsolidated Memories in a Predictive-Coding Model of Systems Consolidation",
+      "stored_title": "Selective Hippocampal Reactivation Driven by Neocortical Feedback Supports Memory Transfer in Predictive-Coding Networks",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.29.755342",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-01",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 5.36,
+      "new_score": 6.720000000000001
+    },
+    {
+      "article_id": 14058,
+      "source_title": "A cortical basis for perception of internal gut sensations",
+      "stored_title": "A cortical basis for perception of internal mechanosensations",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.02.11.705298",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-28",
+      "source_date": "2026-10-21",
+      "version": "3",
+      "old_score": 8.360000000000001,
+      "new_score": 8.67
+    },
+    {
+      "article_id": 13671,
+      "source_title": "Depletion of border-associated macrophages impairs CSF flow and exacerbates extranuclear mutant Huntingtin aggregation in the zQ175DN mouse model of Huntington disease",
+      "stored_title": "Depletion of border-associated macrophages impairs CSF flow and exacerbates extranuclear mutant Huntingtin aggregation in the zQ175DN mouse model of Huntington disease",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.24.754172",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-30",
+      "source_date": "2026-10-20",
+      "version": "2",
+      "old_score": 7.22,
+      "new_score": 6.640000000000001
+    },
+    {
+      "article_id": 14415,
+      "source_title": "Huntingtin and Celsr3 Orchestrate Spontaneous Long-Distance Spinal Cord Regeneration",
+      "stored_title": "Huntingtin and Celsr3 Orchestrate Spontaneous Long-Distance Spinal Cord Regeneration",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.01.755968",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-08",
+      "source_date": "2026-10-20",
+      "version": "2",
+      "old_score": 8.110000000000001,
+      "new_score": 8.04
+    },
+    {
+      "article_id": 14331,
+      "source_title": "Retrospective attention strengthens a report-independent neural signature of visual perception",
+      "stored_title": "Retrospective attention strengthens a report-independent neural signature of visual perception",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.1101/2024.11.09.622275",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-08",
+      "source_date": "2026-10-19",
+      "version": "5",
+      "old_score": 8.3,
+      "new_score": 7.260000000000001
+    },
+    {
+      "article_id": 7252,
+      "source_title": "Curiosity shapes brain-like architectures and functions",
+      "stored_title": "Curiosity shapes brain-like architectures and functions",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.07.02.735826",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-07-03",
+      "source_date": "2026-10-19",
+      "version": "2",
+      "old_score": 8.09,
+      "new_score": 7.44
+    },
+    {
+      "article_id": 13017,
+      "source_title": "Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI",
+      "stored_title": "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.15.751719",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-21",
+      "source_date": "2026-10-18",
+      "version": "5",
+      "old_score": 7.28,
+      "new_score": 6.71
+    },
+    {
+      "article_id": 14132,
+      "source_title": "Multimodal Glymphatic Imaging in Multiple Sclerosis: Associations with Sleep and Disability",
+      "stored_title": "Multimodal Glymphatic Imaging in Multiple Sclerosis: Associations with Sleep and Disability",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.30.755605",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-10",
+      "source_date": "2026-10-18",
+      "version": "3",
+      "old_score": 6.34,
+      "new_score": 6.1000000000000005
+    },
+    {
+      "article_id": 15034,
+      "source_title": "EEG Pathology Detection via Clinical Concept Bottleneck Models",
+      "stored_title": "EEG Pathology Detection via Clinical Concept Bottleneck Models",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.04.756607",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-18",
+      "version": "3",
+      "old_score": 4.75,
+      "new_score": 5.1000000000000005
+    },
+    {
+      "article_id": 15493,
+      "source_title": "Distributed neural dynamics underlie the shift from movement preparation to execution",
+      "stored_title": "Distributed neural dynamics underlie the shift from movement preparation to execution",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2025.12.09.693175",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-14",
+      "source_date": "2026-10-19",
+      "version": "4",
+      "old_score": 6.61,
+      "new_score": 6.98
+    },
+    {
+      "article_id": 15089,
+      "source_title": "Supramodal Coding of Detection and Confidence in the Human Cortex",
+      "stored_title": "Supramodal Coding of Detection and Confidence in the Human Cortex",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.16.759637",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-19",
+      "version": "2",
+      "old_score": 7.48,
+      "new_score": 7.84
+    },
+    {
+      "article_id": 15524,
+      "source_title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments",
+      "stored_title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.07.757440",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-14",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 5.3,
+      "new_score": 5.85
+    },
+    {
+      "article_id": 15085,
+      "source_title": "Kilohertz electrical stimulation drives widespread neuronal activation and temporal interference imposes focal rhythmic modulation",
+      "stored_title": "Kilohertz electrical stimulation drives widespread neuronal activation and temporal interference imposes focal rhythmic modulation",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.15.759497",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 7.66,
+      "new_score": 8.17
+    },
+    {
+      "article_id": 15087,
+      "source_title": "Striatal D2-neurons gate D1-mediated associative encoding under uncertainty",
+      "stored_title": "Striatal D2-neurons gate D1-mediated associative encoding under uncertainty",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.16.759515",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 7.46,
+      "new_score": 6.840000000000001
+    },
+    {
+      "article_id": 15036,
+      "source_title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography",
+      "stored_title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.07.757191",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 5.32,
+      "new_score": 5.220000000000001
+    }
+  ],
+  "reevaluations": [
+    {
+      "article_id": 11711,
+      "source_title": "Assessing nonlinear associations between body mass index and brain microstructure across adolescence in the ABCD Study",
+      "stored_title": "Assessing nonlinear associations between body mass index and brain microstructure across adolescence in the ABCD Study",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.04.02.716201",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-04",
+      "source_date": "2026-10-23",
+      "version": "3",
+      "old_score": 7.0200000000000005,
+      "new_score": 6.9
+    },
+    {
+      "article_id": 14149,
+      "source_title": "Sex Differences in Human Subcortical Anatomy are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned with Sex Chromosomal and Gonadal Influences",
+      "stored_title": "Sex Differences in Human Subcortical Anatomy are Robust and Replicable in Adulthood, Already Evident Prepubertally, and Aligned with Sex Chromosomal and Gonadal Influences",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.05.756728",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-09",
+      "source_date": "2026-10-23",
+      "version": "2",
+      "old_score": 8.17,
+      "new_score": 8.09
+    },
+    {
+      "article_id": 12565,
+      "source_title": "Instrumental-Motor Transfer: The Relative Value of Competing Movement Goals Modulates Implicit Motor Learning",
+      "stored_title": "Instrumental-Motor Transfer: The Relative Value of Competing Movement Goals Modulates Implicit Motor Learning",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.06.22.733849",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-24",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 7.86,
+      "new_score": 7.96
+    },
+    {
+      "article_id": 12482,
+      "source_title": "Mouse Neural Organoids Model the Mature In Vivo Synaptic Proteome",
+      "stored_title": "Mouse Neural Organoids Model the Mature In Vivo Synaptic Proteome",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.24.753785",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-25",
+      "source_date": "2026-10-22",
+      "version": "2",
+      "old_score": 7.260000000000001,
+      "new_score": 6.96
+    },
+    {
+      "article_id": 13420,
+      "source_title": "Neocortical Feedback Biases Hippocampal Reactivation Toward Unconsolidated Memories in a Predictive-Coding Model of Systems Consolidation",
+      "stored_title": "Selective Hippocampal Reactivation Driven by Neocortical Feedback Supports Memory Transfer in Predictive-Coding Networks",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.29.755342",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-01",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 5.36,
+      "new_score": 6.720000000000001
+    },
+    {
+      "article_id": 14058,
+      "source_title": "A cortical basis for perception of internal gut sensations",
+      "stored_title": "A cortical basis for perception of internal mechanosensations",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.02.11.705298",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-28",
+      "source_date": "2026-10-21",
+      "version": "3",
+      "old_score": 8.360000000000001,
+      "new_score": 8.67
+    },
+    {
+      "article_id": 13671,
+      "source_title": "Depletion of border-associated macrophages impairs CSF flow and exacerbates extranuclear mutant Huntingtin aggregation in the zQ175DN mouse model of Huntington disease",
+      "stored_title": "Depletion of border-associated macrophages impairs CSF flow and exacerbates extranuclear mutant Huntingtin aggregation in the zQ175DN mouse model of Huntington disease",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.24.754172",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-30",
+      "source_date": "2026-10-20",
+      "version": "2",
+      "old_score": 7.22,
+      "new_score": 6.640000000000001
+    },
+    {
+      "article_id": 14415,
+      "source_title": "Huntingtin and Celsr3 Orchestrate Spontaneous Long-Distance Spinal Cord Regeneration",
+      "stored_title": "Huntingtin and Celsr3 Orchestrate Spontaneous Long-Distance Spinal Cord Regeneration",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.01.755968",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-08",
+      "source_date": "2026-10-20",
+      "version": "2",
+      "old_score": 8.110000000000001,
+      "new_score": 8.04
+    },
+    {
+      "article_id": 14331,
+      "source_title": "Retrospective attention strengthens a report-independent neural signature of visual perception",
+      "stored_title": "Retrospective attention strengthens a report-independent neural signature of visual perception",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.1101/2024.11.09.622275",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-08",
+      "source_date": "2026-10-19",
+      "version": "5",
+      "old_score": 8.3,
+      "new_score": 7.260000000000001
+    },
+    {
+      "article_id": 7252,
+      "source_title": "Curiosity shapes brain-like architectures and functions",
+      "stored_title": "Curiosity shapes brain-like architectures and functions",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.07.02.735826",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-07-03",
+      "source_date": "2026-10-19",
+      "version": "2",
+      "old_score": 8.09,
+      "new_score": 7.44
+    },
+    {
+      "article_id": 13017,
+      "source_title": "Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI",
+      "stored_title": "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.15.751719",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-09-21",
+      "source_date": "2026-10-18",
+      "version": "5",
+      "old_score": 7.28,
+      "new_score": 6.71
+    },
+    {
+      "article_id": 14132,
+      "source_title": "Multimodal Glymphatic Imaging in Multiple Sclerosis: Associations with Sleep and Disability",
+      "stored_title": "Multimodal Glymphatic Imaging in Multiple Sclerosis: Associations with Sleep and Disability",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.30.755605",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-10",
+      "source_date": "2026-10-18",
+      "version": "3",
+      "old_score": 6.34,
+      "new_score": 6.1000000000000005
+    },
+    {
+      "article_id": 15034,
+      "source_title": "EEG Pathology Detection via Clinical Concept Bottleneck Models",
+      "stored_title": "EEG Pathology Detection via Clinical Concept Bottleneck Models",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.04.756607",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-18",
+      "version": "3",
+      "old_score": 4.75,
+      "new_score": 5.1000000000000005
+    },
+    {
+      "article_id": 15493,
+      "source_title": "Distributed neural dynamics underlie the shift from movement preparation to execution",
+      "stored_title": "Distributed neural dynamics underlie the shift from movement preparation to execution",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2025.12.09.693175",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-14",
+      "source_date": "2026-10-19",
+      "version": "4",
+      "old_score": 6.61,
+      "new_score": 6.98
+    },
+    {
+      "article_id": 15089,
+      "source_title": "Supramodal Coding of Detection and Confidence in the Human Cortex",
+      "stored_title": "Supramodal Coding of Detection and Confidence in the Human Cortex",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.16.759637",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-19",
+      "version": "2",
+      "old_score": 7.48,
+      "new_score": 7.84
+    },
+    {
+      "article_id": 15524,
+      "source_title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments",
+      "stored_title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.07.757440",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-14",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 5.3,
+      "new_score": 5.85
+    },
+    {
+      "article_id": 15085,
+      "source_title": "Kilohertz electrical stimulation drives widespread neuronal activation and temporal interference imposes focal rhythmic modulation",
+      "stored_title": "Kilohertz electrical stimulation drives widespread neuronal activation and temporal interference imposes focal rhythmic modulation",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.15.759497",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 7.66,
+      "new_score": 8.17
+    },
+    {
+      "article_id": 15087,
+      "source_title": "Striatal D2-neurons gate D1-mediated associative encoding under uncertainty",
+      "stored_title": "Striatal D2-neurons gate D1-mediated associative encoding under uncertainty",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.16.759515",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-21",
+      "version": "2",
+      "old_score": 7.46,
+      "new_score": 6.840000000000001
+    },
+    {
+      "article_id": 15036,
+      "source_title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography",
+      "stored_title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography",
+      "reason": "posted_biorxiv_revision",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.10.07.757191",
+        "pmid": ""
+      },
+      "preserved_pub_date": "2026-10-16",
+      "source_date": "2026-10-22",
+      "version": "4",
+      "old_score": 5.32,
+      "new_score": 5.220000000000001
+    }
+  ],
+  "historical_rechecks_reconciled": 0,
+  "title_aliases": [
+    {
+      "article_id": 13420,
+      "source_title": "Neocortical Feedback Biases Hippocampal Reactivation Toward Unconsolidated Memories in a Predictive-Coding Model of Systems Consolidation",
+      "stored_title": "Selective Hippocampal Reactivation Driven by Neocortical Feedback Supports Memory Transfer in Predictive-Coding Networks",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.29.755342",
+        "pmid": ""
+      },
+      "reason": "posted_biorxiv_revision"
+    },
+    {
+      "article_id": 14058,
+      "source_title": "A cortical basis for perception of internal gut sensations",
+      "stored_title": "A cortical basis for perception of internal mechanosensations",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.02.11.705298",
+        "pmid": ""
+      },
+      "reason": "posted_biorxiv_revision"
+    },
+    {
+      "article_id": 13017,
+      "source_title": "Reliable Evaluation of Transductive Population Graph Neural Networks for Multisite Autism fMRI",
+      "stored_title": "Tracing high transductive cohort AUC to same-site supervision in a site-aware population GNN for multisite fMRI",
+      "identity": {
+        "matched_on": [
+          "doi"
+        ],
+        "doi": "10.64898/2026.09.15.751719",
+        "pmid": ""
+      },
+      "reason": "posted_biorxiv_revision"
+    }
+  ],
+  "reconciled_new_articles": 1009,
+  "target_reconciliation": {
+    "title_matches": 1028,
+    "score_matches": 1028
+  }
+}

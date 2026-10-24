@@ -93599,7 +93599,7 @@
         ],
         "date": "18 Sep 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42758788/",
-        "abstract": "",
+        "abstract": "Microtubules are dynamic cytoskeletal polymers assembled from α/β-tubulin heterodimers. Microtubules are validated targets for novel therapeutic drugs, yet therapeutic efficacy targeting them is often compromised by multidrug resistance (MDR). 5-(3-chlorophenyl)-N-(3-pyridinyl)-2-furamide (CPPF) is a novel microtubule-targeting anticancer agent which was found to disrupt microtubule growth in cells and inhibit tubulin polymerization in vitro. CPPF could suppress the growth of multidrug-resistant cell lines and demonstrate anti-tumor efficacy in animal models. However, the fundamental mechanism of how CPPF disrupts microtubule assembly remains unclear. To investigate this, we performed structure prediction using Protenix, RoseTTAFold All-Atom (RFAA) and Umol, as well as molecular dynamics (MD) simulations, using the human α/β-tubulin heterodimer (PDB ID: 5IJ0) for analyzing the interaction between CPPF and tubulin. Our results showed that CPPF binds at the α/β interface with dominant contributions from β-tubulin residues, particularly VAL236 and LEU253. In isolated-monomer comparisons, β-tubulin exhibited more favorable binding energetics and deeper, broader free-energy minima than α-tubulin. Supplementary simulations on the alternative β-tubulin conformational state (PDB: 6E7B; straight microtubule-lattice) indicated that CPPF binding is preserved across the two major β-tubulin conformations, with comparable MM-PBSA binding free energies. Taken together, these findings establish a plausible binding mode for CPPF at the α/β-tubulin interface, providing a structural hypothesis for understanding its anticancer potential against multidrug-resistant cancers. Experimental validation through binding assays or crystallography is warranted to further substantiate these computational insights.",
         "doi": "10.1371/journal.pcbi.1014804",
         "pmid": "42758788",
         "journal": "PLoS Computational Biology",
@@ -94302,7 +94302,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42758788/"
       },
       "title": "Integrative AI-assisted modeling suggests CPPF binding at a composite [Formula: see text]/[Formula: see text]-tubulin interface pocket dominated by [Formula: see text]-tubulin contacts.",
       "authors": [
@@ -94315,10 +94317,12 @@
         "Muzi Li"
       ],
       "date": "18 Sep 2026",
-      "abstract": "",
-      "journal": "PLOS"
+      "abstract": "Microtubules are dynamic cytoskeletal polymers assembled from α/β-tubulin heterodimers. Microtubules are validated targets for novel therapeutic drugs, yet therapeutic efficacy targeting them is often compromised by multidrug resistance (MDR). 5-(3-chlorophenyl)-N-(3-pyridinyl)-2-furamide (CPPF) is a novel microtubule-targeting anticancer agent which was found to disrupt microtubule growth in cells and inhibit tubulin polymerization in vitro. CPPF could suppress the growth of multidrug-resistant cell lines and demonstrate anti-tumor efficacy in animal models. However, the fundamental mechanism of how CPPF disrupts microtubule assembly remains unclear. To investigate this, we performed structure prediction using Protenix, RoseTTAFold All-Atom (RFAA) and Umol, as well as molecular dynamics (MD) simulations, using the human α/β-tubulin heterodimer (PDB ID: 5IJ0) for analyzing the interaction between CPPF and tubulin. Our results showed that CPPF binds at the α/β interface with dominant contributions from β-tubulin residues, particularly VAL236 and LEU253. In isolated-monomer comparisons, β-tubulin exhibited more favorable binding energetics and deeper, broader free-energy minima than α-tubulin. Supplementary simulations on the alternative β-tubulin conformational state (PDB: 6E7B; straight microtubule-lattice) indicated that CPPF binding is preserved across the two major β-tubulin conformations, with comparable MM-PBSA binding free energies. Taken together, these findings establish a plausible binding mode for CPPF at the α/β-tubulin interface, providing a structural hypothesis for understanding its anticancer potential against multidrug-resistant cancers. Experimental validation through binding assays or crystallography is warranted to further substantiate these computational insights.",
+      "journal": "PLOS",
+      "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42758788/"
     },
-    "title_zh": "整合性AI辅助建模提示CPPF结合于由β-微管蛋白接触主导的复合α/β-微管蛋白界面口袋",
+    "title_zh": "整合AI辅助建模提示CPPF在由β-微管蛋白接触主导的复合α/β-微管蛋白界面口袋处结合",
     "paper_id": "26bc0316a0ff",
     "domain": "域外局限",
     "primary_category": null,
@@ -94339,17 +94343,25 @@
     "total_score": 0.0,
     "recommendation_tier": "不推送",
     "recommendation_text": "",
-    "confidence": 8.6,
-    "reasoning": "该研究聚焦CPPF与微管蛋白复合界面的结合建模，属于结构生物学/药物设计，与神经科学核心问题无直接关联，仅有间接细胞骨架相关性。",
+    "confidence": 9.2,
+    "reasoning": "该研究聚焦微管蛋白抗癌药物结合机制与多药耐药，属肿瘤药理与结构生物学，与神经科学问题无直接联系或明确迁移价值。",
     "feature_angle": "无",
-    "model_used": "deepseek-v4-flash",
+    "model_used": "deepseek-flash",
     "key_strength": "无",
     "key_limitation": "无",
     "target_audience": "无",
     "crossover_value": "",
     "editor_note": "",
-    "cross_domain_potential": 2.0,
-    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
+    "cross_domain_potential": 1.5,
+    "abstract_recovery": {
+      "run_date": "2026-10-25",
+      "key": "doi:10.1371/journal.pcbi.1014804",
+      "previous_score": 0.0,
+      "previous_tier": "不推送",
+      "previous_model": "deepseek-v4-flash",
+      "source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42758788/"
+    }
   },
   {
     "paper": {

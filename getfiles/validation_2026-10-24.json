@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "issue": "033",
+  "date_range": [
+    "2026-10-18",
+    "2026-10-24"
+  ],
+  "papers": 1028,
+  "llm_results": 1028,
+  "selected": 516,
+  "selected_missing_abstracts": 1,
+  "tiers": {
+    "深度解读": 253,
+    "简要提及": 261,
+    "不推送": 512,
+    "头条推荐": 2
+  },
+  "missing_selected": [
+    {
+      "title": "Preventing autoimmunity after alemtuzumab in multiple sclerosis: regulatory T cells resist expansion.",
+      "tier": "简要提及",
+      "doi": "10.1093/brain/awag308"
+    }
+  ],
+  "cover_size": [
+    1448,
+    1086
+  ],
+  "broken_local_html_assets": [],
+  "databases": {
+    "data/literature.db": {
+      "integrity": "ok",
+      "foreign_keys": "ok",
+      "week_scores_verified": 1028,
+      "articles": 17163
+    },
+    "docs/assets/data/literature_slim.db": {
+      "integrity": "ok",
+      "foreign_keys": "ok",
+      "week_scores_verified": 1028,
+      "articles": 17163
+    }
+  },
+  "verified_at": "2026-10-25T01:29:15.292900"
+}

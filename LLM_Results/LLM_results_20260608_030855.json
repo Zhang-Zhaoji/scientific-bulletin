@@ -297000,7 +297000,7 @@
         ],
         "date": "02 Jun 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42230143/",
-        "abstract": "",
+        "abstract": "Long-term potentiation (LTP) induces presynaptic bouton enlargement and a reduction in the number of synaptic vesicles. To understand the relationship between these events, we performed 3D analysis of serial section electron micrographs in hippocampal area CA1 from male rats, 2 h after LTP induction. We observed a high vesicle packing density in control boutons, contrasting with a lower density in most LTP boutons. Notably, the summed membrane area of the vesicles lost in low-density LTP boutons is comparable to the surface membrane required for the observed bouton enlargement when compared with high-density control boutons. These novel findings suggest that presynaptic vesicle density provides a new structural indicator of LTP that supports a local mechanism of bouton enlargement.",
         "doi": "10.1523/JNEUROSCI.1335-25.2026",
         "pmid": "42230143",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -297510,7 +297510,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
       },
       "title": "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP.",
       "authors": [
@@ -297523,45 +297525,56 @@
         "K M Harris"
       ],
       "date": "02 Jun 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Long-term potentiation (LTP) induces presynaptic bouton enlargement and a reduction in the number of synaptic vesicles. To understand the relationship between these events, we performed 3D analysis of serial section electron micrographs in hippocampal area CA1 from male rats, 2 h after LTP induction. We observed a high vesicle packing density in control boutons, contrasting with a lower density in most LTP boutons. Notably, the summed membrane area of the vesicles lost in low-density LTP boutons is comparable to the surface membrane required for the observed bouton enlargement when compared with high-density control boutons. These novel findings suggest that presynaptic vesicle density provides a new structural indicator of LTP that supports a local mechanism of bouton enlargement.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
     },
-    "title_zh": "突触前囊泡在长时程增强期间为轴突末梢膨大提供膜",
+    "title_zh": "突触前囊泡为LTP期间轴突终末膨大提供膜来源",
     "paper_id": "b52bc72aad90",
     "domain": "核心域",
     "primary_category": "分子与细胞神经科学",
     "secondary_category": [
-      "突触可塑性与学习记忆",
-      "细胞生物学与膜动力学"
+      "分子与细胞神经科学",
+      "系统与环路神经科学"
     ],
     "cross_tags": [
-      "长时程增强 (LTP)",
-      "突触前囊泡循环",
-      "超分辨率显微镜",
-      "膜表面积调控",
-      "海马体"
+      "LTP",
+      "突触前末梢",
+      "海马CA1",
+      "囊泡膜",
+      "三维电镜",
+      "大鼠"
     ],
     "scores": {
-      "breakthrough": 8.5,
-      "methodology": 9.0,
-      "evidence": 8.5,
-      "contribution": 9.0,
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.0,
+      "contribution": 7.0,
       "accessibility": 7.5
     },
-    "total_score": 8.6,
+    "total_score": 7.2700000000000005,
     "recommendation_tier": "深度解读",
-    "recommendation_text": "本研究揭示了长时程增强（LTP）过程中突触前 bouton 扩大的关键机制，挑战了传统认为膜来源主要依赖内吞回收或高尔基体运输的观点。作者通过先进的成像技术证明，突触前囊泡不仅作为神经递质载体，还直接为轴突末梢的膜扩张提供脂质来源。这一发现建立了突触传递效率与结构可塑性之间的直接物质联系，为理解突触稳态维持提供了新的分子视角。对于关注突触结构重塑、膜 trafficking 以及 LTP 分子机制的研究者而言，该工作提供了极具启发性的实证数据，重新定义了突触前成分在可塑性中的主动角色。",
-    "confidence": 9.8,
-    "reasoning": "该研究直接揭示了长时程增强（LTP）过程中突触结构可塑性的细胞生物学机制，属于神经科学核心基础问题。",
-    "feature_angle": "揭示突触前囊泡不仅作为神经递质载体，更是长时程增强（LTP）期间轴突 bouton 结构重塑的膜来源，连接了突触功能与形态可塑性。",
-    "model_used": "qwen3.7-plus",
-    "key_strength": "解决了突触结构可塑性中膜来源这一长期存在的生物物理学难题，提供了直接的细胞生物学证据，具有高度的机制解释力。",
-    "key_limitation": "发表于 Journal of Neuroscience 而非 CNS 主刊，可能意味着在体内行为关联或跨脑区普适性验证上略显不足，或主要局限于特定模型系统。",
-    "target_audience": "突触可塑性研究者、计算神经科学家（关注结构-功能耦合模型）、细胞生物学家",
-    "crossover_value": "对于系统生物学家和计算神经科学家而言，该研究量化了突触结构变化背后的物质守恒约束，为构建更精确的突触权重更新模型提供了物理边界条件。此外，膜动力学与功能可塑性的耦合机制对软物质物理学者研究生物膜相变具有参考意义。",
-    "editor_note": "评分8.6反映了其机制解析的深度与技术的新颖性，建议重点关注其实验设计中区分囊泡融合与膜整合的方法学细节。",
+    "recommendation_text": "该研究利用连续切片电镜三维重建，精确量化了LTP诱导后海马CA1突触前bouton的囊泡密度与膜面积变化。发现低密度bouton中丢失的囊泡膜总面积与bouton表面积增加量相当，提出突触前囊泡膜为结构可塑性提供膜源的新机制。这一发现将突触前囊泡池与结构可塑性直接联系，为理解LTP的结构基础提供了全新视角，值得分子与细胞神经科学领域读者关注。",
+    "confidence": 9.5,
+    "reasoning": "该研究直接揭示LTP诱导突触前结构可塑性的细胞机制，属于突触可塑性与分子细胞神经科学的核心问题。",
+    "feature_angle": "LTP诱导的突触前囊泡丢失为轴突终末膨大提供膜源，提出突触前囊泡密度作为LTP的新结构指标",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用连续切片电镜三维重建，定量比较LTP与对照终末的囊泡膜面积与表面积变化，提出膜供应守恒的局部机制，数据直观且有定量支撑。",
+    "key_limitation": "仅限雄性大鼠CA1区2小时单一时间点，样本量与统计细节未充分呈现；因果性不足（相关性观察），未直接操纵囊泡池或膜转运验证机制；囊泡密度异质性及高密度对照选择可能引入偏差。",
+    "target_audience": "突触可塑性、海马生理与电镜三维重建方向的神经科学家",
+    "crossover_value": null,
+    "editor_note": "文章机制清晰，方法扎实，适合作为突触可塑性结构机制专题的候选。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
+    "abstract_recovery": {
+      "run_date": "2026-10-25",
+      "key": "doi:10.1523/jneurosci.1335-25.2026",
+      "previous_score": 8.6,
+      "previous_tier": "深度解读",
+      "previous_model": "qwen3.7-plus",
+      "source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
+    }
   },
   {
     "paper": {

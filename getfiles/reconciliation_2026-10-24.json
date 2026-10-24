@@ -1,0 +1,154 @@
+{
+  "before": 1033,
+  "after": 1029,
+  "excluded_nonresearch": [
+    {
+      "title": "The cognitive power of the avian brain.",
+      "pmid": "42912169",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Putting glucose metabolism under electronic control.",
+      "pmid": "42912167",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "A cell death ballet in two acts.",
+      "pmid": "42912166",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Has the next ice age already come and gone?",
+      "pmid": "42912165",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "From authenticity ecosystems to human-AI hybrid societies.",
+      "pmid": "42911869",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Root microbiota regulates tiller number in rice.",
+      "pmid": "42906541",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Promoter of lncRNA Gene PVT1 Is a Tumor-Suppressor DNA Boundary Element.",
+      "pmid": "42906539",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Optimizing learning for control of human-machine interfaces.",
+      "pmid": "42906532",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Running in reverse: Tau redirects mitochondrial electron flow toward neurodegeneration.",
+      "pmid": "42906531",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Depression: Ketamine quiets an unruly habenula.",
+      "pmid": "42896518",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Biodiversity supports coastal nutrient cycling with a stable source of fish excretion.",
+      "pmid": "42896068",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Climate-driven rodent demography provides a general, transferable basis for predicting arenavirus spillover.",
+      "pmid": "42896066",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    }
+  ],
+  "restored_version_records": [
+    {
+      "doi": "10.64898/2026.10.04.756607",
+      "version": "3",
+      "date": "2026-10-18",
+      "title": "EEG Pathology Detection via Clinical Concept Bottleneck Models"
+    },
+    {
+      "doi": "10.1101/2025.10.13.682136",
+      "version": "3",
+      "date": "2026-10-19",
+      "title": "Heterochronicity shapes brain network formation"
+    },
+    {
+      "doi": "10.64898/2025.12.09.693175",
+      "version": "4",
+      "date": "2026-10-19",
+      "title": "Distributed neural dynamics underlie the shift from movement preparation to execution"
+    },
+    {
+      "doi": "10.64898/2026.10.16.759637",
+      "version": "2",
+      "date": "2026-10-19",
+      "title": "Supramodal Coding of Detection and Confidence in the Human Cortex"
+    },
+    {
+      "doi": "10.64898/2026.10.07.757440",
+      "version": "2",
+      "date": "2026-10-21",
+      "title": "Computational Evaluation of tDCS Montage Separability and Dose Coverage for Practice-Specific Mindfulness Experiments"
+    },
+    {
+      "doi": "10.64898/2026.10.15.759497",
+      "version": "2",
+      "date": "2026-10-21",
+      "title": "Kilohertz electrical stimulation drives widespread neuronal activation and temporal interference imposes focal rhythmic modulation"
+    },
+    {
+      "doi": "10.64898/2026.10.16.759515",
+      "version": "2",
+      "date": "2026-10-21",
+      "title": "Striatal D2-neurons gate D1-mediated associative encoding under uncertainty"
+    },
+    {
+      "doi": "10.64898/2026.10.07.757191",
+      "version": "4",
+      "date": "2026-10-22",
+      "title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography"
+    }
+  ],
+  "backup_manifest": "tmps\\pipeline_20261024\\before_final_reconciliation\\manifest.json",
+  "editorial_changes": [
+    "Headline neuroscience transferability language constrained to source-supported potential."
+  ]
+}

@@ -3,6 +3,7 @@ import argparse
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
+from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
@@ -20,6 +21,12 @@ sys.path.insert(0, str(ROOT / 'src'))
 from enrich_source_metadata import parse_pubmed_root
 
 
+@lru_cache(maxsize=1)
+def reviewed_title_aliases():
+    path = ROOT / 'data/abstract_title_aliases.json'
+    return json.loads(path.read_text(encoding='utf-8')) if path.exists() else []
+
+
 def verified(paper, record):
     expected, actual = canonical_doi(paper.get('doi')), canonical_doi(record.get('doi'))
     if expected and actual and expected != actual:
@@ -30,7 +37,22 @@ def verified(paper, record):
         return False
     matching_id = bool(expected and expected == actual) or bool(
         paper.get('pmid') and str(paper['pmid']) == str(record.get('pmid') or ''))
-    return matching_id and fuzz.ratio(normalized_title(paper['title']), normalized_title(record.get('title'))) >= 95
+    if not matching_id:
+        return False
+    left, right = normalized_title(paper['title']), normalized_title(record.get('title'))
+    if fuzz.ratio(left, right) >= 95:
+        return True
+    # Only individually reviewed, identifier-scoped title variants may bypass
+    # the fuzzy threshold. Conflicting DOI/PMID checks above still apply.
+    for alias in reviewed_title_aliases():
+        if expected != canonical_doi(alias.get('doi')) or actual != expected:
+            continue
+        if any(value and value != str(alias.get('pmid') or '') for value in (expected_pmid, actual_pmid)):
+            continue
+        titles = {normalized_title(title) for title in alias['titles']}
+        if left in titles and right in titles:
+            return True
+    return False
 
 
 def atomic_json(path, value):

@@ -348881,7 +348881,7 @@
         ],
         "date": "01 Sep 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42166613/",
-        "abstract": "",
+        "abstract": "A central question in psycholinguistics in visual word recognition is whether morphologically complex words are obligatorily decomposed into stems and affixes during visual word recognition or whether whole-word access can occur when forms are frequent and familiar. The present study investigated how morphological complexity and lexical frequency jointly shape neural responses by leveraging Korean nominal inflection, whose transparent stem-suffix structure permits a clean dissociation between base (stem) frequency and surface (whole-word) frequency. Twenty-five native Korean speakers completed a rapid event-related fMRI lexical decision task involving simple and inflected nouns that varied parametrically in both frequency measures. Representational similarity analysis revealed robust encoding of surface frequency-but not base frequency-in the inferior frontal gyrus pars opercularis and supramarginal gyrus, with significantly stronger correlations for inflected than simple nouns. Univariate analyses converged with this result: Surface frequency selectively increased activation for inflected nouns in inferior parietal regions, whereas base frequency showed no reliable effects in any ROI. These findings challenge models positing obligatory prelexical decomposition and instead support accounts in which morphological processing is shaped by postlexical, usage-driven lexical statistics. Taken together, our findings shed light on a distributed perspective on morphological processing, suggesting that structural and statistical factors jointly constrain access to morphologically complex forms.",
         "doi": "10.1162/JOCN.a.2621",
         "pmid": "42166613",
         "journal": "Journal of cognitive neuroscience",
@@ -349014,7 +349014,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42166613/"
       },
       "title": "Neural Sensitivity to Word Frequency Modulated by Morphological Structure: Univariate and Multivariate Functional Magnetic Resonance Imaging Evidence from Korean.",
       "authors": [
@@ -349023,36 +349025,58 @@
         "Kichun Nam"
       ],
       "date": "01 Sep 2026",
-      "abstract": "",
-      "journal": "Journal of Cognitive Neuroscience"
+      "abstract": "A central question in psycholinguistics in visual word recognition is whether morphologically complex words are obligatorily decomposed into stems and affixes during visual word recognition or whether whole-word access can occur when forms are frequent and familiar. The present study investigated how morphological complexity and lexical frequency jointly shape neural responses by leveraging Korean nominal inflection, whose transparent stem-suffix structure permits a clean dissociation between base (stem) frequency and surface (whole-word) frequency. Twenty-five native Korean speakers completed a rapid event-related fMRI lexical decision task involving simple and inflected nouns that varied parametrically in both frequency measures. Representational similarity analysis revealed robust encoding of surface frequency-but not base frequency-in the inferior frontal gyrus pars opercularis and supramarginal gyrus, with significantly stronger correlations for inflected than simple nouns. Univariate analyses converged with this result: Surface frequency selectively increased activation for inflected nouns in inferior parietal regions, whereas base frequency showed no reliable effects in any ROI. These findings challenge models positing obligatory prelexical decomposition and instead support accounts in which morphological processing is shaped by postlexical, usage-driven lexical statistics. Taken together, our findings shed light on a distributed perspective on morphological processing, suggesting that structural and statistical factors jointly constrain access to morphologically complex forms.",
+      "journal": "Journal of Cognitive Neuroscience",
+      "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42166613/"
     },
-    "title_zh": "词频神经敏感性受形态结构调节：来自韩语的单变量与多变量功能性磁共振成像证据",
-    "paper_id": "b5ae825ee546",
+    "title_zh": "形态结构调节的词汇频率神经敏感性：来自韩语的单变量和多变量fMRI证据",
+    "paper_id": "c9ab520c2d84",
     "domain": "核心域",
     "primary_category": "认知神经科学",
-    "secondary_category": [],
-    "cross_tags": [],
+    "secondary_category": [
+      "认知神经科学",
+      "方法学"
+    ],
+    "cross_tags": [
+      "fMRI",
+      "人类",
+      "韩语",
+      "形态学",
+      "词汇频率",
+      "多变量模式分析",
+      "视觉词识别",
+      "语言"
+    ],
     "scores": {
-      "breakthrough": 6.5,
-      "methodology": 7.0,
-      "evidence": 7.2,
+      "breakthrough": 6.8,
+      "methodology": 8.2,
+      "evidence": 7.8,
       "contribution": 7.0,
-      "accessibility": 6.5
+      "accessibility": 7.2
     },
-    "total_score": 6.840000000000001,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "",
+    "total_score": 7.36,
+    "recommendation_tier": "深度解读",
+    "recommendation_text": "该研究利用韩语名词屈折的透明形态结构，巧妙分离词干频率与整词频率，结合单变量和多变量fMRI分析，揭示了形态复杂词在视觉词汇识别中的神经表征动态。结果不仅为形态分解与整词通达的长期争论提供新证据，还展示了多变量方法在语言认知神经科学中的威力，对理解词汇加工的神经基础具有重要价值。",
     "confidence": 9.5,
-    "reasoning": "该研究利用功能性磁共振成像探讨语言加工中词频与形态结构的神经机制，属于认知神经科学的核心议题。",
-    "feature_angle": "结合单变量与多变量fMRI揭示韩语形态结构对词频神经敏感性的调节作用",
-    "model_used": "deepseek-v4-flash",
-    "key_strength": "同时采用单变量和多变量分析方法，探讨形态复杂词加工中词频效应的神经表征，提供了语言神经机制的新证据。",
-    "key_limitation": "研究局限于韩语及特定范式，跨语言普适性和生态效度尚未充分验证。",
-    "target_audience": "神经语言学、心理语言学、认知神经科学及fMRI方法学研究者",
-    "crossover_value": "",
-    "editor_note": "",
+    "reasoning": "该研究使用fMRI和表征相似性分析直接考察语言加工（形态复杂性与词汇频率）的神经表征，属于认知神经科学核心问题。",
+    "feature_angle": "利用韩语名词屈折的透明形态结构分离词干频率与整词频率，通过单变量与多变量fMRI证据表明形态加工由整词使用统计而非强制性词汇前分解驱动。",
+    "model_used": "deepseek-flash",
+    "key_strength": "实验设计巧妙：韩语屈折词的透明词干-词缀结构天然分离基底频率与表面频率，结合单变量ROI分析与表征相似性分析，两条证据链汇聚支持后词汇使用驱动假说。",
+    "key_limitation": "样本量仅25人且为单一语言（韩语），fMRI空间分辨率限制了对颞叶及深部脑区频率效应的检测；未能直接检验分解模型的关键预测（如词干启动效应），跨语言泛化性有待验证。",
+    "target_audience": "心理语言学、视觉词汇识别、语言神经影像及计算认知建模研究者",
+    "crossover_value": null,
+    "editor_note": "方法学上利用韩语特性分离频率变量，多变量分析增强了解码力，适合作为语言认知神经科学的典型案例。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
+    "abstract_recovery": {
+      "run_date": "2026-10-25",
+      "key": "doi:10.1162/jocn.a.2621",
+      "previous_score": 6.840000000000001,
+      "previous_tier": "简要提及",
+      "previous_model": "deepseek-v4-flash",
+      "source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42166613/"
+    }
   },
   {
     "paper": {

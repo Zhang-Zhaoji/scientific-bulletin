@@ -286415,7 +286415,7 @@
         ],
         "date": "01 Jul 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42230143/",
-        "abstract": "",
+        "abstract": "Long-term potentiation (LTP) induces presynaptic bouton enlargement and a reduction in the number of synaptic vesicles. To understand the relationship between these events, we performed 3D analysis of serial section electron micrographs in hippocampal area CA1 from male rats, 2 h after LTP induction. We observed a high vesicle packing density in control boutons, contrasting with a lower density in most LTP boutons. Notably, the summed membrane area of the vesicles lost in low-density LTP boutons is comparable to the surface membrane required for the observed bouton enlargement when compared with high-density control boutons. These novel findings suggest that presynaptic vesicle density provides a new structural indicator of LTP that supports a local mechanism of bouton enlargement.",
         "doi": "10.1523/JNEUROSCI.1335-25.2026",
         "pmid": "42230143",
         "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
@@ -286925,7 +286925,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
       },
       "title": "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.",
       "authors": [
@@ -286938,45 +286940,56 @@
         "K M Harris"
       ],
       "date": "01 Jul 2026",
-      "abstract": "",
-      "journal": "Journal of Neuroscience"
+      "abstract": "Long-term potentiation (LTP) induces presynaptic bouton enlargement and a reduction in the number of synaptic vesicles. To understand the relationship between these events, we performed 3D analysis of serial section electron micrographs in hippocampal area CA1 from male rats, 2 h after LTP induction. We observed a high vesicle packing density in control boutons, contrasting with a lower density in most LTP boutons. Notably, the summed membrane area of the vesicles lost in low-density LTP boutons is comparable to the surface membrane required for the observed bouton enlargement when compared with high-density control boutons. These novel findings suggest that presynaptic vesicle density provides a new structural indicator of LTP that supports a local mechanism of bouton enlargement.",
+      "journal": "Journal of Neuroscience",
+      "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
     },
-    "title_zh": "突触前囊泡在长时程增强期间为轴突膨大提供膜",
-    "paper_id": "b7c885c57170",
+    "title_zh": "突触前囊泡为LTP期间轴突终末膨大提供膜来源",
+    "paper_id": "b52bc72aad90",
     "domain": "核心域",
     "primary_category": "分子与细胞神经科学",
     "secondary_category": [
-      "分子与细胞神经科学"
+      "分子与细胞神经科学",
+      "系统与环路神经科学"
     ],
     "cross_tags": [
-      "突触前囊泡",
-      "长时程增强",
-      "轴突按钮",
-      "电镜",
-      "小鼠",
-      "海马"
+      "LTP",
+      "突触前末梢",
+      "海马CA1",
+      "囊泡膜",
+      "三维电镜",
+      "大鼠"
     ],
     "scores": {
-      "breakthrough": 7.5,
-      "methodology": 7.0,
-      "evidence": 8.0,
-      "contribution": 8.0,
-      "accessibility": 7.0
+      "breakthrough": 7.2,
+      "methodology": 7.8,
+      "evidence": 7.0,
+      "contribution": 7.0,
+      "accessibility": 7.5
     },
-    "total_score": 7.550000000000001,
+    "total_score": 7.2700000000000005,
     "recommendation_tier": "深度解读",
-    "recommendation_text": "该研究通过超微结构分析和功能成像，首次直接证明突触前囊泡在LTP期间为轴突按钮的扩大提供膜材料。这一发现填补了突触可塑性中结构变化与囊泡循环之间的关键空白，为理解记忆存储的细胞机制提供了新的分子框架。对从事突触传递、可塑性和神经环路研究的人员具有重要参考价值。",
+    "recommendation_text": "该研究利用连续切片电镜三维重建，精确量化了LTP诱导后海马CA1突触前bouton的囊泡密度与膜面积变化。发现低密度bouton中丢失的囊泡膜总面积与bouton表面积增加量相当，提出突触前囊泡膜为结构可塑性提供膜源的新机制。这一发现将突触前囊泡池与结构可塑性直接联系，为理解LTP的结构基础提供了全新视角，值得分子与细胞神经科学领域读者关注。",
     "confidence": 9.5,
-    "reasoning": "该研究直接探讨LTP中突触前囊泡的膜供应机制，属于突触可塑性的核心问题",
-    "feature_angle": "突触前囊泡膜供给驱动LTP时轴突末梢膨大的直接证据",
-    "model_used": "deepseek-v4-flash",
-    "key_strength": "首次直接证明LTP期间突触前囊泡膜为末梢膨大提供膜来源",
-    "key_limitation": "可能局限于特定脑区或刺激范式，需在更多系统中验证",
-    "target_audience": "突触生理学、突触可塑性、囊泡运输和神经递质释放研究者",
+    "reasoning": "该研究直接揭示LTP诱导突触前结构可塑性的细胞机制，属于突触可塑性与分子细胞神经科学的核心问题。",
+    "feature_angle": "LTP诱导的突触前囊泡丢失为轴突终末膨大提供膜源，提出突触前囊泡密度作为LTP的新结构指标",
+    "model_used": "deepseek-flash",
+    "key_strength": "利用连续切片电镜三维重建，定量比较LTP与对照终末的囊泡膜面积与表面积变化，提出膜供应守恒的局部机制，数据直观且有定量支撑。",
+    "key_limitation": "仅限雄性大鼠CA1区2小时单一时间点，样本量与统计细节未充分呈现；因果性不足（相关性观察），未直接操纵囊泡池或膜转运验证机制；囊泡密度异质性及高密度对照选择可能引入偏差。",
+    "target_audience": "突触可塑性、海马生理与电镜三维重建方向的神经科学家",
     "crossover_value": null,
-    "editor_note": "突触可塑性领域的机制性突破，适合分子与细胞神经科学板块重点推荐。",
+    "editor_note": "文章机制清晰，方法扎实，适合作为突触可塑性结构机制专题的候选。",
     "cross_domain_potential": 0.0,
-    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
+    "abstract_recovery": {
+      "run_date": "2026-10-25",
+      "key": "doi:10.1523/jneurosci.1335-25.2026",
+      "previous_score": 7.550000000000001,
+      "previous_tier": "深度解读",
+      "previous_model": "deepseek-v4-flash",
+      "source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42230143/"
+    }
   },
   {
     "paper": {

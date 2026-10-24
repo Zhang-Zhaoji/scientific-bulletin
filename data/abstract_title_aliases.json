@@ -1,0 +1,46 @@
+[
+  {
+    "doi": "10.1162/jocn.a.2621",
+    "pmid": "42166613",
+    "titles": [
+      "Neural Sensitivity to Word Frequency Modulated by Morphological Structure: Univariate and Multivariate fMRI Evidence from Korean.",
+      "Neural Sensitivity to Word Frequency Modulated by Morphological Structure: Univariate and Multivariate Functional Magnetic Resonance Imaging Evidence from Korean."
+    ],
+    "reason": "fMRI expanded to Functional Magnetic Resonance Imaging; remaining title wording identical.",
+    "evidence_file": "tmps\\abstract_retry_20261025\\retrieval_cache\\pubmed_5c88bcdb4835bb46.xml",
+    "reviewed_date": "2026-10-25"
+  },
+  {
+    "doi": "10.1371/journal.pbio.3003931",
+    "pmid": "42599956",
+    "titles": [
+      "A single-cell transcriptomic atlas reveals the emergence of medusa-specific cell states in the Aurelia coerulea scyphozoan.",
+      "A single-cell transcriptomic atlas reveals the emergence of medusa-specific cell states in the scyphozoan Aurelia coerulea."
+    ],
+    "reason": "Taxon name and scyphozoan reordered; same species and study title.",
+    "evidence_file": "tmps\\abstract_retry_20261025\\retrieval_cache\\pubmed_c58d1b3fbde1932f.xml",
+    "reviewed_date": "2026-10-25"
+  },
+  {
+    "doi": "10.1523/jneurosci.1335-25.2026",
+    "pmid": "42230143",
+    "titles": [
+      "Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP.",
+      "Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation."
+    ],
+    "reason": "LTP expanded to Long Term Potentiation; remaining title wording identical.",
+    "evidence_file": "tmps\\abstract_retry_20261025\\retrieval_cache\\pubmed_5c88bcdb4835bb46.xml",
+    "reviewed_date": "2026-10-25"
+  },
+  {
+    "doi": "10.1371/journal.pcbi.1014804",
+    "pmid": "42758788",
+    "titles": [
+      "Integrative AI-assisted modeling suggests CPPF binding at a composite [Formula: see text]/[Formula: see text]-tubulin interface pocket dominated by [Formula: see text]-tubulin contacts.",
+      "Integrative AI-assisted modeling suggests CPPF binding at a composite α/β-tubulin interface pocket dominated by β-tubulin contacts."
+    ],
+    "reason": "PubMed formula placeholders correspond to alpha/beta-tubulin symbols in source XML title.",
+    "evidence_file": "tmps\\abstract_retry_20261025\\retrieval_cache\\pubmed_c58d1b3fbde1932f.xml",
+    "reviewed_date": "2026-10-25"
+  }
+]

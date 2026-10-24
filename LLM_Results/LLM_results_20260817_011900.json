@@ -124408,7 +124408,7 @@
         ],
         "date": "14 Aug 2026",
         "url": "https://pubmed.ncbi.nlm.nih.gov/42599956/",
-        "abstract": "",
+        "abstract": "The life cycle of most medusozoan cnidarians is marked by the metagenesis from the asexually reproducing sessile polyp and the sexually reproducing motile medusa. At present, it is unknown to what extent this drastic morphological transformation is accompanied by molecular changes in the cell type composition. Here, we provide a single-cell transcriptome atlas of the cosmopolitan scyphozoan Aurelia coerulea focusing on changes in individual cell states during the transition from polyp to medusa. Notably, this transition is marked by an increase in cell type diversity, including an expansion of neural subtypes and the appearance of striated muscles. We find that two families of neuronal lineages are specified by homologous transcription factors in the sea anemone Nematostella vectensis and A. coerulea, suggesting an origin in the common ancestor of medusozoans and anthozoans about 500 Myr ago. Our analysis suggests that gene duplications might be drivers for the increase of cellular complexity during the evolution of cnidarian neuroglandular lineages and highlights the close relationship of neurons and muscles. One key medusozoan-specific cell type is the striated muscle in the subumbrella. Evaluating muscle types by fiber anatomy and gene expression validation of their individual molecular profiles made it possible for the first time to investigate transcriptome differences between smooth and striated muscles. Although smooth and striated muscles are phenotypically different, both have a similar regulation of the contractile complex, reminiscent to the regulation of smooth muscles in bilaterians. This contrasts with bilaterian striated muscles, where the regulation of muscle contraction involves Ca2+ binding troponins and their interaction with Tropomyosin. These data suggest that smooth muscle contraction regulation is ancestral and the use of troponins in striated muscles only evolved in bilaterians.",
         "doi": "10.1371/journal.pbio.3003931",
         "pmid": "42599956",
         "journal": "PLoS Biology",
@@ -125298,7 +125298,9 @@
         "source_author_metadata_status": "verified publication record",
         "source_author_list_status": "verified publication record",
         "author_metrics_status": "Source identity and affiliation backfill; legacy profile metrics not revalidated.",
-        "author_metadata_verified_on": "2026-10-08"
+        "author_metadata_verified_on": "2026-10-08",
+        "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+        "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42599956/"
       },
       "title": "A single-cell transcriptomic atlas reveals the emergence of medusa-specific cell states in the Aurelia coerulea scyphozoan.",
       "authors": [
@@ -125315,46 +125317,51 @@
         "Ulrich Technau"
       ],
       "date": "14 Aug 2026",
-      "abstract": "",
-      "journal": "PLOS"
+      "abstract": "The life cycle of most medusozoan cnidarians is marked by the metagenesis from the asexually reproducing sessile polyp and the sexually reproducing motile medusa. At present, it is unknown to what extent this drastic morphological transformation is accompanied by molecular changes in the cell type composition. Here, we provide a single-cell transcriptome atlas of the cosmopolitan scyphozoan Aurelia coerulea focusing on changes in individual cell states during the transition from polyp to medusa. Notably, this transition is marked by an increase in cell type diversity, including an expansion of neural subtypes and the appearance of striated muscles. We find that two families of neuronal lineages are specified by homologous transcription factors in the sea anemone Nematostella vectensis and A. coerulea, suggesting an origin in the common ancestor of medusozoans and anthozoans about 500 Myr ago. Our analysis suggests that gene duplications might be drivers for the increase of cellular complexity during the evolution of cnidarian neuroglandular lineages and highlights the close relationship of neurons and muscles. One key medusozoan-specific cell type is the striated muscle in the subumbrella. Evaluating muscle types by fiber anatomy and gene expression validation of their individual molecular profiles made it possible for the first time to investigate transcriptome differences between smooth and striated muscles. Although smooth and striated muscles are phenotypically different, both have a similar regulation of the contractile complex, reminiscent to the regulation of smooth muscles in bilaterians. This contrasts with bilaterian striated muscles, where the regulation of muscle contraction involves Ca2+ binding troponins and their interaction with Tropomyosin. These data suggest that smooth muscle contraction regulation is ancestral and the use of troponins in striated muscles only evolved in bilaterians.",
+      "journal": "PLOS",
+      "abstract_source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "abstract_source_url": "https://pubmed.ncbi.nlm.nih.gov/42599956/"
     },
-    "title_zh": "单细胞转录组图谱揭示海月水母（Aurelia coerulea）中水母特异性细胞状态的出现",
+    "title_zh": "单细胞转录组图谱揭示蓝色霞水母钵水母纲中水母特异性细胞状态的出现",
     "paper_id": "9ab7c35caa37",
-    "domain": "域外高影响",
+    "domain": "域外局限",
     "primary_category": null,
-    "secondary_category": [
-      "发育神经科学",
-      "域外高影响"
-    ],
-    "cross_tags": [
-      "单细胞转录组",
-      "水母",
-      "细胞状态",
-      "神经演化",
-      "发育程序",
-      "无脊椎动物"
-    ],
+    "secondary_category": [],
+    "cross_tags": [],
     "scores": {
-      "Importance": 7.2,
-      "Transferability": 8.0,
-      "Inspiration": 7.8,
-      "Timeliness": 8.4,
-      "Accessibility": 7.0
+      "breakthrough": 0.0,
+      "methodology": 0.0,
+      "evidence": 0.0,
+      "contribution": 0.0,
+      "accessibility": 0.0,
+      "Importance": 0.0,
+      "Transferability": 0.0,
+      "Inspiration": 0.0,
+      "Timeliness": 0.0,
+      "Accessibility": 0.0
     },
-    "total_score": 7.66,
-    "recommendation_tier": "简要提及",
-    "recommendation_text": "该研究通过单细胞转录组学构建了海月水母的细胞图谱，揭示了水母特异性细胞状态在发育中的出现机制。对神经科学而言，它提供了一个独特视角：在刺胞动物这一早期分支中，神经细胞如何从多能性前体分化并形成简单但功能完整的神经系统。这一工作不仅拓展了神经细胞类型演化的图谱，也为跨物种比较发育程序提供了方法学示范。",
-    "confidence": 8.0,
-    "reasoning": "该研究虽主要聚焦无脊椎动物发育与细胞图谱，但其单细胞数据可为神经系统演化和神经细胞类型比较研究提供关键跨物种资源。",
-    "feature_angle": "以水母为模型揭示动物神经细胞状态演化的单细胞图谱，为比较神经科学提供新资源",
-    "model_used": "deepseek-v4-flash",
-    "key_strength": "构建了首个海月水母的单细胞转录组图谱，揭示了水母型阶段特异细胞状态及其演化意义，为理解神经系统的早期演化提供了宝贵数据",
-    "key_limitation": "图谱基于单一物种，功能验证有限，其细胞状态的功能和调控机制有待深入实验验证",
-    "target_audience": "演化发育生物学、比较神经科学、单细胞基因组学研究者",
-    "crossover_value": "神经科学长期关注细胞类型多样性的起源与演化，水母作为外群物种，其神经细胞状态图谱有助于追溯核心神经机制在动物演化中的保守与创新，并为理解复杂神经系统如何从简单回路组装提供启发。",
-    "editor_note": "可作为非模式物种神经发育演化研究的重要案例推荐。",
-    "cross_domain_potential": 8.0,
-    "input_quality_warning": "Source abstract unavailable or insufficient; historical assessment is unverified."
+    "total_score": 0.0,
+    "recommendation_tier": "不推送",
+    "recommendation_text": "",
+    "confidence": 8.5,
+    "reasoning": "该研究聚焦刺胞动物水母的细胞类型演化与转录组图谱，虽涉及神经元亚型扩张，但核心问题是演化发育生物学而非神经科学机制。",
+    "feature_angle": "无",
+    "model_used": "deepseek-flash",
+    "key_strength": "无",
+    "key_limitation": "无",
+    "target_audience": "无",
+    "crossover_value": "",
+    "editor_note": "",
+    "cross_domain_potential": 2.5,
+    "abstract_recovery": {
+      "run_date": "2026-10-25",
+      "key": "doi:10.1371/journal.pbio.3003931",
+      "previous_score": 7.66,
+      "previous_tier": "简要提及",
+      "previous_model": "deepseek-v4-flash",
+      "source": "PubMed XML; DOI/PMID verified and title variant manually reviewed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42599956/"
+    }
   },
   {
     "paper": {

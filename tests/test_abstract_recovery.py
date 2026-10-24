@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from audit_bulletin_abstracts import canonical_doi, identity, substantive
 from recover_bulletin_abstracts import verified
 from sync_recovered_abstract_database import projection
+from validate_historical_abstracts import is_current_repair
 
 
 class AbstractRecoveryTests(unittest.TestCase):
@@ -29,6 +30,22 @@ class AbstractRecoveryTests(unittest.TestCase):
         paper = {'title': 'A preprint', 'source': 'bioRxiv', 'doi': '10.1101/example', 'version': '1'}
         self.assertNotEqual(identity(paper), identity(dict(paper, version='2')))
         self.assertEqual(canonical_doi('https://doi.org/10.1234/EXAMPLE'), '10.1234/example')
+
+    def test_reviewed_abbreviation_variant_retains_identifier_checks(self):
+        paper = {'title': 'Presynaptic vesicles supply membrane for axonal bouton enlargement during LTP.',
+                 'doi': '10.1523/JNEUROSCI.1335-25.2026', 'pmid': '42230143'}
+        expanded = dict(paper, title='Presynaptic Vesicles Supply Membrane for Axonal Bouton Enlargement during Long Term Potentiation.')
+        self.assertTrue(verified(paper, expanded))
+        self.assertFalse(verified(paper, dict(expanded, doi='10.1234/unrelated')))
+        self.assertFalse(verified(paper, dict(expanded, pmid='999')))
+        self.assertFalse(verified(dict(paper, doi='10.1234/unreviewed'), dict(expanded, doi='10.1234/unreviewed')))
+
+    def test_previous_run_repairs_are_not_recounted(self):
+        result = {'abstract_recovery': {'key': 'doi:example', 'run_date': '2026-10-18'}}
+        self.assertFalse(is_current_repair(result, {'doi:example': {}}, '2026-10-25'))
+        result['abstract_recovery']['run_date'] = '2026-10-25'
+        self.assertTrue(is_current_repair(result, {'doi:example': {}}, '2026-10-25'))
+        self.assertFalse(is_current_repair(result, {}, '2026-10-25'))
 
     def test_database_projection_preserves_stored_publication_variant(self):
         stored = {'title': 'A measured neural mechanism', 'doi': '10.1234/example', 'pub_date': '2026-04-01'}

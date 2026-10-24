@@ -1,0 +1,518 @@
+{
+  "initial_targets": 17,
+  "recovered": 0,
+  "reevaluated_recoveries": 0,
+  "final_missing": 12,
+  "final_selected_missing": 1,
+  "missing": [
+    {
+      "title": "A comment on phylogenetic tests of the haplodiploidy hypothesis for eusociality.",
+      "doi": "10.1073/pnas.2623224123",
+      "tier": "不推送"
+    },
+    {
+      "title": "Energy and fitness: Power is not all-powerful in evolution.",
+      "doi": "10.1073/pnas.2630924123",
+      "tier": "不推送"
+    },
+    {
+      "title": "Reply to Soley: Testing haplodiploidy, not relatedness in general.",
+      "doi": "10.1073/pnas.2623657123",
+      "tier": "不推送"
+    },
+    {
+      "title": "Reply to Burger et al.: Powerless paradigms and the myth of equal fitness.",
+      "doi": "10.1073/pnas.2631788123",
+      "tier": "不推送"
+    },
+    {
+      "title": "Ten simple rules for responsible use of AI and LLMs in computational biology.",
+      "doi": "10.1371/journal.pcbi.1014882",
+      "tier": "不推送"
+    },
+    {
+      "title": "AI biosecurity must include agriculture.",
+      "doi": "10.1126/science.ael7324",
+      "tier": "不推送"
+    },
+    {
+      "title": "India needs a tree conservation plan.",
+      "doi": "10.1126/science.ael9835",
+      "tier": "不推送"
+    },
+    {
+      "title": "Indigenous higher education needs support.",
+      "doi": "10.1126/science.aek9085",
+      "tier": "不推送"
+    },
+    {
+      "title": "My hidden homeless past.",
+      "doi": "10.1126/science.aen3877",
+      "tier": "不推送"
+    },
+    {
+      "title": "The Monarch Bear.",
+      "doi": "10.1126/science.aem5501",
+      "tier": "不推送"
+    },
+    {
+      "title": "Preventing autoimmunity after alemtuzumab in multiple sclerosis: regulatory T cells resist expansion.",
+      "doi": "10.1093/brain/awag308",
+      "tier": "简要提及"
+    },
+    {
+      "title": "Microplastic size matters-Report every particle.",
+      "doi": "10.1073/pnas.2606174123",
+      "tier": "不推送"
+    }
+  ],
+  "attempts": [
+    {
+      "key": "doi:10.1073/pnas.2630924123",
+      "title": "Energy and fitness: Power is not all-powerful in evolution.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2630924123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2630924123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2630924123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2630924123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2631788123",
+      "title": "Reply to Burger et al.: Powerless paradigms and the myth of equal fitness.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2631788123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2631788123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2631788123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2631788123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2623224123",
+      "title": "A comment on phylogenetic tests of the haplodiploidy hypothesis for eusociality.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2623224123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2623224123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2623224123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2623224123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2623657123",
+      "title": "Reply to Soley: Testing haplodiploidy, not relatedness in general.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2623657123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2623657123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2623657123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2623657123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1126/science.ael7324",
+      "title": "AI biosecurity must include agriculture.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.ael7324%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.ael7324",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.ael7324",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.ael7324"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1126/science.ael9835",
+      "title": "India needs a tree conservation plan.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.ael9835%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.ael9835",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.ael9835",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.ael9835"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1126/science.aek9085",
+      "title": "Indigenous higher education needs support.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aek9085%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.aek9085",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.aek9085",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.aek9085"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1371/journal.pcbi.1014882",
+      "title": "Ten simple rules for responsible use of AI and LLMs in computational biology.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1371%2Fjournal.pcbi.1014882%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1371/journal.pcbi.1014882",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014882",
+          "http_status": 200
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1126/science.aem5501",
+      "title": "The Monarch Bear.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aem5501%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.aem5501",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.aem5501",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.aem5501"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1126/science.aen3877",
+      "title": "My hidden homeless past.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.aen3877%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1126/science.aen3877",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://www.science.org/doi/10.1126/science.aen3877",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://www.science.org/doi/10.1126/science.aen3877"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2631482123",
+      "title": "From authenticity ecosystems to human-AI hybrid societies.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2631482123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2631482123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2631482123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2631482123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1093/brain/awag308",
+      "title": "Preventing autoimmunity after alemtuzumab in multiple sclerosis: regulatory T cells resist expansion.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1093%2Fbrain%2Fawag308%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1093/brain/awag308",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag308/8964685",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awag308/8964685"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2606174123",
+      "title": "Microplastic size matters-Report every particle.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2606174123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2606174123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2606174123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2606174123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2630042123",
+      "title": "Biodiversity supports coastal nutrient cycling with a stable source of fish excretion.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2630042123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2630042123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2630042123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2630042123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1073/pnas.2631478123",
+      "title": "Climate-driven rodent demography provides a general, transferable basis for predicting arenavirus spillover.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1073%2Fpnas.2631478123%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1073/pnas.2631478123",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://pnas.org/doi/10.1073/pnas.2631478123",
+          "http_status": 403
+        },
+        {
+          "source": "publisher",
+          "error": "403 Client Error: Forbidden for url: https://pnas.org/doi/10.1073/pnas.2631478123"
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1016/j.cell.2026.10.006",
+      "title": "Root microbiota regulates tiller number in rice.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2026.10.006%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1016/j.cell.2026.10.006",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://linkinghub.elsevier.com/retrieve/pii/S0092867426012171",
+          "http_status": 200
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    },
+    {
+      "key": "doi:10.1016/j.cell.2026.10.015",
+      "title": "Promoter of lncRNA Gene PVT1 Is a Tumor-Suppressor DNA Boundary Element.",
+      "status": "not_recovered",
+      "attempts": [
+        {
+          "source": "Europe PMC",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.cell.2026.10.015%22&format=json&resultType=core",
+          "http_status": 200
+        },
+        {
+          "source": "Crossref",
+          "url": "https://api.crossref.org/works/10.1016/j.cell.2026.10.015",
+          "http_status": 200
+        },
+        {
+          "source": "publisher",
+          "url": "https://linkinghub.elsevier.com/retrieve/pii/S0092867426012663",
+          "http_status": 200
+        }
+      ],
+      "reason": "No substantive identity-verified abstract retrieved; access errors are not absence evidence"
+    }
+  ]
+}

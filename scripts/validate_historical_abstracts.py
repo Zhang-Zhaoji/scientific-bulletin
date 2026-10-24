@@ -13,6 +13,11 @@ from audit_bulletin_abstracts import ROOT, SELECTED, fingerprint, identity, norm
 from recover_bulletin_abstracts import atomic_json
 
 
+def is_current_repair(result, recovered, revision_date):
+    repair = result.get('abstract_recovery') or {}
+    return repair.get('key') in recovered and repair.get('run_date') == revision_date
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run-dir', type=Path, required=True)
@@ -46,8 +51,10 @@ def main():
             paper = result['paper']['raw_data']
             if identity(paper) not in source:
                 raise ValueError('Result/source identity mismatch')
-            if result.get('abstract_recovery'):
-                key = result['abstract_recovery']['key']
+            repair = result.get('abstract_recovery') or {}
+            current_repair = is_current_repair(result, recovered, manifest['created_at'][:10])
+            if current_repair:
+                key = repair['key']
                 if not substantive(paper.get('abstract')) or paper['abstract'] != recovered[key]['abstract']:
                     raise ValueError('Applied abstract differs from source')
                 if result['paper']['abstract'] != source[identity(paper)].get('abstract') or result['total_score'] != evaluated[key]['total_score']:
@@ -70,7 +77,9 @@ def main():
             for before, after in zip(original, results):
                 if before['paper']['title'] != after['paper']['title'] or before['paper'].get('date') != after['paper'].get('date'):
                     raise ValueError('Historical paper title/date changed')
-                if not after.get('abstract_recovery'):
+                repair = after.get('abstract_recovery') or {}
+                current_repair = is_current_repair(after, recovered, manifest['created_at'][:10])
+                if not current_repair:
                     allowed = {'input_quality_warning'}
                     if {key: value for key, value in before.items() if key not in allowed} != {key: value for key, value in after.items() if key not in allowed}:
                         raise ValueError('Unrepaired assessment changed')

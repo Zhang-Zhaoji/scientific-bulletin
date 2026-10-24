@@ -1,0 +1,27 @@
+{
+  "title": "神经科学快讯·第033期 工程化逆转座子实现体内大片段基因写入 (2026-10-24) | Neuroscience Bulletin",
+  "images": [
+    {
+      "loaded": true,
+      "src": "assets/covers/20261024.png"
+    },
+    {
+      "loaded": true,
+      "src": "assets/statistics/2026-10-24_score_histogram.png"
+    }
+  ],
+  "charts": [
+    {
+      "canvas_count": 1
+    },
+    {
+      "canvas_count": 1
+    }
+  ],
+  "mobile_document_width": 390,
+  "mobile_viewport_width": 390,
+  "screenshots": [
+    "report_desktop.png",
+    "report_mobile.png"
+  ]
+}

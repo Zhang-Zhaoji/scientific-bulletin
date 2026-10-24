@@ -98,13 +98,13 @@
       }
     }
   },
-  "abstract_history_revision": "2026-10-18",
-  "missing_abstracts": 12,
-  "selected_missing_abstracts": 4,
+  "abstract_history_revision": "2026-10-25",
+  "missing_abstracts": 11,
+  "selected_missing_abstracts": 3,
   "recommendation_distribution": {
-    "简要提及": 80,
-    "不推送": 290,
+    "简要提及": 79,
+    "不推送": 291,
     "深度解读": 133
   },
-  "missing_abstract_count_after_enrichment": 12
+  "missing_abstract_count_after_enrichment": 11
 }
