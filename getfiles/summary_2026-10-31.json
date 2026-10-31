@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-31",
+  "date_range": [
+    "2026-10-25",
+    "2026-10-31"
+  ],
+  "merged_count": 1129,
+  "source_counts_after_merge": {
+    "bioRxiv": 292,
+    "Nature Communications": 104,
+    "Brain": 14,
+    "Nature BME": 3,
+    "Nature Method": 6,
+    "eLife": 28,
+    "arXiv": 58,
+    "Cell": 7,
+    "Cell Reports": 32,
+    "Cell Systems": 5,
+    "Current Biology": 8,
+    "Journal of Neuroscience": 13,
+    "PLOS": 348,
+    "PNAS": 98,
+    "Science": 31,
+    "Journal of Neurophysiology": 1,
+    "Nature": 28,
+    "Nature Neuroscience": 5,
+    "Science Advances": 39,
+    "Neuron": 3,
+    "Trends in Neurosciences": 1,
+    "Nature Human Behavior": 5
+  },
+  "input_counts": {
+    "tmps/pipeline_20261031/preprints.jsonl": 353,
+    "tmps/pipeline_20261031/supplement.jsonl": 795
+  },
+  "sources": {
+    "bioRxiv": {
+      "count": 282
+    },
+    "Nature Communications": {
+      "count": 104
+    },
+    "Brain": {
+      "count": 14
+    },
+    "Nature BME": {
+      "count": 3
+    },
+    "Nature Method": {
+      "count": 5
+    },
+    "eLife": {
+      "count": 28
+    },
+    "arXiv": {
+      "count": 58
+    },
+    "Cell": {
+      "count": 7
+    },
+    "Cell Reports": {
+      "count": 32
+    },
+    "Cell Systems": {
+      "count": 5
+    },
+    "Current Biology": {
+      "count": 8
+    },
+    "Journal of Neuroscience": {
+      "count": 25
+    },
+    "PLOS": {
+      "count": 348
+    },
+    "PNAS": {
+      "count": 98
+    },
+    "Science": {
+      "count": 34
+    },
+    "Journal of Neurophysiology": {
+      "count": 1
+    },
+    "Nature": {
+      "count": 28
+    },
+    "Nature Neuroscience": {
+      "count": 5
+    },
+    "Science Advances": {
+      "count": 39
+    },
+    "Neuron": {
+      "count": 3
+    },
+    "Trends in Neurosciences": {
+      "count": 1
+    },
+    "Nature Human Behavior": {
+      "count": 5
+    }
+  },
+  "missing_abstract_count": 17,
+  "source_audit": "/home/zhaoji/Working/scientific-bulletin/getfiles/source_audit_2026-10-31.json"
+}

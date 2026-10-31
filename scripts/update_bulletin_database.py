@@ -223,6 +223,7 @@ class Importer:
         self.stats = collections.Counter()
         self.score_updates = []
         self.reevaluations = []
+        self.abstract_updates = []
         self.recheck_links = []
         self.target_links = []
         self.title_aliases = []
@@ -388,6 +389,16 @@ class Importer:
             self.target_links.append((paper, result, article))
         reevaluate = recheck or revision
         if reevaluate and existing is not None:
+            old_abstract = self.conn.execute("SELECT abstract FROM articles WHERE id=?", (article,)).fetchone()[0]
+            new_abstract = paper.get("abstract") or ""
+            if len(new_abstract.strip()) >= 50 and old_abstract != new_abstract:
+                self.abstract_updates.append({"article_id": article, "old_abstract": old_abstract,
+                                              "new_abstract": new_abstract, "identity": identity})
+                self.conn.execute("UPDATE articles SET abstract=? WHERE id=?", (new_abstract, article))
+            # A reassessment replaces the paper's previous classification projection.
+            for table in ("article_themes", "article_subthemes", "article_crosstags"):
+                self.conn.execute(f'DELETE FROM "{table}" WHERE article_id=?', (article,))
+                self.links[table] = {pair for pair in self.links[table] if pair[0] != article}
             audit = {"article_id": article, "source_title": paper["title"], "stored_title": existing["title"],
                      "reason": "historical_abstract_recheck" if recheck else "posted_biorxiv_revision",
                      "identity": identity, "preserved_pub_date": existing["pub_date"],
@@ -474,6 +485,7 @@ def main() -> int:
         titles_before = {row[0] for row in original.execute("SELECT title FROM articles")}
         cursor = original.execute("SELECT * FROM articles")
         score_column = [column[0] for column in cursor.description].index("score")
+        abstract_column = [column[0] for column in cursor.description].index("abstract")
         old_articles = {row[0]: row for row in cursor}
     coverage = before["date_range"][1]
     weeks, warnings = discover(coverage, through_date)
@@ -528,10 +540,13 @@ def main() -> int:
         # Verify each old nonempty article value and stable article IDs before commit.
         current = {row[0]: row for row in conn.execute("SELECT * FROM articles")}
         allowed_score_changes = {audit["article_id"]: audit["new_score"] for audit in importer.score_updates}
+        allowed_abstract_changes = {audit["article_id"]: audit["new_abstract"] for audit in importer.abstract_updates}
         for ident, row in old_articles.items():
             def allowed(column, value):
-                return (column == score_column and ident in allowed_score_changes
-                        and value == allowed_score_changes[ident])
+                return ((column == score_column and ident in allowed_score_changes
+                         and value == allowed_score_changes[ident]) or
+                        (column == abstract_column and ident in allowed_abstract_changes
+                         and value == allowed_abstract_changes[ident]))
             if ident not in current or any(value not in (None, "") and value != current[ident][column]
                                            and not allowed(column, current[ident][column])
                                            for column, value in enumerate(row)):
@@ -542,7 +557,7 @@ def main() -> int:
         if after["counts"]["articles"] != before["counts"]["articles"] + expected_new_articles:
             raise RuntimeError("Article-count reconciliation failed")
         for table, count in before["counts"].items():
-            if after["counts"].get(table, 0) < count:
+            if table not in ("article_themes", "article_subthemes", "article_crosstags") and after["counts"].get(table, 0) < count:
                 raise RuntimeError(f"Existing rows were removed from {table}")
         for week in weeks:
             missing = [paper["title"] for paper, _ in week["records"]
@@ -588,6 +603,7 @@ def main() -> int:
     plan.update(status="complete", after=after, slim_after=slim_after,
                 import_counts=dict(importer.stats), backups=[str(full_backup), str(slim_backup)],
                 score_updates=importer.score_updates, reevaluations=importer.reevaluations,
+                abstract_updates=importer.abstract_updates,
                 historical_rechecks_reconciled=len(importer.recheck_links), title_aliases=importer.title_aliases,
                 reconciled_new_articles=expected_new_articles)
     plan["target_reconciliation"] = {"title_matches": next(len(week["records"]) for week in weeks

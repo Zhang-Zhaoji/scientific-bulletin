@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-31T09:48:42.678281+00:00",
+  "targets": 16,
+  "statuses": {
+    "not_recovered": 16
+  },
+  "selected_recovered": 0,
+  "unattempted": 0,
+  "local_pubmed_records": 643
+}

@@ -1,0 +1,14 @@
+{
+  "papers": 1129,
+  "selected": 505,
+  "missing_abstracts": 16,
+  "historical_abstracts_recovered": 0,
+  "database_articles": 18264,
+  "database_scores_and_abstracts_matched": 1129,
+  "revision_classification_checks": 84,
+  "integrity_check": "ok",
+  "foreign_key_errors": 0,
+  "chart_cohort": 555,
+  "chart_located": 484,
+  "model": "deepseek-flash"
+}

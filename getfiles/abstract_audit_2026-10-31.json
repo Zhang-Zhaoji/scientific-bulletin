@@ -1,0 +1,1201 @@
+{
+  "inventory": {
+    "created_at": "2026-10-31T09:39:16.068037+00:00",
+    "issues": [
+      {
+        "issue": 1,
+        "date": "20260315",
+        "result": "LLM_Results/LLM_results_20260315_010034.json",
+        "source": "getfiles/all_papers_2026-03-14_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260315_1035.md",
+        "result_sha256": "653730d233cbdcdc84036f37da6770d639ff110a8467d81f0ad9844c58e00747",
+        "papers": 164,
+        "selected": 84,
+        "missing": 1,
+        "selected_missing": 0,
+        "missing_by_tier": {
+          "不推送": 1
+        }
+      },
+      {
+        "issue": 2,
+        "date": "20260321",
+        "result": "LLM_Results/LLM_results_20260321_015612.json",
+        "source": "getfiles/all_papers_2026-03-21_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260321_0158.md",
+        "result_sha256": "f1f1082df03e5ab6563ea161ea27c978cea9b0286c9cb2687a5dc77c354d3859",
+        "papers": 214,
+        "selected": 114,
+        "missing": 2,
+        "selected_missing": 0,
+        "missing_by_tier": {
+          "不推送": 2
+        }
+      },
+      {
+        "issue": 3,
+        "date": "20260328",
+        "result": "LLM_Results/LLM_results_20260328_004204.json",
+        "source": "getfiles/all_papers_2026-03-28_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260328_0042.md",
+        "result_sha256": "5c1acd222d53474e8e0d842c2cf6b6fa73cecf9fd026bc8e99980f8de7ab3f8c",
+        "papers": 111,
+        "selected": 70,
+        "missing": 1,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 4,
+        "date": "20260404",
+        "result": "LLM_Results/LLM_results_20260404_020849.json",
+        "source": "getfiles/all_papers_2026-04-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260404_0211.md",
+        "result_sha256": "24aa7e13db36515361ceaf1abf86778b18a3f293634d588a49c84345c3732b11",
+        "papers": 191,
+        "selected": 136,
+        "missing": 2,
+        "selected_missing": 2,
+        "missing_by_tier": {
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 5,
+        "date": "20260411",
+        "result": "LLM_Results/LLM_results_20260411_125808.json",
+        "source": "getfiles/all_papers_2026-04-11_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260411_1349.md",
+        "result_sha256": "90459ddada25e33d2e81cf54ef57724564bd5f6f78b857dd4b6a47ad4f52336b",
+        "papers": 388,
+        "selected": 167,
+        "missing": 28,
+        "selected_missing": 15,
+        "missing_by_tier": {
+          "不推送": 13,
+          "简要提及": 15
+        }
+      },
+      {
+        "issue": 6,
+        "date": "20260418",
+        "result": "LLM_Results/LLM_results_20260418_023838.json",
+        "source": "getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260418_1759.md",
+        "result_sha256": "258230f085a830576948b3847648d71300f9e60be57b61df17d2b1025b35535d",
+        "papers": 377,
+        "selected": 163,
+        "missing": 12,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 9,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 7,
+        "date": "20260425",
+        "result": "LLM_Results/LLM_results_20260425_022337.json",
+        "source": "getfiles/all_papers_2026-04-25_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260425_1125.md",
+        "result_sha256": "c1521f19316f390e705726a14b16a48c83f6fc1172c7eba9220af2284c80d897",
+        "papers": 426,
+        "selected": 187,
+        "missing": 10,
+        "selected_missing": 6,
+        "missing_by_tier": {
+          "不推送": 4,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 8,
+        "date": "20260502",
+        "result": "LLM_Results/LLM_results_20260502_020545.json",
+        "source": "getfiles/all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260502_0211.md",
+        "result_sha256": "33493735424d8600a9352a9ed606be0188f049d86235a679e60f0f191658a52d",
+        "papers": 407,
+        "selected": 162,
+        "missing": 19,
+        "selected_missing": 6,
+        "missing_by_tier": {
+          "简要提及": 5,
+          "不推送": 13,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 9,
+        "date": "20260510",
+        "result": "LLM_Results/LLM_results_20260510_024906.json",
+        "source": "getfiles/all_papers_2026-05-10_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260510_2334.md",
+        "result_sha256": "13352128055e08b8ce2124f9b7cf826ad74a2110b563e3803e942404271a3d98",
+        "papers": 413,
+        "selected": 174,
+        "missing": 19,
+        "selected_missing": 10,
+        "missing_by_tier": {
+          "不推送": 9,
+          "深度解读": 1,
+          "简要提及": 9
+        }
+      },
+      {
+        "issue": 10,
+        "date": "20260517",
+        "result": "LLM_Results/LLM_results_20260517_011403.json",
+        "source": "getfiles/all_papers_2026-05-16_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260517_1108.md",
+        "result_sha256": "42732c671da9d9d50a50fb76f0385ef7965e2219dd0acffe32135eedad4f0c01",
+        "papers": 518,
+        "selected": 236,
+        "missing": 19,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "深度解读": 5,
+          "简要提及": 2,
+          "不推送": 12
+        }
+      },
+      {
+        "issue": 11,
+        "date": "20260524",
+        "result": "LLM_Results/LLM_results_20260524_023612.json",
+        "source": "getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260524_0908.md",
+        "result_sha256": "01254d94b900071f032b3174739efca84d4fc229ba13707a7c87562e3b662ea8",
+        "papers": 474,
+        "selected": 201,
+        "missing": 14,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "深度解读": 3,
+          "头条推荐": 1,
+          "简要提及": 1,
+          "不推送": 9
+        }
+      },
+      {
+        "issue": 12,
+        "date": "20260531",
+        "result": "LLM_Results/LLM_results_20260531_011244.json",
+        "source": "getfiles/all_papers_2026-05-30_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260531_1448.md",
+        "result_sha256": "a7d3d3d5af2c0dc8b70c9f32fe181b7a2171f272403b61dd099c10126d93d1be",
+        "papers": 402,
+        "selected": 164,
+        "missing": 22,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "深度解读": 4,
+          "不推送": 18
+        }
+      },
+      {
+        "issue": 13,
+        "date": "20260608",
+        "result": "LLM_Results/LLM_results_20260608_030855.json",
+        "source": "getfiles/all_papers_2026-06-07_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260608_1549.md",
+        "result_sha256": "25ef2f04c53f512a77db5925e0b2fa8170df70363e2fb5a2cc49473cb090dc9c",
+        "papers": 386,
+        "selected": 206,
+        "missing": 23,
+        "selected_missing": 9,
+        "missing_by_tier": {
+          "不推送": 14,
+          "深度解读": 7,
+          "头条推荐": 1,
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 14,
+        "date": "20260613",
+        "result": "LLM_Results/LLM_results_20260613_140337.json",
+        "source": "getfiles/all_papers_2026-06-13_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260613_1654.md",
+        "result_sha256": "938d7f33460d4a38516126b5fc5a4e03bf812a0b9975ad99daa5741ca49bd915",
+        "papers": 578,
+        "selected": 280,
+        "missing": 17,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 12,
+          "深度解读": 3,
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 15,
+        "date": "20260620",
+        "result": "LLM_Results/LLM_results_20260620_181803.json",
+        "source": "getfiles/all_papers_2026-06-20_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260620_2005.md",
+        "result_sha256": "f2f447aede276e00c1dde81db016bb149e3d79418a89cb756ba3a455a65da65d",
+        "papers": 438,
+        "selected": 204,
+        "missing": 11,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 6,
+          "深度解读": 4,
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 16,
+        "date": "20260627",
+        "result": "LLM_Results/LLM_results_20260627_023238.json",
+        "source": "getfiles/all_papers_2026-06-27_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260627_1247.md",
+        "result_sha256": "ce563cb577a1c8dd0956937bc30255fd34325ff72ee6f2022c45951cabd04fcc",
+        "papers": 348,
+        "selected": 182,
+        "missing": 8,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "深度解读": 2,
+          "不推送": 3,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 17,
+        "date": "20260705",
+        "result": "LLM_Results/LLM_results_20260705_010755.json",
+        "source": "getfiles/all_papers_2026-07-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260705_0111.md",
+        "result_sha256": "7b6d64a1b149b281ce3688d35de03638f7e4a09495f6a734658ab6e351b92630",
+        "papers": 656,
+        "selected": 297,
+        "missing": 30,
+        "selected_missing": 8,
+        "missing_by_tier": {
+          "深度解读": 5,
+          "不推送": 22,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 18,
+        "date": "20260711",
+        "result": "LLM_Results/LLM_results_20260711_181829.json",
+        "source": "getfiles/all_papers_2026-07-11_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260711_2030.md",
+        "result_sha256": "2bb2a47298f5b1896ec7e32bc893f9d734c5fbf329a732248a95f1c787e9a9c0",
+        "papers": 982,
+        "selected": 341,
+        "missing": 64,
+        "selected_missing": 24,
+        "missing_by_tier": {
+          "不推送": 40,
+          "简要提及": 16,
+          "深度解读": 8
+        }
+      },
+      {
+        "issue": 19,
+        "date": "20260718",
+        "result": "LLM_Results/LLM_results_20260718_120221.json",
+        "source": "getfiles/all_papers_2026-07-18_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260718_1337.md",
+        "result_sha256": "cd1ae78f520ae7dcf6c038a1f8206aa056a2b84189344d47d84d281c61171d7a",
+        "papers": 507,
+        "selected": 224,
+        "missing": 21,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "简要提及": 5,
+          "不推送": 14,
+          "深度解读": 2
+        }
+      },
+      {
+        "issue": 20,
+        "date": "20260726",
+        "result": "LLM_Results/LLM_results_20260725_212418.json",
+        "source": "getfiles/all_papers_2026-07-25_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260726_2350.md",
+        "result_sha256": "ae1074105bcd109cfd928ed241514be54daafbe1d34bfb2e8ea43bb17a8f45b2",
+        "papers": 558,
+        "selected": 237,
+        "missing": 9,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "不推送": 8,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 21,
+        "date": "20260802",
+        "result": "LLM_Results/LLM_results_20260802_163549.json",
+        "source": "getfiles/all_papers_2026-08-02_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260802_1723.md",
+        "result_sha256": "f894dc84a5423a926e0cc5a826cc4cb8b05e129debb416c5c34591c17503d6fa",
+        "papers": 652,
+        "selected": 308,
+        "missing": 29,
+        "selected_missing": 9,
+        "missing_by_tier": {
+          "不推送": 20,
+          "深度解读": 3,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 22,
+        "date": "20260809",
+        "result": "LLM_Results/LLM_results_20260809_194853.json",
+        "source": "getfiles/all_papers_2026-08-09_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260809_0123.md",
+        "result_sha256": "3580600fe208eb0c55bbee8cb51419d6dcf6d3cd8cfeba26e95f1260075a1e40",
+        "papers": 437,
+        "selected": 226,
+        "missing": 11,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "不推送": 7,
+          "简要提及": 3,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 23,
+        "date": "20260817",
+        "result": "LLM_Results/LLM_results_20260817_011900.json",
+        "source": "getfiles/all_papers_2026-08-17_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260817_0139.md",
+        "result_sha256": "c3b54f444e281a54de2f1f65e8117128a841705939774e7b577de1c9c93b9093",
+        "papers": 503,
+        "selected": 212,
+        "missing": 11,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 8,
+          "简要提及": 2,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 24,
+        "date": "20260823",
+        "result": "LLM_Results/LLM_results_20260823_002838.json",
+        "source": "getfiles/all_papers_2026-08-23_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260823_1005.md",
+        "result_sha256": "38d5ca1e7aa993b5f3d36554671369efcb3a3a2357b3e70d73d8ad91de37a0e1",
+        "papers": 544,
+        "selected": 235,
+        "missing": 19,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 14,
+          "简要提及": 3,
+          "深度解读": 1,
+          "头条推荐": 1
+        }
+      },
+      {
+        "issue": 25,
+        "date": "20260829",
+        "result": "LLM_Results/LLM_results_20260829_015737.json",
+        "source": "getfiles/all_papers_2026-08-29_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260829_0123.md",
+        "result_sha256": "921a5fda47f0b35d4c4f4643463901eed7244be757adbb3707941e1167b5741f",
+        "papers": 284,
+        "selected": 147,
+        "missing": 15,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "深度解读": 4,
+          "不推送": 8,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 26,
+        "date": "20260906",
+        "result": "LLM_Results/LLM_results_20260906_011115.json",
+        "source": "getfiles/all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260906_0123.md",
+        "result_sha256": "55739a3ba8276f8fc71314eff8817a383554438a5f3d92c1fecc4b2773f1f055",
+        "papers": 591,
+        "selected": 268,
+        "missing": 14,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "不推送": 10,
+          "简要提及": 3,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 27,
+        "date": "20260913",
+        "result": "LLM_Results/LLM_results_20260913_191004.json",
+        "source": "getfiles/all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260913_0123.md",
+        "result_sha256": "c3ff78cb9da7a148db82aaf18b4bf48b9a6bd78452c46df0780d3857bd34b2e9",
+        "papers": 509,
+        "selected": 243,
+        "missing": 26,
+        "selected_missing": 11,
+        "missing_by_tier": {
+          "不推送": 15,
+          "深度解读": 5,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 28,
+        "date": "20260920",
+        "result": "LLM_Results/LLM_results_20260920_114614.json",
+        "source": "getfiles/all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260920_1209.md",
+        "result_sha256": "0898e314e179aa76c3a099fb8a56b877b302a4324b836c76ca400d54ff8ec9d1",
+        "papers": 583,
+        "selected": 244,
+        "missing": 23,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 20,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 29,
+        "date": "20260927",
+        "result": "LLM_Results/LLM_results_20260927.json",
+        "source": "getfiles/all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260927.md",
+        "result_sha256": "a1f8e8d8a3f0c787a986243c089d21edcd441d3733820a311c45fa11435463a7",
+        "papers": 702,
+        "selected": 499,
+        "missing": 16,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "不推送": 9,
+          "深度解读": 5,
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 30,
+        "date": "20261004",
+        "result": "LLM_Results/LLM_results_20261004.json",
+        "source": "getfiles/all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261004.md",
+        "result_sha256": "016b9137539d94bcd50ab37439153f8f0dfbbb4cea6a7ae6c3fd488b9c21ab30",
+        "papers": 1074,
+        "selected": 528,
+        "missing": 16,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 11,
+          "深度解读": 2,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 31,
+        "date": "20261010",
+        "result": "LLM_Results/LLM_results_20261010.json",
+        "source": "getfiles/all_papers_2026-10-10_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261010.md",
+        "result_sha256": "7bd5b0a479019b34128bc87bc818ce9716bad005589c0658ef3b0af5af7ff4a8",
+        "papers": 876,
+        "selected": 487,
+        "missing": 22,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 17,
+          "简要提及": 5
+        }
+      },
+      {
+        "issue": 32,
+        "date": "20261017",
+        "result": "LLM_Results/LLM_results_20261017.json",
+        "source": "getfiles/all_papers_2026-10-17_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261017.md",
+        "result_sha256": "7917cc7bc8845dcc8c01884fd04ead187e08c5d45382c7b6a64ad6b8922a4bb6",
+        "papers": 1167,
+        "selected": 555,
+        "missing": 11,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "简要提及": 4,
+          "不推送": 6,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 33,
+        "date": "20261024",
+        "result": "LLM_Results/LLM_results_20261024.json",
+        "source": "getfiles/all_papers_2026-10-24_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261024.md",
+        "result_sha256": "526c0d8526f6e4114d65e9b97971c3913c89a2d6eaee450106c84de662dd5ed4",
+        "papers": 1028,
+        "selected": 516,
+        "missing": 12,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "不推送": 11,
+          "简要提及": 1
+        }
+      }
+    ],
+    "issue_count": 33,
+    "papers": 17488,
+    "missing_occurrences": 557,
+    "selected_missing_occurrences": 192,
+    "unique_missing": 544,
+    "unique_selected_missing": 184,
+    "sources_of_selected_missing": {
+      "Cell": 2,
+      "Cell + Europe PMC": 12,
+      "Current Biology + Europe PMC": 4,
+      "iScience": 4,
+      "Neuron": 2,
+      "Neuron + Europe PMC": 3,
+      "Nature Communications": 1,
+      "Nature Communications + Europe PMC": 1,
+      "PNAS": 46,
+      "Brain": 57,
+      "Science Advances + Europe PMC": 1,
+      "Science": 2,
+      "Science + Europe PMC": 7,
+      "Journal of Neurophysiology": 4,
+      "Journal of Vision": 1,
+      "PLOS": 3,
+      "Journal of Neuroscience": 25,
+      "Nature": 1,
+      "iScience + Europe PMC": 4,
+      "Science Advances": 3,
+      "Nature BME": 1
+    }
+  },
+  "recovery": {
+    "created_at": "2026-10-31T09:47:02.523885+00:00",
+    "targets": 544,
+    "statuses": {
+      "not_recovered": 544
+    },
+    "selected_recovered": 0,
+    "unattempted": 0,
+    "local_pubmed_records": 460
+  },
+  "http_failures": {
+    "429": 15,
+    "404": 76,
+    "403": 404
+  },
+  "evidence_dir": "tmps/abstract_audit_20261031",
+  "historical_changes_applied": false,
+  "reason": "No identity-verified formal abstracts recovered",
+  "final_inventory_including_current_issue": {
+    "created_at": "2026-10-31T09:55:05.883475+00:00",
+    "issues": [
+      {
+        "issue": 1,
+        "date": "20260315",
+        "result": "LLM_Results/LLM_results_20260315_010034.json",
+        "source": "getfiles/all_papers_2026-03-14_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260315_1035.md",
+        "result_sha256": "653730d233cbdcdc84036f37da6770d639ff110a8467d81f0ad9844c58e00747",
+        "papers": 164,
+        "selected": 84,
+        "missing": 1,
+        "selected_missing": 0,
+        "missing_by_tier": {
+          "不推送": 1
+        }
+      },
+      {
+        "issue": 2,
+        "date": "20260321",
+        "result": "LLM_Results/LLM_results_20260321_015612.json",
+        "source": "getfiles/all_papers_2026-03-21_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260321_0158.md",
+        "result_sha256": "f1f1082df03e5ab6563ea161ea27c978cea9b0286c9cb2687a5dc77c354d3859",
+        "papers": 214,
+        "selected": 114,
+        "missing": 2,
+        "selected_missing": 0,
+        "missing_by_tier": {
+          "不推送": 2
+        }
+      },
+      {
+        "issue": 3,
+        "date": "20260328",
+        "result": "LLM_Results/LLM_results_20260328_004204.json",
+        "source": "getfiles/all_papers_2026-03-28_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260328_0042.md",
+        "result_sha256": "5c1acd222d53474e8e0d842c2cf6b6fa73cecf9fd026bc8e99980f8de7ab3f8c",
+        "papers": 111,
+        "selected": 70,
+        "missing": 1,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 4,
+        "date": "20260404",
+        "result": "LLM_Results/LLM_results_20260404_020849.json",
+        "source": "getfiles/all_papers_2026-04-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260404_0211.md",
+        "result_sha256": "24aa7e13db36515361ceaf1abf86778b18a3f293634d588a49c84345c3732b11",
+        "papers": 191,
+        "selected": 136,
+        "missing": 2,
+        "selected_missing": 2,
+        "missing_by_tier": {
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 5,
+        "date": "20260411",
+        "result": "LLM_Results/LLM_results_20260411_125808.json",
+        "source": "getfiles/all_papers_2026-04-11_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260411_1349.md",
+        "result_sha256": "90459ddada25e33d2e81cf54ef57724564bd5f6f78b857dd4b6a47ad4f52336b",
+        "papers": 388,
+        "selected": 167,
+        "missing": 28,
+        "selected_missing": 15,
+        "missing_by_tier": {
+          "不推送": 13,
+          "简要提及": 15
+        }
+      },
+      {
+        "issue": 6,
+        "date": "20260418",
+        "result": "LLM_Results/LLM_results_20260418_023838.json",
+        "source": "getfiles/all_papers_2026-04-18_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260418_1759.md",
+        "result_sha256": "258230f085a830576948b3847648d71300f9e60be57b61df17d2b1025b35535d",
+        "papers": 377,
+        "selected": 163,
+        "missing": 12,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 9,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 7,
+        "date": "20260425",
+        "result": "LLM_Results/LLM_results_20260425_022337.json",
+        "source": "getfiles/all_papers_2026-04-25_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260425_1125.md",
+        "result_sha256": "c1521f19316f390e705726a14b16a48c83f6fc1172c7eba9220af2284c80d897",
+        "papers": 426,
+        "selected": 187,
+        "missing": 10,
+        "selected_missing": 6,
+        "missing_by_tier": {
+          "不推送": 4,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 8,
+        "date": "20260502",
+        "result": "LLM_Results/LLM_results_20260502_020545.json",
+        "source": "getfiles/all_papers_2026-05-02_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260502_0211.md",
+        "result_sha256": "33493735424d8600a9352a9ed606be0188f049d86235a679e60f0f191658a52d",
+        "papers": 407,
+        "selected": 162,
+        "missing": 19,
+        "selected_missing": 6,
+        "missing_by_tier": {
+          "简要提及": 5,
+          "不推送": 13,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 9,
+        "date": "20260510",
+        "result": "LLM_Results/LLM_results_20260510_024906.json",
+        "source": "getfiles/all_papers_2026-05-10_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260510_2334.md",
+        "result_sha256": "13352128055e08b8ce2124f9b7cf826ad74a2110b563e3803e942404271a3d98",
+        "papers": 413,
+        "selected": 174,
+        "missing": 19,
+        "selected_missing": 10,
+        "missing_by_tier": {
+          "不推送": 9,
+          "深度解读": 1,
+          "简要提及": 9
+        }
+      },
+      {
+        "issue": 10,
+        "date": "20260517",
+        "result": "LLM_Results/LLM_results_20260517_011403.json",
+        "source": "getfiles/all_papers_2026-05-16_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260517_1108.md",
+        "result_sha256": "42732c671da9d9d50a50fb76f0385ef7965e2219dd0acffe32135eedad4f0c01",
+        "papers": 518,
+        "selected": 236,
+        "missing": 19,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "深度解读": 5,
+          "简要提及": 2,
+          "不推送": 12
+        }
+      },
+      {
+        "issue": 11,
+        "date": "20260524",
+        "result": "LLM_Results/LLM_results_20260524_023612.json",
+        "source": "getfiles/all_papers_2026-05-23_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260524_0908.md",
+        "result_sha256": "01254d94b900071f032b3174739efca84d4fc229ba13707a7c87562e3b662ea8",
+        "papers": 474,
+        "selected": 201,
+        "missing": 14,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "深度解读": 3,
+          "头条推荐": 1,
+          "简要提及": 1,
+          "不推送": 9
+        }
+      },
+      {
+        "issue": 12,
+        "date": "20260531",
+        "result": "LLM_Results/LLM_results_20260531_011244.json",
+        "source": "getfiles/all_papers_2026-05-30_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260531_1448.md",
+        "result_sha256": "a7d3d3d5af2c0dc8b70c9f32fe181b7a2171f272403b61dd099c10126d93d1be",
+        "papers": 402,
+        "selected": 164,
+        "missing": 22,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "深度解读": 4,
+          "不推送": 18
+        }
+      },
+      {
+        "issue": 13,
+        "date": "20260608",
+        "result": "LLM_Results/LLM_results_20260608_030855.json",
+        "source": "getfiles/all_papers_2026-06-07_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260608_1549.md",
+        "result_sha256": "25ef2f04c53f512a77db5925e0b2fa8170df70363e2fb5a2cc49473cb090dc9c",
+        "papers": 386,
+        "selected": 206,
+        "missing": 23,
+        "selected_missing": 9,
+        "missing_by_tier": {
+          "不推送": 14,
+          "深度解读": 7,
+          "头条推荐": 1,
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 14,
+        "date": "20260613",
+        "result": "LLM_Results/LLM_results_20260613_140337.json",
+        "source": "getfiles/all_papers_2026-06-13_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260613_1654.md",
+        "result_sha256": "938d7f33460d4a38516126b5fc5a4e03bf812a0b9975ad99daa5741ca49bd915",
+        "papers": 578,
+        "selected": 280,
+        "missing": 17,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 12,
+          "深度解读": 3,
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 15,
+        "date": "20260620",
+        "result": "LLM_Results/LLM_results_20260620_181803.json",
+        "source": "getfiles/all_papers_2026-06-20_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260620_2005.md",
+        "result_sha256": "f2f447aede276e00c1dde81db016bb149e3d79418a89cb756ba3a455a65da65d",
+        "papers": 438,
+        "selected": 204,
+        "missing": 11,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 6,
+          "深度解读": 4,
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 16,
+        "date": "20260627",
+        "result": "LLM_Results/LLM_results_20260627_023238.json",
+        "source": "getfiles/all_papers_2026-06-27_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260627_1247.md",
+        "result_sha256": "ce563cb577a1c8dd0956937bc30255fd34325ff72ee6f2022c45951cabd04fcc",
+        "papers": 348,
+        "selected": 182,
+        "missing": 8,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "深度解读": 2,
+          "不推送": 3,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 17,
+        "date": "20260705",
+        "result": "LLM_Results/LLM_results_20260705_010755.json",
+        "source": "getfiles/all_papers_2026-07-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260705_0111.md",
+        "result_sha256": "7b6d64a1b149b281ce3688d35de03638f7e4a09495f6a734658ab6e351b92630",
+        "papers": 656,
+        "selected": 297,
+        "missing": 30,
+        "selected_missing": 8,
+        "missing_by_tier": {
+          "深度解读": 5,
+          "不推送": 22,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 18,
+        "date": "20260711",
+        "result": "LLM_Results/LLM_results_20260711_181829.json",
+        "source": "getfiles/all_papers_2026-07-11_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260711_2030.md",
+        "result_sha256": "2bb2a47298f5b1896ec7e32bc893f9d734c5fbf329a732248a95f1c787e9a9c0",
+        "papers": 982,
+        "selected": 341,
+        "missing": 64,
+        "selected_missing": 24,
+        "missing_by_tier": {
+          "不推送": 40,
+          "简要提及": 16,
+          "深度解读": 8
+        }
+      },
+      {
+        "issue": 19,
+        "date": "20260718",
+        "result": "LLM_Results/LLM_results_20260718_120221.json",
+        "source": "getfiles/all_papers_2026-07-18_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260718_1337.md",
+        "result_sha256": "cd1ae78f520ae7dcf6c038a1f8206aa056a2b84189344d47d84d281c61171d7a",
+        "papers": 507,
+        "selected": 224,
+        "missing": 21,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "简要提及": 5,
+          "不推送": 14,
+          "深度解读": 2
+        }
+      },
+      {
+        "issue": 20,
+        "date": "20260726",
+        "result": "LLM_Results/LLM_results_20260725_212418.json",
+        "source": "getfiles/all_papers_2026-07-25_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260726_2350.md",
+        "result_sha256": "ae1074105bcd109cfd928ed241514be54daafbe1d34bfb2e8ea43bb17a8f45b2",
+        "papers": 558,
+        "selected": 237,
+        "missing": 9,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "不推送": 8,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 21,
+        "date": "20260802",
+        "result": "LLM_Results/LLM_results_20260802_163549.json",
+        "source": "getfiles/all_papers_2026-08-02_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260802_1723.md",
+        "result_sha256": "f894dc84a5423a926e0cc5a826cc4cb8b05e129debb416c5c34591c17503d6fa",
+        "papers": 652,
+        "selected": 308,
+        "missing": 29,
+        "selected_missing": 9,
+        "missing_by_tier": {
+          "不推送": 20,
+          "深度解读": 3,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 22,
+        "date": "20260809",
+        "result": "LLM_Results/LLM_results_20260809_194853.json",
+        "source": "getfiles/all_papers_2026-08-09_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260809_0123.md",
+        "result_sha256": "3580600fe208eb0c55bbee8cb51419d6dcf6d3cd8cfeba26e95f1260075a1e40",
+        "papers": 437,
+        "selected": 226,
+        "missing": 11,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "不推送": 7,
+          "简要提及": 3,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 23,
+        "date": "20260817",
+        "result": "LLM_Results/LLM_results_20260817_011900.json",
+        "source": "getfiles/all_papers_2026-08-17_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260817_0139.md",
+        "result_sha256": "c3b54f444e281a54de2f1f65e8117128a841705939774e7b577de1c9c93b9093",
+        "papers": 503,
+        "selected": 212,
+        "missing": 11,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 8,
+          "简要提及": 2,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 24,
+        "date": "20260823",
+        "result": "LLM_Results/LLM_results_20260823_002838.json",
+        "source": "getfiles/all_papers_2026-08-23_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260823_1005.md",
+        "result_sha256": "38d5ca1e7aa993b5f3d36554671369efcb3a3a2357b3e70d73d8ad91de37a0e1",
+        "papers": 544,
+        "selected": 235,
+        "missing": 19,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 14,
+          "简要提及": 3,
+          "深度解读": 1,
+          "头条推荐": 1
+        }
+      },
+      {
+        "issue": 25,
+        "date": "20260829",
+        "result": "LLM_Results/LLM_results_20260829_015737.json",
+        "source": "getfiles/all_papers_2026-08-29_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260829_0123.md",
+        "result_sha256": "921a5fda47f0b35d4c4f4643463901eed7244be757adbb3707941e1167b5741f",
+        "papers": 284,
+        "selected": 147,
+        "missing": 15,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "深度解读": 4,
+          "不推送": 8,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 26,
+        "date": "20260906",
+        "result": "LLM_Results/LLM_results_20260906_011115.json",
+        "source": "getfiles/all_papers_2026-09-06_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260906_0123.md",
+        "result_sha256": "55739a3ba8276f8fc71314eff8817a383554438a5f3d92c1fecc4b2773f1f055",
+        "papers": 591,
+        "selected": 268,
+        "missing": 14,
+        "selected_missing": 4,
+        "missing_by_tier": {
+          "不推送": 10,
+          "简要提及": 3,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 27,
+        "date": "20260913",
+        "result": "LLM_Results/LLM_results_20260913_191004.json",
+        "source": "getfiles/all_papers_2026-09-13_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260913_0123.md",
+        "result_sha256": "c3ff78cb9da7a148db82aaf18b4bf48b9a6bd78452c46df0780d3857bd34b2e9",
+        "papers": 509,
+        "selected": 243,
+        "missing": 26,
+        "selected_missing": 11,
+        "missing_by_tier": {
+          "不推送": 15,
+          "深度解读": 5,
+          "简要提及": 6
+        }
+      },
+      {
+        "issue": 28,
+        "date": "20260920",
+        "result": "LLM_Results/LLM_results_20260920_114614.json",
+        "source": "getfiles/all_papers_2026-09-20_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260920_1209.md",
+        "result_sha256": "0898e314e179aa76c3a099fb8a56b877b302a4324b836c76ca400d54ff8ec9d1",
+        "papers": 583,
+        "selected": 244,
+        "missing": 23,
+        "selected_missing": 3,
+        "missing_by_tier": {
+          "不推送": 20,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 29,
+        "date": "20260927",
+        "result": "LLM_Results/LLM_results_20260927.json",
+        "source": "getfiles/all_papers_2026-09-27_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20260927.md",
+        "result_sha256": "a1f8e8d8a3f0c787a986243c089d21edcd441d3733820a311c45fa11435463a7",
+        "papers": 702,
+        "selected": 499,
+        "missing": 16,
+        "selected_missing": 7,
+        "missing_by_tier": {
+          "不推送": 9,
+          "深度解读": 5,
+          "简要提及": 2
+        }
+      },
+      {
+        "issue": 30,
+        "date": "20261004",
+        "result": "LLM_Results/LLM_results_20261004.json",
+        "source": "getfiles/all_papers_2026-10-04_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261004.md",
+        "result_sha256": "016b9137539d94bcd50ab37439153f8f0dfbbb4cea6a7ae6c3fd488b9c21ab30",
+        "papers": 1074,
+        "selected": 528,
+        "missing": 16,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 11,
+          "深度解读": 2,
+          "简要提及": 3
+        }
+      },
+      {
+        "issue": 31,
+        "date": "20261010",
+        "result": "LLM_Results/LLM_results_20261010.json",
+        "source": "getfiles/all_papers_2026-10-10_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261010.md",
+        "result_sha256": "7bd5b0a479019b34128bc87bc818ce9716bad005589c0658ef3b0af5af7ff4a8",
+        "papers": 876,
+        "selected": 487,
+        "missing": 22,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "不推送": 17,
+          "简要提及": 5
+        }
+      },
+      {
+        "issue": 32,
+        "date": "20261017",
+        "result": "LLM_Results/LLM_results_20261017.json",
+        "source": "getfiles/all_papers_2026-10-17_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261017.md",
+        "result_sha256": "7917cc7bc8845dcc8c01884fd04ead187e08c5d45382c7b6a64ad6b8922a4bb6",
+        "papers": 1167,
+        "selected": 555,
+        "missing": 11,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "简要提及": 4,
+          "不推送": 6,
+          "深度解读": 1
+        }
+      },
+      {
+        "issue": 33,
+        "date": "20261024",
+        "result": "LLM_Results/LLM_results_20261024.json",
+        "source": "getfiles/all_papers_2026-10-24_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261024.md",
+        "result_sha256": "526c0d8526f6e4114d65e9b97971c3913c89a2d6eaee450106c84de662dd5ed4",
+        "papers": 1028,
+        "selected": 516,
+        "missing": 12,
+        "selected_missing": 1,
+        "missing_by_tier": {
+          "不推送": 11,
+          "简要提及": 1
+        }
+      },
+      {
+        "issue": 34,
+        "date": "20261031",
+        "result": "LLM_Results/LLM_results_20261031.json",
+        "source": "getfiles/all_papers_2026-10-31_enriched_ror_refined.jsonl",
+        "report": "LLM_Results/report_20261031.md",
+        "result_sha256": "717187c23616fc1a9c01de04a800e437f453e1eab47a7485902fe2b85cd8545e",
+        "papers": 1129,
+        "selected": 505,
+        "missing": 16,
+        "selected_missing": 5,
+        "missing_by_tier": {
+          "简要提及": 3,
+          "深度解读": 2,
+          "不推送": 11
+        }
+      }
+    ],
+    "issue_count": 34,
+    "papers": 18617,
+    "missing_occurrences": 573,
+    "selected_missing_occurrences": 197,
+    "unique_missing": 560,
+    "unique_selected_missing": 189,
+    "sources_of_selected_missing": {
+      "Cell": 2,
+      "Cell + Europe PMC": 12,
+      "Current Biology + Europe PMC": 4,
+      "iScience": 4,
+      "Neuron": 2,
+      "Neuron + Europe PMC": 3,
+      "Nature Communications": 1,
+      "Nature Communications + Europe PMC": 1,
+      "PNAS": 46,
+      "Brain": 59,
+      "Science Advances + Europe PMC": 1,
+      "Science Advances": 4,
+      "Science": 3,
+      "Science + Europe PMC": 7,
+      "Journal of Neurophysiology": 4,
+      "Journal of Vision": 1,
+      "PLOS": 3,
+      "Journal of Neuroscience": 26,
+      "Nature": 1,
+      "iScience + Europe PMC": 4,
+      "Nature BME": 1
+    }
+  }
+}
