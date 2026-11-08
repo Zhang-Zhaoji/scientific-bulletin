@@ -1,0 +1,55 @@
+.issue-explorer { margin: 26px 0; padding: 24px; border: 1px solid #d8e2ed; border-radius: 14px; background: #f8fafc; }
+.issue-heading,.issue-toolbar,.issue-results-head,.issue-pagination { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.issue-eyebrow { font-size: 11px; letter-spacing: .12em; color: #607386; }
+.issue-explorer h2 { margin: 3px 0 0; font-size: 24px; }
+.issue-explorer h3 { margin: 0 0 12px; font-size: 17px; }
+.issue-explorer h3 small { display: block; margin-top: 3px; color: #607386; font-size: 12px; font-weight: 400; }
+.issue-heading a { font-size: 13px; }
+.issue-metrics { display: grid; grid-template-columns: repeat(4,1fr); margin: 20px 0 12px; gap: 12px; }
+.issue-metrics>div { border-left: 3px solid #bfd1e2; padding-left: 14px; }
+.issue-metrics strong { display: block; font-size: 30px; line-height: 1.2; color: #163e62; font-variant-numeric: tabular-nums; }
+.issue-metrics span { font-size: 12px; color: #53677a; }
+.issue-scope-note,.issue-hint,.issue-data-details p { font-size: 12px; color: #526579; }
+.issue-toolbar { justify-content: flex-start; padding: 12px 0; }
+.issue-explorer label { font-size: 13px; color: #41576b; }
+.issue-explorer select,.issue-explorer input,.issue-explorer button { font: inherit; font-size: 13px; border: 1px solid #bdcbd8; background: #fff; border-radius: 6px; padding: 6px 9px; color: #203e58; }
+.issue-explorer button { cursor: pointer; }
+.issue-explorer button:hover,.issue-explorer button[aria-pressed="true"] { background: #e4eef8; border-color: #1769aa; }
+.issue-explorer button:focus-visible,.issue-explorer select:focus-visible,.issue-explorer input:focus-visible,.issue-explorer a:focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
+.issue-explorer button:disabled { opacity: .4; cursor: default; }
+#issue-status { font-size: 12px; color: #526579; }
+.issue-chart-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 14px; }
+.issue-chart-card { min-width: 0; padding: 16px 10px 5px; border: 1px solid #dce5ee; border-radius: 10px; background: #fff; }
+.issue-chart-card h3 { padding-left: 6px; }
+.issue-chart { width: 100%; height: 440px; }
+.issue-topics { margin-top: 18px; border-top: 1px solid #dce5ee; padding-top: 18px; }
+#issue-topic-cloud { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px 14px; padding: 12px 8px 18px; }
+#issue-topic-cloud button { border-color: transparent; background: transparent; padding: 2px 5px; line-height: 1.4; }
+#issue-topic-cloud button[aria-pressed="true"] { background: #e4eef8; border-color: #1769aa; }
+.issue-filter-row { display: flex; flex-wrap: wrap; gap: 12px; border-top: 1px solid #dce5ee; padding-top: 18px; }
+.issue-filter-row label { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 150px; }
+.issue-filter-row select,.issue-filter-row input { width: 100%; min-width: 0; }
+#issue-reading-results { scroll-margin-top: 20px; margin-top: 22px; }
+.issue-results-head { cursor: pointer; padding: 12px 0; border-top: 1px solid #dce5ee; }
+.issue-results-head strong { font-size: 17px; }
+.issue-results-head #issue-result-count { margin-left: auto; }
+.issue-index-toggle { color: #1769aa; font-size: 13px; }
+.issue-index-toggle::after { content: '展开 ▾'; }
+#issue-reading-results[open] .issue-index-toggle::after { content: '收起 ▴'; }
+.issue-results-head:focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
+#issue-result-count,.issue-pagination { color: #526579; font-size: 12px; }
+.issue-result-item { border-top: 1px solid #dce5ee; padding: 14px 0; }
+.issue-result-item:first-child { margin-top: 10px; }
+.issue-result-item a { font-weight: 600; text-decoration: none; }
+.issue-result-item a:hover { text-decoration: underline; }
+.issue-result-meta { color: #526579; font-size: 12px; margin-top: 5px; }
+.issue-result-item p { font-size: 13px; line-height: 1.65; margin: 5px 0 0; color: #3b5267; }
+.issue-pagination { justify-content: center; padding-top: 6px; }
+.issue-data-details { margin-top: 20px; font-size: 12px; }
+.issue-data-details summary { cursor: pointer; color: #41576b; }
+#issue-data-table { overflow-x: auto; }
+#issue-data-table table { font-size: 12px; }
+.issue-body-anchor { scroll-margin-top: 24px; }
+@media(min-width:1281px) { body:has(.issue-explorer) .wrap { width: min(1200px,calc(100% - 420px)); } }
+@media(max-width:850px) { .issue-chart-grid { grid-template-columns: 1fr; } .issue-chart { height: 410px; } }
+@media(max-width:540px) { .issue-explorer { padding: 14px; } .issue-metrics { grid-template-columns: repeat(2,1fr); gap: 18px; } .issue-chart { height: 420px; } }

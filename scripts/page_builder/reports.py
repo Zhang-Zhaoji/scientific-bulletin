@@ -19,6 +19,7 @@ from .search_index import build_search_index, render_search_page
 from .dashboard import render_dashboard_page
 from .sources import report_article_url_maps_by_order
 from .styles import CSS
+from .issue_explorer import explorer_payload, render_issue_explorer
 
 
 @dataclass(frozen=True)
@@ -90,7 +91,7 @@ def assign_covers(reports: list[Path]) -> dict[Path, Path]:
     return assigned
 
 
-def render_report_media(report_path: Path, output_dir: Path) -> str:
+def render_report_media(report_path: Path, output_dir: Path, include_stats: bool = True) -> str:
     candidate_dates = report_asset_dates(report_path)
     iso_dates = [date.strftime("%Y-%m-%d") for date in candidate_dates]
     stats_dates = [date.strftime("%Y-%m-%d") for date in reversed(candidate_dates)]
@@ -120,7 +121,7 @@ def render_report_media(report_path: Path, output_dir: Path) -> str:
         chart_frames.append(f'<iframe class="chart-frame" title="Country publication distribution" src="{pie_src}" loading="lazy"></iframe>')
     if chart_frames:
         media_parts.append(f'<div class="chart-grid">\n{"".join(chart_frames)}\n</div>')
-    if stats_path:
+    if stats_path and include_stats:
         stats_src = copy_asset(stats_path, output_dir, "statistics")
         media_parts.append(
             '<figure class="stats-figure">'
@@ -262,12 +263,19 @@ def write_site_assets(output_dir: Path) -> None:
     folder_icon = Path("Imgs") / "web_asset" / "folder.svg"
     if folder_icon.exists():
         shutil.copy2(folder_icon, icon_dir / folder_icon.name)
+    for name in ('issue_explorer.js', 'issue_explorer.css'):
+        shutil.copy2(Path(__file__).with_name(name), assets_dir / name)
+    vendor_dir = assets_dir / 'vendor'
+    vendor_dir.mkdir(exist_ok=True)
+    shutil.copy2(Path('visualize/assets/echarts.min.js'), vendor_dir / 'echarts.min.js')
 
 
-def regular_report_body(report_path: Path, markdown_text: str, issue_idx: int, output_dir: Path) -> tuple[str, str]:
+def regular_report_body(report_path: Path, markdown_text: str, issue_idx: int, output_dir: Path, has_explorer: bool = False) -> tuple[str, str]:
     title = generated_report_title(report_path, markdown_text, issue_idx)
     report_body = trim_report_body(markdown_text)
-    media_html = render_report_media(report_path, output_dir)
+    media_html = render_report_media(report_path, output_dir, include_stats=not has_explorer)
+    if has_explorer:
+        media_html = '<!-- ISSUE_EXPLORER -->\n' + media_html
     report_body = insert_report_media_after_overview(report_body, media_html)
     return title, report_body
 
@@ -296,6 +304,7 @@ def render_report_page(
 ) -> ReportLink:
     markdown_text = report_path.read_text(encoding="utf-8")
     is_special = is_special_issue(report_path)
+    explorer = None if is_special else explorer_payload(input_dir, report_path, markdown_text)
 
     if is_special:
         title, report_body = special_issue_body(
@@ -307,13 +316,16 @@ def render_report_page(
         )
         article_urls = {}
     else:
-        title, report_body = regular_report_body(report_path, markdown_text, issue_numbers[report_path], output_dir)
+        title, report_body = regular_report_body(report_path, markdown_text, issue_numbers[report_path], output_dir, has_explorer=explorer is not None)
         article_urls = article_url_maps.get(report_path, {})
 
     cover_src = None
     if cover_path and cover_path.exists():
         cover_src = copy_asset(cover_path, output_dir, "covers")
     body = render_markdown_with_article_cards(f"# {title}\n\n{report_body}", article_urls)
+    if explorer is not None:
+        body = body.replace('<!-- ISSUE_EXPLORER -->', render_issue_explorer(explorer), 1)
+        body += '\n<script defer src="assets/vendor/echarts.min.js"></script>\n<script defer src="assets/issue_explorer.js"></script>\n'
     page_name = slugify(report_path)
     (output_dir / page_name).write_text(render_page(title, body, cover_src=cover_src), encoding="utf-8")
     return ReportLink(title, page_name, report_path.name, cover_src)

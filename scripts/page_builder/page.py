@@ -152,6 +152,7 @@ def render_page(title: str, body: str, root_prefix: str = "", cover_src: str | N
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)} | {DEFAULT_TITLE}</title>
   <link rel="stylesheet" href="{root_prefix}assets/style.css">
+  {'<link rel="stylesheet" href="assets/issue_explorer.css">' if 'id="issue-explorer"' in body else ''}
 </head>
 <body>
   <header>
