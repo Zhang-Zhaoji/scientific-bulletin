@@ -1,0 +1,6158 @@
+{
+  "issue": 34,
+  "date_range": [
+    "2026-10-25",
+    "2026-10-31"
+  ],
+  "generated_date": "2026-11-08",
+  "publisher_and_index": {
+    "date_range": [
+      "2026-10-25",
+      "2026-10-31"
+    ],
+    "created_at": "2026-11-08T12:29:24.460095+00:00",
+    "count": 964,
+    "counts": {
+      "Nature": 29,
+      "Nature Communications": 117,
+      "iScience": 2,
+      "Brain": 15,
+      "Cell": 8,
+      "Cell Reports": 46,
+      "Current Biology": 10,
+      "Journal of Neuroscience": 25,
+      "Nature Human Behavior": 5,
+      "Nature Method": 6,
+      "Nature Neuroscience": 5,
+      "Neuron": 4,
+      "PLOS": 427,
+      "PNAS": 110,
+      "eLife": 30,
+      "Nature BME": 3,
+      "Trends in Neurosciences": 1,
+      "Cell Systems": 5,
+      "Journal of Neurophysiology": 1,
+      "Science Advances": 81,
+      "Science": 34
+    },
+    "missing_abstract_count": 19,
+    "publisher_date_mismatches": [],
+    "index_print_date_differences": [
+      {
+        "doi": "10.1016/j.isci.2026.117993",
+        "first_publication_date": "2026-10-25",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.isci.2026.117977",
+        "first_publication_date": "2026-10-25",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1093/brain/awag365",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.09.059",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118197",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118228",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118176",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118209",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118183",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118195",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118215",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118205",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118201",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118224",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118223",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118156",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118204",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118214",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.091",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.076",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.087",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.089",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.077",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0506-26.2026",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0315-26.2026",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0504-26.2026",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.1803-24.2026",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.neuron.2026.09.034",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359526",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360739",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360975",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358957",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1013756",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360804",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358730",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360547",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014449",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360740",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361336",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361097",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360171",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358448",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361471",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0350690",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361386",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353373",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0338657",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361475",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360802",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361338",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361489",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361039",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360811",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360614",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361561",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360948",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360656",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360474",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361108",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361301",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361207",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359730",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361638",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345908",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361209",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359081",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361303",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361117",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357749",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360298",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361473",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0330809",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361021",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360744",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360392",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360058",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360938",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360173",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361210",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361214",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0322917",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359720",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361111",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361403",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359273",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360619",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0347444",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361101",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0348821",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361337",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361289",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360624",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361113",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359850",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360934",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361065",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360291",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361044",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361366",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359972",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361580",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361233",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0322347",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361610",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361200",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361495",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361476",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361295",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360538",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004049",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014887",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004079",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359154",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361390",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1073/pnas.2614796123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615871123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2621541123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618030123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2605134123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321154122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2407568122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2623869123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321149123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2619013123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2620747123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2533639123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321153122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2608464123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321152122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2538133123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2624362123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321161122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617402123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321150122",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2321155123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2626989123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2622290123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2534326123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602323123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602745123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2536041123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2612674123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602747123",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.111792",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.108656",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.109790",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.108646",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111872",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.109956",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.110514",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.110038",
+        "first_publication_date": "2026-10-26",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag375",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag373",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag370",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag369",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.09.063",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118181",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118225",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118129",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118200",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118217",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.003",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.neuron.2026.10.001",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.neuron.2026.10.002",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0347558",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0350873",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361625",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361215",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361620",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361509",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358272",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358238",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359623",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360528",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361327",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358760",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360420",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014911",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355927",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358563",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361406",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345705",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359842",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360970",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361402",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360726",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361496",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360790",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360292",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0347370",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353900",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360636",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361198",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361557",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361501",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357515",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360517",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0356328",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359781",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359711",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0346313",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361617",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0352057",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345243",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361056",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359633",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014891",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361189",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361408",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360657",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360760",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014879",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361492",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359571",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361504",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0352920",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361282",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361383",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361420",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361505",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358692",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359849",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361367",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353973",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360523",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0346469",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014864",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0341752",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359162",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360062",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359019",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014332",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360925",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0349608",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361597",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361130",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360745",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353421",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359861",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361057",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0350001",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360403",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361576",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360550",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361038",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361188",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353101",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0354099",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0348937",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361281",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361033",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360537",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358188",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361385",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361299",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360472",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359718",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360413",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3003579",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361297",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359159",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361520",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361416",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353592",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360966",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360471",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360037",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359285",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361332",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360482",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361184",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360952",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361053",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0350789",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361519",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359837",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0335001",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004039",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014890",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014889",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361255",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361485",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360049",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359104",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360913",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360386",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355147",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004041",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602335123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602541123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2612167123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2625954123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2628659123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2628062123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610851123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610110123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2538010123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2619083123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2536755123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2612140123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617783123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2607559123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2601168123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2621208123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611802123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2622609123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2604414123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2612824123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2616180123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2529720123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617198123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2538105123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602106123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610672123",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.tins.2026.09.012",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111703",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.108590",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.100230",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111060",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111900",
+        "first_publication_date": "2026-10-27",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.003",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.09.064",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.001",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118168",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118190",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118203",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cels.2026.101761",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cels.2026.101759",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cels.2026.101760",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1152/jn.00514.2025",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0851-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0892-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0352-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0261-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.1809-25.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0498-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0782-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0372-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0041-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0816-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0674-24.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.2108-25.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0797-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0997-26.2026",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361407",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361365",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361201",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361605",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004051",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0348911",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361651",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357879",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359780",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358838",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357804",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357131",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359079",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359710",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014888",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359516",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360962",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361373",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359541",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361413",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361583",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361710",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361460",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361581",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361401",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014905",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361578",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361287",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014878",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358642",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360426",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361667",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014868",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359888",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359289",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361227",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345194",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359869",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359953",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360548",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361399",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361041",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361330",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345934",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361469",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0346655",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361145",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359834",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0340849",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360036",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358842",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014892",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361691",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360412",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0344270",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359868",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1073/pnas.2616055123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611747123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611528123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2608185123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2609903123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2603057123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618489123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602333123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2526984123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2606052123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2614650123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602016123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2535887123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2529474123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2604066123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2530315123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2608460123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610932123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2619759123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2616439123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2635190123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2628851123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2604047123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615743123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615533123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2623578123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611563123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2623866123",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei5257",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aek0501",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee7661",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei9538",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee0110",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aek0913",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei1959",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef5669",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh1658",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg7676",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee6350",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei8289",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aen4294",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aek6073",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej6280",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef7703",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh6541",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei4455",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg0361",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee6388",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeb7647",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee5992",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh8465",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aec1912",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej0277",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef7843",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei7877",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei7071",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei2661",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej4630",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef7735",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej0664",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef6378",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej4259",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh2524",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aec0867",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh6002",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh7873",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh9188",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.112381",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.110314",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.110747",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.109871",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.94336",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.100827",
+        "first_publication_date": "2026-10-28",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag376",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag380",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag381",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag383",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag371",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag377",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag384",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag378",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag382",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.005",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.004",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.117995",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118206",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118175",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118180",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118128",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118226",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118138",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118210",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118207",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118198",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118164",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cels.2026.101762",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cels.2026.101763",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.014",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.011",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.2162-25.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0020-26.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0623-25.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0699-26.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0713-26.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0416-26.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0762-26.2026",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361208",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357967",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355748",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361135",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361122",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361486",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360314",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361637",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361223",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359731",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014897",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361889",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361220",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0337304",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360665",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361202",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358784",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0352714",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0349159",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361482",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359982",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361574",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359941",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361976",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361593",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361102",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360643",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361904",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361927",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359305",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361594",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361901",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360936",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360680",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014898",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004064",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361774",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361817",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361607",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360296",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359715",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361374",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361601",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361971",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359661",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358948",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361771",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361488",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361705",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361288",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361494",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361429",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0354283",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358703",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0349473",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357606",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0335003",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361098",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361468",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361910",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360920",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360315",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360672",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359975",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360526",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361813",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0354851",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0354643",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361764",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361186",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014912",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361032",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0350060",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361483",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361148",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004095",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361133",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360617",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361397",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004053",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360752",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1073/pnas.2535732123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618887123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618780123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2620770123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2627766123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615757123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2536051123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615180123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618716123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2620558123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2622030123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2609322123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602186123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2621223123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611968123",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1126/science.aeg6988",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.adz5646",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aee5920",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6353",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.ael5303",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aec2602",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.adv3196",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6355",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.ael6230",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aeh5957",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.adv9181",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.ael6217",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aef3063",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6334",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.ael6235",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen5956",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen5955",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aeb9095",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen5957",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6354",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aeh0691",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6356",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen5958",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.adr9983",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aej2391",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.adz2542",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aee5093",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aed2525",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aei5255",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aeb7910",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.ael6976",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aef5187",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aeg1125",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/science.aen6352",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111387",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.109647",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111289",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.107627",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.112062",
+        "first_publication_date": "2026-10-29",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1093/brain/awag337",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.009",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118211",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118221",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118234",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118219",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.117763",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118230",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118235",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118143",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118240",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118231",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118233",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.016",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.009",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.neuron.2026.09.015",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360409",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361759",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358193",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361586",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014928",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361921",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360518",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361854",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360923",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358577",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361608",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361659",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361059",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359534",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361757",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361805",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361502",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361768",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361028",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355553",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361499",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361464",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361497",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345422",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014921",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0346507",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014893",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361933",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361372",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361940",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360648",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353922",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361284",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361701",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361422",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361815",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361883",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361623",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360935",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360402",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357016",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361592",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361118",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361131",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361575",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361806",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361711",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361572",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361692",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360473",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361863",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361061",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014906",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361487",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361763",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361106",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361761",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361727",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0348390",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361371",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361579",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0345903",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359627",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360637",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361626",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362126",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361760",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361302",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361598",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361699",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361231",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357928",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014915",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360850",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360652",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359774",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361147",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0356391",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361772",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1073/pnas.2611970123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2628058123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2624087123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2630263123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2619141123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2620983123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610950123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617950123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615316123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2630921123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2621329123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610670123",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg1787",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh7105",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeb1384",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh8641",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef4772",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh2062",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei5868",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh8668",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg5364",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg6228",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aed6149",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.ael4020",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei0921",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg9162",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aej0213",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.ady5085",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh2170",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aek1491",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee7789",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee7939",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei3312",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei8832",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh9736",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef5674",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aea5812",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef5563",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei0901",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef9907",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh7099",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh5903",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh8618",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aee1112",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aed1177",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg2830",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aef8069",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aed7314",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeh3388",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aed3122",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aek5197",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg4737",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aei3504",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1126/sciadv.aeg0687",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.107045",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.102095",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.109061",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.111371",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.108212",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.7554/elife.106338",
+        "first_publication_date": "2026-10-30",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118254",
+        "first_publication_date": "2026-10-31",
+        "print_date": "2026-10-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118220",
+        "first_publication_date": "2026-10-31",
+        "print_date": "2026-10-01"
+      }
+    ],
+    "author_affiliation_record_count": 8433,
+    "requests": [
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-07-07",
+            "max_date": "2026-10-29",
+            "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 7,
+          "type:News & Views": 4,
+          "outside_window": 5,
+          "type:Perspective": 4
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-21",
+            "max_date": "2026-11-03",
+            "url": "https://www.nature.com/natbiomedeng/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 3,
+        "rejected": {
+          "outside_window": 17
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-28",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nature/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 20,
+            "min_date": "2026-10-13",
+            "max_date": "2026-10-27",
+            "url": "https://www.nature.com/nature/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=2"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "type:News & Views": 25,
+          "type:Research Briefing": 12,
+          "outside_window": 2
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-14",
+            "max_date": "2026-11-05",
+            "url": "https://www.nature.com/nmeth/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 6,
+        "rejected": {
+          "outside_window": 14
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-08-14",
+            "max_date": "2026-11-05",
+            "url": "https://www.nature.com/nmeth/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:News & Views": 2,
+          "type:Research Briefing": 13,
+          "outside_window": 1,
+          "type:Perspective": 4
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-15",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/neuro/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 5,
+        "rejected": {
+          "outside_window": 15
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-11-04",
+            "max_date": "2026-11-06",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 20,
+            "min_date": "2026-10-28",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=2"
+          },
+          {
+            "page": 3,
+            "article_cards": 20,
+            "min_date": "2026-10-21",
+            "max_date": "2026-10-28",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=3"
+          }
+        ],
+        "accepted": 28,
+        "rejected": {
+          "outside_window": 32
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-06-24",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/neuro/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 4,
+          "type:News & Views": 10,
+          "type:Perspective": 3,
+          "outside_window": 3
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-21",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nathumbehav/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 4,
+        "rejected": {
+          "outside_window": 16
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Science",
+        "query": "JOURNAL:\"Science\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 41,
+        "pages": 1,
+        "retrieved_records": 41,
+        "complete_pagination": true,
+        "accepted": 34,
+        "rejected": {
+          "non_research_title": 1,
+          "non_research_type": 6
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-08-10",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nathumbehav/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "type:Research Briefing": 9,
+          "type:News & Views": 3,
+          "type:Perspective": 7
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Cell",
+        "query": "JOURNAL:\"Cell\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 8,
+        "pages": 1,
+        "retrieved_records": 8,
+        "complete_pagination": true,
+        "accepted": 8,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Current Biology",
+        "query": "JOURNAL:\"Current Biology\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 11,
+        "pages": 1,
+        "retrieved_records": 11,
+        "complete_pagination": true,
+        "accepted": 10,
+        "rejected": {
+          "non_research_type": 1
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Neuron",
+        "query": "JOURNAL:\"Neuron\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 4,
+        "pages": 1,
+        "retrieved_records": 4,
+        "complete_pagination": true,
+        "accepted": 4,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/health-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-10-27",
+            "max_date": "2026-11-07",
+            "url": "https://www.nature.com/subjects/health-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 50,
+            "min_date": "2026-10-17",
+            "max_date": "2026-10-27",
+            "url": "https://www.nature.com/subjects/health-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=2"
+          }
+        ],
+        "accepted": 32,
+        "rejected": {
+          "outside_window": 68
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "iScience",
+        "query": "JOURNAL:\"iScience\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 2,
+        "pages": 1,
+        "retrieved_records": 2,
+        "complete_pagination": true,
+        "accepted": 2,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Reports",
+        "query": "JOURNAL:\"Cell Reports\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 46,
+        "pages": 1,
+        "retrieved_records": 46,
+        "complete_pagination": true,
+        "accepted": 46,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Trends in Neurosciences",
+        "query": "JOURNAL:\"Trends in Neurosciences\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 1,
+        "pages": 1,
+        "retrieved_records": 1,
+        "complete_pagination": true,
+        "accepted": 1,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Systems",
+        "query": "JOURNAL:\"Cell Systems\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 5,
+        "pages": 1,
+        "retrieved_records": 5,
+        "complete_pagination": true,
+        "accepted": 5,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Neurophysiology",
+        "query": "JOURNAL:\"J Neurophysiol\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 1,
+        "pages": 1,
+        "retrieved_records": 1,
+        "complete_pagination": true,
+        "accepted": 1,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Neuroscience",
+        "query": "JOURNAL:\"J Neurosci\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 27,
+        "pages": 1,
+        "retrieved_records": 27,
+        "complete_pagination": true,
+        "accepted": 25,
+        "rejected": {
+          "non_research_title": 2
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Vision",
+        "query": "JOURNAL:\"J Vis\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Cognitive Neuroscience",
+        "query": "JOURNAL:\"J Cogn Neurosci\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PNAS",
+        "query": "JOURNAL:\"Proc Natl Acad Sci U S A\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 124,
+        "pages": 1,
+        "retrieved_records": 124,
+        "complete_pagination": true,
+        "accepted": 110,
+        "rejected": {
+          "non_research_title": 10,
+          "non_research_type": 4
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Brain",
+        "query": "JOURNAL:\"Brain\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 15,
+        "pages": 1,
+        "retrieved_records": 15,
+        "complete_pagination": true,
+        "accepted": 15,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Science Advances",
+        "query": "JOURNAL:\"Science Advances\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 83,
+        "pages": 1,
+        "retrieved_records": 83,
+        "complete_pagination": true,
+        "accepted": 81,
+        "rejected": {
+          "non_research_title": 2
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "eLife",
+        "query": "JOURNAL:\"Elife\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 32,
+        "pages": 1,
+        "retrieved_records": 32,
+        "complete_pagination": true,
+        "accepted": 30,
+        "rejected": {
+          "non_research_type": 1,
+          "non_research_title": 1
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Biol\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 13,
+        "pages": 1,
+        "retrieved_records": 13,
+        "complete_pagination": true,
+        "accepted": 9,
+        "rejected": {
+          "non_research_type": 3,
+          "non_research_title": 1
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Comput Biol\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 23,
+        "pages": 1,
+        "retrieved_records": 23,
+        "complete_pagination": true,
+        "accepted": 23,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/biological-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-11-04",
+            "max_date": "2026-11-07",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 50,
+            "min_date": "2026-11-02",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=2"
+          },
+          {
+            "page": 3,
+            "article_cards": 50,
+            "min_date": "2026-10-30",
+            "max_date": "2026-11-02",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=3"
+          },
+          {
+            "page": 4,
+            "article_cards": 50,
+            "min_date": "2026-10-26",
+            "max_date": "2026-10-30",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=4"
+          },
+          {
+            "page": 5,
+            "article_cards": 50,
+            "min_date": "2026-10-23",
+            "max_date": "2026-10-26",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=5"
+          }
+        ],
+        "accepted": 107,
+        "rejected": {
+          "outside_window": 141,
+          "type:Matters Arising": 2
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS One\" AND FIRST_PDATE:[2026-10-25 TO 2026-10-31] AND SRC:MED",
+        "hit_count": 412,
+        "pages": 1,
+        "retrieved_records": 412,
+        "complete_pagination": true,
+        "accepted": 395,
+        "rejected": {
+          "non_research_title": 17
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      }
+    ],
+    "date_parser_diagnosis": "ISO YYYY-MM-DD must bypass dateutil dayfirst=True.",
+    "limitations": [
+      "Nature Communications limited to original biological/health subject pages.",
+      "Europe PMC firstPublicationDate is an indexed first publication date; index completeness is not guaranteed."
+    ]
+  },
+  "pubmed": [
+    {
+      "source": "Science",
+      "query": "Science[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 42,
+      "retrieved_ids": 42,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Science%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 41
+    },
+    {
+      "source": "Cell",
+      "query": "Cell[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 33,
+      "retrieved_ids": 33,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 12
+    },
+    {
+      "source": "Neuron",
+      "query": "Neuron[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 4,
+      "retrieved_ids": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Neuron%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 4
+    },
+    {
+      "source": "Current Biology",
+      "query": "Curr Biol[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 11,
+      "retrieved_ids": 11,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Curr+Biol%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 11
+    },
+    {
+      "source": "Trends in Neurosciences",
+      "query": "Trends Neurosci[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 1,
+      "retrieved_ids": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Trends+Neurosci%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 1
+    },
+    {
+      "source": "Cell Reports",
+      "query": "Cell Rep[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 206,
+      "retrieved_ids": 206,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell+Rep%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 46
+    },
+    {
+      "source": "iScience",
+      "query": "iScience[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 77,
+      "retrieved_ids": 77,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=iScience%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 77
+    },
+    {
+      "source": "Cell Systems",
+      "query": "Cell Syst[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 5,
+      "retrieved_ids": 5,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell+Syst%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 5
+    },
+    {
+      "source": "PNAS",
+      "query": "Proc Natl Acad Sci U S A[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 227,
+      "retrieved_ids": 227,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Proc+Natl+Acad+Sci+U+S+A%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 124
+    },
+    {
+      "source": "Brain",
+      "query": "Brain[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 15,
+      "retrieved_ids": 15,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Brain%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 15
+    },
+    {
+      "source": "eLife",
+      "query": "Elife[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 32,
+      "retrieved_ids": 32,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Elife%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 32
+    },
+    {
+      "source": "Science Advances",
+      "query": "Sci Adv[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 83,
+      "retrieved_ids": 83,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Sci+Adv%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 83
+    },
+    {
+      "source": "Journal of Neuroscience",
+      "query": "J Neurosci[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 26,
+      "retrieved_ids": 26,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurosci%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 26
+    },
+    {
+      "source": "Journal of Cognitive Neuroscience",
+      "query": "J Cogn Neurosci[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Cogn+Neurosci%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "Journal of Neurophysiology",
+      "query": "J Neurophysiol[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 1,
+      "retrieved_ids": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurophysiol%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 1
+    },
+    {
+      "source": "Journal of Vision",
+      "query": "J Vis[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Vis%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Biol[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 13,
+      "retrieved_ids": 13,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Biol%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 13
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Comput Biol[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 23,
+      "retrieved_ids": 23,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Comput+Biol%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 23
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS One[journal] AND 2026/10/25:2026/10/31[PDAT]",
+      "count": 412,
+      "retrieved_ids": 412,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+One%5Bjournal%5D+AND+2026%2F10%2F25%3A2026%2F10%2F31%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 412
+    }
+  ],
+  "arxiv": [
+    {
+      "category": "q-bio.NC",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.NC+AND+submittedDate%3A%5B202610250000+TO+202610312359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 34,
+          "returned": 34,
+          "accepted": 34
+        }
+      ],
+      "status": "complete",
+      "retrieved": 34,
+      "total": 34,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.TO",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.TO+AND+submittedDate%3A%5B202610250000+TO+202610312359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 4,
+          "returned": 4,
+          "accepted": 4
+        }
+      ],
+      "status": "complete",
+      "retrieved": 4,
+      "total": 4,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.MN",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.MN+AND+submittedDate%3A%5B202610250000+TO+202610312359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 3,
+          "returned": 3,
+          "accepted": 3
+        }
+      ],
+      "status": "complete",
+      "retrieved": 3,
+      "total": 3,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.BM",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.BM+AND+submittedDate%3A%5B202610250000+TO+202610312359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 9,
+          "returned": 9,
+          "accepted": 9
+        }
+      ],
+      "status": "complete",
+      "retrieved": 9,
+      "total": 9,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.QM",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.QM+AND+submittedDate%3A%5B202610250000+TO+202610312359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 35,
+          "returned": 35,
+          "accepted": 35
+        }
+      ],
+      "status": "complete",
+      "retrieved": 35,
+      "total": 35,
+      "complete_pagination": true
+    }
+  ],
+  "biorxiv": {
+    "date_range": [
+      "2026-10-25",
+      "2026-10-31"
+    ],
+    "category": "neuroscience",
+    "status": "complete",
+    "pages": [
+      {
+        "cursor": 0,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 30,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 60,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 90,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 120,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 150,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 180,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 210,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 240,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "cache"
+      },
+      {
+        "cursor": 270,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience"
+      },
+      {
+        "cursor": 300,
+        "count": 21,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/300?category=neuroscience"
+      }
+    ],
+    "retries": [],
+    "retrieved_records": 321,
+    "date_semantics": "bioRxiv API record date is the posted version date; revisions may be included.",
+    "declared_total": 321,
+    "complete_pagination": true,
+    "unique_papers": 313,
+    "deduplicated_version_records": 8,
+    "rejected": {},
+    "missing_abstract_count": 0,
+    "finished_at": "2026-11-08T12:36:37.863974+00:00"
+  },
+  "excluded": [
+    {
+      "title": "Ascending Inputs to Inferior Colliculus Subdivisions Reveal Pathway-Specific Hybrid Organization in the External Cortex.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0851-26.2026"
+      ]
+    },
+    {
+      "title": "Dissociable Roles of Prelimbic and Orbitofrontal Cortices in the Flexible Use of Model-Based Associations.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0892-26.2026"
+      ]
+    },
+    {
+      "title": "Equidistance between Primary Sensory-Motor Landmarks Shapes Functional Specialization in the Human Brain.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0352-26.2026"
+      ]
+    },
+    {
+      "title": "Individual Differences in Dopaminergic Modulation of Exploration-Exploitation Behavior.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0261-26.2026"
+      ]
+    },
+    {
+      "title": "Micro-online and Micro-offline Learning Reflect Stable Yet Randomly Distributed Strategies in Motor Skill Acquisition.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0498-26.2026"
+      ]
+    },
+    {
+      "title": "Normalization Accounts for Temporal Dynamics in the Human Somatosensory Cortex.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0782-26.2026"
+      ]
+    },
+    {
+      "title": "Prefrontal Glx Reduction during the Sleep Transition Is Associated with Sleep-Onset Latency.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0372-26.2026"
+      ]
+    },
+    {
+      "title": "Probability-Dependent Scaling of Fear Responding, But Not Unconditioned Stimulus Inflation, Requires the Periaqueductal Gray.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0041-26.2026"
+      ]
+    },
+    {
+      "title": "Strategy-Dependent Recruitment of Distributed Cortical Circuits during Spatial Navigation.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0674-24.2026"
+      ]
+    },
+    {
+      "title": "Synchronous Activity in the Auditory Forebrain Represents Temporal Landmarks in Vocal Communication Signals.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.2108-25.2026"
+      ]
+    },
+    {
+      "title": "The Endogenous Negative Allosteric Modulator, Lynx1, Inhibits Nicotinic Cholinergic Signaling in the Ventral Tegmental Area to Regulate Nicotine Reinforcement.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0797-26.2026"
+      ]
+    },
+    {
+      "title": "Ventral Tegmental Area Dopamine Neuron Dynamics during Postpartum Scarcity-Adversity Depend on Caregiving Quality and Pup Proximity.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0997-26.2026"
+      ]
+    },
+    {
+      "title": "AI is shaking up math. But can its proofs be trusted?",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Could your chatbot tip off a scientific rival? It's possible, researchers say.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Gone forever.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "In Other Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "In Science Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "Kennedy rejects NIH director's pick for mental health institute.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Milestone cancer vaccine success leaves hard questions unanswered.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Wind turbines kill 'shocking' number of bats each year.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Untangling time and prematurity in brain development.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Caught by chirality.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Taking the brakes off a stress response.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "How comparable are bird and human sounds?",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"Turf algae redefine the chemical landscape of temperate reefs, limiting kelp forest recovery\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "A case study in conflicts of interest.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Kennedy rejects NIH director's pick for mental health institute.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Could your chatbot tip off a scientific rival? It's possible, researchers say.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Gone forever.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Milestone cancer vaccine success leaves hard questions unanswered.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Wind turbines kill 'shocking' number of bats each year.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "AI is shaking up math. But can its proofs be trusted?",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "In Other Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "In Science Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "When AI takes away the thrill of discovery.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Guardians at the gate: cMAF keeps the brain's vasculature in check.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Calorie restriction uncouples mutation rate from lifespan.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "A bacterial effector triggers dual-layer plant immunity through interaction with cell-surface and intracellular proteins.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Corrigendum to \"Consensus recommendations for neurofibromatosis type 1 management in Asia Pacific\" [iScience 29 (2026) 117002].",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Corrigendum to \"WaveMamba-Net: Dual-frequency adaptive wavelet state-space network for real-time pulse signal classification in wearable health monitoring\" [iScience 29 (2026) 116045].",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Du et al., Directed assembly of cell-laden microgels for fabrication of 3D tissue constructs.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Toyonaga et al., Collapsible scissored surfaces.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Bernabé-Rubio and Watt, Caspase-8-dependent autophagy regulates neutrophil infiltration in oral squamous cell carcinoma.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Toward holistic reform of researcher assessment and incentives at US academic institutions.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Correction for Croke et al., Meta-analysis and public policy: Reconciling the evidence on deworming.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Kawamura, Proof of the density threshold conjecture for pinwheel scheduling.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Ma et al., miR-182 targeting reprograms tumor-associated macrophages and limits breast cancer progression.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Reading strong selection from modest GWAS hits.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Making unpaid breastfeeding count.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Restructuring the nitrogen cycle and sparing cropland by feeding insect-derived protein to global livestock.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Lymphatic vessels under pressure.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Correction: Sequentially induced motor neurons from human fibroblasts facilitate locomotor recovery in a rodent spinal cord injury model.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"Surficial nano-deposition locoregionally yielding bactericidal super CAR-macrophages expedites periprosthetic osseointegration\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"Aptamer-functionalized Apoptotic Vesicles Ameliorate Osteoarthritis via Resuming Mitochondria OXPHOS of Chondrocytes\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum: Wen et al., \"Single-Trial fMRI Decoding of 3D Motion with Stereoscopic and Perspective Cues\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Ascending Inputs to Inferior Colliculus Subdivisions Reveal Pathway-Specific Hybrid Organization in the External Cortex.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0851-26.2026"
+      ]
+    },
+    {
+      "title": "Ventral Tegmental Area Dopamine Neuron Dynamics during Postpartum Scarcity-Adversity Depend on Caregiving Quality and Pup Proximity.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0997-26.2026"
+      ]
+    },
+    {
+      "title": "The Endogenous Negative Allosteric Modulator, Lynx1, Inhibits Nicotinic Cholinergic Signaling in the Ventral Tegmental Area to Regulate Nicotine Reinforcement.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0797-26.2026"
+      ]
+    },
+    {
+      "title": "Individual Differences in Dopaminergic Modulation of Exploration-Exploitation Behavior.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0261-26.2026"
+      ]
+    },
+    {
+      "title": "Strategy-Dependent Recruitment of Distributed Cortical Circuits during Spatial Navigation.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0674-24.2026"
+      ]
+    },
+    {
+      "title": "Micro-online and Micro-offline Learning Reflect Stable Yet Randomly Distributed Strategies in Motor Skill Acquisition.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0498-26.2026"
+      ]
+    },
+    {
+      "title": "Synchronous Activity in the Auditory Forebrain Represents Temporal Landmarks in Vocal Communication Signals.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.2108-25.2026"
+      ]
+    },
+    {
+      "title": "Probability-Dependent Scaling of Fear Responding, But Not Unconditioned Stimulus Inflation, Requires the Periaqueductal Gray.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0041-26.2026"
+      ]
+    },
+    {
+      "title": "Dissociable Roles of Prelimbic and Orbitofrontal Cortices in the Flexible Use of Model-Based Associations.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0892-26.2026"
+      ]
+    },
+    {
+      "title": "Prefrontal Glx Reduction during the Sleep Transition Is Associated with Sleep-Onset Latency.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0372-26.2026"
+      ]
+    },
+    {
+      "title": "Equidistance between Primary Sensory-Motor Landmarks Shapes Functional Specialization in the Human Brain.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0352-26.2026"
+      ]
+    },
+    {
+      "title": "Normalization Accounts for Temporal Dynamics in the Human Somatosensory Cortex.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0782-26.2026"
+      ]
+    },
+    {
+      "title": "How early microbial encounters shape adult behavior.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Rethinking neurodegeneration: Placing disease in its physiological context.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Conserved spike epitopes persist in generalist bat sarbecoviruses.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Correction: Free long-chain fatty acids trigger early postembryonic development in starved Caenorhabditis elegans by suppressing mTORC1.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Stigmatizing attitudes and misconceptions about obesity among Spanish healthcare professionals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Nuclei segmentation and classification from histopathology images using federated learning for end-edge platform.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Correction: Response surface methodology to optimize the green synthesis process of cefotaxime sodium: Collaborative improvement of yield, crystal form control and environmental benefits.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Broader factors associated with current adolescent overweight/obesity status in YRBSS 2023: Survey-aware analysis and calibrated AI-assisted classification.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Pedestrian POSE estimation using multi-branched deep learning pose net.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Retraction: Aesthetic preference for artificially selected color variant affects mate choice copying behavior in female Poecilia latipinna.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: Molecular Mechanism of Mutant p53 Stabilization: The Role of HSP70 and MDM2.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Research on coupling coordination between construction industry innovation and region economic development in China.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Correction: Chromodomain mutation in S. pombe Kat5/Mst1 affects centromere dynamics and DNA repair.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: The safety window of blood magnesium in pulmonary complications of non-pulmonary sepsis: A U-shaped risk and prognostic analysis based on MIMIC-IV.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Residential greenness and reduced depression during COVID-19: Longitudinal evidence from the Canadian Longitudinal Study on Aging.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Retraction: MHF: A multi-task hybrid fusion method for underwater image enhancement based on biological vision.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: Strategic selection of MDM2 inhibitors enhances the efficacy of FAK inhibition in mesothelioma based on TP53 genotype.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Spatial memory distortions for the shapes of walked paths occur in violation of physically experienced geometry.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Retraction: Environmental concentrations of metformin exposure affect aggressive behavior in the Siamese fighting fish, Betta splendens.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: Resveratrol eliminates cancer stem cells of osteosarcoma by STAT3 pathway inhibition.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Spatial and temporal differences and convergence analysis of multidimensional relative poverty in ethnic areas.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    }
+  ],
+  "identifier_conflicts": [
+    {
+      "title": "Intrinsic Goals for Autonomous Agents: Hierarchical Exploration Captures Future Volitional Action in Drosophila",
+      "identity": [
+        "arxiv",
+        "2610.34638"
+      ],
+      "conflicting_identity": [
+        "doi",
+        "10.64898/2026.10.26.761878"
+      ],
+      "reason": "distinct identifiers; retained in source checkpoint for review; not merged"
+    }
+  ],
+  "verified_posted_revisions": [
+    {
+      "title": "Functional deficits of the inhibitory control system in children with ADHD: A task-based fMRI meta-analysis",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.04.756535"
+      ],
+      "version": "2",
+      "date": "2026-10-25"
+    },
+    {
+      "title": "Development of py-mea-span for comprehensive analysis of multi-electrode array data and its application to LGI2-deficient neurons",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.14.759118"
+      ],
+      "version": "2",
+      "date": "2026-10-25"
+    },
+    {
+      "title": "Improving DASH adherence after midlife promotes better late-life cognition and brain health: the SG70 Study",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.23.753372"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Memory-based and surround-based pattern completion show distinct laminar profiles in human V1",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.24.753595"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Neuron types and distribution of a Drosophila driver line collection",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.06.756975"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "The marginal brain",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.19.760208"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Inferring brain structural complexity from dynamical measures",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.760743"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Limb-localized induction of regeneration reshapes brain and amputation-site transcriptional states in adult Xenopus laevis",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.23.761414"
+      ],
+      "version": "2",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "Assessing nonlinear associations between body mass index and brain microstructure across adolescence in the ABCD Study",
+      "identity": [
+        "doi",
+        "10.64898/2026.04.02.716201"
+      ],
+      "version": "4",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Very Early Cortical Auditory Responses to Speech in Humans",
+      "identity": [
+        "doi",
+        "10.64898/2026.06.04.730183"
+      ],
+      "version": "4",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Assessing the Functional-Structural Reorganization of Connector Hubs in Temporal Lobe Epilepsy",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.25.754445"
+      ],
+      "version": "2",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "On-demand surround suppression explains the spatiotemporal window of the tilt illusion",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.01.755975"
+      ],
+      "version": "2",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Validation of a Commercially Available Non-Woven Fabric Electrode for Mouse Electroretinography",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.07.757191"
+      ],
+      "version": "5",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Brain FACTs: A same-section workflow for Fiber Architecture, Cytoarchitecture and cell Types in large-scale brain sections",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.13.758849"
+      ],
+      "version": "2",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Dietary fructose promotes anxiety through impairment of microglia physiology",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.23.761346"
+      ],
+      "version": "2",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Connectome-based biophysical modeling of a figure-ground discrimination circuit",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.17.752514"
+      ],
+      "version": "2",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Streamlined Production of Recombinant Adeno-Associated Viruses Using Gateway Cloning Technology for Neural Circuit All-Optical Interrogation",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.22.752944"
+      ],
+      "version": "3",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Information regimes in population-graph neuroimaging: cohort context and implementation-dependent evaluation sensitivity",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.02.756253"
+      ],
+      "version": "2",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Primary cilia facilitate GPCR neurotransmission through the canonical cAMP cascade",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.05.756873"
+      ],
+      "version": "2",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Cooperative processing of visual threat across collicular pathways",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.12.758428"
+      ],
+      "version": "3",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "A new neural code for position: generalizable spatial maps in mouse medial frontal cortex",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.759829"
+      ],
+      "version": "3",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Season-long head acceleration exposure, prior contact-sport history, and cognitive performance in British amateur American football players",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.30.755702"
+      ],
+      "version": "2",
+      "date": "2026-10-29"
+    },
+    {
+      "title": "Ensemble viewing reshapes neural representations of same-race and other-race faces",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.17.752481"
+      ],
+      "version": "2",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Asymmetric Adaptation of Catch-up Saccades with Artificial Central Scotomas",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.28.755127"
+      ],
+      "version": "2",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Cortical organoid diffusion MRI reveals protocol-associated spatial reproducibility and increasing apparent diffusivity with diffusion time",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.29.755111"
+      ],
+      "version": "2",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Targeting the RNA regulator HuR in acute traumatic brain injury mitigates secondary injury and improves functional outcome by suppressing neuroinflammation",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.22.761057"
+      ],
+      "version": "2",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Tetradic Dynamics of Dyadic Sensorimotor Coordination: A Multiscale EEG Hyperscanning Study",
+      "identity": [
+        "doi",
+        "10.64898/2026.06.21.732435"
+      ],
+      "version": "5",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "Aging reshapes odor-evoked dynamics in central olfactory circuits",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.30.755620"
+      ],
+      "version": "2",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "Psychedelics restructure information in the human brain",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.01.755915"
+      ],
+      "version": "2",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "Sequential Sampling as a Computational Principle of Episodic Memory",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.08.757704"
+      ],
+      "version": "3",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "Hippocampal-somatomotor coactivation and perceived benefit following Mindfulness-Based Cognitive Therapy for Life in healthcare students: An exploratory randomized study",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.12.758559"
+      ],
+      "version": "2",
+      "date": "2026-10-31"
+    }
+  ],
+  "limitations": [
+    "Indexes may lag latest publication dates.",
+    "Nature Communications scoped to biological/health subject listings.",
+    "Within-week bioRxiv versions retain the latest version per DOI; all version records remain in raw API checkpoints."
+  ],
+  "final_corpus_count": 1411,
+  "selected_missing_abstracts": 7,
+  "final_missing_abstracts": 22,
+  "final_nonresearch_exclusions": [
+    {
+      "title": "In This Issue.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    },
+    {
+      "title": "Reply to Cirillo: Early-life exposure to the sugar-rationing regime, not a measured sugar dose, drives the cancer gradient.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    },
+    {
+      "title": "Reply to Yu and Yu: Clarifying the role of carnitine metabolism in the ALDH9A1-associated immunotherapy resistance program.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    },
+    {
+      "title": "Reply to Zhou and Tsao: Synergy rarely underlies the benefits of combination cancer therapy.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    },
+    {
+      "title": "New Products.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    }
+  ],
+  "biorxiv_initial_failed_attempt": {
+    "date_range": [
+      "2026-10-25",
+      "2026-10-31"
+    ],
+    "category": "neuroscience",
+    "status": "failed",
+    "pages": [
+      {
+        "cursor": 0,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 60,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/60?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 150,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/150?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/180?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 210,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "count": 30,
+        "declared_total": 321,
+        "count_new_papers": "207",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/240?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retries": [
+      {
+        "cursor": 0,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 0,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "attempt": 1,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 90,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "attempt": 1,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 120,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "attempt": 3,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "attempt": 1,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 210,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 210,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "attempt": 2,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 270,
+        "attempt": 3,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "attempt": 4,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "attempt": 5,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "attempt": 6,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-10-25/2026-10-31/270?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retrieved_records": 270,
+    "date_semantics": "bioRxiv API record date is the posted version date; revisions may be included.",
+    "declared_total": 321,
+    "error": "bioRxiv page cursor=270 failed after 6 attempts",
+    "complete_pagination": false
+  },
+  "source_counts": {
+    "Nature": 29,
+    "Nature Communications": 117,
+    "arXiv": 80,
+    "bioRxiv": 313,
+    "iScience": 75,
+    "Brain": 15,
+    "Cell": 10,
+    "Cell Reports": 46,
+    "Current Biology": 10,
+    "Journal of Neuroscience": 13,
+    "Nature Human Behavior": 5,
+    "Nature Method": 6,
+    "Nature Neuroscience": 5,
+    "Neuron": 4,
+    "PLOS": 427,
+    "PNAS": 110,
+    "eLife": 30,
+    "Nature BME": 3,
+    "Trends in Neurosciences": 1,
+    "Cell Systems": 5,
+    "Journal of Neurophysiology": 1,
+    "Science Advances": 81,
+    "Science": 25
+  },
+  "source_counts_after_merge": {
+    "Nature": 29,
+    "Nature Communications": 117,
+    "arXiv": 80,
+    "bioRxiv": 313,
+    "iScience": 75,
+    "Brain": 15,
+    "Cell": 10,
+    "Cell Reports": 46,
+    "Current Biology": 10,
+    "Journal of Neuroscience": 13,
+    "Nature Human Behavior": 5,
+    "Nature Method": 6,
+    "Nature Neuroscience": 5,
+    "Neuron": 4,
+    "PLOS": 427,
+    "PNAS": 110,
+    "eLife": 30,
+    "Nature BME": 3,
+    "Trends in Neurosciences": 1,
+    "Cell Systems": 5,
+    "Journal of Neurophysiology": 1,
+    "Science Advances": 81,
+    "Science": 25
+  },
+  "arxiv_version_date_reconciliation": "getfiles/arxiv_version_date_reconciliation_2026-11-08.json",
+  "arxiv_scope_limitation": "arXiv 按首次提交日期查询，并记录当前版本日期；本次发现的跨周修订已按版本日期调整，但此前提交、仅在本周修订的旧稿尚未穷尽枚举。"
+}

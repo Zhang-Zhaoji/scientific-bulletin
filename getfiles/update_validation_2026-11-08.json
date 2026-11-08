@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "issues": [
+    {
+      "status": "passed",
+      "issue": 34,
+      "date_range": [
+        "2026-10-25",
+        "2026-10-31"
+      ],
+      "papers": 1411,
+      "llm_results": 1411,
+      "selected": 581,
+      "missing_abstracts": 22,
+      "selected_missing_abstracts": 7,
+      "recommendation_distribution": {
+        "不推送": 830,
+        "深度解读": 278,
+        "简要提及": 303
+      },
+      "geography_and_score_cohort": 644,
+      "cover_size": [
+        1448,
+        1086
+      ],
+      "broken_html_assets": [],
+      "verified_at": "2026-11-08T22:58:52.506860"
+    },
+    {
+      "status": "passed",
+      "issue": 35,
+      "date_range": [
+        "2026-11-01",
+        "2026-11-07"
+      ],
+      "papers": 1276,
+      "llm_results": 1276,
+      "selected": 627,
+      "missing_abstracts": 14,
+      "selected_missing_abstracts": 8,
+      "recommendation_distribution": {
+        "不推送": 649,
+        "简要提及": 317,
+        "深度解读": 310
+      },
+      "geography_and_score_cohort": 667,
+      "cover_size": [
+        1448,
+        1086
+      ],
+      "broken_html_assets": [],
+      "verified_at": "2026-11-08T22:58:53.631605"
+    }
+  ],
+  "database": {
+    "data\\literature.db": {
+      "integrity_check": "ok",
+      "foreign_key_errors": 0,
+      "articles": 19790
+    },
+    "docs\\assets\\data\\literature_slim.db": {
+      "integrity_check": "ok",
+      "foreign_key_errors": 0,
+      "articles": 19790
+    }
+  },
+  "old_article_ids_titles_dates_preserved": true,
+  "history": {
+    "created_at": "2026-11-08T13:11:09.898186+00:00",
+    "issue_count": 35,
+    "papers": 20175,
+    "missing_occurrences": 593,
+    "selected_missing_occurrences": 207,
+    "unique_missing": 580,
+    "unique_selected_missing": 199,
+    "unique_papers": 19693,
+    "unique_selected_papers": 9092
+  },
+  "verified_at": "2026-11-08T22:59:01.377143"
+}

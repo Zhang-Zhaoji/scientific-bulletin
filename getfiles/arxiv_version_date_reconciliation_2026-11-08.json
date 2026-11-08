@@ -1,0 +1,43 @@
+{
+  "reason": "Current arXiv version date must fall inside its issue interval. Same v2 evaluation reused; original submission dates retained.",
+  "moved_title": "PeptSol: A Translational Benchmark for Protected-Peptide Solubility in Drug Manufacturing",
+  "from_issue": 34,
+  "to_issue": 35,
+  "original_submission": "2026-10-31",
+  "version_date": "2026-11-04",
+  "backups": [
+    {
+      "path": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261031.json",
+      "sha256": "eb3b0418fd87837a8cf5af2f7f5603ca467c80d3f3e634123e95504eda5ec324"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-31.jsonl",
+      "sha256": "34aa195ccfdbd9cc06db836de08d6a1c4bf29cebced1e422967f915f0874d032"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-31_enriched.jsonl",
+      "sha256": "db36e366c43b7e4dd2fa1bd9a65daa2d2dc9cc2ddf416980f9f9a83032626c67"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-10-31_enriched_ror_refined.jsonl",
+      "sha256": "0ae82163c01b80f5dcd57ef499d6ea115325c7d7d93f06538c3e4e678a48a2e5"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\LLM_Results\\LLM_results_20261107.json",
+      "sha256": "2fc5a5d64fb2f5fbf871366422937ec549b6af9fb561688fb59b3fd509d6a04a"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-11-07.jsonl",
+      "sha256": "e789ab6ca00b47a130962fe012f26de6ac650ce49428225e76f53e4acda2de92"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-11-07_enriched.jsonl",
+      "sha256": "295c910e0dc45aa9833cc1b429ce6c77b2a3e5766d21d3692ba9c6ddfad9e30e"
+    },
+    {
+      "path": "D:\\working\\scientific bulletin\\getfiles\\all_papers_2026-11-07_enriched_ror_refined.jsonl",
+      "sha256": "04dcfa66577c67f01f93720954488e3a2528c89339e4a563d9326dbe161f9b5d"
+    }
+  ],
+  "arxiv_scope_limitation": "Queries enumerate first submissions within each interval; older submissions revised this week are not exhaustively enumerated."
+}

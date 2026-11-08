@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-31",
+  "date_range": [
+    "2026-10-25",
+    "2026-10-31"
+  ],
+  "merged_count": 1411,
+  "source_counts_after_merge": {
+    "Nature": 29,
+    "Nature Communications": 117,
+    "arXiv": 80,
+    "bioRxiv": 313,
+    "iScience": 75,
+    "Brain": 15,
+    "Cell": 10,
+    "Cell Reports": 46,
+    "Current Biology": 10,
+    "Journal of Neuroscience": 13,
+    "Nature Human Behavior": 5,
+    "Nature Method": 6,
+    "Nature Neuroscience": 5,
+    "Neuron": 4,
+    "PLOS": 427,
+    "PNAS": 110,
+    "eLife": 30,
+    "Nature BME": 3,
+    "Trends in Neurosciences": 1,
+    "Cell Systems": 5,
+    "Journal of Neurophysiology": 1,
+    "Science Advances": 81,
+    "Science": 25
+  },
+  "input_counts": {
+    "D:\\working\\scientific bulletin\\tmps\\pipeline_20261031\\prepared.jsonl": 1417
+  },
+  "sources": {
+    "Cell Reports": {
+      "count": 46
+    },
+    "Nature Communications": {
+      "count": 117
+    },
+    "arXiv": {
+      "count": 81
+    },
+    "bioRxiv": {
+      "count": 302
+    },
+    "Brain": {
+      "count": 14
+    },
+    "Cell": {
+      "count": 10
+    },
+    "Current Biology": {
+      "count": 10
+    },
+    "Nature BME": {
+      "count": 3
+    },
+    "Nature Method": {
+      "count": 5
+    },
+    "Neuron": {
+      "count": 4
+    },
+    "PLOS": {
+      "count": 427
+    },
+    "PNAS": {
+      "count": 113
+    },
+    "Science Advances": {
+      "count": 81
+    },
+    "eLife": {
+      "count": 30
+    },
+    "iScience": {
+      "count": 75
+    },
+    "Cell Systems": {
+      "count": 5
+    },
+    "Journal of Neuroscience": {
+      "count": 13
+    },
+    "Science": {
+      "count": 26
+    },
+    "Journal of Neurophysiology": {
+      "count": 1
+    },
+    "Nature": {
+      "count": 29
+    },
+    "Nature Neuroscience": {
+      "count": 5
+    },
+    "Trends in Neurosciences": {
+      "count": 1
+    },
+    "Nature Human Behavior": {
+      "count": 5
+    }
+  },
+  "missing_abstract_count": 22,
+  "source_audit": "D:\\working\\scientific bulletin\\getfiles\\source_audit_2026-10-31.json",
+  "generated_date": "2026-11-08",
+  "issue": 34,
+  "papers": 1411,
+  "llm_result_count": 1411,
+  "source_counts": {
+    "Nature": 29,
+    "Nature Communications": 117,
+    "arXiv": 80,
+    "bioRxiv": 313,
+    "iScience": 75,
+    "Brain": 15,
+    "Cell": 10,
+    "Cell Reports": 46,
+    "Current Biology": 10,
+    "Journal of Neuroscience": 13,
+    "Nature Human Behavior": 5,
+    "Nature Method": 6,
+    "Nature Neuroscience": 5,
+    "Neuron": 4,
+    "PLOS": 427,
+    "PNAS": 110,
+    "eLife": 30,
+    "Nature BME": 3,
+    "Trends in Neurosciences": 1,
+    "Cell Systems": 5,
+    "Journal of Neurophysiology": 1,
+    "Science Advances": 81,
+    "Science": 25
+  },
+  "missing_abstracts": 22,
+  "recommendation_distribution": {
+    "不推送": 830,
+    "深度解读": 278,
+    "简要提及": 303
+  },
+  "selected_missing_abstracts": 7,
+  "papers_with_affiliation": 1329,
+  "papers_with_ror": 1275,
+  "arxiv_version_date_reconciliation": "getfiles/arxiv_version_date_reconciliation_2026-11-08.json",
+  "arxiv_scope_limitation": "arXiv 按首次提交日期查询，并记录当前版本日期；本次发现的跨周修订已按版本日期调整，但此前提交、仅在本周修订的旧稿尚未穷尽枚举。"
+}

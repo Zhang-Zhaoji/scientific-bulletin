@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "issue": 34,
+  "date_range": [
+    "2026-10-25",
+    "2026-10-31"
+  ],
+  "papers": 1411,
+  "llm_results": 1411,
+  "selected": 581,
+  "missing_abstracts": 22,
+  "selected_missing_abstracts": 7,
+  "recommendation_distribution": {
+    "不推送": 830,
+    "深度解读": 278,
+    "简要提及": 303
+  },
+  "geography_and_score_cohort": 644,
+  "cover_size": [
+    1448,
+    1086
+  ],
+  "broken_html_assets": [],
+  "verified_at": "2026-11-08T22:58:52.506860"
+}

@@ -1,0 +1,2629 @@
+{
+  "issue": 35,
+  "date_range": [
+    "2026-11-01",
+    "2026-11-07"
+  ],
+  "generated_date": "2026-11-08",
+  "publisher_and_index": {
+    "date_range": [
+      "2026-11-01",
+      "2026-11-07"
+    ],
+    "created_at": "2026-11-08T12:28:46.102154+00:00",
+    "count": 298,
+    "counts": {
+      "Current Biology": 19,
+      "Journal of Cognitive Neuroscience": 11,
+      "Journal of Neurophysiology": 4,
+      "Nature Communications": 114,
+      "Cell": 5,
+      "Cell Reports": 4,
+      "Journal of Neuroscience": 2,
+      "Nature BME": 2,
+      "Nature Method": 8,
+      "Nature Neuroscience": 2,
+      "PLOS": 58,
+      "PNAS": 25,
+      "eLife": 8,
+      "Brain": 4,
+      "Nature": 31,
+      "Nature Human Behavior": 1
+    },
+    "missing_abstract_count": 4,
+    "publisher_date_mismatches": [],
+    "index_print_date_differences": [
+      {
+        "doi": "10.1016/j.cell.2026.10.014",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.09.036",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.016",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.010",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cell.2026.10.011",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118174",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.117788",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118229",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.019",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.09.079",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.015",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.cub.2026.10.012",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1152/jn.00257.2026",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1152/jn.00440.2025",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1152/jn.90134.2026",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0690-26.2026",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1523/jneurosci.0781-26.2026",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361599",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357659",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361807",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361860",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362171",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361992",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362097",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361228",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355805",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004092",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361898",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362095",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361853",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361115",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361100",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361370",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360957",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361977",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359428",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014872",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3003795",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361925",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0353082",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357766",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360169",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361804",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361503",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361622",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004080",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361700",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361254",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361907",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004099",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362057",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360053",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0358304",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0357563",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360677",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361212",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361914",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362055",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361616",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361875",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361894",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0362113",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0355670",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360620",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0360921",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pbio.3004094",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0354616",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361602",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014923",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361862",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361994",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014914",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pcbi.1014855",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0361191",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1371/journal.pone.0359709",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-01-01"
+      },
+      {
+        "doi": "10.1073/pnas.2600454123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2534136123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2609135123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2623623123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2609419123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2612667123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2536836123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2524796123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2533000123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2614248123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2621357123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2602240123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2608572123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617274123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2618502123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2607859123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2608905123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2631760123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2607098123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615409123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2615151123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2617301123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2537152123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2610803123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1073/pnas.2619288123",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.107110",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.112170",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.91547",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.102635",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.111098",
+        "first_publication_date": "2026-11-02",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1093/brain/awag366",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1093/brain/awag385",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1093/brain/awag368",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1093/brain/awag386",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.1016/j.celrep.2026.118208",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.111349",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.110877",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      },
+      {
+        "doi": "10.7554/elife.110070",
+        "first_publication_date": "2026-11-03",
+        "print_date": "2026-11-01"
+      }
+    ],
+    "author_affiliation_record_count": 3409,
+    "requests": [
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-07-07",
+            "max_date": "2026-10-29",
+            "url": "https://www.nature.com/natbiomedeng/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 7,
+          "type:News & Views": 4,
+          "outside_window": 5,
+          "type:Perspective": 4
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-28",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nature/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "type:News & Views": 12,
+          "type:Research Briefing": 6,
+          "outside_window": 1
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature BME",
+        "url": "https://www.nature.com/natbiomedeng/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-21",
+            "max_date": "2026-11-03",
+            "url": "https://www.nature.com/natbiomedeng/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 2,
+        "rejected": {
+          "outside_window": 18
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-14",
+            "max_date": "2026-11-05",
+            "url": "https://www.nature.com/nmeth/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 8,
+        "rejected": {
+          "outside_window": 12
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Method",
+        "url": "https://www.nature.com/nmeth/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-08-14",
+            "max_date": "2026-11-05",
+            "url": "https://www.nature.com/nmeth/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:News & Views": 2,
+          "type:Research Briefing": 13,
+          "outside_window": 1,
+          "type:Perspective": 4
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-10-15",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/neuro/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 2,
+        "rejected": {
+          "outside_window": 18
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature",
+        "url": "https://www.nature.com/nature/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-11-04",
+            "max_date": "2026-11-06",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 20,
+            "min_date": "2026-10-28",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nature/research-articles?searchType=journalSearch&sort=PubDate&page=2"
+          }
+        ],
+        "accepted": 30,
+        "rejected": {
+          "outside_window": 10
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Neuroscience",
+        "url": "https://www.nature.com/neuro/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-06-24",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/neuro/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 4,
+          "type:News & Views": 10,
+          "type:Perspective": 3,
+          "outside_window": 3
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/reviews-and-analysis",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-08-10",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nathumbehav/reviews-and-analysis?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 0,
+        "rejected": {
+          "type:Research Briefing": 9,
+          "outside_window": 1,
+          "type:News & Views": 3,
+          "type:Perspective": 7
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Nature Human Behavior",
+        "url": "https://www.nature.com/nathumbehav/research-articles",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 20,
+            "min_date": "2026-09-21",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/nathumbehav/research-articles?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 1,
+        "rejected": {
+          "outside_window": 19
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Science",
+        "query": "JOURNAL:\"Science\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell",
+        "query": "JOURNAL:\"Cell\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 5,
+        "pages": 1,
+        "retrieved_records": 5,
+        "complete_pagination": true,
+        "accepted": 5,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/health-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-10-27",
+            "max_date": "2026-11-07",
+            "url": "https://www.nature.com/subjects/health-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          }
+        ],
+        "accepted": 30,
+        "rejected": {
+          "outside_window": 20
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Neuron",
+        "query": "JOURNAL:\"Neuron\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Current Biology",
+        "query": "JOURNAL:\"Current Biology\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 19,
+        "pages": 1,
+        "retrieved_records": 19,
+        "complete_pagination": true,
+        "accepted": 19,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Trends in Neurosciences",
+        "query": "JOURNAL:\"Trends in Neurosciences\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Reports",
+        "query": "JOURNAL:\"Cell Reports\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 4,
+        "pages": 1,
+        "retrieved_records": 4,
+        "complete_pagination": true,
+        "accepted": 4,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "iScience",
+        "query": "JOURNAL:\"iScience\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Cell Systems",
+        "query": "JOURNAL:\"Cell Systems\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Neurophysiology",
+        "query": "JOURNAL:\"J Neurophysiol\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 4,
+        "pages": 1,
+        "retrieved_records": 4,
+        "complete_pagination": true,
+        "accepted": 4,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Nature Communications",
+        "url": "https://www.nature.com/subjects/biological-sciences/ncomms",
+        "pages": [
+          {
+            "page": 1,
+            "article_cards": 50,
+            "min_date": "2026-11-04",
+            "max_date": "2026-11-07",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=1"
+          },
+          {
+            "page": 2,
+            "article_cards": 50,
+            "min_date": "2026-11-02",
+            "max_date": "2026-11-04",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=2"
+          },
+          {
+            "page": 3,
+            "article_cards": 50,
+            "min_date": "2026-10-30",
+            "max_date": "2026-11-02",
+            "url": "https://www.nature.com/subjects/biological-sciences/ncomms?searchType=journalSearch&sort=PubDate&page=3"
+          }
+        ],
+        "accepted": 110,
+        "rejected": {
+          "type:Matters Arising": 2,
+          "outside_window": 38
+        },
+        "status": "ok",
+        "page_limit_reached": false
+      },
+      {
+        "source": "Journal of Neuroscience",
+        "query": "JOURNAL:\"J Neurosci\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 2,
+        "pages": 1,
+        "retrieved_records": 2,
+        "complete_pagination": true,
+        "accepted": 2,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Cognitive Neuroscience",
+        "query": "JOURNAL:\"J Cogn Neurosci\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 11,
+        "pages": 1,
+        "retrieved_records": 11,
+        "complete_pagination": true,
+        "accepted": 11,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Journal of Vision",
+        "query": "JOURNAL:\"J Vis\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Brain",
+        "query": "JOURNAL:\"Brain\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 4,
+        "pages": 1,
+        "retrieved_records": 4,
+        "complete_pagination": true,
+        "accepted": 4,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PNAS",
+        "query": "JOURNAL:\"Proc Natl Acad Sci U S A\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 31,
+        "pages": 1,
+        "retrieved_records": 31,
+        "complete_pagination": true,
+        "accepted": 25,
+        "rejected": {
+          "non_research_title": 5,
+          "non_research_type": 1
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "Science Advances",
+        "query": "JOURNAL:\"Science Advances\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 0,
+        "pages": 1,
+        "retrieved_records": 0,
+        "complete_pagination": true,
+        "accepted": 0,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "eLife",
+        "query": "JOURNAL:\"Elife\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 8,
+        "pages": 1,
+        "retrieved_records": 8,
+        "complete_pagination": true,
+        "accepted": 8,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Biol\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 5,
+        "pages": 1,
+        "retrieved_records": 5,
+        "complete_pagination": true,
+        "accepted": 5,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS Comput Biol\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 4,
+        "pages": 1,
+        "retrieved_records": 4,
+        "complete_pagination": true,
+        "accepted": 4,
+        "rejected": {},
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      },
+      {
+        "source": "PLOS",
+        "query": "JOURNAL:\"PLoS One\" AND FIRST_PDATE:[2026-11-01 TO 2026-11-07] AND SRC:MED",
+        "hit_count": 53,
+        "pages": 1,
+        "retrieved_records": 53,
+        "complete_pagination": true,
+        "accepted": 49,
+        "rejected": {
+          "non_research_type": 2,
+          "non_research_title": 2
+        },
+        "status": "ok",
+        "limitation": "Index coverage only; recent publisher records may not yet be indexed."
+      }
+    ],
+    "date_parser_diagnosis": "ISO YYYY-MM-DD must bypass dateutil dayfirst=True.",
+    "limitations": [
+      "Nature Communications limited to original biological/health subject pages.",
+      "Europe PMC firstPublicationDate is an indexed first publication date; index completeness is not guaranteed."
+    ]
+  },
+  "pubmed": [
+    {
+      "source": "Science",
+      "query": "Science[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 46,
+      "retrieved_ids": 46,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Science%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 46
+    },
+    {
+      "source": "Cell",
+      "query": "Cell[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 6,
+      "retrieved_ids": 6,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 6
+    },
+    {
+      "source": "Neuron",
+      "query": "Neuron[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 4,
+      "retrieved_ids": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Neuron%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 4
+    },
+    {
+      "source": "Current Biology",
+      "query": "Curr Biol[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 51,
+      "retrieved_ids": 51,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Curr+Biol%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 28
+    },
+    {
+      "source": "Trends in Neurosciences",
+      "query": "Trends Neurosci[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 5,
+      "retrieved_ids": 5,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Trends+Neurosci%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 5
+    },
+    {
+      "source": "Cell Reports",
+      "query": "Cell Rep[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 41,
+      "retrieved_ids": 41,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell+Rep%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 41
+    },
+    {
+      "source": "iScience",
+      "query": "iScience[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=iScience%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "Cell Systems",
+      "query": "Cell Syst[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 0,
+      "retrieved_ids": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Cell+Syst%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 0
+    },
+    {
+      "source": "PNAS",
+      "query": "Proc Natl Acad Sci U S A[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 210,
+      "retrieved_ids": 210,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Proc+Natl+Acad+Sci+U+S+A%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 93
+    },
+    {
+      "source": "Brain",
+      "query": "Brain[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 45,
+      "retrieved_ids": 45,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Brain%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 45
+    },
+    {
+      "source": "eLife",
+      "query": "Elife[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 23,
+      "retrieved_ids": 23,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Elife%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 23
+    },
+    {
+      "source": "Science Advances",
+      "query": "Sci Adv[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 81,
+      "retrieved_ids": 81,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Sci+Adv%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 81
+    },
+    {
+      "source": "Journal of Neuroscience",
+      "query": "J Neurosci[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 28,
+      "retrieved_ids": 28,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurosci%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 28
+    },
+    {
+      "source": "Journal of Cognitive Neuroscience",
+      "query": "J Cogn Neurosci[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 11,
+      "retrieved_ids": 11,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Cogn+Neurosci%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 11
+    },
+    {
+      "source": "Journal of Neurophysiology",
+      "query": "J Neurophysiol[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 8,
+      "retrieved_ids": 8,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Neurophysiol%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 5
+    },
+    {
+      "source": "Journal of Vision",
+      "query": "J Vis[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 3,
+      "retrieved_ids": 3,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=J+Vis%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 3
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Biol[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 19,
+      "retrieved_ids": 19,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Biol%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 19
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS Comput Biol[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 19,
+      "retrieved_ids": 19,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+Comput+Biol%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 19
+    },
+    {
+      "source": "PLOS",
+      "query": "PLoS One[journal] AND 2026/11/01:2026/11/07[PDAT]",
+      "count": 329,
+      "retrieved_ids": 329,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=PLoS+One%5Bjournal%5D+AND+2026%2F11%2F01%3A2026%2F11%2F07%5BPDAT%5D&retmode=json&retmax=1000&sort=date",
+      "status": "ok",
+      "accepted": 329
+    }
+  ],
+  "arxiv": [
+    {
+      "category": "q-bio.NC",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.NC+AND+submittedDate%3A%5B202611010000+TO+202611072359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 26,
+          "returned": 26,
+          "accepted": 26
+        }
+      ],
+      "status": "complete",
+      "retrieved": 26,
+      "total": 26,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.TO",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.TO+AND+submittedDate%3A%5B202611010000+TO+202611072359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 0,
+          "returned": 0,
+          "accepted": 0
+        }
+      ],
+      "status": "complete",
+      "retrieved": 0,
+      "total": 0,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.MN",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.MN+AND+submittedDate%3A%5B202611010000+TO+202611072359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 5,
+          "returned": 5,
+          "accepted": 5
+        }
+      ],
+      "status": "complete",
+      "retrieved": 5,
+      "total": 5,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.BM",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.BM+AND+submittedDate%3A%5B202611010000+TO+202611072359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 12,
+          "returned": 12,
+          "accepted": 12
+        }
+      ],
+      "status": "complete",
+      "retrieved": 12,
+      "total": 12,
+      "complete_pagination": true
+    },
+    {
+      "category": "q-bio.QM",
+      "pages": [
+        {
+          "offset": 0,
+          "url": "https://export.arxiv.org/api/query?search_query=cat%3Aq-bio.QM+AND+submittedDate%3A%5B202611010000+TO+202611072359%5D&start=0&max_results=200&sortBy=submittedDate&sortOrder=descending",
+          "http_status": 200,
+          "total": 23,
+          "returned": 23,
+          "accepted": 23
+        }
+      ],
+      "status": "complete",
+      "retrieved": 23,
+      "total": 23,
+      "complete_pagination": true
+    }
+  ],
+  "biorxiv": {
+    "date_range": [
+      "2026-11-01",
+      "2026-11-07"
+    ],
+    "category": "neuroscience",
+    "status": "complete",
+    "pages": [
+      {
+        "cursor": 0,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 60,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/60?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 150,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/150?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/180?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 210,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/210?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/240?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 270,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/270?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 300,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/300?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 330,
+        "count": 30,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/330?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 360,
+        "count": 9,
+        "declared_total": 369,
+        "count_new_papers": "277",
+        "evidence_url": "https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/360?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retries": [
+      {
+        "cursor": 0,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/0?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 30,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/30?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 60,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/60?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 90,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/90?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "attempt": 2,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 120,
+        "attempt": 3,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 120,
+        "attempt": 4,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/120?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 180,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/180?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "attempt": 1,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/240?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "attempt": 2,
+        "error": "HTTPSConnectionPool(host='api.biorxiv.org', port=443): Read timed out. (read timeout=40)"
+      },
+      {
+        "cursor": 240,
+        "attempt": 3,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/240?category=neuroscience&format=json&limit=100"
+      },
+      {
+        "cursor": 240,
+        "attempt": 4,
+        "error": "503 Server Error: Service Unavailable for url: https://api.biorxiv.org/details/biorxiv/2026-11-01/2026-11-07/240?category=neuroscience&format=json&limit=100"
+      }
+    ],
+    "retrieved_records": 369,
+    "date_semantics": "bioRxiv API record date is the posted version date; revisions may be included.",
+    "declared_total": 369,
+    "complete_pagination": true,
+    "unique_papers": 359,
+    "deduplicated_version_records": 10,
+    "rejected": {},
+    "missing_abstract_count": 0,
+    "finished_at": "2026-11-08T12:34:28.268401+00:00"
+  },
+  "excluded": [
+    {
+      "title": "Distinct Patterns of Syntactic Errors Doubly Dissociate in Chronic Poststroke Aphasia.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2684"
+      ]
+    },
+    {
+      "title": "Intracranial Evidence for the Cerebellum's Role in Semantic Processing.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2681"
+      ]
+    },
+    {
+      "title": "Memory Traces Reflect How They Were Last Accessed.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2682"
+      ]
+    },
+    {
+      "title": "The Temporal Dynamics of Attentional Allocation during Counterfactual Learning.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2617"
+      ]
+    },
+    {
+      "title": "Theta and High-alpha Phase-locking Dynamics Unveil Face Perception in Ambiguous Stimuli.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2683"
+      ]
+    },
+    {
+      "title": "Erratum for the Report \"Gut microbiome influences efficacy of PD-1-based immunotherapy against epithelial tumors\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"RAD51 stabilizes neutrophil extracellular traps to compartmentalize inflammation\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Zero-sum mindsets and economic policy preferences.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "In the image of their tools.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Can artificial intelligence align with Indigenous science?",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "In Other Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "In Science Journals.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "title": "DNA confirms barbarian tribe's mythic tale about its origins.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Natural hydrogen prospectors struggle to find commercial deposits.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Serbia elects the world's brainiest parliament.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Experiment in orbit produces the coldest temperature ever.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "AI cracks a 27-year-old pillar of computer science.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "U.S. archaeology faces 'apocalyptic' threat.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Watching the weary brain.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "The scramble for your brain data.",
+      "reason": "nonresearch record",
+      "types": [
+        "News"
+      ]
+    },
+    {
+      "title": "Trends at 50: a mission that matters.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial"
+      ]
+    },
+    {
+      "title": "Correction for Pande et al., A lipid cue drives the subcellular localization of a self-inserting bacterial transmembrane protein.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Borowiec et al., Mutations at the BLK locus linked to maturity onset diabetes of the young and β-cell dysfunction.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Fahy et al., Hydroxyl radical oxidation of chemical contaminants on indoor surfaces and dust.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for LaFoya et al., Midbody formation triggers asymmetric fate specification in neural stem cells.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "At long last, BchE gets its day in the sun.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Correction for Iwawaki et al., Function of IRE1 alpha in the placenta is essential for placental development and embryonic viability.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction for Tsang et al., Cyclin D1 overexpression supports stable EBV infection in nasopharyngeal epithelial cells.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Preventing autoimmunity after alemtuzumab in multiple sclerosis: regulatory T cells resist expansion.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag308"
+      ]
+    },
+    {
+      "title": "Progress divides the room: patients, biology and the 2024 McDonald criteria.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag346"
+      ]
+    },
+    {
+      "title": "Mapping brain imaging heterogeneity in multiple sclerosis.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag349"
+      ]
+    },
+    {
+      "title": "Not letting go: tRNA sequestration as a unifying mechanism driving synthetase-linked neuropathies.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag340"
+      ]
+    },
+    {
+      "title": "Imaging subtypes reveal distinct biological substrates and disability profiles in multiple sclerosis.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag320"
+      ]
+    },
+    {
+      "title": "Salovum® reduces mortality in isolated severe traumatic brain injury: a randomized phase II trial.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag241"
+      ]
+    },
+    {
+      "title": "Rethinking multiple sclerosis therapy beyond clinical phenotypes.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag273"
+      ]
+    },
+    {
+      "title": "Jean Bancaud (1921-93): clinician, thinker and pioneer of epileptology at Sainte-Anne Hospital.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag280"
+      ]
+    },
+    {
+      "title": "Reply: The disconnectome as a target in Alzheimer disease: a promising framework or a premature end point?",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial",
+        "Comment"
+      ]
+    },
+    {
+      "title": "The disconnectome as a target in Alzheimer's disease: a promising framework or a premature end point?",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial",
+        "Comment"
+      ]
+    },
+    {
+      "title": "The role of ZC3H14 (MSUT2) in neurodevelopment and tauopathies.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag245"
+      ]
+    },
+    {
+      "title": "Reply: Cerebrovascular contributions to the 'vulnerable' medial temporal lobe tau-neurodegeneration phenotype.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Cerebrovascular contributions to the 'vulnerable' medial temporal lobe tau-neurodegeneration phenotype.",
+      "reason": "nonresearch record",
+      "types": [
+        "Editorial",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Aggression in epilepsy and sleep: from historical accounts to brain networks and human behaviour.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag212"
+      ]
+    },
+    {
+      "title": "Risk-calibrated sharing of human brain data.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag205"
+      ]
+    },
+    {
+      "title": "Low-dose IL-2 fails to expand Tregs after alemtuzumab: insight into impaired immune tolerance in multiple sclerosis.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag171"
+      ]
+    },
+    {
+      "title": "Paediatric functional seizures: when care models meet clinical reality.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag168"
+      ]
+    },
+    {
+      "title": "Medial temporal lobe tau-neurodegeneration mismatch from structural imaging and plasma biomarkers.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag105"
+      ]
+    },
+    {
+      "title": "Collapse of feed-forward inhibition underpins hyperexcitability in GABAA receptor gain-of-function epilepsy.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag119"
+      ]
+    },
+    {
+      "title": "Dissociating executive prefrontal substrates following capsulotomy in obsessive-compulsive disorder.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1093/brain/awag132"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"A combinational chemo-immune therapy using an enzyme-sensitive nanoplatform for dual-drug delivery to specific sites by cascade targeting\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum for the Research Article \"CD38-mediated metabolic reprogramming promotes the stability and suppressive function of regulatory T cells in tumor\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Erratum: Colins Rodriguez et al., \"Motor Cortex Latent Dynamics Encode Spatial and Temporal Arm Movement Parameters Independently\".",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Fast Corrective Responses in Redundant Motor Control Are Shaped by Intrinsic Constraints of Movement Patterns.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0627-26.2026"
+      ]
+    },
+    {
+      "title": "iGABASnFr Imaging Reveals that GABA Clearance Is Rapidly Overwhelmed in the Cerebral Cortex.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0354-26.2026"
+      ]
+    },
+    {
+      "title": "Enhanced Pitch Perception in Early Blind Individuals and Musicians Is due to Reduced Internal Noise.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0510-26.2026"
+      ]
+    },
+    {
+      "title": "Estradiol-Dependent Memory and Hippocampal Spine Remodeling Require Proteasomal Protein Degradation.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0619-26.2026"
+      ]
+    },
+    {
+      "title": "Pooled versus Structured Inhibition Drives Stimulus Competition across Distinct Spatial Scales in the Superior Colliculus.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.2296-25.2026"
+      ]
+    },
+    {
+      "title": "The Central Melanocortin System Regulates Growth Hormone Secretion.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0632-26.2026"
+      ]
+    },
+    {
+      "title": "Cell Type-Specific Assessment of Cholesterol Distribution in Models of Neurodevelopmental Disorders.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.1339-26.2026"
+      ]
+    },
+    {
+      "title": "Late UP-state Bias in Cortico-amygdalar Coordination.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0449-26.2026"
+      ]
+    },
+    {
+      "title": "Temporal Dynamics of Early Somatosensory Processing in Goal-Directed Actions.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0349-26.2026"
+      ]
+    },
+    {
+      "title": "Opposing Manipulations of Insular Projections to the Bed Nuclei of the Stria Terminalis Converge on Behavioral Passivity.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.0513-26.2026"
+      ]
+    },
+    {
+      "title": "Monosynaptic GABAergic Projections from a Subset of Suprachiasmatic Nucleus Neuromedin S Neurons Suppress Preoptic Area Kisspeptin Neuron Firing in Female Mice.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.2277-25.2026"
+      ]
+    },
+    {
+      "title": "Snail Superfamily Transcriptional Repressors Scratch1 and 2 Are Essential for Maintenance of Retinal Ganglion Cells and Normal Visual Function.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.2101-25.2026"
+      ]
+    },
+    {
+      "title": "Cortical Origins of the Flash-Lag Effect Distortions: The Influence of Retinotopic Map Architecture.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1523/jneurosci.1953-25.2026"
+      ]
+    },
+    {
+      "title": "Theta and High-alpha Phase-locking Dynamics Unveil Face Perception in Ambiguous Stimuli.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2683"
+      ]
+    },
+    {
+      "title": "Intracranial Evidence for the Cerebellum's Role in Semantic Processing.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2681"
+      ]
+    },
+    {
+      "title": "Memory Traces Reflect How They Were Last Accessed.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2682"
+      ]
+    },
+    {
+      "title": "Distinct Patterns of Syntactic Errors Doubly Dissociate in Chronic Poststroke Aphasia.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2684"
+      ]
+    },
+    {
+      "title": "The Temporal Dynamics of Attentional Allocation during Counterfactual Learning.",
+      "reason": "historical same identifier and version",
+      "identity": [
+        "doi",
+        "10.1162/jocn.a.2617"
+      ]
+    },
+    {
+      "title": "Correction: Correction: Correction: Data-driven analyses of motor impairments in animal models of neurological disorders.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Understanding the role of the hippocampus in representing multimodal stimuli.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "The role of infant presence and other social correlates of fetal loss in wild mandrills.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Looking deeper into the algal sisters of land plants.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Editorial Note: Early Growth Response Gene-2 (Egr-2) Regulates the Development of B and T Cells.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Retraction: Barriers to access to care in the implementation of telemedicine in public hospitals in Southern Ethiopia: A phenomenological qualitative study.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: Stakeholder perspectives on the anticipated acceptability of low-intensity psychological interventions in Java, Indonesia: A theoretically framed qualitative study.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Discovery of ROCK2 inhibitors through computational screening of ZINC database: Integrating pharmacophore modeling, molecular docking, and MD simulations.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Correction: Multiplex PCR assay to detect high risk lineages of Salmonella Typhi and Paratyphi A.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Retraction: An effective hotspot mitigation system for Wireless Sensor Networks using hybridized prairie dog with Genetic Algorithm.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Retraction: Armed violent conflict and healthcare-seeking behavior for maternal and child health in sub-Saharan Africa: A systematic review.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Correction: MicroRNA miR-328 Regulates Zonation Morphogenesis by Targeting CD44 Expression.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Epidemiological studies of sleep disorder in educational community of Pakistani population, its major risk factors and associated diseases.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Correction: The comparative analysis of Sino-Japanese football policies from the perspective of policy instruments.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Expression of Concern: Modeling the impacts of natural and human factors on the hatching success of the loggerhead sea turtle Caretta caretta along the coasts of Italy.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Expression of Concern"
+      ]
+    },
+    {
+      "title": "Correction: The impact of IRT and IDT on metaverse adoption in tourism: The moderating role of personal innovativeness among China's generation Z.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Hyperoxygenation Attenuated a Murine Model of Atopic Dermatitis through Raising Skin Level of ROS.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Diagnostic accuracy of digital technologies compared with 12-lead ECG in the diagnosis of atrial fibrillation in adults: A protocol for a systematic review.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Trends in non-pharmacological treatment for insomnia: A nationwide study.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Editorial Note: Sclerotium rolfsii Lectin Induces Stronger Inhibition of Proliferation in Human Breast Cancer Cells than Normal Human Mammary Epithelial Cells by Induction of Cell Apoptosis.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Correction: Assessing curvilinear sprint performance in basketball: The role of stretch-shortening cycle and isometric force-time metrics.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Determinants of domestic violence against women in Cambodia: How digital access, media exposure, motorcycle ownership, and partners' alcohol use matter.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Correction: Circulating CTRP-1 levels are elevated in women with polycystic ovary syndrome: A case-control study.",
+      "reason": "nonresearch record",
+      "types": [
+        "Published Erratum"
+      ]
+    },
+    {
+      "title": "Editorial Note: Fuzzy ensemble of fined tuned BERT models for domain-specific sentiment analysis of software engineering dataset.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Retraction: In Silico identification of angiotensin-converting enzyme inhibitory peptides from MRJP1.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    },
+    {
+      "title": "Editorial Note: Comparing public willingness-to-pay for different low-carbon measures: A case study of Shenzhen, China.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Comment"
+      ]
+    },
+    {
+      "title": "Retraction: Insights into the progressive impact of high-fat-diet induced insulin resistance on skeletal muscle and myocardium: A comprehensive study on C57BL6 mice.",
+      "reason": "nonresearch record",
+      "types": [
+        "Journal Article",
+        "Retraction Notice"
+      ]
+    }
+  ],
+  "identifier_conflicts": [],
+  "verified_posted_revisions": [
+    {
+      "title": "The nucleus accumbens dorsomedial column: distinct anterior-posterior inputs and activation inversely associated with opioid relapse",
+      "identity": [
+        "doi",
+        "10.1101/2025.01.18.633747"
+      ],
+      "version": "3",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Increased CA3 burst activity in Doc2α and Syt7 knockout mice",
+      "identity": [
+        "doi",
+        "10.64898/2026.07.01.735713"
+      ],
+      "version": "3",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "NeuroGraphBench: Interacting with Drosophila Connectomes at Scale for Exploring the Functional Logic of Neural Circuits",
+      "identity": [
+        "doi",
+        "10.64898/2026.08.22.746456"
+      ],
+      "version": "3",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Policy regularization as a unifying theory of the striatal division of labor in learning",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.10.750654"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "BMP4 Restricts Axonal Ramification and Bouton Density in Cholinergic Projections from the Basal Forebrain",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.30.755469"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "DNA polymerase kappa supports repair-associated DNA synthesis and genome maintenance in postmitotic neurons",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.01.756094"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Differential Survival of Retinal Ganglion Cell Types Following Branch Retinal Vein Occlusion",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.20.760463"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Variability and Landmark Quality in Anatomical Co-Registration in Neuronavigation for Brain Stimulation",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.24.761558"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Longitudinal persistence of EEG brain fingerprints: phase and complex coherency geometry across sessions and functional states",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.26.761764"
+      ],
+      "version": "2",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "In vivo discovery of blood-brain barrier opening small molecules with FishNAP",
+      "identity": [
+        "doi",
+        "10.64898/2026.03.18.712473"
+      ],
+      "version": "3",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Increased Beta-Band Input to Spinal Motor Neurons is Not Confined to the Responding Muscle During a Go/No-Go Task",
+      "identity": [
+        "doi",
+        "10.64898/2026.05.16.725172"
+      ],
+      "version": "3",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Human single-neuron correlates of somatosensation",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.07.757446"
+      ],
+      "version": "2",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Dopaminergic reward signals shape foraging decisions through learned value expectations",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.760765"
+      ],
+      "version": "2",
+      "date": "2026-11-02"
+    },
+    {
+      "title": "Learning complex temporal dependencies via local synaptic plasticity",
+      "identity": [
+        "doi",
+        "10.64898/2026.07.09.737423"
+      ],
+      "version": "2",
+      "date": "2026-11-03"
+    },
+    {
+      "title": "Region-dependent regulation of Tau phosphorylation by Glycerophosphodiester Phosphodiesterase 2 in a mouse model of tauopathy",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.14.751492"
+      ],
+      "version": "2",
+      "date": "2026-11-03"
+    },
+    {
+      "title": "Summed contrasts can conceal reversed regional preferences: directional and dose criteria for screening transcranial direct current stimulation montage pairs",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.07.757440"
+      ],
+      "version": "3",
+      "date": "2026-11-03"
+    },
+    {
+      "title": "Practical Identifiability of a Minimal Adaptive Learning-Gain Model for Binary Feedback: A Simulation Study",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.760725"
+      ],
+      "version": "2",
+      "date": "2026-11-03"
+    },
+    {
+      "title": "A vagal-to-sympathetic reflex controls lung vascular leak",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.22.761052"
+      ],
+      "version": "2",
+      "date": "2026-11-03"
+    },
+    {
+      "title": "Linear NeuroPaint: An Efficient Baseline for Cross-Session Neural Alignment and Inpainting",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.03.756082"
+      ],
+      "version": "2",
+      "date": "2026-11-04"
+    },
+    {
+      "title": "Spatially resolved single-cell atlas reveals cortical glial reactivity associated with regions of neuronal growth programs in both hemispheres after stroke",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.26.761917"
+      ],
+      "version": "2",
+      "date": "2026-11-04"
+    },
+    {
+      "title": "Decoding and Characterizing the Intracranial Representation of Semantic Information",
+      "identity": [
+        "doi",
+        "10.64898/2026.07.13.738249"
+      ],
+      "version": "3",
+      "date": "2026-11-05"
+    },
+    {
+      "title": "Dissociating Resting-State Networks of Pedohebephilic Preference and Child Sexual Offending Using Network-Based Prediction",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.760530"
+      ],
+      "version": "2",
+      "date": "2026-11-05"
+    },
+    {
+      "title": "Striatal cell-type-specific encoding stability and reorganization for goal-directed behavior and habit",
+      "identity": [
+        "doi",
+        "10.1101/2025.01.26.634924"
+      ],
+      "version": "4",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Graph-Based Classification of Penetrating Cortical Arteries and Veins in Whole-Mouse Vasculature Datasets",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.15.758745"
+      ],
+      "version": "2",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Sex-specific dynamics of activity-dependent regulation of synaptic CaMKII",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.21.760771"
+      ],
+      "version": "2",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Tree shrews combine panoramic vision with an expanded oculomotor repertoire",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.23.761344"
+      ],
+      "version": "2",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Temporal Progression of Prior Precision, Surprisal, Model Updating and Tone Adaptation in Human Auditory Cortices",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.25.761658"
+      ],
+      "version": "2",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Neural Bases for Working Memory of Natural Sound Textures",
+      "identity": [
+        "doi",
+        "10.64898/2026.10.28.762478"
+      ],
+      "version": "2",
+      "date": "2026-11-06"
+    },
+    {
+      "title": "Learning to play with spikes: characterizing, predicting, and engineering unsupervised plasticity rules for spiking reservoir computing",
+      "identity": [
+        "doi",
+        "10.64898/2026.09.15.751573"
+      ],
+      "version": "2",
+      "date": "2026-11-07"
+    }
+  ],
+  "limitations": [
+    "Indexes may lag latest publication dates.",
+    "Nature Communications scoped to biological/health subject listings.",
+    "Within-week bioRxiv versions retain the latest version per DOI; all version records remain in raw API checkpoints."
+  ],
+  "final_corpus_count": 1276,
+  "selected_missing_abstracts": 8,
+  "final_missing_abstracts": 14,
+  "final_nonresearch_exclusions": [
+    {
+      "title": "In This Issue.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    },
+    {
+      "title": "QnAs with Alison Gopnik.",
+      "reason": "issue digest, interview, correspondence, or products column"
+    }
+  ],
+  "source_counts": {
+    "Current Biology": 28,
+    "Journal of Cognitive Neuroscience": 6,
+    "Journal of Neurophysiology": 5,
+    "Nature Communications": 114,
+    "arXiv": 66,
+    "bioRxiv": 359,
+    "Cell": 6,
+    "Cell Reports": 41,
+    "Journal of Neuroscience": 14,
+    "Nature BME": 2,
+    "Nature Method": 8,
+    "Nature Neuroscience": 2,
+    "PLOS": 340,
+    "PNAS": 84,
+    "eLife": 23,
+    "Brain": 25,
+    "Neuron": 4,
+    "Trends in Neurosciences": 4,
+    "Journal of Vision": 3,
+    "Nature": 31,
+    "Nature Human Behavior": 1,
+    "Science Advances": 79,
+    "Science": 31
+  },
+  "source_counts_after_merge": {
+    "Current Biology": 28,
+    "Journal of Cognitive Neuroscience": 6,
+    "Journal of Neurophysiology": 5,
+    "Nature Communications": 114,
+    "arXiv": 66,
+    "bioRxiv": 359,
+    "Cell": 6,
+    "Cell Reports": 41,
+    "Journal of Neuroscience": 14,
+    "Nature BME": 2,
+    "Nature Method": 8,
+    "Nature Neuroscience": 2,
+    "PLOS": 340,
+    "PNAS": 84,
+    "eLife": 23,
+    "Brain": 25,
+    "Neuron": 4,
+    "Trends in Neurosciences": 4,
+    "Journal of Vision": 3,
+    "Nature": 31,
+    "Nature Human Behavior": 1,
+    "Science Advances": 79,
+    "Science": 31
+  },
+  "arxiv_version_date_reconciliation": "getfiles/arxiv_version_date_reconciliation_2026-11-08.json",
+  "arxiv_scope_limitation": "arXiv 按首次提交日期查询，并记录当前版本日期；本次发现的跨周修订已按版本日期调整，但此前提交、仅在本周修订的旧稿尚未穷尽枚举。"
+}
