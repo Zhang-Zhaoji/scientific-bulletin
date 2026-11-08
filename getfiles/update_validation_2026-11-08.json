@@ -24,7 +24,7 @@
         1086
       ],
       "broken_html_assets": [],
-      "verified_at": "2026-11-08T22:58:52.506860"
+      "verified_at": "2026-11-08T23:09:26.671746"
     },
     {
       "status": "passed",
@@ -49,19 +49,19 @@
         1086
       ],
       "broken_html_assets": [],
-      "verified_at": "2026-11-08T22:58:53.631605"
+      "verified_at": "2026-11-08T23:09:27.944263"
     }
   ],
   "database": {
     "data\\literature.db": {
       "integrity_check": "ok",
       "foreign_key_errors": 0,
-      "articles": 19790
+      "articles": 19797
     },
     "docs\\assets\\data\\literature_slim.db": {
       "integrity_check": "ok",
       "foreign_key_errors": 0,
-      "articles": 19790
+      "articles": 19797
     }
   },
   "old_article_ids_titles_dates_preserved": true,
@@ -76,5 +76,5 @@
     "unique_papers": 19693,
     "unique_selected_papers": 9092
   },
-  "verified_at": "2026-11-08T22:59:01.377143"
+  "verified_at": "2026-11-08T23:09:37.396290"
 }

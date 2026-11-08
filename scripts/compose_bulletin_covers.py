@@ -204,6 +204,7 @@ def draw_cover(source: Path, output: Path, spec: dict[str, object], style: str) 
 
 
 def main() -> None:
+    global FONT_BOLD, FONT_REGULAR
     parser = argparse.ArgumentParser(description="Add exact masthead typography to generated bulletin cover art.")
     parser.add_argument("--source-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, default=ROOT / "Imgs")
@@ -211,7 +212,14 @@ def main() -> None:
     parser.add_argument("--suffix", default="", help="Filename suffix inserted before .png")
     parser.add_argument("--dates", nargs='+', choices=list(COVERS), help="Generate only these cover dates")
     parser.add_argument("--no-review-sheet", action='store_true', help="Skip temporary contact sheet")
+    parser.add_argument("--font-bold", type=Path, help="Override bold font path")
+    parser.add_argument("--font-regular", type=Path, help="Override regular font path")
     args = parser.parse_args()
+
+    if args.font_bold:
+        FONT_BOLD = args.font_bold
+    if args.font_regular:
+        FONT_REGULAR = args.font_regular
 
     outputs: list[Path] = []
     for date_key, spec in COVERS.items():

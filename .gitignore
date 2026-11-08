@@ -1,6 +1,7 @@
 .vscode/
 tmps/
 .env
+.env.DeepSeek
 
 # Python bytecode & cache
 __pycache__/
